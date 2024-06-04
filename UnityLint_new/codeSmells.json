@@ -1,0 +1,57 @@
+{
+  "ProjectName": "ExampleGame",
+  "ProjectDirectory": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame",
+  "ProjectLanguage": "C#",
+  "DatasetPath": "C:\\VR_files\\experiment\\UnityLint_new_ver\\UnityLint_new\\Results\\ExampleGame\\Code\\CodeAnalysis.json",
+  "SmellList": [
+    {
+      "Name": "Rigidbody Weak Temporization",
+      "Occurrency": 1,
+      "Smells": [
+        {
+          "Script": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame\\Scripts\\RotateCube.cs",
+          "Name": "rb",
+          "Line": 7,
+          "type": "Rigidbody"
+        }
+      ]
+    },
+    {
+      "Name": "Instantiate Destroy",
+      "Occurrency": 2,
+      "Smells": [
+        {
+          "Script": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame\\Scripts\\RotateCube.cs",
+          "Traceback": [
+            {
+              "Method": "RotateCube.DeclineObject(GameObject)",
+              "LineCall": 14,
+              "Script": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame\\Scripts\\RotateCube.cs",
+              "Invocation": "Destroy",
+              "Name": "Destroy",
+              "Line": 21
+            }
+          ]
+        },
+        {
+          "Script": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame\\Scripts\\RotateCube.cs",
+          "Name": "Instantiate",
+          "Invocation": "Instantiate",
+          "Line": 13
+        }
+      ]
+    },
+    {
+      "Name": "New Allocation",
+      "Occurrency": 1,
+      "Smells": [
+        {
+          "Script": "C:\\VR_files\\experiment\\UnityCodeSmellAnalyzer-main\\UnityCodeSmellAnalyzer-main\\Examples\\PoorlyDesignedGame\\Assets\\ExampleGame\\Scripts\\RotateCube.cs",
+          "Kind": "Definition",
+          "Type": "vector3",
+          "Line": 14
+        }
+      ]
+    }
+  ]
+}
