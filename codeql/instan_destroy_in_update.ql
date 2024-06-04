@@ -1,3 +1,9 @@
+/** 
+ * @id cs/instantiate_update
+ * @kind problem
+ * @name Instantiate/Destroy in Update() method
+ * @description Update() method is called each frame. It's efficient to use Instantiate(） and Destroy() in Update() method.
+*/
 import csharp
 import semmle.code.csharp.dataflow.DataFlow
 import semmle.code.csharp.dataflow.TaintTracking

@@ -1,3 +1,11 @@
+/** 
+ * @id cs/rigidbody_transform
+ * @kind problem
+ * @name Transform object of Rigidbody in Update() methods
+ * @description Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.
+
+*/
+
 import csharp
 import semmle.code.csharp.dataflow.DataFlow
 import semmle.code.csharp.dataflow.TaintTracking
