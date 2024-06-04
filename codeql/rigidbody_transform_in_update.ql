@@ -10,7 +10,7 @@ class InstantiateSource extends DataFlow::Node {
 
 class InstantiateSink extends DataFlow::ExprNode {
     InstantiateSink(){
-        exists(MethodCall call | call.getEnclosingCallable().getName() = "Update" or call.getEnclosingCallable().getName() = "Translate" and call.getTarget().getName() = "Rotate" | this.asExpr() = call.getQualifier() or this.asExpr() = call.getAnArgument() or this.asExpr() = call.getQualifier().getAChild())
+        exists(MethodCall call | call.getEnclosingCallable().getName() = "Update" and call.getTarget().getName().toLowerCase().matches("translate") or call.getTarget().getName().toLowerCase().matches("rotate") | this.asExpr() = call.getQualifier() or this.asExpr() = call.getAnArgument() or this.asExpr() = call.getQualifier().getAChild())
     }
 }
 
