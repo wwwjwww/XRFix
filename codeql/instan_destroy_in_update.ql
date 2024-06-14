@@ -8,24 +8,26 @@ import csharp
 import semmle.code.csharp.dataflow.DataFlow
 import semmle.code.csharp.dataflow.TaintTracking
 
-class InstantiateSource extends DataFlow::Node {
+class InstantiateSource extends DataFlow::ExprNode {
     InstantiateSource() {
         exists(MethodCall call | call .getTarget().getName().toLowerCase().matches("instantiate%") and call.getEnclosingCallable().getName() = "Update"| this.asExpr() = call or this.asExpr() = call.getAnArgument())
     }
 }
 
-class InstantiateSink extends DataFlow::ExprNode {
+class InstantiateSink extends DataFlow::ExprNode { 
     InstantiateSink(){
-        exists(MethodCall call|this.asExpr() = call.getQualifier() or this.asExpr() = call.getAnArgument() or this.asExpr() = call.getQualifier().getAChild() | call.getTarget().getName().toLowerCase().matches("destroy%"))
+        exists(MethodCall call| call.getTarget().getName().toLowerCase().matches("destroy") | this.asExpr() = call.getQualifier() or this.asExpr() = call.getAnArgument() or this.asExpr() = call)
+        or
+        exists(Access ta, MethodCall call| this.asExpr() = ta and call=ta.getParent().getParent() | call.getTarget().getName().toLowerCase().matches("destroy") )
     }
 }
 
 predicate isComponentTainted(Expr expSrc, Expr expDest) {
-    exists(MethodCall call, MethodCall call1, Method m|expSrc = call.getQualifier() 
-    and expDest = call1 
-    and call1.getTarget() = m and m.getName().toLowerCase().matches("getcomponent%"))
+    exists(MethodCall call,  Method m|call.getTarget() = m and m.getName().toLowerCase().matches("addcomponent%")
+    and expSrc = call.getQualifier()
+    and call = expDest
+    )
 }
-
 
 class InstantiateCheck extends TaintTracking::Configuration{
     InstantiateCheck() {
