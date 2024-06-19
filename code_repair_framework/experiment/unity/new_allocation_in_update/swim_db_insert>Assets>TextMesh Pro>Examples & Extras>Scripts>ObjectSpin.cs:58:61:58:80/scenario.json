@@ -1,0 +1,27 @@
+{
+    "original_dir": "./experiment/unity/new_allocation_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\unity_vr_swim-quest",
+    "exp_dir": "swim_db_insert>Assets>TextMesh Pro>Examples & Extras>Scripts>ObjectSpin.cs:58:61:58:80",
+    "temperature": 0.95,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "cwe_name": null,
+    "unity_special_name": "Using New() allocation in Update() method.",
+    "check_ql": "new_allocation.ql",
+    "prompt_template": [
+        "basic_prompt"
+    ],
+    "stop_word": null,
+    "include_addition": false,
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.",
+        "file_name": "/Assets/TextMesh Pro/Examples & Extras/Scripts/ObjectSpin.cs",
+        "start_line": "58",
+        "start_column": "61",
+        "end_line": "58",
+        "end_column": "80"
+    }
+}

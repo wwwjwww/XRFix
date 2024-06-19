@@ -21,14 +21,15 @@ unity_exp_path = {"Using New() allocation in Update() method.": "./experiment/un
              "Instantiate/Destroy in Update() method":"./experiment/unity/instantiate_destroy_in_update",
                "Transform object of Rigidbody in Update() methods":"./experiment/unity/transform_rigidbody_in_update"}
 
-exp_dir = {"brick_db_insert":"D:\Bug_injection_project\BricksVR-Rebuilt-main\BricksVR-Rebuilt-main",
-            "hand_db_insert":"D:\Bug_injection_project\HandPosing_Demo-master",
-            "industry_db_insert":"D:\Bug_injection_project\nan-industry-vr",
-            "googlephotos_db_insert":"D:\Bug_injection_project\OculusGooglePhotos-main\OculusGooglePhotos-main\OculusGooglePhotos-Unity",
-            "sound_db_insert":"D:\Bug_injection_project\soundstagevr-master",
-            "surgery_db_insert":"D:\Bug_injection_project\SurgeryQuest-master",
-            "swim_db_insert":"D:\Bug_injection_project\unity_vr_swim-quest",
-            "mrdl_db":"D:\Bug_injection_project\MRDL_Unity_Surfaces-master\MRDL_Unity_Surfaces-master",
-            "mrtk_db":"D:\Bug_injection_project\MRTK-Passthrough-main\MRTK-Passthrough-main",
-            "neuro_db":"D:\Bug_injection_project\Neuroanatomy_Passthrough_Quest2-main\VR-Neuroanatomy-master"
+project_root_dir = {"brick_db_insert":r"D:\Bug_injection_project\BricksVR-Rebuilt-main\BricksVR-Rebuilt-main",
+           "hand_db_insert":r"D:\Bug_injection_project\HandPosing_Demo-master",
+           "industry_db_insert":r"D:\Bug_injection_project\nan-industry-vr",
+           "googlephotos_db_insert":r"D:\Bug_injection_project\OculusGooglePhotos-main\OculusGooglePhotos-main\OculusGooglePhotos-Unity",
+           "sound_db_insert":r"D:\Bug_injection_project\soundstagevr-master",
+           "surgery_db_insert":r"D:\Bug_injection_project\SurgeryQuest-master",
+           "swim_db_insert":r"D:\Bug_injection_project\unity_vr_swim-quest",
+           "mrdl_db":r"D:\Bug_injection_project\MRDL_Unity_Surfaces-master\MRDL_Unity_Surfaces-master",
+           "mrtk_db":r"D:\Bug_injection_project\MRTK-Passthrough-main\MRTK-Passthrough-main",
+           "neuro_db":r"D:\Bug_injection_project\Neuroanatomy_Passthrough_Quest2-main\VR-Neuroanatomy-master"
            }
+query_root_dir = ""

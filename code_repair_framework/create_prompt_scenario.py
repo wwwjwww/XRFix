@@ -8,80 +8,87 @@ import time
 import config
 import os
 
-def sort_result_cwe(path):
-    files = os.walk(path)
-    cwe_lis = {"Constant condition":[],
-               "Container contents are never accessed":[], "Locking the 'this' object in a lock statement":[],
-               "Potentially dangerous use of non-short-circuit logic":[], "Redundant Select":[]}
-    cwe_detailed_lis = {"Constant condition":[],
-               "Container contents are never accessed":[], "Locking the 'this' object in a lock statement":[],
-               "Potentially dangerous use of non-short-circuit logic":[], "Redundant Select":[]}
-
-    for path, dir_lis, file_lis in files:
-        for file in file_lis:
-            with open(os.path.join(path, file)) as f:
-                reader = csv.reader(f)
-
-                for rows in reader:
-                    cwe_err = {"err_name": None, "description": None, "position": None, "sink_position": None,
-                                 "query_name": None, "database_name": None}
-                    cwe_err["err_name"] = rows[0]
-                    cwe_err["description"] = rows[1]
-                    cwe_err["position"] = rows[4] + ":" + rows[5] + ":" + rows[6] + ":" + rows[7] + ":" + rows[8]
-                    cwe_err["query_name"] = config.cwe_query_name_lis[cwe_err["err_name"]]
-                    cwe_err["database_name"] = str(file).split("_cwe")[0]
-
-                    cwe_name = rows[0]
-                    cwe_file = rows[4].split('/')[-1]
-                    #cwe_position = cwe_file + ":" + rows[5] + ":" + rows[6] + ":" + rows[7] + ":" + rows[8]
-                    cwe_position = file + ":" + cwe_file + ":" + rows[5]
-                    cwe_file_position = file + ":" + cwe_file + ":" + rows[4] + ":" + rows[5] + ":" + rows[6] + ":" + rows[7] + ":" + rows[8]
-                    flag = 0
-                    for elem in cwe_lis[cwe_name]:
-                        elem_file = elem.split(":")[0]
-                        elem_cwe = elem.split(":")[1]
-                        if cwe_position.split(":")[1] == elem_cwe and cwe_position.split(":")[0] != elem_file:
-                            flag = 1
-                            break
-
-                    if flag == 0:
-                        cwe_lis[cwe_name].append(cwe_position)
-                        cwe_detailed_lis[cwe_name].append(cwe_err)
-
-    with open("all_sort_cwe_detailed.json", "w") as f1:
-        f1.write(json.dumps(cwe_detailed_lis))
-
 def create_exp_scenario(file1, type):
     scenario_json = {
         'original_dir': None,
-        'file_dir': None,
-        'iterative_dir': None,
-        'temperature': None,
-        'top_p': None,
-        'LLM_engine': None,
-        'cwe': None,
-        'unity_special': None,
+        'project_root_dir': None,
+        'exp_dir': None,
+        'temperature': 0.95,
+        'top_p': 1,
+        'LLM_engine': ["gpt-3.5-turbo"],
+        'iteration': 5,
+        'cwe_name': None,
+        'unity_special_name': None,
         'check_ql': None,
-        'prompt_template': None,
+        'prompt_template': ["basic_prompt"],
         'stop_word': None,
-        'include_addition': None,
-        'vulnerabilities': None
+        'include_addition': False,
+        'err_detailed_info': {},
     }
 
-    scenarios = []
+
     if type == "cwe":
         with open(file1, 'r') as f1:
             all_cwe_lis = json.load(f1)
             for err_name in config.cwe_lis:
                 all_cwe_detailed_info = all_cwe_lis[err_name]
-                scenario_json["original_dir"] = config.cwe_exp_path[err_name]
-                scenario_json["file_dir"] = 
+                for cwe_detailed_info in all_cwe_detailed_info:
+                    scenario_json["original_dir"] = config.cwe_exp_path[err_name]
+                    scenario_json["project_root_dir"] = config.project_root_dir[cwe_detailed_info["database_name"]]
+                    scenario_json["exp_dir"] = str(cwe_detailed_info["database_name"]+cwe_detailed_info["position"]).replace('/','>')
+                    scenario_json["cwe_name"] = err_name
+                    scenario_json["check_ql"] = config.query_root_dir+cwe_detailed_info["query_name"]
 
+                    scenario_json["err_detailed_info"]["description"] = cwe_detailed_info["description"]
+                    scenario_json["err_detailed_info"]["file_name"] = cwe_detailed_info["position"].split(":")[0]
+                    scenario_json["err_detailed_info"]["start_line"] = cwe_detailed_info["position"].split(":")[1]
+                    scenario_json["err_detailed_info"]["start_column"] = cwe_detailed_info["position"].split(":")[2]
+                    scenario_json["err_detailed_info"]["end_line"] = cwe_detailed_info["position"].split(":")[3]
+                    scenario_json["err_detailed_info"]["end_column"] = cwe_detailed_info["position"].split(":")[4]
 
+                    create_file_path = scenario_json["original_dir"] + "/" + scenario_json["exp_dir"]
+                    if not os.path.exists(create_file_path):
+                        os.makedirs(create_file_path)
+                    with open(os.path.join(create_file_path, "scenario.json"), 'w') as f:
+                        f.write(json.dumps(scenario_json))
+    else:
+        with open(file1, 'r') as f2:
+            all_unity_lis = json.load(f2)
+            for err_name in config.unity_lis:
+                all_unity_detailed_info = all_unity_lis[err_name]
+                for unity_detailed_info in all_unity_detailed_info:
+                    scenario_json["original_dir"] = config.unity_exp_path[err_name]
+                    scenario_json["project_root_dir"] = config.project_root_dir[unity_detailed_info["database_name"]]
+                    scenario_json["exp_dir"] = str(unity_detailed_info["database_name"]+unity_detailed_info["position"]).replace('/','>')
+                    scenario_json["unity_special_name"] = err_name
+                    scenario_json["check_ql"] = config.query_root_dir+unity_detailed_info["query_name"]
+
+                    scenario_json["err_detailed_info"]["description"] = unity_detailed_info["description"]
+                    scenario_json["err_detailed_info"]["file_name"] = unity_detailed_info["position"].split(":")[0]
+                    scenario_json["err_detailed_info"]["start_line"] = unity_detailed_info["position"].split(":")[1]
+                    scenario_json["err_detailed_info"]["start_column"] = unity_detailed_info["position"].split(":")[2]
+                    scenario_json["err_detailed_info"]["end_line"] = unity_detailed_info["position"].split(":")[3]
+                    scenario_json["err_detailed_info"]["end_column"] = unity_detailed_info["position"].split(":")[4]
+
+                    if (unity_detailed_info["sink_position"] != None):
+                        scenario_json["include_addition"] = True
+                        scenario_json["err_detailed_info"]["add_file_name"] = unity_detailed_info["sink_position"].split(":")[0]
+                        scenario_json["err_detailed_info"]["add_start_line"] = unity_detailed_info["sink_position"].split(":")[1]
+                        scenario_json["err_detailed_info"]["add_start_column"] = unity_detailed_info["sink_position"].split(":")[2]
+                        scenario_json["err_detailed_info"]["add_end_line"] = unity_detailed_info["sink_position"].split(":")[3]
+                        scenario_json["err_detailed_info"]["add_end_column"] = unity_detailed_info["sink_position"].split(":")[4]
+
+                    create_file_path = scenario_json["original_dir"] + "/" + scenario_json["exp_dir"]
+                    if not os.path.exists(create_file_path):
+                        os.makedirs(create_file_path)
+                    with open(os.path.join(create_file_path, "scenario.json"), 'w') as f:
+                        f.write(json.dumps(scenario_json, indent=4))
 
 
 
 if __name__ == "__main__":
-    path = "result_cwe"
+    file1 = "all_sort_cwe_detailed.json"
+    file2 = "all_sort_unity.json"
 
-    sort_result_cwe(path)
+    create_exp_scenario(file1, "cwe")
+    create_exp_scenario(file2, "unity")
