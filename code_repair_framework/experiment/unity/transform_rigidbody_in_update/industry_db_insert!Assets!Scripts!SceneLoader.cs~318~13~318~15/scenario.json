@@ -1,0 +1,32 @@
+{
+    "original_dir": "./experiment/unity/transform_rigidbody_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\nan-industry-vr",
+    "exp_dir": "industry_db_insert!Assets!Scripts!SceneLoader.cs~318~13~318~15",
+    "temperature": 0.95,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "cwe_name": null,
+    "unity_special_name": "Transform object of Rigidbody in Update() methods",
+    "check_ql": "rigidbody_transform_in_update.ql",
+    "prompt_template": [
+        "basic_prompt"
+    ],
+    "stop_word": null,
+    "include_addition": true,
+    "err_detailed_info": {
+        "description": "Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.",
+        "file_name": "/Assets/Scripts/SceneLoader.cs",
+        "start_line": "318",
+        "start_column": "13",
+        "end_line": "318",
+        "end_column": "15",
+        "add_file_name": "/Assets/Scripts/PlayerUIController.cs",
+        "add_start_line": "181",
+        "add_start_column": "17",
+        "add_end_line": "181",
+        "add_end_column": "25"
+    }
+}

@@ -35,7 +35,7 @@ def create_exp_scenario(file1, type):
                 for cwe_detailed_info in all_cwe_detailed_info:
                     scenario_json["original_dir"] = config.cwe_exp_path[err_name]
                     scenario_json["project_root_dir"] = config.project_root_dir[cwe_detailed_info["database_name"]]
-                    scenario_json["exp_dir"] = str(str(cwe_detailed_info["database_name"]+cwe_detailed_info["position"]).replace('/','>')).replace(':','<')
+                    scenario_json["exp_dir"] = str(str(cwe_detailed_info["database_name"]+cwe_detailed_info["position"]).replace('/','!')).replace(':','~')
                     scenario_json["cwe_name"] = err_name
                     scenario_json["check_ql"] = config.query_root_dir+cwe_detailed_info["query_name"]
 
@@ -59,7 +59,7 @@ def create_exp_scenario(file1, type):
                 for unity_detailed_info in all_unity_detailed_info:
                     scenario_json["original_dir"] = config.unity_exp_path[err_name]
                     scenario_json["project_root_dir"] = config.project_root_dir[unity_detailed_info["database_name"]]
-                    scenario_json["exp_dir"] = str(str(unity_detailed_info["database_name"]+unity_detailed_info["position"]).replace('/','>')).replace(':','<')
+                    scenario_json["exp_dir"] = str(str(unity_detailed_info["database_name"]+unity_detailed_info["position"]).replace('/','!')).replace(':','~')
                     scenario_json["unity_special_name"] = err_name
                     scenario_json["check_ql"] = config.query_root_dir+unity_detailed_info["query_name"]
 
