@@ -10,14 +10,14 @@
     "iteration": 5,
     "cwe_name": null,
     "unity_special_name": "Instantiate/Destroy in Update() method",
-    "check_ql": "instan_destroy_in_update.ql",
+    "check_ql": "D:\\codeql\\csharp\\ql\\srcinstan_destroy_in_update.ql",
     "prompt_template": [
         "basic_prompt"
     ],
     "stop_word": null,
     "include_addition": true,
     "err_detailed_info": {
-        "description": "Update() method is called each frame. It's efficient to use Instantiate(\uff09 and Destroy() in Update() method.",
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate(\u00ef\u00bc\u2030 and Destroy() in Update() method.",
         "file_name": "/Assets/Scripts/JoystickLocomotion.cs",
         "start_line": "50",
         "start_column": "25",

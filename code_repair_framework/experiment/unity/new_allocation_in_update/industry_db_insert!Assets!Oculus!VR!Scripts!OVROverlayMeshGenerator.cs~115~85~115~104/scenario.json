@@ -10,7 +10,7 @@
     "iteration": 5,
     "cwe_name": null,
     "unity_special_name": "Using New() allocation in Update() method.",
-    "check_ql": "new_allocation.ql",
+    "check_ql": "D:\\codeql\\csharp\\ql\\srcnew_allocation.ql",
     "prompt_template": [
         "basic_prompt"
     ],

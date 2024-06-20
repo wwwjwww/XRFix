@@ -10,7 +10,7 @@
     "iteration": 5,
     "cwe_name": null,
     "unity_special_name": "Transform object of Rigidbody in Update() methods",
-    "check_ql": "rigidbody_transform_in_update.ql",
+    "check_ql": "D:\\codeql\\csharp\\ql\\srcrigidbody_transform_in_update.ql",
     "prompt_template": [
         "basic_prompt"
     ],
@@ -23,10 +23,10 @@
         "start_column": "9",
         "end_line": "31",
         "end_column": "11",
-        "add_file_name": "/Assets/Scripts/PlayerUIController.cs",
-        "add_start_line": "181",
+        "add_file_name": "/Assets/HandManager.cs",
+        "add_start_line": "31",
         "add_start_column": "17",
-        "add_end_line": "181",
-        "add_end_column": "25"
+        "add_end_line": "31",
+        "add_end_column": "26"
     }
 }

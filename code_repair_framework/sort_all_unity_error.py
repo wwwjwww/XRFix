@@ -52,7 +52,7 @@ def count_cwe_num(file):
 
 if __name__ == "__main__":
     path = "result_unity"
-    file = "all_sort_cwe.json"
+    file = "all_sort_unity.json"
     #file1 = "./all_sort_cwe_detailed.json"
 
     sort_result_cwe(path)

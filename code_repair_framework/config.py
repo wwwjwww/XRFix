@@ -32,4 +32,4 @@ project_root_dir = {"brick_db_insert":r"D:\Bug_injection_project\BricksVR-Rebuil
            "mrtk_db":r"D:\Bug_injection_project\MRTK-Passthrough-main\MRTK-Passthrough-main",
            "neuro_db":r"D:\Bug_injection_project\Neuroanatomy_Passthrough_Quest2-main\VR-Neuroanatomy-master"
            }
-query_root_dir = ""
+query_root_dir = "D:\\codeql\\csharp\\ql\\src"
