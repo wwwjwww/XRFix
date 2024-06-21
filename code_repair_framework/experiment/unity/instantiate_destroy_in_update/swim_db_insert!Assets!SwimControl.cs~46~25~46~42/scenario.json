@@ -10,7 +10,7 @@
     "iteration": 5,
     "cwe_name": null,
     "unity_special_name": "Instantiate/Destroy in Update() method",
-    "check_ql": "D:\\codeql\\csharp\\ql\\srcinstan_destroy_in_update.ql",
+    "check_ql": "D:\\codeql\\csharp\\ql\\src\\unityCheck\\instan_destroy_in_update.ql",
     "prompt_template": [
         "basic_prompt"
     ],

@@ -106,7 +106,7 @@ def get_vulnerable_function_lines(vulnerable_file_contents, start_line_index):
 
 def derive_scenarios_for_experiments(path):
     comment_char = '//'
-    files = os.walk("./experiment")
+    files = os.walk(path)
 
     for path, dir_lis, file_lis in files:
         for file in file_lis:

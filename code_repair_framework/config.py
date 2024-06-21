@@ -4,9 +4,9 @@ cwe_lis = ["Constant condition", "Container contents are never accessed",
 unity_lis = ["Using New() allocation in Update() method.",
              "Instantiate/Destroy in Update() method",
              "Transform object of Rigidbody in Update() methods"]
-unity_query_name_lis = {"Using New() allocation in Update() method.": "new_allocation.ql",
-             "Instantiate/Destroy in Update() method":"instan_destroy_in_update.ql",
-               "Transform object of Rigidbody in Update() methods":"rigidbody_transform_in_update.ql"}
+unity_query_name_lis = {"Using New() allocation in Update() method.": "/unityCheck/new_allocation.ql",
+             "Instantiate/Destroy in Update() method":"/unityCheck/instan_destroy_in_update.ql",
+               "Transform object of Rigidbody in Update() methods":"/unityCheck/rigidbody_transform_in_update.ql"}
 cwe_query_name_lis = {"Constant condition":"/Bad Practices/Control-Flow/ConstantCondition.ql",
                       "Container contents are never accessed":"/Likely Bugs/Collections/WriteOnlyContainer.ql",
                       "Locking the 'this' object in a lock statement":"/Concurrency/LockThis.ql",
@@ -33,3 +33,9 @@ project_root_dir = {"brick_db_insert":r"D:\Bug_injection_project\BricksVR-Rebuil
            "neuro_db":r"D:\Bug_injection_project\Neuroanatomy_Passthrough_Quest2-main\VR-Neuroanatomy-master"
            }
 query_root_dir = "D:\\codeql\\csharp\\ql\\src"
+OPENAI_API_KEY = "387c97f9-7627-42e6-84fe-d49e3e3d47a1"
+
+PROMPT_TEXT_FILENAME = "prompt.txt"
+APPEND_TEXT_FILENAME = "append.txt"
+
+ACTUAL_PROMPT_FILENAME_SUFFIX = ".actual_prompt.txt"

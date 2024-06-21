@@ -51,7 +51,6 @@ def sort_result_cwe(path):
     with open("all_sort_cwe_detailed.json", "w") as f1:
         f1.write(json.dumps(cwe_detailed_lis))
 
-
 def count_cwe_num(file):
     with open(file, 'r') as f:
         lis = json.load(f)
