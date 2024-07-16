@@ -6,62 +6,104 @@ import requests
 from datetime import datetime
 import re
 
-#os.environ["OPENAI_API_KEY"] = config.OPENAI_API_KEY
-apiKey = config.OPENAI_API_KEY
-basicUrl = "https://chatgpt.hkbu.edu.hk/general/rest"
-modelName_gpt35 = "gpt-35-turbo"
-apiVersion = "2024-02-15-preview"
-modelName_gpt4 = "gpt-4-turbo"
+from transformers import AutoTokenizer, AutoModelForCausalLM
+from tenacity import retry, stop_after_attempt, wait_random_exponential
+import logging
+import argparse
+import torch
+import warnings
 
 
-def generate_gpt35_requests(instruct_head, prompt, temp, top_p, max_tokens, iteration,stop_word):
-    url = basicUrl + "/deployments/" + modelName_gpt35 + "/chat/completions/?api-version=" + apiVersion
-    conversation = [{"role": "user", "content": instruct_head + '\n"""\n' + prompt + '\n"""\n'}]
-    headers = {'Content-Type': 'application/json', 'api-key': apiKey}
-    payload = {'messages': conversation, 'temperature': temp, 'max_tokens': max_tokens, 'n': iteration, 'stop': stop_word}
-    response = requests.post(url, json=payload, headers=headers)
+def parse_arguments():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--access_token', default=None, type=str)
+    parser.add_argument('--cache_dir', default=None, type=str)
+    parser.add_argument('--checkpoint', default='codellama/CodeLlama-7b-Instruct-hf',
+                        choices=['codellama/CodeLlama-7b-Instruct-hf', 'codellama/CodeLlama-13b-Instruct-hf',
+                                 'codellama/CodeLlama-34b-Instruct-hf'], type=str)
 
-    if response.status_code == 200:
-        data = response.json()
-        return response.status_code, data
-    else:
-        return response.status_code, response
+    parser.add_argument('--temperature', default=1, type=float)
+    parser.add_argument('--candidate_num', default=1, type=int)
+    args = parser.parse_args()
 
-def generate_gpt4_requests(instruct_head, prompt, temp, top_p, max_tokens, iteration,stop_word):
-    url = basicUrl + "/deployments/" + modelName_gpt4 + "/chat/completions/?api-version=" + apiVersion
-    conversation = [{"role": "user", "content": instruct_head + '\n"""\n' + prompt + '\n"""\n'}]
-    headers = {'Content-Type': 'application/json', 'api-key': apiKey}
-    payload = {'messages': conversation, 'temperature': temp, 'max_tokens': max_tokens, 'n': iteration, 'stop': stop_word}
-    response = requests.post(url, json=payload, headers=headers)
+    return args
 
-    if response.status_code == 200:
-        data = response.json()
-        return response.status_code, data
-    else:
-        return response.status_code, response
+@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
+def generate_text(prompt, temperature, max_new_tokens,candidate_num):
+    inputs = tokenizer(prompt, return_tensors='pt', add_special_tokens=False).to(device)
+    outputs = model.generate(
+        inputs['input_ids'],
+        max_new_tokens=max_new_tokens,
+        temperature=temperature,
+        top_k=50,
+        top_p=0.95,
+        num_return_sequences=candidate_num,
+        do_sample=True,
+        pad_token_id=tokenizer.eos_token_id
+    ).to('cpu')
+    response = [tokenizer.decode(output, skip_special_tokens=True).split('[/INST]')[-1].strip()
+                for output in outputs]
 
-def generate_gpt35_requests_no_stop_word(instruct_head, prompt, temp, top_p, max_tokens, iteration):
-    url = basicUrl + "/deployments/" + modelName_gpt35 + "/chat/completions/?api-version=" + apiVersion
-    conversation = [{"role": "user", "content": instruct_head + '\n"""\n' + prompt + '\n"""\n'}]
-    headers = {'Content-Type': 'application/json', 'api-key': apiKey}
-    payload = {'messages': conversation, 'temperature': temp, 'max_tokens': max_tokens, 'n': iteration}
-    response = requests.post(url, json=payload, headers=headers)
+    return response
 
-    if response.status_code == 200:
-        data = response.json()
-        return response.status_code, data
-    else:
-        return response.status_code, response
 
+@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
+def count_message_tokens(content):
+    tokens = tokenizer(content)['input_ids']
+    num_tokens = len(tokens)
+
+    return num_tokens
+
+def generate_codellama_requests(instruct_head, prompt, temp, top_p, max_tokens, iteration,stop_word):
+
+    source_lang = "c#"
+    contents = instruct_head + '\n"""\n' + prompt + '\n"""\n'
+    prompt = f'<s>[INST] {contents} [/INST]'
+
+    input_tokens = count_message_tokens(prompt)
+    logging.info('input tokens: ' + str(input_tokens))
+    if input_tokens > max_input_tokens:
+        logging.warning('Over input tokens limit')
+    try:
+        response = generate_text(
+            prompt=prompt,
+            temperature=temp,
+            max_new_tokens=max_tokens,
+            candidate_num=iteration
+        )
+        logging.info('response: ' + str(response))
+
+        if response is not None:
+            repair_outcome = response
+            status = "SUCCESS"
+        else:
+            logging.warning('Respond content is none.')
+            repair_outcome = []
+            status = "FAILED"
+
+    except Exception as e:
+        logging.error('Failed to generate text: ' + e.__str__())
+        repair_outcome = []
+        status = "FAILED"
+
+    result = {}
+
+    for i, generated_code in enumerate(repair_outcome):
+        output_tokens = count_message_tokens(generated_code)
+        logging.info('output tokens: ' + str(output_tokens))
+        if output_tokens > max_new_tokens:
+            logging.warning('Over total tokens limit ')
+            generated_code = ''
+        logging.info('Code repairing in: ' + source_lang + ' :' + generated_code)
+        result['code_repairing_' + str(i)] = generated_code
+
+    if len(repair_outcome) < candidate_num:
+        for i in range(candidate_num - len(repair_outcome)):
+            result['code_repairing_' + str(i + len(repair_outcome))] = ''
+    return status, result
 
 def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_contents, append_contents, experiment_filename, temperature, top_p, LLM_engine, iteration, include_addition, skip_engines):
-    #language_key = "//cs"
     max_tokens = 2048
-
-    #llm_exp_response = os.path.join(root_dir, "response")
-    #if os.path.exists(llm_exp_response):
-        #print("Already generate response before.")
-        #os.rename(llm_exp_response, os.path.join(root_dir, "response_old"+"_"+datetime.now()))
 
     llm_responses_dir = os.path.join(root_dir, "response",
                                        experiment_filename + ".llm_responses")
@@ -97,40 +139,8 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
                     print(
                         "Attempting responses for folder: %s ,file:%s,temp:%.2f,top_p:%.2f,engine:%s,max_tokens:%d" % (
                             llm_responses_dir, experiment_filename, temperature, top_p, engine, max_tokens))
-                    if engine == "gpt-3.5-turbo":
-                        if "new_allocation_in_update" in root_dir:
-                            print("Call GPT-3.5-Turbo with no stop words.")
-                            status, data = generate_gpt35_requests_no_stop_word(
-                                instruct_head,
-                                prompt_text,
-                                temperature,
-                                top_p,
-                                max_tokens,
-                                iteration
-                            )
-
-                        else:
-                            status, data = generate_gpt35_requests(
-                                instruct_head,
-                                prompt_text,
-                                temperature,
-                                top_p,
-                                max_tokens,
-                                iteration,
-                                "\n\t}"
-                            )
-
-                        if (status == 200):
-                            print("LLM responses collected.")
-                            break
-                        else:
-                            prompt_text = short_contents
-                            print("Waiting 30 seconds and trying again")
-                            time.sleep(30)
-                            continue
-
-                    if engine == "gpt-4-turbo":
-                        status, data = generate_gpt4_requests(
+                    if engine == "code-llama":
+                        status, data = generate_codellama_requests(
                             instruct_head,
                             prompt_text,
                             temperature,
@@ -140,15 +150,13 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
                             "\n\t}"
                         )
 
-                        if (status == 200):
+                        if (status == "SUCCESS"):
                             print("LLM responses collected.")
                             break
                         else:
-                            prompt_text = short_contents
                             print("Waiting 30 seconds and trying again")
                             time.sleep(30)
                             continue
-
 
 
             if not skip:
@@ -214,7 +222,39 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                         skip_engines = skip_engines
                     )
 
-if __name__ == "__main__":
-    path = r'.\experiment\unity\transform_rigidbody_in_update'
+
+if __name__ == '__main__':
+    args = parse_arguments()
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    print('Device:', device)
+
+
+    tokenizer = AutoTokenizer.from_pretrained(
+        args.checkpoint,
+        use_fast=True,
+        trust_remote_code=True,
+        token=args.access_token,
+        cache_dir=args.cache_dir
+    )
+    model = AutoModelForCausalLM.from_pretrained(
+        args.checkpoint,
+        torch_dtype=torch.float16,
+        # load_in_4bit=True,
+        low_cpu_mem_usage=True,
+        trust_remote_code=True,
+        device_map='auto',
+        token=args.access_token,
+        cache_dir=args.cache_dir
+    )
+    print(f'Memory footprint: {model.get_memory_footprint() / 1e6:.2f} MB')
+    candidate_num = args.candidate_num
+    temperature = args.temperature
+    max_input_tokens = tokenizer.model_max_length  # 1000000000000000019884624838656
+    # The maximum numbers of tokens to generate, ignoring the number of tokens in the prompt.
+    max_new_tokens = 2048  # max_output_tokens
+
+    path = r'.\experiment\cwe'
     skip_engines = []
     prepare_LLM_experiment_requests(path, skip_engines)
+

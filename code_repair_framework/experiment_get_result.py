@@ -3,15 +3,22 @@ import config
 import json
 import re
 import numpy as np
+import experiment_run_codeql_test
+def basic_combine_generated_code_with_existing_single_line(comment_key, contents, append_contents, generated_text, whitespace, generate_mean_logprob_comments = False, mean_logprob = None):
+    #concatenate the choice to the original file
+    new_contents = contents + whitespace+ generated_text + "\n" + append_contents
+    if generate_mean_logprob_comments and mean_logprob is not None:
+        new_contents = comment_key + "LM generated repair code follows. mean_logprob: " + mean_logprob + "\n" + new_contents
+    return new_contents
 
-def basic_combine_generated_code_with_existing(comment_key, contents, append_contents, generated_text, generate_mean_logprob_comments = False, mean_logprob = None):
+def basic_combine_generated_code_with_existing_func(comment_key, contents, append_contents, generated_text, whitespace, generate_mean_logprob_comments = False, mean_logprob = None):
     #concatenate the choice to the original file
     new_contents = contents + generated_text + "\n" + append_contents
     if generate_mean_logprob_comments and mean_logprob is not None:
         new_contents = comment_key + "LM generated repair code follows. mean_logprob: " + mean_logprob + "\n" + new_contents
     return new_contents
 
-def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment_extension, codex_responses_files,
+def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment_extension, combine_settings, codex_responses_files,
                                        force=False, keep_duplicates=False,
                                        include_append=False,
                                        generate_mean_logprob_comments=False):
@@ -29,8 +36,13 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
             if not os.path.exists(file_path):
                 print("Nothing to extrapolate")
                 return
-            with open(file_path, "r") as f:
+            with open(file_path, "r", encoding='utf-8') as f:
                 contents = f.read()
+
+            with open(file_path, "r", encoding='utf-8') as f2:
+                line_contents = f2.readlines()
+            whitespace_count = len(line_contents[-1])-len(line_contents[-1].lstrip())
+            whitespace = line_contents[-1][:whitespace_count]
 
             append_contents = ""
             if include_append:
@@ -38,7 +50,7 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
                                      experiment_file + ".llm_responses",
                                      "append.txt")
                 if (os.path.exists(append_file_path)):
-                    with open(append_file_path, "r") as f:
+                    with open(append_file_path, "r", encoding='utf-8') as f:
                         append_contents = f.read()
 
         # comment key
@@ -49,7 +61,7 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
         unique_outputs = {}
 
         temp_top_p_regex = re.compile(
-            r'^(gpt-3.5-turbo)\.temp-(\d+\.\d+).*\.top_p-(\d+\.\d+)')
+            r'^(gpt-3.5-turbo|gpt-4-turbo)\.temp-(\d+\.\d+).*\.top_p-(\d+\.\d+)')
 
         # for each experiment, concatenate the lines of the choices to the original file
         # and save in config.CODEX_PROGRAMS_DIRNAME
@@ -74,9 +86,15 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
             if temp_top_p_match is None:
                 print("Could not find temp/top_p in filename", codex_response_file)
                 continue
+
             engine = temp_top_p_match.group(1)
+
             temp = temp_top_p_match.group(2)
             top_p = temp_top_p_match.group(3)
+
+            if not os.path.exists(codex_responses_file_full):
+                print("This dir couldn't find the file %s"%(codex_responses_file_full))
+                continue
 
             with open(codex_responses_file_full, "r") as f:
 
@@ -90,11 +108,18 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
 
 
                 # check if the filename begins with "cushman-codex" or "davinci-codex"
-                if codex_response_file.startswith("gpt-3.5-turbo"):
+                if codex_response_file.startswith("gpt-3.5-turbo") or codex_response_file.startswith("gpt-4-turbo"):
                     for choice in codex_response['choices']:
                         codex_programs_file = codex_response_file + "." + str(index) + "." + experiment_extension
 
                         choice_txt = choice['message']['content']
+                        choice_txt_clean = re.sub(r'```csharp\n|```C#|```|"""\n|"""', "", choice_txt, re.DOTALL)
+                        choice_txt_clean = re.sub(r'^\s+', '', choice_txt_clean, re.DOTALL)
+
+                        ####choice_txt_clean = re.search(r"```csharp\n(.*?)\n```", choice_txt, re.DOTALL)
+
+
+                        choice_txt = choice_txt_clean
 
                         if choice_txt not in unique_outputs:
                             unique_outputs[choice_txt] = codex_programs_file
@@ -104,9 +129,19 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
 
                         extrapolate_error = False
 
-                        new_contents = basic_combine_generated_code_with_existing(comment_key, contents,
-                                                                                      append_contents, choice_txt,
+
+                        if combine_settings == "single_line":
+                            new_contents = basic_combine_generated_code_with_existing_single_line(comment_key, contents,
+                                                                                      append_contents,
+                                                                                      choice_txt,
+                                                                                      whitespace,
                                                                                       generate_mean_logprob_comments=generate_mean_logprob_comments)
+                        else:
+                            new_contents = basic_combine_generated_code_with_existing_func(comment_key, contents,
+                                                                                                  append_contents,
+                                                                                                  choice_txt,
+                                                                                                  whitespace,
+                                                                                                  generate_mean_logprob_comments=generate_mean_logprob_comments)
 
                         # queue the codex_programs file
                         new_files.append({
@@ -137,7 +172,7 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
                 print("skipping, extrapolation error")
                 continue
 
-            with open(filename_full, "w") as f:
+            with open(filename_full, "w", encoding='utf8') as f:
                 f.write(new_file['contents'])
 
         for new_file in new_files:
@@ -146,17 +181,47 @@ def extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment
         with open(os.path.join(llm_programs_dir, "extrapolation_metadata.json"), "w") as f:
             f.write(json.dumps(new_files, indent=4))
 
-def run_all_exp_and_get_all_results():
-    print("coding until later")
+
+def extrapolate_all_llm_choices_and_get_all_results(root, response_file):
+    files = os.walk(root)
+    experiment_extension = "cs"
+    for path, dir_lis, file_lis in files:
+        for file in file_lis:
+            if file == "scenario.json":
+                with open(os.path.join(path, file), 'r', encoding="utf8") as f:
+                    scenario_contents = json.load(f)
+
+                    experiment_dir = path
+                    experiment_file = scenario_contents["err_detailed_info"]["file_name"].split("/")[-1]
+                    print("Generate LLM choices for later evaluation for %s" % (experiment_dir))
+                    if scenario_contents["cwe_name"]:
+                        err_name = scenario_contents["cwe_name"]
+                    else:
+                        err_name = scenario_contents["unity_special_name"]
+
+                    combine_settings = config.CONTEXT_COMBINE_CWE[err_name]
+
+
+                    llm_response_dir = os.path.join(experiment_dir, "response",
+                                                    experiment_file + ".llm_responses")
+                    if os.path.exists(llm_response_dir):
+                        #extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment_extension, combine_settings,
+                                                         #response_file,force=True, keep_duplicates=True,
+                                                         #include_append=True,generate_mean_logprob_comments=False)
+                        experiment_run_codeql_test.set_up_scenarios_test_for_all_exp(experiment_dir, experiment_file)
+
+                    else:
+                        print("no response file, skip")
+
+
 
 if __name__ == "__main__":
-    experiment_dir = r"D:\git_upload\Unity_code_detection\code_repair_framework\experiment\unity\instantiate_destroy_in_update\swim_db_insert!Assets!SwimControl.cs~46~25~46~42"
-    experiment_file = "SwimControl.cs"
-    experiment_extension = "cs"
-    codex_responses_files = ["gpt-3.5-turbo.temp-0.95.top_p-1.00.response.json"]
-    extrapolate_llm_choices_for_file(experiment_dir, experiment_file, experiment_extension, codex_responses_files,
-                                       force=True, keep_duplicates=False,
-                                       include_append=False,
-                                       generate_mean_logprob_comments=False)
+    #path_lis = [r'.\experiment\cwe', r'.\experiment\unity\transform_rigidbody_in_update', r'.\experiment\unity\new_allocation_in_update']
+    path_lis = [r'.\experiment\unity\transform_rigidbody_in_update']
+    codex_responses_files = ["gpt-4-turbo.temp-1.00.top_p-1.00.response.json"]
+    for path in path_lis:
+        extrapolate_all_llm_choices_and_get_all_results(path, codex_responses_files)
+
+
 
 
