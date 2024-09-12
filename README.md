@@ -1,5 +1,5 @@
-# Unity_code_detection
-This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of XR Apps with LLMs]{XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
+# XRFix
+This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
 
 The folders are organized as follows.
 * ./Customized_codeql contains our specially designed queries for XR-related errors.
@@ -53,8 +53,8 @@ codeql database analyze <database> ./codeql/csharp/ql/src/codeql-suites/special_
 codeql database analyze <database> ./codeql/csharp/ql/src/codeql-suites/unity-check.qls
 ```
 
-#### code_repair_framework
-
+#### code repair framework
+Please see readme.md files in ./code_repair_framework to see more details.
 
 
 
