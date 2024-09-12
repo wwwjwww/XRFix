@@ -32,6 +32,12 @@ project_root_dir = {"brick_db_insert":r"D:\Bug_injection_project\BricksVR-Rebuil
            "mrtk_db":r"D:\Bug_injection_project\MRTK-Passthrough-main\MRTK-Passthrough-main",
            "neuro_db":r"D:\Bug_injection_project\Neuroanatomy_Passthrough_Quest2-main\VR-Neuroanatomy-master"
            }
+CONTEXT_COMBINE_CWE = {"Constant condition":"single_line",
+                      "Container contents are never accessed":"single_line",
+                      "Locking the 'this' object in a lock statement":"function",
+                      "Potentially dangerous use of non-short-circuit logic":"single_line",
+                      "Redundant Select":"single_line",
+                       "Transform object of Rigidbody in Update() methods":"single_line"}
 query_root_dir = "D:\\codeql\\csharp\\ql\\src"
 OPENAI_API_KEY = "387c97f9-7627-42e6-84fe-d49e3e3d47a1"
 
