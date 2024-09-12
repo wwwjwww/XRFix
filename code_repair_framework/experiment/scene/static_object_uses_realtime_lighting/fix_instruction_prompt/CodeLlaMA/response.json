@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "I can help you with that! Here is your fixed code snippet:\n```\nLight:\nm_Lightmapping: baked\n```",
-    "code_repairing_1": "To fix the bug, we need to change the value of the \"m_Lightmapping\" key to \"baked\".\n\nHere's the changed code snippet:\n```\nLight:\n  m_Lightmapping: baked\n```",
-    "code_repairing_2": "```\nLight:\nm_Lightmapping: \"baked\"\n```\nNote: The value \"baked\" is used to indicate that the lightmap for the static object should be baked at edit time, rather than being applied at runtime. This can help reduce the memory usage of the static object, and can also improve performance.",
-    "code_repairing_3": "'''\nLight:\nm_Lightmapping: 4\n'''\n\nFIXED:\n\nLight:\nm_Lightmapping: 4\nm_LightmappingMode: Baked\n\nThis setting change from \"Realtime\" to \"Baked\". This should help speed-up performance, as it creates a baked lightmap.",
-    "code_repairing_4": "```\nLight:\nm_Lightmapping: 1\n```\nIn the fixed code snippet, the value of `m_Lightmapping` has been changed to `1`, which corresponds to \"Baked\" lighting. This means that the lighting setup for the scene will be pre-calculated and stored as a texture map, rather than being calculated dynamically at runtime. This can help reduce the resource consumption of the scene, as you mentioned."
-}

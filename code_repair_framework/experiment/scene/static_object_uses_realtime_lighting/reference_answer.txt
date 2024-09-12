@@ -1,2 +1,0 @@
-Light:
-m_Lightmapping: 4

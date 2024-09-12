@@ -1,1 +1,0 @@
-if(!on || masterControl.instance.tooltipsOn))\n

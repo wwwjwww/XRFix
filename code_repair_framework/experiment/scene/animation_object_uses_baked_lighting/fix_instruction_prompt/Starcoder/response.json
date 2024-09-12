@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "Under the FIXED: header, change m_Lightmapping to 4 (Realtime).",
-    "code_repairing_1": "Light:\n    m_Lightmapping: Realtime\n<|system|>\n\n<|user|>\nEn una",
-    "code_repairing_2": "```yaml\nAnimator:\n...\n  - component: Animation\n    m_ObjectHideFlags:",
-    "code_repairing_3": "Here is the modified YAML:\n\n```yaml\nAnimator:\n ...\nLight:\n  m",
-    "code_repairing_4": "```yaml\nAnimator:\n ...\nLight:\n  m_Lightmapping: realtime\n```"
-}

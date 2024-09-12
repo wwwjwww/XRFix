@@ -1,6 +1,0 @@
-You're an automated program repair tool. The following unity scene file is written in YAML language. Your task is to fix the setting under the 'FIXED:' area. In your response, only include your fixed code snippets. Do not output the original contents.
-Animator:
-...
-Light:
-m_Lightmapping: 2
-FIXED:
