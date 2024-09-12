@@ -1,14 +1,10 @@
 # XRFix
-<<<<<<< HEAD
 This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
-=======
-This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of XR Apps with LLMs]{XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
->>>>>>> 73fd46c31a9469f7f5536c79925f10a567720988
 
 The folders are organized as follows.
 * ./Customized_codeql contains our specially designed queries for XR-related errors.
 * ./Customized_UnityLint conatins our customized UnityLint.
-* ./XRFix contains our LLM-assisted code repair framework.
+* ./code_repair_framework contains our LLM-assisted code repair framework.
 
 ### Environment Requirement
 1. CodeQL-cli version: 2.16.3, official guidance: https://codeql.github.com/docs/codeql-cli/getting-started-with-the-codeql-cli/
