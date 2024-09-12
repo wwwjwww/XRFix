@@ -1,0 +1,29 @@
+{
+  "guid": "0f5fc17cfc0a79d49b8f2050ae8e12f4",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples\\HandPosing.meta",
+  "name": "HandPosing",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Samples",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples"
+}

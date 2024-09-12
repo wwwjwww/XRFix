@@ -1,0 +1,29 @@
+{
+  "guid": "8c488a3b7564c6443ba99e893466f5b4",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Samples\\NetChat.meta",
+  "name": "NetChat",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "72e4337094e38d3499bd72e2ed7a06b1",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses\\BookRegularPoses.asset.meta",
+  "name": "BookRegularPoses.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Poses",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses"
+}

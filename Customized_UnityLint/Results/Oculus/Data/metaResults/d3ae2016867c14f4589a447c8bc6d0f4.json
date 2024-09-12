@@ -1,0 +1,26 @@
+{
+  "guid": "d3ae2016867c14f4589a447c8bc6d0f4",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\TouchControllers\\Models.meta",
+  "name": "Models",
+  "type": "meta",
+  "file_size": 193,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

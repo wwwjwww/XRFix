@@ -1,0 +1,173 @@
+8/23/2024 11:28:24 PM Loading extensions...
+8/23/2024 11:28:24 PM Searching MetaData file inside project folder...
+8/23/2024 11:28:24 PM Searching main file...
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Searching meta file...
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Creating Result Directories
+8/23/2024 11:28:24 PM Start analisys...
+8/23/2024 11:28:24 PM Analyzing Main MetaData...
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: ProjectInfo.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\GhostLeftOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 9c9caced691e39a4dac8e89ddac879ad.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\GhostRightOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 279607e4686b2404fa13d68aa4f51637.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\HandPoseDefaultOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 7fab1a819803477439b71b9620160619.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\SnappingHands_Solid.mat
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: ef05a92427437d940922dfb387f41d29.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\SnappingHands_Transparent.mat
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 3b284a5e175186f479db1d1cd81a41df.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_ControllerHandLeftOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 886cb81ddb5a38541bfc87cbb5fabfd5.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_ControllerHandRightOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 23b1fe0762145904ba4ff0b82e7de514.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_TrackedHandLeftOVR Ghost.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: fa5cfeae0d3031e41affab84f2263840.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_TrackedHandLeftOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 9686c5d5c94736246ab0d8f5920d3445.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_TrackedHandRightOVR Ghost.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 63b28ea3e535bab48a39e62ea8e097d7.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\Snapping_TrackedHandRightOVR.prefab
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: d7bd83fd0123da74eb60c0f446429bd3.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Analyzing Meta files...
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 0f5fc17cfc0a79d49b8f2050ae8e12f4.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 9a643dd85268767408a850519a0d9e85.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR).meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 962638b6f851fb945aa3645965fc2664.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 3fb2f2fca74340d4f8688bc86825b04e.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 559a3d23455f87041bf962788a6af656.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\GhostProviderOVR.asset.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 0c489ee65d68038419e1482bbb7aff24.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Prefabs\GhostProviderOVRWithControllers.asset.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 2176ff4867cf6bc4b841d3a0415b1155.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\AnimatedHandOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: a938e6804a858c34d91a964d7b720752.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\AvatarHandPuppetOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 08406043919f7d74b9ad4fa42ababcf8.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 50f4ad622c1c7814aade54a2386b739a.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\GrabberHybridOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 51eb3b5203579b848804c98dd1571c7d.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\SkeletonDataProviderOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: fef190d8d273c1f4fb95810e8f031f6f.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\TipsTriggersOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: de2c4dd6d90d6434385812cab7bed050.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\UpdateNotifierOVR.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 40cca75513021c84b8bbee4b82d0970d.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\ControllerFlex.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 2a4ecd3b02b31374aae9ae1f9041266d.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\FlexInterface.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 40ab322fb12676e4d80131a44d67964e.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\NoopFlex.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 996c0c69bccbd4648ba0b3fc6fa382a6.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\PinchTriggerFlex.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 6d49bdd7f015ce34ebcef4318edda787.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\SphereGrabFlex.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: 4c2ece6cd8d708147bd52ae64e1e6070.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Samples\HandPosing\1.3.4\Integration Oculus (OVR)\Scripts\FlexInterfaces\SphereGrabPinchFlex.cs.meta
+8/23/2024 11:28:24 PM Data Extracted!
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:24 PM Saving File: cff700274dab95c4db2b4c071444c45d.json
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Done!

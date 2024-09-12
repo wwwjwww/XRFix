@@ -1,0 +1,28 @@
+8/23/2024 11:28:11 PM Start analysis...
+8/23/2024 11:28:11 PM Loading Dataset...
+8/23/2024 11:28:11 PM Loading main data...
+8/23/2024 11:28:11 PM File: Results/Images/Data\mainResults\d0078cc0a8b14b546965252f70004045.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\mainResults\ee7908d2f69074547bd3916b56037636.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\mainResults\f2a2f9ae3f134164eae10cb615b9dd60.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\mainResults\ProjectInfo.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\metaResults\35e56386e83187a4b88203d406c8a923.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\metaResults\68085cfd0477acf41bd168da2f0a486f.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\metaResults\948be82280fc34b4c925737f2fd0cd14.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\metaResults\a0f1c00bdb357cf478a364f1de21e299.json
+8/23/2024 11:28:11 PM File: Results/Images/Data\metaResults\a5dba817f8fa7df4986d21415a8ef626.json
+8/23/2024 11:28:11 PM Maindata loaded!
+8/23/2024 11:28:11 PM Dataset Loaded!
+8/23/2024 11:28:11 PM Searching for smells...
+8/23/2024 11:28:11 PM Searching SubOptimal Expensive Lights...
+8/23/2024 11:28:11 PM Done!!
+8/23/2024 11:28:11 PM Searching SubOptimal Expensive Lights with enable LightRealTime...
+8/23/2024 11:28:11 PM Done!!
+8/23/2024 11:28:11 PM Searching Animation Object with Clear Flag=nothing...
+8/23/2024 11:28:11 PM Done!!
+8/23/2024 11:28:11 PM Search completed!
+8/23/2024 11:28:11 PM Analysis Done!
+8/23/2024 11:28:11 PM Saving results...
+8/23/2024 11:28:11 PM Saving: SubOptimal_Expensive_Lights.json
+8/23/2024 11:28:11 PM Saving: SubOptimal_Expensive_Lights_with_enable_LightRealTime.json
+8/23/2024 11:28:11 PM Saving: Camera_Render_Clear_Flag_=_Don't_Clear.json
+8/23/2024 11:28:11 PM Results saved in Results/Images/Data\MetaSmellResults

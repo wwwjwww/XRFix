@@ -1,0 +1,29 @@
+{
+  "guid": "d6708eb99dec8334fb83db57b764097a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Resources\\Underlay Transparent Occluder.shader.meta",
+  "name": "Underlay Transparent Occluder.shader",
+  "type": "meta",
+  "file_size": 197,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

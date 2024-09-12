@@ -1,0 +1,42 @@
+{
+  "guid": "a49cc0ca1bcdd99409f7658b336e2d06",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Scripts\\Models\\AchievementUpdate.cs.meta",
+  "name": "AchievementUpdate.cs",
+  "type": "meta",
+  "file_size": 264,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

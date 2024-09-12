@@ -1,0 +1,29 @@
+{
+  "guid": "21b2d8da5b4e72b46b0302a87c18c637",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Samples\\RichPresenceSample\\Scripts.meta",
+  "name": "Scripts",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

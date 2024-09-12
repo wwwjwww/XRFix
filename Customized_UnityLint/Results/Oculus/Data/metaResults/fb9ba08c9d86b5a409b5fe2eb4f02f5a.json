@@ -1,0 +1,3045 @@
+{
+  "guid": "fb9ba08c9d86b5a409b5fe2eb4f02f5a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Usage\\Locomotion\\Models\\WorldGeo.fbx.meta",
+  "name": "WorldGeo.fbx",
+  "type": "meta",
+  "file_size": 25961,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ModelImporter",
+      "ModelImporter": [
+        {
+          "serializedVersion": "23"
+        },
+        {
+          "fileIDToRecycleName": [
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "column_tops"
+            },
+            {
+              "": "columns_1unit"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "GroundPlane"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "platform"
+            },
+            {
+              "": "transform1"
+            },
+            {
+              "": "transform2"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "curve1"
+            },
+            {
+              "": "extrudedSurface1"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "nurbsCircle1"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "transform3"
+            },
+            {
+              "": "transform4"
+            },
+            {
+              "": "extrudedSurface2"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "transform3 1"
+            },
+            {
+              "": "transform5"
+            },
+            {
+              "": "transform6"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "BuildingShell 1"
+            },
+            {
+              "": "DoorCeilingStructureTest"
+            },
+            {
+              "": "doorhole"
+            },
+            {
+              "": "doorhole1"
+            },
+            {
+              "": "doorhole10"
+            },
+            {
+              "": "doorhole11"
+            },
+            {
+              "": "doorhole12"
+            },
+            {
+              "": "doorhole13"
+            },
+            {
+              "": "doorhole14"
+            },
+            {
+              "": "doorhole15"
+            },
+            {
+              "": "doorhole16"
+            },
+            {
+              "": "doorhole17"
+            },
+            {
+              "": "doorhole18"
+            },
+            {
+              "": "doorhole19"
+            },
+            {
+              "": "doorhole2"
+            },
+            {
+              "": "doorhole20"
+            },
+            {
+              "": "doorhole21"
+            },
+            {
+              "": "doorhole22"
+            },
+            {
+              "": "doorhole23"
+            },
+            {
+              "": "doorhole24"
+            },
+            {
+              "": "doorhole3"
+            },
+            {
+              "": "doorhole4"
+            },
+            {
+              "": "doorhole5"
+            },
+            {
+              "": "doorhole6"
+            },
+            {
+              "": "doorhole7"
+            },
+            {
+              "": "doorhole8"
+            },
+            {
+              "": "doorhole9"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "hulls"
+            },
+            {
+              "": "InteriorSubtractionMerged"
+            },
+            {
+              "": "InteriorSubtractionParts"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "transform10"
+            },
+            {
+              "": "transform11"
+            },
+            {
+              "": "transform12"
+            },
+            {
+              "": "transform13"
+            },
+            {
+              "": "transform14"
+            },
+            {
+              "": "transform15"
+            },
+            {
+              "": "transform16"
+            },
+            {
+              "": "transform17"
+            },
+            {
+              "": "transform18"
+            },
+            {
+              "": "transform19"
+            },
+            {
+              "": "transform20"
+            },
+            {
+              "": "transform21"
+            },
+            {
+              "": "transform22"
+            },
+            {
+              "": "transform23"
+            },
+            {
+              "": "transform24"
+            },
+            {
+              "": "transform25"
+            },
+            {
+              "": "transform26"
+            },
+            {
+              "": "transform27"
+            },
+            {
+              "": "transform28"
+            },
+            {
+              "": "transform29"
+            },
+            {
+              "": "transform30"
+            },
+            {
+              "": "transform31"
+            },
+            {
+              "": "transform32"
+            },
+            {
+              "": "transform32 1"
+            },
+            {
+              "": "transform33"
+            },
+            {
+              "": "transform33 1"
+            },
+            {
+              "": "transform34"
+            },
+            {
+              "": "transform34 1"
+            },
+            {
+              "": "transform35"
+            },
+            {
+              "": "transform35 1"
+            },
+            {
+              "": "transform36"
+            },
+            {
+              "": "transform36 1"
+            },
+            {
+              "": "transform37"
+            },
+            {
+              "": "transform37 1"
+            },
+            {
+              "": "transform38"
+            },
+            {
+              "": "transform38 1"
+            },
+            {
+              "": "transform39"
+            },
+            {
+              "": "transform39 1"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "transform40 1"
+            },
+            {
+              "": "transform41"
+            },
+            {
+              "": "transform42"
+            },
+            {
+              "": "transform43"
+            },
+            {
+              "": "transform44"
+            },
+            {
+              "": "transform45"
+            },
+            {
+              "": "transform46"
+            },
+            {
+              "": "transform47"
+            },
+            {
+              "": "transform48"
+            },
+            {
+              "": "transform49"
+            },
+            {
+              "": "transform50"
+            },
+            {
+              "": "transform7"
+            },
+            {
+              "": "transform8"
+            },
+            {
+              "": "transform9"
+            },
+            {
+              "": "transform60"
+            },
+            {
+              "": "transform61"
+            },
+            {
+              "": "transform62"
+            },
+            {
+              "": "transform63"
+            },
+            {
+              "": "transform64"
+            },
+            {
+              "": "transform65"
+            },
+            {
+              "": "transform66"
+            },
+            {
+              "": "transform67"
+            },
+            {
+              "": "transform68"
+            },
+            {
+              "": "transform69"
+            },
+            {
+              "": "transform70"
+            },
+            {
+              "": "transform71"
+            },
+            {
+              "": "transform72"
+            },
+            {
+              "": "transform73"
+            },
+            {
+              "": "transform74"
+            },
+            {
+              "": "transform75"
+            },
+            {
+              "": "transform76"
+            },
+            {
+              "": "transform77"
+            },
+            {
+              "": "transform78"
+            },
+            {
+              "": "transform79"
+            },
+            {
+              "": "transform80"
+            },
+            {
+              "": "transform81"
+            },
+            {
+              "": "transform82"
+            },
+            {
+              "": "transform83"
+            },
+            {
+              "": "transform84"
+            },
+            {
+              "": "transform85"
+            },
+            {
+              "": "transform86"
+            },
+            {
+              "": "transform87"
+            },
+            {
+              "": "transform88"
+            },
+            {
+              "": "transform89"
+            },
+            {
+              "": "transform90"
+            },
+            {
+              "": "transform91"
+            },
+            {
+              "": "transform92"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "TunnelObjects"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "DoorHoleBlock2"
+            },
+            {
+              "": "DoorHoleBlock3"
+            },
+            {
+              "": "pCube23"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "transform52"
+            },
+            {
+              "": "transform53"
+            },
+            {
+              "": "transform54"
+            },
+            {
+              "": "transform55"
+            },
+            {
+              "": "transform57"
+            },
+            {
+              "": "DoorHoleBlock"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "DoorHoleBlock2 1"
+            },
+            {
+              "": "DoorHoleBlock3 1"
+            },
+            {
+              "": "DoorHoleBlock4"
+            },
+            {
+              "": "pCube14 1"
+            },
+            {
+              "": "pCube15 1"
+            },
+            {
+              "": "pCube16 1"
+            },
+            {
+              "": "pCube17 1"
+            },
+            {
+              "": "pCube18 1"
+            },
+            {
+              "": "pCube19 1"
+            },
+            {
+              "": "pCube20 1"
+            },
+            {
+              "": "pCube21 1"
+            },
+            {
+              "": "pCube23 1"
+            },
+            {
+              "": "pCube24 1"
+            },
+            {
+              "": "pCube25 1"
+            },
+            {
+              "": "pCube26 1"
+            },
+            {
+              "": "pCube27 1"
+            },
+            {
+              "": "pCube28 1"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "transform52 1"
+            },
+            {
+              "": "transform53 1"
+            },
+            {
+              "": "transform54 1"
+            },
+            {
+              "": "transform55 1"
+            },
+            {
+              "": "transform56"
+            },
+            {
+              "": "transform57 1"
+            },
+            {
+              "": "transform58"
+            },
+            {
+              "": "transform59"
+            },
+            {
+              "": "TunnelCurve"
+            },
+            {
+              "": "TunnelExtrusion"
+            },
+            {
+              "": "TunnelProfile"
+            },
+            {
+              "": "WalkWedge"
+            },
+            {
+              "": "WallsAndDoors1Copy"
+            },
+            {
+              "": "WallsAndDoorsSrc"
+            },
+            {
+              "": "columns_1unit1"
+            },
+            {
+              "": "pCube10 1"
+            },
+            {
+              "": "pCube11 1"
+            },
+            {
+              "": "pCube12 1"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube9 1"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection01"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "CeilingWedges"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock01 1"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock02 1"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock03 1"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock04 1"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock05 1"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock06 1"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock07 1"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock08 1"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock09 1"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock10 1"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock11 1"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock12 1"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock13 1"
+            },
+            {
+              "": "ColumnGroup1"
+            },
+            {
+              "": "ColumnGroup2"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "column_tops"
+            },
+            {
+              "": "columns_1unit"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "GroundPlane"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "platform"
+            },
+            {
+              "": "transform1"
+            },
+            {
+              "": "transform2"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "curve1"
+            },
+            {
+              "": "extrudedSurface1"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "nurbsCircle1"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "transform3"
+            },
+            {
+              "": "transform4"
+            },
+            {
+              "": "extrudedSurface2"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "transform3 1"
+            },
+            {
+              "": "transform5"
+            },
+            {
+              "": "transform6"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "BuildingShell 1"
+            },
+            {
+              "": "DoorCeilingStructureTest"
+            },
+            {
+              "": "doorhole"
+            },
+            {
+              "": "doorhole1"
+            },
+            {
+              "": "doorhole10"
+            },
+            {
+              "": "doorhole11"
+            },
+            {
+              "": "doorhole12"
+            },
+            {
+              "": "doorhole13"
+            },
+            {
+              "": "doorhole14"
+            },
+            {
+              "": "doorhole15"
+            },
+            {
+              "": "doorhole16"
+            },
+            {
+              "": "doorhole17"
+            },
+            {
+              "": "doorhole18"
+            },
+            {
+              "": "doorhole19"
+            },
+            {
+              "": "doorhole2"
+            },
+            {
+              "": "doorhole20"
+            },
+            {
+              "": "doorhole21"
+            },
+            {
+              "": "doorhole22"
+            },
+            {
+              "": "doorhole23"
+            },
+            {
+              "": "doorhole24"
+            },
+            {
+              "": "doorhole3"
+            },
+            {
+              "": "doorhole4"
+            },
+            {
+              "": "doorhole5"
+            },
+            {
+              "": "doorhole6"
+            },
+            {
+              "": "doorhole7"
+            },
+            {
+              "": "doorhole8"
+            },
+            {
+              "": "doorhole9"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "hulls"
+            },
+            {
+              "": "InteriorSubtractionMerged"
+            },
+            {
+              "": "InteriorSubtractionParts"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "transform10"
+            },
+            {
+              "": "transform11"
+            },
+            {
+              "": "transform12"
+            },
+            {
+              "": "transform13"
+            },
+            {
+              "": "transform14"
+            },
+            {
+              "": "transform15"
+            },
+            {
+              "": "transform16"
+            },
+            {
+              "": "transform17"
+            },
+            {
+              "": "transform18"
+            },
+            {
+              "": "transform19"
+            },
+            {
+              "": "transform20"
+            },
+            {
+              "": "transform21"
+            },
+            {
+              "": "transform22"
+            },
+            {
+              "": "transform23"
+            },
+            {
+              "": "transform24"
+            },
+            {
+              "": "transform25"
+            },
+            {
+              "": "transform26"
+            },
+            {
+              "": "transform27"
+            },
+            {
+              "": "transform28"
+            },
+            {
+              "": "transform29"
+            },
+            {
+              "": "transform30"
+            },
+            {
+              "": "transform31"
+            },
+            {
+              "": "transform32"
+            },
+            {
+              "": "transform32 1"
+            },
+            {
+              "": "transform33"
+            },
+            {
+              "": "transform33 1"
+            },
+            {
+              "": "transform34"
+            },
+            {
+              "": "transform34 1"
+            },
+            {
+              "": "transform35"
+            },
+            {
+              "": "transform35 1"
+            },
+            {
+              "": "transform36"
+            },
+            {
+              "": "transform36 1"
+            },
+            {
+              "": "transform37"
+            },
+            {
+              "": "transform37 1"
+            },
+            {
+              "": "transform38"
+            },
+            {
+              "": "transform38 1"
+            },
+            {
+              "": "transform39"
+            },
+            {
+              "": "transform39 1"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "transform40 1"
+            },
+            {
+              "": "transform41"
+            },
+            {
+              "": "transform42"
+            },
+            {
+              "": "transform43"
+            },
+            {
+              "": "transform44"
+            },
+            {
+              "": "transform45"
+            },
+            {
+              "": "transform46"
+            },
+            {
+              "": "transform47"
+            },
+            {
+              "": "transform48"
+            },
+            {
+              "": "transform49"
+            },
+            {
+              "": "transform50"
+            },
+            {
+              "": "transform7"
+            },
+            {
+              "": "transform8"
+            },
+            {
+              "": "transform9"
+            },
+            {
+              "": "transform60"
+            },
+            {
+              "": "transform61"
+            },
+            {
+              "": "transform62"
+            },
+            {
+              "": "transform63"
+            },
+            {
+              "": "transform64"
+            },
+            {
+              "": "transform65"
+            },
+            {
+              "": "transform66"
+            },
+            {
+              "": "transform67"
+            },
+            {
+              "": "transform68"
+            },
+            {
+              "": "transform69"
+            },
+            {
+              "": "transform70"
+            },
+            {
+              "": "transform71"
+            },
+            {
+              "": "transform72"
+            },
+            {
+              "": "transform73"
+            },
+            {
+              "": "transform74"
+            },
+            {
+              "": "transform75"
+            },
+            {
+              "": "transform76"
+            },
+            {
+              "": "transform77"
+            },
+            {
+              "": "transform78"
+            },
+            {
+              "": "transform79"
+            },
+            {
+              "": "transform80"
+            },
+            {
+              "": "transform81"
+            },
+            {
+              "": "transform82"
+            },
+            {
+              "": "transform83"
+            },
+            {
+              "": "transform84"
+            },
+            {
+              "": "transform85"
+            },
+            {
+              "": "transform86"
+            },
+            {
+              "": "transform87"
+            },
+            {
+              "": "transform88"
+            },
+            {
+              "": "transform89"
+            },
+            {
+              "": "transform90"
+            },
+            {
+              "": "transform91"
+            },
+            {
+              "": "transform92"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "TunnelObjects"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "DoorHoleBlock2"
+            },
+            {
+              "": "DoorHoleBlock3"
+            },
+            {
+              "": "pCube23"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "transform52"
+            },
+            {
+              "": "transform53"
+            },
+            {
+              "": "transform54"
+            },
+            {
+              "": "transform55"
+            },
+            {
+              "": "transform57"
+            },
+            {
+              "": "DoorHoleBlock"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "DoorHoleBlock2 1"
+            },
+            {
+              "": "DoorHoleBlock3 1"
+            },
+            {
+              "": "DoorHoleBlock4"
+            },
+            {
+              "": "pCube14 1"
+            },
+            {
+              "": "pCube15 1"
+            },
+            {
+              "": "pCube16 1"
+            },
+            {
+              "": "pCube17 1"
+            },
+            {
+              "": "pCube18 1"
+            },
+            {
+              "": "pCube19 1"
+            },
+            {
+              "": "pCube20 1"
+            },
+            {
+              "": "pCube21 1"
+            },
+            {
+              "": "pCube23 1"
+            },
+            {
+              "": "pCube24 1"
+            },
+            {
+              "": "pCube25 1"
+            },
+            {
+              "": "pCube26 1"
+            },
+            {
+              "": "pCube27 1"
+            },
+            {
+              "": "pCube28 1"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "transform52 1"
+            },
+            {
+              "": "transform53 1"
+            },
+            {
+              "": "transform54 1"
+            },
+            {
+              "": "transform55 1"
+            },
+            {
+              "": "transform56"
+            },
+            {
+              "": "transform57 1"
+            },
+            {
+              "": "transform58"
+            },
+            {
+              "": "transform59"
+            },
+            {
+              "": "TunnelCurve"
+            },
+            {
+              "": "TunnelExtrusion"
+            },
+            {
+              "": "TunnelProfile"
+            },
+            {
+              "": "WalkWedge"
+            },
+            {
+              "": "WallsAndDoors1Copy"
+            },
+            {
+              "": "WallsAndDoorsSrc"
+            },
+            {
+              "": "columns_1unit1"
+            },
+            {
+              "": "pCube10 1"
+            },
+            {
+              "": "pCube11 1"
+            },
+            {
+              "": "pCube12 1"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube9 1"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection01"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "CeilingWedges"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock01 1"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock02 1"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock03 1"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock04 1"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock05 1"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock06 1"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock07 1"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock08 1"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock09 1"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock10 1"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock11 1"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock12 1"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock13 1"
+            },
+            {
+              "": "ColumnGroup1"
+            },
+            {
+              "": "ColumnGroup2"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "pCube16 1"
+            },
+            {
+              "": "pCube17 1"
+            },
+            {
+              "": "pCube18 1"
+            },
+            {
+              "": "pCube19 1"
+            },
+            {
+              "": "pCube20 1"
+            },
+            {
+              "": "pCube21 1"
+            },
+            {
+              "": "pCube24 1"
+            },
+            {
+              "": "pCube25 1"
+            },
+            {
+              "": "pCube26 1"
+            },
+            {
+              "": "pCube27 1"
+            },
+            {
+              "": "pCube28 1"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "pCube10 1"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube9 1"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock01 1"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock02 1"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock03 1"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock04 1"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock05 1"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock06 1"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock07 1"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock08 1"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock09 1"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock10 1"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock11 1"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock12 1"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock13 1"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "pCube16 1"
+            },
+            {
+              "": "pCube17 1"
+            },
+            {
+              "": "pCube18 1"
+            },
+            {
+              "": "pCube19 1"
+            },
+            {
+              "": "pCube20 1"
+            },
+            {
+              "": "pCube21 1"
+            },
+            {
+              "": "pCube24 1"
+            },
+            {
+              "": "pCube25 1"
+            },
+            {
+              "": "pCube26 1"
+            },
+            {
+              "": "pCube27 1"
+            },
+            {
+              "": "pCube28 1"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "pCube10 1"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube9 1"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock01 1"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock02 1"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock03 1"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock04 1"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock05 1"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock06 1"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock07 1"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock08 1"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock09 1"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock10 1"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock11 1"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock12 1"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock13 1"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "bridge"
+            },
+            {
+              "": "bridgeplatform"
+            },
+            {
+              "": "groundmesh"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "LocomotionTestMap"
+            },
+            {
+              "": "bar10"
+            },
+            {
+              "": "pCube10"
+            },
+            {
+              "": "pCube8"
+            },
+            {
+              "": "pCube9"
+            },
+            {
+              "": "GroundSection2"
+            },
+            {
+              "": "pCube12"
+            },
+            {
+              "": "extrudedSurface2_transform3"
+            },
+            {
+              "": "pCube13"
+            },
+            {
+              "": "BuildingShell"
+            },
+            {
+              "": "ExternalStructure"
+            },
+            {
+              "": "transform40"
+            },
+            {
+              "": "hull_union1"
+            },
+            {
+              "": "Tunnel"
+            },
+            {
+              "": "pCube28"
+            },
+            {
+              "": "pCube16"
+            },
+            {
+              "": "pCube17"
+            },
+            {
+              "": "pCube18"
+            },
+            {
+              "": "pCube19"
+            },
+            {
+              "": "pCube20"
+            },
+            {
+              "": "pCube21"
+            },
+            {
+              "": "pCube24"
+            },
+            {
+              "": "pCube25"
+            },
+            {
+              "": "pCube26"
+            },
+            {
+              "": "pCube27"
+            },
+            {
+              "": "WallsAndDoors"
+            },
+            {
+              "": "DoorHoleBlock1"
+            },
+            {
+              "": "pCube16 1"
+            },
+            {
+              "": "pCube17 1"
+            },
+            {
+              "": "pCube18 1"
+            },
+            {
+              "": "pCube19 1"
+            },
+            {
+              "": "pCube20 1"
+            },
+            {
+              "": "pCube21 1"
+            },
+            {
+              "": "pCube24 1"
+            },
+            {
+              "": "pCube25 1"
+            },
+            {
+              "": "pCube26 1"
+            },
+            {
+              "": "pCube27 1"
+            },
+            {
+              "": "pCube28 1"
+            },
+            {
+              "": "transform51"
+            },
+            {
+              "": "pCube10 1"
+            },
+            {
+              "": "pCube11"
+            },
+            {
+              "": "pCube14"
+            },
+            {
+              "": "pCube15"
+            },
+            {
+              "": "pCube4"
+            },
+            {
+              "": "pCube5"
+            },
+            {
+              "": "pCube6"
+            },
+            {
+              "": "pCube7"
+            },
+            {
+              "": "pCube9 1"
+            },
+            {
+              "": "bars"
+            },
+            {
+              "": "GroundSection02"
+            },
+            {
+              "": "CeilingWedge01"
+            },
+            {
+              "": "CeilingWedge02"
+            },
+            {
+              "": "CeilingWedge03"
+            },
+            {
+              "": "CeilingWedge04"
+            },
+            {
+              "": "ColumnBlock01"
+            },
+            {
+              "": "ColumnBlock01 1"
+            },
+            {
+              "": "ColumnBlock02"
+            },
+            {
+              "": "ColumnBlock02 1"
+            },
+            {
+              "": "ColumnBlock03"
+            },
+            {
+              "": "ColumnBlock03 1"
+            },
+            {
+              "": "ColumnBlock04"
+            },
+            {
+              "": "ColumnBlock04 1"
+            },
+            {
+              "": "ColumnBlock05"
+            },
+            {
+              "": "ColumnBlock05 1"
+            },
+            {
+              "": "ColumnBlock06"
+            },
+            {
+              "": "ColumnBlock06 1"
+            },
+            {
+              "": "ColumnBlock07"
+            },
+            {
+              "": "ColumnBlock07 1"
+            },
+            {
+              "": "ColumnBlock08"
+            },
+            {
+              "": "ColumnBlock08 1"
+            },
+            {
+              "": "ColumnBlock09"
+            },
+            {
+              "": "ColumnBlock09 1"
+            },
+            {
+              "": "ColumnBlock10"
+            },
+            {
+              "": "ColumnBlock10 1"
+            },
+            {
+              "": "ColumnBlock11"
+            },
+            {
+              "": "ColumnBlock11 1"
+            },
+            {
+              "": "ColumnBlock12"
+            },
+            {
+              "": "ColumnBlock12 1"
+            },
+            {
+              "": "ColumnBlock13"
+            },
+            {
+              "": "ColumnBlock13 1"
+            },
+            {
+              "": "ThinBars"
+            },
+            {
+              "": "ImportLogs"
+            }
+          ]
+        },
+        {
+          "externalObjects": ""
+        },
+        {
+          "materials": [
+            {
+              "importMaterials": "0"
+            },
+            {
+              "materialName": "0"
+            },
+            {
+              "materialSearch": "1"
+            },
+            {
+              "materialLocation": "0"
+            }
+          ]
+        },
+        {
+          "animations": [
+            {
+              "legacyGenerateAnimations": "4"
+            },
+            {
+              "bakeSimulation": "0"
+            },
+            {
+              "resampleCurves": "1"
+            },
+            {
+              "optimizeGameObjects": "0"
+            },
+            {
+              "motionNodeName": ""
+            },
+            {
+              "rigImportErrors": ""
+            },
+            {
+              "rigImportWarnings": ""
+            },
+            {
+              "animationImportErrors": ""
+            },
+            {
+              "animationImportWarnings": ""
+            },
+            {
+              "animationRetargetingWarnings": ""
+            },
+            {
+              "animationDoRetargetingWarnings": "0"
+            },
+            {
+              "importAnimatedCustomProperties": "0"
+            },
+            {
+              "importConstraints": "0"
+            },
+            {
+              "animationCompression": "1"
+            },
+            {
+              "animationRotationError": "0.5"
+            },
+            {
+              "animationPositionError": "0.5"
+            },
+            {
+              "animationScaleError": "0.5"
+            },
+            {
+              "animationWrapMode": "0"
+            },
+            {
+              "extraExposedTransformPaths": "[]"
+            },
+            {
+              "extraUserProperties": "[]"
+            },
+            {
+              "clipAnimations": "[]"
+            },
+            {
+              "isReadable": "0"
+            }
+          ]
+        },
+        {
+          "meshes": [
+            {
+              "lODScreenPercentages": "[]"
+            },
+            {
+              "globalScale": "1"
+            },
+            {
+              "meshCompression": "0"
+            },
+            {
+              "addColliders": "1"
+            },
+            {
+              "useSRGBMaterialColor": "1"
+            },
+            {
+              "importVisibility": "0"
+            },
+            {
+              "importBlendShapes": "0"
+            },
+            {
+              "importCameras": "0"
+            },
+            {
+              "importLights": "0"
+            },
+            {
+              "swapUVChannels": "0"
+            },
+            {
+              "generateSecondaryUV": "0"
+            },
+            {
+              "useFileUnits": "1"
+            },
+            {
+              "optimizeMeshForGPU": "0"
+            },
+            {
+              "keepQuads": "0"
+            },
+            {
+              "weldVertices": "1"
+            },
+            {
+              "preserveHierarchy": "0"
+            },
+            {
+              "indexFormat": "1"
+            },
+            {
+              "secondaryUVAngleDistortion": "8"
+            },
+            {
+              "secondaryUVAreaDistortion": "15.000001"
+            },
+            {
+              "secondaryUVHardAngle": "88"
+            },
+            {
+              "secondaryUVPackMargin": "4"
+            },
+            {
+              "useFileScale": "1"
+            },
+            {
+              "previousCalculatedGlobalScale": "1"
+            },
+            {
+              "hasPreviousCalculatedGlobalScale": "0"
+            }
+          ]
+        },
+        {
+          "tangentSpace": [
+            {
+              "normalSmoothAngle": "60"
+            },
+            {
+              "normalImportMode": "0"
+            },
+            {
+              "tangentImportMode": "0"
+            },
+            {
+              "normalCalculationMode": "0"
+            },
+            {
+              "legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes": "1"
+            },
+            {
+              "blendShapeNormalImportMode": "1"
+            },
+            {
+              "normalSmoothingSource": "0"
+            }
+          ]
+        },
+        {
+          "importAnimation": "0"
+        },
+        {
+          "copyAvatar": "0"
+        },
+        {
+          "humanDescription": [
+            {
+              "serializedVersion": "2"
+            },
+            {
+              "human": "[]"
+            },
+            {
+              "skeleton": "[]"
+            },
+            {
+              "armTwist": "0.5"
+            },
+            {
+              "foreArmTwist": "0.5"
+            },
+            {
+              "upperLegTwist": "0.5"
+            },
+            {
+              "legTwist": "0.5"
+            },
+            {
+              "armStretch": "0.05"
+            },
+            {
+              "legStretch": "0.05"
+            },
+            {
+              "feetSpacing": "0"
+            },
+            {
+              "rootMotionBoneName": ""
+            },
+            {
+              "hasTranslationDoF": "0"
+            },
+            {
+              "hasExtraRoot": "0"
+            },
+            {
+              "skeletonHasParents": "0"
+            }
+          ]
+        },
+        {
+          "lastHumanDescriptionAvatarSource": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "animationType": "0"
+        },
+        {
+          "humanoidOversampling": "1"
+        },
+        {
+          "additionalBone": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

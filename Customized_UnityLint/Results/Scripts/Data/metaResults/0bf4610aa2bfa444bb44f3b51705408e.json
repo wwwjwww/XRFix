@@ -1,0 +1,29 @@
+{
+  "guid": "0bf4610aa2bfa444bb44f3b51705408e",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts\\Automation\\Editor.meta",
+  "name": "Editor",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scripts",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts"
+}

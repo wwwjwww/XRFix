@@ -1,0 +1,75 @@
+{
+  "guid": "d716392289ac6764994885f5821f7d7b",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\AudioClips\\sfx_belt_in.wav.meta",
+  "name": "sfx_belt_in.wav",
+  "type": "meta",
+  "file_size": 458,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AudioImporter",
+      "AudioImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "defaultSettings": [
+            {
+              "loadType": "0"
+            },
+            {
+              "sampleRateSetting": "0"
+            },
+            {
+              "sampleRateOverride": "44100"
+            },
+            {
+              "compressionFormat": "1"
+            },
+            {
+              "quality": "1"
+            },
+            {
+              "conversionMode": "0"
+            }
+          ]
+        },
+        {
+          "platformSettingOverrides": ""
+        },
+        {
+          "forceToMono": "0"
+        },
+        {
+          "normalize": "1"
+        },
+        {
+          "preloadAudioData": "1"
+        },
+        {
+          "loadInBackground": "0"
+        },
+        {
+          "ambisonic": "0"
+        },
+        {
+          "D": "1"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "7207a8e479886e64e858dd8be6e4575b",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\Randomizers\\Cannonball Hit.asset.meta",
+  "name": "Cannonball Hit.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

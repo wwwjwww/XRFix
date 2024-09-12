@@ -1,0 +1,36 @@
+{
+  "guid": "225aed143a64c4a6a93f3a07656ac5cd",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\AudioManager\\Scripts\\Audio\\Editor\\MinMaxPropertyDrawer.cs.meta",
+  "name": "MinMaxPropertyDrawer.cs",
+  "type": "meta",
+  "file_size": 178,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

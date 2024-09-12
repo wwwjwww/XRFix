@@ -1,0 +1,29 @@
+{
+  "guid": "215612cb4bcc81146ab5793190717064",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts\\Analytics.meta",
+  "name": "Analytics",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scripts",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts"
+}

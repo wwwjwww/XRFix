@@ -1,0 +1,20 @@
+{
+  "guid": "54216e9ed42974e30967824b7f0b2806",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Spatializer\\scenes\\Standard Assets\\Character Controllers.meta",
+  "name": "Character Controllers",
+  "type": "meta",
+  "file_size": 107,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

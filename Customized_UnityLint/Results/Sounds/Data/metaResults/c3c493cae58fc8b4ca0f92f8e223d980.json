@@ -1,0 +1,32 @@
+{
+  "guid": "c3c493cae58fc8b4ca0f92f8e223d980",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\Randomizers\\SwordHit.asset.meta",
+  "name": "SwordHit.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

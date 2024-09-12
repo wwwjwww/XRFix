@@ -1,0 +1,29 @@
+{
+  "guid": "2de75b4318a350a46af88d5ab1572a32",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Samples\\VrVoiceChat\\Readme.md.meta",
+  "name": "Readme.md",
+  "type": "meta",
+  "file_size": 158,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

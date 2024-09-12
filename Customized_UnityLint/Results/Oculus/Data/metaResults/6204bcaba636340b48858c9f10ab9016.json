@@ -1,0 +1,36 @@
+{
+  "guid": "6204bcaba636340b48858c9f10ab9016",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\AudioManager\\Scripts\\Audio\\Editor\\SoundFXRefPropertyDrawer.cs.meta",
+  "name": "SoundFXRefPropertyDrawer.cs",
+  "type": "meta",
+  "file_size": 178,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,29 @@
+{
+  "guid": "3e1d42ccc29c54bf68636db8acf2eed8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\LipSync\\Assets\\OfflineModel\\ovrlipsync_offline_model.pb.meta",
+  "name": "ovrlipsync_offline_model.pb",
+  "type": "meta",
+  "file_size": 155,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

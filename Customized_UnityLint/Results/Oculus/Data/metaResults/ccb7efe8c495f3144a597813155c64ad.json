@@ -1,0 +1,29 @@
+{
+  "guid": "ccb7efe8c495f3144a597813155c64ad",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Usage\\Stereo180Video\\README.md.meta",
+  "name": "README.md",
+  "type": "meta",
+  "file_size": 158,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

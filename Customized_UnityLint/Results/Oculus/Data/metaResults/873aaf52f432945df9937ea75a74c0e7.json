@@ -1,0 +1,35 @@
+{
+  "guid": "873aaf52f432945df9937ea75a74c0e7",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\Video\\Shaders\\Multiview Stereo.shader.meta",
+  "name": "Multiview Stereo.shader",
+  "type": "meta",
+  "file_size": 204,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "nonModifiableTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

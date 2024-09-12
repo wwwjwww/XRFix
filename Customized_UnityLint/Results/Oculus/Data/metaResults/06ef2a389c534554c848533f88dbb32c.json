@@ -1,0 +1,36 @@
+{
+  "guid": "06ef2a389c534554c848533f88dbb32c",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Scripts\\Util\\OVRMonoscopic.cs.meta",
+  "name": "OVRMonoscopic.cs",
+  "type": "meta",
+  "file_size": 178,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

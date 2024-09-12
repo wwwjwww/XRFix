@@ -1,0 +1,193 @@
+8/23/2024 11:28:25 PM Loading extensions...
+8/23/2024 11:28:25 PM Searching MetaData file inside project folder...
+8/23/2024 11:28:25 PM Searching main file...
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Searching meta file...
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Creating Result Directories
+8/23/2024 11:28:25 PM Start analisys...
+8/23/2024 11:28:25 PM Analyzing Main MetaData...
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: ProjectInfo.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Analyzing Meta files...
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Analytics.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 215612cb4bcc81146ab5793190717064.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Automation.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: c0e0e4015c13c1846b52d35d2ebe9baf.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: b9049bc87d9ebef48b67d31fb888a89f.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: fa7dad8280e26ab45861ef801d5ab3dc.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 8205ea704d874924d9994748ee7e805a.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Analytics\AnalyticsEventSender.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: f53a499639e0767468772cde4ae1ad64.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Analytics\Anonymizer.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 29a85f817f1fd4a41b9a83c95d525a95.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Analytics\GrabberAnalytics.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: d291e10c48d3f6f45aa1c78db40b744c.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Analytics\PrivacyCheck.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 9d49061e43e5666478a90dbcb44c788d.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Automation\Editor.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 0bf4610aa2bfa444bb44f3b51705408e.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Automation\Editor\JenkinsUnityAppend.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 9a920028c2aa530458d0bd5fa555629a.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Cannon.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 7e3308f764e106b458a3229bdf28072b.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Flare.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 7631a122cbcf8dc489c1403519a847b3.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Fuse.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: db1c6519013845d46bcd6bf42d45de38.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Lever.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: a65af5b42900c0042af71022bf2eb58a.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\LockedChest.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 07e11f6d7c570e64db135be38483ce93.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Locomotion.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 3a6353611dfe4054f852c16d9f6d915b.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\MessageInABottle.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: f3017986b8736eb46a40bab672e86102.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\PaperFold.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: ff74aab7620da57468d39510e8413254.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\StaffLocomotion.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: dff791831936280498b7b06b64d22332.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\Trapdoor.cs.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 8a5d3d98f3e00ea4dba9869501f73635.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\CustomActions\WaterCollision.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 110db65f0b527e7499b83390590e81e9.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds\AudioClipRandomizer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: da6a3aa9c3035e7488bff3120cc8f9a7.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds\HitSoundPlayer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: ccefaeb1241d4894d8db26e2fd049299.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds\RandomSoundPlayer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: c41449b6e793447438e97f289273ead2.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds\SequentialSoundPlayer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 58e8afb17bfc39c43bb2f8737c52dbbd.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Sounds\SlideSoundPlayer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: d8155cdac4e83844da9cfd613dc06fd2.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\Attacher.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: c5ac296f69912cd428a1b4bc51ed5456.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\BodyReset.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 0d46d96def317434488220aed83046e6.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\DisableParticleRoll.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: a7c3e549e82d2ea4fa5add70aaa9ad7e.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\FixedFoveatedRendering.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: e07a17b867e3d98429dcab02ff8df296.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\LightmapTransfer.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: e8f6bc8ad7e846c488d6f3f8927c34b1.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\MassCentre.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 16ac2d23ae56f0a47a9cbd5e3efdf1c7.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\ParticleSystemCaller.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: eee6cb38513b82e4ead057774a00c861.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scripts\Utils\TrackingWarning.cs.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: e7156e422f2a0ee438ac354163634a68.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Done!

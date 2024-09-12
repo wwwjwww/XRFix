@@ -1,0 +1,29 @@
+{
+  "guid": "2bd7618c3fa0e4b4ab8e08dc3fadc376",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Resources\\OVRMRCameraFrame.shader.meta",
+  "name": "OVRMRCameraFrame.shader",
+  "type": "meta",
+  "file_size": 197,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

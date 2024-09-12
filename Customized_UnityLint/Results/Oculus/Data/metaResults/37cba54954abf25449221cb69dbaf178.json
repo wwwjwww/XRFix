@@ -1,0 +1,26 @@
+{
+  "guid": "37cba54954abf25449221cb69dbaf178",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Spatializer\\Plugins\\AudioPluginOculusSpatializer.bundle\\Contents\\MacOS.meta",
+  "name": "MacOS",
+  "type": "meta",
+  "file_size": 193,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

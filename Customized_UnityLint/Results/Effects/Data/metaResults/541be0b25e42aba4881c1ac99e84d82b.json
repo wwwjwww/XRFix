@@ -1,0 +1,29 @@
+{
+  "guid": "541be0b25e42aba4881c1ac99e84d82b",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects\\Flare.meta",
+  "name": "Flare",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Effects",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects"
+}

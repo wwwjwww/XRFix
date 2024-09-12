@@ -1,0 +1,29 @@
+{
+  "guid": "25bc671e448181c4fab3e6f52fb9d4bd",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\Locomotion\\Materials\\ColumnGlow.shader.meta",
+  "name": "ColumnGlow.shader",
+  "type": "meta",
+  "file_size": 197,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "dcea4f9a0739c4a47b467a19b63095d2",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\AudioMixer.mixer.meta",
+  "name": "AudioMixer.mixer",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

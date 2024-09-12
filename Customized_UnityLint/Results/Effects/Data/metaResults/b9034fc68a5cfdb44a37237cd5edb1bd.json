@@ -1,0 +1,35 @@
+{
+  "guid": "b9034fc68a5cfdb44a37237cd5edb1bd",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects\\Sails.shader.meta",
+  "name": "Sails.shader",
+  "type": "meta",
+  "file_size": 204,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "nonModifiableTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Effects",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects"
+}

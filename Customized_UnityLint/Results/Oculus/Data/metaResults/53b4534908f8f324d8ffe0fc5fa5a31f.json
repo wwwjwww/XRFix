@@ -1,0 +1,91 @@
+{
+  "guid": "53b4534908f8f324d8ffe0fc5fa5a31f",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\DebugUI\\Fonts\\Montserrat\\Montserrat-MediumItalic.ttf.meta",
+  "name": "Montserrat-MediumItalic.ttf",
+  "type": "meta",
+  "file_size": 610,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TrueTypeFontImporter",
+      "TrueTypeFontImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "4"
+        },
+        {
+          "fontSize": "16"
+        },
+        {
+          "forceTextureCase": "-2"
+        },
+        {
+          "characterSpacing": "0"
+        },
+        {
+          "characterPadding": "1"
+        },
+        {
+          "includeFontData": "1"
+        },
+        {
+          "fontName": "Montserrat"
+        },
+        {
+          "fontNames": [
+            {
+              "": "- Montserrat"
+            }
+          ]
+        },
+        {
+          "fallbackFontReferences": [
+            {
+              "fileID": "12800000"
+            },
+            {
+              "guid": "8252fce8d85d8cd4aa7dd218b750602e"
+            },
+            {
+              "type": "3"
+            },
+            {
+              "fileID": "12800000"
+            },
+            {
+              "guid": "738e52ae65d118f4e8f2d3278738e43f"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "customCharacters": ""
+        },
+        {
+          "fontRenderingMode": "0"
+        },
+        {
+          "ascentCalculationMode": "1"
+        },
+        {
+          "useLegacyBoundsCalculation": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

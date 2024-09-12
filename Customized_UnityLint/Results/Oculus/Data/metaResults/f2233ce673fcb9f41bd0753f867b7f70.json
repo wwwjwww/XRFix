@@ -1,0 +1,45 @@
+{
+  "guid": "f2233ce673fcb9f41bd0753f867b7f70",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Scripts\\Util\\OVRCursor.cs.meta",
+  "name": "OVRCursor.cs",
+  "type": "meta",
+  "file_size": 243,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "1fc2b9d512dad4dd48cd5f997f870c03",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\CustomHands\\Shaders\\Hands_02.shader.meta",
+  "name": "Hands_02.shader",
+  "type": "meta",
+  "file_size": 176,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

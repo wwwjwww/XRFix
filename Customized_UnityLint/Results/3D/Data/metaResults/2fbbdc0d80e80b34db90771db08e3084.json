@@ -1,0 +1,29 @@
+{
+  "guid": "2fbbdc0d80e80b34db90771db08e3084",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\FBX\\Materials.meta",
+  "name": "Materials",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

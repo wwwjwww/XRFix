@@ -1,0 +1,187 @@
+{
+  "guid": "63b28ea3e535bab48a39e62ea8e097d7",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples\\HandPosing\\1.3.4\\Integration Oculus (OVR)\\Prefabs\\Snapping_TrackedHandRightOVR Ghost.prefab",
+  "name": "Snapping_TrackedHandRightOVR Ghost",
+  "type": "prefab",
+  "file_size": 15839,
+  "num_components": 9,
+  "COMPONENTS": [
+    {
+      "id": "4796675561261683715",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1167143201079480543"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "478ef2fa29b80584ebac7192c960c0a7"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "puppet": [
+            {
+              "fileID": "1167143201305945540"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "907373382485412876",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "0"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "2100000"
+            },
+            {
+              "guid": "3b284a5e175186f479db1d1cd81a41df"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "311",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "1167143201079711953"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "366",
+      "m_RemovedComponents": [
+        {
+          " {fileID": "8582900075109567363, guid"
+        },
+        {
+          " {fileID": "2064097538271242697, guid"
+        },
+        {
+          " {fileID": "2064097538271242702, guid"
+        },
+        {
+          " {fileID": "7744700711333424663, guid"
+        },
+        {
+          " {fileID": "621979817187724309, guid"
+        },
+        {
+          " {fileID": "621979817853562404, guid"
+        },
+        {
+          " {fileID": "621979817853562402, guid"
+        },
+        {
+          " {fileID": "7359067381948254510, guid"
+        },
+        {
+          " {fileID": "2130573002, guid"
+        }
+      ]
+    },
+    {
+      "id": "1167143201079480543 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "1167143201079711953 stripped",
+      "Transform": []
+    },
+    {
+      "id": "1167143201305945540 stripped",
+      "MonoBehaviour": []
+    },
+    {
+      "id": "391",
+      "m_Name": [
+        {
+          "m_EditorClassIdentifier": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Samples",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples"
+}

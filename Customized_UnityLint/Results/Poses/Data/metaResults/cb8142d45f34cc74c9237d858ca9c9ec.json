@@ -1,0 +1,32 @@
+{
+  "guid": "cb8142d45f34cc74c9237d858ca9c9ec",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses\\WheelPoses.asset.meta",
+  "name": "WheelPoses.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Poses",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses"
+}

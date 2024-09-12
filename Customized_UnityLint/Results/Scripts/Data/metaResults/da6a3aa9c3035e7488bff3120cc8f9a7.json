@@ -1,0 +1,45 @@
+{
+  "guid": "da6a3aa9c3035e7488bff3120cc8f9a7",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts\\Sounds\\AudioClipRandomizer.cs.meta",
+  "name": "AudioClipRandomizer.cs",
+  "type": "meta",
+  "file_size": 243,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scripts",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts"
+}

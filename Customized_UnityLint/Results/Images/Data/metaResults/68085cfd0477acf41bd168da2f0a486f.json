@@ -1,0 +1,29 @@
+{
+  "guid": "68085cfd0477acf41bd168da2f0a486f",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Images\\Materials.meta",
+  "name": "Materials",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Images",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Images"
+}

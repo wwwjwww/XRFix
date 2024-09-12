@@ -1,0 +1,35 @@
+{
+  "guid": "8aba22c2208aff640a2fdc9a5e45a9dd",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\HandsInteraction\\Shaders\\OculusSampleAlphaHandOutline.shader.meta",
+  "name": "OculusSampleAlphaHandOutline.shader",
+  "type": "meta",
+  "file_size": 204,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "nonModifiableTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

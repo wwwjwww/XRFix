@@ -1,0 +1,32 @@
+{
+  "guid": "7a1f2bc804af5374297b3eba468353e0",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scenes\\Warning\\LightingData.asset.meta",
+  "name": "LightingData.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scenes",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scenes"
+}

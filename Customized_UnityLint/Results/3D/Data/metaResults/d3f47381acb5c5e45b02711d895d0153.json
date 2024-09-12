@@ -1,0 +1,32 @@
+{
+  "guid": "d3f47381acb5c5e45b02711d895d0153",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\Timelines\\SquidTimeline.playable.meta",
+  "name": "SquidTimeline.playable",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

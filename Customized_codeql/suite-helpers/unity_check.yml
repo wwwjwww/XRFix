@@ -1,0 +1,7 @@
+- description: All queries supported for unity check
+- include:
+   id: cs/instantiate_update
+- include:
+   id: cs/new_allocation
+- include:
+   id: cs/rigidbody_transform

@@ -1,0 +1,1679 @@
+{
+  "guid": "cdd006e190454ed4580962d1cf2aee15",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\Prefabs\\Candle Variant.prefab",
+  "name": "Candle Variant",
+  "type": "prefab",
+  "file_size": 9573,
+  "num_components": 18,
+  "COMPONENTS": [
+    {
+      "id": "72581687659866091",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "563413157968957948"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "4138288063281646248"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "7806243119099543046"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "4904946489870631038"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "Flame"
+        },
+        {
+          "m_TagString": "FireSource"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "4"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "563413157968957948",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "72581687659866091"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "0.0166"
+            },
+            {
+              "y": "0.1728"
+            },
+            {
+              "z": "-0.0156"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "0.034118"
+            },
+            {
+              "y": "0.068236"
+            },
+            {
+              "z": "0.034118"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1972202482759293957"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "2"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4138288063281646248",
+      "MeshFilter": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "72581687659866091"
+            }
+          ]
+        },
+        {
+          "m_Mesh": [
+            {
+              "fileID": "10210"
+            },
+            {
+              "guid": "0000000000000000e000000000000000"
+            },
+            {
+              "type": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7806243119099543046",
+      "MeshRenderer": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "72581687659866091"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_CastShadows": "0"
+        },
+        {
+          "m_ReceiveShadows": "0"
+        },
+        {
+          "m_DynamicOccludee": "1"
+        },
+        {
+          "m_MotionVectors": "1"
+        },
+        {
+          "m_LightProbeUsage": "0"
+        },
+        {
+          "m_ReflectionProbeUsage": "0"
+        },
+        {
+          "m_RayTracingMode": "2"
+        },
+        {
+          "m_RenderingLayerMask": "1"
+        },
+        {
+          "m_RendererPriority": "0"
+        },
+        {
+          "m_Materials": [
+            {
+              "fileID": "2100000"
+            },
+            {
+              "guid": "7f56bc8b1a205564e9b9b22858c19488"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchInfo": [
+            {
+              "firstSubMesh": "0"
+            },
+            {
+              "subMeshCount": "0"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchRoot": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ProbeAnchor": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_LightProbeVolumeOverride": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ScaleInLightmap": "1"
+        },
+        {
+          "m_ReceiveGI": "1"
+        },
+        {
+          "m_PreserveUVs": "0"
+        },
+        {
+          "m_IgnoreNormalsForChartDetection": "0"
+        },
+        {
+          "m_ImportantGI": "0"
+        },
+        {
+          "m_StitchLightmapSeams": "1"
+        },
+        {
+          "m_SelectedEditorRenderState": "3"
+        },
+        {
+          "m_MinimumChartSize": "4"
+        },
+        {
+          "m_AutoUVMaxDistance": "0.5"
+        },
+        {
+          "m_AutoUVMaxAngle": "89"
+        },
+        {
+          "m_LightmapParameters": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_SortingLayerID": "0"
+        },
+        {
+          "m_SortingLayer": "0"
+        },
+        {
+          "m_SortingOrder": "0"
+        }
+      ]
+    },
+    {
+      "id": "4904946489870631038",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "72581687659866091"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "1"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.50000006"
+        },
+        {
+          "m_Height": "1.0000001"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1099032386792134900",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "1276857870977629459"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "7163411031801153012"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "2296543081438495575"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "Candle"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "5"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "1276857870977629459",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1099032386792134900"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "-0"
+            },
+            {
+              "z": "-0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1972202482759293957"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "0"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7163411031801153012",
+      "MeshFilter": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1099032386792134900"
+            }
+          ]
+        },
+        {
+          "m_Mesh": [
+            {
+              "fileID": "-3033996063522644917"
+            },
+            {
+              "guid": "71ed961401bceaa499dbe4f609e48700"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2296543081438495575",
+      "MeshRenderer": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1099032386792134900"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_CastShadows": "1"
+        },
+        {
+          "m_ReceiveShadows": "1"
+        },
+        {
+          "m_DynamicOccludee": "1"
+        },
+        {
+          "m_MotionVectors": "1"
+        },
+        {
+          "m_LightProbeUsage": "1"
+        },
+        {
+          "m_ReflectionProbeUsage": "1"
+        },
+        {
+          "m_RayTracingMode": "2"
+        },
+        {
+          "m_RenderingLayerMask": "1"
+        },
+        {
+          "m_RendererPriority": "0"
+        },
+        {
+          "m_Materials": [
+            {
+              "fileID": "2100000"
+            },
+            {
+              "guid": "3490ff5661028354a8906d2cddaae493"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchInfo": [
+            {
+              "firstSubMesh": "0"
+            },
+            {
+              "subMeshCount": "0"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchRoot": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ProbeAnchor": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_LightProbeVolumeOverride": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ScaleInLightmap": "1"
+        },
+        {
+          "m_ReceiveGI": "1"
+        },
+        {
+          "m_PreserveUVs": "0"
+        },
+        {
+          "m_IgnoreNormalsForChartDetection": "0"
+        },
+        {
+          "m_ImportantGI": "0"
+        },
+        {
+          "m_StitchLightmapSeams": "1"
+        },
+        {
+          "m_SelectedEditorRenderState": "3"
+        },
+        {
+          "m_MinimumChartSize": "4"
+        },
+        {
+          "m_AutoUVMaxDistance": "0.5"
+        },
+        {
+          "m_AutoUVMaxAngle": "89"
+        },
+        {
+          "m_LightmapParameters": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_SortingLayerID": "0"
+        },
+        {
+          "m_SortingLayer": "0"
+        },
+        {
+          "m_SortingOrder": "0"
+        }
+      ]
+    },
+    {
+      "id": "1158967830191965887",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "1972202482759293957"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "901744691378255880"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "5636646642716983579"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "Candle Variant"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "5"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "1972202482759293957",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1158967830191965887"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": [
+            {
+              "fileID": "1276857870977629459"
+            },
+            {
+              "fileID": "7394898104716730272"
+            },
+            {
+              "fileID": "563413157968957948"
+            }
+          ]
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "0"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "901744691378255880",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1158967830191965887"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.034412064"
+        },
+        {
+          "m_Height": "0.20851302"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.014849208"
+            },
+            {
+              "y": "0.071689785"
+            },
+            {
+              "z": "-0.01450365"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5636646642716983579",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1158967830191965887"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.037953906"
+        },
+        {
+          "m_Height": "0.16458756"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "-0.025692292"
+            },
+            {
+              "y": "0.049727052"
+            },
+            {
+              "z": "0.031908154"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1729110477781711468",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "7394898104716730272"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "1589675881865492413"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "6898046881673996767"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "4155527764115368025"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "Flame"
+        },
+        {
+          "m_TagString": "FireSource"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "4"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "7394898104716730272",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1729110477781711468"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.0211"
+            },
+            {
+              "y": "0.1263"
+            },
+            {
+              "z": "0.0291"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "0.034118"
+            },
+            {
+              "y": "0.068236"
+            },
+            {
+              "z": "0.034118"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1972202482759293957"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "1"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1589675881865492413",
+      "MeshFilter": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1729110477781711468"
+            }
+          ]
+        },
+        {
+          "m_Mesh": [
+            {
+              "fileID": "10210"
+            },
+            {
+              "guid": "0000000000000000e000000000000000"
+            },
+            {
+              "type": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6898046881673996767",
+      "MeshRenderer": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1729110477781711468"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_CastShadows": "0"
+        },
+        {
+          "m_ReceiveShadows": "0"
+        },
+        {
+          "m_DynamicOccludee": "1"
+        },
+        {
+          "m_MotionVectors": "1"
+        },
+        {
+          "m_LightProbeUsage": "0"
+        },
+        {
+          "m_ReflectionProbeUsage": "0"
+        },
+        {
+          "m_RayTracingMode": "2"
+        },
+        {
+          "m_RenderingLayerMask": "1"
+        },
+        {
+          "m_RendererPriority": "0"
+        },
+        {
+          "m_Materials": [
+            {
+              "fileID": "2100000"
+            },
+            {
+              "guid": "7f56bc8b1a205564e9b9b22858c19488"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchInfo": [
+            {
+              "firstSubMesh": "0"
+            },
+            {
+              "subMeshCount": "0"
+            }
+          ]
+        },
+        {
+          "m_StaticBatchRoot": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ProbeAnchor": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_LightProbeVolumeOverride": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_ScaleInLightmap": "1"
+        },
+        {
+          "m_ReceiveGI": "1"
+        },
+        {
+          "m_PreserveUVs": "0"
+        },
+        {
+          "m_IgnoreNormalsForChartDetection": "0"
+        },
+        {
+          "m_ImportantGI": "0"
+        },
+        {
+          "m_StitchLightmapSeams": "1"
+        },
+        {
+          "m_SelectedEditorRenderState": "3"
+        },
+        {
+          "m_MinimumChartSize": "4"
+        },
+        {
+          "m_AutoUVMaxDistance": "0.5"
+        },
+        {
+          "m_AutoUVMaxAngle": "89"
+        },
+        {
+          "m_LightmapParameters": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_SortingLayerID": "0"
+        },
+        {
+          "m_SortingLayer": "0"
+        },
+        {
+          "m_SortingOrder": "0"
+        }
+      ]
+    },
+    {
+      "id": "4155527764115368025",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1729110477781711468"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "1"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.50000006"
+        },
+        {
+          "m_Height": "1.0000001"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

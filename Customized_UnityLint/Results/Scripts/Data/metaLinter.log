@@ -1,0 +1,55 @@
+8/23/2024 11:28:26 PM Start analysis...
+8/23/2024 11:28:26 PM Loading Dataset...
+8/23/2024 11:28:26 PM Loading main data...
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\mainResults\ProjectInfo.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\07e11f6d7c570e64db135be38483ce93.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\0bf4610aa2bfa444bb44f3b51705408e.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\0d46d96def317434488220aed83046e6.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\110db65f0b527e7499b83390590e81e9.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\16ac2d23ae56f0a47a9cbd5e3efdf1c7.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\215612cb4bcc81146ab5793190717064.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\29a85f817f1fd4a41b9a83c95d525a95.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\3a6353611dfe4054f852c16d9f6d915b.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\58e8afb17bfc39c43bb2f8737c52dbbd.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\7631a122cbcf8dc489c1403519a847b3.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\7e3308f764e106b458a3229bdf28072b.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\8205ea704d874924d9994748ee7e805a.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\8a5d3d98f3e00ea4dba9869501f73635.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\9a920028c2aa530458d0bd5fa555629a.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\9d49061e43e5666478a90dbcb44c788d.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\a65af5b42900c0042af71022bf2eb58a.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\a7c3e549e82d2ea4fa5add70aaa9ad7e.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\b9049bc87d9ebef48b67d31fb888a89f.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\c0e0e4015c13c1846b52d35d2ebe9baf.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\c41449b6e793447438e97f289273ead2.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\c5ac296f69912cd428a1b4bc51ed5456.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\ccefaeb1241d4894d8db26e2fd049299.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\d291e10c48d3f6f45aa1c78db40b744c.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\d8155cdac4e83844da9cfd613dc06fd2.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\da6a3aa9c3035e7488bff3120cc8f9a7.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\db1c6519013845d46bcd6bf42d45de38.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\dff791831936280498b7b06b64d22332.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\e07a17b867e3d98429dcab02ff8df296.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\e7156e422f2a0ee438ac354163634a68.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\e8f6bc8ad7e846c488d6f3f8927c34b1.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\eee6cb38513b82e4ead057774a00c861.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\f3017986b8736eb46a40bab672e86102.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\f53a499639e0767468772cde4ae1ad64.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\fa7dad8280e26ab45861ef801d5ab3dc.json
+8/23/2024 11:28:26 PM File: Results/Scripts/Data\metaResults\ff74aab7620da57468d39510e8413254.json
+8/23/2024 11:28:26 PM Maindata loaded!
+8/23/2024 11:28:26 PM Dataset Loaded!
+8/23/2024 11:28:26 PM Searching for smells...
+8/23/2024 11:28:26 PM Searching SubOptimal Expensive Lights...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Searching SubOptimal Expensive Lights with enable LightRealTime...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Searching Animation Object with Clear Flag=nothing...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Search completed!
+8/23/2024 11:28:26 PM Analysis Done!
+8/23/2024 11:28:26 PM Saving results...
+8/23/2024 11:28:26 PM Saving: SubOptimal_Expensive_Lights.json
+8/23/2024 11:28:26 PM Saving: SubOptimal_Expensive_Lights_with_enable_LightRealTime.json
+8/23/2024 11:28:26 PM Saving: Camera_Render_Clear_Flag_=_Don't_Clear.json
+8/23/2024 11:28:26 PM Results saved in Results/Scripts/Data\MetaSmellResults

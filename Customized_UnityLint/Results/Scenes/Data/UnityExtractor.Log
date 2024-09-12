@@ -1,0 +1,98 @@
+8/23/2024 11:28:24 PM Loading extensions...
+8/23/2024 11:28:24 PM Searching MetaData file inside project folder...
+8/23/2024 11:28:24 PM Searching main file...
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Searching meta file...
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Done!
+8/23/2024 11:28:24 PM Creating Result Directories
+8/23/2024 11:28:24 PM Start analisys...
+8/23/2024 11:28:24 PM Analyzing Main MetaData...
+8/23/2024 11:28:24 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: ProjectInfo.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip.unity
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 553fd3db7ea97fd43983526c2dfdc5ce.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PrivacyCheckScene.unity
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 3f93484ddcc555f4f8815bcc33cea203.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning.unity
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 7c0e6d9004e246244a6e8dc39507fddf.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Done!
+8/23/2024 11:28:25 PM Analyzing Meta files...
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 484109f127ba9054c8dd91d6883b4d38.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: c7fa9cdfd424b2e449c942b41059bd2c.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\LightingData.asset.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 549abefeb083fe942ab4e6706ab51f87.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\Lightmap-0_comp_dir.png.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 26fda8c03d5590843855b86be50f954e.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\Lightmap-0_comp_light.exr.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: caa79fce091d2ff44a5dc6f077097793.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\NavMesh.asset.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 8038d32c4cf88ab4b91bb56da7c61412.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\ReflectionProbe-0.exr.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 3e5320410151a0741a728554342a0664.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\ReflectionProbe-1.exr.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: d2fde8f65a5844740aad38b44933ed81.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\PirateShip\ReflectionProbe-2.exr.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 851c935008a4af84b8d9af0fe4a7023c.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning\LightingData.asset.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 7a1f2bc804af5374297b3eba468353e0.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning\Lightmap-0_comp_dir.png.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: e05ace5324df85e4a847e2bba71590d3.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning\Lightmap-0_comp_light.exr.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 917785e026103c64eba8abcdcb90c613.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Scenes\Warning\ReflectionProbe-0.png.meta
+8/23/2024 11:28:25 PM Data Extracted!
+8/23/2024 11:28:25 PM Saving Results...
+8/23/2024 11:28:25 PM Saving File: 37fe98e637ac2894b91d0de10bea0672.json
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Done!!
+8/23/2024 11:28:25 PM Done!

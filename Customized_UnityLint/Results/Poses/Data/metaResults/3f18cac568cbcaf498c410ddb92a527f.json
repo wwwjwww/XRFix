@@ -1,0 +1,32 @@
+{
+  "guid": "3f18cac568cbcaf498c410ddb92a527f",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses\\LeverPoses.asset.meta",
+  "name": "LeverPoses.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Poses",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses"
+}

@@ -1,0 +1,20 @@
+{
+  "guid": "b365e6042890d4b1987423ed6bb8a08c",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Spatializer\\scenes\\Standard Assets\\Character Controllers\\Sources\\PrototypeCharacter\\Textures.meta",
+  "name": "Textures",
+  "type": "meta",
+  "file_size": 107,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

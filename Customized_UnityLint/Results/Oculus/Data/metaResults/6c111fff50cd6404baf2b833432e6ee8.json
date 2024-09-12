@@ -1,0 +1,26 @@
+{
+  "guid": "6c111fff50cd6404baf2b833432e6ee8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Plugins\\placeholder.txt.meta",
+  "name": "placeholder.txt",
+  "type": "meta",
+  "file_size": 179,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

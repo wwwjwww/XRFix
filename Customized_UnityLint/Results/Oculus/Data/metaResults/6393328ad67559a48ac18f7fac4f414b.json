@@ -1,0 +1,154 @@
+{
+  "guid": "6393328ad67559a48ac18f7fac4f414b",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Spatializer\\Plugins\\AudioPluginOculusSpatializer.bundle.meta",
+  "name": "AudioPluginOculusSpatializer.bundle",
+  "type": "meta",
+  "file_size": 854,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "PluginImporter",
+      "PluginImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "iconMap": ""
+        },
+        {
+          "executionOrder": ""
+        },
+        {
+          "isPreloaded": "1"
+        },
+        {
+          "isOverridable": "0"
+        },
+        {
+          "platformData": [
+            {
+              "data": [
+                {
+                  "first": [
+                    {
+                      "Any": ""
+                    }
+                  ]
+                },
+                {
+                  "second": [
+                    {
+                      "enabled": "0"
+                    },
+                    {
+                      "settings": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": [
+                {
+                  "first": [
+                    {
+                      "Editor": "Editor"
+                    }
+                  ]
+                },
+                {
+                  "second": [
+                    {
+                      "enabled": "1"
+                    },
+                    {
+                      "settings": [
+                        {
+                          "DefaultValueInitialized": "true"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": [
+                {
+                  "first": [
+                    {
+                      "Standalone": "OSXIntel"
+                    }
+                  ]
+                },
+                {
+                  "second": [
+                    {
+                      "enabled": "1"
+                    },
+                    {
+                      "settings": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": [
+                {
+                  "first": [
+                    {
+                      "Standalone": "OSXIntel64"
+                    }
+                  ]
+                },
+                {
+                  "second": [
+                    {
+                      "enabled": "1"
+                    },
+                    {
+                      "settings": ""
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": [
+                {
+                  "first": [
+                    {
+                      "Standalone": "OSXUniversal"
+                    }
+                  ]
+                },
+                {
+                  "second": [
+                    {
+                      "enabled": "1"
+                    },
+                    {
+                      "settings": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

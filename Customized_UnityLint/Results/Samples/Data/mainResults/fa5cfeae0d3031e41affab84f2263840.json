@@ -1,0 +1,199 @@
+{
+  "guid": "fa5cfeae0d3031e41affab84f2263840",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples\\HandPosing\\1.3.4\\Integration Oculus (OVR)\\Prefabs\\Snapping_TrackedHandLeftOVR Ghost.prefab",
+  "name": "Snapping_TrackedHandLeftOVR Ghost",
+  "type": "prefab",
+  "file_size": 16390,
+  "num_components": 10,
+  "COMPONENTS": [
+    {
+      "id": "2186238356769882176",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "2109804352462534997"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "478ef2fa29b80584ebac7192c960c0a7"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "puppet": [
+            {
+              "fileID": "785804610965242072"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8340457979933296598",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "0"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "261",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "2100000"
+            },
+            {
+              "guid": "3b284a5e175186f479db1d1cd81a41df"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "341",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "2109804352462806177"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "381",
+      "m_RemovedComponents": [
+        {
+          " {fileID": "6253283972901694977, guid"
+        },
+        {
+          " {fileID": "3048245330775714576, guid"
+        },
+        {
+          " {fileID": "3678650823691474357, guid"
+        },
+        {
+          " {fileID": "101258742030416579, guid"
+        },
+        {
+          " {fileID": "7645059647411091630, guid"
+        },
+        {
+          " {fileID": "1846981817, guid"
+        },
+        {
+          " {fileID": "1023544563685457361, guid"
+        },
+        {
+          " {fileID": "7645059645558001141, guid"
+        },
+        {
+          " {fileID": "7645059645558001143, guid"
+        }
+      ]
+    },
+    {
+      "id": "2109804352462534997 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "2109804352462806177 stripped",
+      "Transform": []
+    },
+    {
+      "id": "785804610965242072 stripped",
+      "MonoBehaviour": []
+    },
+    {
+      "id": "406",
+      "m_Name": [
+        {
+          "m_EditorClassIdentifier": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Samples",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples"
+}

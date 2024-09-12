@@ -1,0 +1,29 @@
+{
+  "guid": "559a3d23455f87041bf962788a6af656",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples\\HandPosing\\1.3.4\\Integration Oculus (OVR)\\Scripts.meta",
+  "name": "Scripts",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Samples",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples"
+}

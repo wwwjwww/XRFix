@@ -1,0 +1,29 @@
+{
+  "guid": "9e63901976747c14dab80f1579e27f76",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects\\Fire.meta",
+  "name": "Fire",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Effects",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects"
+}

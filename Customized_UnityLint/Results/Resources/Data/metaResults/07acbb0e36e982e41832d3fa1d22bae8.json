@@ -1,0 +1,32 @@
+{
+  "guid": "07acbb0e36e982e41832d3fa1d22bae8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Resources\\OculusPlatformSettings.asset.meta",
+  "name": "OculusPlatformSettings.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Resources",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Resources"
+}

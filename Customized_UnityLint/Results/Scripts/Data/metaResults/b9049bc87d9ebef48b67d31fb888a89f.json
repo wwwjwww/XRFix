@@ -1,0 +1,29 @@
+{
+  "guid": "b9049bc87d9ebef48b67d31fb888a89f",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts\\CustomActions.meta",
+  "name": "CustomActions",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scripts",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts"
+}

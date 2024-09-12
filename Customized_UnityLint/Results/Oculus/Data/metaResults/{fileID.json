@@ -1,0 +1,37 @@
+{
+  "guid": "{fileID",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Usage\\OVROverlayCanvas\\Scripts\\OVROverlayCanvas.cs.meta",
+  "name": "OVROverlayCanvas.cs",
+  "type": "meta",
+  "file_size": 423,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": []
+        }
+      ]
+    },
+    {
+      "id": "userData",
+      "userData": [
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

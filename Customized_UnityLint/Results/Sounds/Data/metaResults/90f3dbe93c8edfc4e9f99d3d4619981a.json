@@ -1,0 +1,32 @@
+{
+  "guid": "90f3dbe93c8edfc4e9f99d3d4619981a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\Randomizers\\Books Sound.asset.meta",
+  "name": "Books Sound.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

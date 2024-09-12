@@ -1,0 +1,45 @@
+{
+  "guid": "a938e6804a858c34d91a964d7b720752",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples\\HandPosing\\1.3.4\\Integration Oculus (OVR)\\Scripts\\AnimatedHandOVR.cs.meta",
+  "name": "AnimatedHandOVR.cs",
+  "type": "meta",
+  "file_size": 243,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": "[]"
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Samples",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Samples"
+}

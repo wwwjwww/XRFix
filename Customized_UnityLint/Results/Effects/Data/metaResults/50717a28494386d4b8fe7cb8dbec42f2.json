@@ -1,0 +1,35 @@
+{
+  "guid": "50717a28494386d4b8fe7cb8dbec42f2",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects\\Water.shader.meta",
+  "name": "Water.shader",
+  "type": "meta",
+  "file_size": 204,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "nonModifiableTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Effects",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects"
+}

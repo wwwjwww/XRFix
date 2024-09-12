@@ -1,0 +1,29 @@
+{
+  "guid": "9a187e177fefa7447b8997b89640de10",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\XR\\Loaders.meta",
+  "name": "Loaders",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "XR",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\XR"
+}

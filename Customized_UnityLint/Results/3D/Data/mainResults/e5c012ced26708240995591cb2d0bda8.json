@@ -1,0 +1,37 @@
+{
+  "guid": "e5c012ced26708240995591cb2d0bda8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\Prefabs\\SwordMount Variant.prefab",
+  "name": "SwordMount Variant",
+  "type": "prefab",
+  "file_size": 2637,
+  "num_components": 1,
+  "COMPONENTS": [
+    {
+      "id": "7593832856636622634",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "0"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

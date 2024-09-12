@@ -1,0 +1,32 @@
+{
+  "guid": "83190b53e04406043a24f10900d23d1a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\Randomizers\\WaterSplashSound.asset.meta",
+  "name": "WaterSplashSound.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

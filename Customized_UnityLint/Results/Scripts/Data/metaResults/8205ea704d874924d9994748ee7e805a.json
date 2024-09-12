@@ -1,0 +1,29 @@
+{
+  "guid": "8205ea704d874924d9994748ee7e805a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts\\Utils.meta",
+  "name": "Utils",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Scripts",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Scripts"
+}

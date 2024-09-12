@@ -1,0 +1,29 @@
+{
+  "guid": "df73a13805bf64b4db2fd89b7676f13e",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Plugins\\Android.meta",
+  "name": "Android",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Plugins",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Plugins"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "45e572cf78808614485bb222f169f10e",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses\\TeapotPoses.asset.meta",
+  "name": "TeapotPoses.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Poses",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses"
+}

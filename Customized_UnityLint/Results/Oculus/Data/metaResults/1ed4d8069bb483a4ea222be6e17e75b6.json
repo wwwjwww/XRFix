@@ -1,0 +1,29 @@
+{
+  "guid": "1ed4d8069bb483a4ea222be6e17e75b6",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\Video\\Plugins\\Android\\Audio360\\ThirdPartyNotices.txt.meta",
+  "name": "ThirdPartyNotices.txt",
+  "type": "meta",
+  "file_size": 158,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

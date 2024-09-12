@@ -1,0 +1,326 @@
+{
+  "guid": "57850b02365448041958df056264b3e3",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\LipSync\\Plugins\\Android64\\libOVRLipSync.so.meta",
+  "name": "libOVRLipSync.so",
+  "type": "meta",
+  "file_size": 1748,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "PluginImporter",
+      "PluginImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "iconMap": ""
+        },
+        {
+          "executionOrder": ""
+        },
+        {
+          "isPreloaded": "0"
+        },
+        {
+          "isOverridable": "0"
+        },
+        {
+          "platformData": [
+            {
+              "- first": [
+                {
+                  "''": "Any"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "Exclude Android": "0"
+                    },
+                    {
+                      "Exclude Editor": "1"
+                    },
+                    {
+                      "Exclude Linux": "1"
+                    },
+                    {
+                      "Exclude Linux": "1"
+                    },
+                    {
+                      "Exclude LinuxUniversal": "1"
+                    },
+                    {
+                      "Exclude OSXUniversal": "1"
+                    },
+                    {
+                      "Exclude WebGL": "1"
+                    },
+                    {
+                      "Exclude Win": "1"
+                    },
+                    {
+                      "Exclude Win": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Android": "Android"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "1"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "ARM64"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Any": ""
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": ""
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Editor": "Editor"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    },
+                    {
+                      "DefaultValueInitialized": "true"
+                    },
+                    {
+                      "OS": "AnyOS"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Facebook": "Win"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Facebook": "Win64"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "Linux"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "x86"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "Linux64"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "x86_64"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "LinuxUniversal"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "None"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "OSXUniversal"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "Win"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Standalone": "Win64"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "CPU": "AnyCPU"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

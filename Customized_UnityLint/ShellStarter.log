@@ -1,0 +1,89 @@
+8/23/2024 11:28:07 PM Running on Microsoft Windows 10.0.19044  X64
+8/23/2024 11:28:07 PM Windows
+8/23/2024 11:28:07 PM Starting ......
+8/23/2024 11:28:07 PM Found 12 Directories
+8/23/2024 11:28:07 PM 8/23/2024 11:28:07 PM Analyzing Data 3D Repository
+8/23/2024 11:28:07 PM 8/23/2024 11:28:07 PM  Started
+8/23/2024 11:28:08 PM 8/23/2024 11:28:08 PM UnityDataAnalyzer Log can be found in Results\3D\Data\
+8/23/2024 11:28:08 PM 8/23/2024 11:28:08 PM UnityDataAnalyzer Exited. Process PID 135148
+8/23/2024 11:28:09 PM 8/23/2024 11:28:09 PM MetaSmellAnalyzer Log can be found in Results\3D\Data\
+8/23/2024 11:28:09 PM 8/23/2024 11:28:09 PM MetaSmellAnalyzer Exited. Process PID 40296
+8/23/2024 11:28:09 PM ---------------------------------------------
+8/23/2024 11:28:09 PM 8/23/2024 11:28:09 PM Analyzing Data Effects Repository
+8/23/2024 11:28:09 PM 8/23/2024 11:28:09 PM  Started
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM UnityDataAnalyzer Log can be found in Results\Effects\Data\
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM UnityDataAnalyzer Exited. Process PID 4720
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM MetaSmellAnalyzer Log can be found in Results\Effects\Data\
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM MetaSmellAnalyzer Exited. Process PID 42524
+8/23/2024 11:28:10 PM ---------------------------------------------
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM Analyzing Data Images Repository
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM  Started
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM UnityDataAnalyzer Log can be found in Results\Images\Data\
+8/23/2024 11:28:10 PM 8/23/2024 11:28:10 PM UnityDataAnalyzer Exited. Process PID 146796
+8/23/2024 11:28:11 PM 8/23/2024 11:28:11 PM MetaSmellAnalyzer Log can be found in Results\Images\Data\
+8/23/2024 11:28:11 PM 8/23/2024 11:28:11 PM MetaSmellAnalyzer Exited. Process PID 148404
+8/23/2024 11:28:11 PM ---------------------------------------------
+8/23/2024 11:28:11 PM 8/23/2024 11:28:11 PM Analyzing Data Oculus Repository
+8/23/2024 11:28:11 PM 8/23/2024 11:28:11 PM  Started
+8/23/2024 11:28:19 PM 8/23/2024 11:28:19 PM UnityDataAnalyzer Log can be found in Results\Oculus\Data\
+8/23/2024 11:28:19 PM 8/23/2024 11:28:19 PM UnityDataAnalyzer Exited. Process PID 148144
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM MetaSmellAnalyzer Log can be found in Results\Oculus\Data\
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM MetaSmellAnalyzer Exited. Process PID 146536
+8/23/2024 11:28:22 PM ---------------------------------------------
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM Analyzing Data Plugins Repository
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM  Started
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM UnityDataAnalyzer Log can be found in Results\Plugins\Data\
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM UnityDataAnalyzer Exited. Process PID 147424
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM MetaSmellAnalyzer Log can be found in Results\Plugins\Data\
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM MetaSmellAnalyzer Exited. Process PID 5248
+8/23/2024 11:28:22 PM ---------------------------------------------
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM Analyzing Data Poses Repository
+8/23/2024 11:28:22 PM 8/23/2024 11:28:22 PM  Started
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM UnityDataAnalyzer Log can be found in Results\Poses\Data\
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM UnityDataAnalyzer Exited. Process PID 824
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM MetaSmellAnalyzer Log can be found in Results\Poses\Data\
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM MetaSmellAnalyzer Exited. Process PID 13864
+8/23/2024 11:28:23 PM ---------------------------------------------
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM Analyzing Data Resources Repository
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM  Started
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM UnityDataAnalyzer Log can be found in Results\Resources\Data\
+8/23/2024 11:28:23 PM 8/23/2024 11:28:23 PM UnityDataAnalyzer Exited. Process PID 147180
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM MetaSmellAnalyzer Log can be found in Results\Resources\Data\
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM MetaSmellAnalyzer Exited. Process PID 6440
+8/23/2024 11:28:24 PM ---------------------------------------------
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM Analyzing Data Samples Repository
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM  Started
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM UnityDataAnalyzer Log can be found in Results\Samples\Data\
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM UnityDataAnalyzer Exited. Process PID 143564
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM MetaSmellAnalyzer Log can be found in Results\Samples\Data\
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM MetaSmellAnalyzer Exited. Process PID 13128
+8/23/2024 11:28:24 PM ---------------------------------------------
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM Analyzing Data Scenes Repository
+8/23/2024 11:28:24 PM 8/23/2024 11:28:24 PM  Started
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM UnityDataAnalyzer Log can be found in Results\Scenes\Data\
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM UnityDataAnalyzer Exited. Process PID 13500
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM MetaSmellAnalyzer Log can be found in Results\Scenes\Data\
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM MetaSmellAnalyzer Exited. Process PID 3444
+8/23/2024 11:28:25 PM ---------------------------------------------
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM Analyzing Data Scripts Repository
+8/23/2024 11:28:25 PM 8/23/2024 11:28:25 PM  Started
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM UnityDataAnalyzer Log can be found in Results\Scripts\Data\
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM UnityDataAnalyzer Exited. Process PID 1464
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM MetaSmellAnalyzer Log can be found in Results\Scripts\Data\
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM MetaSmellAnalyzer Exited. Process PID 5924
+8/23/2024 11:28:26 PM ---------------------------------------------
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM Analyzing Data Sounds Repository
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM  Started
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM UnityDataAnalyzer Log can be found in Results\Sounds\Data\
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM UnityDataAnalyzer Exited. Process PID 147236
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM MetaSmellAnalyzer Log can be found in Results\Sounds\Data\
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM MetaSmellAnalyzer Exited. Process PID 144308
+8/23/2024 11:28:26 PM ---------------------------------------------
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM Analyzing Data XR Repository
+8/23/2024 11:28:26 PM 8/23/2024 11:28:26 PM  Started
+8/23/2024 11:28:27 PM 8/23/2024 11:28:27 PM UnityDataAnalyzer Log can be found in Results\XR\Data\
+8/23/2024 11:28:27 PM 8/23/2024 11:28:27 PM UnityDataAnalyzer Exited. Process PID 143156
+8/23/2024 11:28:27 PM 8/23/2024 11:28:27 PM MetaSmellAnalyzer Log can be found in Results\XR\Data\
+8/23/2024 11:28:27 PM 8/23/2024 11:28:27 PM MetaSmellAnalyzer Exited. Process PID 147404
+8/23/2024 11:28:27 PM ---------------------------------------------
+8/23/2024 11:28:27 PM ShellStarter Exited

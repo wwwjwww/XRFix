@@ -1,0 +1,29 @@
+{
+  "guid": "37d2b8298f61cd2469465fc36108675d",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Avatar\\Resources\\Materials\\Version1.5\\Avatar_Mobile_CombinedMesh.shader.meta",
+  "name": "Avatar_Mobile_CombinedMesh.shader",
+  "type": "meta",
+  "file_size": 197,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

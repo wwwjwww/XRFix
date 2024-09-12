@@ -1,0 +1,778 @@
+{
+  "guid": "88e2e1bfe11ec6c438b0ade27eaeded1",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Meshes\\HandTracking\\OculusHand_R.fbx.meta",
+  "name": "OculusHand_R.fbx",
+  "type": "meta",
+  "file_size": 7689,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ModelImporter",
+      "ModelImporter": [
+        {
+          "serializedVersion": "22"
+        },
+        {
+          "fileIDToRecycleName": [
+            {
+              "": "b_r_forearm_stub"
+            },
+            {
+              "": "b_r_index1"
+            },
+            {
+              "": "b_r_index2"
+            },
+            {
+              "": "b_r_index3"
+            },
+            {
+              "": "b_r_index_null"
+            },
+            {
+              "": "b_r_middle1"
+            },
+            {
+              "": "b_r_middle2"
+            },
+            {
+              "": "b_r_middle3"
+            },
+            {
+              "": "b_r_middle_null"
+            },
+            {
+              "": "b_r_pinky0"
+            },
+            {
+              "": "b_r_pinky1"
+            },
+            {
+              "": "b_r_pinky2"
+            },
+            {
+              "": "b_r_pinky3"
+            },
+            {
+              "": "b_r_pinky_null"
+            },
+            {
+              "": "b_r_ring1"
+            },
+            {
+              "": "b_r_ring2"
+            },
+            {
+              "": "b_r_ring3"
+            },
+            {
+              "": "b_r_ring_null"
+            },
+            {
+              "": "b_r_thumb0"
+            },
+            {
+              "": "b_r_thumb1"
+            },
+            {
+              "": "b_r_thumb2"
+            },
+            {
+              "": "b_r_thumb3"
+            },
+            {
+              "": "b_r_thumb_null"
+            },
+            {
+              "": "b_r_wrist"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "r_handMeshNode"
+            },
+            {
+              "": "r_index_dip_fe_axis_marker"
+            },
+            {
+              "": "r_index_finger_pad_marker"
+            },
+            {
+              "": "r_index_finger_tip_marker"
+            },
+            {
+              "": "r_index_fingernail_marker"
+            },
+            {
+              "": "r_index_knuckle_marker"
+            },
+            {
+              "": "r_index_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_index_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_index_palm_collider_base0_marker"
+            },
+            {
+              "": "r_index_palm_collider_base1_marker"
+            },
+            {
+              "": "r_index_palm_knuckle_marker"
+            },
+            {
+              "": "r_index_pip_fe_axis_marker"
+            },
+            {
+              "": "r_middle_dip_fe_axis_marker"
+            },
+            {
+              "": "r_middle_finger_pad_marker"
+            },
+            {
+              "": "r_middle_finger_tip_marker"
+            },
+            {
+              "": "r_middle_fingernail_marker"
+            },
+            {
+              "": "r_middle_knuckle_marker"
+            },
+            {
+              "": "r_middle_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_middle_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_middle_palm_collider_base0_marker"
+            },
+            {
+              "": "r_middle_palm_collider_base1_marker"
+            },
+            {
+              "": "r_middle_palm_knuckle_marker"
+            },
+            {
+              "": "r_middle_pip_fe_axis_marker"
+            },
+            {
+              "": "r_palm_center_marker"
+            },
+            {
+              "": "r_pinky_dip_fe_axis_marker"
+            },
+            {
+              "": "r_pinky_finger_pad_marker"
+            },
+            {
+              "": "r_pinky_finger_tip_marker"
+            },
+            {
+              "": "r_pinky_fingernail_marker"
+            },
+            {
+              "": "r_pinky_knuckle_marker"
+            },
+            {
+              "": "r_pinky_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_pinky_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_pinky_palm_collider_base0_marker"
+            },
+            {
+              "": "r_pinky_palm_collider_base1_marker"
+            },
+            {
+              "": "r_pinky_palm_knuckle_marker"
+            },
+            {
+              "": "r_pinky_pip_fe_axis_marker"
+            },
+            {
+              "": "r_ring_dip_fe_axis_marker"
+            },
+            {
+              "": "r_ring_finger_pad_marker"
+            },
+            {
+              "": "r_ring_finger_tip_marker"
+            },
+            {
+              "": "r_ring_fingernail_marker"
+            },
+            {
+              "": "r_ring_knuckle_marker"
+            },
+            {
+              "": "r_ring_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_ring_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_ring_palm_collider_base0_marker"
+            },
+            {
+              "": "r_ring_palm_collider_base1_marker"
+            },
+            {
+              "": "r_ring_palm_knuckle_marker"
+            },
+            {
+              "": "r_ring_pip_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_cmc_aa_axis_marker"
+            },
+            {
+              "": "r_thumb_cmc_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_finger_pad_marker"
+            },
+            {
+              "": "r_thumb_finger_tip_marker"
+            },
+            {
+              "": "r_thumb_fingernail_marker"
+            },
+            {
+              "": "r_thumb_ip_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_knuckle_marker"
+            },
+            {
+              "": "r_thumb_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_palm_knuckle_marker"
+            },
+            {
+              "": "b_r_forearm_stub"
+            },
+            {
+              "": "b_r_index1"
+            },
+            {
+              "": "b_r_index2"
+            },
+            {
+              "": "b_r_index3"
+            },
+            {
+              "": "b_r_index_null"
+            },
+            {
+              "": "b_r_middle1"
+            },
+            {
+              "": "b_r_middle2"
+            },
+            {
+              "": "b_r_middle3"
+            },
+            {
+              "": "b_r_middle_null"
+            },
+            {
+              "": "b_r_pinky0"
+            },
+            {
+              "": "b_r_pinky1"
+            },
+            {
+              "": "b_r_pinky2"
+            },
+            {
+              "": "b_r_pinky3"
+            },
+            {
+              "": "b_r_pinky_null"
+            },
+            {
+              "": "b_r_ring1"
+            },
+            {
+              "": "b_r_ring2"
+            },
+            {
+              "": "b_r_ring3"
+            },
+            {
+              "": "b_r_ring_null"
+            },
+            {
+              "": "b_r_thumb0"
+            },
+            {
+              "": "b_r_thumb1"
+            },
+            {
+              "": "b_r_thumb2"
+            },
+            {
+              "": "b_r_thumb3"
+            },
+            {
+              "": "b_r_thumb_null"
+            },
+            {
+              "": "b_r_wrist"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "r_handMeshNode"
+            },
+            {
+              "": "r_index_dip_fe_axis_marker"
+            },
+            {
+              "": "r_index_finger_pad_marker"
+            },
+            {
+              "": "r_index_finger_tip_marker"
+            },
+            {
+              "": "r_index_fingernail_marker"
+            },
+            {
+              "": "r_index_knuckle_marker"
+            },
+            {
+              "": "r_index_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_index_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_index_palm_collider_base0_marker"
+            },
+            {
+              "": "r_index_palm_collider_base1_marker"
+            },
+            {
+              "": "r_index_palm_knuckle_marker"
+            },
+            {
+              "": "r_index_pip_fe_axis_marker"
+            },
+            {
+              "": "r_middle_dip_fe_axis_marker"
+            },
+            {
+              "": "r_middle_finger_pad_marker"
+            },
+            {
+              "": "r_middle_finger_tip_marker"
+            },
+            {
+              "": "r_middle_fingernail_marker"
+            },
+            {
+              "": "r_middle_knuckle_marker"
+            },
+            {
+              "": "r_middle_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_middle_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_middle_palm_collider_base0_marker"
+            },
+            {
+              "": "r_middle_palm_collider_base1_marker"
+            },
+            {
+              "": "r_middle_palm_knuckle_marker"
+            },
+            {
+              "": "r_middle_pip_fe_axis_marker"
+            },
+            {
+              "": "r_palm_center_marker"
+            },
+            {
+              "": "r_pinky_dip_fe_axis_marker"
+            },
+            {
+              "": "r_pinky_finger_pad_marker"
+            },
+            {
+              "": "r_pinky_finger_tip_marker"
+            },
+            {
+              "": "r_pinky_fingernail_marker"
+            },
+            {
+              "": "r_pinky_knuckle_marker"
+            },
+            {
+              "": "r_pinky_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_pinky_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_pinky_palm_collider_base0_marker"
+            },
+            {
+              "": "r_pinky_palm_collider_base1_marker"
+            },
+            {
+              "": "r_pinky_palm_knuckle_marker"
+            },
+            {
+              "": "r_pinky_pip_fe_axis_marker"
+            },
+            {
+              "": "r_ring_dip_fe_axis_marker"
+            },
+            {
+              "": "r_ring_finger_pad_marker"
+            },
+            {
+              "": "r_ring_finger_tip_marker"
+            },
+            {
+              "": "r_ring_fingernail_marker"
+            },
+            {
+              "": "r_ring_knuckle_marker"
+            },
+            {
+              "": "r_ring_mcp_aa_axis_marker"
+            },
+            {
+              "": "r_ring_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_ring_palm_collider_base0_marker"
+            },
+            {
+              "": "r_ring_palm_collider_base1_marker"
+            },
+            {
+              "": "r_ring_palm_knuckle_marker"
+            },
+            {
+              "": "r_ring_pip_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_cmc_aa_axis_marker"
+            },
+            {
+              "": "r_thumb_cmc_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_finger_pad_marker"
+            },
+            {
+              "": "r_thumb_finger_tip_marker"
+            },
+            {
+              "": "r_thumb_fingernail_marker"
+            },
+            {
+              "": "r_thumb_ip_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_knuckle_marker"
+            },
+            {
+              "": "r_thumb_mcp_fe_axis_marker"
+            },
+            {
+              "": "r_thumb_palm_knuckle_marker"
+            },
+            {
+              "": "lambert2"
+            },
+            {
+              "": "r_handMeshNode"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "r_handMeshNode"
+            }
+          ]
+        },
+        {
+          "externalObjects": ""
+        },
+        {
+          "materials": [
+            {
+              "importMaterials": "1"
+            },
+            {
+              "materialName": "0"
+            },
+            {
+              "materialSearch": "1"
+            },
+            {
+              "materialLocation": "1"
+            }
+          ]
+        },
+        {
+          "animations": [
+            {
+              "legacyGenerateAnimations": "4"
+            },
+            {
+              "bakeSimulation": "0"
+            },
+            {
+              "resampleCurves": "1"
+            },
+            {
+              "optimizeGameObjects": "0"
+            },
+            {
+              "motionNodeName": ""
+            },
+            {
+              "rigImportErrors": ""
+            },
+            {
+              "rigImportWarnings": ""
+            },
+            {
+              "animationImportErrors": ""
+            },
+            {
+              "animationImportWarnings": ""
+            },
+            {
+              "animationRetargetingWarnings": ""
+            },
+            {
+              "animationDoRetargetingWarnings": "0"
+            },
+            {
+              "importAnimatedCustomProperties": "0"
+            },
+            {
+              "animationCompression": "1"
+            },
+            {
+              "animationRotationError": "0.5"
+            },
+            {
+              "animationPositionError": "0.5"
+            },
+            {
+              "animationScaleError": "0.5"
+            },
+            {
+              "animationWrapMode": "0"
+            },
+            {
+              "extraExposedTransformPaths": "[]"
+            },
+            {
+              "extraUserProperties": "[]"
+            },
+            {
+              "clipAnimations": "[]"
+            },
+            {
+              "isReadable": "1"
+            }
+          ]
+        },
+        {
+          "meshes": [
+            {
+              "lODScreenPercentages": "[]"
+            },
+            {
+              "globalScale": "1"
+            },
+            {
+              "meshCompression": "0"
+            },
+            {
+              "addColliders": "0"
+            },
+            {
+              "importVisibility": "1"
+            },
+            {
+              "importBlendShapes": "1"
+            },
+            {
+              "importCameras": "1"
+            },
+            {
+              "importLights": "1"
+            },
+            {
+              "swapUVChannels": "0"
+            },
+            {
+              "generateSecondaryUV": "0"
+            },
+            {
+              "useFileUnits": "1"
+            },
+            {
+              "optimizeMeshForGPU": "1"
+            },
+            {
+              "keepQuads": "0"
+            },
+            {
+              "weldVertices": "1"
+            },
+            {
+              "preserveHierarchy": "0"
+            },
+            {
+              "indexFormat": "0"
+            },
+            {
+              "secondaryUVAngleDistortion": "8"
+            },
+            {
+              "secondaryUVAreaDistortion": "15.000001"
+            },
+            {
+              "secondaryUVHardAngle": "88"
+            },
+            {
+              "secondaryUVPackMargin": "4"
+            },
+            {
+              "useFileScale": "1"
+            }
+          ]
+        },
+        {
+          "tangentSpace": [
+            {
+              "normalSmoothAngle": "60"
+            },
+            {
+              "normalImportMode": "0"
+            },
+            {
+              "tangentImportMode": "3"
+            },
+            {
+              "normalCalculationMode": "4"
+            }
+          ]
+        },
+        {
+          "importAnimation": "1"
+        },
+        {
+          "copyAvatar": "0"
+        },
+        {
+          "humanDescription": [
+            {
+              "serializedVersion": "2"
+            },
+            {
+              "human": "[]"
+            },
+            {
+              "skeleton": "[]"
+            },
+            {
+              "armTwist": "0.5"
+            },
+            {
+              "foreArmTwist": "0.5"
+            },
+            {
+              "upperLegTwist": "0.5"
+            },
+            {
+              "legTwist": "0.5"
+            },
+            {
+              "armStretch": "0.05"
+            },
+            {
+              "legStretch": "0.05"
+            },
+            {
+              "feetSpacing": "0"
+            },
+            {
+              "rootMotionBoneName": ""
+            },
+            {
+              "rootMotionBoneRotation": [
+                {
+                  "x": "0"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "0"
+                },
+                {
+                  "w": "1"
+                }
+              ]
+            },
+            {
+              "hasTranslationDoF": "0"
+            },
+            {
+              "hasExtraRoot": "0"
+            },
+            {
+              "skeletonHasParents": "1"
+            }
+          ]
+        },
+        {
+          "lastHumanDescriptionAvatarSource": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "animationType": "2"
+        },
+        {
+          "humanoidOversampling": "1"
+        },
+        {
+          "additionalBone": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

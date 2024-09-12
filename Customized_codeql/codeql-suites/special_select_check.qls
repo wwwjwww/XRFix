@@ -1,0 +1,5 @@
+- description: Security-extended queries for C#
+- queries: .
+- apply: special_select_check.yml
+  from: codeql/suite-helpers
+- query: Metrics/Summaries/LinesOfCode.ql

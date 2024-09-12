@@ -1,0 +1,56 @@
+{
+  "guid": "f91d65267a08748519645f34d4358e48",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Spatializer\\scenes\\sounds\\uss.ogg.meta",
+  "name": "uss.ogg",
+  "type": "meta",
+  "file_size": 304,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AudioImporter",
+      "AudioImporter": [
+        {
+          "serializedVersion": "5"
+        },
+        {
+          "format": "-1"
+        },
+        {
+          "loadType": "1"
+        },
+        {
+          "quality": "1"
+        },
+        {
+          "sampleRate": "0"
+        },
+        {
+          "forceToMono": "0"
+        },
+        {
+          "preloadAudioData": "1"
+        },
+        {
+          "loadInBackground": "0"
+        },
+        {
+          "overrideSampleRate": "0"
+        },
+        {
+          "optimizeSampleRate": "0"
+        },
+        {
+          "D": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

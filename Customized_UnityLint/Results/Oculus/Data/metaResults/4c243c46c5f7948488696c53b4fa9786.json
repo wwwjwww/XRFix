@@ -1,0 +1,64 @@
+{
+  "guid": "4c243c46c5f7948488696c53b4fa9786",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Samples\\VrBoardGame\\Scripts\\GamePiece.cs.meta",
+  "name": "GamePiece.cs",
+  "type": "meta",
+  "file_size": 358,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": [
+            {
+              "- m_prefabA": [
+                {
+                  "instanceID": "0"
+                }
+              ]
+            },
+            {
+              "- m_prefabB": [
+                {
+                  "instanceID": "0"
+                }
+              ]
+            },
+            {
+              "- m_prefabPower": [
+                {
+                  "instanceID": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

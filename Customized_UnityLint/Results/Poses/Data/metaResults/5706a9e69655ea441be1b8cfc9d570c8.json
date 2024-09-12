@@ -1,0 +1,32 @@
+{
+  "guid": "5706a9e69655ea441be1b8cfc9d570c8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses\\BookThinPoses.asset.meta",
+  "name": "BookThinPoses.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Poses",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Poses"
+}

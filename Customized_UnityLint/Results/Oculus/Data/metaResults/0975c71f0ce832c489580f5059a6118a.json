@@ -1,0 +1,29 @@
+{
+  "guid": "0975c71f0ce832c489580f5059a6118a",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Samples\\VrBoardGame\\Readme.md.meta",
+  "name": "Readme.md",
+  "type": "meta",
+  "file_size": 158,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,3 +1,0 @@
-SubOptimal,Animator,m_Lightmapping,==,2
-SubOptimal1,Animator,m_Lightmapping,==,0
-CameraClearFlag,m_ClearFlags,==,4

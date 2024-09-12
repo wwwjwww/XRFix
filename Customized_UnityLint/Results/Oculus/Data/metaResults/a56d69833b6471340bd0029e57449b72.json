@@ -1,0 +1,116 @@
+{
+  "guid": "a56d69833b6471340bd0029e57449b72",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Textures\\Logos\\OculusLogo.png.meta",
+  "name": "OculusLogo.png",
+  "type": "meta",
+  "file_size": 709,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextureImporter",
+      "TextureImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "mipmaps": [
+            {
+              "mipMapMode": "0"
+            },
+            {
+              "enableMipMap": "1"
+            },
+            {
+              "linearTexture": "0"
+            },
+            {
+              "correctGamma": "0"
+            },
+            {
+              "fadeOut": "0"
+            },
+            {
+              "borderMipMap": "0"
+            },
+            {
+              "mipMapFadeDistanceStart": "1"
+            },
+            {
+              "mipMapFadeDistanceEnd": "3"
+            }
+          ]
+        },
+        {
+          "bumpmap": [
+            {
+              "convertToNormalMap": "0"
+            },
+            {
+              "externalNormalMap": "0"
+            },
+            {
+              "heightScale": ".25"
+            },
+            {
+              "normalMapFilter": "0"
+            }
+          ]
+        },
+        {
+          "isReadable": "0"
+        },
+        {
+          "grayScaleToAlpha": "0"
+        },
+        {
+          "generateCubemap": "0"
+        },
+        {
+          "seamlessCubemap": "0"
+        },
+        {
+          "textureFormat": "-3"
+        },
+        {
+          "maxTextureSize": "1024"
+        },
+        {
+          "textureSettings": [
+            {
+              "filterMode": "-1"
+            },
+            {
+              "aniso": "-1"
+            },
+            {
+              "mipBias": "-1"
+            },
+            {
+              "wrapMode": "-1"
+            }
+          ]
+        },
+        {
+          "nPOTScale": "0"
+        },
+        {
+          "lightmap": "0"
+        },
+        {
+          "compressionQuality": "50"
+        },
+        {
+          "textureType": "5"
+        },
+        {
+          "buildTargetSettings": "[]"
+        },
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "0d0b0582c885e044f9c1d0e9ec3790b8",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\XR\\XRGeneralSettings.asset.meta",
+  "name": "XRGeneralSettings.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "XR",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\XR"
+}

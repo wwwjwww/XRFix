@@ -1,0 +1,26 @@
+{
+  "guid": "5de957de5187b406687f99aa5a30871b",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Plugins\\MacOSX\\OVRGamepad.bundle\\Contents\\Info.plist.meta",
+  "name": "Info.plist",
+  "type": "meta",
+  "file_size": 176,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

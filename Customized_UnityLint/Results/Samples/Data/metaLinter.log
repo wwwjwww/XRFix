@@ -1,0 +1,51 @@
+8/23/2024 11:28:24 PM Start analysis...
+8/23/2024 11:28:24 PM Loading Dataset...
+8/23/2024 11:28:24 PM Loading main data...
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\23b1fe0762145904ba4ff0b82e7de514.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\279607e4686b2404fa13d68aa4f51637.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\3b284a5e175186f479db1d1cd81a41df.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\63b28ea3e535bab48a39e62ea8e097d7.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\7fab1a819803477439b71b9620160619.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\886cb81ddb5a38541bfc87cbb5fabfd5.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\9686c5d5c94736246ab0d8f5920d3445.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\9c9caced691e39a4dac8e89ddac879ad.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\d7bd83fd0123da74eb60c0f446429bd3.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\ef05a92427437d940922dfb387f41d29.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\fa5cfeae0d3031e41affab84f2263840.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\mainResults\ProjectInfo.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\08406043919f7d74b9ad4fa42ababcf8.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\0c489ee65d68038419e1482bbb7aff24.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\0f5fc17cfc0a79d49b8f2050ae8e12f4.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\2176ff4867cf6bc4b841d3a0415b1155.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\2a4ecd3b02b31374aae9ae1f9041266d.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\3fb2f2fca74340d4f8688bc86825b04e.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\40ab322fb12676e4d80131a44d67964e.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\40cca75513021c84b8bbee4b82d0970d.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\4c2ece6cd8d708147bd52ae64e1e6070.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\50f4ad622c1c7814aade54a2386b739a.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\51eb3b5203579b848804c98dd1571c7d.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\559a3d23455f87041bf962788a6af656.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\6d49bdd7f015ce34ebcef4318edda787.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\962638b6f851fb945aa3645965fc2664.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\996c0c69bccbd4648ba0b3fc6fa382a6.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\9a643dd85268767408a850519a0d9e85.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\a938e6804a858c34d91a964d7b720752.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\cff700274dab95c4db2b4c071444c45d.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\de2c4dd6d90d6434385812cab7bed050.json
+8/23/2024 11:28:24 PM File: Results/Samples/Data\metaResults\fef190d8d273c1f4fb95810e8f031f6f.json
+8/23/2024 11:28:24 PM Maindata loaded!
+8/23/2024 11:28:24 PM Dataset Loaded!
+8/23/2024 11:28:24 PM Searching for smells...
+8/23/2024 11:28:24 PM Searching SubOptimal Expensive Lights...
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Searching SubOptimal Expensive Lights with enable LightRealTime...
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Searching Animation Object with Clear Flag=nothing...
+8/23/2024 11:28:24 PM Done!!
+8/23/2024 11:28:24 PM Search completed!
+8/23/2024 11:28:24 PM Analysis Done!
+8/23/2024 11:28:24 PM Saving results...
+8/23/2024 11:28:24 PM Saving: SubOptimal_Expensive_Lights.json
+8/23/2024 11:28:24 PM Saving: SubOptimal_Expensive_Lights_with_enable_LightRealTime.json
+8/23/2024 11:28:24 PM Saving: Camera_Render_Clear_Flag_=_Don't_Clear.json
+8/23/2024 11:28:24 PM Results saved in Results/Samples/Data\MetaSmellResults

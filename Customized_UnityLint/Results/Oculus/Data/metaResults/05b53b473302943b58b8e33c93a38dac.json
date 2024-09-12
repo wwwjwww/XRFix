@@ -1,0 +1,23 @@
+{
+  "guid": "05b53b473302943b58b8e33c93a38dac",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Shaders\\Unlit Crosshair.shader.meta",
+  "name": "Unlit Crosshair.shader",
+  "type": "meta",
+  "file_size": 111,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ShaderImporter",
+      "ShaderImporter": [
+        {
+          "defaultTextures": "[]"
+        },
+        {
+          "userData": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

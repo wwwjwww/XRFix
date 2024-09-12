@@ -1,0 +1,32 @@
+{
+  "guid": "25f0194b043fa784d8ffc3fc4ee5207c",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Resources\\OVRBuildConfig.asset.meta",
+  "name": "OVRBuildConfig.asset",
+  "type": "meta",
+  "file_size": 182,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Resources",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Resources"
+}

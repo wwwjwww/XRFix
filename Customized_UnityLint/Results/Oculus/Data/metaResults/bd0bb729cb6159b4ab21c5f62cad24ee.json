@@ -1,0 +1,2011 @@
+{
+  "guid": "bd0bb729cb6159b4ab21c5f62cad24ee",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Usage\\HandsTrainExample\\Models\\TrainPalette.FBX.meta",
+  "name": "TrainPalette.FBX",
+  "type": "meta",
+  "file_size": 15576,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ModelImporter",
+      "ModelImporter": [
+        {
+          "serializedVersion": "22"
+        },
+        {
+          "fileIDToRecycleName": [
+            {
+              "": "Axle_A_00"
+            },
+            {
+              "": "Axle_A_01"
+            },
+            {
+              "": "Axle_A_02"
+            },
+            {
+              "": "Axle_A_03"
+            },
+            {
+              "": "Axle_A_04"
+            },
+            {
+              "": "Axle_A_05"
+            },
+            {
+              "": "Axle_A_06"
+            },
+            {
+              "": "Axle_A_07"
+            },
+            {
+              "": "Axle_A_08"
+            },
+            {
+              "": "Axle_A_09"
+            },
+            {
+              "": "Backplate"
+            },
+            {
+              "": "Bump_A"
+            },
+            {
+              "": "Bump_B"
+            },
+            {
+              "": "Bump_C"
+            },
+            {
+              "": "Bump_D"
+            },
+            {
+              "": "Bump_E"
+            },
+            {
+              "": "Bush_A"
+            },
+            {
+              "": "Bush_B"
+            },
+            {
+              "": "Bush_C"
+            },
+            {
+              "": "Cactus_A"
+            },
+            {
+              "": "Cactus_B"
+            },
+            {
+              "": "Cactus_C"
+            },
+            {
+              "": "Cactus_D"
+            },
+            {
+              "": "Cactus_E"
+            },
+            {
+              "": "Cloud_A"
+            },
+            {
+              "": "Cloud_B"
+            },
+            {
+              "": "Cloud_C"
+            },
+            {
+              "": "Cloud_D"
+            },
+            {
+              "": "Cloud_E"
+            },
+            {
+              "": "Cloud_F"
+            },
+            {
+              "": "Grass_A"
+            },
+            {
+              "": "Grass_B"
+            },
+            {
+              "": "Grass_C"
+            },
+            {
+              "": "Mountain_A"
+            },
+            {
+              "": "Mountain_B"
+            },
+            {
+              "": "Mountain_C"
+            },
+            {
+              "": "Mountain_D"
+            },
+            {
+              "": "Mountain_E"
+            },
+            {
+              "": "Mountain_F"
+            },
+            {
+              "": "Mountain_G"
+            },
+            {
+              "": "Mountain_H"
+            },
+            {
+              "": "Plate_Curved"
+            },
+            {
+              "": "Plate_Generic"
+            },
+            {
+              "": "Plate_Straight"
+            },
+            {
+              "": "RR_Xing"
+            },
+            {
+              "": "Stone_A"
+            },
+            {
+              "": "Stone_B"
+            },
+            {
+              "": "Stone_C"
+            },
+            {
+              "": "Stone_D"
+            },
+            {
+              "": "Stone_E"
+            },
+            {
+              "": "Train_A"
+            },
+            {
+              "": "Train_B"
+            },
+            {
+              "": "Train_C"
+            },
+            {
+              "": "Train_D"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "Train_E"
+            },
+            {
+              "": "Tumbleweed"
+            },
+            {
+              "": "Wheel_A_00"
+            },
+            {
+              "": "Wheel_A_01"
+            },
+            {
+              "": "Wheel_A_02"
+            },
+            {
+              "": "Wheel_A_03"
+            },
+            {
+              "": "Wheel_A_04"
+            },
+            {
+              "": "Wheel_A_05"
+            },
+            {
+              "": "Wheel_A_06"
+            },
+            {
+              "": "Wheel_A_07"
+            },
+            {
+              "": "Wheel_A_08"
+            },
+            {
+              "": "Wheel_A_09"
+            },
+            {
+              "": "Wheel_A_10"
+            },
+            {
+              "": "Wheel_A_11"
+            },
+            {
+              "": "Wheel_A_12"
+            },
+            {
+              "": "Wheel_A_13"
+            },
+            {
+              "": "Wheel_A_14"
+            },
+            {
+              "": "Wheel_A_15"
+            },
+            {
+              "": "Wheel_A_16"
+            },
+            {
+              "": "Wheel_A_17"
+            },
+            {
+              "": "Wheel_A_18"
+            },
+            {
+              "": "Wheel_A_19"
+            },
+            {
+              "": "Wheel_A_20"
+            },
+            {
+              "": "Wheel_A_21"
+            },
+            {
+              "": "Wheel_A_22"
+            },
+            {
+              "": "Wheel_A_23"
+            },
+            {
+              "": "Wheel_A_24"
+            },
+            {
+              "": "Wheel_A_25"
+            },
+            {
+              "": "Wheel_A_26"
+            },
+            {
+              "": "Wheel_A_27"
+            },
+            {
+              "": "Wheel_A_28"
+            },
+            {
+              "": "Wheel_A_29"
+            },
+            {
+              "": "Wheel_A_30"
+            },
+            {
+              "": "Wheel_A_31"
+            },
+            {
+              "": "Wheel_A_32"
+            },
+            {
+              "": "Wheel_A_33"
+            },
+            {
+              "": "Wheel_A_34"
+            },
+            {
+              "": "Wheel_A_35"
+            },
+            {
+              "": "Wheel_A_36"
+            },
+            {
+              "": "Wheel_A_37"
+            },
+            {
+              "": "Wheel_A_38"
+            },
+            {
+              "": "Wheel_A_39"
+            },
+            {
+              "": "Windmill_Base"
+            },
+            {
+              "": "Windmill_Top"
+            },
+            {
+              "": "Cow_Body"
+            },
+            {
+              "": "Cow_Head"
+            },
+            {
+              "": "Cow_Neck"
+            },
+            {
+              "": "Cow_Tail"
+            },
+            {
+              "": "LPBAKE_LP_Axle014"
+            },
+            {
+              "": "LPBAKE_LP_Axle015"
+            },
+            {
+              "": "LPBAKE_LP_Wheel056"
+            },
+            {
+              "": "LPBAKE_LP_Wheel057"
+            },
+            {
+              "": "LPBAKE_LP_Wheel058"
+            },
+            {
+              "": "LPBAKE_LP_Wheel059"
+            },
+            {
+              "": "LPBAKE_LP_Wheel060"
+            },
+            {
+              "": "LPBAKE_LP_Wheel061"
+            },
+            {
+              "": "LPBAKE_LP_Wheel062"
+            },
+            {
+              "": "LPBAKE_LP_Wheel063"
+            },
+            {
+              "": "Train_Cattle_Car"
+            },
+            {
+              "": "Train_Cattle_Car_Base"
+            },
+            {
+              "": "Axle_A_00"
+            },
+            {
+              "": "Axle_A_01"
+            },
+            {
+              "": "Axle_A_02"
+            },
+            {
+              "": "Axle_A_03"
+            },
+            {
+              "": "Axle_A_04"
+            },
+            {
+              "": "Axle_A_05"
+            },
+            {
+              "": "Axle_A_06"
+            },
+            {
+              "": "Axle_A_07"
+            },
+            {
+              "": "Axle_A_08"
+            },
+            {
+              "": "Axle_A_09"
+            },
+            {
+              "": "Backplate"
+            },
+            {
+              "": "Bump_A"
+            },
+            {
+              "": "Bump_B"
+            },
+            {
+              "": "Bump_C"
+            },
+            {
+              "": "Bump_D"
+            },
+            {
+              "": "Bump_E"
+            },
+            {
+              "": "Bush_A"
+            },
+            {
+              "": "Bush_B"
+            },
+            {
+              "": "Bush_C"
+            },
+            {
+              "": "Cactus_A"
+            },
+            {
+              "": "Cactus_B"
+            },
+            {
+              "": "Cactus_C"
+            },
+            {
+              "": "Cactus_D"
+            },
+            {
+              "": "Cactus_E"
+            },
+            {
+              "": "Cloud_A"
+            },
+            {
+              "": "Cloud_B"
+            },
+            {
+              "": "Cloud_C"
+            },
+            {
+              "": "Cloud_D"
+            },
+            {
+              "": "Cloud_E"
+            },
+            {
+              "": "Cloud_F"
+            },
+            {
+              "": "Grass_A"
+            },
+            {
+              "": "Grass_B"
+            },
+            {
+              "": "Grass_C"
+            },
+            {
+              "": "Mountain_A"
+            },
+            {
+              "": "Mountain_B"
+            },
+            {
+              "": "Mountain_C"
+            },
+            {
+              "": "Mountain_D"
+            },
+            {
+              "": "Mountain_E"
+            },
+            {
+              "": "Mountain_F"
+            },
+            {
+              "": "Mountain_G"
+            },
+            {
+              "": "Mountain_H"
+            },
+            {
+              "": "Plate_Curved"
+            },
+            {
+              "": "Plate_Generic"
+            },
+            {
+              "": "Plate_Straight"
+            },
+            {
+              "": "RR_Xing"
+            },
+            {
+              "": "Stone_A"
+            },
+            {
+              "": "Stone_B"
+            },
+            {
+              "": "Stone_C"
+            },
+            {
+              "": "Stone_D"
+            },
+            {
+              "": "Stone_E"
+            },
+            {
+              "": "Train_A"
+            },
+            {
+              "": "Train_B"
+            },
+            {
+              "": "Train_C"
+            },
+            {
+              "": "Train_D"
+            },
+            {
+              "": "//RootNode"
+            },
+            {
+              "": "Train_E"
+            },
+            {
+              "": "Tumbleweed"
+            },
+            {
+              "": "Wheel_A_00"
+            },
+            {
+              "": "Wheel_A_01"
+            },
+            {
+              "": "Wheel_A_02"
+            },
+            {
+              "": "Wheel_A_03"
+            },
+            {
+              "": "Wheel_A_04"
+            },
+            {
+              "": "Wheel_A_05"
+            },
+            {
+              "": "Wheel_A_06"
+            },
+            {
+              "": "Wheel_A_07"
+            },
+            {
+              "": "Wheel_A_08"
+            },
+            {
+              "": "Wheel_A_09"
+            },
+            {
+              "": "Wheel_A_10"
+            },
+            {
+              "": "Wheel_A_11"
+            },
+            {
+              "": "Wheel_A_12"
+            },
+            {
+              "": "Wheel_A_13"
+            },
+            {
+              "": "Wheel_A_14"
+            },
+            {
+              "": "Wheel_A_15"
+            },
+            {
+              "": "Wheel_A_16"
+            },
+            {
+              "": "Wheel_A_17"
+            },
+            {
+              "": "Wheel_A_18"
+            },
+            {
+              "": "Wheel_A_19"
+            },
+            {
+              "": "Wheel_A_20"
+            },
+            {
+              "": "Wheel_A_21"
+            },
+            {
+              "": "Wheel_A_22"
+            },
+            {
+              "": "Wheel_A_23"
+            },
+            {
+              "": "Wheel_A_24"
+            },
+            {
+              "": "Wheel_A_25"
+            },
+            {
+              "": "Wheel_A_26"
+            },
+            {
+              "": "Wheel_A_27"
+            },
+            {
+              "": "Wheel_A_28"
+            },
+            {
+              "": "Wheel_A_29"
+            },
+            {
+              "": "Wheel_A_30"
+            },
+            {
+              "": "Wheel_A_31"
+            },
+            {
+              "": "Wheel_A_32"
+            },
+            {
+              "": "Wheel_A_33"
+            },
+            {
+              "": "Wheel_A_34"
+            },
+            {
+              "": "Wheel_A_35"
+            },
+            {
+              "": "Wheel_A_36"
+            },
+            {
+              "": "Wheel_A_37"
+            },
+            {
+              "": "Wheel_A_38"
+            },
+            {
+              "": "Wheel_A_39"
+            },
+            {
+              "": "Windmill_Base"
+            },
+            {
+              "": "Windmill_Top"
+            },
+            {
+              "": "Cow_Body"
+            },
+            {
+              "": "Cow_Head"
+            },
+            {
+              "": "Cow_Neck"
+            },
+            {
+              "": "Cow_Tail"
+            },
+            {
+              "": "LPBAKE_LP_Axle014"
+            },
+            {
+              "": "LPBAKE_LP_Axle015"
+            },
+            {
+              "": "LPBAKE_LP_Wheel056"
+            },
+            {
+              "": "LPBAKE_LP_Wheel057"
+            },
+            {
+              "": "LPBAKE_LP_Wheel058"
+            },
+            {
+              "": "LPBAKE_LP_Wheel059"
+            },
+            {
+              "": "LPBAKE_LP_Wheel060"
+            },
+            {
+              "": "LPBAKE_LP_Wheel061"
+            },
+            {
+              "": "LPBAKE_LP_Wheel062"
+            },
+            {
+              "": "LPBAKE_LP_Wheel063"
+            },
+            {
+              "": "Train_Cattle_Car"
+            },
+            {
+              "": "Train_Cattle_Car_Base"
+            },
+            {
+              "": "01 - Default"
+            },
+            {
+              "": "Axle_A_00"
+            },
+            {
+              "": "Axle_A_01"
+            },
+            {
+              "": "Axle_A_02"
+            },
+            {
+              "": "Axle_A_03"
+            },
+            {
+              "": "Axle_A_04"
+            },
+            {
+              "": "Axle_A_05"
+            },
+            {
+              "": "Axle_A_06"
+            },
+            {
+              "": "Axle_A_07"
+            },
+            {
+              "": "Axle_A_08"
+            },
+            {
+              "": "Axle_A_09"
+            },
+            {
+              "": "Backplate"
+            },
+            {
+              "": "Bump_A"
+            },
+            {
+              "": "Bump_B"
+            },
+            {
+              "": "Bump_C"
+            },
+            {
+              "": "Bump_D"
+            },
+            {
+              "": "Bump_E"
+            },
+            {
+              "": "Bush_A"
+            },
+            {
+              "": "Bush_B"
+            },
+            {
+              "": "Bush_C"
+            },
+            {
+              "": "Cactus_A"
+            },
+            {
+              "": "Cactus_B"
+            },
+            {
+              "": "Cactus_C"
+            },
+            {
+              "": "Cactus_D"
+            },
+            {
+              "": "Cactus_E"
+            },
+            {
+              "": "Cloud_A"
+            },
+            {
+              "": "Cloud_B"
+            },
+            {
+              "": "Cloud_C"
+            },
+            {
+              "": "Cloud_D"
+            },
+            {
+              "": "Cloud_E"
+            },
+            {
+              "": "Cloud_F"
+            },
+            {
+              "": "Grass_A"
+            },
+            {
+              "": "Grass_B"
+            },
+            {
+              "": "Grass_C"
+            },
+            {
+              "": "Mountain_A"
+            },
+            {
+              "": "Mountain_B"
+            },
+            {
+              "": "Mountain_C"
+            },
+            {
+              "": "Mountain_D"
+            },
+            {
+              "": "Mountain_E"
+            },
+            {
+              "": "Mountain_F"
+            },
+            {
+              "": "Mountain_G"
+            },
+            {
+              "": "Mountain_H"
+            },
+            {
+              "": "Plate_Curved"
+            },
+            {
+              "": "Plate_Generic"
+            },
+            {
+              "": "Plate_Straight"
+            },
+            {
+              "": "RR_Xing"
+            },
+            {
+              "": "Stone_A"
+            },
+            {
+              "": "Stone_B"
+            },
+            {
+              "": "Stone_C"
+            },
+            {
+              "": "Stone_D"
+            },
+            {
+              "": "Stone_E"
+            },
+            {
+              "": "Train_A"
+            },
+            {
+              "": "Train_B"
+            },
+            {
+              "": "Train_C"
+            },
+            {
+              "": "Train_D"
+            },
+            {
+              "": "Train_E"
+            },
+            {
+              "": "Tumbleweed"
+            },
+            {
+              "": "Wheel_A_00"
+            },
+            {
+              "": "Wheel_A_01"
+            },
+            {
+              "": "Wheel_A_02"
+            },
+            {
+              "": "Wheel_A_03"
+            },
+            {
+              "": "Wheel_A_04"
+            },
+            {
+              "": "Wheel_A_05"
+            },
+            {
+              "": "Wheel_A_06"
+            },
+            {
+              "": "Wheel_A_07"
+            },
+            {
+              "": "Wheel_A_08"
+            },
+            {
+              "": "Wheel_A_09"
+            },
+            {
+              "": "Wheel_A_10"
+            },
+            {
+              "": "Wheel_A_11"
+            },
+            {
+              "": "Wheel_A_12"
+            },
+            {
+              "": "Wheel_A_13"
+            },
+            {
+              "": "Wheel_A_14"
+            },
+            {
+              "": "Wheel_A_15"
+            },
+            {
+              "": "Wheel_A_16"
+            },
+            {
+              "": "Wheel_A_17"
+            },
+            {
+              "": "Wheel_A_18"
+            },
+            {
+              "": "Wheel_A_19"
+            },
+            {
+              "": "Wheel_A_20"
+            },
+            {
+              "": "Wheel_A_21"
+            },
+            {
+              "": "Wheel_A_22"
+            },
+            {
+              "": "Wheel_A_23"
+            },
+            {
+              "": "Wheel_A_24"
+            },
+            {
+              "": "Wheel_A_25"
+            },
+            {
+              "": "Wheel_A_26"
+            },
+            {
+              "": "Wheel_A_27"
+            },
+            {
+              "": "Wheel_A_28"
+            },
+            {
+              "": "Wheel_A_29"
+            },
+            {
+              "": "Wheel_A_30"
+            },
+            {
+              "": "Wheel_A_31"
+            },
+            {
+              "": "Wheel_A_32"
+            },
+            {
+              "": "Wheel_A_33"
+            },
+            {
+              "": "Wheel_A_34"
+            },
+            {
+              "": "Wheel_A_35"
+            },
+            {
+              "": "Wheel_A_36"
+            },
+            {
+              "": "Wheel_A_37"
+            },
+            {
+              "": "Wheel_A_38"
+            },
+            {
+              "": "Wheel_A_39"
+            },
+            {
+              "": "Windmill_Base"
+            },
+            {
+              "": "Windmill_Top"
+            },
+            {
+              "": "Cow_Body"
+            },
+            {
+              "": "Cow_Head"
+            },
+            {
+              "": "Cow_Neck"
+            },
+            {
+              "": "Cow_Tail"
+            },
+            {
+              "": "LPBAKE_LP_Axle014"
+            },
+            {
+              "": "LPBAKE_LP_Axle015"
+            },
+            {
+              "": "LPBAKE_LP_Wheel056"
+            },
+            {
+              "": "LPBAKE_LP_Wheel057"
+            },
+            {
+              "": "LPBAKE_LP_Wheel058"
+            },
+            {
+              "": "LPBAKE_LP_Wheel059"
+            },
+            {
+              "": "LPBAKE_LP_Wheel060"
+            },
+            {
+              "": "LPBAKE_LP_Wheel061"
+            },
+            {
+              "": "LPBAKE_LP_Wheel062"
+            },
+            {
+              "": "LPBAKE_LP_Wheel063"
+            },
+            {
+              "": "Train_Cattle_Car"
+            },
+            {
+              "": "Train_Cattle_Car_Base"
+            },
+            {
+              "": "Axle_A_00"
+            },
+            {
+              "": "Axle_A_01"
+            },
+            {
+              "": "Axle_A_02"
+            },
+            {
+              "": "Axle_A_03"
+            },
+            {
+              "": "Axle_A_04"
+            },
+            {
+              "": "Axle_A_05"
+            },
+            {
+              "": "Axle_A_06"
+            },
+            {
+              "": "Axle_A_07"
+            },
+            {
+              "": "Axle_A_08"
+            },
+            {
+              "": "Axle_A_09"
+            },
+            {
+              "": "Backplate"
+            },
+            {
+              "": "Bump_A"
+            },
+            {
+              "": "Bump_B"
+            },
+            {
+              "": "Bump_C"
+            },
+            {
+              "": "Bump_D"
+            },
+            {
+              "": "Bump_E"
+            },
+            {
+              "": "Bush_A"
+            },
+            {
+              "": "Bush_B"
+            },
+            {
+              "": "Bush_C"
+            },
+            {
+              "": "Cactus_A"
+            },
+            {
+              "": "Cactus_B"
+            },
+            {
+              "": "Cactus_C"
+            },
+            {
+              "": "Cactus_D"
+            },
+            {
+              "": "Cactus_E"
+            },
+            {
+              "": "Cloud_A"
+            },
+            {
+              "": "Cloud_B"
+            },
+            {
+              "": "Cloud_C"
+            },
+            {
+              "": "Cloud_D"
+            },
+            {
+              "": "Cloud_E"
+            },
+            {
+              "": "Cloud_F"
+            },
+            {
+              "": "Grass_A"
+            },
+            {
+              "": "Grass_B"
+            },
+            {
+              "": "Grass_C"
+            },
+            {
+              "": "Mountain_A"
+            },
+            {
+              "": "Mountain_B"
+            },
+            {
+              "": "Mountain_C"
+            },
+            {
+              "": "Mountain_D"
+            },
+            {
+              "": "Mountain_E"
+            },
+            {
+              "": "Mountain_F"
+            },
+            {
+              "": "Mountain_G"
+            },
+            {
+              "": "Mountain_H"
+            },
+            {
+              "": "Plate_Curved"
+            },
+            {
+              "": "Plate_Generic"
+            },
+            {
+              "": "Plate_Straight"
+            },
+            {
+              "": "RR_Xing"
+            },
+            {
+              "": "Stone_A"
+            },
+            {
+              "": "Stone_B"
+            },
+            {
+              "": "Stone_C"
+            },
+            {
+              "": "Stone_D"
+            },
+            {
+              "": "Stone_E"
+            },
+            {
+              "": "Train_A"
+            },
+            {
+              "": "Train_B"
+            },
+            {
+              "": "Train_C"
+            },
+            {
+              "": "Train_D"
+            },
+            {
+              "": "Train_E"
+            },
+            {
+              "": "Tumbleweed"
+            },
+            {
+              "": "Wheel_A_00"
+            },
+            {
+              "": "Wheel_A_01"
+            },
+            {
+              "": "Wheel_A_02"
+            },
+            {
+              "": "Wheel_A_03"
+            },
+            {
+              "": "Wheel_A_04"
+            },
+            {
+              "": "Wheel_A_05"
+            },
+            {
+              "": "Wheel_A_06"
+            },
+            {
+              "": "Wheel_A_07"
+            },
+            {
+              "": "Wheel_A_08"
+            },
+            {
+              "": "Wheel_A_09"
+            },
+            {
+              "": "Wheel_A_10"
+            },
+            {
+              "": "Wheel_A_11"
+            },
+            {
+              "": "Wheel_A_12"
+            },
+            {
+              "": "Wheel_A_13"
+            },
+            {
+              "": "Wheel_A_14"
+            },
+            {
+              "": "Wheel_A_15"
+            },
+            {
+              "": "Wheel_A_16"
+            },
+            {
+              "": "Wheel_A_17"
+            },
+            {
+              "": "Wheel_A_18"
+            },
+            {
+              "": "Wheel_A_19"
+            },
+            {
+              "": "Wheel_A_20"
+            },
+            {
+              "": "Wheel_A_21"
+            },
+            {
+              "": "Wheel_A_22"
+            },
+            {
+              "": "Wheel_A_23"
+            },
+            {
+              "": "Wheel_A_24"
+            },
+            {
+              "": "Wheel_A_25"
+            },
+            {
+              "": "Wheel_A_26"
+            },
+            {
+              "": "Wheel_A_27"
+            },
+            {
+              "": "Wheel_A_28"
+            },
+            {
+              "": "Wheel_A_29"
+            },
+            {
+              "": "Wheel_A_30"
+            },
+            {
+              "": "Wheel_A_31"
+            },
+            {
+              "": "Wheel_A_32"
+            },
+            {
+              "": "Wheel_A_33"
+            },
+            {
+              "": "Wheel_A_34"
+            },
+            {
+              "": "Wheel_A_35"
+            },
+            {
+              "": "Wheel_A_36"
+            },
+            {
+              "": "Wheel_A_37"
+            },
+            {
+              "": "Wheel_A_38"
+            },
+            {
+              "": "Wheel_A_39"
+            },
+            {
+              "": "Windmill_Base"
+            },
+            {
+              "": "Windmill_Top"
+            },
+            {
+              "": "Cow_Body"
+            },
+            {
+              "": "Cow_Head"
+            },
+            {
+              "": "Cow_Neck"
+            },
+            {
+              "": "Cow_Tail"
+            },
+            {
+              "": "LPBAKE_LP_Axle014"
+            },
+            {
+              "": "LPBAKE_LP_Axle015"
+            },
+            {
+              "": "LPBAKE_LP_Wheel056"
+            },
+            {
+              "": "LPBAKE_LP_Wheel057"
+            },
+            {
+              "": "LPBAKE_LP_Wheel058"
+            },
+            {
+              "": "LPBAKE_LP_Wheel059"
+            },
+            {
+              "": "LPBAKE_LP_Wheel060"
+            },
+            {
+              "": "LPBAKE_LP_Wheel061"
+            },
+            {
+              "": "LPBAKE_LP_Wheel062"
+            },
+            {
+              "": "LPBAKE_LP_Wheel063"
+            },
+            {
+              "": "Train_Cattle_Car"
+            },
+            {
+              "": "Train_Cattle_Car_Base"
+            },
+            {
+              "": "Train_A"
+            },
+            {
+              "": "Wheel_A_00"
+            },
+            {
+              "": "Axle_A_00"
+            },
+            {
+              "": "Axle_A_01"
+            },
+            {
+              "": "Axle_A_02"
+            },
+            {
+              "": "Train_B"
+            },
+            {
+              "": "Train_C"
+            },
+            {
+              "": "Train_D"
+            },
+            {
+              "": "Train_E"
+            },
+            {
+              "": "Tumbleweed"
+            },
+            {
+              "": "Grass_B"
+            },
+            {
+              "": "Grass_C"
+            },
+            {
+              "": "Grass_A"
+            },
+            {
+              "": "Bush_B"
+            },
+            {
+              "": "Bush_A"
+            },
+            {
+              "": "Bush_C"
+            },
+            {
+              "": "Cactus_C"
+            },
+            {
+              "": "Cactus_B"
+            },
+            {
+              "": "Cactus_A"
+            },
+            {
+              "": "Cactus_E"
+            },
+            {
+              "": "Cactus_D"
+            },
+            {
+              "": "Windmill_Base"
+            },
+            {
+              "": "Windmill_Top"
+            },
+            {
+              "": "RR_Xing"
+            },
+            {
+              "": "Stone_E"
+            },
+            {
+              "": "Stone_C"
+            },
+            {
+              "": "Stone_A"
+            },
+            {
+              "": "Stone_B"
+            },
+            {
+              "": "Stone_D"
+            },
+            {
+              "": "Bump_C"
+            },
+            {
+              "": "Bump_E"
+            },
+            {
+              "": "Bump_A"
+            },
+            {
+              "": "Bump_D"
+            },
+            {
+              "": "Bump_B"
+            },
+            {
+              "": "Mountain_A"
+            },
+            {
+              "": "Mountain_B"
+            },
+            {
+              "": "Cloud_E"
+            },
+            {
+              "": "Mountain_E"
+            },
+            {
+              "": "Cloud_B"
+            },
+            {
+              "": "Cloud_C"
+            },
+            {
+              "": "Cloud_D"
+            },
+            {
+              "": "Mountain_F"
+            },
+            {
+              "": "Mountain_C"
+            },
+            {
+              "": "Mountain_D"
+            },
+            {
+              "": "Cloud_F"
+            },
+            {
+              "": "Cloud_A"
+            },
+            {
+              "": "Mountain_G"
+            },
+            {
+              "": "Mountain_H"
+            },
+            {
+              "": "Plate_Curved"
+            },
+            {
+              "": "Plate_Straight"
+            },
+            {
+              "": "Plate_Generic"
+            },
+            {
+              "": "Backplate"
+            },
+            {
+              "": "Axle_A_03"
+            },
+            {
+              "": "Axle_A_04"
+            },
+            {
+              "": "Axle_A_05"
+            },
+            {
+              "": "Axle_A_06"
+            },
+            {
+              "": "Axle_A_07"
+            },
+            {
+              "": "Axle_A_08"
+            },
+            {
+              "": "Axle_A_09"
+            },
+            {
+              "": "Wheel_A_20"
+            },
+            {
+              "": "Wheel_A_01"
+            },
+            {
+              "": "Wheel_A_21"
+            },
+            {
+              "": "Wheel_A_02"
+            },
+            {
+              "": "Wheel_A_22"
+            },
+            {
+              "": "Wheel_A_03"
+            },
+            {
+              "": "Wheel_A_23"
+            },
+            {
+              "": "Wheel_A_04"
+            },
+            {
+              "": "Wheel_A_24"
+            },
+            {
+              "": "Wheel_A_05"
+            },
+            {
+              "": "Wheel_A_25"
+            },
+            {
+              "": "Wheel_A_06"
+            },
+            {
+              "": "Wheel_A_26"
+            },
+            {
+              "": "Wheel_A_07"
+            },
+            {
+              "": "Wheel_A_27"
+            },
+            {
+              "": "Wheel_A_08"
+            },
+            {
+              "": "Wheel_A_28"
+            },
+            {
+              "": "Wheel_A_09"
+            },
+            {
+              "": "Wheel_A_29"
+            },
+            {
+              "": "Wheel_A_10"
+            },
+            {
+              "": "Wheel_A_30"
+            },
+            {
+              "": "Wheel_A_11"
+            },
+            {
+              "": "Wheel_A_31"
+            },
+            {
+              "": "Wheel_A_12"
+            },
+            {
+              "": "Wheel_A_32"
+            },
+            {
+              "": "Wheel_A_13"
+            },
+            {
+              "": "Wheel_A_33"
+            },
+            {
+              "": "Wheel_A_14"
+            },
+            {
+              "": "Wheel_A_34"
+            },
+            {
+              "": "Wheel_A_15"
+            },
+            {
+              "": "Wheel_A_35"
+            },
+            {
+              "": "Wheel_A_17"
+            },
+            {
+              "": "Wheel_A_36"
+            },
+            {
+              "": "Wheel_A_16"
+            },
+            {
+              "": "Wheel_A_37"
+            },
+            {
+              "": "Wheel_A_19"
+            },
+            {
+              "": "Wheel_A_38"
+            },
+            {
+              "": "Wheel_A_18"
+            },
+            {
+              "": "Wheel_A_39"
+            },
+            {
+              "": "Cow_Tail"
+            },
+            {
+              "": "Cow_Neck"
+            },
+            {
+              "": "Cow_Head"
+            },
+            {
+              "": "Cow_Body"
+            },
+            {
+              "": "Train_Cattle_Car"
+            },
+            {
+              "": "Train_Cattle_Car_Base"
+            },
+            {
+              "": "LPBAKE_LP_Wheel056"
+            },
+            {
+              "": "LPBAKE_LP_Wheel057"
+            },
+            {
+              "": "LPBAKE_LP_Wheel058"
+            },
+            {
+              "": "LPBAKE_LP_Wheel059"
+            },
+            {
+              "": "LPBAKE_LP_Wheel060"
+            },
+            {
+              "": "LPBAKE_LP_Wheel061"
+            },
+            {
+              "": "LPBAKE_LP_Wheel062"
+            },
+            {
+              "": "LPBAKE_LP_Wheel063"
+            },
+            {
+              "": "LPBAKE_LP_Axle014"
+            },
+            {
+              "": "LPBAKE_LP_Axle015"
+            },
+            {
+              "": "Take 001"
+            },
+            {
+              "": "//RootNode"
+            }
+          ]
+        },
+        {
+          "externalObjects": ""
+        },
+        {
+          "materials": [
+            {
+              "importMaterials": "1"
+            },
+            {
+              "materialName": "0"
+            },
+            {
+              "materialSearch": "1"
+            },
+            {
+              "materialLocation": "1"
+            }
+          ]
+        },
+        {
+          "animations": [
+            {
+              "legacyGenerateAnimations": "4"
+            },
+            {
+              "bakeSimulation": "0"
+            },
+            {
+              "resampleCurves": "1"
+            },
+            {
+              "optimizeGameObjects": "0"
+            },
+            {
+              "motionNodeName": ""
+            },
+            {
+              "rigImportErrors": ""
+            },
+            {
+              "rigImportWarnings": ""
+            },
+            {
+              "animationImportErrors": ""
+            },
+            {
+              "animationImportWarnings": ""
+            },
+            {
+              "animationRetargetingWarnings": ""
+            },
+            {
+              "animationDoRetargetingWarnings": "0"
+            },
+            {
+              "importAnimatedCustomProperties": "0"
+            },
+            {
+              "animationCompression": "1"
+            },
+            {
+              "animationRotationError": "0.5"
+            },
+            {
+              "animationPositionError": "0.5"
+            },
+            {
+              "animationScaleError": "0.5"
+            },
+            {
+              "animationWrapMode": "0"
+            },
+            {
+              "extraExposedTransformPaths": "[]"
+            },
+            {
+              "extraUserProperties": "[]"
+            },
+            {
+              "clipAnimations": "[]"
+            },
+            {
+              "isReadable": "1"
+            }
+          ]
+        },
+        {
+          "meshes": [
+            {
+              "lODScreenPercentages": "[]"
+            },
+            {
+              "globalScale": "1"
+            },
+            {
+              "meshCompression": "0"
+            },
+            {
+              "addColliders": "0"
+            },
+            {
+              "importVisibility": "1"
+            },
+            {
+              "importBlendShapes": "1"
+            },
+            {
+              "importCameras": "1"
+            },
+            {
+              "importLights": "1"
+            },
+            {
+              "swapUVChannels": "0"
+            },
+            {
+              "generateSecondaryUV": "1"
+            },
+            {
+              "useFileUnits": "1"
+            },
+            {
+              "optimizeMeshForGPU": "1"
+            },
+            {
+              "keepQuads": "0"
+            },
+            {
+              "weldVertices": "1"
+            },
+            {
+              "preserveHierarchy": "0"
+            },
+            {
+              "indexFormat": "0"
+            },
+            {
+              "secondaryUVAngleDistortion": "8"
+            },
+            {
+              "secondaryUVAreaDistortion": "15.000001"
+            },
+            {
+              "secondaryUVHardAngle": "88"
+            },
+            {
+              "secondaryUVPackMargin": "4"
+            },
+            {
+              "useFileScale": "1"
+            }
+          ]
+        },
+        {
+          "tangentSpace": [
+            {
+              "normalSmoothAngle": "60"
+            },
+            {
+              "normalImportMode": "0"
+            },
+            {
+              "tangentImportMode": "3"
+            },
+            {
+              "normalCalculationMode": "4"
+            }
+          ]
+        },
+        {
+          "importAnimation": "1"
+        },
+        {
+          "copyAvatar": "0"
+        },
+        {
+          "humanDescription": [
+            {
+              "serializedVersion": "2"
+            },
+            {
+              "human": "[]"
+            },
+            {
+              "skeleton": "[]"
+            },
+            {
+              "armTwist": "0.5"
+            },
+            {
+              "foreArmTwist": "0.5"
+            },
+            {
+              "upperLegTwist": "0.5"
+            },
+            {
+              "legTwist": "0.5"
+            },
+            {
+              "armStretch": "0.05"
+            },
+            {
+              "legStretch": "0.05"
+            },
+            {
+              "feetSpacing": "0"
+            },
+            {
+              "rootMotionBoneName": ""
+            },
+            {
+              "rootMotionBoneRotation": [
+                {
+                  "x": "0"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "0"
+                },
+                {
+                  "w": "1"
+                }
+              ]
+            },
+            {
+              "hasTranslationDoF": "0"
+            },
+            {
+              "hasExtraRoot": "0"
+            },
+            {
+              "skeletonHasParents": "1"
+            }
+          ]
+        },
+        {
+          "lastHumanDescriptionAvatarSource": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "animationType": "2"
+        },
+        {
+          "humanoidOversampling": "1"
+        },
+        {
+          "additionalBone": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

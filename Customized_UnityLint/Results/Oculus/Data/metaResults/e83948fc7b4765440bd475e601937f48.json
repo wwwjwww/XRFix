@@ -1,0 +1,112 @@
+{
+  "guid": "e83948fc7b4765440bd475e601937f48",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Plugins\\1.55.0\\AndroidUniversal\\OVRPlugin.aar.meta",
+  "name": "OVRPlugin.aar",
+  "type": "meta",
+  "file_size": 608,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "PluginImporter",
+      "PluginImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "iconMap": ""
+        },
+        {
+          "executionOrder": ""
+        },
+        {
+          "defineConstraints": "[]"
+        },
+        {
+          "isPreloaded": "0"
+        },
+        {
+          "isOverridable": "0"
+        },
+        {
+          "isExplicitlyReferenced": "0"
+        },
+        {
+          "validateReferences": "1"
+        },
+        {
+          "platformData": [
+            {
+              "- first": [
+                {
+                  "Android": "Android"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "1"
+                },
+                {
+                  "settings": ""
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Any": ""
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": ""
+                }
+              ]
+            },
+            {
+              "- first": [
+                {
+                  "Editor": "Editor"
+                }
+              ]
+            },
+            {
+              "second": [
+                {
+                  "enabled": "0"
+                },
+                {
+                  "settings": [
+                    {
+                      "DefaultValueInitialized": "true"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

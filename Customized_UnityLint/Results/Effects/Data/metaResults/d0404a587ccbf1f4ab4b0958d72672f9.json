@@ -1,0 +1,29 @@
+{
+  "guid": "d0404a587ccbf1f4ab4b0958d72672f9",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects\\WaterSplash\\Models.meta",
+  "name": "Models",
+  "type": "meta",
+  "file_size": 172,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Effects",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Effects"
+}

@@ -1,0 +1,8856 @@
+{
+  "guid": "00b893af08c84c64ca62567b26873405",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\Prefabs\\Cannon Variant.prefab",
+  "name": "Cannon Variant",
+  "type": "prefab",
+  "file_size": 76196,
+  "num_components": 77,
+  "COMPONENTS": [
+    {
+      "id": "-6954892498517758796",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "1368232147926291937"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "3870761406253068840"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "-7930709186570100555"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "Saved Joint"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "0"
+        }
+      ]
+    },
+    {
+      "id": "1368232147926291937",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "-6954892498517758796"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "-0"
+            },
+            {
+              "w": "0.0000029504295"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-1.732001"
+            },
+            {
+              "y": "-0.968"
+            },
+            {
+              "z": "0.16798978"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "7"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3870761406253068840",
+      "Rigidbody": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "-6954892498517758796"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Mass": "1"
+        },
+        {
+          "m_Drag": "0"
+        },
+        {
+          "m_AngularDrag": "0.05"
+        },
+        {
+          "m_UseGravity": "1"
+        },
+        {
+          "m_IsKinematic": "1"
+        },
+        {
+          "m_Interpolate": "0"
+        },
+        {
+          "m_Constraints": "0"
+        },
+        {
+          "m_CollisionDetection": "0"
+        }
+      ]
+    },
+    {
+      "id": "-7930709186570100555",
+      "ConfigurableJoint": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "-6954892498517758796"
+            }
+          ]
+        },
+        {
+          "m_ConnectedBody": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_Anchor": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_Axis": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_AutoConfigureConnectedAnchor": "0"
+        },
+        {
+          "m_ConnectedAnchor": [
+            {
+              "x": "-1.732"
+            },
+            {
+              "y": "0.968"
+            },
+            {
+              "z": "0.168"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_SecondaryAxis": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XMotion": "2"
+        },
+        {
+          "m_YMotion": "0"
+        },
+        {
+          "m_ZMotion": "2"
+        },
+        {
+          "m_AngularXMotion": "2"
+        },
+        {
+          "m_AngularYMotion": "2"
+        },
+        {
+          "m_AngularZMotion": "2"
+        },
+        {
+          "m_LinearLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LinearLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularXLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LowAngularXLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_HighAngularXLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYZLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularZLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetPosition": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_YDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_TargetRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_TargetAngularVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_RotationDriveMode": "0"
+        },
+        {
+          "m_AngularXDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_AngularYZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_SlerpDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ProjectionMode": "0"
+        },
+        {
+          "m_ProjectionDistance": "0.1"
+        },
+        {
+          "m_ProjectionAngle": "180"
+        },
+        {
+          "m_ConfiguredInWorldSpace": "0"
+        },
+        {
+          "m_SwapBodies": "0"
+        },
+        {
+          "m_BreakForce": "Infinity"
+        },
+        {
+          "m_BreakTorque": "Infinity"
+        },
+        {
+          "m_EnableCollision": "0"
+        },
+        {
+          "m_EnablePreprocessing": "0"
+        },
+        {
+          "m_MassScale": "1"
+        },
+        {
+          "m_ConnectedMassScale": "10"
+        }
+      ]
+    },
+    {
+      "id": "1597225243",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "1597225244"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "1597225245"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "1597225246"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "0"
+        },
+        {
+          "m_Name": "GrabJoint"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "0"
+        }
+      ]
+    },
+    {
+      "id": "1597225244",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1597225243"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "-0"
+            },
+            {
+              "w": "0.0000029504295"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-1.732001"
+            },
+            {
+              "y": "-0.968"
+            },
+            {
+              "z": "0.16798978"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "6"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1597225245",
+      "Rigidbody": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1597225243"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Mass": "1"
+        },
+        {
+          "m_Drag": "0"
+        },
+        {
+          "m_AngularDrag": "0.05"
+        },
+        {
+          "m_UseGravity": "1"
+        },
+        {
+          "m_IsKinematic": "1"
+        },
+        {
+          "m_Interpolate": "0"
+        },
+        {
+          "m_Constraints": "0"
+        },
+        {
+          "m_CollisionDetection": "0"
+        }
+      ]
+    },
+    {
+      "id": "1597225246",
+      "ConfigurableJoint": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1597225243"
+            }
+          ]
+        },
+        {
+          "m_ConnectedBody": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_Anchor": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_Axis": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_AutoConfigureConnectedAnchor": "0"
+        },
+        {
+          "m_ConnectedAnchor": [
+            {
+              "x": "-1.732"
+            },
+            {
+              "y": "0.968"
+            },
+            {
+              "z": "0.168"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_SecondaryAxis": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XMotion": "2"
+        },
+        {
+          "m_YMotion": "0"
+        },
+        {
+          "m_ZMotion": "2"
+        },
+        {
+          "m_AngularXMotion": "2"
+        },
+        {
+          "m_AngularYMotion": "2"
+        },
+        {
+          "m_AngularZMotion": "2"
+        },
+        {
+          "m_LinearLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LinearLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularXLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LowAngularXLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_HighAngularXLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYZLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularZLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetPosition": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_YDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_TargetRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_TargetAngularVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_RotationDriveMode": "0"
+        },
+        {
+          "m_AngularXDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_AngularYZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_SlerpDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ProjectionMode": "0"
+        },
+        {
+          "m_ProjectionDistance": "0.1"
+        },
+        {
+          "m_ProjectionAngle": "180"
+        },
+        {
+          "m_ConfiguredInWorldSpace": "0"
+        },
+        {
+          "m_SwapBodies": "0"
+        },
+        {
+          "m_BreakForce": "Infinity"
+        },
+        {
+          "m_BreakTorque": "Infinity"
+        },
+        {
+          "m_EnableCollision": "0"
+        },
+        {
+          "m_EnablePreprocessing": "0"
+        },
+        {
+          "m_MassScale": "1"
+        },
+        {
+          "m_ConnectedMassScale": "50"
+        }
+      ]
+    },
+    {
+      "id": "951162928",
+      "AudioSource": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "857071989924121666"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "4"
+        }
+      ]
+    },
+    {
+      "id": "",
+      "rolloffCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            },
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "1"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "354",
+      "panLevelCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "369",
+      "spreadCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "384",
+      "reverbZoneMixCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "1290280211200934686",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "1797816226626465605"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "1815277678315014309"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "4745097933002890452"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "Snap Point"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "1797816226626465605",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1290280211200934686"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0.15464921"
+            },
+            {
+              "y": "0.80629236"
+            },
+            {
+              "z": "0.49424434"
+            },
+            {
+              "w": "0.28583005"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.3765851"
+            },
+            {
+              "y": "-0.01606828"
+            },
+            {
+              "z": "0.07564195"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "4"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-61.369003"
+            },
+            {
+              "y": "159.679"
+            },
+            {
+              "z": "-14.639001"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1815277678315014309",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1290280211200934686"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "0f2cfc5f76584ab449800835d0d4de6e"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "snapsBack": "0"
+        },
+        {
+          "slideThresold": "0.9"
+        },
+        {
+          "pose": [
+            {
+              "relativeGrip": [
+                {
+                  "position": [
+                    {
+                      "x": "-0.3765851"
+                    },
+                    {
+                      "y": "-0.01606828"
+                    },
+                    {
+                      "z": "0.07564195"
+                    }
+                  ]
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.15464921"
+                    },
+                    {
+                      "y": "0.80629236"
+                    },
+                    {
+                      "z": "0.49424434"
+                    },
+                    {
+                      "w": "0.28583005"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "handeness": "0"
+            },
+            {
+              "_bones": [
+                {
+                  " boneID": "2"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.28127947"
+                    },
+                    {
+                      "y": "0.46750894"
+                    },
+                    {
+                      "z": "-0.08940869"
+                    },
+                    {
+                      "w": "-0.8332607"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "4"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.082974076"
+                    },
+                    {
+                      "y": "0.06114182"
+                    },
+                    {
+                      "z": "-0.10425867"
+                    },
+                    {
+                      "w": "0.98919517"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "5"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.084339894"
+                    },
+                    {
+                      "y": "-0.069046624"
+                    },
+                    {
+                      "z": "0.11050634"
+                    },
+                    {
+                      "w": "0.9878804"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "6"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.038304947"
+                    },
+                    {
+                      "y": "0.107845224"
+                    },
+                    {
+                      "z": "0.112632014"
+                    },
+                    {
+                      "w": "-0.9870239"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "7"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.026311697"
+                    },
+                    {
+                      "y": "0.0034236077"
+                    },
+                    {
+                      "z": "-0.14328961"
+                    },
+                    {
+                      "w": "0.98932505"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "8"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.01606548"
+                    },
+                    {
+                      "y": "0.02712595"
+                    },
+                    {
+                      "z": "0.07047354"
+                    },
+                    {
+                      "w": "0.99701536"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "9"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.0075741666"
+                    },
+                    {
+                      "y": "-0.033017676"
+                    },
+                    {
+                      "z": "0.0026366925"
+                    },
+                    {
+                      "w": "-0.9994226"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "10"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.012489021"
+                    },
+                    {
+                      "y": "0.0014238517"
+                    },
+                    {
+                      "z": "-0.24870168"
+                    },
+                    {
+                      "w": "0.9684986"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "11"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.04593983"
+                    },
+                    {
+                      "y": "-0.00048437947"
+                    },
+                    {
+                      "z": "-0.023745328"
+                    },
+                    {
+                      "w": "0.9986619"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "12"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.04696364"
+                    },
+                    {
+                      "y": "-0.09143088"
+                    },
+                    {
+                      "z": "-0.02971331"
+                    },
+                    {
+                      "w": "-0.9942595"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "13"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.03938656"
+                    },
+                    {
+                      "y": "-0.006889526"
+                    },
+                    {
+                      "z": "-0.29067403"
+                    },
+                    {
+                      "w": "0.9559863"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "14"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.0087514715"
+                    },
+                    {
+                      "y": "-0.029599177"
+                    },
+                    {
+                      "z": "-0.087748036"
+                    },
+                    {
+                      "w": "0.9956644"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "16"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.14211424"
+                    },
+                    {
+                      "y": "-0.16486293"
+                    },
+                    {
+                      "z": "-0.22424872"
+                    },
+                    {
+                      "w": "-0.94991386"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "17"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.061923057"
+                    },
+                    {
+                      "y": "0.029724013"
+                    },
+                    {
+                      "z": "-0.28171802"
+                    },
+                    {
+                      "w": "0.95703554"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "18"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.00080190925"
+                    },
+                    {
+                      "y": "-0.049140323"
+                    },
+                    {
+                      "z": "-0.021539062"
+                    },
+                    {
+                      "w": "0.99855936"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "surface": [
+            {
+              "fileID": "4745097933002890452"
+            }
+          ]
+        },
+        {
+          "ghost": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "CreateMirror": ""
+        },
+        {
+          "maxDistance": "0.1"
+        },
+        {
+          "positionRotationWeight": "0.8"
+        }
+      ]
+    },
+    {
+      "id": "4745097933002890452",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1290280211200934686"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "c015a1ade01253e4c92301949c1c6c7c"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "_data": [
+            {
+              "startPoint": [
+                {
+                  "x": "-0.37566876"
+                },
+                {
+                  "y": "-0.00000001097942"
+                },
+                {
+                  "z": "-0.000000007897891"
+                }
+              ]
+            },
+            {
+              "endPoint": [
+                {
+                  "x": "-0.3770786"
+                },
+                {
+                  "y": "-0.000000029718649"
+                },
+                {
+                  "z": "-0.0000000013031446"
+                }
+              ]
+            },
+            {
+              "angle": "360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1733442062917263368",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "6421631634104249822"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "5059232003481984861"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "7772581228517035722"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "Snap Point_Mirror"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "6421631634104249822",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1733442062917263368"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0.659854"
+            },
+            {
+              "y": "-0.6465476"
+            },
+            {
+              "z": "0.278319"
+            },
+            {
+              "w": "-0.26288304"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.44960004"
+            },
+            {
+              "y": "-0.013999999"
+            },
+            {
+              "z": "0.008400007"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "3"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-9.254001"
+            },
+            {
+              "y": "135.244"
+            },
+            {
+              "z": "-91.494"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5059232003481984861",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1733442062917263368"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "0f2cfc5f76584ab449800835d0d4de6e"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "snapsBack": "0"
+        },
+        {
+          "slideThresold": "0.9"
+        },
+        {
+          "pose": [
+            {
+              "relativeGrip": [
+                {
+                  "position": [
+                    {
+                      "x": "-0.44960004"
+                    },
+                    {
+                      "y": "-0.013999999"
+                    },
+                    {
+                      "z": "0.008400007"
+                    }
+                  ]
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.659854"
+                    },
+                    {
+                      "y": "-0.6465476"
+                    },
+                    {
+                      "z": "0.278319"
+                    },
+                    {
+                      "w": "-0.26288304"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "handeness": "1"
+            },
+            {
+              "_bones": [
+                {
+                  " boneID": "2"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.37137395"
+                    },
+                    {
+                      "y": "0.4266337"
+                    },
+                    {
+                      "z": "-0.0113824755"
+                    },
+                    {
+                      "w": "-0.8245821"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "4"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.082085155"
+                    },
+                    {
+                      "y": "0.052991685"
+                    },
+                    {
+                      "z": "-0.19109553"
+                    },
+                    {
+                      "w": "0.9766967"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "5"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.080347225"
+                    },
+                    {
+                      "y": "-0.05397066"
+                    },
+                    {
+                      "z": "-0.0750684"
+                    },
+                    {
+                      "w": "0.99246985"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "6"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.037840787"
+                    },
+                    {
+                      "y": "0.05503298"
+                    },
+                    {
+                      "z": "0.13737485"
+                    },
+                    {
+                      "w": "-0.9882649"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "7"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.026252978"
+                    },
+                    {
+                      "y": "-0.00032647053"
+                    },
+                    {
+                      "z": "-0.28010702"
+                    },
+                    {
+                      "w": "0.95960975"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "8"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.016703963"
+                    },
+                    {
+                      "y": "0.02505269"
+                    },
+                    {
+                      "z": "-0.0569259"
+                    },
+                    {
+                      "w": "0.99792427"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "9"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.007082269"
+                    },
+                    {
+                      "y": "-0.063822486"
+                    },
+                    {
+                      "z": "0.016351419"
+                    },
+                    {
+                      "w": "-0.9978022"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "10"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.012933644"
+                    },
+                    {
+                      "y": "-0.0011341543"
+                    },
+                    {
+                      "z": "-0.44745475"
+                    },
+                    {
+                      "w": "0.89421237"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "11"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.061580647"
+                    },
+                    {
+                      "y": "-0.007823033"
+                    },
+                    {
+                      "z": "-0.19156279"
+                    },
+                    {
+                      "w": "0.9795154"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "12"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.04353415"
+                    },
+                    {
+                      "y": "-0.10670303"
+                    },
+                    {
+                      "z": "-0.052023742"
+                    },
+                    {
+                      "w": "-0.9919742"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "13"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.04175876"
+                    },
+                    {
+                      "y": "-0.015042774"
+                    },
+                    {
+                      "z": "-0.5245793"
+                    },
+                    {
+                      "w": "0.8502038"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "14"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.017185654"
+                    },
+                    {
+                      "y": "-0.029464994"
+                    },
+                    {
+                      "z": "-0.27086958"
+                    },
+                    {
+                      "w": "0.9620115"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "16"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.11217986"
+                    },
+                    {
+                      "y": "-0.044221025"
+                    },
+                    {
+                      "z": "-0.19066148"
+                    },
+                    {
+                      "w": "-0.97422194"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "17"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.07910647"
+                    },
+                    {
+                      "y": "0.015525005"
+                    },
+                    {
+                      "z": "-0.52627605"
+                    },
+                    {
+                      "w": "0.8464837"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "18"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.0018201779"
+                    },
+                    {
+                      "y": "-0.046200998"
+                    },
+                    {
+                      "z": "-0.32844028"
+                    },
+                    {
+                      "w": "0.9433924"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "surface": [
+            {
+              "fileID": "7772581228517035722"
+            }
+          ]
+        },
+        {
+          "ghost": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "CreateMirror": ""
+        },
+        {
+          "maxDistance": "0.1"
+        },
+        {
+          "positionRotationWeight": "0.8"
+        }
+      ]
+    },
+    {
+      "id": "7772581228517035722",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "1733442062917263368"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "c015a1ade01253e4c92301949c1c6c7c"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "_data": [
+            {
+              "startPoint": [
+                {
+                  "x": "-0.4489149"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "-0.000000011477823"
+                }
+              ]
+            },
+            {
+              "endPoint": [
+                {
+                  "x": "-0.44964945"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "0.0000000139898475"
+                }
+              ]
+            },
+            {
+              "angle": "360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2954529362291841917",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "5506053706504688819"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "FusePoint1"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "5506053706504688819",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "2954529362291841917"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0.7586877"
+            },
+            {
+              "y": "-0.24836268"
+            },
+            {
+              "z": "0.15800145"
+            },
+            {
+              "w": "0.5811579"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.28441"
+            },
+            {
+              "y": "0.11403"
+            },
+            {
+              "z": "-0.00642"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "3606134051815474027"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "2"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-126.548996"
+            },
+            {
+              "y": "62.541992"
+            },
+            {
+              "z": "-70.259"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174147",
+      "Rigidbody": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3523958588216029411"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Mass": "10"
+        },
+        {
+          "m_Drag": "5"
+        },
+        {
+          "m_AngularDrag": "5"
+        },
+        {
+          "m_UseGravity": "1"
+        },
+        {
+          "m_IsKinematic": "0"
+        },
+        {
+          "m_Interpolate": "0"
+        },
+        {
+          "m_Constraints": "14"
+        },
+        {
+          "m_CollisionDetection": "0"
+        }
+      ]
+    },
+    {
+      "id": "1912622739",
+      "ConfigurableJoint": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3523958588216029411"
+            }
+          ]
+        },
+        {
+          "m_ConnectedBody": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_Anchor": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_Axis": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_AutoConfigureConnectedAnchor": "1"
+        },
+        {
+          "m_ConnectedAnchor": [
+            {
+              "x": "-1.732"
+            },
+            {
+              "y": "0.968"
+            },
+            {
+              "z": "0.168"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_SecondaryAxis": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XMotion": "0"
+        },
+        {
+          "m_YMotion": "0"
+        },
+        {
+          "m_ZMotion": "0"
+        },
+        {
+          "m_AngularXMotion": "1"
+        },
+        {
+          "m_AngularYMotion": "0"
+        },
+        {
+          "m_AngularZMotion": "0"
+        },
+        {
+          "m_LinearLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LinearLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularXLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_LowAngularXLimit": [
+            {
+              "limit": "-50"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_HighAngularXLimit": [
+            {
+              "limit": "20"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYZLimitSpring": [
+            {
+              "spring": "0"
+            },
+            {
+              "damper": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularYLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_AngularZLimit": [
+            {
+              "limit": "0"
+            },
+            {
+              "bounciness": "0"
+            },
+            {
+              "contactDistance": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetPosition": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_TargetVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_XDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_YDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_TargetRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            },
+            {
+              "w": "1"
+            }
+          ]
+        },
+        {
+          "m_TargetAngularVelocity": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "m_RotationDriveMode": "0"
+        },
+        {
+          "m_AngularXDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_AngularYZDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_SlerpDrive": [
+            {
+              "serializedVersion": "3"
+            },
+            {
+              "positionSpring": "0"
+            },
+            {
+              "positionDamper": "0"
+            },
+            {
+              "maximumForce": "3.4028233e+38"
+            }
+          ]
+        },
+        {
+          "m_ProjectionMode": "1"
+        },
+        {
+          "m_ProjectionDistance": "0.1"
+        },
+        {
+          "m_ProjectionAngle": "1"
+        },
+        {
+          "m_ConfiguredInWorldSpace": "0"
+        },
+        {
+          "m_SwapBodies": "0"
+        },
+        {
+          "m_BreakForce": "Infinity"
+        },
+        {
+          "m_BreakTorque": "Infinity"
+        },
+        {
+          "m_EnableCollision": "0"
+        },
+        {
+          "m_EnablePreprocessing": "1"
+        },
+        {
+          "m_MassScale": "1"
+        },
+        {
+          "m_ConnectedMassScale": "1"
+        }
+      ]
+    },
+    {
+      "id": "433719407",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3523958588216029411"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "16ac2d23ae56f0a47a9cbd5e3efdf1c7"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "massCentrePosition": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        },
+        {
+          "tensorRotation": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174148",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3523958588216029411"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "3a99858afe0bf3042bcd707cde435ac8"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "posesCollection": [
+            {
+              "fileID": "11400000"
+            },
+            {
+              "guid": "1746000c539197b439d9763c0766f18b"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        },
+        {
+          "ghostProvider": [
+            {
+              "fileID": "11400000"
+            },
+            {
+              "guid": "2176ff4867cf6bc4b841d3a0415b1155"
+            },
+            {
+              "type": "2"
+            }
+          ]
+        },
+        {
+          "StorePoses": ""
+        },
+        {
+          "LoadPoses": ""
+        },
+        {
+          "snapPoints": [
+            {
+              "fileID": "5057097940423372950"
+            },
+            {
+              "fileID": "1815277678315014309"
+            },
+            {
+              "fileID": "5059232003481984861"
+            },
+            {
+              "fileID": "2469720645381971613"
+            }
+          ]
+        },
+        {
+          "ClearSnapPoints": [
+            {
+              "": "--- !u!114 &3062219742054174149"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "818",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3523958588216029411"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "fd2fa2bd22c944846b34678beaf51089"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "immovable": "0"
+        },
+        {
+          "_grabPoints": [
+            {
+              "fileID": "3062219742054174145"
+            }
+          ]
+        },
+        {
+          "customJoint": [
+            {
+              "fileID": "1597225246"
+            }
+          ]
+        },
+        {
+          "multiGrab": "0"
+        }
+      ]
+    },
+    {
+      "id": "3526574898725424123",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "2963746686720376752"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "851728642"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "Mouth"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "2963746686720376752",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3526574898725424123"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0"
+            },
+            {
+              "y": "0.7071068"
+            },
+            {
+              "z": "-0"
+            },
+            {
+              "w": "0.7071068"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "0.3036"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "-0"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "6825332691587708405"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "1"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "90.00001"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "851728642",
+      "AudioSource": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "3526574898725424123"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "4"
+        }
+      ]
+    },
+    {
+      "id": "901",
+      "rolloffCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            },
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "1"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "916",
+      "panLevelCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "931",
+      "spreadCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "0"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "946",
+      "reverbZoneMixCustomCurve": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Curve": [
+            {
+              " serializedVersion": "3"
+            },
+            {
+              "time": "0"
+            },
+            {
+              "value": "1"
+            },
+            {
+              "inSlope": "0"
+            },
+            {
+              "outSlope": "0"
+            },
+            {
+              "tangentMode": "0"
+            },
+            {
+              "weightedMode": "0"
+            },
+            {
+              "inWeight": "0.33333334"
+            },
+            {
+              "outWeight": "0.33333334"
+            }
+          ]
+        },
+        {
+          "m_PreInfinity": "2"
+        },
+        {
+          "m_PostInfinity": "2"
+        },
+        {
+          "m_RotationOrder": "4"
+        }
+      ]
+    },
+    {
+      "id": "4947193331752916799",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "3836111653111106449"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "FusePoint0"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "3836111653111106449",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "4947193331752916799"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0.28825578"
+            },
+            {
+              "y": "-0.7587674"
+            },
+            {
+              "z": "-0.2776758"
+            },
+            {
+              "w": "0.5138841"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.2965"
+            },
+            {
+              "y": "0.1268"
+            },
+            {
+              "z": "-0.0111"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "3606134051815474027"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "1"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-134.14"
+            },
+            {
+              "y": "62.86399"
+            },
+            {
+              "z": "-167.38899"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5158646202256445811",
+      "Rigidbody": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "5418337106739729438"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Mass": "1"
+        },
+        {
+          "m_Drag": "0"
+        },
+        {
+          "m_AngularDrag": "0.05"
+        },
+        {
+          "m_UseGravity": "1"
+        },
+        {
+          "m_IsKinematic": "1"
+        },
+        {
+          "m_Interpolate": "0"
+        },
+        {
+          "m_Constraints": "0"
+        },
+        {
+          "m_CollisionDetection": "0"
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174154",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "5418337106739729438"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "1"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.012336011"
+        },
+        {
+          "m_Height": "0.04415536"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "-0.29213032"
+            },
+            {
+              "y": "0.12223011"
+            },
+            {
+              "z": "-0.0053761275"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6967476553953305997",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "5418337106739729438"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "db1c6519013845d46bcd6bf42d45de38"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "flare": [
+            {
+              "fileID": "1118796303816608205"
+            }
+          ]
+        },
+        {
+          "stopVelocity": "4"
+        },
+        {
+          "velocitySensitivity": "20"
+        },
+        {
+          "waypoints": [
+            {
+              "fileID": "3836111653111106449"
+            },
+            {
+              "fileID": "5506053706504688819"
+            },
+            {
+              "fileID": "2551944848473081411"
+            }
+          ]
+        },
+        {
+          "fuseDuration": "3"
+        },
+        {
+          "OnFuseEnded": [
+            {
+              "m_PersistentCalls": [
+                {
+                  "m_Calls": [
+                    {
+                      "- m_Target": [
+                        {
+                          "fileID": "4039650414686906707"
+                        }
+                      ]
+                    },
+                    {
+                      "m_MethodName": "Fire"
+                    },
+                    {
+                      "m_Mode": "1"
+                    },
+                    {
+                      "m_Arguments": [
+                        {
+                          "m_ObjectArgument": [
+                            {
+                              "fileID": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine"
+                        },
+                        {
+                          "m_IntArgument": "0"
+                        },
+                        {
+                          "m_FloatArgument": "0"
+                        },
+                        {
+                          "m_StringArgument": ""
+                        },
+                        {
+                          "m_BoolArgument": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "m_CallState": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6306286065270477437",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "2551944848473081411"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "FusePoint2"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "2551944848473081411",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6306286065270477437"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0.6650001"
+            },
+            {
+              "y": "0.3602799"
+            },
+            {
+              "z": "0.34592965"
+            },
+            {
+              "w": "0.55525315"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.2845"
+            },
+            {
+              "y": "0.09179"
+            },
+            {
+              "z": "-0.0011"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "3606134051815474027"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "3"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-98.977"
+            },
+            {
+              "y": "22.609985"
+            },
+            {
+              "z": "37.508987"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174145",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.1"
+        },
+        {
+          "m_Height": "0.37855834"
+        },
+        {
+          "m_Direction": "0"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "-0.24783891"
+            },
+            {
+              "y": "0.0000001937151"
+            },
+            {
+              "z": "0.0000000074505895"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3838474438097078951",
+      "BoxCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Size": [
+            {
+              "x": "0.16783643"
+            },
+            {
+              "y": "0.13061285"
+            },
+            {
+              "z": "0.030668527"
+            }
+          ]
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.28171867"
+            },
+            {
+              "y": "-0.0015695691"
+            },
+            {
+              "z": "0.070308566"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4068072891383247836",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "1"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.05430633"
+        },
+        {
+          "m_Height": "0.2044798"
+        },
+        {
+          "m_Direction": "0"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.2562071"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "-1.275076e-14"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4295934487858519914",
+      "BoxCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Size": [
+            {
+              "x": "0.16783643"
+            },
+            {
+              "y": "0.028997779"
+            },
+            {
+              "z": "0.12871316"
+            }
+          ]
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.28171867"
+            },
+            {
+              "y": "0.0703001"
+            },
+            {
+              "z": "0.00064586103"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4752661408718390002",
+      "BoxCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Size": [
+            {
+              "x": "0.16783643"
+            },
+            {
+              "y": "0.13061285"
+            },
+            {
+              "z": "0.028440848"
+            }
+          ]
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.28171867"
+            },
+            {
+              "y": "-0.0015695691"
+            },
+            {
+              "z": "-0.06919472"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5355367028134529233",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.08"
+        },
+        {
+          "m_Height": "0.5771837"
+        },
+        {
+          "m_Direction": "0"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "-0.010664523"
+            },
+            {
+              "y": "0.00000027567148"
+            },
+            {
+              "z": "0.0000000074505797"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "8927557751330856311",
+      "BoxCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Size": [
+            {
+              "x": "0.16783643"
+            },
+            {
+              "y": "0.02923417"
+            },
+            {
+              "z": "0.12879926"
+            }
+          ]
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.28171867"
+            },
+            {
+              "y": "-0.06943941"
+            },
+            {
+              "z": "0.001581654"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "4039650414686906707",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6429203282367226042"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "7e3308f764e106b458a3229bdf28072b"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "explosion": [
+            {
+              "fileID": "6663160128511855544"
+            },
+            {
+              "fileID": "6663537684290537570"
+            },
+            {
+              "fileID": "6663594565108862484"
+            }
+          ]
+        },
+        {
+          "strenght": "300"
+        },
+        {
+          "cannonMouth": [
+            {
+              "fileID": "2963746686720376752"
+            }
+          ]
+        },
+        {
+          "explossionSound": [
+            {
+              "fileID": "851728642"
+            }
+          ]
+        },
+        {
+          "detectorCollider": [
+            {
+              "fileID": "4068072891383247836"
+            }
+          ]
+        },
+        {
+          "OnFired": [
+            {
+              "m_PersistentCalls": [
+                {
+                  "m_Calls": [
+                    {
+                      "- m_Target": [
+                        {
+                          "fileID": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "m_MethodName": "SendEvent"
+                    },
+                    {
+                      "m_Mode": "5"
+                    },
+                    {
+                      "m_Arguments": [
+                        {
+                          "m_ObjectArgument": [
+                            {
+                              "fileID": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "m_ObjectArgumentAssemblyTypeName": "UnityEngine.Object, UnityEngine"
+                        },
+                        {
+                          "m_IntArgument": "0"
+                        },
+                        {
+                          "m_FloatArgument": "0"
+                        },
+                        {
+                          "m_StringArgument": "CannonFired"
+                        },
+                        {
+                          "m_BoolArgument": "0"
+                        }
+                      ]
+                    },
+                    {
+                      "m_CallState": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6547019254811913542",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "169612668402460061"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "5057097940423372950"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "3164217343203811845"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "Snap Point"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "169612668402460061",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6547019254811913542"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "-0.31424412"
+            },
+            {
+              "y": "0.6051047"
+            },
+            {
+              "z": "0.4606554"
+            },
+            {
+              "w": "0.56823903"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.43339998"
+            },
+            {
+              "y": "-0.013599992"
+            },
+            {
+              "z": "0.008399999"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "2"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "-67.758"
+            },
+            {
+              "y": "105.407005"
+            },
+            {
+              "z": "-2.6920002"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5057097940423372950",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6547019254811913542"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "0f2cfc5f76584ab449800835d0d4de6e"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "snapsBack": "0"
+        },
+        {
+          "slideThresold": "0.9"
+        },
+        {
+          "pose": [
+            {
+              "relativeGrip": [
+                {
+                  "position": [
+                    {
+                      "x": "-0.43339998"
+                    },
+                    {
+                      "y": "-0.013599992"
+                    },
+                    {
+                      "z": "0.008399999"
+                    }
+                  ]
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.31424412"
+                    },
+                    {
+                      "y": "0.6051047"
+                    },
+                    {
+                      "z": "0.4606554"
+                    },
+                    {
+                      "w": "0.56823903"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "handeness": "0"
+            },
+            {
+              "_bones": [
+                {
+                  " boneID": "2"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.37137425"
+                    },
+                    {
+                      "y": "0.42663386"
+                    },
+                    {
+                      "z": "-0.011382545"
+                    },
+                    {
+                      "w": "-0.8245818"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "4"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.0820844"
+                    },
+                    {
+                      "y": "0.052991603"
+                    },
+                    {
+                      "z": "-0.19109537"
+                    },
+                    {
+                      "w": "0.9766968"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "5"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.080347426"
+                    },
+                    {
+                      "y": "-0.053970378"
+                    },
+                    {
+                      "z": "-0.075068295"
+                    },
+                    {
+                      "w": "0.9924698"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "6"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.037840616"
+                    },
+                    {
+                      "y": "0.055033058"
+                    },
+                    {
+                      "z": "0.13737473"
+                    },
+                    {
+                      "w": "-0.9882649"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "7"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.026252706"
+                    },
+                    {
+                      "y": "-0.00032648435"
+                    },
+                    {
+                      "z": "-0.28010714"
+                    },
+                    {
+                      "w": "0.9596096"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "8"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.016703846"
+                    },
+                    {
+                      "y": "0.025052542"
+                    },
+                    {
+                      "z": "-0.056925256"
+                    },
+                    {
+                      "w": "0.9979243"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "9"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.007081932"
+                    },
+                    {
+                      "y": "-0.06382295"
+                    },
+                    {
+                      "z": "0.016351445"
+                    },
+                    {
+                      "w": "-0.9978022"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "10"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.012933739"
+                    },
+                    {
+                      "y": "-0.0011348126"
+                    },
+                    {
+                      "z": "-0.44745442"
+                    },
+                    {
+                      "w": "0.8942124"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "11"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.061580732"
+                    },
+                    {
+                      "y": "-0.007822554"
+                    },
+                    {
+                      "z": "-0.19156227"
+                    },
+                    {
+                      "w": "0.9795155"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "12"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.043534275"
+                    },
+                    {
+                      "y": "-0.10670286"
+                    },
+                    {
+                      "z": "-0.052024104"
+                    },
+                    {
+                      "w": "-0.99197423"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "13"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.0417583"
+                    },
+                    {
+                      "y": "-0.015043804"
+                    },
+                    {
+                      "z": "-0.5245789"
+                    },
+                    {
+                      "w": "0.85020405"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "14"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.017185207"
+                    },
+                    {
+                      "y": "-0.02946502"
+                    },
+                    {
+                      "z": "-0.27086943"
+                    },
+                    {
+                      "w": "0.9620115"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "16"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.11218039"
+                    },
+                    {
+                      "y": "-0.044220883"
+                    },
+                    {
+                      "z": "-0.1906624"
+                    },
+                    {
+                      "w": "-0.9742217"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "17"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.07910654"
+                    },
+                    {
+                      "y": "0.015525013"
+                    },
+                    {
+                      "z": "-0.52627563"
+                    },
+                    {
+                      "w": "0.84648395"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "18"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.0018209289"
+                    },
+                    {
+                      "y": "-0.046201933"
+                    },
+                    {
+                      "z": "-0.32843998"
+                    },
+                    {
+                      "w": "0.94339246"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "surface": [
+            {
+              "fileID": "3164217343203811845"
+            }
+          ]
+        },
+        {
+          "ghost": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "CreateMirror": ""
+        },
+        {
+          "maxDistance": "0.1"
+        },
+        {
+          "positionRotationWeight": "0.8"
+        }
+      ]
+    },
+    {
+      "id": "3164217343203811845",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "6547019254811913542"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "c015a1ade01253e4c92301949c1c6c7c"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "_data": [
+            {
+              "startPoint": [
+                {
+                  "x": "-0.4344293"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "-0.000000015407295"
+                }
+              ]
+            },
+            {
+              "endPoint": [
+                {
+                  "x": "-0.43225992"
+                },
+                {
+                  "y": "0"
+                },
+                {
+                  "z": "0.000000012295004"
+                }
+              ]
+            },
+            {
+              "angle": "360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7023893316892209643",
+      "GameObject": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "m_Component": [
+            {
+              "- component": [
+                {
+                  "fileID": "7171190365429414524"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "2469720645381971613"
+                }
+              ]
+            },
+            {
+              "- component": [
+                {
+                  "fileID": "5206787307725629014"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "m_Layer": "9"
+        },
+        {
+          "m_Name": "Snap Point_Mirror"
+        },
+        {
+          "m_TagString": "Untagged"
+        },
+        {
+          "m_Icon": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_NavMeshLayer": "0"
+        },
+        {
+          "m_StaticEditorFlags": "0"
+        },
+        {
+          "m_IsActive": "1"
+        }
+      ]
+    },
+    {
+      "id": "7171190365429414524",
+      "Transform": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "7023893316892209643"
+            }
+          ]
+        },
+        {
+          "m_LocalRotation": [
+            {
+              "x": "0.8964377"
+            },
+            {
+              "y": "-0.19983952"
+            },
+            {
+              "z": "0.23606017"
+            },
+            {
+              "w": "0.31739444"
+            }
+          ]
+        },
+        {
+          "m_LocalPosition": [
+            {
+              "x": "-0.37658557"
+            },
+            {
+              "y": "-0.016068399"
+            },
+            {
+              "z": "0.07564206"
+            }
+          ]
+        },
+        {
+          "m_LocalScale": [
+            {
+              "x": "1"
+            },
+            {
+              "y": "1"
+            },
+            {
+              "z": "1"
+            }
+          ]
+        },
+        {
+          "m_Children": "[]"
+        },
+        {
+          "m_Father": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "m_RootOrder": "5"
+        },
+        {
+          "m_LocalEulerAnglesHint": [
+            {
+              "x": "0"
+            },
+            {
+              "y": "0"
+            },
+            {
+              "z": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2469720645381971613",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "7023893316892209643"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "0f2cfc5f76584ab449800835d0d4de6e"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "snapsBack": "0"
+        },
+        {
+          "slideThresold": "0.9"
+        },
+        {
+          "pose": [
+            {
+              "relativeGrip": [
+                {
+                  "position": [
+                    {
+                      "x": "-0.37658557"
+                    },
+                    {
+                      "y": "-0.016068399"
+                    },
+                    {
+                      "z": "0.07564206"
+                    }
+                  ]
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.8964377"
+                    },
+                    {
+                      "y": "-0.19983952"
+                    },
+                    {
+                      "z": "0.23606017"
+                    },
+                    {
+                      "w": "0.31739444"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "handeness": "1"
+            },
+            {
+              "_bones": [
+                {
+                  " boneID": "2"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.28127944"
+                    },
+                    {
+                      "y": "0.4675089"
+                    },
+                    {
+                      "z": "-0.08940867"
+                    },
+                    {
+                      "w": "-0.8332608"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "4"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.082974076"
+                    },
+                    {
+                      "y": "0.06114182"
+                    },
+                    {
+                      "z": "-0.10425867"
+                    },
+                    {
+                      "w": "0.98919517"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "5"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.084339894"
+                    },
+                    {
+                      "y": "-0.069046624"
+                    },
+                    {
+                      "z": "0.11050634"
+                    },
+                    {
+                      "w": "0.9878804"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "6"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.038304947"
+                    },
+                    {
+                      "y": "0.107845224"
+                    },
+                    {
+                      "z": "0.112632014"
+                    },
+                    {
+                      "w": "-0.9870239"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "7"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.026311697"
+                    },
+                    {
+                      "y": "0.0034236077"
+                    },
+                    {
+                      "z": "-0.14328961"
+                    },
+                    {
+                      "w": "0.98932505"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "8"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.01606548"
+                    },
+                    {
+                      "y": "0.02712595"
+                    },
+                    {
+                      "z": "0.07047354"
+                    },
+                    {
+                      "w": "0.99701536"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "9"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.0075741666"
+                    },
+                    {
+                      "y": "-0.033017676"
+                    },
+                    {
+                      "z": "0.0026366925"
+                    },
+                    {
+                      "w": "-0.9994226"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "10"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.012489021"
+                    },
+                    {
+                      "y": "0.0014238518"
+                    },
+                    {
+                      "z": "-0.24870168"
+                    },
+                    {
+                      "w": "0.9684986"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "11"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.04593983"
+                    },
+                    {
+                      "y": "-0.00048437947"
+                    },
+                    {
+                      "z": "-0.023745328"
+                    },
+                    {
+                      "w": "0.9986619"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "12"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.04696364"
+                    },
+                    {
+                      "y": "-0.09143088"
+                    },
+                    {
+                      "z": "-0.02971331"
+                    },
+                    {
+                      "w": "-0.9942595"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "13"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.03938656"
+                    },
+                    {
+                      "y": "-0.006889526"
+                    },
+                    {
+                      "z": "-0.29067403"
+                    },
+                    {
+                      "w": "0.9559863"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "14"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.0087514715"
+                    },
+                    {
+                      "y": "-0.029599177"
+                    },
+                    {
+                      "z": "-0.087748036"
+                    },
+                    {
+                      "w": "0.9956644"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "16"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.14211425"
+                    },
+                    {
+                      "y": "-0.16486295"
+                    },
+                    {
+                      "z": "-0.2242487"
+                    },
+                    {
+                      "w": "-0.94991386"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "17"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "-0.061923057"
+                    },
+                    {
+                      "y": "0.029724013"
+                    },
+                    {
+                      "z": "-0.28171802"
+                    },
+                    {
+                      "w": "0.95703554"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                },
+                {
+                  " boneID": "18"
+                },
+                {
+                  "rotation": [
+                    {
+                      "x": "0.00080190925"
+                    },
+                    {
+                      "y": "-0.049140323"
+                    },
+                    {
+                      "z": "-0.021539062"
+                    },
+                    {
+                      "w": "0.99855936"
+                    }
+                  ]
+                },
+                {
+                  "position": [
+                    {
+                      "x": "0"
+                    },
+                    {
+                      "y": "0"
+                    },
+                    {
+                      "z": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "surface": [
+            {
+              "fileID": "5206787307725629014"
+            }
+          ]
+        },
+        {
+          "ghost": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "CreateMirror": ""
+        },
+        {
+          "maxDistance": "0.1"
+        },
+        {
+          "positionRotationWeight": "0.8"
+        }
+      ]
+    },
+    {
+      "id": "5206787307725629014",
+      "MonoBehaviour": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "7023893316892209643"
+            }
+          ]
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_EditorHideFlags": "0"
+        },
+        {
+          "m_Script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "c015a1ade01253e4c92301949c1c6c7c"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        },
+        {
+          "m_Name": ""
+        },
+        {
+          "m_EditorClassIdentifier": ""
+        },
+        {
+          "relativeTo": [
+            {
+              "fileID": "1391621823374035953"
+            }
+          ]
+        },
+        {
+          "_data": [
+            {
+              "startPoint": [
+                {
+                  "x": "-0.37566876"
+                },
+                {
+                  "y": "-0.00000001097942"
+                },
+                {
+                  "z": "-0.000000007897891"
+                }
+              ]
+            },
+            {
+              "endPoint": [
+                {
+                  "x": "-0.3770786"
+                },
+                {
+                  "y": "-0.000000029718649"
+                },
+                {
+                  "z": "-0.0000000013031446"
+                }
+              ]
+            },
+            {
+              "angle": "360"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174152",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "7300955432162551915"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.031190993"
+        },
+        {
+          "m_Height": "0.086111784"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.0527395"
+            },
+            {
+              "y": "-0.12346786"
+            },
+            {
+              "z": "-0.0000000242144"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3062219742054174153",
+      "CapsuleCollider": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "m_CorrespondingSourceObject": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabInstance": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_PrefabAsset": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_GameObject": [
+            {
+              "fileID": "7300955432162551915"
+            }
+          ]
+        },
+        {
+          "m_Material": [
+            {
+              "fileID": "0"
+            }
+          ]
+        },
+        {
+          "m_IsTrigger": "0"
+        },
+        {
+          "m_Enabled": "1"
+        },
+        {
+          "m_Radius": "0.01063633"
+        },
+        {
+          "m_Height": "0.13496041"
+        },
+        {
+          "m_Direction": "1"
+        },
+        {
+          "m_Center": [
+            {
+              "x": "0.05273951"
+            },
+            {
+              "y": "-0.04891014"
+            },
+            {
+              "z": "0.000167083"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "3022781771160523080",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "0"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6825332691587708405 stripped",
+      "Transform": []
+    },
+    {
+      "id": "6429203282367226042 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "1391621823374035953 stripped",
+      "Transform": []
+    },
+    {
+      "id": "3523958588216029411 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "3606134051815474027 stripped",
+      "Transform": []
+    },
+    {
+      "id": "5418337106739729438 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "7300955432162551915 stripped",
+      "GameObject": []
+    },
+    {
+      "id": "3257389933821190302",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "3606134051815474027"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1689",
+      "value": [
+        {
+          "objectReference": [
+            {
+              "fileID": "951162928"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1118796303816608205 stripped",
+      "MonoBehaviour": []
+    },
+    {
+      "id": "1799",
+      "m_Name": [
+        {
+          "m_EditorClassIdentifier": [
+            {
+              "": "--- !u!1 &857071989924121666 stripped"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1800",
+      "GameObject": []
+    },
+    {
+      "id": "6825636255385182038",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "6825332691587708405"
+                }
+              ]
+            },
+            {
+              "m_Modifications": [
+                {
+                  "- target": [
+                    {
+                      "fileID": "1636448248926476"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_Layer"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "1636448248926476"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_IsActive"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "1756283545428916"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_IsActive"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "1828176872806910"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_Name"
+                },
+                {
+                  "value": "SmallExplosion"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "1828176872806910"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_Layer"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "1834016579923706"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_Layer"
+                },
+                {
+                  "value": "9"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalPosition.x"
+                },
+                {
+                  "value": "-0.45"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalPosition.z"
+                },
+                {
+                  "value": "-0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.w"
+                },
+                {
+                  "value": "0.7071068"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.x"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.y"
+                },
+                {
+                  "value": "0.7071068"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.z"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4009803976983246"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalEulerAnglesHint.y"
+                },
+                {
+                  "value": "90"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_RootOrder"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalScale.x"
+                },
+                {
+                  "value": "0.13955572"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalScale.y"
+                },
+                {
+                  "value": "0.13955572"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalScale.z"
+                },
+                {
+                  "value": "0.13955572"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalPosition.x"
+                },
+                {
+                  "value": "0.459"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalPosition.y"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalPosition.z"
+                },
+                {
+                  "value": "-0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.w"
+                },
+                {
+                  "value": "1"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.x"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.y"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalRotation.z"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalEulerAnglesHint.x"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalEulerAnglesHint.y"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                },
+                {
+                  "- target": [
+                    {
+                      "fileID": "4361801158873524"
+                    },
+                    {
+                      "guid": "64891a0eb28db934898420d80ca07cb3"
+                    },
+                    {
+                      "type": "3"
+                    }
+                  ]
+                },
+                {
+                  "propertyPath": "m_LocalEulerAnglesHint.z"
+                },
+                {
+                  "value": "0"
+                },
+                {
+                  "objectReference": [
+                    {
+                      "fileID": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6663594565108862484 stripped",
+      "ParticleSystem": []
+    },
+    {
+      "id": "6663537684290537570 stripped",
+      "ParticleSystem": []
+    },
+    {
+      "id": "6663160128511855544 stripped",
+      "ParticleSystem": []
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

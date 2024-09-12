@@ -1,0 +1,75 @@
+{
+  "guid": "7669c3cf9ca85214a96fa694939ff951",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds\\Clips\\02-boat_Cracking.ogg.meta",
+  "name": "02-boat_Cracking.ogg",
+  "type": "meta",
+  "file_size": 458,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AudioImporter",
+      "AudioImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "defaultSettings": [
+            {
+              "loadType": "0"
+            },
+            {
+              "sampleRateSetting": "0"
+            },
+            {
+              "sampleRateOverride": "44100"
+            },
+            {
+              "compressionFormat": "0"
+            },
+            {
+              "quality": "1"
+            },
+            {
+              "conversionMode": "0"
+            }
+          ]
+        },
+        {
+          "platformSettingOverrides": ""
+        },
+        {
+          "forceToMono": "0"
+        },
+        {
+          "normalize": "1"
+        },
+        {
+          "preloadAudioData": "1"
+        },
+        {
+          "loadInBackground": "0"
+        },
+        {
+          "ambisonic": "0"
+        },
+        {
+          "D": "1"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Sounds",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Sounds"
+}

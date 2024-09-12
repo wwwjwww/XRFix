@@ -1,0 +1,153 @@
+8/23/2024 11:28:26 PM Loading extensions...
+8/23/2024 11:28:26 PM Searching MetaData file inside project folder...
+8/23/2024 11:28:26 PM Searching main file...
+8/23/2024 11:28:26 PM Done!
+8/23/2024 11:28:26 PM Searching meta file...
+8/23/2024 11:28:26 PM Done!
+8/23/2024 11:28:26 PM Done!
+8/23/2024 11:28:26 PM Done!
+8/23/2024 11:28:26 PM Creating Result Directories
+8/23/2024 11:28:26 PM Start analisys...
+8/23/2024 11:28:26 PM Analyzing Main MetaData...
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: ProjectInfo.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Done!
+8/23/2024 11:28:26 PM Analyzing Meta files...
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\AudioMixer.mixer.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: dcea4f9a0739c4a47b467a19b63095d2.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 5311cb7bd08ce4d4bb08d2791cf75489.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: c50309ad79828af4cac3b6128b4b4b5d.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\01-boat_Cracking.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 12d512093f7df9b49a39e8d4fc4fe59f.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\02-boat_Cracking.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 7669c3cf9ca85214a96fa694939ff951.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\03-boat_Cracking.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 23c6f9a4496b9b64f904010b95b2668f.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\box_hit.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 560c6077a65165a49bc2c58ce5050415.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\explossion.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 1c5ab1965868df7499e547a287dda3b7.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\flare.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 8fec23aad1eb69a44bbb8ffae6c49301.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\lightmetal_hit.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: f5e1d3c9f4a103d4588a1c92a6caaad3.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\mediummetal_hit.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: a0939fcc1d26d1c4d819c73c63cf0696.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\monster.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 6926f463ca3bb88458ade802e67ed927.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\oceansurface.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 8afd7ceb130bcef46b8003460cc9fbd4.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\ominouswhisper.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 1f83fffe955d4ce418a0fd45c05081a4.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\sword_hit.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 16f1daa51363c514eac941447515fc81.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\water_splash.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 78cd529806b7cfc4299c1c39618dde7b.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\wood_hinge.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: fb17d61b308a1674492d22f36c5d18b8.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\wood_hit.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 911a27b99d8df2045842770ecb0ba4da.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Clips\wood_slide.ogg.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: ac5a9bba60c03994496e64638a3d5181.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\Boat Squeaks Sound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: b0290e1bb00050340836a3bb0992c4cf.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\Books Sound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 90f3dbe93c8edfc4e9f99d3d4619981a.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\Cannonball Hit.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 7207a8e479886e64e858dd8be6e4575b.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\Ceramic Sound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 4c536b6f6b990bf45b4490c45984f31c.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\Coin Sound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: ff7c370c91ebdb942b02f60e3b32597f.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\SextantSound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 9aa8fe37c88d51a49ba71847ed8e3afa.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\SwordHit.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: c3c493cae58fc8b4ca0f92f8e223d980.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Analyzing File: D:\Bug_injection_project\HandPosing_Demo-master\Assets\Sounds\Randomizers\WaterSplashSound.asset.meta
+8/23/2024 11:28:26 PM Data Extracted!
+8/23/2024 11:28:26 PM Saving Results...
+8/23/2024 11:28:26 PM Saving File: 83190b53e04406043a24f10900d23d1a.json
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Done!

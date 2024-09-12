@@ -1,0 +1,37 @@
+{
+  "guid": "10cb8a265a0a33b4d889f922ac8e7ee3",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D\\Prefabs\\TrapDoor Variant.prefab",
+  "name": "TrapDoor Variant",
+  "type": "prefab",
+  "file_size": 2617,
+  "num_components": 1,
+  "COMPONENTS": [
+    {
+      "id": "6411507732912962152",
+      "PrefabInstance": [
+        {
+          "m_ObjectHideFlags": "0"
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "m_Modification": [
+            {
+              "m_TransformParent": [
+                {
+                  "fileID": "0"
+                }
+              ]
+            },
+            {
+              "m_Modifications": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ProjectName": "3D",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\3D"
+}

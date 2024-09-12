@@ -1,0 +1,11 @@
+- description: All special queries supported for C#
+- include:
+   id: cs/unused-collection
+- include:
+   id: cs/constant-condition
+- include:
+   id: cs/non-short-circuit
+- include:
+   id: cs/lock-this
+- include:
+   id: cs/linq/useless-select

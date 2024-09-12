@@ -1,0 +1,29 @@
+{
+  "guid": "0683d80073a8c614c9541e579fca2aa3",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\Platform\\Oculus.Platform.asmdef.meta",
+  "name": "Oculus.Platform.asmdef",
+  "type": "meta",
+  "file_size": 166,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AssemblyDefinitionImporter",
+      "AssemblyDefinitionImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

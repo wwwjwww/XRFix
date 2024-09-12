@@ -1,0 +1,56 @@
+{
+  "guid": "b8b9ee1d7b188284f90d944cd54eb026",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Editor\\OVRScreenshotWizard.cs.meta",
+  "name": "OVRScreenshotWizard.cs",
+  "type": "meta",
+  "file_size": 343,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "MonoImporter",
+      "MonoImporter": [
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "defaultReferences": [
+            {
+              "- renderFrom": [
+                {
+                  "fileID": "168286"
+                },
+                {
+                  "guid": "a5014611cefbb6b4398b7e4c82203d08"
+                },
+                {
+                  "type": "2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "executionOrder": "0"
+        },
+        {
+          "icon": [
+            {
+              "instanceID": "0"
+            }
+          ]
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

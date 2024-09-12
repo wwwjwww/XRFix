@@ -1,0 +1,4 @@
+- description: extended queries for unity check
+- queries: .
+- apply: unity_check.yml
+  from: codeql/suite-helpers

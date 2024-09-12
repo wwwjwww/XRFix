@@ -1,0 +1,26 @@
+{
+  "guid": "fcd019dc7c1f92140963033f1669ec2f",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\SampleFramework\\Core\\DistanceGrab\\Mesh\\GrabConeVolume.asset.meta",
+  "name": "GrabConeVolume.asset",
+  "type": "meta",
+  "file_size": 181,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}

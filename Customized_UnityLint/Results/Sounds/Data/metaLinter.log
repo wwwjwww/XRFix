@@ -1,0 +1,47 @@
+8/23/2024 11:28:26 PM Start analysis...
+8/23/2024 11:28:26 PM Loading Dataset...
+8/23/2024 11:28:26 PM Loading main data...
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\mainResults\ProjectInfo.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\12d512093f7df9b49a39e8d4fc4fe59f.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\16f1daa51363c514eac941447515fc81.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\1c5ab1965868df7499e547a287dda3b7.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\1f83fffe955d4ce418a0fd45c05081a4.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\23c6f9a4496b9b64f904010b95b2668f.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\4c536b6f6b990bf45b4490c45984f31c.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\5311cb7bd08ce4d4bb08d2791cf75489.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\560c6077a65165a49bc2c58ce5050415.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\6926f463ca3bb88458ade802e67ed927.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\7207a8e479886e64e858dd8be6e4575b.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\7669c3cf9ca85214a96fa694939ff951.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\78cd529806b7cfc4299c1c39618dde7b.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\83190b53e04406043a24f10900d23d1a.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\8afd7ceb130bcef46b8003460cc9fbd4.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\8fec23aad1eb69a44bbb8ffae6c49301.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\90f3dbe93c8edfc4e9f99d3d4619981a.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\911a27b99d8df2045842770ecb0ba4da.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\9aa8fe37c88d51a49ba71847ed8e3afa.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\a0939fcc1d26d1c4d819c73c63cf0696.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\ac5a9bba60c03994496e64638a3d5181.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\b0290e1bb00050340836a3bb0992c4cf.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\c3c493cae58fc8b4ca0f92f8e223d980.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\c50309ad79828af4cac3b6128b4b4b5d.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\dcea4f9a0739c4a47b467a19b63095d2.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\f5e1d3c9f4a103d4588a1c92a6caaad3.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\fb17d61b308a1674492d22f36c5d18b8.json
+8/23/2024 11:28:26 PM File: Results/Sounds/Data\metaResults\ff7c370c91ebdb942b02f60e3b32597f.json
+8/23/2024 11:28:26 PM Maindata loaded!
+8/23/2024 11:28:26 PM Dataset Loaded!
+8/23/2024 11:28:26 PM Searching for smells...
+8/23/2024 11:28:26 PM Searching SubOptimal Expensive Lights...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Searching SubOptimal Expensive Lights with enable LightRealTime...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Searching Animation Object with Clear Flag=nothing...
+8/23/2024 11:28:26 PM Done!!
+8/23/2024 11:28:26 PM Search completed!
+8/23/2024 11:28:26 PM Analysis Done!
+8/23/2024 11:28:26 PM Saving results...
+8/23/2024 11:28:26 PM Saving: SubOptimal_Expensive_Lights.json
+8/23/2024 11:28:26 PM Saving: SubOptimal_Expensive_Lights_with_enable_LightRealTime.json
+8/23/2024 11:28:26 PM Saving: Camera_Render_Clear_Flag_=_Don't_Clear.json
+8/23/2024 11:28:26 PM Results saved in Results/Sounds/Data\MetaSmellResults

@@ -1,0 +1,29 @@
+{
+  "guid": "7305c54a43f3814439df347c7519653e",
+  "file_path": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus\\VR\\Scripts\\Editor\\Oculus.VR.Scripts.Editor.asmdef.meta",
+  "name": "Oculus.VR.Scripts.Editor.asmdef",
+  "type": "meta",
+  "file_size": 166,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AssemblyDefinitionImporter",
+      "AssemblyDefinitionImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "Oculus",
+  "ProjectPath": "D:\\Bug_injection_project\\HandPosing_Demo-master\\Assets\\Oculus"
+}
