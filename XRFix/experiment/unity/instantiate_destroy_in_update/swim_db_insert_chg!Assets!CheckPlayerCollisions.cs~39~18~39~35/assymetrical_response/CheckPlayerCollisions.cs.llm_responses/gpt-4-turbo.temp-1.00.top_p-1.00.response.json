@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLL1mw1CD3xCdPaLr8i15vCTJsYj",
+    "object": "chat.completion",
+    "created": 1723692075,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class CheckPlayerCollisions : MonoBehaviour\n{\n    private Rigidbody rb;\n    public float ripForce = 50f;\n    public GameObject deathText;\n    public GameObject winText;\n    public GameObject statusText;\n\n    protected GameObject gobj7;\n    protected GameObject a7;\n\n    private float timeLimit = 5f;\n    private float timer  = 0f;\n    private bool instantiate_gobj = false;\n    private bool destroying_gobj = false;\n\n    protected Rigidbody rb4;\n    private Queue<GameObject> objectPool = new Queue<GameObject>();\n\n\n    private void Start()\n    {\n        rb = GetComponent<Rigidbody>();\n        for (int i = 0; i < 1; i++) // Assuming we just need a single instance as the original code does\n        {\n            GameObject obj = Instantiate(gobj7);\n            obj.SetActive(false);\n            objectPool.Enqueue(obj);\n        }\n    }\n\n    private void HideStatus()\n    {\n        statusText.SetActive(false);\n    }\n\n    private void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            if (objectPool.Count > 0)\n            {\n                a7 = objectPool.Dequeue();\n                a7.SetActive(true);\n                timer = 0;\n                instantiate_gobj = true;\n            }\n        }\n        else if (instantiate_gobj && timer >= timeLimit && !destroying_gobj)\n        {\n            destroying_gobj = true;\n            var component7 = a7.GetComponent<HandManager>() ?? a7.AddComponent<HandManager>();\n            component7.RemoveObject(objectPool); // Adjust the RemoveObject signature to accept a Queue<GameObject>\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        rb4.transform.Rotate(10, 0, 0);\n\n        if (Input.GetKeyDown(KeyCode.DownArrow))\n        {\n            ripForce -= 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"Rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n        else if (Input.GetKeyDown(KeyCode.UpArrow))\n        {\n            ripForce += 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"Rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n        destroying_gobj = false; // Reset the flag\n    }\n}\n\npublic class HandManager : MonoBehaviour\n{\n    public GameObject hand;\n    private OVRHand ovrHand;\n    public GameObject controller;\n\n    void Start()\n    {\n        ovrHand = hand.GetComponent<OVRHand>();\n    }\n\n    void Update()\n    {\n        // Existing Update code\n    }\n\n    public void RemoveObject(Queue<GameObject> objectPool)\n    {\n        gameObject.SetActive(false);\n        objectPool.Enqueue(gameObject);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> gobjPool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    for (int i = 0; i < 10; i++) // Arbitrary number, adjust pool size as necessary\n    {\n        GameObject pooledObj = Instantiate(gobj7);\n        pooledObj.SetActive(false);\n        gobjPool.Enqueue(pooledObj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobjPool.Count > 0)\n        {\n            a7 = gobjPool.Dequeue();\n            a7.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit )\n    {\n        var component7 = a7.AddComponent<HandManager>(); // It is not usually recommended to add components in Update, this should be rethought\n        component7.RemoveObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb4.transform.Rotate(10, 0, 0);\n\n    if (Input.GetKeyDown(KeyCode.DownArrow))\n    {\n        ripForce -= 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n    else if (Input.GetKeyDown(KeyCode.UpArrow))\n    {\n        ripForce += 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n}\n\npublic void EnqueueObject(GameObject obj)\n{\n    obj.SetActive(false);\n    gobjPool.Enqueue(obj);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class CheckPlayerCollisions : MonoBehaviour\n{\n    private Rigidbody rb;\n    public float ripForce = 50f;\n    public GameObject deathText;\n    public GameObject winText;\n    public GameObject statusText;\n\n    protected GameObject gobj7;\n    protected GameObject a7;\n\n    private float timeLimit = 5f;\n    private float timer  = 0f;\n    private bool instantiate_gobj = false;\n\n    protected Rigidbody rb4;\n\n    private void Start()\n    {\n        rb = GetComponent<Rigidbody>();\n        StartCoroutine(ManageObjects());\n    }\n\n    private IEnumerator ManageObjects()\n    {\n        while (true)\n        {\n            yield return new WaitForSeconds(timeLimit);\n\n            if (!instantiate_gobj)\n            {\n                a7 = Instantiate(gobj7);\n                instantiate_gobj = true;\n            }\n            else\n            {\n                var component7 = a7.GetComponent<HandManager>();\n                if (component7 != null)\n                {\n                    component7.RemoveObject();\n                }\n                a7 = null;  // Ensure the reference is cleared.\n                instantiate_gobj = false;\n            }\n        }\n    }\n    \n    private void Update()\n    {\n        rb4.transform.Rotate(10, 0, 0);\n\n        if (Input.GetKeyDown(KeyCode.DownArrow))\n        {\n            ripForce -= 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n        else if (Input.GetKeyDown(KeyCode.UpArrow))\n        {\n            ripForce += 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> pooledObjects;\nprivate GameObject currentObject;\n\nprivate void Awake()\n{\n    pooledObjects = new Queue<GameObject>();\n    for (int i = 0; i < 10; i++) // for example, create a pool with 10 objects\n    {\n        GameObject obj = Instantiate(gobj7);\n        obj.SetActive(false);\n        pooledObjects.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (pooledObjects.Count > 0)\n        {\n            currentObject = pooledObjects.Dequeue();\n            currentObject.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (currentObject != null)\n        {\n            HandManager component7 = currentObject.GetComponent<HandManager>();\n            if (component7 == null)\n            {\n                component7 = currentObject.AddComponent<HandManager>();\n            }\n            component7.RemoveObject();\n            pooledObjects.Enqueue(currentObject);\n            currentObject = null;\n        }\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb4.transform.Rotate(new Vector3(10, 0, 0) * Time.deltaTime);\n\n    if (Input.GetKeyDown(KeyCode.DownArrow))\n    {\n        ripForce -= 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n    else if (Input.GetKeyDown(KeyCode.UpArrow))\n    {\n        ripForce += 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n}\n```\n\n```csharp\npublic void RemoveObject()\n{\n    gameObject.SetActive(false);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\nprivate bool isObjectPooled = false;\n\nprivate void Start()\n{\n    rb = GetComponent<Rigidbody>();\n    PoolObject();\n}\n\nprivate void PoolObject()\n{\n    GameObject pooledObject = Instantiate(gobj7);\n    pooledObject.SetActive(false);\n    objectPool.Enqueue(pooledObject);\n    isObjectPooled = true;\n}\n\nprivate GameObject GetPooledObject()\n{\n    if (objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        obj.SetActive(true);\n        return obj;\n    }\n    else if (!isObjectPooled)\n    {\n        PoolObject();\n    }\n    return GetPooledObject();\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = GetPooledObject();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a7 != null)\n        {\n            a7.SetActive(false);\n            objectPool.Enqueue(a7);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    rb4.transform.Rotate(10, 0, 0);\n\n    if (Input.GetKeyDown(KeyCode.DownArrow))\n    {\n        ripForce -= 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n    else if (Input.GetKeyDown(KeyCode.UpArrow))\n    {\n        ripForce += 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n}\n\nprivate void OnDestroy()\n{\n    while (objectPool.Count > 0)\n    {\n        GameObject pooledObject = objectPool.Dequeue();\n        Destroy(pooledObject);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 736,
+        "completion_tokens": 2185,
+        "total_tokens": 2921
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

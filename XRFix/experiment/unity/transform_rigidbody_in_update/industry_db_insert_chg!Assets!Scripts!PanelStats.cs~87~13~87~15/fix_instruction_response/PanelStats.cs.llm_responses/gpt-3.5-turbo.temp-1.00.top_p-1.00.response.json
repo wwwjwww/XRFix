@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvQNBw2pIdIDNlRofVFTLcjt3HtJ",
+    "object": "chat.completion",
+    "created": 1722400823,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    rb3.transform.Translate(0, 0, Time.fixedDeltaTime * 2);\n\n    var p = marker.localPosition;\n    p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n    marker.localPosition = p;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void FixedUpdate()\n{\n    rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n    var p = marker.localPosition;\n    p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n    marker.localPosition = p;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            private void FixedUpdate()\n            {\n                rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n                var p = marker.localPosition;\n                p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n                marker.localPosition = p;\n            }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            private void FixedUpdate()\n            {\n                rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n                var p = marker.localPosition;\n                p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n                marker.localPosition = p;\n            }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n             rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n             \n             var p = marker.localPosition;\n             p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n             marker.localPosition = p;\n         }\n\n        private void FixedUpdate()\n        {\n            rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n             \n            var p = marker.localPosition;\n            p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n            marker.localPosition = p;\n        }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 710,
+        "completion_tokens": 376,
+        "total_tokens": 1086
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

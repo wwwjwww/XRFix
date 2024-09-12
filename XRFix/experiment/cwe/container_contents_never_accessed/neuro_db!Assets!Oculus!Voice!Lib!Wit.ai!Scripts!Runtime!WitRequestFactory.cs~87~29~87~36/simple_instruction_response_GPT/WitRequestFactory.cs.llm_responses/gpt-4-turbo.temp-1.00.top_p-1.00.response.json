@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzNgd2vBOh1luAvPexfAMHDMlIn5",
+    "object": "chat.completion",
+    "created": 1724322656,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private static void MergeEntities(WitResponseClass entities, WitDynamicEntity providerEntity)\n        {\n            if (!entities.HasChild(providerEntity.entity))\n            {\n                entities[providerEntity.entity] = new WitResponseArray();\n            }\n            var mergedArray = entities[providerEntity.entity] as WitResponseArray;\n            Dictionary<string, WitResponseClass> map = new Dictionary<string, WitResponseClass>();\n\n            foreach (var value in providerEntity.keywords)\n            {\n                if (!map.ContainsKey(value.keyword))\n                {\n                    WitResponseClass keywordData = new WitResponseClass();\n                    keywordData[\"keyword\"] = value.keyword;\n                    keywordData[\"synonyms\"] = new WitResponseArray(value.synonyms);\n                    map[value.keyword] = keywordData;\n                    mergedArray.Add(keywordData);\n                }\n                else\n                {\n                    WitResponseClass keywordData = map[value.keyword];\n                    var synonymsArray = keywordData[\"synonyms\"] as WitResponseArray;\n                    foreach (var synonym in value.synonyms)\n                    {\n                        if (!synonymsArray.Contains(synonym))\n                        {\n                            synonymsArray.Add(synonym);\n                        }\n                    }\n                }\n            }\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            foreach (var value in providerEntity.values)\n            {\n                // If map does not contain the specific value keyword, add it to the map\n                if (!map.ContainsKey(value.value))\n                {\n                    WitResponseClass entry = new WitResponseClass();\n                    entry[\"value\"] = new WitResponseData(value.value);\n                    \n                    if (value.expressions != null && value.expressions.Length > 0)\n                    {\n                        WitResponseArray expressionsArray = new WitResponseArray();\n                        foreach (var expression in value.expressions)\n                        {\n                            expressionsArray.Add(new WitResponseData(expression));\n                        }\n                        entry[\"expressions\"] = expressionsArray;\n                    }\n                    \n                    map[value.value] = entry;\n                    mergedArray.Add(entry);\n                }\n            }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static void MergeEntities(WitResponseClass entities, WitDynamicEntity providerEntity)\n{\n    if (!entities.HasChild(providerEntity.entity))\n    {\n        entities[providerEntity.entity] = new WitResponseArray();\n    }\n    var mergedArray = entities[providerEntity.entity] as WitResponseArray;\n    Dictionary<string, WitResponseClass> map = new Dictionary<string, WitResponseClass>();\n\n    foreach(var value in providerEntity.values)\n    {\n        WitResponseClass dataValue;\n        if (!map.TryGetValue(value.value, out dataValue))\n        {\n            dataValue = new WitResponseClass();\n            map[value.value] = dataValue;\n            mergedArray.Add(new WitResponseData(value.value));\n        }\n\n        var synonymsArray = dataValue[\"synonyms\"] as WitResponseArray;\n        if (synonymsArray == null)\n        {\n            synonymsArray = new WitResponseArray();\n            dataValue[\"synonyms\"] = synonymsArray;\n        }\n\n        foreach (var synonym in value.synonyms)\n        {\n            if (!synonymsArray.Contains(synonym))\n            {\n                synonymsArray.Add(new WitResponseData(synonym));\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private static void MergeEntities(WitResponseClass entities, WitDynamicEntity providerEntity)\n        {\n            if (!entities.HasChild(providerEntity.entity))\n            {\n                entities[providerEntity.entity] = new WitResponseArray();\n            }\n            var mergedArray = entities[providerEntity.entity].AsArray;\n            Dictionary<string, WitResponseClass> map = new Dictionary<string, WitResponseClass>();\n\n            foreach (var value in providerEntity.keywords)\n            {\n                WitResponseClass entityValue;\n                if (!map.TryGetValue(value.keyword, out entityValue))\n                {\n                    entityValue = new WitResponseClass();\n                    mergedArray.Add(entityValue);\n                    map[value.keyword] = entityValue;\n                }\n                entityValue[\"keyword\"] = value.keyword;\n                entityValue[\"id\"] = value.keyword;\n\n                WitResponseArray synonymsArray;\n                if (!entityValue.HasKey(\"synonyms\"))\n                {\n                    synonymsArray = new WitResponseArray();\n                    entityValue[\"synonyms\"] = synonymsArray;\n                }\n                else\n                {\n                    synonymsArray = entityValue[\"synonyms\"].AsArray;\n                }\n\n                foreach (var synonym in value.synonyms)\n                {\n                    if (!synonymsArray.Contains(synonym))\n                    {\n                        synonymsArray.Add(synonym);\n                    }\n                }\n            }\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static void MergeEntities(WitResponseClass entities, WitDynamicEntity providerEntity)\n{\n    if (!entities.HasChild(providerEntity.entity))\n    {\n        entities[providerEntity.entity] = new WitResponseArray();\n    }\n    var entityArray = entities[providerEntity.entity] as WitResponseArray;\n    foreach (var value in providerEntity.keywords)\n    {\n        var valueObj = new WitResponseData(value.keyword);\n        if (value.synonyms != null && value.synonyms.Length > 0)\n        {\n            var synonymsArray = new WitResponseArray();\n            foreach (var synonym in value.synonyms)\n            {\n                synonymsArray.Add(new WitResponseData(synonym));\n            }\n            valueObj.Add(\"synonyms\", synonymsArray);\n        }\n        entityArray.Add(valueObj);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 574,
+        "completion_tokens": 1070,
+        "total_tokens": 1644
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

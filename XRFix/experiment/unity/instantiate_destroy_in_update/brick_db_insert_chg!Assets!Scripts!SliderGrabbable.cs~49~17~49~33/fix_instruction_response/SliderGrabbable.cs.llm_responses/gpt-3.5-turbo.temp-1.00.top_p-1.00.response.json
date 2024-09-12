@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9pB3HRT0UJB9SAuZAOaLtxma3JXX5",
+    "object": "chat.completion",
+    "created": 1721984239,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a = Instantiate(gobj);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            ReleaseObject(a);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!_grabbed)\n        {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n\n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    if (!_grabbed)\n    {\n        transform.position = sliderMarker.position;\n        return;\n    }\n\n    float sliderLength = SliderWorldLength();\n\n    Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n    Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n    Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n    sliderMarker.position = pointOnLine;\n    \n    float lineLength = (lineEnd - lineStart).magnitude;\n    float markerPosition = (pointOnLine - lineStart).magnitude;\n    slider.value = 1f - (markerPosition / lineLength);\n}\n\nprivate void FixedUpdate()\n{\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a = Instantiate(gobj);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReleaseObject(a);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    timer += Time.deltaTime;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "// FIXED CODE:\n\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.Serialization;\nusing UnityEngine.UI;\nusing UnityEngine.XR.Interaction.Toolkit;\n\npublic class SliderGrabbable : XRBaseInteractable\n{\n    public Transform sliderMarker;\n    public Material hoverMaterial;\n    public RectTransform gradientBackground;\n    public Slider slider;\n\n    private Transform _slider;\n    private Material _defaultMaterial;\n    private MeshRenderer _meshRenderer;\n\n    private bool _grabbed;\n    private float _usableSliderLength = 1f;\n\n    [FormerlySerializedAs(\"sliderValue\")] public float defaultSliderValue;\n\n    private int _hoveredCount;\n    private float _value;\n\n    protected GameObject gobj;\n    protected GameObject a;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    private void Awake()\n    {\n        _slider = transform.parent;\n        _meshRenderer = sliderMarker.GetComponent<MeshRenderer>();\n        _defaultMaterial = _meshRenderer.material;\n    }\n\n    protected override void OnHoverEnter(HoverEnterEventArgs args)\n    {\n        base.OnHoverEnter(args);\n\n        _hoveredCount++;\n        _meshRenderer.material = hoverMaterial;\n    }\n\n    protected override void OnHoverExit(HoverExitEventArgs args)\n    {\n        base.OnHoverExit(args);\n\n        _hoveredCount--;\n        if (_hoveredCount == 0)\n        {\n            _meshRenderer.material = _defaultMaterial;\n        }\n    }\n\n    protected override void OnSelectEnter(SelectEnterEventArgs args)\n    {\n        base.OnSelectEnter(args);\n\n        _grabbed = true;\n    }\n\n    protected override void OnSelectExit(SelectExitEventArgs args)\n    {\n        base.OnSelectExit(args);\n\n        _grabbed = false;\n    }\n\n    protected override void OnSelectUpdate(SelectUpdateEventArgs args)\n    {\n        base.OnSelectUpdate(args);\n\n        if (!_grabbed)\n        {\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n\n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n\n    private float SliderWorldLength()\n    {\n        Vector3 lineDirection = _slider.right;\n        Collider collider = _slider.GetComponentInChildren<Collider>();\n\n        return Mathf.Abs(Vector3.Dot(lineDirection, collider.bounds.size));\n    }\n\n    private Vector3 GetClosestPointOnFiniteLine(Vector3 point, Vector3 lineStart, Vector3 lineEnd)\n    {\n        Vector3 lineDirection = Vector3.Normalize(lineEnd - lineStart);\n        float closestPoint = Vector3.Dot(point - lineStart, lineDirection) / Vector3.Dot(lineDirection, lineDirection);\n        return lineStart + Mathf.Clamp(closestPoint, 0f, Vector3.Distance(lineStart, lineEnd)) * lineDirection;\n    }\n\n    private void ReleaseObject(GameObject obj)\n    {\n        Destroy(obj);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private void Start()\n    {\n        _slider = transform.parent;\n        _meshRenderer = sliderMarker.GetComponent<MeshRenderer>();\n        _defaultMaterial = _meshRenderer.material;\n        gobj = new GameObject();\n        gobj.AddComponent<Rigidbody>();\n    }\n\n    private void FixedUpdate()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a = Instantiate(gobj);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            ReleaseObject(a);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!_grabbed)\n        {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n\n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```Csharp\n    private void Update()\n    {\n        if (!_grabbed) {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n        \n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 603,
+        "completion_tokens": 1634,
+        "total_tokens": 2237
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

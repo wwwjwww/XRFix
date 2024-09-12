@@ -1,0 +1,2 @@
+"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/Scripts/Oscillator/waveViz.cs","36","15","36","28"
+"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/Scripts/UI/key.cs","87","15","87","18"

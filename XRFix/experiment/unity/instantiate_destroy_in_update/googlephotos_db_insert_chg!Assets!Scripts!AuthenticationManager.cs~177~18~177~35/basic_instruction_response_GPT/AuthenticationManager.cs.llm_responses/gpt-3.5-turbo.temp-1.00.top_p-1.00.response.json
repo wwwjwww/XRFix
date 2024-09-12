@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzsPhHd1flmPWOK2l6nhmk3mddeE",
+    "object": "chat.completion",
+    "created": 1724324561,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private void Update()\n{\n    if (instantiate_gobj)\n    {\n        timer += Time.deltaTime;\n        if (timer >= timeLimit)\n        {\n            Release(a2);\n            instantiate_gobj = false;\n            timer = 0;\n        }\n    }\n    else\n    {\n        timer += Time.deltaTime;\n        if (timer >= timeLimit)\n        {\n            a2 = Instantiate(gobj2);\n            instantiate_gobj = true;\n            timer = 0;\n        }\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private void Update()\n{\n    if (instantiate_gobj)\n    {\n        timer += Time.deltaTime;\n\n        if (timer >= timeLimit)\n        {\n            Release(a2);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n    else\n    {\n        timer += Time.deltaTime;\n\n        if (timer >= timeLimit)\n        {\n            a2 = Instantiate(gobj2);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private void Awake()\n{\n    gobj2 = Resources.Load<GameObject>(\"PrefabName\");\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1259,
+        "completion_tokens": 720,
+        "total_tokens": 1979
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

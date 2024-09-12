@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0uXocps0UdfeZyZLAJuFxSf5JcW",
+    "object": "chat.completion",
+    "created": 1724328537,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE: Removed unused CallbackClearers collection\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // The problematic HashSet<Action> CallbackClearers has been removed as it was never accessed.\n\n    // No further fixed code is necessary as specifically referenced by the given comments.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly HashSet<Action<Guid>> CallbackClearers = new HashSet<Action<Guid>>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly Dictionary<Guid, Action> CallbackClearers = new Dictionary<Guid, Action>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\n// Removed the unused CallbackClearers HashSet as it is never being accessed.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 772,
+        "completion_tokens": 125,
+        "total_tokens": 897
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

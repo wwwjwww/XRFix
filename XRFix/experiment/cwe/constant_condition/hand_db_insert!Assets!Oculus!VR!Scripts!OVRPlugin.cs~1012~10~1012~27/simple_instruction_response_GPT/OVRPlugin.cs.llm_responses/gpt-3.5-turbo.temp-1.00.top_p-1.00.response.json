@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yysb7lPksAn8MWjNKKuMvJnDOHCM",
+    "object": "chat.completion",
+    "created": 1724320729,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\tprivate static System.Version _versionZero = new System.Version(0, 0, 0);\n\n#if !OVRPLUGIN_UNSUPPORTED_PLATFORM\n\tprivate static System.Version _version = null;\n#endif\n\n#if !OVRPLUGIN_UNSUPPORTED_PLATFORM\n\tprivate static System.Version _nativeSDKVersion = null;\n#endif\n\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "// Fixed code:\n\n#if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || (UNITY_ANDROID && !UNITY_EDITOR)\n#undef OVRPLUGIN_UNSUPPORTED_PLATFORM\n#endif\n\n#if OVRPLUGIN_UNSUPPORTED_PLATFORM\npublic const bool isSupportedPlatform = false;\n#else\npublic const bool isSupportedPlatform = true;\n#endif\n\n#if OVRPLUGIN_UNSUPPORTED_PLATFORM\npublic static readonly System.Version wrapperVersion = _versionZero;\n#else\npublic static readonly System.Version wrapperVersion = OVRP_1_55_0.version;\n#endif\n\n#if !OVRPLUGIN_UNSUPPORTED_PLATFORM\nprivate static System.Version _version;\n#endif\n\npublic static System.Version version\n{\n\tget\n\t{\n#if OVRPLUGIN_UNSUPPORTED_PLATFORM\n\t\tDebug.LogWarning(\"Platform is not currently supported by OVRPlugin\");\n\t\treturn _versionZero;\n#else\n\t\tif (_version == null)\n\t\t{\n\t\t\ttry\n\t\t\t{\n\t\t\t\tstring pluginVersion = OVRP_1_1_0.ovrp_GetVersion();\n\n\t\t\t\tif (pluginVersion != null)\n\t\t\t\t{\t\t\t\t\t\n\t\t\t\t\tpluginVersion = pluginVersion.Split('-')[0];\n\t\t\t\t\t_version = new System.Version(pluginVersion);\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\t_version = _versionZero;\n\t\t\t\t}\n\t\t\t}\n\t\t\tcatch\n\t\t\t{\n\t\t\t\t_version = _versionZero;\n\t\t\t}\n\n\t\t\tif (_version == OVRP_0_5_0.version)\n\t\t\t\t_version = OVRP_0_1_0.version;\n\n\t\t\tif (_version > _versionZero && _version < OVRP_1_3_0.version)\n\t\t\t\tthrow new PlatformNotSupportedException(\"Oculus Utilities version \" + wrapperVersion + \" is too new for OVRPlugin version \" + _version.ToString() + \". Update to the latest version of Unity.\");\n\t\t}\n\n\t\treturn _version;\n#endif"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN || (UNITY_ANDROID && !UNITY_EDITOR)\n#define OVRPLUGIN_UNSUPPORTED_PLATFORM false\n#else\n#define OVRPLUGIN_UNSUPPORTED_PLATFORM true\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#else\n\t\t\t\tDebug.LogWarning(\"Platform is not currently supported by OVRPlugin\");\n\t\t\t\treturn _versionZero;\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n#if !OVRPLUGIN_UNSUPPORTED_PLATFORM\n\n#else\n\tpublic static System.Version _versionZero = new System.Version(0, 0, 0);\n\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 6904,
+        "completion_tokens": 548,
+        "total_tokens": 7452
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzjJSE7ftg8TkPqFtj6aXW3T2OJ0",
+    "object": "chat.completion",
+    "created": 1724323997,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "HashSet<string> synonyms = new HashSet<string>();\n\nforeach (var entityValue in providerEntity.value)\n{\n    if (!map.ContainsKey(entityValue.value))\n    {\n        WitResponseClass entityClass = new WitResponseClass();\n        entityClass[\"value\"] = entityValue.value;\n        foreach (var synonym in entityValue.synonyms)\n        {\n            synonyms.Add(synonym);\n        }\n        entityClass[\"synonyms\"] = new WitResponseArray { synonyms.ToArray() };\n        mergedArray.Add(entityClass);\n        map.Add(entityValue.value, entityClass);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "            HashSet<string> synonyms = new HashSet<string>();\n            foreach (var value in providerEntity.synonyms)\n            {\n                synonyms.Add(value.value);\n            }\n\n            map[providerEntity.value] = new WitResponseClass()\n            {\n                dynamicValue = providerEntity.dynamicValue,\n                synonyms = synonyms\n            };\n\n            mergedArray.Add(map);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            HashSet<string> synonyms = new HashSet<string>(providerEntity.synonyms);\n\n            if (!map.ContainsKey(providerEntity.value))\n            {\n                WitResponseClass responseClass = new WitResponseClass();\n                responseClass[\"value\"] = providerEntity.value;\n                responseClass[\"synonyms\"] = new WitResponseArray(synonyms);\n                mergedArray.Add(responseClass);\n                map.Add(providerEntity.value, responseClass);\n            }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "HashSet<string> synonyms = new HashSet<string>(providerEntity.synonyms);\n            foreach (string synonym in synonyms)\n            {\n                if (!map.ContainsKey(synonym))\n                {\n                    map[synonym] = new WitResponseClass();\n                }\n                map[synonym][\"value\"] = synonym;\n                mergedArray.Add(map[synonym]);\n            }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "HashSet<string> synonyms = new HashSet<string>();\n            foreach (var synonym in providerEntity.synonyms)\n            {\n                synonyms.Add(synonym);\n            }\n            map.Add(providerEntity.value, new WitResponseClass(synonyms));\n            mergedArray.Add(map);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 602,
+        "completion_tokens": 404,
+        "total_tokens": 1006
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

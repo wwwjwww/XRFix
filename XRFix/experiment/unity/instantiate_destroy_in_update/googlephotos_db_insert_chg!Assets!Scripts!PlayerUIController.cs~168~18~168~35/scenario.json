@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "prompt_template": [
+        "add_prompt"
+    ],
+    "original_dir": "./experiment/unity/instantiate_destroy_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\OculusGooglePhotos-main\\OculusGooglePhotos-main\\OculusGooglePhotos-Unity",
+    "exp_dir": "googlephotos_db_insert_chg!Assets!Scripts!PlayerUIController.cs~168~18~168~35",
+    "unity_special_name": "Instantiate/Destroy in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instan_destroy_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate(\u00ef\u00bc\u2030 and Destroy() in Update() method.",
+        "file_name": "/Assets/Scripts/PlayerUIController.cs",
+        "start_line": "168",
+        "start_column": "18",
+        "end_line": "168",
+        "end_column": "35",
+        "add_file_name": "/Assets/Scripts/PlayerUIController.cs",
+        "add_start_line": "197",
+        "add_start_column": "17",
+        "add_end_line": "197",
+        "add_end_column": "25"
+    },
+    "include_addition": true
+}

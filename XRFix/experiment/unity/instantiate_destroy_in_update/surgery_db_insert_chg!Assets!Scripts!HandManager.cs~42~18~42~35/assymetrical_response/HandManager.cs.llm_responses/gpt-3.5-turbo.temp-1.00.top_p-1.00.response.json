@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBGU3FFMSivQZH85iy5cKhZPWypv",
+    "object": "chat.completion",
+    "created": 1723653354,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "if (!instantiate_gobj && timer >= timeLimit)\n{\n    a2 = GameObject.Instantiate(gobj2);\n    timer = 0;\n    instantiate_gobj = true;\n}\nif (instantiate_gobj && timer >= timeLimit)\n{\n    var obj2 = a2.AddComponent<Slice>();\n    obj2.DisposeObj();\n    timer = 0;\n    instantiate_gobj = false;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "void Start()\n{\n    ovrHand = hand.GetComponent<OVRHand>();\n    rb1 = hand.GetComponent<Rigidbody>();\n}\n\nvoid Update()\n{\n    if (ovrHand.IsTracked)\n    {\n        hand.transform.GetChild(0).gameObject.SetActive(true);\n        if (controller != null)\n        {\n            controller.SetActive(false);\n        }\n    }\n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n    {\n        if (controller != null)\n        {\n            controller.SetActive(true);\n        }\n        hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n    if (rb1 != null)\n    {\n        rb1.transform.Rotate(new Vector3(30, 0, 0));\n    }\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj2 = a2.AddComponent<Slice>();\n        obj2.DisposeObj();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "protected ObjectPool objectPool;\n\nvoid Start()\n{\n    objectPool = new ObjectPool(gobj2);\n}\n\nvoid Update()\n{\n    if (ovrHand.IsTracked)\n    {\n        hand.transform.GetChild(0).gameObject.SetActive(true);\n        controller.SetActive(false);\n    }\n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n    {\n        controller.SetActive(true);\n        hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n\n    rb1.transform.Rotate(new Vector3(30, 0, 0) * Time.deltaTime);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = objectPool.GetObject();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        objectPool.ReleaseObject(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    rb1 = GetComponent<Rigidbody>();\n    gobj2 = Instantiate(a2);\n    gobj2.SetActive(false);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Update()\n{\n    if (ovrHand.IsTracked)\n    {\n        hand.transform.GetChild(0).gameObject.SetActive(true);\n        controller.SetActive(false);\n    }\n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n    {\n        controller.SetActive(true);\n        hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n\n    rb1.transform.Rotate(30, 0, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        rb2 = a2.GetComponent<Rigidbody>();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj2 = a2.AddComponent<Slice>();\n        obj2.DisposeObj();\n        Dispose(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 827,
+        "completion_tokens": 750,
+        "total_tokens": 1577
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

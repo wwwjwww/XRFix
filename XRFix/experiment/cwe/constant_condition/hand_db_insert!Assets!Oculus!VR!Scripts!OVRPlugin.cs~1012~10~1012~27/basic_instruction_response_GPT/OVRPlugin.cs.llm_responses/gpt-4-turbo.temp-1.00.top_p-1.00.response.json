@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0oJVdmyaZEGjY1kcxZ0D1RfpqSm",
+    "object": "chat.completion",
+    "created": 1724328151,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic enum BoneId\n{\n    // Max = ((int)Hand_End > 50) ? (int)Hand_End : 50,\n    Max = 50, // Assuming Hand_End is not defined and we're defaulting Max to 50\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tMax = (int)Hand_End,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nMax = (int)Hand_End,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic enum BoneId\n{\n    Max = 50,\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nMax = ((int)Hand_End > 50) ? (int)Hand_End : 50,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 164,
+        "completion_tokens": 130,
+        "total_tokens": 294
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

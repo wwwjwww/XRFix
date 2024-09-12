@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvQTBeAwNaRkskwzmVEfIPBl2ONR",
+    "object": "chat.completion",
+    "created": 1722400829,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    rb.transform.Translate(0, 0, Time.deltaTime);\n    \n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n  }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void FixedUpdate()\n    {\n        rb.transform.Translate(0, 0, Time.deltaTime);\n\n        if (resetScrub) scrubReset();\n\n        scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n        if (!playing)\n        {\n            return;\n        }\n\n        tex.SetPixels32(wavepixels);\n        tex.Apply(false);\n\n        if (curTape != null)\n        {\n            if (curTape.inDeck())\n            {\n                createNewTape();\n            }\n        }\n\n        scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void FixedUpdate() {\n        rb.MovePosition(rb.position + new Vector3(0, 0, Time.deltaTime));\n\n        if (resetScrub) scrubReset();\n\n        scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n        if (!playing) {\n            return;\n        }\n\n        tex.SetPixels32(wavepixels);\n        tex.Apply(false);\n\n        if (curTape != null) {\n            if (curTape.inDeck()) {\n                createNewTape();\n            }\n        }\n\n        scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    rb.transform.Translate(0, 0, Time.fixedDeltaTime);\n\n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Move this function in FixedUpdate() methods.\nvoid FixedUpdate() {\n    rb.transform.Translate(0, 0, Time.deltaTime);\n\n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n  }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1197,
+        "completion_tokens": 707,
+        "total_tokens": 1904
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

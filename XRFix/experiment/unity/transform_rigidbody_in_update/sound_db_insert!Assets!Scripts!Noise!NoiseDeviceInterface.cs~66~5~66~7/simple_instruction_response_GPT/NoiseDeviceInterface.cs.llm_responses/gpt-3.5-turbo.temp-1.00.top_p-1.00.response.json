@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yz6orCcu2JKoqECjLZqpXCnx8HGF",
+    "object": "chat.completion",
+    "created": 1724321610,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n      gen.updated = false;\n      GenerateRandomTex();\n      tex.SetPixels32(texpixels);\n      tex.Apply(false);\n\n      texrend.material.mainTexture = tex;\n      texrend.material.SetTexture(Shader.PropertyToID(\"_Illum\"), tex);\n      texrend.material.SetColor(\"_TintColor\", Color.white);\n      texrend.material.SetFloat(\"_EmissionGain\", .4f);\n    }\n\n    gen.updatePercent(speedDial.percent);\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  protected new Rigidbody rb2;\n  \n  void Update() {\n        rb2.transform.Translate(0, 1, Time.deltaTime);\n        \n        if (gen.updated || output.near == null) {\n          gen.updated = false;\n          GenerateRandomTex();\n          tex.SetPixels32(texpixels);\n          tex.Apply(false);\n        }\n    \n        gen.updatePercent(speedDial.percent);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "void Update() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n      gen.updated = false;\n      GenerateRandomTex();\n      tex.SetPixels32(texpixels);\n      tex.Apply(false);\n\n      texrend.material.mainTexture = tex;\n      texrend.material.SetTexture(Shader.PropertyToID(\"_Illum\"), tex);\n      texrend.material.SetColor(\"_TintColor\", Color.white);\n      texrend.material.SetFloat(\"_EmissionGain\", .4f);\n    }\n\n    gen.updatePercent(speedDial.percent);\n  }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n  void Update() {\n    if (rb2 != null) {\n      rb2.transform.Translate(new Vector3(0, 1, Time.deltaTime));\n    }\n    \n    if (gen.updated || output.near == null) {\n      gen.updated = false;\n      GenerateRandomTex();\n      tex.SetPixels32(texpixels);\n      tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n        texrend.material.mainTexture = tex;\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 492,
+        "completion_tokens": 503,
+        "total_tokens": 995
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

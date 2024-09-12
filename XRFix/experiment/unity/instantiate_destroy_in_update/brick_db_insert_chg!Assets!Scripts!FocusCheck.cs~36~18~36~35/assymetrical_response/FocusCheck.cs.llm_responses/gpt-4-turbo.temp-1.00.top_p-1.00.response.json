@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLFVbH6DEBKS9mmbqzPCCk5pea7s",
+    "object": "chat.completion",
+    "created": 1723691733,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateObject()\n{\n    if (!instantiate_gobj)\n    {\n        a2 = Instantiate(gobj2);\n        instantiate_gobj = true;\n    }\n}\n\nprivate void DestroyObject()\n{\n    if (instantiate_gobj)\n    {\n        Destroy(a2);\n        a2 = null;\n        instantiate_gobj = false;\n    }\n}\n\nvoid Start()\n{\n    InstantiateObject();\n}\n\nvoid Update()\n{\n    rb10.transform.Translate(4, 0, Time.deltaTime);\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n\n    timer += Time.deltaTime;\n\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        DestroyObject();\n        timer = 0;\n    }\n    else if (!instantiate_gobj && timer >= timeLimit)\n    {\n        InstantiateObject();\n        timer = 0;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Add an object pool manager to handle instantiation and destruction.\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Start()\n{\n    // Pre-instantiate a certain number of GameObjects and store them in the object pool.\n    for (int i = 0; i < 10; i++) // Assuming a pool size of 10 for demonstration.\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    rb10.transform.Translate(4, 0, Time.deltaTime);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a2 = objectPool.Dequeue();\n            a2.SetActive(true);\n        }\n        else\n        {\n            // Pool is empty, instantiate a new object.\n            a2 = Instantiate(gobj2);\n        }\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a2 != null)\n        {\n            a2.SetActive(false);\n            objectPool.Enqueue(a2);\n        }\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n[SerializeField] private GameObject gobj2Prefab;\nprivate Queue<GameObject> objectPool;\nprivate bool isObjectActive = false;\n\nvoid Start()\n{\n    objectPool = new Queue<GameObject>();\n    for (int i = 0; i < 10; i++) // Assuming a pool of 10 objects\n    {\n        GameObject obj = Instantiate(gobj2Prefab);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    rb10.transform.Translate(4, 0, Time.deltaTime);\n\n    timer += Time.deltaTime;\n\n    if (!isObjectActive && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            GameObject obj = objectPool.Dequeue();\n            obj.SetActive(true);\n            isObjectActive = true;\n        }\n        timer = 0;\n    }\n    else if (isObjectActive && timer >= timeLimit)\n    {\n        if (a2 != null)\n        {\n            a2.SetActive(false);\n            objectPool.Enqueue(a2);\n            isObjectActive = false;\n        }\n        timer = 0;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    PoolGobj2();\n}\n\nprivate void PoolGobj2()\n{\n    a2 = Instantiate(gobj2);\n    a2.SetActive(false);\n}\n\nvoid Update()\n{\n    rb10.transform.Translate(4, 0, Time.deltaTime);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a2.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Start()\n{\n    rb10 = GetComponent<Rigidbody>();\n    CreateObjectPool();\n}\n\nprivate void CreateObjectPool()\n{\n    // Assuming gobj2 is a prefab that you want to pool\n    a2 = Instantiate(gobj2);\n    a2.SetActive(false);\n}\n\nprivate void Update()\n{\n    rb10.transform.Translate(4 * Time.deltaTime, 0, 0, Space.World);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a2.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 396,
+        "completion_tokens": 1103,
+        "total_tokens": 1499
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0niMIjfSA7TtZcuUAEYttFfbUkZ",
+    "object": "chat.completion",
+    "created": 1724328114,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\treturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\treturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\treturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic static bool IsValidOpenVRDevice(uint deviceId)\n{\n\treturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static bool IsValidOpenVRDevice(uint deviceId)\n{\n    return (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 10305,
+        "completion_tokens": 143,
+        "total_tokens": 10448
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

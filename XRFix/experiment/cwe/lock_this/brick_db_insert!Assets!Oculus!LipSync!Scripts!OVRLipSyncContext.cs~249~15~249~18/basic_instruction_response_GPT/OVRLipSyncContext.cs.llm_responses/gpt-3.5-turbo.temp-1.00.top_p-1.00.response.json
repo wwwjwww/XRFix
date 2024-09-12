@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzk7hgH0ThzrD0OX5KLuSHSW0txo",
+    "object": "chat.completion",
+    "created": 1724324047,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid Start()\n{\n    if (enableTouchInput)\n    {\n        OVRTouchpad.AddListener(LocalTouchEventCallback);\n    }\n\n    OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n    if (consoles.Length > 0)\n    {\n        hasDebugConsole = true;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (ovrLipSyncContext)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n// FIXED CODE:\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (this)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "public void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (this)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (data)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1308,
+        "completion_tokens": 407,
+        "total_tokens": 1715
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

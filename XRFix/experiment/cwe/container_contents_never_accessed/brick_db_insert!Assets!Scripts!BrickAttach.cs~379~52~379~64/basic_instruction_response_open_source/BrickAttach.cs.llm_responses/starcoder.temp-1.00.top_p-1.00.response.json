@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "using System.Collections.Generic;\nusing UnityEngine;\n\npublic class BrickAttach : MonoBehaviour\n{\n    private static readonly Dictionary<BrickAttach, bool> s_AttachBuffer = new Dictionary<BrickAttach, bool>();\n\n    //...\n}",
+    "code_repairing_1": "using System.Collections.Generic;\nusing UnityEngine;\n\npublic class BrickAttach : MonoBehaviour\n{\n    private static readonly Dictionary<BrickAttach, bool> _attachBuffer = new Dictionary<BrickAttach, bool>();\n\n    private void Update()\n    {",
+    "code_repairing_2": "using System.Diagnostics.CodeAnalysis;\nusing Random = UnityEngine.Random;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing System.Linq;\nusing System;\npublic class BrickAttach : MonoBehaviour {\n\n    private static readonly Dictionary<",
+    "code_repairing_3": "using System.Collections.Generic;\nusing UnityEngine;\n\npublic class BrickAttach : MonoBehaviour\n{\n    private static readonly Dictionary<BrickAttach, bool> _attachBuffer = new Dictionary<BrickAttach, bool>();\n\n    private void Update()\n    {",
+    "code_repairing_4": "using System;\nusing System.Collections.Generic;\n\nnamespace BrickAttach {\n    public class BrickAttach : MonoBehaviour {\n        private static Dictionary<BrickAttach, bool> _buffer = new Dictionary<BrickAttach, bool>();\n        private void Aw"
+}

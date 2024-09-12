@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wKv4Uc8Nw2kB8rC2FQGCsWzVUmMK",
+    "object": "chat.completion",
+    "created": 1723690466,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!(hitInfo.collider.GetComponent<IgnoreTeleportTrace>() is null))\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!(hitInfo.collider.GetComponent<IgnoreTeleportTrace>() != null))\n```\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                    if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1657,
+        "completion_tokens": 103,
+        "total_tokens": 1760
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

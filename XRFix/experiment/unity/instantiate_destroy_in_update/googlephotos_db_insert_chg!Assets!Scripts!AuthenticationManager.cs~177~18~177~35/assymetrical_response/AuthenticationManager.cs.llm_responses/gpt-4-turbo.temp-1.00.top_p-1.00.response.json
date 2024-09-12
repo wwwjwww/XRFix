@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLGytxHLP4CdJ6pvpv1C7USnBxLm",
+    "object": "chat.completion",
+    "created": 1723691824,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Object pool to store reusable GameObject instances\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    // Pre-instantiate GameObjects and store them in the object pool\n    for (int i = 0; i < 10; i++) // Assuming 10 as the pool size\n    {\n        GameObject pooledObj = Instantiate(gobj2);\n        pooledObj.SetActive(false); // Initially disable them\n        objectPool.Enqueue(pooledObj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a2 = objectPool.Dequeue();\n            a2.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else\n        {\n            // Log or handle the case where the pool is empty\n            Debug.LogWarning(\"Object Pool is empty\");\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    b2.SetActive(false);\n    objectPool.Enqueue(b2);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Object Pool Initialized in Start() and used in Update()\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Start()\n{\n    // Existing Start() code...\n\n    // Initialize Object Pool\n    for (int i = 0; i < objectPoolCapacity; i++) // objectPoolCapacity should be set based on the maximum number of objects you need at once\n    {\n        GameObject pooledObject = Instantiate(gobj2);\n        pooledObject.SetActive(false);\n        objectPool.Enqueue(pooledObject);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a2 = objectPool.Dequeue();\n            a2.SetActive(true);\n            instantiate_gobj = true;\n            timer = 0;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        instantiate_gobj = false;\n        timer = 0;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    b2.SetActive(false); \n    objectPool.Enqueue(b2);\n}\n```\nPlease note that the code snippet above assumes you have a variable named objectPoolCapacity which dictates the number of objects to instantiate for the pooling. Remember to define and set it appropriately as per your needs."
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\nprivate bool isObjectPoolInitialized = false;\n\nvoid InitializeObjectPool()\n{\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n    isObjectPoolInitialized = true;\n}\n\nvoid Start()\n{\n    // Other start code ...\n\n    InitializeObjectPool();\n}\n\nprivate void Update()\n{\n    if (!isObjectPoolInitialized)\n        return;\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a2 = objectPool.Dequeue();\n            a2.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a2 != null)\n        {\n            a2.SetActive(false);\n            objectPool.Enqueue(a2);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> pooledObjects;\n[SerializeField] private int poolSize = 5;\n\nprivate void Awake()\n{\n    pooledObjects = new Queue<GameObject>();\n    \n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        pooledObjects.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (pooledObjects.Count > 0)\n        {\n            a2 = pooledObjects.Dequeue();\n            a2.SetActive(true);\n            instantiate_gobj = true;\n        }\n\n        timer = 0;\n    }\n\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a2.SetActive(false);\n        pooledObjects.Enqueue(a2);\n        instantiate_gobj = false;\n        timer = 0;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObjectPool gameObjectPool; // A pool for managing the instantiated objects\n\n// The GameObjectPool utility class code should be somewhere in the project. This is an example definition:\npublic class GameObjectPool\n{\n    private Queue<GameObject> pool;\n    private GameObject prefab;\n    private Transform parent;\n\n    public GameObjectPool(GameObject prefab, int initialSize, Transform parent = null)\n    {\n        this.prefab = prefab;\n        this.pool = new Queue<GameObject>(initialSize);\n        this.parent = parent;\n\n        for (int i = 0; i < initialSize; i++)\n        {\n            GameObject obj = GameObject.Instantiate(prefab, parent);\n            obj.SetActive(false);\n            pool.Enqueue(obj);\n        }\n    }\n\n    public GameObject GetObject()\n    {\n        if (pool.Count > 0)\n        {\n            var obj = pool.Dequeue();\n            obj.SetActive(true);\n            return obj;\n        }\n        else\n        {\n            GameObject obj = GameObject.Instantiate(prefab, parent);\n            obj.SetActive(true);\n            return obj;\n        }\n    }\n\n    public void ReleaseObject(GameObject obj)\n    {\n        obj.SetActive(false);\n        pool.Enqueue(obj);\n    }\n}\n\n// Initialization of the object pool within the Start() method of AuthenticationManager class\nvoid Start()\n{\n    // existing code...\n    \n    gameObjectPool = new GameObjectPool(gobj2, 10); // Replace 10 with your desired initial pool size\n}\n\n// Modification of Update() method and Release method using the object pool\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = gameObjectPool.GetObject(); // Get an object from the pool\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        gameObjectPool.ReleaseObject(a2); // Release the object back to the pool\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1281,
+        "completion_tokens": 1549,
+        "total_tokens": 2830
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

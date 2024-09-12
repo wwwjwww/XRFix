@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL6AgJwmJA9XWEI5XqFBGb0wiRs3",
+    "object": "chat.completion",
+    "created": 1723691154,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<InputDevice> inputDevices = new List<InputDevice>();\n\nvoid Update ()\n{\n    // Rest of the Update() method... (existing code remains unchanged)\n    \n    // The allocation is moved out of the Update() method. Use \"inputDevices\" inside Update without allocating a new List each frame.\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<InputDevice> inputDevices;\n\nvoid Start ()\n{\n    inputDevices = new List<InputDevice>();\n\n    // Existing Start() code\n}\n\nvoid Update ()\n{\n    inputDevices.Clear();\n\n    // Existing Update() code\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<InputDevice> inputDevices = new List<InputDevice>();\n\nvoid Start()\n{\n    // ... existing Start() code ...\n}\n\nvoid Update()\n{\n    // ... existing Update() code ...\n\n    inputDevices.Clear();\n    InputDevices.GetDevices(inputDevices);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<InputDevice> inputDevices = new List<InputDevice>();\n\nvoid Start()\n{\n  // Existing code in Start method\n}\n\nvoid Update()\n{\n  inputDevices.Clear();\n  InputDevices.GetDevices(inputDevices);\n  // Rest of the Update method\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<InputDevice> inputDevices = new List<InputDevice>();\nvoid Update ()\n{\n    inputDevices.Clear();\n    InputDevices.GetDevices(inputDevices);\n    // ...Rest of the Update code remains the same\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 477,
+        "completion_tokens": 280,
+        "total_tokens": 757
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

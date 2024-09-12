@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBGZXM9HYtLzNVSQYmD3w4Lp7vOP",
+    "object": "chat.completion",
+    "created": 1723653359,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Start()\n{\n    rb2 = GetComponent<Rigidbody>();\n    gobj7 = Resources.Load<GameObject>(\"PathToPrefab\");\n}\n\nprivate void Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "\nvoid Start()\n{\n    var smr = gameObject.GetComponent<SkinnedMeshRenderer>();\n    mesh = new Mesh();\n    smr.BakeMesh(mesh);\n    smr.sharedMesh = mesh;\n    meshCollider = gameObject.GetComponent<MeshCollider>();\n    meshCollider.sharedMesh = mesh;\n\n    rb2 = GetComponent<Rigidbody>();\n    gobj7 = Resources.Load<GameObject>(\"PrefabName\");\n}\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit){\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit ){\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (Physics.Raycast(ray, out hit))\n        {\n\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int[] hitTriangles = mesh.triangles.Skip(hit.triangleIndex * 3).Take(3).ToArray();\n\n            triangles.RemoveAll(triangle => hitTriangles.Contains(triangle));\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\npublic void Dispose(GameObject obj7)\n{\n    Destroy(obj7);\n}\nPublic void DisposeObj(){\n    Destroy(gameObject);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "\nprivate void Awake()\n{\n    rb2 = GetComponent<Rigidbody>();\n    gobj7 = Resources.Load<GameObject>(\"PrefabName\");\n    gobj = Resources.Load<GameObject>(\"PrefabNameToDestroy\");\n}\n\nprivate void Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n\npublic void Dispose(GameObject obj7)\n{\n    Destroy(obj7);\n}\n\nprivate void OnMouseDown()\n{\n    RaycastHit hit;\n    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n    if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n    {\n        List<int> triangles = new List<int>();\n        triangles.AddRange(mesh.triangles);\n\n        int startIndex = hit.triangleIndex * 3;\n\n        triangles.RemoveRange(startIndex, 3);\n\n        mesh.triangles = triangles.ToArray();\n        meshCollider.sharedMesh = mesh;\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = ObjectPooler.Instance.GetPooledObject(); // Using object pool instead of Instantiate\n        a7.transform.position = transform.position;\n        a7.transform.rotation = transform.rotation;\n        a7.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        ObjectPooler.Instance.ReturnPooledObject(a7); // Return object to pool instead of Destroy\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    rb2 = gameObject.GetComponent<Rigidbody>();\n    gobj7 = Resources.Load<GameObject>(\"PrefabName\");\n}\n\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 762,
+        "completion_tokens": 1197,
+        "total_tokens": 1959
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

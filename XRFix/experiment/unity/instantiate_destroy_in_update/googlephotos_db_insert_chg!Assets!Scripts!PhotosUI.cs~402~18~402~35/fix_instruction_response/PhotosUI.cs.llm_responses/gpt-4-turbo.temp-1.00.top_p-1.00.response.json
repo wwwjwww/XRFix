@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9rKAS9wlS0qgfV0txPFqAXX85kkVD",
+    "object": "chat.completion",
+    "created": 1722495936,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    for(int i = 0; i < 10; i++) // Assuming a pool size of 10\n    {\n        GameObject obj = Instantiate(gobj3);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nprivate void GetFromPool()\n{\n    if (objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        obj.SetActive(true);\n        a3 = obj;\n    }\n}\n\nprivate void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        GetFromPool();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\nprivate Queue<GameObject> gobj3Pool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    InitializePool();\n}\n\nprivate void InitializePool()\n{\n    for (int i = 0; i < 10; i++) // Pool size set arbitrarily to 10, adjust as needed\n    {\n        var obj = Instantiate(gobj3);\n        obj.SetActive(false);\n        gobj3Pool.Enqueue(obj);\n    }\n}\n\nprivate GameObject GetFromPool()\n{\n    if (gobj3Pool.Count > 0)\n    {\n        var obj = gobj3Pool.Dequeue();\n        obj.SetActive(true);\n        return obj;\n    }\n    return Instantiate(gobj3); // Fallback in case the pool runs empty\n}\n\nprivate void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    gobj3Pool.Enqueue(obj);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = GetFromPool();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate ObjectPool<GameObject> gameObjectPool;\n\nprivate void Awake()\n{\n    gameObjectPool = new ObjectPool<GameObject>(() =>\n    {\n        return Instantiate(gobj3);\n    }, obj =>\n    {\n        obj.SetActive(true);\n    }, obj =>\n    {\n        obj.SetActive(false);\n    }, obj =>\n    {\n        Destroy(obj);\n    }, true, 1, 1);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = gameObjectPool.Get();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        gameObjectPool.Release(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE: Introduce Object Pooling\nprivate Queue<GameObject> pool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    InitializePool();\n}\n\nprivate void InitializePool()\n{\n    for (int i = 0; i < 10; i++)  // Assuming a pool size of 10, adjust as necessary\n    {\n        GameObject pooledObject = Instantiate(gobj3);\n        pooledObject.SetActive(false);\n        pool.Enqueue(pooledObject);\n    }\n}\n\nprivate GameObject GetFromPool()\n{\n    if (pool.Count > 0)\n    {\n        GameObject pooledObject = pool.Dequeue();\n        pooledObject.SetActive(true);\n        return pooledObject;\n    }\n    else\n    {\n        // Optionally expand pool if it's empty\n        GameObject pooledObject = Instantiate(gobj3);\n        return pooledObject;\n    }\n}\n\nprivate void ReturnToPool(GameObject obj3)\n{\n    obj3.SetActive(false);\n    pool.Enqueue(obj3);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = GetFromPool();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void Awake()\n{\n    // Adjust pool size as needed\n    int poolSize = 10;\n    for(int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj3);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer+=Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if(objectPool.Count > 0)\n        {\n            a3 = objectPool.Dequeue();\n            a3.SetActive(true);\n            timer = 0f;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a3);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n\npublic void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2706,
+        "completion_tokens": 1320,
+        "total_tokens": 4026
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

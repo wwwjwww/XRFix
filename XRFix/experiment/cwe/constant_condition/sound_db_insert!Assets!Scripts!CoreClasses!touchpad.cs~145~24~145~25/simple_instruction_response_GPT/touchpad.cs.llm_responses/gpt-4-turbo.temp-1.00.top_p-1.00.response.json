@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzIvHQM1dcPdwa5VqasJ3G1fQtDy",
+    "object": "chat.completion",
+    "created": 1724322361,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif(!on || (on && masterControl.instance?.tooltipsOn == true))\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!on || (on && (masterControl.instance == null || masterControl.instance.tooltipsOn)))\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif(!on || (on && masterControl.instance != null && masterControl.instance.tooltipsOn))\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif(!on || (on && masterControl.instance && masterControl.instance.tooltipsOn))\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            if(!on || (on && (masterControl.instance == null || masterControl.instance.tooltipsOn)))\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1029,
+        "completion_tokens": 125,
+        "total_tokens": 1154
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

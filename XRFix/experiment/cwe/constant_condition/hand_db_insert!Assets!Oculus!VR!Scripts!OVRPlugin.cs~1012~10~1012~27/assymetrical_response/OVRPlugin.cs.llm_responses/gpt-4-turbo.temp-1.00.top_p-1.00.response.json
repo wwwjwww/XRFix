@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wKv1A4Av35xAFaT4oNHVDo6sPUgg",
+    "object": "chat.completion",
+    "created": 1723690463,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tMax = 50,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tMax = Hand_End,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tMax = 50,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\n\t\tMax = Hand_End,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tMax = 50,\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 6977,
+        "completion_tokens": 60,
+        "total_tokens": 7037
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

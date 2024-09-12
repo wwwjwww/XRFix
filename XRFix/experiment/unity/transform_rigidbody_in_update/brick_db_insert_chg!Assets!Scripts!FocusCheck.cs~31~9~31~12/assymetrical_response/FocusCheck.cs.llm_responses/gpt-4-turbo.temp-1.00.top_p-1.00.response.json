@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLAJitbjE2w5LnobAMGNttscU1Ka",
+    "object": "chat.completion",
+    "created": 1723691411,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    if (rb10 != null)\n    {\n        rb10.MovePosition(rb10.position + new Vector3(4, 0, 0) * Time.fixedDeltaTime);\n    }\n\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n}\n\nvoid Update()\n{\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    if (rb10 != null)\n    {\n        rb10.MovePosition(rb10.position + new Vector3(4, 0, 0) * Time.fixedDeltaTime);\n    }\n\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n}\n\nprivate void Update()\n{\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    rb10.MovePosition(rb10.position + new Vector3(4, 0, 0) * Time.fixedDeltaTime);\n\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    rb10.MovePosition(rb10.position + Vector3.right * 4 * Time.fixedDeltaTime);\n\n    timer += Time.fixedDeltaTime;\n    \n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n}\n\nvoid Update()\n{\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    rb10.MovePosition(rb10.position + new Vector3(4, 0, 0) * Time.fixedDeltaTime);\n    \n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    text.text = $\"input: {OVRManager.hasInputFocus} - VR: {OVRManager.hasVrFocus}\";\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 367,
+        "completion_tokens": 764,
+        "total_tokens": 1131
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

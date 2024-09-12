@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF6vVvNWEJuyCsWDMfdEbyrWb6ES",
+    "object": "chat.completion",
+    "created": 1722238169,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n//private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed the SubscriberClearers collection as it is not used in the code\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // Removed collection as it is no longer needed\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The SubscriberClearers collection has been removed as it is not used.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed unnecessary collection SubscriberClearers as it was unused in the code.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 721,
+        "completion_tokens": 97,
+        "total_tokens": 818
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

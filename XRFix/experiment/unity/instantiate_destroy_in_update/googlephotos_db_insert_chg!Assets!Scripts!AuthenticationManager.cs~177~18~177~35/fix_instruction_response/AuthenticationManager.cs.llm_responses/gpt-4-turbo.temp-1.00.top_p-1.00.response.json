@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9rKAA9KUh0OkuZz62fAaQXtG4pgdX",
+    "object": "chat.completion",
+    "created": 1722495918,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    InitializeObjectPool();\n}\n\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void InitializeObjectPool()\n{\n    for (int i = 0; i < 10; i++) // assuming a pool of 10 GameObjects is sufficient\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nprivate GameObject GetFromPool()\n{\n    if (objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        obj.SetActive(true);\n        return obj;\n    }\n    else\n    {\n        // Optionally, instantiate new objects if the pool is empty\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(true);\n        return obj;\n    }\n}\n\nprivate void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = GetFromPool();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> gobjPool = new Queue<GameObject>();\n\nvoid Awake()\n{\n    for(int i = 0; i < 10; i++) // Adjust pool size as needed\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        gobjPool.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobjPool.Count > 0)\n        {\n            a2 = gobjPool.Dequeue();\n            a2.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    b2.SetActive(false);\n    gobjPool.Enqueue(b2);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\nprivate Queue<GameObject> gobjPool;\n[SerializeField] private int poolSize = 10;\n\nprivate void Awake()\n{\n    gobjPool = new Queue<GameObject>();\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        gobjPool.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobjPool.Count > 0)\n        {\n            GameObject obj = gobjPool.Dequeue();\n            obj.SetActive(true);\n            a2 = obj;\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    b2.SetActive(false);\n    gobjPool.Enqueue(b2);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    if (Instance == null)\n    {\n        Instance = this;\n        DontDestroyOnLoad(gameObject);\n    }\n    else\n    {\n        Destroy(gameObject);\n        return;\n    }\n\n    InitializeObjectPool();\n}\n\nprivate Queue<GameObject> objectPool;\n\nprivate void InitializeObjectPool()\n{\n    objectPool = new Queue<GameObject>();\n    for (int i = 0; i < 10; i++) // 10 can be replaced with the desired number of pre-instantiated objects.\n    {\n        GameObject obj = Instantiate(gobj2);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit && objectPool.Count > 0)\n    {\n        a2 = objectPool.Dequeue();\n        a2.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    b2.SetActive(false);\n    objectPool.Enqueue(b2);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> pool = new Queue<GameObject>();\nprivate GameObject poolParent;\n\nvoid Awake()\n{\n    poolParent = new GameObject(\"Pool\");\n}\n\nprivate GameObject GetFromPool()\n{\n    if (pool.Count > 0)\n    {\n        return pool.Dequeue();\n    }\n    return Instantiate(gobj2, poolParent.transform);\n}\n\nprivate void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    pool.Enqueue(obj);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = GetFromPool();\n        a2.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1276,
+        "completion_tokens": 1304,
+        "total_tokens": 2580
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

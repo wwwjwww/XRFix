@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yLb25iQsEkrABghNQWAPejErWwVh",
+    "object": "chat.completion",
+    "created": 1724169724,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private GameObject obj3;\n\nprivate void Start()\n{\n    // Instantiate the GameObject once at the start\n    obj3 = Instantiate(gobj3);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        // Destroy the instantiated GameObject after the time limit is reached\n        Destroy(obj3);\n        instantiate_gobj = false;\n    }\n    else if (!instantiate_gobj && timer >= timeLimit)\n    {\n        // Instantiate the GameObject if not already instantiated and the time limit is reached\n        obj3 = Instantiate(gobj3);\n        instantiate_gobj = true;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private void Awake()\n{\n    gobj3 = Instantiate(photoEntryPrefab, scrollViewContent);\n    gobj3.SetActive(false);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        a3.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "\n```csharp\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayVideoOnNextFrame)\n    {\n        playerUIController.HideLoader();\n        photoDisplayer.DisplayVideo();\n        displayVideoOnNextFrame = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2689,
+        "completion_tokens": 708,
+        "total_tokens": 3397
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

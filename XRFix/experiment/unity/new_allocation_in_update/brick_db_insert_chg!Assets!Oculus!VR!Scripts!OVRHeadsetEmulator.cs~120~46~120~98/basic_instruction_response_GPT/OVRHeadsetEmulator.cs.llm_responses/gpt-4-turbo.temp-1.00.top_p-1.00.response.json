@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0zWMZdQukaXtKxayzqUFaH4ikjQ",
+    "object": "chat.completion",
+    "created": 1724328846,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\nprivate Vector3 headPoseOffset = Vector3.zero;\n\nvoid Update()\n{\n    headPoseOffset.x = emulatedRoll;\n    headPoseOffset.y = emulatedYaw;\n    headPoseOffset.z = emulatedPitch;\n    manager.headPoseRelativeOffsetRotation = headPoseOffset;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\tprivate Vector3 headPoseOffset;\n\n\tvoid Start() {\n\t\theadPoseOffset = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 headPoseRelativeOffsetRotationCache;\n\nvoid Start() {\n    headPoseRelativeOffsetRotationCache = new Vector3(0, 0, 0);\n}\n\nvoid Update() {\n    headPoseRelativeOffsetRotationCache.x = emulatedRoll;\n    headPoseRelativeOffsetRotationCache.y = emulatedYaw;\n    headPoseRelativeOffsetRotationCache.z = emulatedPitch;\n    manager.headPoseRelativeOffsetRotation = headPoseRelativeOffsetRotationCache;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 headPoseOffset = Vector3.zero;\n\nvoid Update () {\n    headPoseOffset.x = emulatedRoll;\n    headPoseOffset.y = emulatedYaw;\n    headPoseOffset.z = emulatedPitch;\n    manager.headPoseRelativeOffsetRotation = headPoseOffset;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\tprivate Vector3 headPoseOffset; // Define this variable outside of the Update method\n\n\tvoid Start() {\n\t\t// Initialize the headPoseOffset only once at the start or when necessary\n\t\theadPoseOffset = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 152,
+        "completion_tokens": 326,
+        "total_tokens": 478
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

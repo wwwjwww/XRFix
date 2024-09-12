@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzOiMnz1rIwOjKtYlY9OFMkl1MNL",
+    "object": "chat.completion",
+    "created": 1724322720,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class BrainPart2 : MonoBehaviour\n{\n    private Vector3 originalPos;\n    public static TextMesh Text;\n\n    private bool isThisRed = false;\n    private bool inTransition = false;\n\n    private List<MeshRenderer> rends;\n\n    void Start()\n    {\n        originalPos = transform.position;\n        rends = new List<MeshRenderer>(GetComponentsInChildren<MeshRenderer>());\n    }\n\n    // Rest of your code for brainPart2 logic...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class brainPart2 : MonoBehaviour\n{\n    private Vector3 originalPos;\n    public static TextMesh text;\n\n    private bool isThisRed;\n    private bool inTransition;\n\n    private List<MeshRenderer> rends;\n    private void Start()\n    {\n        originalPos = transform.position;\n        text = GetComponent<TextMesh>();\n        rends = new List<MeshRenderer>(GetComponentsInChildren<MeshRenderer>());\n    }\n    \n    private void Update()\n    {\n        if (Input.GetKeyDown(KeyCode.R))\n        {\n            isThisRed = !isThisRed;\n            foreach (var rend in rends)\n            {\n                rend.material.color = isThisRed ? Color.red : Color.white;\n            }\n        }\n    }\n    \n    public void Move(Vector3 targetPos)\n    {\n        if(!inTransition)\n        {\n            inTransition = true;\n            transform.DOMove(targetPos, 1f).OnComplete(() => \n            {\n                inTransition = false;\n                transform.position = targetPos;\n            });\n        }\n    }\n    \n    public void ResetPosition()\n    {\n        Move(originalPos);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing TMPro; // this namespace is probably what you need for TextMesh reference\n\npublic class BrainPart2 : MonoBehaviour // Class names should be PascalCase\n{\n    private Vector3 originalPos;\n    public static TextMeshPro text; // Changed from TextMesh to TextMeshPro if using TMPro\n\n    private bool isThisRed = false;\n    private bool inTransition = false;\n\n    // We've uncommented the private field and fixed the type in accordance with unity naming conventions\n    private List<MeshRenderer> rends = new List<MeshRenderer>(); // Initialized to prevent NullReferenceException\n\n    // Rest of the class code...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private List<MeshRenderer> rends;\n\n    void Start()\n    {\n        rends = new List<MeshRenderer>(GetComponentsInChildren<MeshRenderer>());\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing TMPro; // Change to using TextMeshPro if TextMesh is supposed to be from the TextMeshPro package\n\npublic class BrainPart2 : MonoBehaviour // Class names should start with an uppercase letter by convention\n{\n    private Vector3 originalPos;\n    public static TextMeshPro text; // Assuming TextMesh is from TextMeshPro package, otherwise leave as TextMesh if it is the built-in Unity component\n\n    private bool isThisRed = false;\n    private bool inTransition = false;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 135,
+        "completion_tokens": 608,
+        "total_tokens": 743
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

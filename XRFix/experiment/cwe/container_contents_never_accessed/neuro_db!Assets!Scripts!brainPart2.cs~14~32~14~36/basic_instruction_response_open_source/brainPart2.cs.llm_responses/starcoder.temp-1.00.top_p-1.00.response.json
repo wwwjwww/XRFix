@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "I hope I understood correctly.",
+    "code_repairing_1": "using System.Collections.Generic;",
+    "code_repairing_2": "using System.Collections.Generic;",
+    "code_repairing_3": "private List<MeshRenderer> rend",
+    "code_repairing_4": "void Start()\n    {\n        original"
+}

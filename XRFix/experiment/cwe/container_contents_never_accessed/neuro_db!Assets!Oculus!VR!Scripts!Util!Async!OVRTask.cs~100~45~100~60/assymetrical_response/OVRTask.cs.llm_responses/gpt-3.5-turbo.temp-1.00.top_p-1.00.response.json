@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wArJvwEccb6J5BlpmLfukpVHUihP",
+    "object": "chat.completion",
+    "created": 1723651793,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "// Remove the unused HashSet\n// private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "// Container contents are never accessed, so removing the collection\n// private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 143,
+        "completion_tokens": 90,
+        "total_tokens": 233
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

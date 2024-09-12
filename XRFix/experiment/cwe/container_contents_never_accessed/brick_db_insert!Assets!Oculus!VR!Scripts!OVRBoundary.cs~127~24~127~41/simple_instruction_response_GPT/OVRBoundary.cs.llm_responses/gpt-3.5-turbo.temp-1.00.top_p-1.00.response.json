@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyt4c1ol2T2ZSf4Uss57OzUgYrGb",
+    "object": "chat.completion",
+    "created": 1724320758,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if USING_XR_SDK && REQUIRES_XR_SDK\nusing Boundary = UnityEngine.XR.Boundary;\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n#if USING_XR_MANAGEMENT && USING_XR_SDK_OCULUS\n#define USING_XR_SDK\n#endif\n\n#if UNITY_2020_1_OR_NEWER\n#define REQUIRES_XR_SDK\n#endif\n\nusing System;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing System.Runtime.InteropServices;\n#if !USING_XR_SDK && !REQUIRES_XR_SDK\nusing Boundary = UnityEngine.Experimental.XR.Boundary;\n#endif\n\npublic class OVRBoundary\n{\n    public enum Node\n    {\n        HandLeft = OVRPlugin.Node.HandLeft,\n        HandRight = OVRPlugin.Node.HandRight,\n        Head = OVRPlugin.Node.Head,\n    }\n\n    public enum BoundaryType\n    {\n        OuterBoundary = OVRPlugin.BoundaryType.OuterBoundary,\n        PlayArea = OVRPlugin.BoundaryType.PlayArea,\n    }\n\n    public struct BoundaryTestResult\n    {\n        public bool IsTriggering;\n        public float ClosestDistance;\n        public Vector3 ClosestPoint;\n        public Vector3 ClosestPointNormal;\n    }\n\n    public bool GetConfigured()\n    {\n        if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)\n            return OVRPlugin.GetBoundaryConfigured();\n        else\n        {\n#if !USING_XR_SDK && !REQUIRES_XR_SDK\n            return Boundary.configured;\n#else\n            return false;\n#endif\n        }\n    }\n\n    public OVRBoundary.BoundaryTestResult TestNode(OVRBoundary.Node node, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryNode((OVRPlugin.Node)node, (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    public OVRBoundary.BoundaryTestResult TestPoint(Vector3 point, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryPoint(point.ToFlippedZVector3f(), (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    private static int cachedVector3fSize = Marshal.SizeOf(typeof(OVRPlugin.Vector3f));\n    private static OVRNativeBuffer cachedGeometryNativeBuffer = new OVRNativeBuffer(0);\n    private static float[] cachedGeometryManagedBuffer = new float[0];\n    // private List<Vector3> cachedGeometryList = new List<Vector3>();\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if UNITY_2020_1_OR_NEWER\n#define REQUIRES_XR_SDK\n#endif\n\nusing System;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing System.Runtime.InteropServices;\n#if !USING_XR_SDK && !REQUIRES_XR_SDK\nusing Boundary = UnityEngine.Experimental.XR.Boundary;\n#endif\n\npublic class OVRBoundary\n{\n    public enum Node\n    {\n        HandLeft = OVRPlugin.Node.HandLeft,\n        HandRight = OVRPlugin.Node.HandRight,\n        Head = OVRPlugin.Node.Head,\n    }\n\n    public enum BoundaryType\n    {\n        OuterBoundary = OVRPlugin.BoundaryType.OuterBoundary,\n        PlayArea = OVRPlugin.BoundaryType.PlayArea,\n    }\n\n    public struct BoundaryTestResult\n    {\n        public bool IsTriggering;\n        public float ClosestDistance;\n        public Vector3 ClosestPoint;\n        public Vector3 ClosestPointNormal;\n    }\n\n    public bool GetConfigured()\n    {\n        if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)\n            return OVRPlugin.GetBoundaryConfigured();\n        else\n        {\n#if !USING_XR_SDK && !REQUIRES_XR_SDK\n            return Boundary.configured;\n#else\n            return false;\n#endif\n        }\n    }\n\n    public OVRBoundary.BoundaryTestResult TestNode(OVRBoundary.Node node, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryNode((OVRPlugin.Node)node, (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    public OVRBoundary.BoundaryTestResult TestPoint(Vector3 point, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryPoint(point.ToFlippedZVector3f(), (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    private static int cachedVector3fSize = Marshal.SizeOf(typeof(OVRPlugin.Vector3f));\n    private static OVRNativeBuffer cachedGeometryNativeBuffer = new OVRNativeBuffer(0);\n    private static float[] cachedGeometryManagedBuffer = new float[0];\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "#if !USING_XR_SDK && !REQUIRES_XR_SDK\nusing Boundary = UnityEngine.Experimental.XR.Boundary;\n#endif\n\npublic class OVRBoundary\n{\n    public enum Node\n    {\n        HandLeft = OVRPlugin.Node.HandLeft,\n        HandRight = OVRPlugin.Node.HandRight,\n        Head = OVRPlugin.Node.Head,\n    }\n\n    public enum BoundaryType\n    {\n        OuterBoundary = OVRPlugin.BoundaryType.OuterBoundary,\n        PlayArea = OVRPlugin.BoundaryType.PlayArea,\n    }\n\n    public struct BoundaryTestResult\n    {\n        public bool IsTriggering;\n        public float ClosestDistance;\n        public Vector3 ClosestPoint;\n        public Vector3 ClosestPointNormal;\n    }\n\n    public bool GetConfigured()\n    {\n        if (OVRManager.loadedXRDevice == OVRManager.XRDevice.Oculus)\n            return OVRPlugin.GetBoundaryConfigured();\n        else\n        {\n#if !USING_XR_SDK && !REQUIRES_XR_SDK\n            return Boundary.configured;\n#else\n            return false;\n#endif\n        }\n    }\n\n    public OVRBoundary.BoundaryTestResult TestNode(OVRBoundary.Node node, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryNode((OVRPlugin.Node)node, (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    public OVRBoundary.BoundaryTestResult TestPoint(Vector3 point, OVRBoundary.BoundaryType boundaryType)\n    {\n        OVRPlugin.BoundaryTestResult ovrpRes = OVRPlugin.TestBoundaryPoint(point.ToFlippedZVector3f(), (OVRPlugin.BoundaryType)boundaryType);\n\n        OVRBoundary.BoundaryTestResult res = new OVRBoundary.BoundaryTestResult()\n        {\n            IsTriggering = (ovrpRes.IsTriggering == OVRPlugin.Bool.True),\n            ClosestDistance = ovrpRes.ClosestDistance,\n            ClosestPoint = ovrpRes.ClosestPoint.FromFlippedZVector3f(),\n            ClosestPointNormal = ovrpRes.ClosestPointNormal.FromFlippedZVector3f(),\n        };\n\n        return res;\n    }\n\n    private static int cachedVector3fSize = Marshal.SizeOf(typeof(OVRPlugin.Vector3f));\n    private static OVRNativeBuffer cachedGeometryNativeBuffer = new OVRNativeBuffer(0);\n    private static float[] cachedGeometryManagedBuffer = new float[0];\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if USING_XR_SDK && REQUIRES_XR_SDK\nusing Boundary = UnityEngine.XR.Boundary;\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 788,
+        "completion_tokens": 2039,
+        "total_tokens": 2827
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

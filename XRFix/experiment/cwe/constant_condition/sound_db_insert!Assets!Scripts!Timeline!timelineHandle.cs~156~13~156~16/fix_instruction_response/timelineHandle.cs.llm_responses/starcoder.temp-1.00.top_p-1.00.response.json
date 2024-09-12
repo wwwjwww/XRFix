@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "if (multiselected)\n{\n    highlight.SetActive(true);\n    highlightMat.SetFloat(\"_EmissionGain\",.9f);\n}",
+    "code_repairing_1": "```\nif (multiselected) {\n    highlight.SetActive(true);\n    highlightMat.SetFloat(\"_EmissionGain\",.9f);\n}",
+    "code_repairing_2": "if (multiselected)\n{\n    highlight.SetActive(true);\n    highlightMat.SetFloat(\"_EmissionGain\",.9f);\n}",
+    "code_repairing_3": "if (multiselected)\n{\n\thighlight.SetActive(true);\n\thighlightMat.SetFloat(\"_EmissionGain\",.9f);",
+    "code_repairing_4": "if (multiselected) {\n  highlight.SetActive(true);\n  highlightMat.SetFloat(\"_EmissionGain\",.9f);\n}"
+}

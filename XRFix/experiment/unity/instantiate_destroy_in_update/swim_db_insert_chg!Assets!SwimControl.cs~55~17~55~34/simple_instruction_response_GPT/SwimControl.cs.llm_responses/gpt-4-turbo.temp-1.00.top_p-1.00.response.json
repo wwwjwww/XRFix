@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yUe22JC04J6DZig0kEh2tmynBrGM",
+    "object": "chat.completion",
+    "created": 1724204506,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    rb = GetComponent<Rigidbody>();\n    boatRb = boat.GetComponent<Rigidbody>();\n    lastLeftPosition = leftHand.localPosition;\n    lastRightPosition = rightHand.localPosition;\n    StartCoroutine(SpawnAndDestroyRoutine());\n}\n\nIEnumerator SpawnAndDestroyRoutine()\n{\n    while (true)\n    {\n        yield return new WaitForSeconds(timeLimit);\n\n        if (!instantiate_gobj)\n        {\n            a9 = Instantiate(gobj9);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            if (a9)\n            {\n                var component9 = a9.AddComponent<HandManager>();\n                component9.RemoveObject();\n            }\n            instantiate_gobj = false;\n        }\n    }\n}\n\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n}\n\n// And in /Assets/HandManager.cs, uncomment CleanUpObject method:\n\npublic void CleanUpObject() {\n    Destroy(gameObject);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\n\npublic class SwimControl : MonoBehaviour\n{\n    // ... existing variables ...\n\n    [SerializeField] private GameObject prefabToInstantiate;\n    private GameObject instantiatedPrefab;\n\n    // ... existing methods ...\n\n    void Update()\n    {\n        rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n        HandleInstantiation();\n    }\n\n    private void HandleInstantiation()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            instantiatedPrefab = Instantiate(prefabToInstantiate);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            var component9 = instantiatedPrefab.GetComponent<HandManager>();\n            if (component9 != null)\n            {\n                component9.RemoveObject();\n            }\n            else\n            {\n                Destroy(instantiatedPrefab);\n            }\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n\n// In /Assets/HandManager.cs:\nusing UnityEngine;\n\npublic class HandManager : MonoBehaviour\n{\n    // ... existing variables and methods ...\n\n    public void RemoveObject()\n    {\n        Destroy(gameObject, 5f); // Optional: specify delay if needed\n    }\n    \n    // Remove the unused 'CleanUpObject' method or rename it to 'RemoveObject' if it being called from elsewhere.\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // Start method remains unchanged\n    void Start()\n    {\n        rb = GetComponent<Rigidbody>();\n        boatRb = boat.GetComponent<Rigidbody>();\n        lastLeftPosition = leftHand.localPosition;\n        lastRightPosition = rightHand.localPosition;\n        InvokeRepeating(\"InstantiateOrDestroy\", timeLimit, timeLimit);\n        // Rotating the rb2 object can be placed in a coroutine or moved to FixedUpdate if needed.\n        // StartCoroutine(RotateObject());\n    }\n\n    void InstantiateOrDestroy()\n    {\n        if (!instantiate_gobj)\n        {\n            a9 = Instantiate(gobj9);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            var component9 = a9.AddComponent<HandManager>();\n            component9.RemoveObject(); // Instead of CleanUpObject which has been commented out.\n            instantiate_gobj = false;\n        }\n    }\n\n    // Optional coroutine for rotating rb2\n    // IEnumerator RotateObject()\n    // {\n    //     while (true)\n    //     {\n    //         rb2.transform.Rotate(0, 40, 0);\n    //         yield return null; // Rotate every frame. Use WaitForSeconds(seconds) to rotate periodically.\n    //     }\n    // }\n\n    // Avoid Update, use FixedUpdate when dealing with Rigidbodies\n    void FixedUpdate()\n    {\n        rb2.transform.Rotate(0, 40, 0);\n    }\n\n// HandManager.cs FIX:\n\n// The CleanUpObject method has been commented, but we want it to call the RemoveObject method instead\n    public void CleanUpObject()\n    {\n        RemoveObject();\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n}\n\nIEnumerator InstantiateAndDestroyCoroutine()\n{\n    while (true)\n    {\n        yield return new WaitForSeconds(timeLimit);\n\n        if (!instantiate_gobj)\n        {\n            a9 = Instantiate(gobj9);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            Destroy(a9, timeLimit);\n            instantiate_gobj = false;\n        }\n    }\n}\n\nvoid Start()\n{\n    rb = GetComponent<Rigidbody>();\n    boatRb = boat.GetComponent<Rigidbody>();\n    lastLeftPosition = leftHand.localPosition;\n    lastRightPosition = rightHand.localPosition;\n\n    StartCoroutine(InstantiateAndDestroyCoroutine());\n}\n\npublic void CleanUpObject()\n{\n    Destroy(gameObject);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n}\n\nIEnumerator InstantiateAndCleanupRoutine()\n{\n    while (true)\n    {\n        yield return new WaitForSeconds(timeLimit);\n        if (!instantiate_gobj)\n        {\n            a9 = Instantiate(gobj9);\n            instantiate_gobj = true;\n        }\n        else if(instantiate_gobj)\n        {\n            var component9 = a9.AddComponent<HandManager>();\n            component9.RemoveObject();\n            instantiate_gobj = false;\n        }\n    }\n}\n\nvoid Start()\n{\n    rb = GetComponent<Rigidbody>();\n    boatRb = boat.GetComponent<Rigidbody>();\n    lastLeftPosition = leftHand.localPosition;\n    lastRightPosition = rightHand.localPosition;\n    StartCoroutine(InstantiateAndCleanupRoutine());\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 719,
+        "completion_tokens": 1138,
+        "total_tokens": 1857
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

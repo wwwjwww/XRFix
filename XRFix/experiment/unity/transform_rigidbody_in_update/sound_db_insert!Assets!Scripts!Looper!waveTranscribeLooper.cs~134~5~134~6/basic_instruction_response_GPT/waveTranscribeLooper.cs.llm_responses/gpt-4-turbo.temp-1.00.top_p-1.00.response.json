@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z13viRYVP5wsR8VIgk52WI5iciIv",
+    "object": "chat.completion",
+    "created": 1724329119,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  void FixedUpdate() {\n    rb.MovePosition(rb.position + new Vector3(0, 0, Time.fixedDeltaTime));\n\n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (!curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    if (rb != null) {\n        rb.MovePosition(rb.position + new Vector3(0, 0, Time.fixedDeltaTime));\n    }  \n        \n    if (resetScrub) scrubReset();\n    \n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  void FixedUpdate()\n  {\n    if (rb != null) \n    {\n      rb.MovePosition(rb.position + Vector3.forward * Time.fixedDeltaTime);\n    }\n\n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) \n    {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null)\n    {\n      if (curTape.inDeck()) \n      {\n        createNewTape();\n      }\n    }\n\n    samplePos += Time.fixedDeltaTime; // Increment samplePos based on fixedDeltaTime\n    samplePos %= 1.0f; // Ensure samplePos stays within 0-1 range by looping it with modulo\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic override void Awake() {\n    base.Awake();\n    _deviceInterface = GetComponent<looperDeviceInterface>();\n\n    lastbeatperiod = _deviceInterface.period;\n    virtualBufferLength = Mathf.RoundToInt((float)(_deviceInterface.period * .25f * AudioSettings.outputSampleRate));\n    sampleBuffer = new float[virtualBufferLength];\n\n    _sampleRateOverride = AudioSettings.outputSampleRate;\n    tex = new Texture2D(wavewidth, waveheight, TextureFormat.RGBA32, false);\n    waverend.material.mainTexture = tex;\n\n    lastRecSig = new float[] { 0, 0 };\n    lastPlaySig = new float[] { 0, 0 };\n    lastBackSig = new float[] { 0, 0 }; // initialization was missing for lastBackSig\n}\n\nvoid FixedUpdate() {\n    if (resetScrub)\n        scrubReset();\n    \n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n        return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n        if (curTape.inDeck()) {\n            createNewTape(); // Assume createNewTape() is a valid method not shown in the snippet.\n        }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n}\n\nvoid recalcTex() {\n    int centerH = waveheight / 2;\n\n    for (int i = 0; i < wavewidth; i++) {\n        if (columnMult * i < virtualBufferLength) {\n            int curH = Mathf.FloorToInt((waveheight - 1) * .5f * Mathf.Clamp01(Mathf.Abs(sampleBuffer[columnMult * i])));\n\n            for (int i2 = 0; i2 < waveheight; i2++) { // changed loop condition to waveheight instead of centerH\n                if (i2 < curH) wavepixels[(centerH + i2) * wavewidth + i] = waveLine;\n                else wavepixels[(centerH + i2) * wavewidth + i] = waveBG;\n\n                if (i2 <= curH) wavepixels[(centerH - i2) * wavewidth + i] = waveLine;\n                else wavepixels[(centerH - i2) * wavewidth + i] = waveBG;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    if (resetScrub) scrubReset();\n\n    scrubTransform.gameObject.SetActive(playing || _deviceInterface.recordCountdown || _deviceInterface.playCountdown);\n    if (!playing) {\n      return;\n    }\n\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n\n    if (curTape != null) {\n      if (curTape.inDeck()) {\n        createNewTape();\n      }\n    }\n\n    scrubTransform.localRotation = Quaternion.Euler(0, 0, Mathf.Lerp(0, 360, samplePos));\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1205,
+        "completion_tokens": 1150,
+        "total_tokens": 2355
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

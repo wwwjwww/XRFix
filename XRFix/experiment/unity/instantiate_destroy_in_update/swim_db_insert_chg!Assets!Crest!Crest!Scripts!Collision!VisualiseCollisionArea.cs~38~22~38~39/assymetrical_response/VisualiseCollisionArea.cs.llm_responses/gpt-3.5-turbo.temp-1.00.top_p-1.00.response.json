@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBGtv9WghGFLv59ZkSWuGeYv6FhJ",
+    "object": "chat.completion",
+    "created": 1723653379,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    a8 = Instantiate(gobj8);\n    a8.SetActive(false);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a8.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a8.SetActive(false);\n        a8.GetComponent<VisualiseRayTrace>()?.FreeObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    // Rest of the existing Update() method code remains unchanged\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    gobj8 = GameObject.CreatePrimitive(PrimitiveType.Cylinder);\n    gobj8.transform.localScale = new Vector3(_objectWidth, 1f, _objectWidth);\n    gobj8.SetActive(false);\n}\n\nvoid Start()\n{\n    if (OceanRenderer.Instance == null || OceanRenderer.Instance.CollisionProvider == null)\n    {\n        return;\n    }\n\n    var collProvider = OceanRenderer.Instance.CollisionProvider;\n\n    for (int i = 0; i < s_steps; i++)\n    {\n        for (int j = 0; j < s_steps; j++)\n        {\n            _samplePositions[j * s_steps + i] = new Vector3(((i + 0.5f) - s_steps / 2f) * s_radius, 0f, ((j + 0.5f) - s_steps / 2f) * s_radius);\n            _samplePositions[j * s_steps + i].x += transform.position.x;\n            _samplePositions[j * s_steps + i].z += transform.position.z;\n        }\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a8 = Instantiate(gobj8);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj8 = a8.AddComponent<VisualiseRayTrace>();\n        obj8.FreeObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (OceanRenderer.Instance == null || OceanRenderer.Instance.CollisionProvider == null)\n    {\n        return;\n    }\n\n    var collProvider = OceanRenderer.Instance.CollisionProvider;\n\n    if (collProvider.RetrieveSucceeded(collProvider.Query(GetHashCode(), _objectWidth, _samplePositions, _resultHeights, null, null)))\n    {\n        for (int i = 0; i < s_steps; i++)\n        {\n            for (int j = 0; j < s_steps; j++)\n            {\n                var result = _samplePositions[j * s_steps + i];\n                result.y = _resultHeights[j * s_steps + i];\n\n                DebugDrawCross(result, 1f, Color.green);\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    gobj8 = new GameObject(\"VisualiseRayTraceObject\");\n    gobj8.AddComponent<VisualiseRayTrace>();\n    gobj8.SetActive(false);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        gobj8.SetActive(true);\n        a8 = gobj8;\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a8.GetComponent<VisualiseRayTrace>().FreeObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    // Rest of the Update method remains the same\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    gobj8 = new GameObject(\"VisualiseRayTrace\");\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a8 = Instantiate(gobj8);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj8 = a8.AddComponent<VisualiseRayTrace>();\n        obj8.FreeObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (OceanRenderer.Instance == null || OceanRenderer.Instance.CollisionProvider == null)\n    {\n        return;\n    }\n\n    var collProvider = OceanRenderer.Instance.CollisionProvider;\n\n    for (int i = 0; i < s_steps; i++)\n    {\n        for (int j = 0; j < s_steps; j++)\n        {\n            _samplePositions[j * s_steps + i] = new Vector3(((i + 0.5f) - s_steps / 2f) * s_radius, 0f, ((j + 0.5f) - s_steps / 2f) * s_radius);\n            _samplePositions[j * s_steps + i].x += transform.position.x;\n            _samplePositions[j * s_steps + i].z += transform.position.z;\n        }\n    }\n\n    if (collProvider.RetrieveSucceeded(collProvider.Query(GetHashCode(), _objectWidth, _samplePositions, _resultHeights, null, null)))\n    {\n        for (int i = 0; i < s_steps; i++)\n        {\n            for (int j = 0; j < s_steps; j++)\n            {\n                var result = _samplePositions[j * s_steps + i];\n                result.y = _resultHeights[j * s_steps + i];\n\n                DebugDrawCross(result, 1f, Color.green);\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    a8 = Instantiate(gobj8);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a8.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj8 = a8.GetComponent<VisualiseRayTrace>();\n        obj8.FreeObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    // Remaining code remains the same\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 843,
+        "completion_tokens": 1312,
+        "total_tokens": 2155
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

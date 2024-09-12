@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```C#\nMax = Math.Max( ((int)Hand_End), 50);",
+    "code_repairing_1": "Here is the modified C# code:\n\n\tpublic enum BoneId\n\t{\n\t\tInvalid =",
+    "code_repairing_2": "```csharp\n// Avoid constant conditions where possible, and either eliminate the conditions or replace them.\nint Max",
+    "code_repairing_3": "public enum BoneId\n{\n\tInvalid = -1,\n\t\n\tHand_Start = 0",
+    "code_repairing_4": "You're an automated program repair tool. The following Csharp code is based on Unity Development. Your task is"
+}

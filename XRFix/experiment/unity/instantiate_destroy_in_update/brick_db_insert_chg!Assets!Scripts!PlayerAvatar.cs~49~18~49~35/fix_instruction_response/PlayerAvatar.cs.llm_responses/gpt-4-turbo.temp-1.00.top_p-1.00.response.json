@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9rK8pnXGUBv59uyv2k59aS3Oi3dis",
+    "object": "chat.completion",
+    "created": 1722495835,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\n\npublic class PlayerAvatar : MonoBehaviour\n{\n    // ... (Other class members remain unchanged)\n\n    private bool create = true;\n    private GameObject poolObject;\n\n    public void Start() {\n        source = FindObjectOfType<LocalRigData>();\n\n        // ... (Remaining Start() method code remains unchanged) \n\n        // Object pooling setup\n        poolObject = Instantiate(gobj5);\n        poolObject.SetActive(false);\n    }\n\n    public void Update() {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit && create) {\n            poolObject.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        } else if (instantiate_gobj && timer >= timeLimit) {\n            poolObject.SetActive(false);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!isLocal) return;\n\n        // ... (Remaining Update() method code remains unchanged)\n    }\n\n    // ... (Rest of the PlayerAvatar class remains unchanged)\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateGameObject()\n{\n    if (gobj5 != null && !instantiate_gobj)\n    {\n        a5 = Instantiate(gobj5);\n        instantiate_gobj = true;\n    }\n}\n\nprivate void DestroyGameObject()\n{\n    if (a5 != null)\n    {\n        Destroy(a5);\n        a5 = null; // ensure the reference is cleared\n        instantiate_gobj = false;\n    }\n}\n\npublic void Start()\n{\n    source = FindObjectOfType<LocalRigData>();\n\n    if (!isLocal) return;\n\n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n\n    Invoke(nameof(InstantiateGameObject), timeLimit); // Delay instantiation\n}\n\npublic void Update()\n{\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        if (!instantiate_gobj)\n        {\n            InstantiateGameObject();\n        }\n        else\n        {\n            DestroyGameObject();\n        }\n        timer = 0; // Reset timer after instantiation or destruction\n    }\n\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake() {\n    if (gobj5) {\n        a5 = Instantiate(gobj5);\n        a5.SetActive(false);\n    }\n}\n\nprivate IEnumerator InstantiateAndDestroyGojsRoutine() {\n    while (true) {\n        yield return new WaitForSeconds(timeLimit);\n        if (!instantiate_gobj) {\n            a5.SetActive(true);\n            instantiate_gobj = true;\n        } else {\n            a5.SetActive(false);\n            instantiate_gobj = false;\n        }\n    }\n}\n\npublic void Start() {\n    source = FindObjectOfType<LocalRigData>();\n\n    if(isLocal) {\n        nameLabel.SetActive(false);\n        face.SetActive(false);\n        localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n\n        StartCoroutine(InstantiateAndDestroyGojsRoutine());\n    }\n}\n\npublic void Update() {\n    if(!isLocal) {\n        return;\n    }\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake() {\n    // Prepare object pool for gobj5 here\n    // This is an example object pool setup\n    // Note: You will need to create a pooling system that fits into the rest of your code\n}\n\npublic void Start() {\n    source = FindObjectOfType<LocalRigData>();\n\n    if(!isLocal) return;\n    \n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n\n    // If needed, initialize the object pool here as well\n}\n\nprivate IEnumerator InstantiateDestroyRoutine() {\n    while (true) {\n        yield return new WaitForSeconds(timeLimit);\n        if (!instantiate_gobj) {\n            a5 = Instantiate(gobj5);  // Replace with object pool retrieval if applicable\n            instantiate_gobj = true;\n        } else {\n            Destroy(a5);  // Replace with object pool return if applicable\n            instantiate_gobj = false;\n        }\n    }\n}\n\npublic void Update() {\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n\nprivate void OnEnable() {\n    StartCoroutine(InstantiateDestroyRoutine());\n}\n\nprivate void OnDisable() {\n    StopCoroutine(InstantiateDestroyRoutine());\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateGobj()\n{\n    a5 = Instantiate(gobj5);\n    instantiate_gobj = true;\n}\n\nprivate void DestroyGobj()\n{\n    Destroy(a5);\n    instantiate_gobj = false;\n}\n\npublic void Start() {\n    source = FindObjectOfType<LocalRigData>();\n\n    if(!isLocal) return;\n    \n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n\n    // Schedule the InstantiateGobj to be called after timeLimit seconds\n    Invoke(nameof(InstantiateGobj), timeLimit);\n}\n\npublic void Update() {\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n\n    timer += Time.deltaTime;\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        DestroyGobj();\n        timer = 0;\n        // Schedule another InstantiateGobj after another timeLimit seconds\n        Invoke(nameof(InstantiateGobj), timeLimit);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 528,
+        "completion_tokens": 1291,
+        "total_tokens": 1819
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "private void RemoveOrCommentOutTheCollectionIfItIsNotNeeded()\n{\n\n}",
+    "code_repairing_1": "You are 100% correct. The collection is not needed. I removed the unnecessary",
+    "code_repairing_2": "<|system|>\n\n<|user|>\n\u00bfCu\u00e1nto es pi? \u00bfC\u00f3mo lo consegu",
+    "code_repairing_3": "Fixed code:\nprivate List<IMixedRealityInputSource> touchingSources = null;",
+    "code_repairing_4": "Please correct the code to be a valid C# code following Unity style guide.\n<|system|>"
+}

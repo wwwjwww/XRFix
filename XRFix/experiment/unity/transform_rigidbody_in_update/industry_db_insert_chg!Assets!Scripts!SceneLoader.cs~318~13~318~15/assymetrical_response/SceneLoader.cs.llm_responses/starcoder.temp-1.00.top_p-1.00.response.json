@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```\n\nNote that this is a reply message, so the code will appear indented. It is also wrapped with back ticks (```), which helps to distinguish the code blocks from regular text.",
+    "code_repairing_1": "",
+    "code_repairing_2": "Here's the fixed code:\n```csharp\n\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Linq;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;",
+    "code_repairing_3": "There are several options for creating and sharing screencasts",
+    "code_repairing_4": "FIXED CODE:\n```csharp \nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Linq;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;\nusing Bar"
+}

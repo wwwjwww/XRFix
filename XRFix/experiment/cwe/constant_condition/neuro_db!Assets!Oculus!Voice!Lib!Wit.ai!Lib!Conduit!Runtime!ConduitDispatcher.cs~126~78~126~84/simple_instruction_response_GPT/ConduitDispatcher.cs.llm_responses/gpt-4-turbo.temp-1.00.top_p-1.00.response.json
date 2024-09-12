@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzIh1A2Nsk1fIJ0xbZ9L9oSCxrnf",
+    "object": "chat.completion",
+    "created": 1724322347,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InvokeError(string actionId, Exception ex)\n{\n    VLog.W($\"Invocation error for action '{actionId}': {ex.Message}\");\n}\n\npublic bool InvokeAction(IParameterProvider parameterProvider, string actionId, bool relaxed,\n    float confidence = 1f, bool partial = false)\n{\n    if (!Manifest.ContainsAction(actionId))\n    {\n        var hasBeenHandledWithoutConduit = Manifest.WitResponseMatcherIntents.Contains(actionId);\n        if (!_ignoredActionIds.Contains(actionId) && !hasBeenHandledWithoutConduit)\n        {\n            _ignoredActionIds.Add(actionId);\n            // Log and handle the missing intent error gracefully.\n            var exception = new Exception($\"Conduit did not find intent '{actionId}' in manifest.\");\n            InvokeError(actionId, exception);\n            return false;\n        }\n        return false;\n    }\n\n    parameterProvider.PopulateRoles(_parameterToRoleMap);\n\n    var filter =\n        new InvocationContextFilter(parameterProvider, Manifest.GetInvocationContexts(actionId), relaxed);\n\n    var invocationContexts = filter.ResolveInvocationContexts(actionId, confidence, partial);\n    if (invocationContexts.Count < 1)\n    {\n        \n        if (!partial && filter.ResolveInvocationContexts(actionId, confidence, true).Count < 1)\n        {\n            InvokeError(\n                actionId, \n                new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n        }\n        return false;\n    }\n    \n    // ...\n\n    return true; // If the action is successfully invoked, otherwise, false.\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                   InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                   InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context.\"));\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nInvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nInvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context.\"));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 684,
+        "completion_tokens": 484,
+        "total_tokens": 1168
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

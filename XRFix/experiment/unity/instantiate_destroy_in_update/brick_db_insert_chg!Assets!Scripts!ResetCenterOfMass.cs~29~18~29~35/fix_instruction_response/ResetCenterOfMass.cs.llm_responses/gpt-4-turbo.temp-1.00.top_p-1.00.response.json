@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9rK96ieUyqyOs5MZpglxyXLtJqgtm",
+    "object": "chat.completion",
+    "created": 1722495852,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Start()\n{\n    InitializeObjectPool();\n}\n\nvoid InitializeObjectPool()\n{\n    GameObject pooledObject = Instantiate(gobj6);\n    pooledObject.SetActive(false);\n    objectPool.Enqueue(pooledObject);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a6 = objectPool.Dequeue();\n            a6.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a6 != null)\n        {\n            a6.SetActive(false);\n            objectPool.Enqueue(a6);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    public GameObject prefab;\n    private Queue<GameObject> pool = new Queue<GameObject>();\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    void Start()\n    {\n        InitializePool();\n    }\n\n    void InitializePool()\n    {\n        for (int i = 0; i < 10; i++)\n        {\n            GameObject obj = Instantiate(prefab);\n            obj.SetActive(false);\n            pool.Enqueue(obj);\n        }\n    }\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            if (pool.Count > 0)\n            {\n                GameObject gobj = pool.Dequeue();\n                gobj.SetActive(true);\n                instantiate_gobj = true;\n            }\n            timer = 0;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            GameObject gobj = pool.Peek();\n            if (gobj.activeSelf)\n            {\n                gobj.SetActive(false);\n                pool.Enqueue(gobj);\n                instantiate_gobj = false;\n            }\n            timer = 0;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nIEnumerator Start()\n{\n    SetupObjectPool();\n\n    while (true)\n    {\n        yield return new WaitForSeconds(timeLimit);\n\n        if (!instantiate_gobj)\n        {\n            a6 = GetPooledObject();\n            instantiate_gobj = true;\n        }\n        else\n        {\n            ReturnObjectToPool(a6);\n            instantiate_gobj = false;\n        }\n    }\n}\n\nprivate List<GameObject> pool;\nprivate int poolSize = 10;\n\nprivate void SetupObjectPool()\n{\n    pool = new List<GameObject>();\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj6);\n        obj.SetActive(false);\n        pool.Add(obj);\n    }\n}\n\nprivate GameObject GetPooledObject()\n{\n    foreach (GameObject obj in pool)\n    {\n        if (!obj.activeInHierarchy)\n        {\n            obj.SetActive(true);\n            return obj;\n        }\n    }\n    // Optionally expand the pool if needed\n    GameObject newObj = Instantiate(gobj6);\n    newObj.SetActive(true);\n    pool.Add(newObj);\n    return newObj;\n}\n\nprivate void ReturnObjectToPool(GameObject obj)\n{\n    if (obj != null)\n    {\n        obj.SetActive(false);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Start()\n{\n    for (int i = 0; i < 10; i++) // Initialize a pool with 10 objects\n    {\n        GameObject obj = Instantiate(gobj6);\n        obj.SetActive(false); // Initially deactivate them\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a6 = objectPool.Dequeue();\n            a6.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a6 != null)\n        {\n            a6.SetActive(false);\n            objectPool.Enqueue(a6);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    CreateObjectPool();\n}\n\nprivate void CreateObjectPool()\n{\n    a6 = Instantiate(gobj6);\n    a6.SetActive(false);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 337,
+        "completion_tokens": 1029,
+        "total_tokens": 1366
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

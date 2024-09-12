@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF54IKw0N1QwXYH9cr8zdFuVLFN7",
+    "object": "chat.completion",
+    "created": 1722238054,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            for (int i = 0; i < SceneManager.sceneCount; ++i)\n            {\n                Scene candidateScene = SceneManager.GetSceneAt(i);\n                if (candidateScene.name == sceneName)\n                {\n                    scene = candidateScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n            return false;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                Scene searchScene = SceneManager.GetSceneAt(i);\n                if (searchScene.name == sceneName)\n                {\n                    scene = searchScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n            return false;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\npublic static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)\n{\n    scene = default(Scene);\n    sceneIndex = -1;\n    \n    for (int i = 0; i < SceneManager.sceneCount; i++)\n    {\n        Scene currentScene = SceneManager.GetSceneAt(i);\n        if (currentScene.name == sceneName)\n        {\n            scene = currentScene;\n            sceneIndex = i;\n            return true;\n        }\n    }\n    return false;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)\n{\n    scene = default(Scene);\n    sceneIndex = -1;\n\n    for (int i = 0; i < SceneManager.sceneCount; i++)\n    {\n        Scene currentScene = SceneManager.GetSceneAt(i);\n        if (currentScene.name == sceneName)\n        {\n            scene = currentScene;\n            sceneIndex = currentScene.buildIndex;\n            return true;\n        }\n    }\n\n    return false;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            //List<Scene> allScenesInProject = new List<Scene>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 228,
+        "completion_tokens": 381,
+        "total_tokens": 609
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

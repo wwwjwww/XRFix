@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9p6y8W29qHa0lourLZqYJzoP9ewC9",
+    "object": "chat.completion",
+    "created": 1721968544,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "                foreach (CSProjectInfo project in orderedProjects)\n                {\n                    configurationMappings.Add(configurationPlatformMappingTemplateBody.Replace(\"<GUID>\", project.Guid.ToString().ToUpper()));\n                    IEnumerable<string> enabledPlatforms = AvailablePlatforms\n                        .Where(t => project.Platforms.Contains(t.Name))\n                        .Select(p => configurationPlatformEnabledTemplateBody.Replace(\"<GUID>\", project.Guid.ToString().ToUpper()).Replace(\"<Platform>\", p.Name.ToString()));\n\n                    configPlatforms = configPlatforms.Concat(enabledPlatforms);\n\n                    IEnumerable<string> disabledPlatforms = AvailablePlatforms\n                        .Where(t => !project.Platforms.Contains(t.Name))\n                        .Select(p => configurationPlatformEnabledTemplateBody.Replace(\"<GUID>\", project.Guid.ToString().ToUpper()).Replace(\"<Platform>\", p.Name.ToString()));\n\n                    disabled.AddRange(disabledPlatforms);\n                }\n\n                StringBuilder solutionBuilder = new StringBuilder();\n\n                solutionBuilder.AppendLine(Utilities.ReplaceTokens(solutionTemplateText, new Dictionary<string, string>() {\n                    { \"<UNITY_PROJECT_NAME>\", UnityProjectName },\n                    { \"<PROJECTS>\", string.Join(Environment.NewLine, projectEntries) },\n                    { \"<CONFIGURATION_PLATFORM> \", string.Join(Environment.NewLine, configPlatforms) },\n                    { \"<CONFIGURATION_PLATFORM_MAPPING>\", string.Join(Environment.NewLine, configurationMappings) },\n                    { \"<CONFIGURATION_PLATFORM_DISABLED>\", string.Join(Environment.NewLine, disabled) }\n                }));\n\n                File.WriteAllText(solutionFilePath, solutionBuilder.ToString());\n            }\n            else\n            {\n                Debug.LogError($\"Failed to extract necessary templates to generate solution {solutionFilePath}\");\n            }\n        }\n    }\n}\n#endif"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                foreach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "                foreach (CSProjectInfo project in orderedProjects)\n                {\n                    StringBuilder projectContent = new StringBuilder();\n\n                    string projectFilePath = Path.Combine(generatedProjectPath, $\"{project.Name}.csproj\");\n\n                    if (File.Exists(projectFilePath))\n                    {\n                        File.Delete(projectFilePath);\n                    }\n\n                    projectContent.AppendLine(Utilities.ReplaceTokens(projectFileTemplateText, new Dictionary<string, string>()\n                    {\n                        { \"<PROJECT_NAME>\", project.Name },\n                        { \"<PROJECT_GUID>\", project.Guid.ToString().ToUpper() },\n                        { \"<UNITY_PROJECT_NAME>\", UnityProjectName }\n                    }));\n\n                    File.WriteAllText(projectFilePath, projectContent.ToString());\n                }\n            }\n        }\n    }\n}\n#endif"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2360,
+        "completion_tokens": 478,
+        "total_tokens": 2838
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

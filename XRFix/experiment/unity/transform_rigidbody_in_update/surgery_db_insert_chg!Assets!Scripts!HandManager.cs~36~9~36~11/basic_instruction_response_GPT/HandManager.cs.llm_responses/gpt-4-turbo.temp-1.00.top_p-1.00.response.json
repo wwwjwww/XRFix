@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z14rD20VUba9SHjEjgbjAT9Gtr0C",
+    "object": "chat.completion",
+    "created": 1724329177,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void Update() {\n        if (ovrHand.IsTracked) {\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n            controller.SetActive(false);\n        } else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch)) {\n            controller.SetActive(true);\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n        }\n\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit) {\n            a2 = Instantiate(gobj2);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        if (instantiate_gobj && timer >= timeLimit) {\n            var obj2 = a2.AddComponent<Slice>();\n            obj2.DisposeObj();\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    void FixedUpdate() {\n        rb1.transform.Rotate(30 * Time.fixedDeltaTime, 0, 0);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void FixedUpdate()\n    {\n        if (ovrHand.IsTracked)\n        {\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n            controller.SetActive(false);\n        }\n        else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n        {\n            controller.SetActive(true);\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n        }\n\n        rb1.MoveRotation(rb1.rotation * Quaternion.Euler(30 * Time.fixedDeltaTime, 0, 0));\n\n        timer+=Time.fixedDeltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a2 = Instantiate(gobj2);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        if (instantiate_gobj && timer >= timeLimit)\n        {\n            var obj2 = a2.AddComponent<Slice>();\n            obj2.DisposeObj();\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    rb1.MoveRotation(rb1.rotation * Quaternion.Euler(30 * Time.fixedDeltaTime, 0, 0));\n\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj2 = a2.AddComponent<Slice>();\n        obj2.DisposeObj();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    if (ovrHand.IsTracked)\n    {\n        hand.transform.GetChild(0).gameObject.SetActive(true);\n        controller.SetActive(false);\n    }\n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n    {\n        controller.SetActive(true);\n        hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n}\n\nvoid FixedUpdate()\n{\n    rb1.transform.Rotate(30 * Time.fixedDeltaTime, 0, 0);\n\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj2 = a2.AddComponent<Slice>();\n        obj2.DisposeObj();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    if (ovrHand.IsTracked) {\n        hand.transform.GetChild(0).gameObject.SetActive(true);\n        controller.SetActive(false);\n    } else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch)) {\n        controller.SetActive(true);\n        hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n\n    rb1.transform.Rotate(30 * Time.deltaTime, 0, 0);\n\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        var obj2 = a2.AddComponent<Slice>();\n        obj2.DisposeObj();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 432,
+        "completion_tokens": 894,
+        "total_tokens": 1326
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

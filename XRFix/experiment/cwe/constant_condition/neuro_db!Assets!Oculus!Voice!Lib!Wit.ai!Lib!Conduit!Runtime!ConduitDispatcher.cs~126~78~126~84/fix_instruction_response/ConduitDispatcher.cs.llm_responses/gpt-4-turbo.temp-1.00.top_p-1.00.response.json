@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF2g7AHrRMo4oe5z4cPlayid5Ko1",
+    "object": "chat.completion",
+    "created": 1722237906,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nInvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context.\"));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (invocationContexts.Count < 1)\n{\n    var partialContextCount = filter.ResolveInvocationContexts(actionId, confidence, true).Count;\n    if (!partial && partialContextCount < 1)\n    {\n        VLog.W(\n            $\"Failed to resolve method for {actionId} with supplied context\");\n        InvokeError(actionId, new Exception($\"Failed to resolve method for {actionId} with supplied context\"));\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (invocationContexts.Count < 1)\n{\n    InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n    VLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nInvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context.\"));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                    InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 705,
+        "completion_tokens": 284,
+        "total_tokens": 989
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

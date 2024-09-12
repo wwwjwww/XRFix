@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLG6mTlmRHOtAzf4jqfhqrs041It",
+    "object": "chat.completion",
+    "created": 1723691770,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Add this code outside of the methods within the PlayerAvatar class:\nprivate void Awake() {\n    SetupObjectPool();\n}\n\nprivate void SetupObjectPool() {\n    a5 = Instantiate(gobj5);\n    a5.SetActive(false);\n}\n\npublic void Update() {\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit) {\n        a5.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    } else if (instantiate_gobj && timer >= timeLimit) {\n        a5.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (!isLocal) return;\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    if (gobj5 != null)\n    {\n        a5 = Instantiate(gobj5);\n        a5.SetActive(false);\n    }\n}\n\npublic void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (a5 != null)\n        {\n            a5.SetActive(true);\n            instantiate_gobj = true;\n        }\n        timer = 0;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a5 != null)\n        {\n            a5.SetActive(false);\n            instantiate_gobj = false;\n        }\n        timer = 0;\n    }\n\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (gobj5 != null)\n    {\n        a5 = Instantiate(gobj5);\n        a5.SetActive(false);\n    }\n}\n\npublic void Update()\n{\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        if (!instantiate_gobj)\n        {\n            a5.SetActive(true);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            a5.SetActive(false);\n            instantiate_gobj = false;\n        }\n        timer = 0f;\n    }\n\n    if (!isLocal) return;\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateTimerReset()\n{\n    if (!instantiate_gobj)\n    {\n        a5 = Instantiate(gobj5);\n        instantiate_gobj = true;\n    }\n}\n\nprivate void DestroyTimerReset()\n{\n    if (instantiate_gobj)\n    {\n        Destroy(a5);\n        instantiate_gobj = false;\n    }\n}\n\npublic void Start() {\n    source = FindObjectOfType<LocalRigData>();\n\n    if (!isLocal) return;\n\n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n\n    InvokeRepeating(\"InstantiateTimerReset\", timeLimit, timeLimit);\n    InvokeRepeating(\"DestroyTimerReset\", timeLimit, timeLimit);\n}\n\npublic void Update() {\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        timer = 0;\n    }\n\n    if (!isLocal) return;\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    if (gobj5 != null)\n    {\n        a5 = Instantiate(gobj5);\n        a5.SetActive(false);\n    }\n}\n\npublic void Update()\n{\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        if (!instantiate_gobj)\n        {\n            a5.SetActive(true);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            a5.SetActive(false);\n            instantiate_gobj = false;\n        }\n        timer = 0f;\n    }\n\n    if (!isLocal) return;\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 532,
+        "completion_tokens": 1028,
+        "total_tokens": 1560
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

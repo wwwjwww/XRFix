@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBFEXcsA5Xlx0Wp5hA4GQYBtkzNq",
+    "object": "chat.completion",
+    "created": 1723653276,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private void Start()\n{\n    _slider = transform.parent;\n    _meshRenderer = sliderMarker.GetComponent<MeshRenderer>();\n    _defaultMaterial = _meshRenderer.material;\n\n    gobj = Instantiate(a);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (!_grabbed)\n    {\n        transform.position = sliderMarker.position;\n        return;\n    }\n\n    float sliderLength = SliderWorldLength();\n\n    Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n    Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n    Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n    sliderMarker.position = pointOnLine;\n\n    float lineLength = (lineEnd - lineStart).magnitude;\n    float markerPosition = (pointOnLine - lineStart).magnitude;\n    slider.value = 1f - (markerPosition / lineLength);\n}\n\npublic void ReleaseObject(GameObject b)\n{\n    // Implement your logic for releasing the object\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void Start()\n{\n    for (int i = 0; i < 5; i++)\n    {\n        GameObject newObj = Instantiate(gobj);\n        newObj.SetActive(false);\n        objectPool.Enqueue(newObj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a = objectPool.Dequeue();\n            a.SetActive(true);\n        }\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReleaseObject(a);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (!_grabbed)\n    {\n        transform.position = sliderMarker.position;\n        return;\n    }\n\n    float sliderLength = SliderWorldLength();\n\n    Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n    Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n    Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n    sliderMarker.position = pointOnLine;\n\n\n    float lineLength = (lineEnd - lineStart).magnitude;\n    float markerPosition = (pointOnLine - lineStart).magnitude;\n    slider.value = 1f - (markerPosition / lineLength);\n}\n\npublic void ReleaseObject(GameObject b)\n{\n    b.SetActive(false);\n    objectPool.Enqueue(b);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "\n    private Queue<GameObject> objectPool = new Queue<GameObject>();\n\n    private void Start()\n    {\n        for (int i = 0; i < 2; i++)\n        {\n            GameObject obj = Instantiate(gobj);\n            obj.SetActive(false);\n            objectPool.Enqueue(obj);\n        }\n    }\n\n    private void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            GameObject obj = GetObjectFromPool();\n            obj.SetActive(true);\n            InstantiateObject(obj);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            GameObject obj = objectPool.Dequeue();\n            obj.SetActive(false);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!_grabbed)\n        {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n\n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n\n    private GameObject GetObjectFromPool()\n    {\n        if (objectPool.Count > 0)\n        {\n            return objectPool.Peek();\n        }\n        else\n        {\n            GameObject obj = Instantiate(gobj);\n            obj.SetActive(false);\n            objectPool.Enqueue(obj);\n            return obj;\n        }\n    }\n\n    private void InstantiateObject(GameObject obj)\n    {\n        obj.SetActive(true);\n    }\n\n    public void ReleaseObject(GameObject b)\n    {\n        b.SetActive(false);\n        objectPool.Enqueue(b);\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private ObjectPooler objectPooler;\n    \n    private void Start()\n    {\n        objectPooler = ObjectPooler.Instance;\n    }\n\n    private void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a = objectPooler.SpawnFromPool(\"ObjectName\", Vector3.zero, Quaternion.identity);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        if (instantiate_gobj && timer >= timeLimit)\n        {\n            objectPooler.ReturnToPool(a);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n        \n        if (!_grabbed) {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n        \n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "    private void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a = Instantiate(gobj);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            ReleaseObject(a);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!_grabbed)\n        {\n            transform.position = sliderMarker.position;\n            return;\n        }\n\n        float sliderLength = SliderWorldLength();\n\n        Vector3 lineStart = _slider.position - (_slider.right * (sliderLength / 2));\n        Vector3 lineEnd = _slider.position + (_slider.right * (sliderLength / 2));\n        Vector3 pointOnLine = GetClosestPointOnFiniteLine(transform.position, lineStart, lineEnd);\n\n        sliderMarker.position = pointOnLine;\n\n\n        float lineLength = (lineEnd - lineStart).magnitude;\n        float markerPosition = (pointOnLine - lineStart).magnitude;\n        slider.value = 1f - (markerPosition / lineLength);\n    }\n\n    public void ReleaseObject(GameObject b)\n    {\n        Destroy(b);\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 664,
+        "completion_tokens": 1583,
+        "total_tokens": 2247
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

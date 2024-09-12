@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z2N0CShJgCDvEupInCW9i4UHqEG1",
+    "object": "chat.completion",
+    "created": 1724334146,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\nprivate IEnumerator InstantiateAndDestroyCoroutine(GameObject prefab, float delay)\n{\n    GameObject instance = Instantiate(prefab);\n    yield return new WaitForSeconds(delay);\n    Destroy(instance);\n}\n\npublic void StartInstantiateAndDestroy(GameObject prefab, float delay)\n{\n    StartCoroutine(InstantiateAndDestroyCoroutine(prefab, delay));\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    if (!String.IsNullOrEmpty(loadSceneOnNextUpdate))\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\nprivate void InstantiateObject()\n{\n    if (!instantiate_gobj)\n    {\n        a2 = Instantiate(gobj2);\n        instantiate_gobj = true;\n    }\n}\n\nprivate void DestroyObject()\n{\n    if (a2 != null)\n    {\n        Destroy(a2);\n        a2 = null;\n        instantiate_gobj = false;\n    }\n}\n\nprivate IEnumerator InstantiateDestroyRoutine()\n{\n    while (true)\n    {\n        InstantiateObject();\n        yield return new WaitForSeconds(timeLimit);\n        DestroyObject();\n        yield return new WaitForSeconds(timeLimit);\n    }\n}\n\nvoid Start()\n{\n    if (Instance == null)\n    {\n        Instance = this;\n        DontDestroyOnLoad(gameObject);\n        StartCoroutine(InstantiateDestroyRoutine());\n    }\n    else\n    {\n        Destroy(gameObject);\n        return;\n    }\n\n    // ... rest of your existing Start() code ...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\nprivate void FixedUpdate()\n{\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Release(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\nprivate void InstantiatePrefabCoroutine()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        instantiate_gobj = true;\n        StartCoroutine(WaitAndRelease(timeLimit));\n    }\n}\n\nprivate IEnumerator WaitAndRelease(float waitTime)\n{\n    yield return new WaitForSeconds(waitTime);\n    Release(a2);\n    instantiate_gobj = false;\n    timer = 0f;\n}\n\npublic void Release(GameObject b2)\n{\n    Destroy(b2);\n}\n\nvoid Start()\n{\n    // Existing start logic...\n\n    // Start the coroutine to instantiate and destroy objects\n    StartCoroutine(InstantiatePrefabCoroutine());\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    LoadSceneCheck();\n    InstantiateOrDestroyCheck();\n}\n\nprivate void LoadSceneCheck()\n{\n    if (loadSceneOnNextUpdate != null)\n    {\n        SceneManager.LoadSceneAsync(loadSceneOnNextUpdate);\n        loadSceneOnNextUpdate = null;\n    }\n}\n\nprivate void InstantiateOrDestroyCheck()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobj2 != null)\n        {\n            a2 = Instantiate(gobj2);\n        }\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= 2 * timeLimit)\n    {\n        if (a2 != null)\n        {\n            Destroy(a2);\n        }\n        instantiate_gobj = false;\n    }\n\n    if (timer >= 2 * timeLimit)\n    {\n        timer = 0;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1259,
+        "completion_tokens": 850,
+        "total_tokens": 2109
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

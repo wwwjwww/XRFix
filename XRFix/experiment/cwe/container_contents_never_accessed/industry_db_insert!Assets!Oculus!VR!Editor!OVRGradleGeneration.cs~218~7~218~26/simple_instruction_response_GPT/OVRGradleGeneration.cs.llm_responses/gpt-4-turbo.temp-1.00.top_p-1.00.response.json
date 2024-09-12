@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzLcdgBp4bZw2AAbkvkv1JxnxlFP",
+    "object": "chat.completion",
+    "created": 1724322528,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if UNITY_ANDROID && USING_XR_SDK_OCULUS\n        OculusSettings settings;\n        UnityEditor.EditorBuildSettings.TryGetConfigObject<OculusSettings>(\"Unity.XR.Oculus.Settings\", out settings);\n\n        if (settings != null && settings.SymmetricProjection && !symmetricWarningShown)\n        {\n            symmetricWarningShown = true;\n            UnityEngine.Debug.LogWarning(\"Symmetric Projection is enabled in the Oculus XR Settings. To ensure the best GPU performance, make sure at least FFR 1 is being used.\");\n        }\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\n#if UNITY_ANDROID && USING_XR_SDK_OCULUS\n    public void OnPostGenerateGradleAndroidProject(string path)\n    {\n        OVRPluginUpdater.UpdatePlugins(path);\n        OVRAARUpdater.UpdateAARs(path);\n        OVRGradleProperties.UpdateGradleProperties(path);\n        \n        // Auto increment version code\n        if (autoIncrementVersion)\n        {\n            int versionCode = PlayerSettings.Android.bundleVersionCode;\n            PlayerSettings.Android.bundleVersionCode = versionCode + 1;\n            UnityEngine.Debug.LogFormat(\"Auto-incremented Android version code to {0}\", PlayerSettings.Android.bundleVersionCode);\n        }\n    }\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if UNITY_ANDROID && USING_XR_SDK_OCULUS\n    // Correct way to retrieve OculusSettings using EditorBuildSettings.TryGetConfigObject\n    OculusSettings settings;\n    if (EditorBuildSettings.TryGetConfigObject<OculusSettings>(\"Unity.XR.Oculus.Settings\", out settings))\n    {\n        if (settings.SymmetricProjection && !symmetricWarningShown)\n        {\n            symmetricWarningShown = true;\n            UnityEngine.Debug.LogWarning(\"Symmetric Projection is enabled in the Oculus XR Settings. To ensure best GPU performance, make sure at least FFR 1 is being used.\");\n        }\n    }\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\tList<string> targetOculusPlatform = new List<string>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n#if UNITY_ANDROID && USING_XR_SDK_OCULUS\n        if (!PlayerSettings.VROculus.useRecommendedMSSettings)\n        {\n            PlayerSettings.VROculus.useRecommendedMSSettings = true;\n            UnityEngine.Debug.Log(\"Mobile Multi-View and Multi-View Direct settings have been set to recommended settings for Oculus.\");\n        }\n#endif\n\n#if UNITY_ANDROID\n        autoIncrementVersion = PlayerPrefs.GetInt(prefName, 0) != 0;\n#endif\n\n#if UNITY_ANDROID && AUTO_INCREMENT_VERSION_CODE\n        PlayerSettings.Android.bundleVersionCode = PlayerSettings.Android.bundleVersionCode + 1;\n#endif\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1807,
+        "completion_tokens": 524,
+        "total_tokens": 2331
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

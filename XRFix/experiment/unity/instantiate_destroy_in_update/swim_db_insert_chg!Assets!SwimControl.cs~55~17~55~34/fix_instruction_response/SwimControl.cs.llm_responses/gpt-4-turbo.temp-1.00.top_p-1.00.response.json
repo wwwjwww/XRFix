@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9rKGI9b5tqBOwdC18J8NIlygNYWNq",
+    "object": "chat.completion",
+    "created": 1722496298,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool;\n\nvoid Awake()\n{\n    objectPool = new Queue<GameObject>();\n    for (int i = 0; i < 10; i++)\n    {\n        var newObj = Instantiate(gobj9);\n        newObj.SetActive(false);\n        objectPool.Enqueue(newObj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        if (!instantiate_gobj)\n        {\n            if (objectPool.Count > 0)\n            {\n                a9 = objectPool.Dequeue();\n                a9.SetActive(true);\n                instantiate_gobj = true;\n                timer = 0;\n            }\n        }\n        else\n        {\n            a9.GetComponent<HandManager>().RemoveObject();\n            a9.SetActive(false);\n            objectPool.Enqueue(a9);\n            instantiate_gobj = false;\n            timer = 0;\n        }\n    }\n\n    if (rb2 != null)\n        rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n}\n\npublic void CleanUpObject(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}\n```\n```csharp\npublic void CleanUpObject()\n{\n    gameObject.SetActive(false);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE BELOW:\n\n// Fixed code for /Assets/SwimControl.cs\nvoid Start()\n{\n    rb = GetComponent<Rigidbody>();\n    boatRb = boat.GetComponent<Rigidbody>();\n    lastLeftPosition = leftHand.localPosition;\n    lastRightPosition = rightHand.localPosition;\n    InitObjectPool();\n}\n\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void InitObjectPool()\n{\n    for(int i = 0; i < 10; i++)\n    {\n        GameObject pooledObj = Instantiate(gobj9);\n        pooledObj.SetActive(false);\n        objectPool.Enqueue(pooledObj);\n    }\n}\n\nprivate GameObject GetPooledObject()\n{\n    if(objectPool.Count > 0)\n    {\n        GameObject pooledObj = objectPool.Dequeue();\n        pooledObj.SetActive(true);\n        return pooledObj;\n    }\n    else\n    {\n        GameObject newPooledObj = Instantiate(gobj9);\n        newPooledObj.SetActive(true);\n        return newPooledObj;\n    }\n}\n\nprivate void ReturnPooledObject(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = GetPooledObject();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a9.GetComponent<HandManager>().RemoveObject();\n        ReturnPooledObject(a9);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n}\n\n// Fixed code for /Assets/HandManager.cs\npublic void CleanUpObject()\n{\n    HandManager handManagerComponent = gameObject.GetComponent<HandManager>();\n    if(handManagerComponent != null)\n    {\n        Destroy(handManagerComponent);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObjectPool gobj9Pool;\n\nvoid Awake()\n{\n    gobj9Pool = new GameObjectPool(gobj9, 10); // Assuming the pool starts with 10 pre-instantiated objects.\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = gobj9Pool.Get();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a9.GetComponent<HandManager>().RemoveObject();\n        gobj9Pool.Release(a9);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0); // Multiply by Time.deltaTime for a frame-independent rotation\n}\n\npublic class GameObjectPool\n{\n    private Queue<GameObject> pool;\n    private GameObject prefab;\n    private int poolSize;\n\n    public GameObjectPool(GameObject prefab, int initialPoolSize)\n    {\n        this.prefab = prefab;\n        poolSize = initialPoolSize;\n        pool = new Queue<GameObject>();\n\n        for (int i = 0; i < poolSize; i++)\n        {\n            var obj = CreateNewObject();\n            obj.SetActive(false);\n            pool.Enqueue(obj);\n        }\n    }\n\n    public GameObject Get()\n    {\n        if (pool.Count > 0)\n        {\n            var obj = pool.Dequeue();\n            obj.SetActive(true);\n            return obj;\n        }\n        else\n        {\n            return CreateNewObject();\n        }\n    }\n\n    public void Release(GameObject obj)\n    {\n        obj.SetActive(false);\n        pool.Enqueue(obj);\n    }\n\n    private GameObject CreateNewObject()\n    {\n        return GameObject.Instantiate(prefab);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    CreatePool();\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = GetPooledObject();\n        a9.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        HandManager component9 = a9.GetComponent<HandManager>();\n        if (component9 != null)\n            component9.RemoveObject(); // Changed CleanUpObject method to RemoveObject as per the comments.\n\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb2.transform.Rotate(0, 40 * Time.deltaTime, 0); // Adding Time.deltaTime for smooth rotation\n}\n\nprivate List<GameObject> pool;\nprivate void CreatePool()\n{\n    pool = new List<GameObject>();\n    for (int i = 0; i < 10; i++) // arbitrary number to instantiate initially\n    {\n        GameObject obj = Instantiate(gobj9);\n        obj.SetActive(false); // Disable them at the start\n        pool.Add(obj);\n    }\n}\n\nprivate GameObject GetPooledObject()\n{\n    foreach (var obj in pool)\n    {\n        if (!obj.activeInHierarchy)\n        {\n            return obj;\n        }\n    }\n    GameObject newObj = Instantiate(gobj9);\n    pool.Add(newObj);\n    return newObj;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    gobj9Pool = new Queue<GameObject>();\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj9);\n        obj.SetActive(false);\n        gobj9Pool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobj9Pool.Count > 0)\n        {\n            a9 = gobj9Pool.Dequeue();\n            a9.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        var component9 = a9.GetComponent<HandManager>();\n        if (component9 != null)\n        {\n            component9.RemoveObject();\n            gobj9Pool.Enqueue(a9);\n        }\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (rb2 != null)\n    {\n        rb2.transform.Rotate(0, 40 * Time.deltaTime, 0);\n    }\n}\n\n// ...\n\npublic void RemoveObject()\n{\n    gameObject.SetActive(false);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 736,
+        "completion_tokens": 1560,
+        "total_tokens": 2296
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

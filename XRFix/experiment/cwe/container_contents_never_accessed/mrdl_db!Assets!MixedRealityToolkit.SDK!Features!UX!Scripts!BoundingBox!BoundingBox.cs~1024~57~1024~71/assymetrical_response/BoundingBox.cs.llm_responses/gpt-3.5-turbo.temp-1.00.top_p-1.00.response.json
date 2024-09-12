@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAq4l4yavpGZBhueJVwJwBBeIjOD",
+    "object": "chat.completion",
+    "created": 1723651716,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private IMixedRealityEyeGazeProvider EyeTrackingProvider => eyeTrackingProvider ?? (eyeTrackingProvider = CoreServices.InputSystem?.EyeGazeProvider);\n        private IMixedRealityEyeGazeProvider eyeTrackingProvider = null;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "        private void CreateRig()\n        {\n            // Code for creating bounding box rig\n        }\n\n        private void ResetHandleVisibility()\n        {\n            // Code for resetting handle visibility\n        }\n\n        private void UpdateRigVisibilityInInspector()\n        {\n            // Code for updating rig visibility in inspector\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 4585,
+        "completion_tokens": 169,
+        "total_tokens": 4754
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

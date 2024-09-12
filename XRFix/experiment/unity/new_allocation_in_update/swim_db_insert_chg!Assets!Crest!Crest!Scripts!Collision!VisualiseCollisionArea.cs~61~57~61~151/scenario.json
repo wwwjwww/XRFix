@@ -1,0 +1,26 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "prompt_template": [
+        "basic_prompt_line"
+    ],
+    "original_dir": "./experiment/unity/new_allocation_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\unity_vr_swim-quest",
+    "exp_dir": "swim_db_insert_chg!Assets!Crest!Crest!Scripts!Collision!VisualiseCollisionArea.cs~61~57~61~151",
+    "unity_special_name": "Using New() allocation in Update() method.",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/new_allocation.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.",
+        "file_name": "/Assets/Crest/Crest/Scripts/Collision/VisualiseCollisionArea.cs",
+        "start_line": "61",
+        "start_column": "57",
+        "end_line": "61",
+        "end_column": "151"
+    },
+    "include_addition": false
+}

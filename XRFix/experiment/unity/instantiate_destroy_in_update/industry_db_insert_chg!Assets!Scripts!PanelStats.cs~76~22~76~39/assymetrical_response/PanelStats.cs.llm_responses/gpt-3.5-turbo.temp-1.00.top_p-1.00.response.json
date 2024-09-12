@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBGHH6F4M5UsRn8v8wxY8KHHCeAS",
+    "object": "chat.completion",
+    "created": 1723653341,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    gobj1 = Resources.Load<GameObject>(\"YourObjectName\");\n    rb3 = GetComponent<Rigidbody>();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "        private void Start()\n        {\n            StartCoroutine(SpawnObject());\n        }\n\n        private IEnumerator SpawnObject()\n        {\n            while (true)\n            {\n                yield return new WaitForSeconds(timeLimit);\n\n                if (a1 == null)\n                {\n                    a1 = Instantiate(gobj1);\n                }\n                else\n                {\n                    Destroy(a1);\n                    a1 = null;\n                }\n            }\n        }\n\n        private void Update()\n        {\n            rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n            var p = marker.localPosition;\n            p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n            marker.localPosition = p;\n        }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private Queue<GameObject> objectPool = new Queue<GameObject>();\nprivate GameObject pooledObject;\n\nprivate void Start()\n{\n    pooledObject = Instantiate(gobj1);\n    pooledObject.SetActive(false);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a1 = GetPooledObject();\n        a1.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnToPool(a1);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n    var p = marker.localPosition;\n    p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n    marker.localPosition = p;\n}\n\nprivate GameObject GetPooledObject()\n{\n    if(objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        obj.SetActive(true);\n        return obj;\n    }\n    else\n    {\n        GameObject newObj = Instantiate(pooledObject);\n        return newObj;\n    }\n}\n\nprivate void ReturnToPool(GameObject obj)\n{\n    obj.SetActive(false);\n    objectPool.Enqueue(obj);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Start()\n{\n    gobj1 = new GameObject(\"Object1\");\n    gobj1.SetActive(false);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a1 = Instantiate(gobj1);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a1);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (rb3 != null)\n    {\n        rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n    }\n\n    if (marker != null)\n    {\n        var p = marker.localPosition;\n        p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n        marker.localPosition = p;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private void Start()\n{\n    gobj1 = new GameObject(\"ObjectToInstantiate\");\n    a1 = new GameObject();\n\n    rb3 = gobj1.AddComponent<Rigidbody>();\n    marker = transform.Find(\"Marker\");\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a1 = Instantiate(gobj1);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a1);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n    var p = marker.localPosition;\n    p.y = 30f + 4f * Mathf.Sin(Time.time * 5f);\n    marker.localPosition = p;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 794,
+        "completion_tokens": 803,
+        "total_tokens": 1597
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

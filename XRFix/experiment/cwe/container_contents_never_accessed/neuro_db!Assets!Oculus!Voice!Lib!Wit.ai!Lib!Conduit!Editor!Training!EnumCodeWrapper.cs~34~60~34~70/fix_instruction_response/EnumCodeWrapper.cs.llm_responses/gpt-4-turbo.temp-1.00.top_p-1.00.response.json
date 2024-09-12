@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF6SpCtc548VgRPrhqJ3qzeCGtlu",
+    "object": "chat.completion",
+    "created": 1722238140,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 174,
+        "completion_tokens": 125,
+        "total_tokens": 299
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wApGwEdVkQQ8inP1KyvzFr2HkytF",
+    "object": "chat.completion",
+    "created": 1723651666,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "// FIXED CODE:\n\nprivate List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "        private List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "// FIXED CODE:\n\nprivate void BrickReleased(XRBaseInteractor interactor)\n{\n    if (skipGrabCallbacks) return;\n    if (!isBeingHeld) return;\n\n    (bool canConnect, Vector3 newPos, Quaternion newRot, Vector3 connectionDirection) = CheckIfCanConnect();\n    if (canConnect)\n    {\n        try\n        {\n            if (GetComponent<BrickAttach>().ConnectBricks(newPos, newRot, connectionDirection))\n            {\n                bool leftHand = interactor.transform.parent.gameObject.name == \"LeftHand\";\n                _hapticsManager.PlayHaptics(0.5f, 0.5f, 0.1f, !leftHand, leftHand);\n            }\n        }\n        catch (Exception e)\n        {\n            Debug.Log(\"SOMETHING EXPLODED!\");\n            Debug.Log(e.Message);\n            Debug.Log(e.StackTrace);\n\n            Session session = SessionManager.GetInstance().session;\n            Debug.Log(session.CanPlace);\n            Debug.Log(session.GetSessionType());\n\n            EnableGravityIfUnowned();\n        }\n    }\n    else\n    {\n        EnableGravityIfUnowned();\n    }\n\n    XRGrabInteractable ourInteractable = GetComponent<XRGrabInteractable>();\n\n    ourInteractable.interactionManager.ForceHoverExit(interactor, ourInteractable);\n\n    foreach (Collider c in colliders)\n    {\n        c.enabled = true;\n        c.isTrigger = false;\n    }\n\n    GetComponent<ShowSnappableBrickPositions>().ResetAndDisable();\n}\n\nprivate void EnableGravityIfUnowned()\n{\n    Wait.ForFrames(2, () =>\n    {\n        if (!this) return;\n        if (_xrGrabInteractable.isSelected) return;\n\n        Rigidbody rb = GetComponent<Rigidbody>();\n        rb.isKinematic = false;\n        rb.useGravity = true;\n    });\n}\n\npublic (bool canConnect, Vector3 pos, Quaternion rot, Vector3 connectionDirection) CheckIfCanConnect()\n{\n    if (!SessionManager.GetInstance().session.CanPlace)\n        return _nullResponse;\n\n    GameObject[] femaleConnectorsWithConnections = GetFemaleConnectorsWithConnections();\n    GameObject[] maleConnectorsWithConnections = GetMaleConnectorsWithConnections();\n\n    GameObject[] validFemaleConnectors = ValidConnections(femaleConnectorsWithConnections);\n    GameObject[] validMaleConnectors = ValidConnections(maleConnectorsWithConnections);\n\n    GameObject[] connectorsToUse = validFemaleConnectors.Length > validMaleConnectors.Length\n        ? validFemaleConnectors\n        : validMaleConnectors;\n\n    bool connectingDownwards = connectorsToUse == validFemaleConnectors;\n\n    if (connectorsToUse.Length > 0)\n    {\n        Transform otherBrickTransform = ClosestConnectorFromConnector(connectorsToUse[0]).transform.parent.transform.parent;\n        GameObject otherBrick = otherBrickTransform.gameObject;\n        Vector3 otherBrickOriginalRot = otherBrick.transform.rotation.eulerAngles;\n\n        if (!IsVectorApproximatelyOne(otherBrickTransform.lossyScale))\n        {\n\n            return _nullResponse;\n        }\n\n        Vector3 brickCurrentPos = _transform.position;\n        Quaternion brickCurrentRot = _transform.rotation;\n\n        _transform.parent = otherBrick.transform;\n        Vector3 oldEulerAngles = otherBrick.transform.rotation.eulerAngles;\n\n        GameObject otherBrickConnector = ClosestConnectorFromConnector(connectorsToUse[0]);\n        Transform otherConnectorTransform = otherBrickConnector.transform;\n\n        otherBrick.transform.eulerAngles += new Vector3(-oldEulerAngles.x - otherConnectorTransform.localEulerAngles.x, 0, -oldEulerAngles.z - otherConnectorTransform.localEulerAngles.z);\n\n        Quaternion rot = GetNewRot(otherBrickConnector);\n        Vector3 pos = GetNewPosWithRot(rot, otherBrick, connectorsToUse, connectingDownwards);\n\n        _transform.position = pos;\n        _transform.rotation = rot;\n\n        otherBrick.transform.eulerAngles = otherBrickOriginalRot;\n\n        Quaternion adjustedRot = _transform.rotation;\n        Vector3 adjustedPos = _transform.position;\n\n        bool collidesWithBricks = CollidesWithBricks(adjustedRot, adjustedPos);\n\n        _transform.position = brickCurrentPos;\n        _transform.rotation = brickCurrentRot;\n\n        _transform.parent = null;\n\n        if (collidesWithBricks)\n        {\n            return _nullResponse;\n        }\n\n        adjustedRot *= Quaternion.Euler(0, 180f, 0);\n\n        return (true, adjustedPos, adjustedRot, connectingDownwards ? Vector3.down : Vector3.up);\n    }\n\n    return _nullResponse;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1701,
+        "completion_tokens": 979,
+        "total_tokens": 2680
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

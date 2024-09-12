@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzhrUt4ygSBVXxkRnFHfbF3Pg1Px",
+    "object": "chat.completion",
+    "created": 1724323907,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[]>();\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshRenderBucket> _meshToRenderBuckets = new Dictionary<Mesh, MeshRenderBucket>();\nprivate readonly Dictionary<string, LinkedListNode<MeshToRender>> _brickUuidToNodes = new Dictionary<string, LinkedListNode<MeshToRender>>();\nprivate readonly Dictionary<string, Mesh> _brickUuidToMesh = new Dictionary<string, Mesh>();\nprivate readonly Dictionary<Mesh, MeshToRender[][]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[][]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, List<MeshToRender>> _groupedBrickBucketCache = new Dictionary<Mesh, List<MeshToRender>>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 203,
+        "total_tokens": 504
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

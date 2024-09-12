@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzhp1n4F2CptrSeex45UyHcOqthO",
+    "object": "chat.completion",
+    "created": 1724323905,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private List<XRBaseInteractable> GetInteractablesToCheck()\n{\n    List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();\n    \n    foreach (XRBaseInteractable interactable in _interactionManager.interactables)\n    {\n        interactablesToCheck.Add(interactable);\n    }\n\n    return interactablesToCheck;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 186,
+        "completion_tokens": 160,
+        "total_tokens": 346
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

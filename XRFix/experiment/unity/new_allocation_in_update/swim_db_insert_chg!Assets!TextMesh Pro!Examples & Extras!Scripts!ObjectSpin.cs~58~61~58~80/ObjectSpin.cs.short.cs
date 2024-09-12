@@ -1,0 +1,9 @@
+using System.Collections;
+
+        void Update()
+        {
+                // BUG: Using New() allocation in Update() method.
+                // MESSAGE: Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.
+                //                 m_transform.position = m_initial_Position + new Vector3(x, z, y);
+
+                // FIXED CODE:

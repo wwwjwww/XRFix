@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0wTPFkohDecH1REDe7hyu1HBx30",
+    "object": "chat.completion",
+    "created": 1724328657,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    // Create a new lock object for thread safety.\n    object lockObject = new object();\n    lock (lockObject)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Start ERROR: Could not create\" +\n                    \" Phoneme context.\");\n                return;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n    \n    // Introduce a lock object for synchronization\n    object lockObj = new object();\n    \n    lock (lockObj)\n    {\n        if (context == 0)\n        {\n            OVRLipSync.Result result = OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration);\n            if (result != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Awake ERROR: Could not create\" +\n                    \" Phoneme context.\");\n            }\n        }\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprotected virtual void Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    // Instead of locking 'this', we will lock on a private object dedicated for instance synchronization.\n    object _lock = new object();\n\n    lock (_lock)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Awake ERROR: Could not create\" +\n                    \" Phoneme context.\");\n                return;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void Awake()\n    {\n        if (!audioSource)\n        {\n            audioSource = GetComponent<AudioSource>();\n        }\n\n        var lockObject = new object();\n        lock (lockObject)\n        {\n            if (context == 0)\n            {\n                if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                    != OVRLipSync.Result.Success)\n                {\n                    Debug.LogError(\"OVRLipSyncContextBase.Start ERROR: Could not create\" +\n                        \" Phoneme context.\");\n                    return;\n                }\n            }\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    // Using a private object to lock\n    object _contextLock = new object();\n    lock (_contextLock)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Start ERROR: Could not create\" +\n                    \" Phoneme context.\");\n                return;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 585,
+        "completion_tokens": 650,
+        "total_tokens": 1235
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

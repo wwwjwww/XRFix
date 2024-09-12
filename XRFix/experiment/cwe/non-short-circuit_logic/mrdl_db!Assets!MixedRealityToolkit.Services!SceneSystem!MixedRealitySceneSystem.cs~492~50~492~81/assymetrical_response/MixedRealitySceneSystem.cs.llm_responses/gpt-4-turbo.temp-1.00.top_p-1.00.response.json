@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL3eo43cw3jigtjXf1qGrmkxq1gX",
+    "object": "chat.completion",
+    "created": 1723690998,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nscenesLoadedAndActivated &= scene.IsValid() && scene.isLoaded;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nscenesLoadedAndActivated &= scene.IsValid() && scene.isLoaded;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nscenesLoadedAndActivated &= scene.IsValid() && scene.isLoaded;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nscenesLoadedAndActivated &= scene.IsValid() && scene.isLoaded;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nscenesLoadedAndActivated &= scene.IsValid() && scene.isLoaded;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2866,
+        "completion_tokens": 90,
+        "total_tokens": 2956
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

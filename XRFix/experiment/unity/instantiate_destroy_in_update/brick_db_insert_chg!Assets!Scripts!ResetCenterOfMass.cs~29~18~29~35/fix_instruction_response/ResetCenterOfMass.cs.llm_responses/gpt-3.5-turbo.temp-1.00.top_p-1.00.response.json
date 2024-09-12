@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9pB2f0vngbUzaJLKmsULgvOsC0Mlk",
+    "object": "chat.completion",
+    "created": 1721984201,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    public GameObject gobj6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n    private GameObject a6;\n\n    void Start()\n    {\n        a6 = null; // Initialize a6 as null\n    }\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a6 = Instantiate(gobj6);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            Destroy(a6);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    void Start()\n    {\n        InvokeRepeating(\"InstantiateAndDestroyObject\", 0, timeLimit);\n    }\n\n    void InstantiateAndDestroyObject()\n    {\n        if (!instantiate_gobj)\n        {\n            a6 = Instantiate(gobj6);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            Destroy(a6);\n            instantiate_gobj = false;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n    private bool isObjectInstantiated = false;\n\n    void Start()\n    {\n        StartCoroutine(InstantiateAndDestroyObject());\n    }\n\n    private IEnumerator InstantiateAndDestroyObject()\n    {\n        while (true)\n        {\n            yield return new WaitForSeconds(timeLimit);\n\n            if (!isObjectInstantiated)\n            {\n                a6 = Instantiate(gobj6);\n                isObjectInstantiated = true;\n            }\n            else\n            {\n                Destroy(a6);\n                isObjectInstantiated = false;\n            }\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "//Here's the fixed code for /Assets/Scripts/ResetCenterOfMass.cs:\n\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    private void Awake()\n    {\n        gobj6 = new GameObject(); // Initialize gobj6\n    }\n\n    void Start()\n    {\n        timer = timeLimit; // Start timer at timeLimit value\n    }\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a6 = Instantiate(gobj6);\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            Destroy(a6);\n            instantiate_gobj = false;\n        }\n    }\n}\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    void Start()\n    {\n        InvokeRepeating(\"InstantiateAndDestroyObjects\", 0f, timeLimit);\n    }\n\n    void InstantiateAndDestroyObjects()\n    {\n        if (!instantiate_gobj)\n        {\n            a6 = Instantiate(gobj6);\n            instantiate_gobj = true;\n        } \n        else\n        {\n            Destroy(a6);\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 301,
+        "completion_tokens": 849,
+        "total_tokens": 1150
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

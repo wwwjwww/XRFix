@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yysUAwyucwFbtJUhga752WUsMfbw",
+    "object": "chat.completion",
+    "created": 1724320722,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\treturn (deviceId != OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "public static float CalculateDeadzone(float value, float threshold)\n{\n    if (Mathf.Abs(value) < threshold)\n    {\n        return 0;\n    }\n    else\n    {\n        return value;\n    }\n}\n\npublic static float CalculateAbsMax(float a, float b)\n{\n    return Mathf.Max(Mathf.Abs(a), Mathf.Abs(b));\n}\n\npublic static Vector2 CalculateDeadzone(Vector2 value, float threshold)\n{\n    if (value.magnitude < threshold)\n    {\n        return Vector2.zero;\n    }\n    else\n    {\n        return value;\n    }\n}\n\npublic static Vector2 CalculateAbsMax(Vector2 a, Vector2 b)\n{\n    return new Vector2(Mathf.Max(Mathf.Abs(a.x), Mathf.Abs(b.x)), Mathf.Max(Mathf.Abs(a.y), Mathf.Abs(b.y)));\n}\n\npublic static void VibrateLeftController(float amplitude, float duration)\n{\n    StartVibration(amplitude, duration, Node.LeftHand);\n}\n\npublic static void VibrateRightController(float amplitude, float duration)\n{\n    StartVibration(amplitude, duration, Node.RightHand);\n}\n\nprivate static void PlayHapticImpulse(float amplitude, Node deviceNode)\n{\n    OVR.OpenVR.CVRSystem system = OVR.OpenVR.OpenVR.System;\n    if (system != null && amplitude != 0.0f)\n    {\n        uint controllerId = (deviceNode == Node.LeftHand) ? openVRControllerDetails[0].deviceID : openVRControllerDetails[1].deviceID;\n\n        if (IsValidOpenVRDevice(controllerId))\n            system.TriggerHapticPulse(controllerId, 0, (char)(OPENVR_MAX_HAPTIC_AMPLITUDE * amplitude));\n    }\n}\n\nprivate static bool IsValidOpenVRDevice(uint deviceId)\n{\n    return (deviceId >= 0 && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private static bool ShouldResolveController(Controller controller, Controller controllerMask)\n        {\n            return (controllerMask & controller) != 0;\n        }\n\n        private static float CalculateDeadzone(float axis, float threshold)\n        {\n            if (Mathf.Abs(axis) < threshold)\n            {\n                return 0.0f;\n            }\n            return axis;\n        }\n\n        private static Vector2 CalculateDeadzone(Vector2 axis, float threshold)\n        {\n            if (axis.magnitude < threshold)\n            {\n                return Vector2.zero;\n            }\n            return axis;\n        }\n\n        private static float CalculateAbsMax(float maxAxis, float axis)\n        {\n            return Mathf.Max(maxAxis, Mathf.Abs(axis));\n        }\n\n        private static Vector2 CalculateAbsMax(Vector2 maxAxis, Vector2 axis)\n        {\n            return new Vector2(Mathf.Max(maxAxis.x, Mathf.Abs(axis.x)), Mathf.Max(maxAxis.y, Mathf.Abs(axis.y)));\n        }\n\n        public static void SetControllerVibration(float amplitude, float duration, Node controllerNode)\n        {\n            StartVibration(amplitude, duration, controllerNode);\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nreturn (deviceId != OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\treturn (deviceId != OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 10253,
+        "completion_tokens": 686,
+        "total_tokens": 10939
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

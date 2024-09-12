@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAs6JhDsBb2oOjIJvkTCzlRs91XK",
+    "object": "chat.completion",
+    "created": 1723651842,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly object lockObject = new object();\n\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (lockObject)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "\nprivate readonly Object lockObject = new Object();\n\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (lockObject)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly object _lock = new object();\n\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (_lock)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly object _lockObject = new object();\n\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (_lockObject)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly object lockObject = new object();\n\npublic void ProcessAudioSamplesRaw(short[] data, int channels)\n{\n    lock (lockObject)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1336,
+        "completion_tokens": 446,
+        "total_tokens": 1782
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

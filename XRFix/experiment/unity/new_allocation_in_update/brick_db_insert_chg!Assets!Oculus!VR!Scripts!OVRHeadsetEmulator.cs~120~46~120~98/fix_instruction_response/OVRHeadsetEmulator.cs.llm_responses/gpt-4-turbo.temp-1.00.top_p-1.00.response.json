@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9r0f2XE1vYL5ON9k4nHk4v1S6mZ7I",
+    "object": "chat.completion",
+    "created": 1722420952,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!emulationActivated)\n{\n\tmanager.headPoseRelativeOffsetRotation = recordedHeadPoseRelativeOffsetRotation;\n}\nelse\n{\n\tmanager.headPoseRelativeOffsetRotation.x = emulatedRoll;\n\tmanager.headPoseRelativeOffsetRotation.y = emulatedYaw;\n\tmanager.headPoseRelativeOffsetRotation.z = emulatedPitch;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nmanager.headPoseRelativeOffsetRotation = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);\n```\n\nReplace the above line with:\n\n```csharp\nmanager.headPoseRelativeOffsetRotation = new Vector3(\n    Mathf.Clamp(emulatedRoll, -MAX_ROLL, MAX_ROLL), \n    emulatedYaw % 360, \n    emulatedPitch % 360);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nmanager.headPoseRelativeOffsetRotation = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\nmanager.headPoseRelativeOffsetRotation = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);\n// This line has been moved out from the comment block to the code block, as this is the correct allocation\n// It will reuse the emulatedRoll, emulatedYaw, and emulatedPitch variables each frame without unnecessary new allocations\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nmanager.headPoseRelativeOffsetRotation = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);\n```\n\n// Replace the above line with this:\nmanager.headPoseRelativeOffsetRotation = new Vector3(Mathf.Clamp(emulatedRoll, -MAX_ROLL, MAX_ROLL), emulatedYaw, emulatedPitch);\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 870,
+        "completion_tokens": 329,
+        "total_tokens": 1199
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

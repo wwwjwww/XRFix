@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)",
+    "code_repairing_1": "using UnityEngine;\n\nnamespace BaroqueUI\n{\n    class TeleportArc",
+    "code_repairing_2": "bool stop = false;\n                    if (hitInfo.collider.GetComponent<IgnoreTeleport",
+    "code_repairing_3": "if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)",
+    "code_repairing_4": "#endif\n                    {\n                        return segmentEndTime;\n                    }\n                }\n\n                segmentStartTime ="
+}

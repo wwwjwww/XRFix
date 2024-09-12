@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLFjGIoNTOOuYRL9zMQ4eG4n9e1s",
+    "object": "chat.completion",
+    "created": 1723691747,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObject pooledObject;\nprivate bool isObjectPooled;\n\nprivate void Awake()\n{\n    // Initialize the pool.\n    pooledObject = Instantiate(gobj3);\n    pooledObject.SetActive(false);\n    isObjectPooled = true;\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (isObjectPooled && timer >= timeLimit && !pooledObject.activeInHierarchy)\n    {\n        pooledObject.SetActive(true);\n        timer = 0;\n        isObjectPooled = false;\n    }\n    else if (!isObjectPooled && timer >= timeLimit && pooledObject.activeInHierarchy)\n    {\n        pooledObject.SetActive(false);\n        timer = 0;\n        isObjectPooled = true;\n    }\n\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Start()\n{\n    InitializeObjectPool();\n    _headTransform = head.transform;\n}\n\nprivate void InitializeObjectPool()\n{\n    a3 = Instantiate(gobj3);\n    a3.SetActive(false);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a3.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone)\n    {\n        MovePlayer();\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    // An object pool should be created and managed with proper initialization before the start\n    // This is a simple example, you might want to make a more sophisticated object pool if needed\n    a3 = Instantiate(gobj3); // Create an instance of your object ahead of time\n    a3.SetActive(false); // Initially deactivate it\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3.SetActive(true); // Activate the object instance from the pool\n        instantiate_gobj = true;\n        timer = 0;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a3.SetActive(false); // Deactivate the object instance back to the pool\n        instantiate_gobj = false;\n        timer = 0;\n    }\n\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Start()\n{\n    _headTransform = head.transform;\n    InitializeObjectPool();\n}\n\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nprivate void InitializeObjectPool()\n{\n    for (int i = 0; i < 5; i++) // Assuming a pool size of 5, can be adjusted as needed\n    {\n        GameObject obj = Instantiate(gobj3);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a3 = objectPool.Dequeue();\n            a3.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a3 != null)\n        {\n            a3.SetActive(false);\n            objectPool.Enqueue(a3);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> gobj3Pool = new Queue<GameObject>();\n\nprivate void Start()\n{\n    _headTransform = head.transform;\n    PreloadGameObjects();\n}\n\nprivate void PreloadGameObjects()\n{\n    for (int i = 0; i < 10; i++) // Assuming a pool of 10 objects is enough\n    {\n        GameObject obj = Instantiate(gobj3);\n        obj.SetActive(false);\n        gobj3Pool.Enqueue(obj);\n    }\n}\n\nprivate GameObject GetPooledObject()\n{\n    if (gobj3Pool.Count > 0)\n    {\n        GameObject obj = gobj3Pool.Dequeue();\n        obj.SetActive(true);\n        return obj;\n    }\n    else\n    {\n        GameObject obj = Instantiate(gobj3);\n        obj.SetActive(true);\n        return obj;\n    }\n}\n\nprivate void ReturnPooledObject(GameObject obj)\n{\n    obj.SetActive(false);\n    gobj3Pool.Enqueue(obj);\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = GetPooledObject();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReturnPooledObject(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone)\n    {\n        MovePlayer();\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 603,
+        "completion_tokens": 1449,
+        "total_tokens": 2052
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

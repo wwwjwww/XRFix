@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLIdwlXgjhW0JpHpZHDOLTJFiTLq",
+    "object": "chat.completion",
+    "created": 1723691927,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Awake()\n{\n    // Prepare the object pool\n    for (int i = 0; i < 1; i++) // Assuming only one object is needed at a time\n    {\n        GameObject obj = Instantiate(gobj5);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a5 = objectPool.Dequeue();\n            a5.SetActive(true);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReleaseInstance(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\npublic void ReleaseInstance(GameObject instance5)\n{\n    instance5.SetActive(false);\n    objectPool.Enqueue(instance5);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    InitializeObjectPool();\n}\n\nprivate Queue<GameObject> gobj5Pool = new Queue<GameObject>();\n\nvoid InitializeObjectPool()\n{\n    for(int i = 0; i < 10; i++) // Pool size depends on how many instances we expect to use\n    {\n        GameObject obj = Instantiate(gobj5);\n        obj.SetActive(false);\n        gobj5Pool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobj5Pool.Count > 0)\n        {\n            a5 = gobj5Pool.Dequeue();\n            a5.SetActive(true);\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a5 != null)\n        {\n            a5.SetActive(false);\n            gobj5Pool.Enqueue(a5);\n        }\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Object pooling implementation\nprivate List<GameObject> pooledObjects = new List<GameObject>();\nprivate int poolSize = 5;\n\nvoid Awake()\n{\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj5);\n        obj.SetActive(false);\n        pooledObjects.Add(obj);\n    }\n}\n\nGameObject GetPooledObject()\n{\n    foreach (GameObject pooledObject in pooledObjects)\n    {\n        if (!pooledObject.activeInHierarchy)\n        {\n            return pooledObject;\n        }\n    }\n    return null;\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        GameObject objToActivate = GetPooledObject();\n        if (objToActivate != null)\n        {\n            objToActivate.SetActive(true);\n            a5 = objToActivate;\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a5 != null)\n        {\n            a5.SetActive(false);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Awake()\n{\n    for (int i = 0; i < initialPoolSize; i++)\n    {\n        GameObject obj = Instantiate(gobj5);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = GetPooledObject();\n        if (a5 != null)\n        {\n            a5.SetActive(true);\n        }\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a5 != null)\n        {\n            ReleaseInstance(a5);\n        }\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n\npublic GameObject GetPooledObject()\n{\n    if (objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        return obj;\n    }\n    else\n    {\n        // Optionally create more objects if needed\n        return Instantiate(gobj5);\n    }\n}\n\npublic void ReleaseInstance(GameObject instance5)\n{\n    instance5.SetActive(false);\n    objectPool.Enqueue(instance5);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObject pooledObject;\n\nvoid Awake()\n{\n    pooledObject = Instantiate(gobj5);\n    pooledObject.SetActive(false);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        pooledObject.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        pooledObject.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1260,
+        "completion_tokens": 1529,
+        "total_tokens": 2789
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

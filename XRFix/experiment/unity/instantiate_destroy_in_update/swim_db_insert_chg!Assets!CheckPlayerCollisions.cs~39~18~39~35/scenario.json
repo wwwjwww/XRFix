@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "prompt_template": [
+        "add_prompt"
+    ],
+    "original_dir": "./experiment/unity/instantiate_destroy_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\unity_vr_swim-quest",
+    "exp_dir": "swim_db_insert_chg!Assets!CheckPlayerCollisions.cs~39~18~39~35",
+    "unity_special_name": "Instantiate/Destroy in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instan_destroy_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate(\u00ef\u00bc\u2030 and Destroy() in Update() method.",
+        "file_name": "/Assets/CheckPlayerCollisions.cs",
+        "start_line": "39",
+        "start_column": "18",
+        "end_line": "39",
+        "end_column": "35",
+        "add_file_name": "/Assets/HandManager.cs",
+        "add_start_line": "28",
+        "add_start_column": "17",
+        "add_end_line": "28",
+        "add_end_column": "26"
+    },
+    "include_addition": true
+}

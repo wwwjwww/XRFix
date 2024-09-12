@@ -1,0 +1,117 @@
+//Here're the buggy code lines from /Assets/CheckPlayerCollisions.cs:
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CheckPlayerCollisions : MonoBehaviour
+{
+    private Rigidbody rb;
+    public float ripForce = 50f;
+    public GameObject deathText;
+    public GameObject winText;
+    public GameObject statusText;
+
+    protected GameObject gobj7;
+    protected GameObject a7;
+
+    private float timeLimit = 5f;
+    private float timer  = 0f;
+    private bool instantiate_gobj = false;
+
+    protected Rigidbody rb4;
+
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void HideStatus()
+    {
+        statusText.SetActive(false);
+    }
+
+/* BUG: Instantiate/Destroy in Update() method
+* MESSAGE: Update() method is called each frame. It's inefficient to use Instantiate(ï¼‰ and Destroy() in Update() method.
+*     private void Update()
+*     {
+*         timer+=Time.deltaTime;
+* 
+*         if (!instantiate_gobj && timer >= timeLimit)
+*         {
+*             a7 = Instantiate(gobj7);
+*             timer = 0;
+*             instantiate_gobj = true;
+*         }
+*         if (instantiate_gobj && timer >= timeLimit )
+*         {
+*             var component7 = a7.AddComponent<HandManager>();
+*             component7.RemoveObject();
+*             timer = 0;
+*             instantiate_gobj = false;
+*         }
+* 
+*         rb4.transform.Rotate(10, 0, 0);
+* 
+*         if (Input.GetKeyDown(KeyCode.DownArrow))
+*         {
+*             ripForce -= 10;
+*             statusText.SetActive(true);
+*             statusText.GetComponent<TMPro.TextMeshProUGUI>().text = "rip force set to " + ripForce;
+*             Invoke("HideStatus", 2);
+*         }
+*         else if (Input.GetKeyDown(KeyCode.UpArrow))
+*         {
+*             ripForce += 10;
+*             statusText.SetActive(true);
+*             statusText.GetComponent<TMPro.TextMeshProUGUI>().text = "rip force set to " + ripForce;
+*             Invoke("HideStatus", 2);
+*         }
+*     }
+//*/
+private void Update()
+{
+    if (ovrHand.IsTracked)
+    {
+        hand.transform.GetChild(0).gameObject.SetActive(true);
+        controller.SetActive(false);
+    }
+    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))
+    {
+        controller.SetActive(true);
+        hand.transform.GetChild(0).gameObject.SetActive(false);
+    }
+}
+}
+
+/*
+//Btw, there's a potential issue with the code. If the variable 'gobj7' is assigned a value later on in the code, the instantiated object may not behave as expected since the script may no longer be attached to the object. To fix this, you could move the instantiation of gobj7 to Awake() or Start() method.
+private void Awake()
+{
+    gobj7 = Instantiate(gobj7);
+}
+*/
+
+    // Start is called before the first frame update
+    private void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("Collision with " + collision.name);
+        if (collision.name == "DeathZone")
+        {
+            deathText.SetActive(true);
+            winText.SetActive(false);
+        } else if (collision.name == "WinZone")
+        {
+            winText.SetActive(true);
+            deathText.SetActive(false);
+        }
+    }
+
+    private void OnTriggerStay(Collider collision)
+    {
+        if (collision.tag == "ForceField")
+        {
+            rb.AddForce(collision.transform.forward * ripForce);
+        }
+    }
+}

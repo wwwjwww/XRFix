@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF284AzlDcyGUTZuluLCT8rrka2H",
+    "object": "chat.completion",
+    "created": 1722237872,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static bool IsValidOpenVRDevice(uint deviceId)\n{\n\treturn (deviceId != OVR.OpenVR.OpenVR.k_unTrackedDeviceIndexInvalid && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static bool IsValidOpenVRDevice(uint deviceId)\n{\n\treturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nreturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nreturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nreturn (deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 10322,
+        "completion_tokens": 157,
+        "total_tokens": 10479
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

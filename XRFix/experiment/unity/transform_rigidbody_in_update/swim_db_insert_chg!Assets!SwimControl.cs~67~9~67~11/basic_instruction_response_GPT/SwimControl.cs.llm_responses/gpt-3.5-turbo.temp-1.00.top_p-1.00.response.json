@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzpH5yTGaBnkWm2mWd9q48dGkAXL",
+    "object": "chat.completion",
+    "created": 1724324367,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = Instantiate(gobj9);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var component9 = a9.AddComponent<HandManager>();\n        component9.CleanUpObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    rb2.transform.Rotate(0, 40, 0);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "rb2.transform.Rotate(0, 40, 0);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate()\n{\n    timer += Time.fixedDeltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = Instantiate(gobj9);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var component9 = a9.AddComponent<HandManager>();\n        component9.CleanUpObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    // Transform object of Rigidbody in FixedUpdate() method\n    if(rb2 != null)\n    {\n        rb2.transform.Rotate(0, 40, 0);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "rb2.transform.Rotate(0, 40, 0);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid FixedUpdate()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a9 = Instantiate(gobj9);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        var component9 = a9.AddComponent<HandManager>();\n        component9.CleanUpObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    // Transform object of Rigidbody in FixedUpdate() method\n    rb2.transform.Rotate(0, 40, 0);\n}\n\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 501,
+        "completion_tokens": 416,
+        "total_tokens": 917
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzIeFrp6nMGTaDFtdfueRyNUiuUh",
+    "object": "chat.completion",
+    "created": 1724322344,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 652,
+        "completion_tokens": 161,
+        "total_tokens": 813
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

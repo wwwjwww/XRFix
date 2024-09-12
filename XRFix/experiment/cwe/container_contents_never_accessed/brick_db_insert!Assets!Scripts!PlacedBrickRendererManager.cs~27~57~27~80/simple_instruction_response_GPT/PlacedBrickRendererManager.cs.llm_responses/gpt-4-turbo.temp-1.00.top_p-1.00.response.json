@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzL9lNWBBjlEr613wGaY0Iuuz8Z2",
+    "object": "chat.completion",
+    "created": 1724322499,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private static PlacedBrickRendererManager _instance;\n    public static PlacedBrickRendererManager Instance\n    {\n        get\n        {\n            if (_instance == null)\n            {\n                _instance = GameObject.FindGameObjectWithTag(\"PlacedBrickRendererManager\")\n                    ?.GetComponent<PlacedBrickRendererManager>();\n                if (_instance == null)\n                {\n                    GameObject obj = new GameObject(\"PlacedBrickRendererManager\");\n                    _instance = obj.AddComponent<PlacedBrickRendererManager>();\n                }\n            }\n\n            return _instance;\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    if (_instance != null && _instance != this)\n    {\n        Destroy(gameObject);\n    }\n    else\n    {\n        _instance = this;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic static PlacedBrickRendererManager Instance\n{\n    get\n    {\n        if (_instance == null)\n        {\n            _instance = FindObjectOfType<PlacedBrickRendererManager>();\n        }\n\n        return _instance;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class PlacedBrickRendererManager : MonoBehaviour\n{\n    private static PlacedBrickRendererManager _instance;\n    public static PlacedBrickRendererManager Instance\n    {\n        get\n        {\n            if (_instance == null)\n            {\n                _instance = FindObjectOfType<PlacedBrickRendererManager>();\n            }\n            return _instance;\n        }\n    }\n\n    public Material brickMaterial;\n\n    private readonly Dictionary<Mesh, MeshRenderBucket> _meshToRenderBuckets = new Dictionary<Mesh, MeshRenderBucket>();\n    private readonly Dictionary<string, LinkedListNode<MeshToRender>> _brickUuidToNodes = new Dictionary<string, LinkedListNode<MeshToRender>>();\n    private readonly Dictionary<string, Mesh> _brickUuidToMesh = new Dictionary<string, Mesh>();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class PlacedBrickRendererManager : MonoBehaviour\n{\n    private static PlacedBrickRendererManager _instance;\n    public static PlacedBrickRendererManager Instance\n    {\n        get\n        {\n            if (_instance == null)\n            {\n                _instance = FindObjectOfType<PlacedBrickRendererManager>();\n            }\n            return _instance;\n        }\n    }\n\n    public Material brickMaterial;\n\n    private Dictionary<Mesh, MeshRenderBucket> _meshToRenderBuckets = new Dictionary<Mesh, MeshRenderBucket>();\n    private Dictionary<string, LinkedListNode<MeshToRender>> _brickUuidToNodes = new Dictionary<string, LinkedListNode<MeshToRender>>();\n    private Dictionary<string, Mesh> _brickUuidToMesh = new Dictionary<string, Mesh>();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 273,
+        "completion_tokens": 533,
+        "total_tokens": 806
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

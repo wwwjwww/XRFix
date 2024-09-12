@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yUYYCjdH0vhXqcFO6dZGayI41jbM",
+    "object": "chat.completion",
+    "created": 1724204166,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n\n    HandleObjectLifecycle();\n}\n\nprivate void HandleObjectLifecycle()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        instantiate_gobj = false;\n    }\n\n    if (timer >= timeLimit)\n    {\n        timer = 0;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\nprivate void Update()\n{\n    // Timer logic for object instantiation and destruction is moved outside of the Update method.\n    \n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n\nprivate void ObjectTimer()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n\n// Call the ObjectTimer method from FixedUpdate or another method that is not called as frequently as Update.\nprivate void FixedUpdate()\n{\n    ObjectTimer();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n\nprivate void InstantiateDestroyCycle()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        instantiate_gobj = false;\n    }\n\n    if (timer >= timeLimit)\n    {\n        timer = 0;\n    }\n}\n\nprivate void OnEnable()\n{\n    StartCoroutine(InstantiateDestroyRoutine());\n}\n\nprivate IEnumerator InstantiateDestroyRoutine()\n{\n    while (true)\n    {\n        InstantiateDestroyCycle();\n        yield return new WaitForSeconds(timeLimit);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n}\n\nprivate void InstantiateDestroyTimer()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        instantiate_gobj = false;\n    }\n    \n    if(timer >= timeLimit)\n    {\n        timer = 0;\n    }\n}\n\nprivate void Start()\n{\n    _headTransform = head.transform;\n    InvokeRepeating(\"InstantiateDestroyTimer\", timeLimit, timeLimit);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Update()\n{\n    _currentLeftJoystickDirection = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick, OVRInput.Controller.Touch);\n    _currentRightJoystickDirection = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick, OVRInput.Controller.Touch);\n\n    if (_currentLeftJoystickDirection.magnitude > joystickDeadzone || Mathf.Abs(_currentRightJoystickDirection.y) > joystickDeadzone) \n    {\n        MovePlayer();\n    }\n    \n    ManageGameObjectLifecycle();\n}\n\nprivate void ManageGameObjectLifecycle()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a3 = Instantiate(gobj3);\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a3);\n        instantiate_gobj = false;\n    }\n\n    if (timer >= timeLimit)\n    {\n        timer = 0;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 581,
+        "completion_tokens": 1134,
+        "total_tokens": 1715
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

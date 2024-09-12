@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "Light:\nm_Lightmapping: 2\n\nThe above change will change the value of \"m_Lightmapping\" from 4 to 2, which will switch the lighting type from \"real-time\" to \"baked\". This will reduce the resource consumption for the static object using real-time lighting.",
+    "code_repairing_1": "The FIXED section of your Unity scene file has bugs related to the incorrect setting for the \"m_Lightmapping\" parameter. This parameter should be set to \"Baked lighting\" instead of \"4\". Here's the corrected code snippet:\n\n'''\nLight:\nm_Lightmapping: Baked Lighting\n'''",
+    "code_repairing_2": "The code snippet fix is as follows:\n'''\nLight:\nm_Lightmapping: 2\n'''",
+    "code_repairing_3": "```\nLight:\nm_Lightmapping: 1\n```",
+    "code_repairing_4": "The code snippet you provided is in YAML format, which is a text-based serialization format used to represent structured information in a portable and readable format. The code snippet describes a Unity scene file, which contains a light object with a \"m_Lightmapping\" property set to 4, indicating that it is using real-time lighting.\n\nTo fix the bug, you need to change the \"m_Lightmapping\" property to \"baked lighting\" by setting it to 1. Here is the updated code snippet:\n\n'''\nLight:\nm_Lightmapping: 1\n'''\nThis will fix the bug of resource consumption for static objects using real-time lighting, and the light object will now use baked lighting instead of real-time lighting."
+}

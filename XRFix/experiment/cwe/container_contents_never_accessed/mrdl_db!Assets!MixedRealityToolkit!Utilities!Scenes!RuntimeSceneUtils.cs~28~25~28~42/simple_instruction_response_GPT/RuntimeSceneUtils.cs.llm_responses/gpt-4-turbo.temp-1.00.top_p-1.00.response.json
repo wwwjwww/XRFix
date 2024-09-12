@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzLiSQncYDpTPcE630eF0ff1L9Jr",
+    "object": "chat.completion",
+    "created": 1724322534,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)\n{\n    for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n    {\n        string scenePath = SceneUtility.GetScenePathByBuildIndex(i);\n        string loadedSceneName = GetSceneNameFromScenePath(scenePath);\n        if (string.Equals(loadedSceneName, sceneName, StringComparison.OrdinalIgnoreCase))\n        {\n            sceneIndex = i;\n            scene = SceneManager.GetSceneByBuildIndex(i);\n            return scene.isLoaded;\n        }\n    }\n\n    scene = default(Scene);\n    sceneIndex = -1;\n    return false;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n            {\n                string scenePath = SceneUtility.GetScenePathByBuildIndex(i);\n                string name = GetSceneNameFromScenePath(scenePath);\n                if (name == sceneName)\n                {\n                    scene = SceneManager.GetSceneByBuildIndex(i);\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n            {\n                string path = SceneUtility.GetScenePathByBuildIndex(i);\n                string name = GetSceneNameFromScenePath(path);\n                if (name.Equals(sceneName, StringComparison.OrdinalIgnoreCase))\n                {\n                    scene = SceneManager.GetSceneByBuildIndex(i);\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n            return false;\n\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)\n{\n    for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n    {\n        string path = SceneUtility.GetScenePathByBuildIndex(i);\n        string name = GetSceneNameFromScenePath(path);\n        if (name == sceneName)\n        {\n            sceneIndex = i;\n            scene = SceneManager.GetSceneByBuildIndex(i);\n            return scene.IsValid();\n        }\n    }\n    return false;\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nfor (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n{\n    Scene sceneAt = SceneManager.GetSceneByBuildIndex(i);\n    if (sceneAt.path == null) continue; // skip scenes that are not fully loaded\n    \n    if (GetSceneNameFromScenePath(sceneAt.path) == sceneName)\n    {\n        scene = sceneAt;\n        sceneIndex = i;\n        return true;\n    }\n}\nreturn false;\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 185,
+        "completion_tokens": 542,
+        "total_tokens": 727
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wKz9u8pHGNF8CsxVlVZ2ijWaN0Ne",
+    "object": "chat.completion",
+    "created": 1723690719,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed the unused Dictionary _namespaces\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed the unused _namespaces collection\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 103,
+        "total_tokens": 422
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

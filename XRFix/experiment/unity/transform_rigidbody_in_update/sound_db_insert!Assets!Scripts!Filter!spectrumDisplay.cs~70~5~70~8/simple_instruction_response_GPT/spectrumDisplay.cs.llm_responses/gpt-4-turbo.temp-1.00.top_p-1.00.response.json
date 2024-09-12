@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzXXu4knlDdiLC7M0b1VazYhhN6c",
+    "object": "chat.completion",
+    "created": 1724323267,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb10.transform.Rotate(0, 30 * Time.deltaTime, 0);\n\n    if (!active) return;\n\n    source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);\n    GenerateTex();\n    tex.SetPixels32(texpixels);\n    tex.Apply(false);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    if (rb10 != null) {\n        rb10.transform.Rotate(0, 30 * Time.deltaTime, 0);\n    }\n\n    if (!active) return;\n\n    if (source != null && spectrum != null && texpixels != null && tex != null) {\n        source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);\n        GenerateTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb10.transform.Rotate(0, 30 * Time.deltaTime, 0);\n\n    if (!active) return;\n\n    source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);\n    GenerateTex();\n    tex.SetPixels(texpixels);\n    tex.Apply();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb10.transform.Rotate(new Vector3(0, 30, 0) * Time.deltaTime);\n\n    if (!active) return;\n\n    source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);\n    GenerateTex();\n    tex.SetPixels32(texpixels);\n    tex.Apply(false);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    if (rb != null) {\n        rb.transform.Rotate(0, 30 * Time.deltaTime, 0);\n    }\n\n    if (!active) return;\n\n    if (source != null && spectrum != null && tex != null && texpixels != null) {\n        source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);\n        GenerateTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 158,
+        "completion_tokens": 415,
+        "total_tokens": 573
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

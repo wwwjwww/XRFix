@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0oQAMCQWHnRFGxpTPrrtaTCBJPD",
+    "object": "chat.completion",
+    "created": 1724328158,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```\n$\"Failed to resolve {(partial ? \"partial\" : \"final\")} invocation contexts for {actionId} with supplied parameters.\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(!partial ? \"final\" : \"partial\")} method for {actionId} with supplied context\");\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVLog.W($\"Failed to resolve method for {actionId} with supplied context\");\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 702,
+        "completion_tokens": 138,
+        "total_tokens": 840
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

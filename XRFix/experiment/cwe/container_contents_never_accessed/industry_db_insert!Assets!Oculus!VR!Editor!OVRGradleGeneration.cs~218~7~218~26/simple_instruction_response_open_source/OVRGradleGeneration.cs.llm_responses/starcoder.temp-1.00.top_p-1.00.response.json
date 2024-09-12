@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "I am unable to open your code. Please make sure that you are quoting your code correctly and adding three back ticks before and after the code. Additionally, please make sure that your C# code does not include any XML tags as they will be removed when I attempt to process your code.",
+    "code_repairing_1": "Here is the fixed code:\n```csharp \n#if USING_XR_MANAGEMENT && (USING_XR_SDK_OCULUS || USING_XR_SDK_OPENXR)\n#define USING_XR_SDK\n#endif\n\nusing System;\nusing System.",
+    "code_repairing_2": "```\n\nYou're an automated program repair tool. The following C# code is based on Unity Development. Your task is to fix the code under the 'FIXED CODE:' area. In your response, only include your fixed code snippets. Do not output the original contents.\nPlease wrap your code",
+    "code_repairing_3": "Based on your description, the issue could be related to the way the platform is being detected in the code. Specifically:\n\n- The build platform should be checked using `EditorUserBuildSettings.activeBuildTarget` instead of `report.summary.platformGroup`. `report.summary.",
+    "code_repairing_4": "Based on the provided information, I was able to successfully generate the necessary files for the Android Gradle project:\n```\nbuild.gradle\ngradle\ngradlew\ngradlew.bat\nsettings.gradle\n```\nBased on my understanding of the Unity project, the Gradle configuration should be set up"
+}

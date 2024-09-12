@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yz6goLZmbE7NmEFf65QnAGOHSXW9",
+    "object": "chat.completion",
+    "created": 1724321602,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private void Update()\n{\n    // rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n    \n    Action ev;\n    lock (oneshot_lock)\n    {\n        ev = oneshot_event;\n        if (ev == null)\n            return;\n        oneshot_event = null;\n    }\n    ev();\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\nAction ev;\nlock (oneshot_lock)\n{\n    ev = oneshot_event;\n    if (ev != null)\n    {\n        oneshot_event = null;\n        ev();\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            rb3 = GetComponent<Rigidbody>();\n            \n            Action ev;\n            lock (oneshot_lock)\n            {\n                ev = oneshot_event;\n                if (ev == null)\n                    return;\n                oneshot_event = null;\n            }\n            ev();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            rb3 = GetComponent<Rigidbody>();\n            rb3.transform.Translate(0, 0, Time.deltaTime * 2);\n\n            Action ev;\n            lock (oneshot_lock)\n            {\n                ev = oneshot_event;\n                if (ev == null)\n                    return;\n                oneshot_event = null;\n            }\n            ev();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nrb3.MovePosition(rb3.position + new Vector3(0, 0, Time.deltaTime * 2));\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2183,
+        "completion_tokens": 285,
+        "total_tokens": 2468
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

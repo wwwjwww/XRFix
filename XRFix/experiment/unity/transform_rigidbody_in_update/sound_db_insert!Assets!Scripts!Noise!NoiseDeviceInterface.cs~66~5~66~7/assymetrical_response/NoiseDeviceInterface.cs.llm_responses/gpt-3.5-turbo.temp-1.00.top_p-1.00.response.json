@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBDSRoAIWHi4NP2M3Tc5ARAWnvBE",
+    "object": "chat.completion",
+    "created": 1723653166,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid FixedUpdate() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() \n{\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null)\n    {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid FixedUpdate() {\n    rb2.transform.Translate(0, 1, Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n        gen.updated = false;\n        GenerateRandomTex();\n        tex.SetPixels32(texpixels);\n        tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 536,
+        "completion_tokens": 366,
+        "total_tokens": 902
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

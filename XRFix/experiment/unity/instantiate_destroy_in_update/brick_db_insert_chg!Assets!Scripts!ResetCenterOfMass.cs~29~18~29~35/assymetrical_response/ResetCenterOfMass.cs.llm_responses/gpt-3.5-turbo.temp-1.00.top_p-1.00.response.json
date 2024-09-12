@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBF6A9EWFvrcDZieaLw1VxD1jcGo",
+    "object": "chat.completion",
+    "created": 1723653268,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    a6 = Instantiate(gobj6);\n    instantiate_gobj = true;\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a6);\n        timer = 0;\n        a6 = Instantiate(gobj6);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "        private void Awake()\n        {\n            gobj6 = new GameObject();\n            a6 = new GameObject();\n\n            gobj6.SetActive(false);\n            a6.SetActive(false);\n        }\n\n        private void Start()\n        {\n            InvokeRepeating(\"ResetCenter\", 0f, timeLimit);\n        }\n\n        private void ResetCenter()\n        {\n            if (instantiate_gobj)\n            {\n                Destroy(a6);\n                a6 = Instantiate(gobj6);\n            }\n            else\n            {\n                Destroy(gobj6);\n                gobj6 = Instantiate(a6);\n            }\n\n            instantiate_gobj = !instantiate_gobj;\n        }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid Start()\n{\n    gobj6 = new GameObject();\n    a6 = null;\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (a6 == null)\n        {\n            a6 = Instantiate(gobj6);\n            instantiate_gobj = true;\n            timer = 0;\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a6 != null)\n        {\n            Destroy(a6);\n            instantiate_gobj = false;\n            timer = 0;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid Start()\n{\n    a6 = Instantiate(gobj6);\n    instantiate_gobj = true;\n    a6.SetActive(false);\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(true);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(false);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nvoid Start()\n{\n    gobj6 = new GameObject(\"Gobj6\");\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a6 = Instantiate(gobj6);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a6);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 341,
+        "completion_tokens": 557,
+        "total_tokens": 898
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

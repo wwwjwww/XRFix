@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-A1axe2dzbNR9MxGDh5Gca6zYvyQMj",
+    "object": "chat.completion",
+    "created": 1724943770,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "Light:\n  m_Lightmapping: 2"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "m_Lightmapping: 2"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "Light:\n  m_Lightmapping: 2"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "Light:\n  m_Lightmapping: 2"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "m_Lighting: 2"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 102,
+        "completion_tokens": 43,
+        "total_tokens": 145
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial? \"partial\" : \"final\")} method for {actionId} with supplied context\"));",
+    "code_repairing_1": "Segurem-nos l'atzar de",
+    "code_repairing_2": "I'm not sure if removing the condition is what you wanted, but here's an example of how to handle it:\n\n```\nif (invocationContexts.",
+    "code_repairing_3": "Thank you for your bug report! I can confirm that the code you provided does not raise a constant condition warning.\nHowever, if you did not mean to raise",
+    "code_repairing_4": "In C# 8, you"
+}

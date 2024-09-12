@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yywWWS9rRfUIqMwdn3xRLHhIWWPe",
+    "object": "chat.completion",
+    "created": 1724320972,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        return task;\n    }\n\n    internal void SetResult(TResult result)\n    {\n        Results[Id] = result;\n        SetComplete();\n        InvokeCallbacks();\n    }\n\n    internal static void WaitForPending(Task<TResult> task)\n    {\n        OVRTaskResultUtil.WaitForPending(task.Id, 1000);\n    }\n\n    private static void SetComplete()\n    {\n        Pending.Remove(Id);\n    }\n\n    private static void InvokeCallbacks()\n    {\n        if (Continuations.TryGetValue(Id, out var action))\n        {\n            action?.Invoke();\n            Continuations.Remove(Id);\n        }\n    }\n\n    internal OVRTaskAwaiter<TResult> GetAwaiter()\n    {\n        return new OVRTaskAwaiter<TResult>(this);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    internal void SetResult(TResult result)\n    {\n        Results[id] = result;\n        if (Continuations.TryGetValue(id, out var continuation))\n        {\n            Continuations.Remove(id);\n            continuation();\n        }\n    }\n\n    internal void AddToPending()\n    {\n        Pending.Add(id);\n    }\n\n    internal OVRTask(Guid id)\n    {\n        this.id = id;\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private static bool InternalDataRemove(Guid id)\n    {\n        Results.Remove(id);\n        Continuations.Remove(id);\n        CallbackInvokers.Remove(id);\n        CallbackRemovers.Remove(id);\n        return true;\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private void AddToPending()\n{\n    OVRTask.Pending.Add(this.id);\n}\n\npublic void SetResult(TResult result)\n{\n    OVRTask.Results[this.id] = result;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n```  "
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 798,
+        "completion_tokens": 349,
+        "total_tokens": 1147
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

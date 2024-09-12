@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzSnk25fxBACaeqHG8k0uRguGWLx",
+    "object": "chat.completion",
+    "created": 1724322973,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!string.IsNullOrEmpty(d.midiInConnection)) {\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic override void Load(InstrumentData data) {\n    if (!string.IsNullOrEmpty(data.midiInConnection)) {\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  public override void Load(InstrumentData data) {\n    if (!string.IsNullOrEmpty(data.midiInConnection)) {\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic override void Load(InstrumentData data) {\n    if (!string.IsNullOrEmpty(data.midiInConnection)) {\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic override void Load(InstrumentData data) {\n    if (data.midiInConnection != null && !string.IsNullOrEmpty(data.midiInConnection)) {\n        // Rest of the code...\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 111,
+        "completion_tokens": 144,
+        "total_tokens": 255
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

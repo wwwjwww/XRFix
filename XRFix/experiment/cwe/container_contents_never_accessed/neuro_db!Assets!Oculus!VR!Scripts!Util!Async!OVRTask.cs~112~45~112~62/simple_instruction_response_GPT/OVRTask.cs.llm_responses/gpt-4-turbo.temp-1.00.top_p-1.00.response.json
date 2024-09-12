@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzONDna5aZdHnSHm4Zrg6nllasWO",
+    "object": "chat.completion",
+    "created": 1724322699,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\ninternal static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic readonly struct OVRTask<TResult> : IEquatable<OVRTask<TResult>>, IDisposable\n{\n    #region static\n\n    private static readonly HashSet<Guid> Pending = new HashSet<Guid>();\n    private static readonly Dictionary<Guid, TResult> Results = new Dictionary<Guid, TResult>();\n    private static readonly Dictionary<Guid, Action> Continuations = new Dictionary<Guid, Action>();\n\n    private delegate void CallbackInvoker(Guid guid, TResult result);\n\n    private delegate bool CallbackRemover(Guid guid);\n\n    private static readonly Dictionary<Guid, CallbackInvoker> CallbackInvokers = new Dictionary<Guid, CallbackInvoker>();\n\n    private static readonly Dictionary<Guid, CallbackRemover> CallbackRemovers = new Dictionary<Guid, CallbackRemover>();\n\n    private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();\n\n    private delegate bool InternalDataRemover(Guid guid);\n\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers = new Dictionary<Guid, InternalDataRemover>();\n\n    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n\n    private static readonly Dictionary<Guid, Action<Guid>> SubscriberRemovers = new Dictionary<Guid, Action<Guid>>();\n\n    private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n\n    #endregion static\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // FIXED CODE:\n    private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic readonly struct OVRTask<TResult> : IEquatable<OVRTask<TResult>>, IDisposable\n{\n    #region static\n\n    private static readonly HashSet<Guid> Pending = new HashSet<Guid>();\n    private static readonly Dictionary<Guid, TResult> Results = new Dictionary<Guid, TResult>();\n    private static readonly Dictionary<Guid, Action> Continuations = new Dictionary<Guid, Action>();\n\n    // The delegate type 'CallbackInvoker' is no longer needed.\n\n    // The delegate type 'CallbackRemover' is no longer needed.\n\n    // The following two dictionaries that used delegates are no longer needed.\n    // private static readonly Dictionary<Guid, CallbackInvoker> CallbackInvokers...\n    // private static readonly Dictionary<Guid, CallbackRemover> CallbackRemovers...\n\n    // The HashSet CallbackClearers is also no longer needed.\n    // private static readonly HashSet<Action> CallbackClearers...\n\n    private delegate bool InternalDataRemover(Guid guid);\n\n    // The 'InternalDataRemovers' dictionary should remain, as it's likely used for managing internal state.\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers =\n        new Dictionary<Guid, InternalDataRemover>();\n\n    // The 'InternalDataClearers' HashSet should remain for clearing internal data.\n    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n\n    // The 'SubscriberRemovers' dictionary should remain, as it's likely used for subscriber management.\n    private static readonly Dictionary<Guid, Action<Guid>> SubscriberRemovers =\n        new Dictionary<Guid, Action<Guid>>();\n\n    // The 'SubscriberClearers' HashSet comment should be uncommented and available for use.\n    private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n\n    // Rest of OVRTask<TResult> implementation...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 835,
+        "completion_tokens": 677,
+        "total_tokens": 1512
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yziWabU1yPvPlnxrlqN5Ag37Qavj",
+    "object": "chat.completion",
+    "created": 1724323948,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "List<Scene> allScenesInProject = new List<Scene>();\n\nfor (int i = 0; i < SceneManager.sceneCount; i++)\n{\n    Scene s = SceneManager.GetSceneAt(i);\n    allScenesInProject.Add(s);\n}\n\nforeach (Scene s in allScenesInProject)\n{\n    if (s.name.Equals(sceneName))\n    {\n        scene = s;\n        sceneIndex = s.buildIndex;\n        return true;\n    }\n}\n\nreturn false;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "List<Scene> allScenesInProject = new List<Scene>();\n\nforeach (var buildScene in SceneManager.GetAllScenes())\n{\n    allScenesInProject.Add(buildScene);\n}\n\nfor (int i = 0; i < SceneManager.sceneCount; i++)\n{\n    var sceneToCheck = SceneManager.GetSceneAt(i);\n    if (sceneToCheck.name.Equals(sceneName))\n    {\n        scene = sceneToCheck;\n        sceneIndex = i;\n        return true;\n    }\n}\n\nreturn false;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n            List<Scene> allScenesInProject = new List<Scene>();\n\n            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n            {\n                Scene loadedScene = SceneManager.GetSceneByBuildIndex(i);\n                allScenesInProject.Add(loadedScene);\n                if (loadedScene.name == sceneName)\n                {\n                    scene = loadedScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "List<Scene> allScenesInProject = new List<Scene>(SceneManager.sceneCount);\n\nfor (int i = 0; i < SceneManager.sceneCount; i++)\n{\n    Scene currentScene = SceneManager.GetSceneAt(i);\n    allScenesInProject.Add(currentScene);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "List<Scene> allScenesInProject = new List<Scene>(SceneManager.sceneCount);\n\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                Scene currentScene = SceneManager.GetSceneAt(i);\n                allScenesInProject.Add(currentScene);\n                if (currentScene.name == sceneName)\n                {\n                    scene = currentScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 213,
+        "completion_tokens": 462,
+        "total_tokens": 675
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

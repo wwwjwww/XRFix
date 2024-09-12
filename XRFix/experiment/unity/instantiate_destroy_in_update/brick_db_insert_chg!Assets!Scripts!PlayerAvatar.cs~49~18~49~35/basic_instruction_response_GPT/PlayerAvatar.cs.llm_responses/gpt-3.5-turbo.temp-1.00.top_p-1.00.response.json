@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzsBxDlGsakT8paxxHat6eAF3HKZ",
+    "object": "chat.completion",
+    "created": 1724324547,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "public void Start() \n{\n    source = FindObjectOfType<LocalRigData>();\n\n    if(!isLocal) \n    {\n        return;\n    }\n    \n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n}\n\npublic void Update() \n{\n    if(!isLocal) \n    {\n        return;\n    }\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Awake()\n{\n    if(isLocal)\n    {\n        nameLabel.SetActive(false);\n        face.SetActive(false);\n        localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n    }\n}\n\nprivate void Update()\n{\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Awake()\n{\n    source = FindObjectOfType<LocalRigData>();\n}\n\nprivate void FixedUpdate()\n{\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "\npublic void Update() {\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit )\n    {\n        Destroy(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if(!isLocal) return;\n    \n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public class PlayerAvatar : MonoBehaviour\n{\n    private LocalRigData source;\n\n    protected GameObject gobj5; \n    protected GameObject a5;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    private bool? _local = null;\n    public bool isLocal {\n        get {\n            if(_local == null)\n                _local = this == AvatarManager.GetInstance().LocalAvatar;\n\n            return _local.Value;\n        }\n    }\n\n    public Transform head;\n    public Transform leftHand;\n    public Transform rightHand;\n    public GameObject nameLabel;\n    public GameObject face;\n\n    private GameObject localRig;\n\n    public void Start() {\n        source = FindObjectOfType<LocalRigData>();\n\n        if(!isLocal) return;\n        \n        nameLabel.SetActive(false);\n        face.SetActive(false);\n        localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n    }\n\n    // FIXED: Moved the instantiation and destruction of objects to a separate method to avoid calling them in Update()\n    public void Update() {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            InstantiateObject();\n        }\n        if (instantiate_gobj && timer >= timeLimit )\n        {\n            DestroyObject();\n        }\n\n        if(!isLocal) return;\n        \n        rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n        leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n        head.SetPositionAndRotation(source.head.position, source.head.rotation);\n        transform.localScale = localRig.transform.localScale;\n    }\n\n    private void InstantiateObject()\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n\n    private void DestroyObject()\n    {\n        Destroy(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 511,
+        "completion_tokens": 895,
+        "total_tokens": 1406
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

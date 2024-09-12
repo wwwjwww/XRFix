@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yLb7GaTk5LwIQ8v7bFUP2zEfSJSN",
+    "object": "chat.completion",
+    "created": 1724169729,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "void Start()\n{\n    hideUIbutton.performed += ctx => { OnHidePressed(); };\n    albumUI.playerUIController = this;\n    photosUI.playerUIController = this;\n    albumUI.albumUI.SetActive(false);\n    photosUI.photosUI.SetActive(false);\n    hideUIHintText.SetActive(false);\n    LoadAlbums();\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReleaseInstance(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n\npublic void ReleaseInstance(GameObject instance5)\n{\n    Destroy(instance5);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private GameObject instantiatedObject;\n    private bool isInstantiating;\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!isInstantiating && timer >= timeLimit)\n        {\n            instantiatedObject = Instantiate(gobj5);\n            timer = 0;\n            isInstantiating = true;\n        }\n        else if (isInstantiating && timer >= timeLimit)\n        {\n            ReleaseInstance(instantiatedObject);\n            timer = 0;\n            isInstantiating = false;\n        }\n\n        if (displayAlbumsOnNextFrame)\n        {\n            DisplayAlbumUI();\n            displayAlbumsOnNextFrame = false;\n        }\n        else if (displayLibraryOnNextFrame)\n        {\n            DisplayPhotosFromLibrary();\n            displayLibraryOnNextFrame = false;\n        }\n        else if (albumToDisplayOnNextFrame != null)\n        {\n            DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n            albumToDisplayOnNextFrame = null;\n        }\n    }\n\n    public void ReleaseInstance(GameObject instance)\n    {\n        Destroy(instance);\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        ReleaseInstance(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n\npublic void ReleaseInstance(GameObject instance5)\n{\n    Destroy(instance5);\n}\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "void Start()\n{\n    hideUIbutton.performed += ctx => { OnHidePressed(); };\n    albumUI.playerUIController = this;\n    photosUI.playerUIController = this;\n    albumUI.albumUI.SetActive(false);\n    photosUI.photosUI.SetActive(false);\n    hideUIHintText.SetActive(false);\n    LoadAlbums();\n\n    gobj5 = new GameObject(\"gobj5\");\n    a5 = new GameObject(\"a5\");\n}\n\nvoid Update()\n{\n    timer+=Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit){\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit){\n        ReleaseInstance(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n\npublic void ReleaseInstance(GameObject instance5)\n{\n    Destroy(instance5);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateObject()\n{\n    if (a5 == null)\n    {\n        a5 = Instantiate(gobj5);\n    }\n}\n\nprivate void DestroyObject()\n{\n    if (a5 != null)\n    {\n        Destroy(a5);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        InstantiateObject();\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        DestroyObject();\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (displayAlbumsOnNextFrame)\n    {\n        DisplayAlbumUI();\n        displayAlbumsOnNextFrame = false;\n    }\n    else if (displayLibraryOnNextFrame)\n    {\n        DisplayPhotosFromLibrary();\n        displayLibraryOnNextFrame = false;\n    }\n    else if (albumToDisplayOnNextFrame != null)\n    {\n        DisplayPhotosFromAlbum(albumToDisplayOnNextFrame);\n        albumToDisplayOnNextFrame = null;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1239,
+        "completion_tokens": 1203,
+        "total_tokens": 2442
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

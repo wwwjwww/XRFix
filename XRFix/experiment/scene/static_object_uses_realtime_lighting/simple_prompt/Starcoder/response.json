@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "'''\nLight:\n  m_Lightmapping: 4\n'''",
+    "code_repairing_1": "'''yaml\nLight:\n  m_Lightmapping: 2\n'''",
+    "code_repairing_2": "Here is the YAML code after fixing the setting for Light.\n\n```",
+    "code_repairing_3": "Light:\n m_LightmapBakeType: 0\nm",
+    "code_repairing_4": "Light:\n  m_Lightmapping: 16\n\nExplanation:"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL5EHqDq4YAc4RKGywcjngnYQPea",
+    "object": "chat.completion",
+    "created": 1723691096,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Add a field to cache the local scale vector and reuse it to avoid new allocations.\nprivate Vector3 _rootScaleVector;\n\nprivate void Start()\n{\n\tif (_skeletonType != SkeletonType.None)\n\t{\n\t\t_rootScaleVector = Vector3.one; // Initialize _rootScaleVector\n\t\tInitialize();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 _rootScaleVector = Vector3.one;\n\nprivate void Update()\n{\n    // Existing update logic...\n\n    if (_updateRootScale)\n    {\n        _rootScaleVector.x = data.RootScale;\n        _rootScaleVector.y = data.RootScale;\n        _rootScaleVector.z = data.RootScale;\n        transform.localScale = _rootScaleVector;\n    }\n\n    // Remaining update logic...\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\ntransform.localScale = Vector3.one * data.RootScale;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 _rootScaleVector;\n\nprivate void Start()\n{\n    if (_skeletonType != SkeletonType.None)\n    {\n        Initialize();\n        _rootScaleVector = Vector3.one; // Initialize with a default scale\n    }\n}\n\nprivate void Update()\n{\n    // ... other code ...\n\n    if (_updateRootScale)\n    {\n        _rootScaleVector.x = data.RootScale;\n        _rootScaleVector.y = data.RootScale;\n        _rootScaleVector.z = data.RootScale;\n        transform.localScale = _rootScaleVector;\n    }\n\n    // ... other code ...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprotected Vector3 rootScaleVector;\n\nprivate void Start()\n{\n\trootScaleVector = Vector3.one; // Initialize the scale vector\n\t// ...\n}\n\nprivate void Update()\n{\n\t// ...\n\tif (_updateRootScale)\n\t{\n\t\trootScaleVector.x = data.RootScale;\n\t\trootScaleVector.y = data.RootScale;\n\t\trootScaleVector.z = data.RootScale;\n\t\ttransform.localScale = rootScaleVector;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2933,
+        "completion_tokens": 385,
+        "total_tokens": 3318
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

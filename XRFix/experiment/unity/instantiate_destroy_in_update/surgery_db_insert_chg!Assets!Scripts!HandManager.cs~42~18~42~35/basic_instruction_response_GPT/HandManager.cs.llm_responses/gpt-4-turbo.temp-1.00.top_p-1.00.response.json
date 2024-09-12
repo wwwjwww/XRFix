@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z2PHvdtNqvfrZLnGImTMxRP7qdhB",
+    "object": "chat.completion",
+    "created": 1724334287,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    if (ovrHand.IsTracked)\n    {\n        if (!hand.transform.GetChild(0).gameObject.activeSelf)\n        {\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n            controller.SetActive(false);\n        }\n    }\n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch))\n    {\n        if (!controller.activeSelf)\n        {\n            controller.SetActive(true);\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n        }\n    }\n    rb1.transform.Rotate(30 * Time.deltaTime, 0, 0);\n\n    timer += Time.deltaTime;\n\n    if (timer >= timeLimit)\n    {\n        if (!instantiate_gobj)\n        {\n            a2 = Instantiate(gobj2);\n            instantiate_gobj = true;\n        }\n        else\n        {\n            DisposeObj(a2);\n            instantiate_gobj = false;\n        }\n        timer = 0;\n    }\n}\n\npublic void DisposeObj(GameObject obj)\n{\n    Destroy(obj);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    if (ovrHand.IsTracked) {\n        if (!hand.transform.GetChild(0).gameObject.activeSelf) {\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n            controller.SetActive(false);\n        }\n    } else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch)) {\n        if (controller.activeSelf != true) {\n            controller.SetActive(true);\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n        }\n    }\n    rb1.transform.Rotate(30 * Time.deltaTime, 0, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit) {\n        a2 = Instantiate(gobj2);\n        timer = 0;\n        instantiate_gobj = true;\n    } else if (instantiate_gobj && timer >= timeLimit) {\n        Dispose(a2);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n\npublic void Dispose(GameObject obj) {\n    if (obj) {\n        Destroy(obj);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    if (ovrHand.IsTracked) {\n        if (!hand.transform.GetChild(0).gameObject.activeSelf)\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n        if (controller.activeSelf)\n            controller.SetActive(false);\n    } else if (!ovrHand.IsTracked && OVRInput.IsControllerConnected(OVRInput.Controller.LTouch)) {\n        if (!controller.activeSelf)\n            controller.SetActive(true);\n        if (hand.transform.GetChild(0).gameObject.activeSelf)\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n    }\n    rb1.transform.Rotate(30 * Time.deltaTime, 0, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit) {\n        a2 = Instantiate(gobj2);\n        instantiate_gobj = true;\n    } else if (instantiate_gobj && timer >= timeLimit) {\n        var obj2 = a2.GetComponent<Slice>();\n        if (obj2 != null) {\n            obj2.Dispose(a2);\n        }\n        instantiate_gobj = false;\n    }\n\n    timer %= timeLimit;\n}\n\npublic class Slice : MonoBehaviour\n{\n    // ... (rest of the Slice class remains unchanged) ...\n\n    public void DisposeObj()\n    {\n        Dispose(gameObject);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() \n{\n    if (ovrHand.IsTracked) \n    {\n        if (!hand.transform.GetChild(0).gameObject.activeSelf)\n        {\n            hand.transform.GetChild(0).gameObject.SetActive(true);\n            controller.SetActive(false);\n        }\n    } \n    else if (OVRInput.IsControllerConnected(OVRInput.Controller.LTouch)) \n    {\n        if (controller.activeSelf == false)\n        {\n            controller.SetActive(true);\n            hand.transform.GetChild(0).gameObject.SetActive(false);\n        }\n    }\n    rb1.transform.Rotate(30 * Time.deltaTime, 0, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a2 = Instantiate(gobj2);\n        timer = 0f;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        DisposeObject(a2);\n        timer = 0f;\n        instantiate_gobj = false;\n    }\n}\n\nprivate void DisposeObject(GameObject obj)\n{\n    if (obj)\n    {\n        Slice sliceComponent = obj.GetComponent<Slice>();\n        if (sliceComponent)\n        {\n            sliceComponent.Dispose(obj);\n        }\n        else\n        {\n            Destroy(obj);\n        }\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\npublic class HandManager : MonoBehaviour\n{\n    // ... (other variables remain unchanged)\n\n    private bool handWasTracked;\n    private bool gobj2WasInstantiated;\n\n    // ... (other methods remain unchanged)\n\n    void Update()\n    {\n        bool isHandTracked = ovrHand.IsTracked;\n        // Toggle hand and controller active state only on state change\n        if (isHandTracked != handWasTracked)\n        {\n            hand.transform.GetChild(0).gameObject.SetActive(isHandTracked);\n            controller.SetActive(!isHandTracked);\n            handWasTracked = isHandTracked;\n        }\n\n        rb1.transform.Rotate(30 * Time.deltaTime, 0, 0); // Rotate per second rather than per frame\n\n        timer += Time.deltaTime;\n\n        // Instantiate and destroy objects outside of Update() if possible, e.g., in a coroutine or a state change\n        if (!gobj2WasInstantiated && timer >= timeLimit)\n        {\n            a2 = Instantiate(gobj2);\n            timer = 0f;\n            gobj2WasInstantiated = true;\n        }\n        else if (gobj2WasInstantiated && timer >= timeLimit)\n        {\n            Destroy(a2); // Dispose the GameObject directly since `DisposeObj` method is removed in `Slice`\n            timer = 0f;\n            gobj2WasInstantiated = false;\n        }\n    }\n}\n\npublic class Slice : MonoBehaviour\n{\n    // ... (other variables and methods remain unchanged)\n\n    // Remove DisposeObj since it's an unnecessary wrapper for Destroy\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 805,
+        "completion_tokens": 1294,
+        "total_tokens": 2099
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

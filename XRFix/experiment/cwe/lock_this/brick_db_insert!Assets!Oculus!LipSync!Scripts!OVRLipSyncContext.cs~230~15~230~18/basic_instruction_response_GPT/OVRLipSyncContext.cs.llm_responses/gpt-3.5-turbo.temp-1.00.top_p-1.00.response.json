@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzk4A2JXDbHwwzwF92mgjUeXOKZ6",
+    "object": "chat.completion",
+    "created": 1724324044,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic void ProcessAudioSamplesRaw(float[] data, int channels)\n{\n    if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n    {\n        return;\n    }\n    \n    var frame = this.Frame;\n    lock (frame)\n    {\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic void ProcessAudioSamplesRaw(float[] data, int channels)\n{\n    lock (this.Frame)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "public void ProcessAudioSamplesRaw(float[] data, int channels)\n{\n    lock (this)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n} \n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n        lock (this.Frame)\n        {\n            if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n            {\n                return;\n            }\n            var frame = this.Frame;\n            OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n        if (consoles.Length > 0)\n        {\n            hasDebugConsole = consoles[0] != null;\n        }\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1223,
+        "completion_tokens": 354,
+        "total_tokens": 1577
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

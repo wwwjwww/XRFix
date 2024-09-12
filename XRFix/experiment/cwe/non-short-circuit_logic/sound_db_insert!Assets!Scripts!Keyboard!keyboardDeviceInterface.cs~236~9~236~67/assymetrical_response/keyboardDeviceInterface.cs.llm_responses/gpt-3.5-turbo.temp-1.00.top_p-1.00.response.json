@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAtRXmXJRemZEnQDl1i8AnFHOcog",
+    "object": "chat.completion",
+    "created": 1723651925,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "if (data.midiInConnection != null && data.midiInConnection != \"\") {"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "if (data.midiInConnection != null && data.midiInConnection != \"\") {"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "if (data.midiInConnection != null && data.midiInConnection != \"\") {"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "if (data.midiInConnection != null && data.midiInConnection != \"\") {\n    /* Code implementation */\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "if (data.midiInConnection != null && data.midiInConnection != \"\") {"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1902,
+        "completion_tokens": 96,
+        "total_tokens": 1998
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

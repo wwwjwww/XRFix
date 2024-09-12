@@ -1,0 +1,15 @@
+using UnityEngine;
+using System.Collections;
+
+///   void Update() {
+    //     rb10.transform.Rotate(0, 30, 0);
+    // 
+    //     if (!active) return;
+    // 
+    //     source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+    //     GenerateTex();
+    //     tex.SetPixels32(texpixels);
+    //     tex.Apply(false);
+    //   }
+
+    // FIXED CODE:

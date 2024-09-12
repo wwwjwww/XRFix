@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzhhiVKXoM7NJcmvTko3CtH4st93",
+    "object": "chat.completion",
+    "created": 1724323897,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "\n```c#\nGetComponent<XRBaseInteractable>().onSelectEnter.AddListener(BrickGrabbed);\nGetComponent<XRBaseInteractable>().onSelectExit.AddListener(BrickReleased);\n```\n```c#\nGetComponent<XRBaseInteractable>()?.onSelectEnter.RemoveListener(BrickGrabbed);\nGetComponent<XRBaseInteractable>()?.onSelectExit.RemoveListener(BrickReleased);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n    private (bool canConnect, Vector3 pos, Quaternion rot, Vector3 connectionDirection) _nullResponse = (false, Vector3.zero, Quaternion.identity, Vector3.zero);\n\n    public (bool canConnect, Vector3 pos, Quaternion rot, Vector3 connectionDirection) CheckIfCanConnect()\n    {\n        if (!SessionManager.GetInstance().session.CanPlace)\n            return _nullResponse;\n\n        GameObject[] femaleConnectorsWithConnections = GetFemaleConnectorsWithConnections();\n        GameObject[] maleConnectorsWithConnections = GetMaleConnectorsWithConnections();\n\n        GameObject[] validFemaleConnectors = ValidConnections(femaleConnectorsWithConnections);\n        GameObject[] validMaleConnectors = ValidConnections(maleConnectorsWithConnections);\n\n        GameObject[] connectorsToUse = validFemaleConnectors.Length > validMaleConnectors.Length\n            ? validFemaleConnectors\n            : validMaleConnectors;\n\n        bool connectingDownwards = connectorsToUse == validFemaleConnectors;\n\n        if (connectorsToUse.Length > 0)\n        {\n            Transform otherBrickTransform = ClosestConnectorFromConnector(connectorsToUse[0]).transform.parent.transform.parent;\n            GameObject otherBrick = otherBrickTransform.gameObject;\n            Vector3 otherBrickOriginalRot = otherBrick.transform.rotation.eulerAngles;\n\n            if (!IsVectorApproximatelyOne(otherBrickTransform.lossyScale))\n            {\n                return _nullResponse;\n            }\n\n            Vector3 brickCurrentPos = _transform.position;\n            Quaternion brickCurrentRot = _transform.rotation;\n\n            _transform.parent = otherBrick.transform;\n            Vector3 oldEulerAngles = otherBrick.transform.rotation.eulerAngles;\n\n            GameObject otherBrickConnector = ClosestConnectorFromConnector(connectorsToUse[0]);\n            Transform otherConnectorTransform = otherBrickConnector.transform;\n\n            otherBrick.transform.eulerAngles += new Vector3(-oldEulerAngles.x - otherConnectorTransform.localEulerAngles.x, 0, -oldEulerAngles.z - otherConnectorTransform.localEulerAngles.z);\n\n            Quaternion rot = GetNewRot(otherBrickConnector);\n            Vector3 pos = GetNewPosWithRot(rot, otherBrick, connectorsToUse, connectingDownwards);\n\n            _transform.position = pos;\n            _transform.rotation = rot;\n\n            otherBrick.transform.eulerAngles = otherBrickOriginalRot;\n\n            Quaternion adjustedRot = _transform.rotation;\n            Vector3 adjustedPos = _transform.position;\n\n            bool collidesWithBricks = CollidesWithBricks(adjustedRot, adjustedPos);\n\n            _transform.position = brickCurrentPos;\n            _transform.rotation = brickCurrentRot;\n\n            _transform.parent = null;\n\n            if (collidesWithBricks)\n            {\n                return _nullResponse;\n            }\n\n            adjustedRot *= Quaternion.Euler(0, 180f, 0);\n\n            return (true, adjustedPos, adjustedRot, connectingDownwards ? Vector3.down : Vector3.up);\n        }\n\n        return _nullResponse;\n    }\n\n    private void OnDrawGizmos()\n    {\n        foreach (BoxCollider c in colliders)\n        {\n            Gizmos.DrawWireCube(_transform.position - (_transform.position - _transform.TransformPoint(c.center)),\n                Vector3.Scale(c.size, c.transform.lossyScale));\n        }\n    }\n\n    // Container contents are never accessed\n    private List<GameObject> testObjects = new List<GameObject>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<GameObject> testObjects = new List<GameObject>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private List<GameObject> testObjects = new List<GameObject>();\n```  "
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1683,
+        "completion_tokens": 800,
+        "total_tokens": 2483
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzgDidRAKtrPZV7F5CjIc32d5CYZ",
+    "object": "chat.completion",
+    "created": 1724323805,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n                    VLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "                    InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n                    VLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n                }\n                return false;\n            }\n\n            foreach (var context in invocationContexts)\n            {\n                InvokeAction(actionId, context, parameterProvider);\n            }\n\n            return true;\n        }\n\n        \n        \n        \n        private void InvokeAction(string actionId, InvocationContext context, IParameterProvider parameterProvider)\n        {\n            var instance = _instanceResolver.ResolveInstance(context);\n            if (instance == null)\n            {\n                InvokeError(actionId, new Exception($\"Instance not found for action '{actionId}'.\"));\n                VLog.W($\"Instance not found for action '{actionId}'.\");\n                return;\n            }\n\n            MethodInfo method = instance.GetType().GetMethod(context.MethodName);\n            if (method == null)\n            {\n                InvokeError(actionId, new Exception($\"Method '{context.MethodName}' not found on instance of type '{instance.GetType()}'.\"));\n                VLog.W($\"Method '{context.MethodName}' not found on instance of type '{instance.GetType()}'.\");\n                return;\n            }\n\n            try\n            {\n                method.Invoke(instance, parameterProvider.GetParameters(context));\n            }\n            catch (Exception ex)\n            {\n                InvokeError(actionId, ex);\n                VLog.W($\"Error invoking method '{context.MethodName}' on instance of type '{instance.GetType()}': {ex.Message}\");\n            }\n        }\n\n        \n        \n        \n        private void InvokeError(string actionId, Exception exception)\n        {\n            // Method implementation for handling errors related to invoking actions\n            // This can be customized based on specific error handling requirements\n        }\n\n        \n        \n        \n        public interface IConduitDispatcher\n        {\n            void Initialize(string manifestFilePath);\n\n            bool InvokeAction(IParameterProvider parameterProvider, string actionId, bool relaxed,\n                float confidence = 1f, bool partial = false);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "                    InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n                }\n                return false;\n            }\n\n            foreach (var ctx in invocationContexts)\n            {\n                var instance = _instanceResolver.ResolveInstance(ctx.SourceName);\n                if (instance == null)\n                {\n                    InvokeError(actionId, new Exception($\"Failed to resolve instance for {actionId}\"));\n                    VLog.W($\"Conduit dispatch failed for action {actionId}.\");\n                    return false;\n                }\n\n                try\n                {\n                    ctx.Method.Invoke(instance, ctx.Parameters);\n                    return true;\n                }\n                catch (TargetInvocationException e)\n                {\n                    InvokeError(actionId, e.InnerException);\n                    VLog.W($\"Conduit dispatch failed for action {actionId}.\");\n                    return false;\n                }\n            }\n\n            return false;\n        }\n\n        private void InvokeError(string actionId, Exception exception)\n        {\n            // Logic to handle the error, e.g., logging or reporting\n        }\n\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n                    VLog.W($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n                }\n                return false;\n            }\n\n            foreach (var context in invocationContexts)\n            {\n                try\n                {\n                    var instance = _instanceResolver.Resolve(context.Type);\n                    if (instance == null)\n                    {\n                        InvokeError(actionId, new Exception($\"Failed to resolve instance for type '{context.Type.FullName}'\"));\n                        VLog.W($\"Failed to resolve instance for type '{context.Type.FullName}'\");\n                        continue;\n                    }\n\n                    MethodInfo method = context.Method;\n                    if (method != null)\n                    {\n                        method.Invoke(instance, context.Parameters.ToArray());\n                    }\n                    else\n                    {\n                        InvokeError(actionId, new Exception($\"Failed to resolve method for '{context.Type.FullName}'\"));\n                        VLog.W($\"Failed to resolve method for '{context.Type.FullName}'\");\n                    }\n                }\n                catch (Exception e)\n                {\n                    InvokeError(actionId, e);\n                    VLog.E($\"Exception occured while invoking action '{actionId}': {e.Message}\", e);\n                }\n            }\n\n            return true;\n        }\n\n        \n        \n        \n        \n        \n        private void InvokeError(string actionId, Exception e)\n        {\n            VLog.E($\"Error invoking action '{actionId}': {e.Message}\", e);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "                    InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));\n                    VLog.W(\n                        $\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\");\n                    return false;\n                }\n            }\n\n            var invocation = filter.SelectInvocationContext(invocationContexts);\n\n            return ExecuteAction(invocation, actionId);\n        }\n\n        \n        \n        \n        private bool ExecuteAction(InvocationContext context, string actionId)\n        {\n            try\n            {\n                var instance = _instanceResolver.Resolve(context.ClassName);\n                if (instance == null)\n                {\n                    InvokeError(actionId, new Exception($\"Failed to resolve instance for {actionId}\"));\n                    VLog.W($\"Failed to resolve instance for {actionId}\");\n                    return false;\n                }\n\n                MethodInfo methodInfo = instance.GetType().GetMethod(context.MethodName);\n\n                if (methodInfo == null)\n                {\n                    InvokeError(actionId, new Exception($\"Failed to find method {context.MethodName} in {context.ClassName}\"));\n                    VLog.W($\"Failed to find method {context.MethodName} in {context.ClassName}\");\n                    return false;\n                }\n\n                methodInfo.Invoke(instance, context.Parameters);\n                return true;\n            }\n            catch (TargetInvocationException ex)\n            {\n                InvokeError(actionId, ex);\n                VLog.W($\"An exception occurred while invoking action {actionId}: {ex.InnerException}\");\n                return false;\n            }\n        }\n\n        \n        \n        \n        \n        private void InvokeError(string actionId, Exception exception)\n        {\n            // Method implementation\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 734,
+        "completion_tokens": 1336,
+        "total_tokens": 2070
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

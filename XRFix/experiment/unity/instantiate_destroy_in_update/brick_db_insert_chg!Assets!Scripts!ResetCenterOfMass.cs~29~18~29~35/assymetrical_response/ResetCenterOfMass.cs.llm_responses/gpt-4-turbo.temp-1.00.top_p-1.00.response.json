@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wLGHv2hjALjjJxVj1OQREbFOSkMv",
+    "object": "chat.completion",
+    "created": 1723691781,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Object Pooling approach\nprivate Queue<GameObject> objectPool = new Queue<GameObject>();\n\nvoid Start()\n{\n    // Pre-instantiate objects and store them in the object pool\n    for (int i = 0; i < 1; i++) // As we seem to be toggling the existence of only one object, we only create one instance here.\n    {\n        GameObject obj = Instantiate(gobj6);\n        obj.SetActive(false);\n        objectPool.Enqueue(obj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a6 = objectPool.Dequeue(); // Take the object from the pool\n            a6.SetActive(true); // Activate it\n            instantiate_gobj = true;\n        }\n\n        timer = 0;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        if (a6 != null)\n        {\n            a6.SetActive(false); // Deactivate it\n            objectPool.Enqueue(a6); // Return it to the pool\n            a6 = null; // Nullify the reference\n        }\n\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n\nvoid OnDestroy()\n{\n    // Clean up the object pool\n    while (objectPool.Count > 0)\n    {\n        GameObject obj = objectPool.Dequeue();\n        Destroy(obj);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    // Object pool to hold the instance\n    private Queue<GameObject> objectPool = new Queue<GameObject>();\n\n    void Start()\n    {\n        // Prespawn objects and disable them\n        for (int i = 0; i < 1; i++)\n        {\n            GameObject obj = Instantiate(gobj6);\n            obj.SetActive(false);\n            objectPool.Enqueue(obj);\n        }\n    }\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            if (objectPool.Count > 0)\n            {\n                a6 = objectPool.Dequeue();\n                a6.SetActive(true);\n            }\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            a6.SetActive(false);\n            objectPool.Enqueue(a6);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObject poolObject;\nprivate Queue<GameObject> objectPool;\n\nprivate void Awake()\n{\n    objectPool = new Queue<GameObject>();\n    for (int i = 0; i < 1; i++) // Assuming you want just one object, as per your original Update logic\n    {\n        poolObject = Instantiate(gobj6);\n        poolObject.SetActive(false);\n        objectPool.Enqueue(poolObject);\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (objectPool.Count > 0)\n        {\n            a6 = objectPool.Dequeue();\n            a6.SetActive(true);\n            instantiate_gobj = true;\n            ResetTimer();\n        }\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(false);\n        objectPool.Enqueue(a6);\n        instantiate_gobj = false;\n        ResetTimer();\n    }\n}\n\nprivate void ResetTimer()\n{\n    timer = 0f;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ResetCenterOfMass : MonoBehaviour\n{\n    protected GameObject gobj6;\n    protected GameObject a6;\n\n    private float timeLimit = 5f;\n    private float timer = 0f;\n    private bool instantiate_gobj = false;\n\n    private Queue<GameObject> objectPool = new Queue<GameObject>();\n\n    void Awake()\n    {\n        for (int i = 0; i < 1; i++) // Assuming we need just 1 object in pool considering the original code\n        {\n            GameObject obj = Instantiate(gobj6);\n            obj.SetActive(false);\n            objectPool.Enqueue(obj);\n        }\n    }\n\n    void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            if (objectPool.Count > 0)\n            {\n                a6 = objectPool.Dequeue();\n                a6.SetActive(true);\n                timer = 0;\n                instantiate_gobj = true;\n            }\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            a6.SetActive(false);\n            objectPool.Enqueue(a6);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n[SerializeField]\nprivate GameObject pooledGobj;\nprivate Queue<GameObject> gobjPool;\nprivate int poolSize = 10;\n\nvoid Start()\n{\n    PreparePool();\n}\n\nvoid PreparePool()\n{\n    gobjPool = new Queue<GameObject>();\n\n    for (int i = 0; i < poolSize; i++)\n    {\n        GameObject gobj = Instantiate(pooledGobj);\n        gobj.SetActive(false);\n        gobjPool.Enqueue(gobj);\n    }\n}\n\nvoid Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if (gobjPool.Count > 0)\n        {\n            a6 = gobjPool.Dequeue();\n            a6.SetActive(true);\n        }\n        else\n        {\n            a6 = Instantiate(pooledGobj);\n        }\n        \n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        a6.SetActive(false);\n        gobjPool.Enqueue(a6);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 341,
+        "completion_tokens": 1271,
+        "total_tokens": 1612
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

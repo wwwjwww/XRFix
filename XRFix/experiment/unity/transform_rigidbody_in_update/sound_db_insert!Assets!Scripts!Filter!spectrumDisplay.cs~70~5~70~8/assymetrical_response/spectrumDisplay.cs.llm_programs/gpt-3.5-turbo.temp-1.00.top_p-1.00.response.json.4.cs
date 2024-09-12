@@ -1,0 +1,99 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+using UnityEngine;
+using System.Collections;
+
+public class spectrumDisplay : MonoBehaviour {
+  public AudioSource source;
+  int texW = 256;
+  int texH = 32;
+  Texture2D tex;
+  public Renderer texrend;
+  Color32[] texpixels;
+
+  bool active = false;
+
+  float[] spectrum;
+
+  protected Rigidbody rb10;
+
+
+  void Start() {
+    spectrum = new float[texW];
+
+    tex = new Texture2D(texW, texH, TextureFormat.RGBA32, false);
+    texpixels = new Color32[texW * texH];
+
+    for (int i = 0; i < texpixels.Length; i++) texpixels[i] = new Color32(0, 0, 0, 255);
+    tex.SetPixels32(texpixels);
+    tex.Apply(false);
+
+    texrend.material.mainTexture = tex;
+    texrend.material.SetTexture(Shader.PropertyToID("_Illum"), tex);
+    texrend.material.SetColor("_EmissionColor", Color.HSVToRGB(10 / 400f, 98 / 255f, 1f));
+    texrend.material.SetFloat("_EmissionGain", .4f);
+  }
+
+  const float spectrumMult = 5;
+  void GenerateTex() {
+    for (int i = 0; i < texW; i++) {
+      for (int i2 = 0; i2 < texH; i2++) {
+        byte s = 0;
+        if (spectrum[i] * spectrumMult * texH >= i2) s = 255;
+        texpixels[i2 * texW + i] = new Color32(s, s, s, 255);
+      }
+    }
+  }
+
+  public void toggleActive(bool on) {
+    active = on;
+    if (!active) {
+      for (int i = 0; i < texpixels.Length; i++) texpixels[i] = new Color32(0, 0, 0, 255);
+      tex.SetPixels32(texpixels);
+      tex.Apply(false);
+    }
+  }
+
+/*   void Update() {
+    * BUG: Transform object of Rigidbody in Update() methods
+    * MESSAGE: Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.
+    *     rb10.transform.Rotate(0, 30, 0);
+    * 
+    *     if (!active) return;
+    * 
+    *     source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+    *     GenerateTex();
+    *     tex.SetPixels32(texpixels);
+    *     tex.Apply(false);
+    *   }
+
+    * Move this function in FixedUpdate() methods.
+    * FIXED CODE:
+    */
+
+    
+void FixedUpdate()
+{
+    if (!active) return;
+    
+    rb10.transform.Rotate(0, 30, 0);
+    
+    source.GetSpectrumData(spectrum, 0, FFTWindow.Rectangular);
+    GenerateTex();
+    tex.SetPixels32(texpixels);
+    tex.Apply(false);
+}
+
+}

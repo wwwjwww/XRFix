@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "I can definitely help you with your code, but I would appreciate it if you could provide me with the entirety of the original code. The part I have been provided with is incomplete, and thus, I cannot fully assist you in completing your task.",
+    "code_repairing_1": "Here is my fixed version of the code:\n\n```cs\nusing System;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;\n\nnamespace Microsoft.MixedReality.Toolkit.Utilities\n{\n    public static class Runtime",
+    "code_repairing_2": "Here is a possible solution for your code. It should handle the given C# code and fix all compiler errors or warnings.\n\n```\nusing System;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;",
+    "code_repairing_3": "```csharp\nusing System.Linq;\nusing UnityEngine;\n\nnamespace Microsoft.MixedReality.Toolkit.Utilities\n{\n    public static class RuntimeSceneUtils\n    {\n        public static string GetSceneNameFromScenePath(string scenePath)\n        {\n            return System",
+    "code_repairing_4": "```\nusing UnityEngine;\n\npublic static class RuntimeSceneUtils\n{\n    public static string GetSceneNameFromScenePath(string scenePath)\n    {\n        return System.IO.Path.GetFileNameWithoutExtension(scenePath);\n    }\n\n    public static"
+}

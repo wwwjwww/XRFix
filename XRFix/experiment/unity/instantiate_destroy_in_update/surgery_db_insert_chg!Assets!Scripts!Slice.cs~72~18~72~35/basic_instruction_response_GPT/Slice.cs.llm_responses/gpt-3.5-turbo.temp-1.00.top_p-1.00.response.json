@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yztrLbn7aN9RS1hnsK3Uy614wXQl",
+    "object": "chat.completion",
+    "created": 1724324651,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "void Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\npublic void Dispose(GameObject obj7)\n{\n    Destroy(obj7);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "void Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "void Update()\n    {\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer+=Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit){\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit ){\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            \n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            \n            int startIndex = hit.triangleIndex * 3;\n\n            \n            \n            \n            triangles.RemoveRange(startIndex, 3);\n\n            \n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}\n\npublic void Dispose(GameObject obj7)\n{\n    Destroy(obj7);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "void Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            List<int> triangles = new List<int>();\n            triangles.AddRange(mesh.triangles);\n\n            int startIndex = hit.triangleIndex * 3;\n\n            triangles.RemoveRange(startIndex, 3);\n\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 736,
+        "completion_tokens": 1064,
+        "total_tokens": 1800
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzOuX7G27fJvD8PJ5V2EDGy0zpZx",
+    "object": "chat.completion",
+    "created": 1724322732,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\n\npublic class waveViz : MonoBehaviour \n{\n    Texture2D tex;\n    public Renderer waverend;\n    int wavewidth = 512;\n    int waveheight = 64;\n    public int period = 512;\n    Color32[] wavepixels;\n    int curWaveW = 0;\n    int lastWaveH = 0;\n    public Color32 waveBG = Color.black;\n    public Color32 waveLine = Color.white;\n\n    [DllImport(\"SoundStageNative\")]\n    private extern static void ProcessWave(ref Color32[] wavepixels, Color32 waveBG, Color32 waveLine, int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n\n    void Start() \n    {\n        wavepixels = new Color32[wavewidth * waveheight];\n        tex = new Texture2D(wavewidth, waveheight, TextureFormat.RGBA32, false);\n        waverend.material.mainTexture = tex;\n    }\n\n    void Update() \n    {\n        ProcessWave(ref wavepixels, waveBG, waveLine, period, waveheight, wavewidth, ref lastWaveH, ref curWaveW);\n        tex.SetPixels32(wavepixels);\n        tex.Apply();\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic class waveViz : MonoBehaviour {\n  Texture2D tex;\n  public Renderer waverend;\n  int wavewidth = 512;\n  int waveheight = 64;\n  public int period = 512;\n  Color32[] wavepixels;\n  int curWaveW = 0;\n  int lastWaveH = 0;\n  public Color32 waveBG = Color.black;\n  public Color32 waveLine = Color.white;\n\n  [DllImport(\"SoundStageNative\")]\n  private extern static void UpdateWave(out Color32[] wave, int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic class waveViz : MonoBehaviour {\n    Texture2D tex;\n    public Renderer waverend;\n    int wavewidth = 512;\n    int waveheight = 64;\n    public int period = 512;\n    Color32[] wavepixels;\n    int curWaveW = 0;\n    int lastWaveH = 0;\n    public Color32 waveBG = Color.black;\n    public Color32 waveLine = Color.white;\n\n    [DllImport(\"SoundStageNative\")]\n    private static extern void GetWaveData(Color32[] wavepixels, int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n[DllImport(\"SoundStageNative\")]\nprivate static extern void ProcessWaveData(IntPtr audioData, int audioDataLength, \n    ref Color32[] wavepixels, Color32 waveBG, Color32 waveLine, int period, \n    int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\n\npublic class waveViz : MonoBehaviour {\n  Texture2D tex;\n  public Renderer waverend;\n  int wavewidth = 512;\n  int waveheight = 64;\n  public int period = 512;\n  Color32[] wavepixels;\n  int curWaveW = 0;\n  int lastWaveH = 0;\n  public Color32 waveBG = Color.black;\n  public Color32 waveLine = Color.white;\n\n  [DllImport(\"SoundStageNative\")]\n  private static extern void GetWaveData(Color32[] wavepixels, int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n\n  void Start() {\n    tex = new Texture2D(wavewidth, waveheight, TextureFormat.RGBA32, false);\n    wavepixels = new Color32[wavewidth * waveheight];\n\n    waverend.material.mainTexture = tex;\n  }\n\n  void Update() {\n    GetWaveData(wavepixels, period, waveheight, wavewidth, ref lastWaveH, ref curWaveW);\n    \n    tex.SetPixels32(wavepixels);\n    tex.Apply();\n\n    // Alternative way to draw the texture if the renderer component is a SpriteRenderer\n    // waverend.material.mainTexture = tex;\n  }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 921,
+        "total_tokens": 1139
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

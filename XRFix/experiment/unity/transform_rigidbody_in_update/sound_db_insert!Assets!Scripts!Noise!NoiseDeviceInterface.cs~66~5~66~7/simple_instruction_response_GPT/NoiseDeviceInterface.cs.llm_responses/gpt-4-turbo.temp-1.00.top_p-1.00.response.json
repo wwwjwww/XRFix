@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzXkCt4FzNUDLDpFFub9SXNKIIbr",
+    "object": "chat.completion",
+    "created": 1724323280,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n  if (gen.updated || output.near == null) {\n    gen.updated = false;\n    GenerateRandomTex();\n    tex.SetPixels32(texpixels);\n    tex.Apply(false);\n  }\n\n  gen?.updatePercent(speedDial?.percent ?? 0f);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n  rb2.MovePosition(rb2.position + new Vector3(0, 1, 0) * Time.deltaTime);\n\n  if (gen.updated || output.near == null) {\n    gen.updated = false;\n    GenerateRandomTex();\n    tex.SetPixels32(texpixels);\n    tex.Apply(false);\n  }\n\n  gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  void Update() {\n    if (gen.updated || output.near == null) {\n      gen.updated = false;\n      GenerateRandomTex();\n      tex.SetPixels32(texpixels);\n      tex.Apply(false);\n    }\n\n    if(speedDial != null) {\n      gen.updatePercent(speedDial.percent);\n    }\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n  rb2.MovePosition(rb2.position + Vector3.up * Time.deltaTime);\n  \n  if (gen.updated || output.near == null) {\n    gen.updated = false;\n    GenerateRandomTex();\n    tex.SetPixels32(texpixels);\n    tex.Apply(false);\n  }\n\n  gen.updatePercent(speedDial.percent);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Update() {\n    rb2.MovePosition(rb2.position + new Vector3(0, 1, 0) * Time.deltaTime);\n\n    if (gen.updated || output.near == null) {\n      gen.updated = false;\n      GenerateRandomTex();\n      tex.SetPixels32(texpixels);\n      tex.Apply(false);\n    }\n\n    gen.updatePercent(speedDial.percent);\n  }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 492,
+        "completion_tokens": 382,
+        "total_tokens": 874
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

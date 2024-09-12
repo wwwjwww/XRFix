@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wApdKCRqb1nrAVCfnc7UWJGuSqz0",
+    "object": "chat.completion",
+    "created": 1723651689,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[][]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[][]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshRenderBucket> _meshToRenderBuckets = new Dictionary<Mesh, MeshRenderBucket>();\nprivate readonly Dictionary<string, LinkedListNode<MeshToRender>> _brickUuidToNodes = new Dictionary<string, LinkedListNode<MeshToRender>>();\nprivate readonly Dictionary<string, Mesh> _brickUuidToMesh = new Dictionary<string, Mesh>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshRenderBucket> _meshToRenderBuckets = new Dictionary<Mesh, MeshRenderBucket>();\nprivate readonly Dictionary<string, LinkedListNode<MeshToRender>> _brickUuidToNodes = new Dictionary<string, LinkedListNode<MeshToRender>>();\nprivate readonly Dictionary<string, Mesh> _brickUuidToMesh = new Dictionary<string, Mesh>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<Mesh, MeshToRender[][]> _groupedBrickBucketCache = new Dictionary<Mesh, MeshToRender[][]>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 220,
+        "total_tokens": 539
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

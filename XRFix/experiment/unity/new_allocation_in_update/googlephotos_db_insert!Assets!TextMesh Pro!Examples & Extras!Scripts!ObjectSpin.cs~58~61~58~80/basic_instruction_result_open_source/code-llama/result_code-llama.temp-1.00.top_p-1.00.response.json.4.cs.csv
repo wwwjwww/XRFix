@@ -1,0 +1,1 @@
+"Using New() allocation in Update() method.","Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.","warning","Using New() to create object in Update here.","/Assets/TextMesh Pro/Examples & Extras/Scripts/ObjectSpin.cs","63","61","63","80"

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyxE15L8nOSFVaLEfujn1PvoGcDN",
+    "object": "chat.completion",
+    "created": 1724321016,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```C#\n[DllImport(\"SoundStageNative\")]\nprivate static extern void DrawWave(int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "[DllImport(\"SoundStageNative\")]\npublic static extern void GetWaveform(int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "[DllImport(\"SoundStageNative\")]\n    static extern void GenerateWave(int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "[DllImport(\"SoundStageNative\")]\n  public static extern void DrawWave(int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "[DllImport(\"SoundStageNative\")]\nprivate static extern int GenerateWaveData(int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 218,
+        "completion_tokens": 182,
+        "total_tokens": 400
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

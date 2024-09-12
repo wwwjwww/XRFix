@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "Using static directives can cause a large number of static types to be included in the auto-generated namespace, making it harder to find the types you need and increasing the size of the generated code. Consider refactoring this code to use explicit types instead, and remove the unnecessary using static directives.",
+    "code_repairing_1": "```csharp\nusing System;\nusing System.Collections.Generic;\nusing System.Runtime.CompilerServices;\n\ninternal static class OVRTask\n{\n    internal static OVRTask<TResult> FromGuid<TResult>(Guid id) => Create<TResult>(id);\n    internal",
+    "code_repairing_2": "Using System;\n\ninternal static class OVRTask\n{\n    internal static OVRTask<TResult> FromGuid<TResult>(Guid id) => Create<TResult>(id);\n    internal static OVRTask<TResult> FromRequest<TResult>(ulong id) => Create<TResult",
+    "code_repairing_3": "using System;\nusing System.Collections.Generic;\n\ninternal static class OVRTask\n{\n    internal static OVRTask<TResult> FromGuid<TResult>(Guid id) => Create<TResult>(id);\n    internal static OVRTask<TResult> FromRequest<TResult",
+    "code_repairing_4": "```\nusing System;\nusing System.Collections.Generic;\nusing System.Runtime.CompilerServices;\n\ninternal static class OVRTask\n{\n    internal static OVRTask<TResult> FromGuid<TResult>(Guid id) => Create<TResult>(id);\n    internal static"
+}

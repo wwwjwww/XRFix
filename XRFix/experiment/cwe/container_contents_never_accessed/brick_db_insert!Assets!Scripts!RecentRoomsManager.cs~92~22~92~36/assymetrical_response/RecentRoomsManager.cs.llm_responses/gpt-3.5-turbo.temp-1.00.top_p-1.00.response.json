@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wApg2gLX25irbGArGpc2Wi3oNbl4",
+    "object": "chat.completion",
+    "created": 1723651692,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();\n        roomNamesToLoad.AddRange(rooms.Select(Path.GetFileNameWithoutExtension));\n        roomNamesToLoad = roomNamesToLoad.GetRange(0, Mathf.Min(roomNamesToLoad.Count, NumberOfRoomsToLoad));\n\n        savedRooms = new GameObject[roomNamesToLoad.Count];\n        recentRoomsRoomCodes = new TextMeshProUGUI[roomNamesToLoad.Count];\n        recentRoomsNames = new TextMeshProUGUI[roomNamesToLoad.Count];\n        recentRoomsBrickCounts = new TextMeshProUGUI[roomNamesToLoad.Count];\n\n        for (int i = 0; i < roomNamesToLoad.Count; i++)\n        {\n            savedRooms[i] = Instantiate(recentRoomPrefab, savedRoomsObject.transform);\n            savedRooms[i].GetComponentInChildren<CustomButton>().onClick.AddListener(() => LoadRoom(roomNamesToLoad[i]));\n            recentRoomsRoomCodes[i] = savedRooms[i].transform.Find(\"RoomCode\").GetComponent<TextMeshProUGUI>();\n            recentRoomsNames[i] = savedRooms[i].transform.Find(\"RoomName\").GetComponent<TextMeshProUGUI>();\n            recentRoomsBrickCounts[i] = savedRooms[i].transform.Find(\"BrickCount\").GetComponent<TextMeshProUGUI>();\n\n            string roomName = roomNamesToLoad[i];\n            recentRoomsRoomCodes[i].text = roomName;\n            recentRoomsNames[i].text = _textInfo.ToTitleCase(roomName.Replace(\"_\", \" \"));\n            recentRoomsBrickCounts[i].text = GetBrickCount(rooms[i]);\n        }\n\n        pagedScroll.InitializePagination(savedRooms.Length);\n        pagedScroll.EnableButtons();\n    }\n\n    private void LoadRoom(string roomName)\n    {\n        SessionManager.DecodeSavedRoom(roomName);\n    }\n\n    private string GetBrickCount(string roomPath)\n    {\n        int brickCount = File.ReadAllLines(roomPath + \".bricks\").Length;\n        return brickCount + \" Bricks\";\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 541,
+        "completion_tokens": 449,
+        "total_tokens": 990
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

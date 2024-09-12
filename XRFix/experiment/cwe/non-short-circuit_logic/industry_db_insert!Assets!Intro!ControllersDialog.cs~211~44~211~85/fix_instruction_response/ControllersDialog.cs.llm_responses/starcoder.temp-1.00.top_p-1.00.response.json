@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;",
+    "code_repairing_1": "bool trigger_pressed = ctrl.triggerPressed && ctrl.touchpadPressed;",
+    "code_repairing_2": "bool trigger_pressed = (ctrl.triggerPressed) || (ctrl.touchpad",
+    "code_repairing_3": "<|user|>\n\u00bfPorque muchas personas en las \u00e1reas de la",
+    "code_repairing_4": "using System;\nusing System.Linq.Expressions;\n\npublic static class Logical"
+}

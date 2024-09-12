@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yLZcemHKbHjoqOVdeH6BFxdKwTv4",
+    "object": "chat.completion",
+    "created": 1724169636,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InstantiateObject()\n{\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a5 = Instantiate(gobj5);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    else if (instantiate_gobj && timer >= timeLimit)\n    {\n        Destroy(a5);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n}\n\nprivate void Update()\n{\n    timer += Time.deltaTime;\n\n    if (isLocal)\n    {\n        rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n        leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n        head.SetPositionAndRotation(source.head.position, source.head.rotation);\n        transform.localScale = localRig.transform.localScale;\n    }\n\n    InstantiateObject();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\npublic void Update()\n    {\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a5 = Instantiate(gobj5);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        else if (instantiate_gobj && timer >= timeLimit)\n        {\n            Destroy(a5);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (!isLocal) return;\n\n        rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n        leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n        head.SetPositionAndRotation(source.head.position, source.head.rotation);\n        transform.localScale = localRig.transform.localScale;\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "public void Update() \n{\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        if(gobj5 != null)\n        {\n            a5 = Instantiate(gobj5);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n    }\n\n    if (instantiate_gobj && timer >= timeLimit )\n    {\n        if(a5 != null)\n        {\n            Destroy(a5);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n    }\n\n    if(!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nprivate void Start()\n{\n    source = FindObjectOfType<LocalRigData>();\n\n    if (!isLocal) return;\n\n    nameLabel.SetActive(false);\n    face.SetActive(false);\n    localRig = GameObject.Find(\"Player Controllers/VR Rig\");\n}\n\nprivate void Update()\n{\n    if (!isLocal) return;\n\n    rightHand.SetPositionAndRotation(source.rightHand.position, source.rightHand.rotation);\n    leftHand.SetPositionAndRotation(source.leftHand.position, source.leftHand.rotation);\n    head.SetPositionAndRotation(source.head.position, source.head.rotation);\n    transform.localScale = localRig.transform.localScale;\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 511,
+        "completion_tokens": 787,
+        "total_tokens": 1298
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

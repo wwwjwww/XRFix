@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yywf9M6suvUE07g0mOdbCSyyFTiX",
+    "object": "chat.completion",
+    "created": 1724320981,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "public static readonly HashSet<T> HashSet = new HashSet<T>();\n        public static T Acquire()\n        {\n            T item = Storage<T>.HashSet.Count > 0 ? Storage<T>.HashSet.First() : new T();\n            Storage<T>.HashSet.Remove(item);\n            return item;\n        }\n\n        public static void Release(T item)\n        {\n            Storage<T>.HashSet.Add(item);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "        public static readonly HashSet<T> HashSet = new HashSet<T>();\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "        public static readonly HashSet<T> HashSet = new HashSet<T>();\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "public static readonly HashSet<T> HashSet = new HashSet<T>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public static readonly HashSet<T> HashSet = new HashSet<T>();\n        public static void AddToHashSet(T item)\n        {\n            HashSet.Add(item);\n        }\n\n        public static void RemoveFromHashSet(T item)\n        {\n            HashSet.Remove(item);\n        }\n\n        public static void ClearHashSet()\n        {\n            HashSet.Clear();\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 276,
+        "completion_tokens": 192,
+        "total_tokens": 468
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

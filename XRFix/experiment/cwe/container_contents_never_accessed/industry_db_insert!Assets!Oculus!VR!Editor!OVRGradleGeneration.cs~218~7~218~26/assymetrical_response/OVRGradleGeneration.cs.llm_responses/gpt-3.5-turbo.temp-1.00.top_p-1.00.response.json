@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAq0nyCCuNTUxuyUTkcAjNrdeIk9",
+    "object": "chat.completion",
+    "created": 1723651712,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "var targetOculusPlatform = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "var targetOculusPlatform = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "var targetOculusPlatform = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "var targetOculusPlatform = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\t\t//var targetOculusPlatform = new List<string>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1857,
+        "completion_tokens": 58,
+        "total_tokens": 1915
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

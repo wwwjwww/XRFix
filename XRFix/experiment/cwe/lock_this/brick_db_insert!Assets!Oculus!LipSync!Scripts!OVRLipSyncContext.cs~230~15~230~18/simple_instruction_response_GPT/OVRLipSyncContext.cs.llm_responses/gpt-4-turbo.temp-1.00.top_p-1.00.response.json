@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzQMHEYwuddaJxp3QnVnknk1Tj2R",
+    "object": "chat.completion",
+    "created": 1724322822,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    if (enableTouchInput)\n    {\n        OVRTouchpad.AddListener(LocalTouchEventCallback);\n    }\n\n    // Check if we have a debug console, and assign the 'hasDebugConsole' variable accordingly.\n    OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n    hasDebugConsole = consoles.Length > 0;\n}\n\nvoid Update()\n{\n    if(enableKeyboardInput)\n    {\n        HandleKeyboard();\n    }\n\n    // Check if the current frame is valid before attempting to access laughterScore.\n    if (this.Frame != null)\n    {\n        laughterScore = this.Frame.laughterScore;\n    }\n    \n    DebugShowVisemesAndLaughter();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    // ...\n\n    if (consoles.Length > 0)\n    {\n        hasDebugConsole = true; // corrected assignment from object to bool\n    }\n    \n    // ...\n}\n\nvoid Update()\n{\n    // ...\n\n    // Ensure laughterScore only gets updated if the base class has a valid Frame\n    if (this.Frame != null)\n    {\n        laughterScore = this.Frame.laughterScore;\n    }\n\n    // ...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void Start()\n    {\n        base.Start(); \n\n        if (enableTouchInput)\n        {\n            OVRTouchpad.AddListener(LocalTouchEventCallback);\n        }\n\n        OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n        hasDebugConsole = consoles.Length > 0;\n    }\n\n    void Update()\n    {\n        if (enableKeyboardInput)\n        {\n            HandleKeyboard();\n        }\n        if (this.Frame != null)\n        {\n            laughterScore = this.Frame.laughterScore;\n            DebugShowVisemesAndLaughter();\n        }\n    }\n\n    void DebugShowVisemesAndLaughter()\n    {\n        if (hasDebugConsole)\n        {\n            // Show viseme and laughter information in the Debug Console if enabled\n            if (showVisemes)\n            {\n                // Your code to show viseme data\n            }\n            if (showLaughter)\n            {\n                // Your code to show laughter data\n            }\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    void Start()\n    {\n        base.Start();\n\n        if (enableTouchInput)\n        {\n            OVRTouchpad.AddListener(LocalTouchEventCallback);\n        }\n\n        OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n        if (consoles.Length > 0)\n        {\n            hasDebugConsole = true;\n        }\n    }\n\n    void Update()\n    {\n        base.Update();\n\n        if (enableKeyboardInput)\n        {\n            HandleKeyboard();\n        }\n\n        if (this.Frame != null)\n        {\n            laughterScore = this.Frame.laughterScore;\n            DebugShowVisemesAndLaughter();\n        }\n    }\n\n    public override void PreprocessAudioSamples(float[] data, int channels)\n    {\n        base.PreprocessAudioSamples(data, channels);\n\n        for (int i = 0; i < data.Length; ++i)\n        {\n            data[i] = data[i] * gain;\n        }\n    }\n\n    public override void PostprocessAudioSamples(float[] data, int channels)\n    {\n        base.PostprocessAudioSamples(data, channels);\n\n        if (!audioLoopback)\n        {\n            for (int i = 0; i < data.Length; ++i)\n            {\n                data[i] = 0.0f;\n            }\n        }\n    }\n\n    public override void ProcessAudioSamplesRaw(float[] data, int channels)\n    {\n        lock (this)\n        {\n            if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n            {\n                return;\n            }\n            var frame = this.Frame;\n            OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    base.Start();\n\n    if (enableTouchInput)\n    {\n        OVRTouchpad.AddListener(LocalTouchEventCallback);\n    }\n\n    OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n    hasDebugConsole = consoles.Length > 0;\n}\n\nvoid Update()\n{\n    base.Update();\n\n    if (enableKeyboardInput)\n    {\n        HandleKeyboard();\n    }\n\n    laughterScore = this.Frame.laughterScore;\n\n    if (showVisemes || showLaughter)\n    {\n        DebugShowVisemesAndLaughter();\n    }\n}\n\npublic void DebugShowVisemesAndLaughter()\n{\n    if (showVisemes && hasDebugConsole)\n    {\n        // Add code to show visemes if required\n    }\n\n    if (showLaughter && hasDebugConsole)\n    {\n        // Add code to show laughter score if required\n    }\n}\n\npublic void ToggleAudioLoopback()\n{\n    audioLoopback = !audioLoopback;\n    // Add any additional behavior required when toggling audio loopback\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1185,
+        "completion_tokens": 1034,
+        "total_tokens": 2219
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

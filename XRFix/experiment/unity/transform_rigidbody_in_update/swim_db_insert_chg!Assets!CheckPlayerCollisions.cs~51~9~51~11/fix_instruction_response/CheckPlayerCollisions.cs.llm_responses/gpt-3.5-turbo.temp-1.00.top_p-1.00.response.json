@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvQel9NDn6rZZnex6bzeNDGUf9nj",
+    "object": "chat.completion",
+    "created": 1722400840,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void FixedUpdate()\n{\n    rb4.transform.Rotate(10, 0, 0);\n\n    if (Input.GetKeyDown(KeyCode.DownArrow))\n    {\n        ripForce -= 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n    else if (Input.GetKeyDown(KeyCode.UpArrow))\n    {\n        ripForce += 10;\n        statusText.SetActive(true);\n        statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n        Invoke(\"HideStatus\", 2);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```\n        private void FixedUpdate()\n        {\n            rb4.transform.Rotate(10, 0, 0);\n\n            if (Input.GetKeyDown(KeyCode.DownArrow))\n            {\n                ripForce -= 10;\n                statusText.SetActive(true);\n                statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n                Invoke(\"HideStatus\", 2);\n            }\n            else if (Input.GetKeyDown(KeyCode.UpArrow))\n            {\n                ripForce += 10;\n                statusText.SetActive(true);\n                statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set \" + ripForce;\n                Invoke(\"HideStatus\", 2);\n            }\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private void FixedUpdate()\n    {\n        rb4.transform.Rotate(10, 0, 0);\n\n        if (Input.GetKeyDown(KeyCode.DownArrow))\n        {\n            ripForce -= 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n        else if (Input.GetKeyDown(KeyCode.UpArrow))\n        {\n            ripForce += 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private void FixedUpdate()\n        {\n            rb4.transform.Rotate(10, 0, 0);\n\n            if (Input.GetKeyDown(KeyCode.DownArrow))\n            {\n                ripForce -= 10;\n                statusText.SetActive(true);\n                statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n                Invoke(\"HideStatus\", 2);\n            }\n            else if (Input.GetKeyDown(KeyCode.UpArrow))\n            {\n                ripForce += 10;\n                statusText.SetActive(true);\n                statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n                Invoke(\"HideStatus\", 2);\n            }\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private void FixedUpdate()\n    {\n        rb4.transform.Rotate(10, 0, 0);\n\n        if (Input.GetKeyDown(KeyCode.DownArrow))\n        {\n            ripForce -= 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n        else if (Input.GetKeyDown(KeyCode.UpArrow))\n        {\n            ripForce += 10;\n            statusText.SetActive(true);\n            statusText.GetComponent<TMPro.TextMeshProUGUI>().text = \"rip force set to \" + ripForce;\n            Invoke(\"HideStatus\", 2);\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 496,
+        "completion_tokens": 729,
+        "total_tokens": 1225
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}
