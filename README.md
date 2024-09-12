@@ -54,7 +54,7 @@ codeql database analyze <database> ./codeql/csharp/ql/src/codeql-suites/unity-ch
 ```
 
 #### code repair framework
-Please see readme.md files in ./code_repair_framework to see more details.
+Please see README.md files in ./code_repair_framework to see more details.
 
 
 
