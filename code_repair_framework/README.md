@@ -31,7 +31,7 @@ Finally, once all results are collected, you can run
 
 Note that in the framework some names differ to those used in the template. 
 
-### Synthetic/handcrafted scenario template names
+### Prompt template names
 
 Framework name                                       | Paper name
 -----------------------------------------------------|------------
