@@ -1,4 +1,4 @@
-# Unity_code_detection
+# XRFix
 This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of XR Apps with LLMs]{XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
 
 The folders are organized as follows.
