@@ -7,7 +7,7 @@ The folders are organized as follows.
 * ./code_repair_framework contains our LLM-assisted code repair framework.
 
 ### Environment Requirement
-1. CodeQL-cli version: 2.16.3, official guidance: https://codeql.github.com/docs/codeql-cli/getting-started-with-the-codeql-cli/
+1. CodeQL-cli version: 2.16.3, [official guidance](https://codeql.github.com/docs/codeql-cli/getting-started-with-the-codeql-cli/)
 2. Python 3.12.3
 3. Make sure your XR projects are compilable. Compile them in Unity Editor and keep all the files in the same project directory after compilation.
 
@@ -40,7 +40,7 @@ Furthermore, you can use the following **Optional Arguments**:
 
 #### CodeQL for Unity files
 Please download the CodeQL Github repository to your workspace consisting to your codeql-cli version. Then, add the queries in CodeQL repository.
-https://github.com/github/codeql
+[CodeQL Repository](https://github.com/github/codeql)
 
 *Set-up*
 1. Add files in ./Customized_codeql/codeql-suites to ./codeql/csharp/ql/src/codeql-suites
