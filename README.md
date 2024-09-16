@@ -9,7 +9,7 @@ The folders are organized as follows.
 ### Environment Requirement
 1. CodeQL-cli version: 2.16.3, official guidance: https://codeql.github.com/docs/codeql-cli/getting-started-with-the-codeql-cli/
 2. Python 3.12.3
-3. Make sure your XR projects are compilable.
+3. Make sure your XR projects are compilable. Compile them in Unity Editor and keep all the files in the same project directory after compilation.
 
 ### Usage
 #### UnityLint for asset files
