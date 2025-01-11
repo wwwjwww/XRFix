@@ -26,7 +26,7 @@ parser = Parser()
 parser.set_language(C_SHARP_LANGUAGE)
 
 def parse_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
         source_code = f.read()
 
     tree = parser.parse(bytes(source_code, 'utf8'))
@@ -98,7 +98,7 @@ def find_method_another_comp(directory_path, component, grandchild):
             for file in files:
                 if component in file:
                     file_path = os.path.join(root, file)
-                    with open(file_path, 'r', encoding='utf-8') as f:
+                    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         comp_code = f.read()
                     laser_pointer_tree = parser.parse(bytes(comp_code, "utf8"))
                     find_all_method = find_method(laser_pointer_tree.root_node, grandchild.text.decode('utf8'))
@@ -114,6 +114,7 @@ def find_method_another_comp(directory_path, component, grandchild):
     return False
 
 def check_keyword_method_rule_1(parent, get_comp):
+    res = None
     if parent.type == 'variable_declarator':
        variable_name_node = parent.child_by_field_name('name')
        if variable_name_node:
@@ -136,7 +137,7 @@ def check_keyword_method_rule_1(parent, get_comp):
                               
                                         
 def check_keyword_method_rule_2(parent, get_comp):
-    res = False
+    res = None
     if parent.type == "member_access_expression":
         for child in parent.children:
             if child.type == 'identifier' and child.text.decode('utf8') != get_comp:
@@ -155,9 +156,12 @@ if __name__ == "__main__":
         origin_url = rows["Commits"]
         bug_type = rows["Bugs"]
         group = origin_url.split('/')
-        author = group[3]
-        repo_name = group[4]
-        commit_id = group[6]
+        try:
+            author = group[3]
+            repo_name = group[4]
+            commit_id = group[6]
+        except:
+            continue
 
         download_url = "https://github.com/" + author + "/" + repo_name
         download_path = './Github/' + repo_name + "_" + commit_id
@@ -210,22 +214,21 @@ if __name__ == "__main__":
     
                             # Identify the variable to which GetComponent is assigned
                             parent = call.parent
+                            res1 = None
+                            res2 = None
     
-                            res1 = False
-                            res2 = False
-
                             res1 = check_keyword_method_rule_1(parent, get_comp)
                             res2 = check_keyword_method_rule_2(parent, get_comp)
 
                             if res1 or res2:
                                 print(f"Found cross-repo method call of Instantiate/Destroy inside Update() function in Repo: {file_path}.")
                             else:
-                                os.rmdir(download_path)
+                                #os.rmdir(download_path)
                                 print(f"Directory '{download_path}' has been removed successfully")
 
     
                     else:
                         print("Update method not found.")
-                        os.rmdir(download_path)
-                        print(f"Directory '{download_path}' has been removed successfully")
+                        #os.rmdir(download_path)
+                        #print(f"Directory '{download_path}' has been removed successfully")
 
