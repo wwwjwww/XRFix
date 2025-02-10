@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\Unity-XR-NetworkMapper-Project_5ab9ebaa4b704837cfebcad96c001d4720ff04f1\\AR_Cybersecuity_Project",
+    "exp_dir": "ar_cybersecurity_db!Assets!Oculus!SampleFramework!Usage!OVROverlay!Scripts!OVROverlaySample.cs~163~17~163~29",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/Oculus/SampleFramework/Usage/OVROverlay/Scripts/OVROverlaySample.cs",
+        "start_line": "163",
+        "start_column": "17",
+        "end_line": "163",
+        "end_column": "29",
+        "add_file_name": "/Assets/Oculus/SampleFramework/Usage/OVROverlay/Scripts/OVROverlaySample.cs",
+        "add_start_line": "347",
+        "add_start_column": "47",
+        "add_end_line": "347",
+        "add_end_column": "67"
+    },
+    "include_addition": true,
+    "prompt_template": [
+        "simple_add_prompt"
+    ]
+}

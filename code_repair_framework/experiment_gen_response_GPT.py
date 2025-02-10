@@ -67,20 +67,33 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                 with open(os.path.join(path, file), 'r', encoding="utf8") as f:
                     scenario_contents = json.load(f)
 
+                    hand_crafted_prompt_long = os.path.join(path, "hand_crafted_prompt_long.txt")
+                    hand_crafted_prompt_short = os.path.join(path, "hand_crafted_prompt_short.txt")
                     hand_crafted_prompt = os.path.join(path, "hand_crafted_prompt.txt")
+                    prompt = scenario_contents["prompt_template"]
 
-
-                    head_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[-1] + ".head" + file_extension
+                    head_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                  -1] + ".head" + file_extension
                     head_contents_path = os.path.join(path, head_contents_file_name)
 
-                    prepend_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[-1] + ".prepend" + file_extension
+                    prepend_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                     -1] + ".prepend" + file_extension
                     prepend_contents_path = os.path.join(path, prepend_contents_file_name)
-                    prepend_contents_file_name_add = scenario_contents["err_detailed_info"]['add_file_name'].split('/')[-1] + ".prepend_add" + file_extension
+                    prepend_contents_file_name_add = scenario_contents["err_detailed_info"]['add_file_name'].split('/')[
+                                                         -1] + ".prepend_add" + file_extension
                     prepend_contents_path_add = os.path.join(path, prepend_contents_file_name_add)
-                    prompt_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[-1] + ".prompt" + file_extension
+                    prompt_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                    -1] + ".prompt" + file_extension
                     prompt_contents_path = os.path.join(path, prompt_contents_file_name)
-                    prompt_contents_file_name_add = scenario_contents["err_detailed_info"]['add_file_name'].split('/')[-1] + ".prompt_add" + file_extension
+                    prompt_contents_file_name_add = scenario_contents["err_detailed_info"]['add_file_name'].split('/')[
+                                                        -1] + ".prompt_add" + file_extension
                     prompt_contents_path_add = os.path.join(path, prompt_contents_file_name_add)
+                    prompt_between_lines_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                         -1] + ".between" + file_extension
+                    prompt_between_lines_path = os.path.join(path, prompt_between_lines_file_name)
+                    prompt_add_first_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                     -1] + ".add_first.txt"
+                    prompt_add_first_path = os.path.join(path, prompt_add_first_file_name)
 
                     include_addition = scenario_contents["include_addition"]
                     file_name = scenario_contents["err_detailed_info"]["file_name"]
@@ -94,14 +107,29 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         prepend_contents_add = f3.read()
                     with open(prompt_contents_path_add, 'r', encoding='utf8') as f4:
                         prompt_contents_add = f4.read()
-
+                    if os.path.exists(prompt_between_lines_path):
+                        with open(prompt_between_lines_path, 'r', encoding='utf8') as f5:
+                            prompt_between_lines = f5.read()
+                        with open(prompt_add_first_path, 'r', encoding='utf8') as f6:
+                            add_first_str = f6.read()
 
                     if file_name == add_file_name:
+
                         prompt_head = comment_key + "Here're the buggy code lines from " + file_name + ":\n"
-                        prompt_foot = "\n" + comment_key + " FIXED CODE:\n"
-                        prompt_lines = prompt_head + prepend_contents + prompt_contents + prompt_foot
-                        with open(hand_crafted_prompt, 'w', encoding='utf8') as f5:
-                            f5.write(prompt_lines)
+                        if "fix_instruction_add_prompt_assymetrical" in prompt:
+                            prompt_head = "/* Here're the buggy code lines from " + file_name + ":*/\n"
+                        # prompt_foot = "\n" + comment_key + " FIXED CODE:\n"
+                        if "False" in add_first_str:
+                            prompt_lines_long = prompt_head + prepend_contents + prompt_contents + prompt_between_lines + prompt_contents_add
+                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents + prompt_contents_add
+                        else:
+                            prompt_lines_long = prompt_head + prepend_contents + prompt_contents_add + prompt_between_lines + prompt_contents
+                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents_add + prompt_contents
+
+                        with open(hand_crafted_prompt_long, 'w', encoding='utf8') as f5:
+                            f5.write(prompt_lines_long)
+                        with open(hand_crafted_prompt_short, 'w', encoding='utf8') as f6:
+                            f6.write(prompt_lines_short)
 
                     else:
                         prompt_head = comment_key + "Here're the buggy code lines from " + file_name + ":\n"
@@ -312,6 +340,22 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                     )
 
 
+def decide_include_addition(path, skip_engines=[]):
+    ile_extension = '.cs'
+    files = os.walk(path)
+
+    for path, dir_lis, file_lis in files:
+        for file in file_lis:
+            if file == "scenario.json":
+                with open(os.path.join(path, file), 'r', encoding="utf8") as f:
+                    scenario_contents = json.load(f)
+
+                if scenario_contents["include_addition"]:
+                    hand_crafted_prompt_response(path, skip_engines)
+                else:
+                    prepare_LLM_experiment_requests(path, skip_engines)
+
+
 if __name__ == '__main__':
     args = parse_arguments()
 
@@ -347,7 +391,4 @@ if __name__ == '__main__':
 
     path = args.run_path
     skip_engines = []
-    if "instantiate_destroy_in_update" in path:
-        hand_crafted_prompt_response(path, skip_engines)
-    else:
-        prepare_LLM_experiment_requests(path, skip_engines)
+    decide_include_addition(path, skip_engines)

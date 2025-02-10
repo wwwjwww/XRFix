@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real/destroy_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\6DOF-Mobile-VR-Using-GVR-and-ARCore_ce8eb39e",
+    "exp_dir": "6DOF_db!Assets!GoogleARCore!Examples!Common!Scripts!DetectedPlaneVisualizer.cs~88~17~88~35",
+    "unity_special_name": "Destroy in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_destroy_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Destroy() in Update() method.",
+        "file_name": "/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs",
+        "start_line": "88",
+        "start_column": "17",
+        "end_line": "88",
+        "end_column": "35",
+        "add_file_name": "/Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs",
+        "add_start_line": "88",
+        "add_start_column": "17",
+        "add_end_line": "88",
+        "add_end_column": "35"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "simple_prompt_func_no_limit"
+    ]
+}

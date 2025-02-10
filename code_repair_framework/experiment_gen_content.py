@@ -2,7 +2,6 @@ import pandas as pd
 import re
 import csv
 import json
-from splinter import Browser
 import requests
 import time
 import config
@@ -439,13 +438,23 @@ def derive_scenarios_for_experiments(path,):
                              vulnerable_file_append_lines_func) = get_vulnerable_function_lines(vulnerable_file_contents,
                                                                                            start_line_index)
 
-                            print(vulnerable_file_append_lines_func)
-
                             (add_vulnerable_file_prepend_lines, add_vulnerable_file_function_def_lines,
                              add_vulnerable_file_function_pre_start_lines, add_vulnerable_file_function_start_lines_to_end,
                              add_vulnerable_file_append_lines, add_vulnerable_file_function_end_func,
                              add_vulnerable_file_append_lines_func) = get_vulnerable_function_lines(add_vulnerable_contents,
                                                                                            start_line_index_add)
+
+                            vulnerable_between_lines = ""
+                            add_first = None
+
+
+                            if scenario_contents["err_detailed_info"]['file_name'] == scenario_contents["err_detailed_info"]['add_file_name']:
+                                if len(add_vulnerable_file_prepend_lines) > len(vulnerable_file_prepend_lines):
+                                    vulnerable_between_lines = add_vulnerable_file_prepend_lines[len(vulnerable_file_prepend_lines+vulnerable_file_function_def_lines+vulnerable_file_function_pre_start_lines+vulnerable_file_function_start_lines_to_end+vulnerable_file_function_end_func):]
+                                    add_first = False
+                                else:
+                                    vulnerable_between_lines = vulnerable_file_prepend_lines[len(add_vulnerable_file_prepend_lines+add_vulnerable_file_function_def_lines+add_vulnerable_file_function_pre_start_lines+add_vulnerable_file_function_start_lines_to_end+add_vulnerable_file_function_end_func):]
+                                    add_first = True
 
 
                             if scenario_contents["cwe_name"] != None:
@@ -490,7 +499,9 @@ def derive_scenarios_for_experiments(path,):
                                 'add_vulnerable_file_append_lines_func': add_vulnerable_file_append_lines_func,
                                 'whitespace_chars': whitespace_chars,
                                 'add_whitespace_chars': add_whitespace_chars,
-                                'assymetrical_comments': False
+                                'assymetrical_comments': False,
+                                'vulnerable_between_lines': vulnerable_between_lines,
+                                'add_first': add_first
                             })
 
 
@@ -517,7 +528,9 @@ def derive_scenarios_for_experiments(path,):
                                 'add_vulnerable_file_append_lines_func': add_vulnerable_file_append_lines_func,
                                 'whitespace_chars': whitespace_chars,
                                 'add_whitespace_chars': add_whitespace_chars,
-                                'assymetrical_comments': False
+                                'assymetrical_comments': False,
+                                'vulnerable_between_lines': vulnerable_between_lines,
+                                'add_first': add_first
                             })
 
                             possible_prompts.append({
@@ -543,7 +556,9 @@ def derive_scenarios_for_experiments(path,):
                                 'add_vulnerable_file_append_lines_func': add_vulnerable_file_append_lines_func,
                                 'whitespace_chars': whitespace_chars,
                                 'add_whitespace_chars': add_whitespace_chars,
-                                'assymetrical_comments': False
+                                'assymetrical_comments': False,
+                                'vulnerable_between_lines': vulnerable_between_lines,
+                                'add_first': add_first
                             })
 
                             possible_prompts.append({
@@ -569,7 +584,9 @@ def derive_scenarios_for_experiments(path,):
                                 'add_vulnerable_file_append_lines_func': add_vulnerable_file_append_lines_func,
                                 'whitespace_chars': whitespace_chars,
                                 'add_whitespace_chars': add_whitespace_chars,
-                                'assymetrical_comments': True
+                                'assymetrical_comments': True,
+                                'vulnerable_between_lines': vulnerable_between_lines,
+                                'add_first': add_first
                             })
 
                             #print(possible_prompts["vulnerable_file_prompt_lines"])
@@ -603,8 +620,10 @@ def derive_scenarios_for_experiments(path,):
                             add_vulnerable_file_append_lines = prompt['add_vulnerable_file_append_lines']
                             add_vulnerable_file_function_end_func = prompt['add_vulnerable_file_function_end_func']
                             add_vulnerable_file_append_lines_func = prompt['add_vulnerable_file_append_lines_func']
+                            vulnerable_between_lines = prompt['vulnerable_between_lines']
 
                             add_whitespace_chars = prompt['add_whitespace_chars']
+                            add_first = prompt['add_first']
 
                             scenario_instruct_filename = prompt['filename'].split('/')[-1] + ".head" + file_extension
                             scenario_instruct_filename_full = os.path.join(path, scenario_instruct_filename)
@@ -622,6 +641,11 @@ def derive_scenarios_for_experiments(path,):
                             add_scenario_prompt_filename_full = os.path.join(path, add_scenario_prompt_filename)
                             add_scenario_append_filename = prompt['add_filename'].split('/')[-1] + ".append_add" + file_extension
                             add_scenario_append_filename_full = os.path.join(path, add_scenario_append_filename)
+
+                            vulnerable_between_lines_filename = prompt['add_filename'].split('/')[-1] + ".between" + file_extension
+                            vulnerable_between_lines_filename_full = os.path.join(path, vulnerable_between_lines_filename)
+                            add_first_notice_filename = prompt['add_filename'].split('/')[-1] + ".add_first.txt"
+                            add_first_notice_filename_full = os.path.join(path, add_first_notice_filename)
 
 
 
@@ -705,6 +729,13 @@ def derive_scenarios_for_experiments(path,):
                             # make the scenario append
                             with open(add_scenario_append_filename_full, 'w', encoding='utf8') as f:
                                 f.writelines(add_vulnerable_file_append_lines_func)
+
+                            with open(vulnerable_between_lines_filename_full, 'w', encoding='utf8') as f:
+                                f.writelines(vulnerable_between_lines)
+
+                            if add_first != None:
+                                with open(add_first_notice_filename_full,'w', encoding='utf8') as f:
+                                    f.writelines("add_first="+str(add_first))
 
                         if prompt_name == "basic_prompt_func_no_limit" or prompt_name == "fix_instruction_func_no_limit" or prompt_name == "fix_instruction_func_no_limit_assymetrical"  or prompt_name == "simple_prompt_func_no_limit":
                             vulnerable_file_prompt_lines = prompt['vulnerable_file_prompt_lines']
@@ -877,6 +908,7 @@ def derive_scenarios_for_experiments(path,):
 if __name__ == "__main__":
     #path = r".\experiment\unity\transform_rigidbody_in_update"
     #path = (r".\experiment")
-    path = (r".\experiment")
+    #path = (r".\experiment")
+    path = (r".\experiment\unity_real")
 
     derive_scenarios_for_experiments(path)

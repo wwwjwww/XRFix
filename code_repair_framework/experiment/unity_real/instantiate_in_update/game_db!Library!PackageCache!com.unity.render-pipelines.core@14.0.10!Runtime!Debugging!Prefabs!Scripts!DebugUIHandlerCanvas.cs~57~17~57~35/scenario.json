@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game",
+    "exp_dir": "game_db!Library!PackageCache!com.unity.render-pipelines.core@14.0.10!Runtime!Debugging!Prefabs!Scripts!DebugUIHandlerCanvas.cs~57~17~57~35",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs",
+        "start_line": "57",
+        "start_column": "17",
+        "end_line": "57",
+        "end_column": "35",
+        "add_file_name": "/Library/PackageCache/com.unity.render-pipelines.core@14.0.10/Runtime/Debugging/Prefabs/Scripts/DebugUIHandlerCanvas.cs",
+        "add_start_line": "116",
+        "add_start_column": "38",
+        "add_end_line": "116",
+        "add_end_column": "48"
+    },
+    "include_addition": true,
+    "prompt_template": [
+        "simple_add_prompt"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real/destroy_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game",
+    "exp_dir": "game_db!Assets!CodeScripts!RaycastGun.cs~48~25~48~57",
+    "unity_special_name": "Destroy in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_destroy_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Destroy() in Update() method.",
+        "file_name": "/Assets/CodeScripts/RaycastGun.cs",
+        "start_line": "48",
+        "start_column": "25",
+        "end_line": "48",
+        "end_column": "57",
+        "add_file_name": "/Assets/CodeScripts/RaycastGun.cs",
+        "add_start_line": "48",
+        "add_start_column": "25",
+        "add_end_line": "48",
+        "add_end_column": "57"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "simple_prompt_func_no_limit"
+    ]
+}
