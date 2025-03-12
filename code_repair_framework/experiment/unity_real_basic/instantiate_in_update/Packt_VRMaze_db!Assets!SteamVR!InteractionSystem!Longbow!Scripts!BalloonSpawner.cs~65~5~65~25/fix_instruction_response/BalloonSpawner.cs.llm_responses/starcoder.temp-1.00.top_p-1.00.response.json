@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "Please provide more context as to why the previous code was inefficient and how the provided alternative works.",
-    "code_repairing_1": "Here is an updated version of the BalloonSpawner class that includes an object pool to prevent the use",
-    "code_repairing_2": "using UnityEngine;\nusing System.Collections;\n\nnamespace Valve.VR.InteractionSystem\n{",
-    "code_repairing_3": "You can optimize the code by instantiating the balloon prefab at runtime in a separate object pool using",
-    "code_repairing_4": "Here is the updated and refactored version:\n\nusing UnityEngine;\nusing System.Collections;"
-}

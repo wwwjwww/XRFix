@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "<|system|>",
-    "code_repairing_1": "<|system|>",
-    "code_repairing_2": "```C#",
-    "code_repairing_3": "transform.local",
-    "code_repairing_4": "transform.local"
-}

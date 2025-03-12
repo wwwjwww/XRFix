@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "```csharp\nVector2 waveUVOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```",
-    "code_repairing_1": "using UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic",
-    "code_repairing_2": "using UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic",
-    "code_repairing_3": "using UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic",
-    "code_repairing_4": "using UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\n\npublic"
-}

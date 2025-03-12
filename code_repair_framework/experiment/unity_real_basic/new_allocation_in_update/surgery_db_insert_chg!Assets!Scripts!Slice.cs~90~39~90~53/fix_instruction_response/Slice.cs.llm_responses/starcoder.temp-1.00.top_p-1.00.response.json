@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "List<int> triangles = mesh.triangles.ToList();\n                triangles.Add(hit.triangleIndex);\n                mesh.triangles = triangles.ToArray();\n                meshCollider.sharedMesh = mesh;\n            }\n        }\n    }\n\n}",
-    "code_repairing_1": "using System.Collections.Generic;\n\npublic class Slice : MonoBehaviour\n{\n    private Mesh mesh;\n    private MeshCollider meshCollider;\n\n    protected Rigidbody rb2;\n\n    protected GameObject gobj7;\n\n    protected GameObject a7;\n\n    protected",
-    "code_repairing_2": "using System.Collections.Generic;\n\npublic class Slice : MonoBehaviour\n{\n    private Mesh mesh;\n    private MeshCollider meshCollider;\n\n    protected Rigidbody rb2;\n\n    protected GameObject gobj7;\n\n    protected GameObject a7;\n\n    protected",
-    "code_repairing_3": "using UnityEngine;\nusing System.Collections.Generic;\nusing System.Linq;\n\npublic class Slice : MonoBehaviour\n{\n    private Mesh mesh;\n    private MeshCollider meshCollider;\n\n    protected Rigidbody rb2;\n\n    protected GameObject gobj",
-    "code_repairing_4": "using System.Collections.Generic;\n\npublic class Slice : MonoBehaviour\n{\n    private Mesh mesh;\n    private MeshCollider meshCollider;\n\n    protected Rigidbody rb2;\n\n    protected GameObject gobj7;\n\n    protected GameObject a7;\n\n    protected"
-}
