@@ -2,7 +2,7 @@
 Copyright : Copyright (c) Facebook Technologies, LLC and its affiliates. All rights reserved.
 
 Your use of this SDK or tool is subject to the Oculus SDK License Agreement, available at
-https:
+https://developer.oculus.com/licenses/oculussdk/
 
 Unless required by applicable law or agreed to in writing, the Utilities SDK distributed
 under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
@@ -64,7 +64,7 @@ public static class OVRPlugin
 
 					if (pluginVersion != null)
 					{
-						
+
 						pluginVersion = pluginVersion.Split('-')[0];
 						_version = new System.Version(pluginVersion);
 					}
@@ -78,7 +78,7 @@ public static class OVRPlugin
 					_version = _versionZero;
 				}
 
-				
+
 				if (_version == OVRP_0_5_0.version)
 					_version = OVRP_0_1_0.version;
 
@@ -113,7 +113,7 @@ public static class OVRPlugin
 
 					if (sdkVersion != null)
 					{
-						
+
 						sdkVersion = sdkVersion.Split('-')[0];
 						_nativeSDKVersion = new System.Version(sdkVersion);
 					}
@@ -157,10 +157,10 @@ public static class OVRPlugin
 
 	public enum Result
 	{
-		
+
 		Success = 0,
 
-		
+
 		Failure = -1000,
 		Failure_InvalidParameter = -1001,
 		Failure_NotInitialized = -1002,
@@ -299,7 +299,7 @@ public static class OVRPlugin
 	{
 		None = -1,
 		ConfirmQuit = 1,
-		GlobalMenuTutorial, 
+		GlobalMenuTutorial, // Deprecated
 	}
 
 	public enum SystemRegion
@@ -313,7 +313,7 @@ public static class OVRPlugin
 	{
 		None = 0,
 
-		
+
 		Oculus_Quest = 8,
 		Oculus_Quest_2 = 9,
 		Placeholder_10,
@@ -322,7 +322,7 @@ public static class OVRPlugin
 		Placeholder_13,
 		Placeholder_14,
 
-		
+
 		Rift_DK1 = 0x1000,
 		Rift_DK2,
 		Rift_CV1,
@@ -349,7 +349,7 @@ public static class OVRPlugin
 	public enum Step
 	{
 		Render = -1,
-		Physics = 0, 
+		Physics = 0, // will be deprecated when using OpenXR
 	}
 
 	public enum CameraDevice
@@ -379,7 +379,7 @@ public static class OVRPlugin
 		Low = 1,
 		Medium = 2,
 		High = 3,
-		
+
 		HighTop = 4,
 		EnumSize = 0x7FFFFFFF
 	}
@@ -391,7 +391,7 @@ public static class OVRPlugin
 		LMSLow = FixedFoveatedRenderingLevel.Low,
 		LMSMedium = FixedFoveatedRenderingLevel.Medium,
 		LMSHigh = FixedFoveatedRenderingLevel.High,
-		
+
 		LMSHighTop = FixedFoveatedRenderingLevel.HighTop,
 		EnumSize = 0x7FFFFFFF
 	}
@@ -409,7 +409,7 @@ public static class OVRPlugin
 		System_CpuUtilAveragePercentage_Float = 8,
 		System_CpuUtilWorstPercentage_Float = 9,
 
-		
+
 		Device_CpuClockFrequencyInMHz_Float = 10,
 		Device_GpuClockFrequencyInMHz_Float = 11,
 		Device_CpuClockLevel_Int = 12,
@@ -447,7 +447,7 @@ public static class OVRPlugin
 		NoDepth = unchecked((int)0x00000004),
 		ExpensiveSuperSample = unchecked((int)0x00000008),
 
-		
+
 		ShapeFlag_Quad = unchecked((int)OverlayShape.Quad << OverlayShapeFlagShift),
 		ShapeFlag_Cylinder = unchecked((int)OverlayShape.Cylinder << OverlayShapeFlagShift),
 		ShapeFlag_Cubemap = unchecked((int)OverlayShape.Cubemap << OverlayShapeFlagShift),
@@ -916,7 +916,7 @@ public static class OVRPlugin
 		public EyeTextureFormat Format;
 		public int LayerFlags;
 
-		
+
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
 		public Fovf[] Fov;
 		[MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
@@ -964,50 +964,50 @@ public static class OVRPlugin
 	[Flags]
 	public enum HandStatus
 	{
-		HandTracked = (1 << 0), 
-		InputStateValid = (1 << 1), 
-		SystemGestureInProgress = (1 << 6), 
-		DominantHand = (1 << 7), 
-		MenuPressed = (1 << 8) 
+		HandTracked = (1 << 0), // if this is set the hand pose and bone rotations data is usable
+		InputStateValid = (1 << 1), // if this is set the pointer pose and pinch data is usable
+		SystemGestureInProgress = (1 << 6), // if this is set the hand is currently processing a system gesture
+		DominantHand = (1 << 7), // if this is set the hand is currently the dominant hand
+		MenuPressed = (1 << 8) // if this is set the hand performed a menu press
 	}
 
 	public enum BoneId
 	{
 		Invalid                 = -1,
 
-		
+
 		Hand_Start              = 0,
-		Hand_WristRoot          = Hand_Start + 0, 
-		Hand_ForearmStub        = Hand_Start + 1, 
-		Hand_Thumb0             = Hand_Start + 2, 
-		Hand_Thumb1             = Hand_Start + 3, 
-		Hand_Thumb2             = Hand_Start + 4, 
-		Hand_Thumb3             = Hand_Start + 5, 
-		Hand_Index1             = Hand_Start + 6, 
-		Hand_Index2             = Hand_Start + 7, 
-		Hand_Index3             = Hand_Start + 8, 
-		Hand_Middle1            = Hand_Start + 9, 
-		Hand_Middle2            = Hand_Start + 10, 
-		Hand_Middle3            = Hand_Start + 11, 
-		Hand_Ring1              = Hand_Start + 12, 
-		Hand_Ring2              = Hand_Start + 13, 
-		Hand_Ring3              = Hand_Start + 14, 
-		Hand_Pinky0             = Hand_Start + 15, 
-		Hand_Pinky1             = Hand_Start + 16, 
-		Hand_Pinky2             = Hand_Start + 17, 
-		Hand_Pinky3             = Hand_Start + 18, 
+		Hand_WristRoot          = Hand_Start + 0, // root frame of the hand, where the wrist is located
+		Hand_ForearmStub        = Hand_Start + 1, // frame for user's forearm
+		Hand_Thumb0             = Hand_Start + 2, // thumb trapezium bone
+		Hand_Thumb1             = Hand_Start + 3, // thumb metacarpal bone
+		Hand_Thumb2             = Hand_Start + 4, // thumb proximal phalange bone
+		Hand_Thumb3             = Hand_Start + 5, // thumb distal phalange bone
+		Hand_Index1             = Hand_Start + 6, // index proximal phalange bone
+		Hand_Index2             = Hand_Start + 7, // index intermediate phalange bone
+		Hand_Index3             = Hand_Start + 8, // index distal phalange bone
+		Hand_Middle1            = Hand_Start + 9, // middle proximal phalange bone
+		Hand_Middle2            = Hand_Start + 10, // middle intermediate phalange bone
+		Hand_Middle3            = Hand_Start + 11, // middle distal phalange bone
+		Hand_Ring1              = Hand_Start + 12, // ring proximal phalange bone
+		Hand_Ring2              = Hand_Start + 13, // ring intermediate phalange bone
+		Hand_Ring3              = Hand_Start + 14, // ring distal phalange bone
+		Hand_Pinky0             = Hand_Start + 15, // pinky metacarpal bone
+		Hand_Pinky1             = Hand_Start + 16, // pinky proximal phalange bone
+		Hand_Pinky2             = Hand_Start + 17, // pinky intermediate phalange bone
+		Hand_Pinky3             = Hand_Start + 18, // pinky distal phalange bone
 		Hand_MaxSkinnable       = Hand_Start + 19,
-		
-		
-		Hand_ThumbTip           = Hand_MaxSkinnable + 0, 
-		Hand_IndexTip           = Hand_MaxSkinnable + 1, 
-		Hand_MiddleTip          = Hand_MaxSkinnable + 2, 
-		Hand_RingTip            = Hand_MaxSkinnable + 3, 
-		Hand_PinkyTip           = Hand_MaxSkinnable + 4, 
+
+
+		Hand_ThumbTip           = Hand_MaxSkinnable + 0, // tip of the thumb
+		Hand_IndexTip           = Hand_MaxSkinnable + 1, // tip of the index finger
+		Hand_MiddleTip          = Hand_MaxSkinnable + 2, // tip of the middle finger
+		Hand_RingTip            = Hand_MaxSkinnable + 3, // tip of the ring finger
+		Hand_PinkyTip           = Hand_MaxSkinnable + 4, // tip of the pinky
 		Hand_End                = Hand_MaxSkinnable + 5,
 
 
-		
+
 
 		// BUG: Constant condition
 		// MESSAGE: A condition that always evaluates to 'true' or always evaluates to 'false' should be removed, and if the condition is a loop condition, the condition is likely to cause an infinite loop.

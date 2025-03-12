@@ -1,7 +1,0 @@
-//{INSTRUCT_HEAD}
-//Here're the buggy code lines from {file_name}:
-{code_1}
-//Here's the definition of function call in another component.
-//Related code from {add_file_name}:
-{add_code}
-//FIXED CODE:

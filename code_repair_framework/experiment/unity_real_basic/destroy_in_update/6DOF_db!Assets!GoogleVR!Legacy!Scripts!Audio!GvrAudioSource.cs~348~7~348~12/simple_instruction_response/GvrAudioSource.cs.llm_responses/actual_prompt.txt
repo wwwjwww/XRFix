@@ -1,0 +1,36 @@
+//Here're the buggy code lines from /Assets/GoogleVR/Legacy/Scripts/Audio/GvrAudioSource.cs:
+using UnityEngine;
+using UnityEngine.Audio;
+using System.Collections;
+
+//  void Update () {
+//
+//    if (!occlusionEnabled) {
+//      currentOcclusion = 0.0f;
+//    } else if (Time.time >= nextOcclusionUpdate) {
+//      nextOcclusionUpdate = Time.time + GvrAudio.occlusionDetectionInterval;
+//      currentOcclusion = GvrAudio.ComputeOcclusion(transform);
+//    }
+//
+//    if (!isPlaying && !isPaused) {
+//      Stop();
+//    } else {
+//      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.Gain,
+//                                      GvrAudio.ConvertAmplitudeFromDb(gainDb));
+//      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.MinDistance,
+//                                      sourceMinDistance);
+//      GvrAudio.UpdateAudioSource(id, this, currentOcclusion);
+//    }
+//  }
+//  private void ShutdownSource () {
+//    if (id >= 0) {
+//      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.Id, -1.0f);
+//
+//      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.ZeroOutput, 1.0f);
+//      audioSource.spatialize = false;
+//      GvrAudio.DestroyAudioSource(id);
+//      id = -1;
+//    }
+//  }
+
+// FIXED CODE:

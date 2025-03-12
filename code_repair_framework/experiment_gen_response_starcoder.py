@@ -15,7 +15,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, StoppingCriteria, 
 
 
 from typing import List
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -83,11 +83,12 @@ def generate_starcoder_requests(instruct_head, prompt, temp, top_p, max_tokens, 
     prompt = f'<|user|>\n{contents.strip()}<|end|>\n<|assistant|>'
 
     input_tokens = count_message_tokens(prompt)
+    print('input tokens: ' + str(input_tokens))
     logging.info('input tokens: ' + str(input_tokens))
-    if input_tokens > max_input_tokens:
+    if input_tokens > max_tokens:
         print('Over input tokens limit')
         logging.warning('Over input tokens limit')
-        status = "FAILED"
+        status = "EXCEED MAX TOKEN"
         result = {}
         return status, result
     try:
@@ -118,7 +119,7 @@ def generate_starcoder_requests(instruct_head, prompt, temp, top_p, max_tokens, 
     for i, generated_code in enumerate(repair_outcome):
         output_tokens = count_message_tokens(generated_code)
         logging.info('output tokens: ' + str(output_tokens))
-        if output_tokens > max_new_tokens:
+        if output_tokens > max_tokens:
             logging.warning('Over total tokens limit.' + ' lang: ' + str(source_lang))
             generated_code = ''
         logging.info('Code repairing in: ' + source_lang + ' :' + generated_code)
@@ -130,7 +131,7 @@ def generate_starcoder_requests(instruct_head, prompt, temp, top_p, max_tokens, 
     return status, example
 
 
-def hand_crafted_prompt_response(path, skip_engines=[]):
+def hand_crafted_prompt_response(path, max_tokens, skip_engines=[]):
     file_extension = '.cs'
     files = os.walk(path)
     comment_key = "//"
@@ -145,6 +146,7 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                     hand_crafted_prompt_short = os.path.join(path, "hand_crafted_prompt_short.txt")
                     hand_crafted_prompt = os.path.join(path, "hand_crafted_prompt.txt")
                     prompt = scenario_contents["prompt_template"]
+                    short_contents = ""
 
                     head_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
                                                   -1] + ".head" + file_extension
@@ -168,6 +170,14 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                     prompt_add_first_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
                                                      -1] + ".add_first.txt"
                     prompt_add_first_path = os.path.join(path, prompt_add_first_file_name)
+                    prompt_short_lines_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                       -1] + ".short" + file_extension
+                    prompt_short_lines_path = os.path.join(path, prompt_short_lines_file_name)
+
+                    add_prompt_short_lines_file_name = \
+                    scenario_contents["err_detailed_info"]['add_file_name'].split('/')[
+                        -1] + ".short" + file_extension
+                    add_prompt_short_lines_path = os.path.join(path, add_prompt_short_lines_file_name)
 
                     include_addition = scenario_contents["include_addition"]
                     file_name = scenario_contents["err_detailed_info"]["file_name"]
@@ -181,11 +191,16 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         prepend_contents_add = f3.read()
                     with open(prompt_contents_path_add, 'r', encoding='utf8') as f4:
                         prompt_contents_add = f4.read()
-                    if os.path.exists(prompt_between_lines_path):
+                    with open(prompt_short_lines_path, 'r', encoding='utf8') as f7:
+                        prompt_short_lines = f7.read()
+                    if os.path.exists(prompt_add_first_path):
                         with open(prompt_between_lines_path, 'r', encoding='utf8') as f5:
                             prompt_between_lines = f5.read()
                         with open(prompt_add_first_path, 'r', encoding='utf8') as f6:
                             add_first_str = f6.read()
+                    else:
+                        with open(add_prompt_short_lines_path, 'r', encoding='utf8') as f7:
+                            add_prompt_short_lines = f7.read()
 
                     if file_name == add_file_name:
 
@@ -195,15 +210,18 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         # prompt_foot = "\n" + comment_key + " FIXED CODE:\n"
                         if "False" in add_first_str:
                             prompt_lines_long = prompt_head + prepend_contents + prompt_contents + prompt_between_lines + prompt_contents_add
-                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents + prompt_contents_add
+                            prompt_lines_short = prompt_head + prompt_short_lines + prompt_contents + prompt_contents_add
                         else:
                             prompt_lines_long = prompt_head + prepend_contents + prompt_contents_add + prompt_between_lines + prompt_contents
-                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents_add + prompt_contents
+                            prompt_lines_short = prompt_head + prompt_short_lines + prompt_contents_add + prompt_contents
 
                         with open(hand_crafted_prompt_long, 'w', encoding='utf8') as f5:
                             f5.write(prompt_lines_long)
                         with open(hand_crafted_prompt_short, 'w', encoding='utf8') as f6:
                             f6.write(prompt_lines_short)
+
+                        prompt_contents = prompt_lines_long
+                        short_contents = prompt_lines_short
 
                     else:
                         prompt_head = comment_key + "Here're the buggy code lines from " + file_name + ":\n"
@@ -211,37 +229,36 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         prompt_mid = comment_key + "Here's the definition of function call in another component.\n" + \
                                      comment_key + "Related code from " + add_file_name + ":\n"
 
-
                         prompt_lines = prompt_head + prepend_contents + prompt_contents + prompt_mid + prepend_contents_add + prompt_contents_add
                         with open(hand_crafted_prompt, 'w', encoding='utf8') as f5:
                             f5.write(prompt_lines)
 
-                    with open(hand_crafted_prompt, 'r', encoding='utf8') as f6:
-                        prompt_contents = f6.read()
+                        short_contents = prompt_head + prompt_short_lines + prompt_contents + prompt_mid + add_prompt_short_lines + prompt_contents_add
+
+                        prompt_contents = prompt_lines
 
                     with open(head_contents_path, 'r', encoding='utf8') as f7:
                         instruct_head = f7.read()
-
 
                     generate_LLM_experiment_responses(
                         path,
                         instruct_head,
                         prompt_contents,
-                        "",
+                        short_contents,
                         "",
                         scenario_contents["err_detailed_info"]['file_name'].split('/')[-1],
+                        max_tokens,
                         scenario_contents["temperature"],
                         scenario_contents["top_p"],
                         scenario_contents["LLM_engine"],
                         scenario_contents["iteration"],
                         include_addition,
-                        skip_engines = skip_engines
+                        skip_engines=skip_engines
                     )
 
 
 
-def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_contents, append_contents, experiment_filename, temperature, top_p, LLM_engine, iteration, include_addition, skip_engines):
-    max_tokens = 2048
+def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_contents, append_contents, experiment_filename, max_tokens, temperature, top_p, LLM_engine, iteration, include_addition, skip_engines):
 
     llm_responses_dir = os.path.join(root_dir, "response",
                                        experiment_filename + ".llm_responses")
@@ -271,7 +288,8 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
             skip = False
             if os.path.exists(codex_responses_file):
                 skip = True
-            while not skip:
+            failure = 0
+            while not skip and failure <= 3:
                     print(
                         "Attempting responses for folder: %s ,file:%s,temp:%.2f,top_p:%.2f,engine:%s,max_tokens:%d" % (
                             llm_responses_dir, experiment_filename, temperature, top_p, engine, max_tokens))
@@ -290,13 +308,17 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
                             print("LLM responses collected.")
                             break
                         else:
-                            prompt_text = short_contents
+                            if (status == "EXCEED MAX TOKEN"):
+                                prompt_text = short_contents
+                            #short_contents = short_contents.split('\n')[15:]
+
+                            failure += 1
                             print("Waiting 30 seconds and trying again")
                             time.sleep(30)
                             continue
 
 
-            if not skip:
+            if not skip and data != {}:
                 # create codex_responses file in the experiment dir
                 with open(codex_responses_file, "w") as f3:
                     f3.write(json.dumps(data, indent=4))
@@ -307,7 +329,7 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
 
 
 
-def prepare_LLM_experiment_requests(path, skip_engines=[]):
+def prepare_LLM_experiment_requests(path, max_tokens, skip_engines=[]):
     file_extension = '.cs'
     files = os.walk(path)
 
@@ -350,6 +372,7 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                         short_prompt_contents_clean,
                         append_contents,
                         scenario_contents["err_detailed_info"]['file_name'].split('/')[-1],
+                        max_tokens,
                         scenario_contents["temperature"],
                         scenario_contents["top_p"],
                         scenario_contents["LLM_engine"],
@@ -358,7 +381,7 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                         skip_engines = skip_engines
                     )
 
-def decide_include_addition(path, skip_engines=[]):
+def decide_include_addition(path, max_tokens, skip_engines=[]):
     ile_extension = '.cs'
     files = os.walk(path)
 
@@ -369,9 +392,9 @@ def decide_include_addition(path, skip_engines=[]):
                     scenario_contents = json.load(f)
 
                 if scenario_contents["include_addition"]:
-                    hand_crafted_prompt_response(path, skip_engines)
+                    hand_crafted_prompt_response(path,max_tokens,  skip_engines)
                 else:
-                    prepare_LLM_experiment_requests(path, skip_engines)
+                    prepare_LLM_experiment_requests(path, max_tokens, skip_engines)
 
 if __name__ == '__main__':
     args = parse_arguments()
@@ -420,9 +443,9 @@ if __name__ == '__main__':
 
     max_input_tokens = tokenizer.model_max_length  # 1000000000000000019884624838656
     # The maximum numbers of tokens to generate, ignoring the number of tokens in the prompt.
-    max_new_tokens = 2048
+    max_new_tokens = 4096
     path = args.run_path
     skip_engines = []
-    decide_include_addition(path, skip_engines)
+    decide_include_addition(path, max_new_tokens, skip_engines)
 
 

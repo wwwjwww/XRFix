@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzifO5mPiRmg7FVdqkbvPYozwrJj",
+    "object": "chat.completion",
+    "created": 1724323957,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic List<Node> Children { get; } = new List<Node>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "                public List<Node> Children = new List<Node>();\n\n                public Node(TSourceJointId sourceJointId, BodyJointId bodyJointId)\n                {\n                    SourceJointId = sourceJointId;\n                    BodyJointId = bodyJointId;\n                }\n            }\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic List<Node> Children { get; } = new List<Node>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "public List<Node> Children = new List<Node>();\n                public readonly List<Node> Children = new List<Node>();\n                // END OF FIXED CODE"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public List<Node> Children = new List<Node>();\n\n                public Node(TSourceJointId sourceJointId, BodyJointId bodyJointId)\n                {\n                    SourceJointId = sourceJointId;\n                    BodyJointId = bodyJointId;\n                    Children = new List<Node>();\n                }\n            }\n        }\n\n        private class JointInfo\n        {\n            public TSourceJointId SourceJointId;\n            public TSourceJointId ParentJointId;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1006,
+        "completion_tokens": 219,
+        "total_tokens": 1225
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

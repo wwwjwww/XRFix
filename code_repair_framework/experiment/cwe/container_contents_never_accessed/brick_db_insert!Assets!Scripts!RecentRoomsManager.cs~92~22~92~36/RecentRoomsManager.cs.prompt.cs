@@ -30,25 +30,25 @@ public class RecentRoomsManager : MonoBehaviour
 
     public PagedScroll pagedScroll;
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     private void OnEnable()
     {

@@ -1,0 +1,1 @@
+"Transform object of Rigidbody in Update() methods","Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.","warning","Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/CodeScripts/ThrowingTutorial.cs:73:35:73:44""]].","/Assets/CodeScripts/ThrowingTutorial.cs","61","9","61","15"

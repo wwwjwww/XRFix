@@ -1,4 +1,4 @@
-﻿
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 
 
 using Microsoft.MixedReality.Toolkit.Utilities;
@@ -13,23 +13,23 @@ using UnityEngine.SceneManagement;
 
 namespace Microsoft.MixedReality.Toolkit.SceneSystem
 {
-    
-    
-    
-    
-    
-    [HelpURL("https:
+
+
+
+
+
+    [HelpURL("https://microsoft.github.io/MixedRealityToolkit-Unity/Documentation/SceneSystem/SceneSystemGettingStarted.html")]
     public partial class MixedRealitySceneSystem : BaseCoreSystem, IMixedRealitySceneSystem
     {
-        
-        
-        
-        
+
+
+
+
         const float SceneActivationLoadProgress = 0.9f;
 
-        
-        
-        
+
+
+
         private enum SceneType
         {
             Manager = 0,
@@ -46,101 +46,101 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
 
         private MixedRealitySceneSystemProfile profile;
 
-        
+
         private bool managerSceneOpInProgress;
         private float managerSceneOpProgress;
 
-        
+
         private SceneContentTracker contentTracker;
-        
+
         private SceneLightingExecutor lightingExecutor;
 
-        
+
         public override string Name { get; protected set; } = "Mixed Reality Scene System";
 
         #region Actions
 
-        
+
         public Action<IEnumerable<string>> OnWillLoadContent { get; set; }
 
-        
+
         public Action<IEnumerable<string>> OnContentLoaded { get; set; }
 
-        
+
         public Action<IEnumerable<string>> OnWillUnloadContent { get; set; }
 
-        
+
         public Action<IEnumerable<string>> OnContentUnloaded { get; set; }
 
-        
+
         public Action<string> OnWillLoadLighting { get; set; }
 
-        
+
         public Action<string> OnLightingLoaded { get; set; }
 
-        
+
         public Action<string> OnWillUnloadLighting { get; set; }
 
-        
+
         public Action<string> OnLightingUnloaded { get; set; }
 
-        
+
         public Action<string> OnWillLoadScene { get; set; }
 
-        
+
         public Action<string> OnSceneLoaded { get; set; }
 
-        
+
         public Action<string> OnWillUnloadScene { get; set; }
 
-        
+
         public Action<string> OnSceneUnloaded { get; set; }
 
         #endregion
 
         #region Properties
 
-        
+
         public bool SceneOperationInProgress { get; private set; } = false;
 
-        
+
         public float SceneOperationProgress { get; private set; } = 0;
 
-        
+
         public bool LightingOperationInProgress { get; private set; } = false;
 
-        
+
         public float LightingOperationProgress { get; private set; } = 0;
 
-        
+
         public string ActiveLightingScene { get; private set; } = string.Empty;
 
-        
+
         public bool WaitingToProceed { get; private set; } = false;
 
-        
+
         public bool PrevContentExists => contentTracker.PrevContentExists;
 
-        
+
         public bool NextContentExists => contentTracker.NextContentExists;
 
-        
+
         public string[] ContentSceneNames => contentTracker.ContentSceneNames;
 
-        
+
         public uint SourceId { get; } = 0;
 
-        
+
         public string SourceName { get; } = "Mixed Reality Scene System";
 
         #endregion
 
         #region Service Methods
 
-        
+
         public override void Initialize()
         {
-            
+
             contentTracker = new SceneContentTracker(profile);
             lightingExecutor = new SceneLightingExecutor();
 
@@ -159,12 +159,12 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             }
 
             if (profile.UseLightingScene)
-            {   
+            {   // Set our lighting scene immediately, with no transition
                 SetLightingScene(profile.DefaultLightingScene.Name, LightingSceneTransitionType.None);
             }
         }
 
-        
+
         public override void Enable()
         {
 #if UNITY_EDITOR
@@ -172,7 +172,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
 #endif
         }
 
-        
+
         public override void Disable()
         {
 #if UNITY_EDITOR
@@ -180,7 +180,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
 #endif
         }
 
-        
+
         public override void Destroy()
         {
 #if UNITY_EDITOR
@@ -188,10 +188,10 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
 #endif
         }
 
-        
+
         public override void Update()
         {
-            
+
             if (profile.UseLightingScene)
             {
                 lightingExecutor.UpdateTransition(Time.unscaledDeltaTime);
@@ -202,7 +202,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
 
         #region Scene Operations
 
-        
+
         public async Task LoadNextContent(bool wrap = false, LoadSceneMode mode = LoadSceneMode.Single, SceneActivationToken activationToken = null)
         {
             string nextContent;
@@ -216,7 +216,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             }
         }
 
-        
+
         public async Task LoadPrevContent(bool wrap = false, LoadSceneMode mode = LoadSceneMode.Single, SceneActivationToken activationToken = null)
         {
             string prevContent;
@@ -230,31 +230,31 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             }
         }
 
-        
+
         public async Task LoadContent(string sceneToLoad, LoadSceneMode mode = LoadSceneMode.Additive, SceneActivationToken activationToken = null)
         {
             await LoadContent(new string[] { sceneToLoad }, mode, activationToken);
         }
 
-        
+
         public async Task UnloadContent(string sceneToUnload)
         {
             await UnloadContent(new string[] { sceneToUnload });
         }
 
-        
+
         public async Task LoadContentByTag(string tag, LoadSceneMode mode = LoadSceneMode.Additive, SceneActivationToken activationToken = null)
         {
             await LoadContent(profile.GetContentSceneNamesByTag(tag), mode, activationToken);
         }
 
-        
+
         public async Task UnloadContentByTag(string tag)
         {
             await UnloadScenesInternal(profile.GetContentSceneNamesByTag(tag), SceneType.Content);
         }
 
-        
+
         public async Task LoadContent(IEnumerable<string> scenesToLoad, LoadSceneMode mode = LoadSceneMode.Additive, SceneActivationToken activationToken = null)
         {
             if (!CanSceneOpProceed(SceneType.Content))
@@ -277,7 +277,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             await LoadScenesInternal(scenesToLoad, SceneType.Content, activationToken);
         }
 
-        
+
         public async Task UnloadContent(IEnumerable<string> scenesToUnload)
         {
             if (!CanSceneOpProceed(SceneType.Content))
@@ -289,18 +289,18 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             await UnloadScenesInternal(scenesToUnload, SceneType.Content);
         }
 
-        
+
         public bool IsContentLoaded(string sceneName)
         {
             Scene scene = SceneManager.GetSceneByName(sceneName);
             return scene.IsValid() && scene.isLoaded;
         }
 
-        
+
         public async void SetLightingScene(string newLightingSceneName, LightingSceneTransitionType transitionType = LightingSceneTransitionType.None, float transitionDuration = 1f)
         {
             if (ActiveLightingScene == newLightingSceneName)
-            {   
+            {   // Nothing to do here
                 return;
             }
 
@@ -320,7 +320,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                 out lightingSettings, 
                 out renderSettings,
                 out sunSettings))
-            {   
+            {   // Make sure we don't try to load a non-existent scene
                 Debug.LogWarning("Couldn't find lighting scene " + newLightingSceneName + " in profile - taking no action.");
                 return;
             }
@@ -328,15 +328,15 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             ActiveLightingScene = newLightingSceneName;
 
             if (!Application.isPlaying)
-            {   
+            {   // Everything else is runtime-only
                 return;
             }
 
-            
+
             lightingExecutor.StartTransition(lightingSettings, renderSettings, sunSettings, transitionType, transitionDuration);
 
             List<string> lightingSceneNames = new List<string>();
-            
+
             foreach (SceneInfo lso in profile.LightingScenes)
             {
                 if (lso.Name != newLightingSceneName)
@@ -345,30 +345,30 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                 }
             }
 
-            
+
             await LoadScenesInternal(new string[] { newLightingSceneName }, SceneType.Lighting, null, 0f, 0.5f, true);
 
-            
+
             await UnloadScenesInternal(lightingSceneNames, SceneType.Lighting, 0.5f, 1f, false);
         }
 
-        
-        
-        
+
+
+
         private async void SetManagerScene(string managerSceneName)
         {
             Scene scene = SceneManager.GetSceneByName(managerSceneName);
             if (scene.IsValid() && !scene.isLoaded)
-            {   
+            {   // If the manager scene is already loaded, don't proceed.
                 return;
             }
 
             await LoadScenesInternal(new string[] { managerSceneName }, SceneType.Manager);
         }
 
-        
-        
-        
+
+
+
         private async Task LoadScenesInternal(
             IEnumerable<string> scenesToLoad,
             SceneType sceneType,
@@ -377,18 +377,18 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
             float progressTarget = 1,
             bool sceneOpInProgressWhenFinished = false)
         {
-            
+
             activationToken?.SetReadyToProceed(false);
 
             SetSceneOpProgress(true, progressOffset, sceneType);
 
-            
+
             List<string> validNames = new List<string>();
             List<int> validIndexes = new List<int>();
 
             foreach (string sceneName in scenesToLoad)
             {
-                
+
                 Scene scene;
                 int sceneIndex;
                 if (!RuntimeSceneUtils.FindScene(sceneName, out scene, out sceneIndex))
@@ -410,10 +410,10 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                 return;
             }
 
-            
+
             InvokeWillLoadActions(validNames, sceneType);
 
-            
+
             if (validIndexes.Count > 0)
             {
                 List<AsyncOperation> loadSceneOps = new List<AsyncOperation>();
@@ -424,18 +424,18 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                         continue;
 
                     AsyncOperation sceneOp = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
-                    
+
                     sceneOp.allowSceneActivation = (activationToken != null) ? activationToken.AllowSceneActivation : true;
                     loadSceneOps.Add(sceneOp);
                 }
 
-                
+
                 bool completedAllSceneOps = false;
 
                 while (!completedAllSceneOps)
                 {
                     if (!Application.isPlaying)
-                    {   
+                    {   // Break out of this loop if we've stopped playmode
                         return;
                     }
 
@@ -443,18 +443,18 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                     bool readyToProceed = false;
                     bool allowSceneActivation = (activationToken != null) ? activationToken.AllowSceneActivation : true;
 
-                    
+
                     float sceneOpProgress = 0;
                     for (int i = 0; i < loadSceneOps.Count; i++)
                     {
-                        
-                        
+
+
                         loadSceneOps[i].allowSceneActivation = allowSceneActivation;
 
                         if (loadSceneOps[i].isDone)
-                        {   
-                            
-                            
+                        {   // Sometimes if a scene is small enough, progress will get reset to 0 before you even have a chance to check it
+
+
                             sceneOpProgress += 1;
                         }
                         else
@@ -465,7 +465,7 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                         }
                     }
 
-                    
+
                     activationToken?.SetReadyToProceed(readyToProceed);
 
                     sceneOpProgress = Mathf.Clamp01(SceneOperationProgress / totalSceneOps);
@@ -476,12 +476,12 @@ namespace Microsoft.MixedReality.Toolkit.SceneSystem
                 }
             }
 
-            
+
             bool scenesLoadedAndActivated = false;
             while (!scenesLoadedAndActivated)
             {
                 if (!Application.isPlaying)
-                {   
+                {   // Break out of this loop if we've stopped playmode
                     return;
                 }
 

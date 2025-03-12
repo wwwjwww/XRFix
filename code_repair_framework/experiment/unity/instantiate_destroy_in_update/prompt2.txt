@@ -1,4 +1,0 @@
-//{INSTRUCT_HEAD}
-//Here're the buggy code lines from {file_name}:
-//{code}
-//FIXED CODE:

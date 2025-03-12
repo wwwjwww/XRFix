@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzMMVPcglzLIoJsHXQ0lGEco2gQj",
+    "object": "chat.completion",
+    "created": 1724322574,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 131,
+        "completion_tokens": 115,
+        "total_tokens": 246
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

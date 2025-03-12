@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "I believe your code is incomplete, since it does not provide a `FIXED CODE:` region to modify. Could you please provide the code and mark the portion that should be modified using the code fence below, like so:\n\n```csharp\ncode to be modified\n```",
-    "code_repairing_1": "```csharp\nusing UnityEngine;\nusing System.Collections;\n\n\nnamespace TMPro.Examples\n{\n    \n    public class ObjectSpin : MonoBehaviour\n    {\n\n#pragma warning disable 0414\n\n        public float SpinSpeed = 5;\n        public int RotationRange =",
-    "code_repairing_2": "Here is your fixed code:\n\n```\n\nusing UnityEngine;\nusing System.Collections;\n\n\nnamespace TMPro.Examples\n{\n    \n    public class ObjectSpin : MonoBehaviour\n    {\n\n#pragma warning disable 0414\n\n        public float SpinSpeed = 5",
-    "code_repairing_3": "```csharp\nusing UnityEngine;\n\nnamespace TMPro.Examples\n{\n\tpublic class ObjectSpin : MonoBehaviour\n\t{\n\t\tpublic float SpinSpeed = 5;\n\t\tpublic int RotationRange = 15;\n\t\tprivate Transform m_transform;",
-    "code_repairing_4": "Here is your fixed code:\n```\nusing UnityEngine;\nusing System.Collections;\n\n\nnamespace TMPro.Examples\n{\n    \n    public class ObjectSpin : MonoBehaviour\n    {\n\n#pragma warning disable 0414\n\n        public float SpinSpeed = 5;"
-}

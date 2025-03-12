@@ -27,9 +27,9 @@ public class waveViz : MonoBehaviour {
   int curWaveW = 0;
   int lastWaveH = 0;
   public Color32 waveBG = Color.black;
-  public Color32 waveLine = Color.white;
 
   [DllImport("SoundStageNative")]
+  public static extern void ProcessWaveTexture(float[] buffer, int length, System.IntPtr pixels, byte Ra, byte Ga, byte Ba, byte Rb, byte Gb, byte Bb,
     int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);
 
   // BUG: Container contents are never accessed

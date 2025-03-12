@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "```\n\nIf you had trouble with my markdown, replace the \"FIXED CODE:\" area with three back-ticks, and write your code below it. Make sure to remove any extra spaces, new lines, or unnecessary characters, such as curly brackets or parenthesis.",
-    "code_repairing_1": "// Move this function in FixedUpdate() methods.\nvoid Update()\n{\n    // rb10.transform.Rotate(0, 30, 0);\n\n    if (!active) return;\n\n    source.GetSpectrumData(spectrum, 0, FFTWindow",
-    "code_repairing_2": "using UnityEngine;\nusing UnityEngine.UI;\n\npublic class spectrumDisplay : MonoBehaviour\n{\n    public AudioSource source;\n    [SerializeField] private int textureWidth = 256;\n    [SerializeField] private int textureHeight = 32;\n    [SerializeField]",
-    "code_repairing_3": "using UnityEngine;\nusing System.Collections;\n\npublic class spectrumDisplay : MonoBehaviour {\n  public AudioSource source;\n  int texW = 256;\n  int texH = 32;\n  Texture2D tex;\n  public Renderer texrend;",
-    "code_repairing_4": "using UnityEngine;\n\npublic class spectrumDisplay : MonoBehaviour {\npublic AudioSource source;\nint texW = 256;\nint texH = 32;\nTexture2D tex;\npublic Renderer texrend;\nColor32[] texp"
-}

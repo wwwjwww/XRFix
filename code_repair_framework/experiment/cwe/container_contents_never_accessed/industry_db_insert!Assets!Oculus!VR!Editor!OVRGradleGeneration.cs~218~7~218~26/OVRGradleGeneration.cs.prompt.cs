@@ -9,7 +9,7 @@
  *
  * You may obtain a copy of the License at
  *
- * https:
+ * https://developer.oculus.com/licenses/oculussdk/
  *
  * Unless required by applicable law or agreed to in writing, the Oculus SDK
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -63,7 +63,7 @@ public class OVRGradleGeneration
 #if PRIORITIZE_OCULUS_XR_SETTINGS
 	private int _callbackOrder = 3;
 #else
-	private int _callbackOrder = 99999; 
+	private int _callbackOrder = 99999; // be executed after OculusManifest in Oculus XR Plugin, which has callbackOrder 10000
 #endif
 
 	public int callbackOrder { get { return _callbackOrder; } }
@@ -115,7 +115,7 @@ public class OVRGradleGeneration
 #if USING_XR_SDK_OPENXR
 		UnityEngine.Debug.LogWarning("The installation of Unity OpenXR Plugin is detected, which should NOT be used in production when developing Oculus apps for production. Please uninstall the package, and install the Oculus XR Plugin from the Package Manager.");
 
-		
+
 		var oculusXRFeature = FeatureHelpers.GetFeatureWithIdForBuildTarget(report.summary.platformGroup, Oculus.XR.OculusXRFeature.featureId);
 		if (oculusXRFeature.enabled)
 		{
@@ -153,7 +153,7 @@ public class OVRGradleGeneration
 #endif
 
 #if UNITY_ANDROID && !(USING_XR_SDK && UNITY_2019_3_OR_NEWER)
-		
+
 		if (!PlayerSettings.GetUseDefaultGraphicsAPIs(BuildTarget.Android))
 		{
 			GraphicsDeviceType[] apis = PlayerSettings.GetGraphicsAPIs(BuildTarget.Android);

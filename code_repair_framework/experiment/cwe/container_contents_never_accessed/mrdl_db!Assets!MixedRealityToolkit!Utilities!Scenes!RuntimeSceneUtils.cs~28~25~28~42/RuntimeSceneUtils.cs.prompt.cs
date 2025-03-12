@@ -1,4 +1,4 @@
-﻿
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 
 
 using System;
@@ -15,16 +15,16 @@ namespace Microsoft.MixedReality.Toolkit.Utilities
             return System.IO.Path.GetFileNameWithoutExtension(scenePath);
         }
 
-        
-        
-        
+
+
+
         public static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)
         {
             scene = default(Scene);
             sceneIndex = -1;
-            
-            
-            
+
+
+
             // BUG: Container contents are never accessed
             // MESSAGE: A collection or map whose contents are never queried or accessed is useless.
             //             List<Scene> allScenesInProject = new List<Scene>();

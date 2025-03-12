@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyvEG8u8eiIgt8Mi9fDR1Slbn2zJ",
+    "object": "chat.completion",
+    "created": 1724320892,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic List<Node> Children = new List<Node>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "                public List<Node> Children = new List<Node>();\n                \n                public Node(TSourceJointId sourceJointId, BodyJointId bodyJointId)\n                {\n                    SourceJointId = sourceJointId;\n                    BodyJointId = bodyJointId;\n                }\n            }\n        }\n\n        public class JointInfo\n        {\n            public TSourceJointId SourceJointId;\n            public TSourceJointId ParentJointId;\n\n            public JointInfo(TSourceJointId sourceJointId, TSourceJointId parentJointId)\n            {\n                SourceJointId = sourceJointId;\n                ParentJointId = parentJointId;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n                public List<Node> Children { get; } = new List<Node>();\n\n                public Node(TSourceJointId sourceJointId, BodyJointId bodyJointId)\n                {\n                    SourceJointId = sourceJointId;\n                    BodyJointId = bodyJointId;\n                }\n            }\n        }\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic List<Node> Children = new List<Node>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "                public List<Node> Children = new List<Node>();\n\n                public Node(TSourceJointId sourceJointId, BodyJointId bodyJointId)\n                {\n                    SourceJointId = sourceJointId;\n                    BodyJointId = bodyJointId;\n                }\n            }\n        }\n\n        public class JointInfo\n        {\n            public TSourceJointId SourceJointId { get; }\n            public TSourceJointId ParentJointId { get; }\n\n            public JointInfo(TSourceJointId sourceJointId, TSourceJointId parentJointId)\n            {\n                SourceJointId = sourceJointId;\n                ParentJointId = parentJointId;\n            }\n        }\n\n        public interface ISkeletonMapping\n        {\n            IEnumerableHashSet<BodyJointId> Joints { get; }\n            bool TryGetParentJointId(BodyJointId jointId, out BodyJointId parentJointId);\n            bool TryGetSourceJointId(BodyJointId jointId, out TSourceJointId sourceJointId);\n            bool TryGetBodyJointId(TSourceJointId jointId, out BodyJointId bodyJointId);\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 978,
+        "completion_tokens": 459,
+        "total_tokens": 1437
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

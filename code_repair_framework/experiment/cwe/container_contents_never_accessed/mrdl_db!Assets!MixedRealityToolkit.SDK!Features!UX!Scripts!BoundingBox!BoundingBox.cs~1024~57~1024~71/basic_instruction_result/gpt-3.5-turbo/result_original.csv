@@ -1,0 +1,2 @@
+"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/MixedRealityToolkit/Utilities/Scenes/RuntimeSceneUtils.cs","28","25","28","42"
+"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/MixedRealityToolkit.SDK/Features/UX/Scripts/BoundingBox/BoundingBox.cs","1024","57","1024","71"

@@ -12,7 +12,7 @@ using UnityEngine;
 
 namespace BaroqueUI
 {
-    
+
     class TeleportArc : MonoBehaviour
     {
         public int segmentCount = 60;
@@ -32,7 +32,7 @@ namespace BaroqueUI
         [HideInInspector]
         public int traceLayerMask = 0;
 
-        
+
         private LineRenderer[] lineRenderers;
         private Timed.Time arcTimeOffset = Timed.Time.Zero;
         private float prevThickness = 0.0f;
@@ -45,14 +45,14 @@ namespace BaroqueUI
         private bool arcInvalid = false;
 
 
-        
+
         void Start()
         {
             arcTimeOffset = Timed.time;
         }
 
 
-        
+
         void Update()
         {
             if (thickness != prevThickness || segmentCount != prevSegmentCount)
@@ -64,10 +64,10 @@ namespace BaroqueUI
         }
 
 
-        
+
         private void CreateLineRendererObjects()
         {
-            
+
             if (arcObjectsTransfrom != null)
             {
                 Destroy((GameObject)arcObjectsTransfrom.gameObject);
@@ -77,7 +77,7 @@ namespace BaroqueUI
             arcObjectsTransfrom = arcObjectsParent.transform;
             arcObjectsTransfrom.SetParent(this.transform);
 
-            
+
             lineRenderers = new LineRenderer[segmentCount];
             for (int i = 0; i < segmentCount; ++i)
             {
@@ -102,7 +102,7 @@ namespace BaroqueUI
         }
 
 
-        
+
         public void SetArcData(Vector3 position, Vector3 velocity, bool gravity, bool pointerAtBadAngle)
         {
             startPos = position;
@@ -117,7 +117,7 @@ namespace BaroqueUI
         }
 
 
-        
+
         public void Show()
         {
             showArc = true;
@@ -128,10 +128,10 @@ namespace BaroqueUI
         }
 
 
-        
+
         public void Hide()
         {
-            
+
             if (showArc)
             {
                 HideLineSegments(0, segmentCount);
@@ -140,16 +140,16 @@ namespace BaroqueUI
         }
 
 
-        
-        
-        
+
+
+
         public bool DrawArc(out RaycastHit hitInfo)
         {
             float timeStep = arcDuration / segmentCount;
 
             float currentTimeOffset = (Timed.time - arcTimeOffset) * arcSpeed;
 
-            
+
             if (currentTimeOffset > (timeStep + segmentBreak))
             {
                 arcTimeOffset = Timed.time;
@@ -162,7 +162,7 @@ namespace BaroqueUI
 
             if (arcInvalid)
             {
-                
+
                 lineRenderers[0].enabled = true;
                 lineRenderers[0].SetPosition(0, GetArcPositionAtTime(0.0f));
                 lineRenderers[0].SetPosition(1, GetArcPositionAtTime(arcHitTime < timeStep ? arcHitTime : timeStep));
@@ -171,7 +171,7 @@ namespace BaroqueUI
             }
             else
             {
-                
+
                 int loopStartSegment = 0;
                 if (segmentStartTime > segmentBreak)
                 {
@@ -191,7 +191,7 @@ namespace BaroqueUI
                 {
                     for (currentSegment = loopStartSegment; currentSegment < segmentCount; ++currentSegment)
                     {
-                        
+
                         float segmentEndTime = segmentStartTime + timeStep;
                         if (segmentEndTime >= arcDuration)
                         {
@@ -209,7 +209,7 @@ namespace BaroqueUI
 
                         segmentStartTime += timeStep + segmentBreak;
 
-                        
+
                         if (stopArc || segmentStartTime >= arcDuration || segmentStartTime >= arcHitTime)
                         {
                             break;
@@ -221,7 +221,7 @@ namespace BaroqueUI
                     currentSegment--;
                 }
 
-                
+
                 HideLineSegments(currentSegment + 1, segmentCount);
             }
 
@@ -229,7 +229,7 @@ namespace BaroqueUI
         }
 
 
-        
+
         private void DrawArcSegment(int index, float startTime, float endTime)
         {
             lineRenderers[index].enabled = true;
@@ -238,7 +238,7 @@ namespace BaroqueUI
         }
 
 
-        
+
         public void SetColor(Color color)
         {
             for (int i = 0; i < segmentCount; ++i)
@@ -253,7 +253,7 @@ namespace BaroqueUI
         }
 
 
-        
+
         private float FindProjectileCollision(out RaycastHit hitInfo)
         {
             float timeStep = arcDuration / segmentCount;

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzMQUgZ93LnKoW5Snvo5AZb0cbtQ",
+    "object": "chat.completion",
+    "created": 1724322578,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class FoldoutGroup<T>\n{\n    private string _name;\n    private FoldoutGroup<T> _parent;\n    private List<object> _children = new List<object>();\n    private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n    \n    public string Name => _name;\n    public FoldoutGroup<T> Parent => _parent;\n\n    public FoldoutGroup(string name)\n    {\n        _name = name;\n    }\n    \n    public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isItemNode)\n    {\n        if (isItemNode)\n        {\n            _data.Add(item);\n        }\n        else\n        {\n            _children.Add(child);\n            child._parent = this;\n        }\n    }\n\n    public void Draw()\n    {\n        bool foldout = EditorGUILayout.Foldout(true, _name);\n        if (foldout)\n        {\n            EditorGUI.indentLevel++;\n            foreach (var child in _children)\n            {\n                if(child is FoldoutGroup<T> groupChild)\n                {\n                    groupChild.Draw();\n                }\n            }\n\n            foreach (FoldoutHierarchyItem<T> dataItem in _data)\n            {\n                dataItem.onDraw?.Invoke(dataItem.item);\n            }\n            EditorGUI.indentLevel--;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<FoldoutHierarchyItem<T>> _items = new List<FoldoutHierarchyItem<T>>();\n\npublic FoldoutGroup(string name)\n{\n    _name = name;\n}\n\npublic FoldoutGroup<T> Parent\n{\n    get { return _parent; }\n    set { _parent = value; }\n}\n\npublic void AddChild(FoldoutGroup<T> group, FoldoutHierarchyItem<T> item, bool isLast)\n{\n    if (isLast)\n    {\n        _items.Add(item);\n    }\n    else\n    {\n        _children.Add(group);\n        group.Parent = this;\n    }\n}\n\npublic void Draw()\n{\n    if (GUILayout.Button(_name))\n    {\n        foreach (var child in _children)\n        {\n            if (child is FoldoutGroup<T> groupChild)\n            {\n                groupChild.Draw();\n            }\n        }\n        foreach (var item in _items)\n        {\n            item.onDraw?.Invoke(item.item);\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic FoldoutGroup(string name)\n{\n    _name = name;\n}\n\npublic FoldoutGroup<T> Parent => _parent;\n\npublic void AddChild(FoldoutGroup<T> group, FoldoutHierarchyItem<T> item, bool isItemGroup)\n{\n    if (!isItemGroup)\n    {\n        _children.Add(group);\n        group.SetParent(this);\n    }\n    else\n    {\n        _children.Add(item);\n    }\n}\n\nprivate void SetParent(FoldoutGroup<T> parent)\n{\n    _parent = parent;\n}\n\npublic void Draw()\n{\n    _name = EditorGUILayout.Foldout(_name, true);\n    if (!string.IsNullOrEmpty(_name))\n    {\n        EditorGUI.indentLevel++;\n        foreach (var child in _children)\n        {\n            if (child is FoldoutGroup<T> group)\n            {\n                group.Draw();\n            }\n            else if (child is FoldoutHierarchyItem<T> item)\n            {\n                item.onDraw?.Invoke(item.item);\n            }\n        }\n        EditorGUI.indentLevel--;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic FoldoutGroup(string name)\n{\n    _name = name;\n}\n\npublic FoldoutGroup<T> Parent => _parent;\n\npublic void AddChild(FoldoutGroup<T> group, FoldoutHierarchyItem<T> item, bool isFinal)\n{\n    _children.Add(isFinal ? (object)item : group);\n    group._parent = this;\n}\n\npublic void Draw()\n{\n    if (EditorGUILayout.Foldout(true, _name))\n    {\n        EditorGUI.indentLevel++;\n        foreach (var child in _children)\n        {\n            if (child is FoldoutGroup<T> groupChild)\n            {\n                groupChild.Draw();\n            }\n            else if (child is FoldoutHierarchyItem<T> itemChild)\n            {\n                itemChild.onDraw?.Invoke(itemChild.item);\n            }\n        }\n        EditorGUI.indentLevel--;\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic FoldoutGroup(string name)\n{\n    _name = name;\n}\n\npublic FoldoutGroup<T> Parent => _parent;\n\npublic void AddChild(FoldoutGroup<T> group, FoldoutHierarchyItem<T> item, bool isLeaf)\n{\n    if (isLeaf)\n    {\n        _children.Add(item);\n    }\n    else\n    {\n        group._parent = this;\n        _children.Add(group);\n    }\n}\n\npublic void Draw()\n{\n    EditorGUILayout.Foldout(true, _name, true);\n    \n    foreach (var child in _children)\n    {\n        if (child is FoldoutGroup<T> groupChild)\n        {\n            groupChild.Draw();\n        }\n        else if (child is FoldoutHierarchyItem<T> itemChild)\n        {\n            itemChild?.onDraw?.Invoke(itemChild.item);\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 447,
+        "completion_tokens": 1050,
+        "total_tokens": 1497
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

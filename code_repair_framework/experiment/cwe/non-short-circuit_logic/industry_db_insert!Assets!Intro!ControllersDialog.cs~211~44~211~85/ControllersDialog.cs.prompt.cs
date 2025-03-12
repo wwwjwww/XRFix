@@ -85,8 +85,8 @@ namespace NanIndustryVR
                     previous_time = float.NegativeInfinity;
                     speed_estimate = Vector2.zero;
                 }
-                
-                
+
+
 
                 /* now emitting a non-zero result */
                 float delta_time = Time.time - previous_time;

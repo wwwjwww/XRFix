@@ -1,4 +1,4 @@
-﻿
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
 
 
 #if UNITY_EDITOR
@@ -14,37 +14,37 @@ using UnityEngine;
 
 namespace Microsoft.MixedReality.Toolkit.MSBuild
 {
-    
-    
-    
+
+
+
     public class UnityProjectInfo
     {
-        
-        
-        
+
+
+
         private static readonly HashSet<string> ExcludedPackageReferences = new HashSet<string>()
         {
             "Windows.UI.Input.Spatial"
         };
 
-        
-        
-        
+
+
+
         public string UnityProjectName { get; }
 
-        
-        
-        
+
+
+
         internal IEnumerable<CompilationPlatformInfo> AvailablePlatforms { get; }
 
-        
-        
-        
+
+
+
         public IReadOnlyDictionary<string, CSProjectInfo> CSProjects { get; }
 
-        
-        
-        
+
+
+
         public IReadOnlyCollection<PluginAssemblyInfo> Plugins { get; }
 
         public UnityProjectInfo(IEnumerable<CompilationPlatformInfo> availablePlatforms, string projectOutputPath)
@@ -73,11 +73,11 @@ namespace Microsoft.MixedReality.Toolkit.MSBuild
 
         private Dictionary<string, CSProjectInfo> CreateUnityProjects(string projectOutputPath)
         {
-            
+
             Dictionary<string, AssemblyDefinitionInfo> asmDefInfoMap = new Dictionary<string, AssemblyDefinitionInfo>();
             HashSet<string> builtInPackagesWithoutSource = new HashSet<string>();
 
-            
+
             DirectoryInfo builtInPackagesDirectory = new DirectoryInfo(Utilities.BuiltInPackagesPath);
             foreach (DirectoryInfo packageDirectory in builtInPackagesDirectory.GetDirectories())
             {
@@ -99,7 +99,7 @@ namespace Microsoft.MixedReality.Toolkit.MSBuild
             Dictionary<string, Assembly> unityAssemblies = CompilationPipeline.GetAssemblies().ToDictionary(t => t.name);
             Dictionary<string, CSProjectInfo> projectsMap = new Dictionary<string, CSProjectInfo>();
             Queue<string> projectsToProcess = new Queue<string>();
-            
+
             foreach (KeyValuePair<string, Assembly> pair in unityAssemblies)
             {
                 if (!asmDefInfoMap.TryGetValue(pair.Key, out AssemblyDefinitionInfo assemblyDefinitionInfo))
@@ -121,7 +121,7 @@ namespace Microsoft.MixedReality.Toolkit.MSBuild
 
                         if (asmDefPath.StartsWith("Assets/"))
                         {
-                            
+
                             projectsToProcess.Enqueue(pair.Key);
                         }
                     }
@@ -254,12 +254,12 @@ namespace Microsoft.MixedReality.Toolkit.MSBuild
             return toReturn.ToString();
         }
 
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         public void ExportSolution(string solutionTemplateText, string projectFileTemplateText, string generatedProjectPath)
         {
             string solutionFilePath = Path.Combine(generatedProjectPath, $"{UnityProjectName}.sln");

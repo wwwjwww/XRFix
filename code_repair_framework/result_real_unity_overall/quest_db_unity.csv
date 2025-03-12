@@ -1,0 +1,1 @@
+"Destroy in Update() method","Update() method is called each frame. It's inefficient to use Destroy() in Update() method.","warning","sink of this Destroy() method is [[""sink""|""relative:///Assets/Oculus/Platform/Samples/VrHoops/Scripts/FlyText.cs:33:5:33:23""]].","/Assets/Oculus/Platform/Samples/VrHoops/Scripts/FlyText.cs","33","5","33","23"

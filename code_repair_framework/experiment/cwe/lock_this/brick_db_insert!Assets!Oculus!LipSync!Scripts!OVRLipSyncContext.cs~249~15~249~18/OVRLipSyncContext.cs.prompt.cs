@@ -12,7 +12,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
 
-https:
+https://developer.oculus.com/licenses/audio-3.3/
 
 Unless required by applicable law or agreed to in writing, the Oculus Audio SDK
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -34,8 +34,8 @@ using UnityEngine;
 
 public class OVRLipSyncContext : OVRLipSyncContextBase
 {
-    
-    
+
+
 
 
     [Tooltip("Allow capturing of keyboard input to control operation.")]
@@ -61,22 +61,22 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
     public bool showLaughter = false;
     public float laughterScore = 0.0f;
 
-    
-    
 
-    
-    
-    
-    
+
+
+
+
+
+
     void Start()
     {
-        
+
         if (enableTouchInput)
         {
             OVRTouchpad.AddListener(LocalTouchEventCallback);
         }
 
-        
+
         OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();
         if (consoles.Length > 0)
         {
@@ -84,12 +84,12 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
         }
     }
 
-    
-    
-    
+
+
+
     void HandleKeyboard()
     {
-        
+
         if (Input.GetKeyDown(loopbackKey))
         {
             ToggleAudioLoopback();
@@ -177,9 +177,9 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
         }
     }
 
-    
-    
-    
+
+
+
     void Update()
     {
         if (enableKeyboardInput)
@@ -190,28 +190,28 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
         DebugShowVisemesAndLaughter();
     }
 
-    
-    
-    
-    
-    
+
+
+
+
+
     public void PreprocessAudioSamples(float[] data, int channels)
     {
-        
+
         for (int i = 0; i < data.Length; ++i)
         {
             data[i] = data[i] * gain;
         }
     }
 
-    
-    
-    
-    
-    
+
+
+
+
+
     public void PostprocessAudioSamples(float[] data, int channels)
     {
-        
+
         if (!audioLoopback)
         {
             for (int i = 0; i < data.Length; ++i)
@@ -219,14 +219,14 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
         }
     }
 
-    
-    
-    
-    
-    
+
+
+
+
+
     public void ProcessAudioSamplesRaw(float[] data, int channels)
     {
-        
+
         lock (this)
         {
             if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)
@@ -238,14 +238,14 @@ public class OVRLipSyncContext : OVRLipSyncContextBase
         }
     }
 
-    
-    
-    
-    
-    
+
+
+
+
+
 ///     public void ProcessAudioSamplesRaw(short[] data, int channels)
 //     {
-//         
+// 
         // BUG: Locking the 'this' object in a lock statement
         // MESSAGE: It is bad practice to lock the 'this' object because it might be locked elsewhere.
         //         lock (this)

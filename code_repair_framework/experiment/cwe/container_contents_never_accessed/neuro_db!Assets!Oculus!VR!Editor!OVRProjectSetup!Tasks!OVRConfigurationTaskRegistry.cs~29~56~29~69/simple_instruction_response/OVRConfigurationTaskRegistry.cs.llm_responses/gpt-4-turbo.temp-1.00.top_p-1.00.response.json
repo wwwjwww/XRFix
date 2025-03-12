@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzNrqNFr1cUG3ynLtS2NvCQRTaYH",
+    "object": "chat.completion",
+    "created": 1724322667,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 276,
+        "completion_tokens": 125,
+        "total_tokens": 401
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

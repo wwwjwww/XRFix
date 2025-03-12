@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyvOQcDPlWmNZoG98YVhjd95ca63",
+    "object": "chat.completion",
+    "created": 1724320902,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "        private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n\n        // FIXED CODE:"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "namespace Meta.Conduit.Editor\n{\n    internal class EnumCodeWrapper\n    {\n        public const string DEFAULT_PATH = @\"Assets\\\";\n\n        private readonly string _sourceFilePath;\n        private readonly IFileIo _fileIo;\n        \n        private readonly CodeCompileUnit _compileUnit = new CodeCompileUnit();\n        private readonly CodeTypeDeclaration _typeDeclaration = new CodeTypeDeclaration();\n        private readonly List<string> _enumValues = new List<string>();\n        private readonly CodeDomProvider _provider = new CSharpCodeProvider();\n}\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 273,
+        "completion_tokens": 194,
+        "total_tokens": 467
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -144,7 +144,7 @@ public class timelineHandle : manipObject {
 
       _timelineEvent.toggleEdges(true);
 
-      _timelineEvent.overlapCheck();
+      _timelineEvent.overlapCheck();/// = false;
     }
 
     curState = state;

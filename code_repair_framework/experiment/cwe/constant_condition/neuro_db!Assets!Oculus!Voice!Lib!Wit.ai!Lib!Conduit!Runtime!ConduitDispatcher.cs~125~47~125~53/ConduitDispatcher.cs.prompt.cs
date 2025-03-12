@@ -15,36 +15,36 @@ using Meta.WitAi;
 
 namespace Meta.Conduit
 {
-    
-    
-    
-    
+
+
+
+
     internal class ConduitDispatcher : IConduitDispatcher
     {
-        
-        
-        
+
+
+
         public Manifest Manifest { get; private set; }
 
-        
-        
-        
+
+
+
         private readonly IManifestLoader _manifestLoader;
 
-        
-        
-        
+
+
+
         private readonly IInstanceResolver _instanceResolver;
 
-        
-        
-        
+
+
+
         private readonly Dictionary<string, string> _parameterToRoleMap = new Dictionary<string, string>();
 
 
-        
-        
-        
+
+
+
         private readonly HashSet<string> _ignoredActionIds = new HashSet<string>();
 
         public ConduitDispatcher(IManifestLoader manifestLoader, IInstanceResolver instanceResolver)
@@ -53,10 +53,10 @@ namespace Meta.Conduit
             _instanceResolver = instanceResolver;
         }
 
-        
-        
-        
-        
+
+
+
+
         public void Initialize(string manifestFilePath)
         {
             if (Manifest != null)
@@ -71,7 +71,7 @@ namespace Meta.Conduit
                 return;
             }
 
-            
+
             foreach (var action in Manifest.Actions)
             {
                 foreach (var parameter in action.Parameters)
@@ -84,17 +84,17 @@ namespace Meta.Conduit
             }
         }
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
+
+
         public bool InvokeAction(IParameterProvider parameterProvider, string actionId, bool relaxed,
             float confidence = 1f, bool partial = false)
         {
@@ -118,7 +118,7 @@ namespace Meta.Conduit
             var invocationContexts = filter.ResolveInvocationContexts(actionId, confidence, partial);
             if (invocationContexts.Count < 1)
             {
-                
+
                 if (!partial && filter.ResolveInvocationContexts(actionId, confidence, true).Count < 1)
                 {
                    VLog.W(

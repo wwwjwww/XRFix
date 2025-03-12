@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wApziHR0sNlNSsupiF69M8SRZY4v",
+    "object": "chat.completion",
+    "created": 1723651711,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private static List<Graphic> _tmpGraphics = new List<Graphic>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private static List<Graphic> _tmpGraphics = new List<Graphic>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private static List<Graphic> _tmpGraphics = new List<Graphic>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "        //private static List<Graphic> _tmpGraphics = new List<Graphic>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private static List<CanvasRenderer> _tmpRenderers = new List<CanvasRenderer>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 80,
+        "total_tokens": 459
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

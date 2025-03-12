@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0tYACPJknDC57gMjTsYjNKopmvJ",
+    "object": "chat.completion",
+    "created": 1724328476,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class FoldoutGroup<T>\n{\n    private string _name;\n    private FoldoutGroup<T> _parent;\n    private List<object> _children = new List<object>();\n    private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n    public FoldoutGroup(string name)\n    {\n        _name = name;\n    }\n\n    public FoldoutGroup<T> Parent\n    {\n        get { return _parent; }\n        set { _parent = value; }\n    }\n\n    public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isItem)\n    {\n        _children.Add(child);\n        if (isItem)\n        {\n            _data.Add(item);\n        }\n    }\n\n    public void Draw()\n    {\n        bool foldout = EditorGUILayout.Foldout(true, _name);\n        if (foldout)\n        {\n            foreach (var child in _children)\n            {\n                if (child is FoldoutGroup<T> group)\n                {\n                    group.Draw();\n                }\n                else if (child is FoldoutHierarchyItem<T> hierarchyItem)\n                {\n                    hierarchyItem.onDraw?.Invoke(hierarchyItem.item);\n                }\n            }\n            \n            foreach (var item in _data)\n            {\n                item.onDraw?.Invoke(item.item);\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class FoldoutGroup<T>\n{\n    private string _name;\n    private FoldoutGroup<T> _parent;\n    private List<object> _children = new List<object>();\n    private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n    public FoldoutGroup(string name)\n    {\n        _name = name;\n    }\n\n    public FoldoutGroup<T> Parent\n    {\n        get { return _parent; }\n        set { _parent = value; }\n    }\n\n    public void AddChild(FoldoutGroup<T> group, FoldoutHierarchyItem<T> item, bool isLastElement)\n    {\n        if (isLastElement)\n        {\n            _data.Add(item);\n        }\n        else\n        {\n            _children.Add(group);\n            group.Parent = this;\n        }\n    }\n\n    public void Draw()\n    {\n        if (EditorGUILayout.Foldout(true, _name)) // Assuming foldout state is always true for simplification\n        {\n            foreach (var child in _children)\n            {\n                if (child is FoldoutGroup<T> group)\n                {\n                    group.Draw();\n                }\n            }\n\n            foreach (var item in _data)\n            {\n                item.onDraw?.Invoke(item.item);\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class FoldoutGroup<T>\n{\n    private string _name;\n    private FoldoutGroup<T> _parent;\n    private List<object> _children = new List<object>();\n    private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n    public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isItem)\n    {\n        _children.Add(child);\n        if (isItem)\n        {\n            _data.Add(item);\n        }\n        child._parent = this;\n    }\n    \n    // ... (Rest of the FoldoutGroup<T> class code remains unchanged)\n    \n    public void Draw()\n    {\n        if(EditorGUILayout.Foldout(true, _name))\n        {\n            foreach (var child in _children)\n            {\n                if(child is FoldoutGroup<T> groupChild)\n                {\n                    groupChild.Draw();\n                }\n                else if (child is FoldoutHierarchyItem<T> itemChild)\n                {\n                    itemChild.onDraw?.Invoke(itemChild.item);\n                }\n            }\n        }\n    }\n\n    // ... (Rest of the FoldoutHierarchy<T> class code remains unchanged)\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n        public FoldoutGroup(string name)\n        {\n            _name = name;\n        }\n\n        public FoldoutGroup<T> Parent\n        {\n            get { return _parent; }\n            set { _parent = value; }\n        }\n\n        public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isLastElement)\n        {\n            _children.Add(child);\n            if(isLastElement)\n            {\n                _data.Add(item);\n            }\n\n            child.Parent = this;\n        }\n\n        public void Draw()\n        {\n            bool isOpen = EditorGUILayout.Foldout(true, _name);\n            if (isOpen)\n            {\n                EditorGUI.indentLevel++;\n                foreach (var child in _children)\n                {\n                    if (child is FoldoutGroup<T> group)\n                    {\n                        group.Draw();\n                    }\n                    else if (child is FoldoutHierarchyItem<T> hierarchyItem)\n                    {\n                        hierarchyItem.onDraw?.Invoke(hierarchyItem.item);\n                    }\n                }\n                EditorGUI.indentLevel--;\n            }\n        }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class FoldoutGroup<T>\n{\n    private string _name;\n    private FoldoutGroup<T> _parent;\n    private List<object> _children = new List<object>();\n    private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n    public FoldoutGroup(string name)\n    {\n        _name = name;\n    }\n\n    public FoldoutGroup<T> Parent\n    {\n        get { return _parent; }\n    }\n\n    public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isLast)\n    {\n        _children.Add(child);\n        \n        if (isLast)\n            _data.Add(item);\n        \n        child._parent = this;\n    }\n    \n    public void Draw()\n    {\n        // The drawing logic for the FoldoutGroup items and children should be implemented here.\n        // This might include GUI calls to create foldouts and displaying the item's name.\n        // For example, use EditorGUILayout.Foldout(...) to draw a foldout in the editor.\n        // Additionally, iterate through _data to draw individual items with their onDraw actions.\n\n        // if you need to access the _data in the drawing logic, iterate over them like this:\n        foreach (var item in _data)\n        {\n            item.onDraw?.Invoke(item.item);\n        }\n        \n        // The above code assumes you also implement the drawing logic for children if necessary.\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 475,
+        "completion_tokens": 1344,
+        "total_tokens": 1819
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

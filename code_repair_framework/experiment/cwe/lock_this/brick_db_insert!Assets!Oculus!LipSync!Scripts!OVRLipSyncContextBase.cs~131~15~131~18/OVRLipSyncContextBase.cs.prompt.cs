@@ -12,7 +12,7 @@ otherwise accompanies this software in either electronic or hard copy form.
 
 You may obtain a copy of the License at
 
-https:
+https://developer.oculus.com/licenses/audio-3.3/
 
 Unless required by applicable law or agreed to in writing, the Oculus Audio SDK
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -35,8 +35,8 @@ using UnityEngine;
 
 public class OVRLipSyncContextBase : MonoBehaviour
 {
-    
-    
+
+
     public AudioSource audioSource = null;
 
     [Tooltip("Which lip sync provider to use for viseme computation.")]
@@ -44,10 +44,10 @@ public class OVRLipSyncContextBase : MonoBehaviour
     [Tooltip("Enable DSP offload on supported Android devices.")]
     public bool enableAcceleration = true;
 
-    
-    
+
+
     private OVRLipSync.Frame frame = new OVRLipSync.Frame();
-    private uint context = 0;    
+    private uint context = 0;    // 0 is no context
 
     private int _smoothing;
     public int Smoothing
@@ -95,12 +95,12 @@ public class OVRLipSyncContextBase : MonoBehaviour
         }
     }
 
-    
-    
-    
+
+
+
     void Awake()
     {
-        
+
         if (!audioSource)
         {
             audioSource = GetComponent<AudioSource>();
@@ -122,12 +122,12 @@ public class OVRLipSyncContextBase : MonoBehaviour
     }
 
 
-    
-    
-    
+
+
+
 ///     void OnDestroy()
 //     {
-//         
+// 
         // BUG: Locking the 'this' object in a lock statement
         // MESSAGE: It is bad practice to lock the 'this' object because it might be locked elsewhere.
         //         lock (this)

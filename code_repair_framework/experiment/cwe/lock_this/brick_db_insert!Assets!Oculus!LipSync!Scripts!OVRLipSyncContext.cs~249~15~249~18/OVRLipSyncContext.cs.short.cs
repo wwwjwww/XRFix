@@ -2,7 +2,7 @@ using UnityEngine;
 
 ///     public void ProcessAudioSamplesRaw(short[] data, int channels)
 //     {
-//         
+// 
         // BUG: Locking the 'this' object in a lock statement
         // MESSAGE: It is bad practice to lock the 'this' object because it might be locked elsewhere.
         //         lock (this)

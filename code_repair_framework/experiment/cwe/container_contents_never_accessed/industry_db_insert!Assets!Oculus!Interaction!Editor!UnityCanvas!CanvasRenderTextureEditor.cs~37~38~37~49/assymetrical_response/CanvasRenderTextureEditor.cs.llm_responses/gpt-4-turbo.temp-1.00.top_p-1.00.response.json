@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wKxjo9Q73uc8YFnx3kTfcq9N8Q89",
+    "object": "chat.completion",
+    "created": 1723690631,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private static List<Graphic> _tmpGraphics = new List<Graphic>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private static List<Graphic> _tmpGraphics = new List<Graphic>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private static List<Graphic> _tmpGraphics = new List<Graphic>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// private static List<Graphic> _tmpGraphics = new List<Graphic>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        // private static List<Graphic> _tmpGraphics = new List<Graphic>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 379,
+        "completion_tokens": 106,
+        "total_tokens": 485
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

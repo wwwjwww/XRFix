@@ -1,1 +1,0 @@
-"Instantiate/Destroy in Update() method","Update() method is called each frame. It's inefficient to use Instantiate() and Destroy() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/Scripts/PanelStats.cs:116:17:116:18""]].","/Assets/Scripts/PanelStats.cs","110","14","110","31"

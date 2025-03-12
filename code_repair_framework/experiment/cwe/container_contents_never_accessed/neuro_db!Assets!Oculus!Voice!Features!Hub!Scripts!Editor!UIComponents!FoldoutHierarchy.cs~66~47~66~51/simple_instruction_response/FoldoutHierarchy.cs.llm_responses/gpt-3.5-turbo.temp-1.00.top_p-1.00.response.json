@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyvIDrNFxMigGGdHD1P7rOyQ6Jkl",
+    "object": "chat.completion",
+    "created": 1724320896,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "\n        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n        "
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n\n        public FoldoutGroup(string name)\n        {\n            _name = name;\n        }\n\n        public FoldoutGroup<T> Parent\n        {\n            get { return _parent; }\n        }\n\n        public void AddChild(FoldoutGroup<T> child, FoldoutHierarchyItem<T> item, bool isLeaf)\n        {\n            child._parent = this;\n            _children.Add(child);\n            if (isLeaf)\n            {\n                _data.Add(item);\n            }\n        }\n\n        public void Draw()\n        {\n            GUILayout.BeginVertical();\n            EditorGUI.indentLevel++;\n            EditorGUILayout.Foldout(true, _name);\n            foreach (var item in _data)\n            {\n                item.onDraw.Invoke(item.item);\n            }\n            foreach (var child in _children)\n            {\n                if (child is FoldoutGroup<T>)\n                {\n                    ((FoldoutGroup<T>)child).Draw();\n                }\n            }\n            EditorGUI.indentLevel--;\n            GUILayout.EndVertical();\n        }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 447,
+        "completion_tokens": 317,
+        "total_tokens": 764
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

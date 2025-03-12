@@ -1,8 +1,0 @@
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-
-  public void setSelectAsynch(bool on) {
-  //   Queue<bool> hits = new Queue<bool>();
-
-  // FIXED CODE:

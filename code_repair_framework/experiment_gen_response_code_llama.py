@@ -6,14 +6,16 @@ import requests
 from datetime import datetime
 import re
 
-from transformers import AutoTokenizer, AutoModelForCausalLM,BitsAndBytesConfig
+from transformers import AutoTokenizer, AutoModelForCausalLM,BitsAndBytesConfig, LlamaForCausalLM
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 import logging
 import argparse
 import torch
 import warnings
+from accelerate import dispatch_model
+from accelerate.utils import get_balanced_memory, infer_auto_device_map
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "1"
+os.environ["CUDA_VISIBLE_DEVICES"] = "0,1"
 
 def parse_arguments():
     parser = argparse.ArgumentParser()
@@ -33,17 +35,20 @@ def parse_arguments():
 @retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(6))
 def generate_text(prompt, temperature, max_new_tokens,candidate_num):
     inputs = tokenizer(prompt, return_tensors='pt', add_special_tokens=False).to(device)
-    outputs = model.generate(
-        inputs['input_ids'],
-        max_new_tokens=max_new_tokens,
-        temperature=temperature,
-        top_k=50,
-        num_return_sequences=candidate_num,
-        do_sample=True,
-        pad_token_id=tokenizer.eos_token_id
-    ).to('cpu')
-    response = [tokenizer.decode(output, skip_special_tokens=True).split('[/INST]')[-1].strip()
-                for output in outputs]
+    with torch.no_grad():
+    	outputs = model.generate(
+        	inputs['input_ids'],
+        	max_new_tokens=max_new_tokens,
+        	temperature=temperature,
+        	top_k=50,
+        	num_return_sequences=candidate_num,
+        	do_sample=True,
+        	pad_token_id=tokenizer.eos_token_id
+    	).to('cpu')
+    	response = [tokenizer.decode(output, skip_special_tokens=True).split('[/INST]')[-1].strip()
+        	        for output in outputs]
+    torch.cuda.empty_cache()
+    torch.cuda.ipc_collect()
 
     return response
 
@@ -56,7 +61,7 @@ def count_message_tokens(content):
     return num_tokens
 
 
-def hand_crafted_prompt_response(path, skip_engines=[]):
+def hand_crafted_prompt_response(path, max_token, skip_engines=[]):
     file_extension = '.cs'
     files = os.walk(path)
     comment_key = "//"
@@ -71,6 +76,7 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                     hand_crafted_prompt_short = os.path.join(path, "hand_crafted_prompt_short.txt")
                     hand_crafted_prompt = os.path.join(path, "hand_crafted_prompt.txt")
                     prompt = scenario_contents["prompt_template"]
+                    short_contents = ""
 
                     head_contents_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
                                                   -1] + ".head" + file_extension
@@ -94,6 +100,13 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                     prompt_add_first_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
                                                      -1] + ".add_first.txt"
                     prompt_add_first_path = os.path.join(path, prompt_add_first_file_name)
+                    prompt_short_lines_file_name = scenario_contents["err_detailed_info"]['file_name'].split('/')[
+                                                         -1] + ".short" + file_extension
+                    prompt_short_lines_path = os.path.join(path, prompt_short_lines_file_name)
+
+                    add_prompt_short_lines_file_name = scenario_contents["err_detailed_info"]['add_file_name'].split('/')[
+                                                         -1] + ".short" + file_extension
+                    add_prompt_short_lines_path = os.path.join(path, add_prompt_short_lines_file_name)
 
                     include_addition = scenario_contents["include_addition"]
                     file_name = scenario_contents["err_detailed_info"]["file_name"]
@@ -107,11 +120,16 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         prepend_contents_add = f3.read()
                     with open(prompt_contents_path_add, 'r', encoding='utf8') as f4:
                         prompt_contents_add = f4.read()
-                    if os.path.exists(prompt_between_lines_path):
+                    with open(prompt_short_lines_path, 'r', encoding='utf8') as f7:
+                        prompt_short_lines = f7.read()
+                    if os.path.exists(prompt_add_first_path):
                         with open(prompt_between_lines_path, 'r', encoding='utf8') as f5:
                             prompt_between_lines = f5.read()
                         with open(prompt_add_first_path, 'r', encoding='utf8') as f6:
                             add_first_str = f6.read()
+                    else:
+                        with open(add_prompt_short_lines_path, 'r', encoding='utf8') as f7:
+                            add_prompt_short_lines = f7.read()
 
                     if file_name == add_file_name:
 
@@ -121,15 +139,18 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         # prompt_foot = "\n" + comment_key + " FIXED CODE:\n"
                         if "False" in add_first_str:
                             prompt_lines_long = prompt_head + prepend_contents + prompt_contents + prompt_between_lines + prompt_contents_add
-                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents + prompt_contents_add
+                            prompt_lines_short = prompt_head + prompt_short_lines + prompt_contents + prompt_contents_add
                         else:
                             prompt_lines_long = prompt_head + prepend_contents + prompt_contents_add + prompt_between_lines + prompt_contents
-                            prompt_lines_short = prompt_head + prepend_contents + prompt_contents_add + prompt_contents
+                            prompt_lines_short = prompt_head + prompt_short_lines + prompt_contents_add + prompt_contents
 
                         with open(hand_crafted_prompt_long, 'w', encoding='utf8') as f5:
                             f5.write(prompt_lines_long)
                         with open(hand_crafted_prompt_short, 'w', encoding='utf8') as f6:
                             f6.write(prompt_lines_short)
+
+                        prompt_contents = prompt_lines_long
+                        short_contents = prompt_lines_short
 
                     else:
                         prompt_head = comment_key + "Here're the buggy code lines from " + file_name + ":\n"
@@ -142,22 +163,25 @@ def hand_crafted_prompt_response(path, skip_engines=[]):
                         with open(hand_crafted_prompt, 'w', encoding='utf8') as f5:
                             f5.write(prompt_lines)
 
-                    with open(hand_crafted_prompt, 'r', encoding='utf8') as f6:
-                        prompt_contents = f6.read()
+                        short_contents = prompt_head + prompt_short_lines + prompt_contents + prompt_mid + add_prompt_short_lines + prompt_contents_add
+
+                        prompt_contents = prompt_lines
+
+                        with open(hand_crafted_prompt_short, 'w', encoding='utf8') as f6:
+                            f6.write(short_contents)
 
                     with open(head_contents_path, 'r', encoding='utf8') as f7:
                         instruct_head = f7.read()
-
-                    
 
 
                     generate_LLM_experiment_responses(
                         path,
                         instruct_head,
                         prompt_contents,
-                        "",
+                        short_contents,
                         "",
                         scenario_contents["err_detailed_info"]['file_name'].split('/')[-1],
+                        max_token,
                         scenario_contents["temperature"],
                         scenario_contents["top_p"],
                         scenario_contents["LLM_engine"],
@@ -174,11 +198,12 @@ def generate_codellama_requests(instruct_head, prompt, temp, top_p, max_tokens, 
     prompt = f'<s>[INST] {contents} [/INST]'
 
     input_tokens = count_message_tokens(prompt)
+    print('input tokens: ' + str(input_tokens))
     logging.info('input tokens: ' + str(input_tokens))
-    if input_tokens > max_input_tokens:
+    if input_tokens > max_tokens:
         print('Over input tokens limit')
         logging.warning('Over input tokens limit')
-        status = "FAILED"
+        status = "EXCEED MAX TOKEN"
         result = {}
         return status, result
     try:
@@ -220,8 +245,7 @@ def generate_codellama_requests(instruct_head, prompt, temp, top_p, max_tokens, 
             result['code_repairing_' + str(i + len(repair_outcome))] = ''
     return status, result
 
-def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_contents, append_contents, experiment_filename, temperature, top_p, LLM_engine, iteration, include_addition, skip_engines):
-    max_tokens = 2048
+def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_contents, append_contents, experiment_filename, max_tokens, temperature, top_p, LLM_engine, iteration, include_addition, skip_engines):
 
     llm_responses_dir = os.path.join(root_dir, "response",
                                        experiment_filename + ".llm_responses")
@@ -252,11 +276,12 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
             skip = False
             if os.path.exists(codex_responses_file):
                 skip = True
-            while not skip:
+            failure = 0
+            while not skip and failure <= 3:
                     print(
                         "Attempting responses for folder: %s ,file:%s,temp:%.2f,top_p:%.2f,engine:%s,max_tokens:%d" % (
                             llm_responses_dir, experiment_filename, temperature, top_p, engine, max_tokens))
-                    if engine == "code-llama":
+                    if engine == "simple_instruction_result_open_source":
                         status, data = generate_codellama_requests(
                             instruct_head,
                             prompt_text,
@@ -271,13 +296,16 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
                             print("LLM responses collected.")
                             break
                         else:
-                            prompt_text = short_contents
+                            if (status == "EXCEED MAX TOKEN"):
+                                prompt_text = short_contents
+
+                            failure += 1
                             print("Waiting 30 seconds and trying again")
                             time.sleep(30)
                             continue
 
 
-            if not skip:
+            if not skip and data != {}:
                 # create codex_responses file in the experiment dir
                 with open(codex_responses_file, "w") as f3:
                     f3.write(json.dumps(data, indent=4))
@@ -288,7 +316,7 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
 
 
 
-def prepare_LLM_experiment_requests(path, skip_engines=[]):
+def prepare_LLM_experiment_requests(path, max_token, skip_engines=[]):
     file_extension = '.cs'
     files = os.walk(path)
 
@@ -331,6 +359,7 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                         short_prompt_contents_clean,
                         append_contents,
                         scenario_contents["err_detailed_info"]['file_name'].split('/')[-1],
+                        max_token,
                         scenario_contents["temperature"],
                         scenario_contents["top_p"],
                         scenario_contents["LLM_engine"],
@@ -340,7 +369,7 @@ def prepare_LLM_experiment_requests(path, skip_engines=[]):
                     )
 
 
-def decide_include_addition(path, skip_engines=[]):
+def decide_include_addition(path, max_token, skip_engines=[]):
     ile_extension = '.cs'
     files = os.walk(path)
 
@@ -351,22 +380,24 @@ def decide_include_addition(path, skip_engines=[]):
                     scenario_contents = json.load(f)
 
                 if scenario_contents["include_addition"]:
-                    hand_crafted_prompt_response(path, skip_engines)
+                    hand_crafted_prompt_response(path, max_token, skip_engines)
                 else:
-                    prepare_LLM_experiment_requests(path, skip_engines)
+                    prepare_LLM_experiment_requests(path, max_token, skip_engines)
 
 
 if __name__ == '__main__':
     args = parse_arguments()
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    #max_memory = {0: '20GiB', 1: '20GiB'}
+    
     print('Device:', device)
     q_config = BitsAndBytesConfig(
             load_in_4bit=True,
             bnb_4bit_quant_type="nf4",
             bnb_4bit_compute_dtype=torch.float16
             )
-
 
     tokenizer = AutoTokenizer.from_pretrained(
         args.checkpoint,
@@ -376,19 +407,24 @@ if __name__ == '__main__':
     )
     model = AutoModelForCausalLM.from_pretrained(
         args.checkpoint,
-        device_map='cuda',
         trust_remote_code=True,
+        device_map='auto',
         low_cpu_mem_usage=True,
         cache_dir=args.cache_dir,
-        quantization_config=q_config
+        quantization_config=q_config,
     )
+   
+    #device_map = infer_auto_device_map(model, max_memory=max_memory)
+    #print(device_map)
+    #model = dispatch_model(model, device_map=device_map)
+
     #print(f'Memory footprint: {model.get_memory_footprint() / 1e6:.2f} MB')
     candidate_num = args.candidate_num
     temperature = args.temperature
     max_input_tokens = tokenizer.model_max_length  # 1000000000000000019884624838656
     # The maximum numbers of tokens to generate, ignoring the number of tokens in the prompt.
-    max_new_tokens = 2048  # max_output_tokens
+    max_new_tokens = 4096  # max_output_tokens
 
     path = args.run_path
     skip_engines = []
-    decide_include_addition(path, skip_engines)
+    decide_include_addition(path, max_new_tokens, skip_engines)
