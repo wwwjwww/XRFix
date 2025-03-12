@@ -7,6 +7,7 @@ import time
 import config
 import os
 
+# Use regex to determine the buggy functions
 def get_vulnerable_function_lines(vulnerable_file_contents, start_line_index):
     comment_char = '//'
     detect_function_regex = r'\b((?:private|public|protected|internal|void)(\s+\b\w+)*\[*\]*(\s+\b\w+)*(\w+\s*<[^>]*>\s+)*(where\s+\w+\s*:\s*\w+,)*\s+\b\w+\s*\([^)]*\)\s*{)|\b((?:private|public|protected|internal)(\s+\b\w+)*\[*\]*(\s+\b\w+)*(\w+\s*<[^>]*>\s+)*\s+\b\w+\s*{)|\b((?:private|public|protected|internal|void)(\s+\b\w+(\.)+\b\w+)+\s+\b\w+\s*\([^)]*\)\s*{)|\b((?:private|public|protected|internal|void)+\s+\b\w+\s+\b\w+\s+\b\w+\s*=\s*(.*))|\b(?:private|public|protected|internal|void)\s+\b\w+<.*>(\s+\b\w)*\s*|\b(?:private|public|protected|internal|void)(\s+\b\w)*(.*)'
@@ -47,6 +48,7 @@ def get_vulnerable_function_lines(vulnerable_file_contents, start_line_index):
     vulnerable_function_start_line_num = function_def_num_newlines[closest_newline_index][0]
     vulnerable_function_end_line_num = function_def_num_newlines[closest_newline_index][1]
 
+    # if '{' is in the second line
     if vulnerable_function_start_line_num != vulnerable_function_end_line_num or "{" in vulnerable_file_contents[vulnerable_function_end_line_num]:
         # get the number of whitespace chars in the first line of the function index
         vulnerable_function_line = vulnerable_file_contents[vulnerable_function_start_line_num]
@@ -138,6 +140,7 @@ def get_vulnerable_function_lines(vulnerable_file_contents, start_line_index):
         vulnerable_file_prepend_lines, vulnerable_file_function_def_lines, vulnerable_file_function_pre_start_lines,
         vulnerable_file_function_start_lines_to_end, vulnerable_file_append_lines, vulnerable_file_function_end_func, vulnerable_file_append_lines_func )
 
+    # if '{' is not in the second line
     else:
         # get the number of whitespace chars in the first line of the function index
         vulnerable_function_line = vulnerable_file_contents[vulnerable_function_start_line_num]
@@ -186,7 +189,7 @@ def get_vulnerable_function_lines(vulnerable_file_contents, start_line_index):
             vulnerable_file_prepend_lines, vulnerable_file_function_def_lines, vulnerable_file_function_pre_start_lines,
             vulnerable_file_function_start_lines_to_end, vulnerable_file_append_lines, vulnerable_file_function_end_func, vulnerable_file_append_lines_func)
 
-
+#create prompt contents for each bug scenario
 def derive_scenarios_for_experiments(path,):
     comment_char = '//'
     files = os.walk(path)

@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "I appreciate your effort in trying to be helpful, but if you're going to copy and paste a message to respond to my prompt, could you at least write it in a way that doesn't make it look like a boilerplate response? It just comes off as rude.",
-    "code_repairing_1": "Sure, here is an example of a code snippet for creating an object pool in C# that can be used to improve performance when instantiating objects in the Update() method:\n\n    using System.Collections.Generic;\n    using UnityEngine;\n\n    public class ObjectPool : MonoBehaviour",
-    "code_repairing_2": "Sure! You can definitely use object pooling to reduce the number of objects created and destroyed during the game loop. Here's an example of how you can implement an object pool in C# for the DetectedPlaneVisualizer component:\nusing UnityEngine;\nusing UnityEngine.XR.",
-    "code_repairing_3": "Here is an updated version of the Start() and Update() methods from /Assets/GoogleARCore/Examples/Common/Scripts/ARAnchoring.cs and /Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs, which implement object pooling",
-    "code_repairing_4": "/**\n* BUG: Destroy in Update() method\n* MESSAGE: Update() method is called each frame. It's inefficient to use Destroy() in Update() method.\n*     public void Update()\n*     {\n*         if (isVR)\n*"
-}

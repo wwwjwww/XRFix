@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "```\nFixed code looks correct, no errors, and is properly formatted using the code block function.",
-    "code_repairing_1": "Here is your fixed version:\n\n```\nnamespace GoogleARCore.Examples.ComputerVision\n{",
-    "code_repairing_2": "No.\n<|system|>",
-    "code_repairing_3": "```csharp\n//FIXED CODE:\n\nusing System;\nusing GoogleARCore;\nusing UnityEngine",
-    "code_repairing_4": "Here is the fixed code:\n\n```csharp\nusing System;\nusing GoogleARCore;"
-}

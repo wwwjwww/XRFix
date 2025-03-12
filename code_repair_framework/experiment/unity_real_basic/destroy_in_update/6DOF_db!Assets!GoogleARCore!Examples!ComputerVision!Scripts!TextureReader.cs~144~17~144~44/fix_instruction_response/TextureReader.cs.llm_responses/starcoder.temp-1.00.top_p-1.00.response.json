@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "```\n\nAs a result, we used ``` ``` code blocks to wrap the code, and then reformatted the code to be more easily readable. Overall, the changes you made look correct and should work correctly with the Unity project.",
-    "code_repairing_1": "```csharp\n        private ObjectPool<CommandObject> m_CommandObjectPool = new ObjectPool<CommandObject>(\n            () => new CommandObject(),\n            commandObject => commandObject.Reset());\n        \n        private int m_ImageBufferIndex =",
-    "code_repairing_2": "```csharp\n\nnamespace GoogleARCore.Examples.ComputerVision\n{\n    using System;\n    using System.Collections.Generic;\n    using GoogleARCore;\n    using UnityEngine;\n\n    \n    \n    public class TextureReader : MonoBehaviour\n    {",
-    "code_repairing_3": "```csharp\nusing UnityEngine;\n\npublic static class ObjectPool \n{\n    private static Queue<GameObject> pool;\n    private static int maxSize;\n\n    static ObjectPool()\n    {\n        pool = new Queue<GameObject>();\n    }",
-    "code_repairing_4": "```csharp\nnamespace GoogleARCore.Examples.ComputerVision\n{\n    using System;\n    using GoogleARCore;\n    using UnityEngine;\n\n    public class TextureReader : MonoBehaviour\n    {\n        public int ImageWidth = 1920"
-}

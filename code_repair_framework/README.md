@@ -3,7 +3,7 @@
 The folders are organized as follows.
 * ./experiments contains all generated fixes using different prompt templates
 * ./result_cwe contains all located CWE-related errors that we obtained from static analysis
-* ./result_unity_sort contains all located Unity-related errors that we obtained from static analysis
+* ./result_unity contains all located Unity-related errors that we obtained from static analysis
 
 ### Usage
 
@@ -11,7 +11,6 @@ All experiments are organized in the experiments sub-directory into various fold
 
 When you are ready, the python scripts are as follows for solving any one scenario:
 * `experiment_gen_response_*.py` - *Run this file to obtain the repair results from LLMs*
-* `hand_crafted_exp*.py` - *Run this file to obtain the repair results from LLMs for hand-crafted results*
 * `experiment_get_result.py` - *Run this file to run static analysis results to determine if the fix is plausible*
 
 

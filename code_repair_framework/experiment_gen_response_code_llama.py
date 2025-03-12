@@ -200,6 +200,7 @@ def generate_codellama_requests(instruct_head, prompt, temp, top_p, max_tokens, 
     input_tokens = count_message_tokens(prompt)
     print('input tokens: ' + str(input_tokens))
     logging.info('input tokens: ' + str(input_tokens))
+    # determine if the input_tokens is within the max input tokens.
     if input_tokens > max_tokens:
         print('Over input tokens limit')
         logging.warning('Over input tokens limit')
@@ -271,7 +272,6 @@ def generate_LLM_experiment_responses(root_dir, instruct_head, contents, short_c
 
             codex_responses_file = os.path.join(llm_responses_dir,
                                                 "%s.temp-%.2f.top_p-%.2f.response.json" % (engine, temperature, top_p))
-            print(codex_responses_file)
             print("Generating '%s' responses for %s" % (engine, experiment_filename))
             skip = False
             if os.path.exists(codex_responses_file):

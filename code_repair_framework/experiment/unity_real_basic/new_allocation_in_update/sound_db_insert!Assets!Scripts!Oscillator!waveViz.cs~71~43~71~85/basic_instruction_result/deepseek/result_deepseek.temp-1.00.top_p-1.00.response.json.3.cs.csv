@@ -1,1 +1,0 @@
-"Using New() allocation in Update() method.","Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/Scripts/Timeline/timelinePlayer.cs:97:84:97:127""]].","/Assets/Scripts/Timeline/timelinePlayer.cs","97","84","97","127"
