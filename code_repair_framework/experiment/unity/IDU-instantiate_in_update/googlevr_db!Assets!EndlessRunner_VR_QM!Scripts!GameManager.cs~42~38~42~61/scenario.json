@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\GoogleVR_Unity_Endless-Runner_main",
+    "exp_dir": "googlevr_db!Assets!EndlessRunner_VR_QM!Scripts!GameManager.cs~42~38~42~61",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/EndlessRunner_VR_QM/Scripts/GameManager.cs",
+        "start_line": "42",
+        "start_column": "38",
+        "end_line": "42",
+        "end_column": "61",
+        "add_file_name": "/Assets/EndlessRunner_VR_QM/Scripts/GameManager.cs",
+        "add_start_line": "42",
+        "add_start_column": "38",
+        "add_end_line": "42",
+        "add_end_column": "61"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "fix_instruction_func_no_limit_assymetrical"
+    ]
+}

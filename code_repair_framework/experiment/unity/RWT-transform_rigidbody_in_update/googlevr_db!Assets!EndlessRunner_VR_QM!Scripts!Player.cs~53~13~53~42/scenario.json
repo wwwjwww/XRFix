@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/transform_rigidbody_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\GoogleVR_Unity_Endless-Runner_main",
+    "exp_dir": "googlevr_db!Assets!EndlessRunner_VR_QM!Scripts!Player.cs~53~13~53~42",
+    "unity_special_name": "Transform object of Rigidbody in Update() methods",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/rigidbody/comp_rigidbody_transform_in_update.ql",
+    "err_detailed_info": {
+        "description": "Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.",
+        "file_name": "/Assets/EndlessRunner_VR_QM/Scripts/Player.cs",
+        "start_line": "53",
+        "start_column": "13",
+        "end_line": "53",
+        "end_column": "42",
+        "add_file_name": "/Assets/EndlessRunner_VR_QM/Scripts/Player.cs",
+        "add_start_line": "53",
+        "add_start_column": "13",
+        "add_end_line": "53",
+        "add_end_column": "42"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "fix_instruction_func_no_limit_assymetrical"
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/destroy_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\Extended-Reality-XR---Building-AR-VR-MR-Projects_886d18fd\\section5\\Packt_VRMaze",
+    "exp_dir": "Packt_VRMaze_db!Assets!SteamVR!InteractionSystem!Longbow!Scripts!FireSource.cs~55~6~55~26",
+    "unity_special_name": "Destroy in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_destroy_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Destroy() in Update() method.",
+        "file_name": "/Assets/SteamVR/InteractionSystem/Longbow/Scripts/FireSource.cs",
+        "start_line": "55",
+        "start_column": "6",
+        "end_line": "55",
+        "end_column": "26",
+        "add_file_name": "/Assets/SteamVR/InteractionSystem/Longbow/Scripts/FireSource.cs",
+        "add_start_line": "55",
+        "add_start_column": "6",
+        "add_end_line": "55",
+        "add_end_column": "26"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "fix_instruction_func_no_limit_assymetrical"
+    ]
+}

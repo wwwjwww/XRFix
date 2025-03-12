@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "<|system|>",
+    "code_repairing_1": "Using existing heap",
+    "code_repairing_2": "public enum Op",
+    "code_repairing_3": "manager.head",
+    "code_repairing_4": "emulatedRoll"
+}

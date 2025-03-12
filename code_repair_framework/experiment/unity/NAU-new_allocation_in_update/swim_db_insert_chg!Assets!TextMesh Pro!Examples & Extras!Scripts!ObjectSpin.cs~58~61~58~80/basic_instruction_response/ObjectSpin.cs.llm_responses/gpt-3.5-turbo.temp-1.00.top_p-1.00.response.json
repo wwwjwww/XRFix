@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzoHioDF6jYsCDlfh0BNMnXxMx5J",
+    "object": "chat.completion",
+    "created": 1724324305,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "                m_transform.position = m_initial_Position + new Vector3(x, z, y);\n                //m_transform.position = m_initial_Position + new Vector3(x, z, y);\n                frames++;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "m_transform.position = m_initial_Position + new Vector3(x, z, y);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "\n                m_transform.position = m_initial_Position + new Vector3(x, z, y);\n            }\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "                Vector3 newPosition = m_initial_Position + new Vector3(x, z, y);\n                m_transform.position = newPosition;\n            "
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "m_transform.position = m_initial_Position + new Vector3(x, y, z);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 453,
+        "completion_tokens": 132,
+        "total_tokens": 585
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9r0gngStfb4zFsh2kjLzQIaSK0e1e",
+    "object": "chat.completion",
+    "created": 1722421061,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n[SerializeField]\nprivate Vector3 _rootScale = Vector3.one;\n\nprivate void Awake()\n{\n    _rootScale = Vector3.one; // Initialize default scale\n    // ... existing Awake implementation\n}\n\nprivate void Update()\n{\n    // ... existing Update code before the problematic part\n\n    if (_updateRootScale)\n    {\n        _rootScale.x = data.RootScale;\n        _rootScale.y = data.RootScale;\n        _rootScale.z = data.RootScale;\n        transform.localScale = _rootScale;\n    }\n\n    // ... existing Update code after the problematic part\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void Start()\n{\n    if (_skeletonType != SkeletonType.None)\n    {\n        transform.localScale = Vector3.one; // Default scale\n        Initialize();\n    }\n}\n\nprivate void Update()\n{\n    // Further code in Update() method\n    if (_updateRootScale)\n    {\n        // Reuse existing localScale value instead of creating new Vector3\n        transform.localScale = Vector3.one * data.RootScale;\n    }\n\n    // Rest of the Update() method...\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 _rootScaleVector;\n\nprivate void Awake()\n{\n    _rootScaleVector = Vector3.one;\n\n    if (_dataProvider == null)\n    {\n        _dataProvider = GetComponent<IOVRSkeletonDataProvider>();\n    }\n\n    _bones = new List<OVRBone>();\n    Bones = _bones.AsReadOnly();\n\n    _bindPoses = new List<OVRBone>();\n    BindPoses = _bindPoses.AsReadOnly();\n\n    _capsules = new List<OVRBoneCapsule>();\n    Capsules = _capsules.AsReadOnly();\n}\n\nprivate void Update()\n{\n#if UNITY_EDITOR\n    if (OVRInput.IsControllerConnected(OVRInput.Controller.Hands) && !IsInitialized)\n    {\n        if (_skeletonType != SkeletonType.None)\n        {\n            Initialize();\n        }\n    }\n\n    if (!ShouldUpdateBonePoses)\n    {\n        return;\n    }\n#endif\n\n    if (!IsInitialized || _dataProvider == null)\n    {\n        IsDataValid = false;\n        IsDataHighConfidence = false;\n\n        return;\n    }\n\n    var data = _dataProvider.GetSkeletonPoseData();\n\n    IsDataValid = data.IsDataValid;\n    if (data.IsDataValid)\n    {\n        IsDataHighConfidence = data.IsDataHighConfidence;\n\n        if (_updateRootPose)\n        {\n            transform.localPosition = data.RootPose.Position.FromFlippedZVector3f();\n            transform.localRotation = data.RootPose.Orientation.FromFlippedZQuatf();\n        }\n\n        if (_updateRootScale)\n        {\n            _rootScaleVector.x = data.RootScale;\n            _rootScaleVector.y = data.RootScale;\n            _rootScaleVector.z = data.RootScale;\n            transform.localScale = _rootScaleVector;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 rootScaleVector = Vector3.one;\n\nprivate void Update()\n{\n\tif (!IsInitialized || _dataProvider == null)\n\t{\n\t\tIsDataValid = false;\n\t\tIsDataHighConfidence = false;\n\t\treturn;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 _rootScaleVector = Vector3.one;\nprivate void Update()\n{\n    // ...\n\n    if (_updateRootScale)\n    {\n        _rootScaleVector.x = _rootScaleVector.y = _rootScaleVector.z = data.RootScale;\n        transform.localScale = _rootScaleVector;\n    }\n\n    // ...\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2929,
+        "completion_tokens": 718,
+        "total_tokens": 3647
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

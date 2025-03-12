@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour {
+    private Rigidbody playerRigidbody; // 이동에 사용할 리지드바디 컴포넌트
+    public float speed = 8f; // 이동 속력
+
+
+    void Start() {
+        playerRigidbody = GetComponent<Rigidbody>();
+    }
+
+
+
+
+        float horizontal = Input.GetAxis("Horizontal"); // Input.GetAxis()를 통해 움직임을 확인할 수 있습니다.
+
+        float vertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(horizontal, 0, vertical); // 입력받은horizontal과 vertical을 가지고 Vector3형 movement을 만들어줍니다.
+
+
+
+    public void Die() {
+        // 자신의 게임 오브젝트를 비활성화
+        gameObject.SetActive(false);
+    }
+
+}

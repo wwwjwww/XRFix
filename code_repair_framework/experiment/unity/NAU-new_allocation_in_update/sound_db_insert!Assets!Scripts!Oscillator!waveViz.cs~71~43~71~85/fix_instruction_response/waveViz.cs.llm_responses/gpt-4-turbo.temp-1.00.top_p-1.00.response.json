@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9luOjcM5yv5vImEVo1FyzYLZWgFqv",
+    "object": "chat.completion",
+    "created": 1721205237,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```\n\n```csharp\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, waverend.material.mainTextureOffset.y);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nwaverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 629,
+        "completion_tokens": 186,
+        "total_tokens": 815
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

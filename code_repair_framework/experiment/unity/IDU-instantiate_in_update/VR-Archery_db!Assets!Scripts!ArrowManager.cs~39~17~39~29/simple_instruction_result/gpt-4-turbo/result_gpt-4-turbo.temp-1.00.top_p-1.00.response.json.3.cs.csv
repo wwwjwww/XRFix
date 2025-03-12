@@ -1,0 +1,1 @@
+"Instantiate in Update() method","Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/Scripts/ArrowManager.cs:78:36:78:46""]].","/Assets/Scripts/ArrowManager.cs","61","13","61","25"

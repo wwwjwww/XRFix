@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wBAYvDwydGeeM2CIuQRyT79vEFqF",
+    "object": "chat.completion",
+    "created": 1723652986,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "transform.localScale = new Vector3(data.RootScale, data.RootScale, data.RootScale);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "\t\t\t\tVector3 scale = new Vector3(data.RootScale, data.RootScale, data.RootScale);\n\t\t\t\ttransform.localScale = scale;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "transform.localScale = new Vector3(data.RootScale, data.RootScale, data.RootScale);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "transform.localScale = new Vector3(data.RootScale, data.RootScale, data.RootScale);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "transform.localScale = new Vector3(data.RootScale, data.RootScale, data.RootScale);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2933,
+        "completion_tokens": 98,
+        "total_tokens": 3031
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

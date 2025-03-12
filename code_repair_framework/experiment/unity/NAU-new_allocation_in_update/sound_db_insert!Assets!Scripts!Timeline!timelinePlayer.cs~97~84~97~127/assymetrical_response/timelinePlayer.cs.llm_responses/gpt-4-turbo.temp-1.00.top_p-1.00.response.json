@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL6ukgcVUfyCCZDv3vLnDlcllBQ8",
+    "object": "chat.completion",
+    "created": 1723691200,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic class timelinePlayer : MonoBehaviour {\n  // Other class members go here...\n\n  KeyValuePair<int, float> toRecordEntryDefault = new KeyValuePair<int, float>(0, 0f);\n  KeyValuePair<int, float> toRecordEntry;\n\n  void Awake() {\n    _deviceInterface = GetComponent<timelineComponentInterface>();\n    toRecordEntry = toRecordEntryDefault; // Perform allocation here\n  }\n\n  void Update() {\n    // Other update code goes here...\n\n    lock (_recordLock) {\n      if (toRecord.Keys.Count > 0) {\n        foreach (KeyValuePair<int, float> entry in toRecord) {\n          toRecordEntry = entry; // Reuse existing toRecordEntry\n          activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, \n                new Vector2(entry.Value, entry.Value + .01f));\n        }\n      }\n    }\n    // Other update code goes here...\n  }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void AllocateTimelineEvent(int key, float value) {\n    Vector2 timeRange = new Vector2(value, value + .01f);\n    activeEvents[key] = _deviceInterface.SpawnTimelineEvent(key, timeRange);\n}\n\nvoid Update() {\n    playheadScrubbing = playheadHandle.curState == manipObject.manipState.grabbed;\n\n    if (!playheadScrubbing) updatePlayhead();\n    else {\n        playheadHandle.xBounds.y = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.x);\n        playheadHandle.xBounds.x = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.y);\n        curGridPosition = _deviceInterface._gridParams.XtoUnit(playheadHandle.transform.localPosition.x);\n        timelineEventUpdate();\n    }\n\n    lock (_recordLock) {\n        if (toRecord.Keys.Count > 0) {\n            foreach (KeyValuePair<int, float> entry in toRecord) {\n                AllocateTimelineEvent(entry.Key, entry.Value);\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate KeyValuePair<int, float> newEventRecordEntry;\n\nvoid Start() {\n  // other start code...\n  newEventRecordEntry = default(KeyValuePair<int, float>);\n}\n\nvoid Update() {\n  // other update code...\n  \n  if (toRecord.Count > 0) {\n    foreach (KeyValuePair<int, float> entry in toRecord) {\n      if (activeEvents.TryGetValue(entry.Key, out timelineEvent existingEvent)) {\n        existingEvent.UpdateTimestamps(entry.Value, entry.Value + .01f);\n      } else {\n        Vector2 timeRange = new Vector2(entry.Value, entry.Value + .01f);\n        activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, timeRange);\n      }\n    }\n    toRecord.Clear(); // Assuming toRecord should be cleared after processing\n  }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic void RecordEvent(int key, float value)\n{\n  Vector2 timeRange = new Vector2(value, value + .01f);\n  activeEvents[key] = _deviceInterface.SpawnTimelineEvent(key, timeRange);\n}\n\n// Call this method before Update() method whenever you want to record an event.\n```\n\n```csharp\nvoid Update() {\n  playheadScrubbing = playheadHandle.curState == manipObject.manipState.grabbed;\n\n  if (!playheadScrubbing) updatePlayhead();\n  else {\n    curGridPosition = _deviceInterface._gridParams.XtoUnit(playheadHandle.transform.localPosition.x);\n    timelineEventUpdate();\n  }\n\n  if (toRecord.Keys.Count > 0) {\n    foreach (KeyValuePair<int, float> entry in toRecord) {\n      if (!activeEvents.ContainsKey(entry.Key)) {\n        RecordEvent(entry.Key, entry.Value);\n      }\n    }\n    toRecord.Clear();\n  }\n  // Rest of the Update() method\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate KeyValuePair<int, float> recordingEntry;\n\nvoid Start() {\n  masterControl.instance.beatUpdateEvent += beatUpdateEvent;\n  masterControl.instance.beatResetEvent += beatResetEvent;\n  // Initialize the preparation for recording\n  recordingEntry = new KeyValuePair<int, float>(0,0);\n}\n\nvoid Update() {\n  playheadScrubbing = playheadHandle.curState == manipObject.manipState.grabbed;\n\n  if (!playheadScrubbing) updatePlayhead();\n  else {\n    playheadHandle.xBounds.y = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.x);\n    playheadHandle.xBounds.x = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.y);\n    curGridPosition = _deviceInterface._gridParams.XtoUnit(playheadHandle.transform.localPosition.x);\n    timelineEventUpdate();\n  }\n\n  lock (_recordLock) {\n    if (toRecord.Keys.Count > 0) {\n      foreach (KeyValuePair<int, float> entry in toRecord) {\n        recordingEntry = entry; // Use the already allocated KeyValuePair\n        timelineEvent existingEvent;\n        if (activeEvents.TryGetValue(recordingEntry.Key, out existingEvent)) {\n          existingEvent.setOut(recordingEntry.Value + .01f); // Reuse existing Event\n        } else {\n          activeEvents[recordingEntry.Key] = _deviceInterface.SpawnTimelineEvent(recordingEntry.Key, new Vector2(recordingEntry.Value, recordingEntry.Value + .01f));\n        }\n      }\n    }\n  }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 740,
+        "completion_tokens": 1138,
+        "total_tokens": 1878
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

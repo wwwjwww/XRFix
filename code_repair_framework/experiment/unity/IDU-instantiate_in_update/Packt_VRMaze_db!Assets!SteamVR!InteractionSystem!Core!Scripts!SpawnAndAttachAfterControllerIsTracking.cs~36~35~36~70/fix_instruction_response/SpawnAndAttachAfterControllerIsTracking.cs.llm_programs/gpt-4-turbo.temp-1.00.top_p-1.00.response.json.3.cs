@@ -1,0 +1,83 @@
+﻿
+
+
+
+
+
+
+using UnityEngine;
+using System.Collections;
+
+namespace Valve.VR.InteractionSystem
+{
+	
+	public class SpawnAndAttachAfterControllerIsTracking : MonoBehaviour
+	{
+		private Hand hand;
+		public GameObject itemPrefab;
+
+	
+		
+		void Start()
+		{
+			hand = GetComponentInParent<Hand>();
+			if (itemPrefab != null)
+			{
+				itemPrefab.SetActive(false); // Ensure the prefab is inactive initially
+			}
+		}
+
+
+		
+/// 		void Update()
+// 		{
+// 			if ( itemPrefab != null )
+// 			{
+// 				if ( hand.controller != null )
+// 				{
+// 					if ( hand.controller.hasTracking )
+// 					{
+						// BUG: Instantiate in Update() method
+						// MESSAGE: Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.
+						// 						GameObject objectToAttach = GameObject.Instantiate( itemPrefab );
+						// 						objectToAttach.SetActive( true );
+						// 						hand.AttachObject( objectToAttach );
+						// 						hand.controller.TriggerHapticPulse( 800 );
+						// 						Destroy( gameObject );
+						// 
+						// 						
+						// 						
+						// 						objectToAttach.transform.localScale = itemPrefab.transform.localScale;
+						// 					}
+						// 				}
+						// 			}
+						// 		}
+
+						// you can try to build an object pool before Update() method has been called.
+						// FIXED CODE:
+
+
+		private bool isAttached = false;
+
+		void Update()
+		{
+			if (!isAttached && itemPrefab != null)
+			{
+				if (hand.controller != null && hand.controller.hasTracking)
+				{
+					GameObject objectToAttach = GameObject.Instantiate(itemPrefab);
+					objectToAttach.SetActive(true);
+					hand.AttachObject(objectToAttach);
+					hand.controller.TriggerHapticPulse(800);
+
+					objectToAttach.transform.localScale = itemPrefab.transform.localScale;
+
+					isAttached = true;
+					Destroy(gameObject);
+				}
+			}
+		}
+
+
+	}
+}

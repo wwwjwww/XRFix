@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvRTxe1RFG9UcrHgvCrGxD6Qg7WG",
+    "object": "chat.completion",
+    "created": 1722400891,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state = new OVRPlugin.ControllerState4();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state;\n\npublic override Controller Update()\n{\n    state = new OVRPlugin.ControllerState4();\n    // Rest of the code goes here\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state;\n\npublic override Controller Update()\n{\n    state = new OVRPlugin.ControllerState4();\n    // Your code here\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "\t\t\tOVRPlugin.ControllerState4 state;\n\n\t\t\tpublic override Controller Update()\n\t\t\t{\n\t\t\t\tstate = new OVRPlugin.ControllerState4();\n\t\t\t\t// Your code here\n\t\t\t}\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 188,
+        "completion_tokens": 130,
+        "total_tokens": 318
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

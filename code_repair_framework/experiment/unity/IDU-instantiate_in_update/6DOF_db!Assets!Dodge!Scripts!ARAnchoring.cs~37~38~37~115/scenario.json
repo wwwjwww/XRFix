@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-3.5-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\6DOF-Mobile-VR-Using-GVR-and-ARCore_ce8eb39e",
+    "exp_dir": "6DOF_db!Assets!Dodge!Scripts!ARAnchoring.cs~37~38~37~115",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/Dodge/Scripts/ARAnchoring.cs",
+        "start_line": "37",
+        "start_column": "38",
+        "end_line": "37",
+        "end_column": "115",
+        "add_file_name": "/Assets/Dodge/Scripts/ARAnchoring.cs",
+        "add_start_line": "37",
+        "add_start_column": "38",
+        "add_end_line": "37",
+        "add_end_column": "115"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "fix_instruction_func_no_limit_assymetrical"
+    ]
+}

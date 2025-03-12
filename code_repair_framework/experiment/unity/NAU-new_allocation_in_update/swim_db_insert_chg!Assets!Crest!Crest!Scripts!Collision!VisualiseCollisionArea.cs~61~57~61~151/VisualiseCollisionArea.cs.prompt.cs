@@ -1,0 +1,65 @@
+﻿// Crest Ocean System
+
+
+
+using UnityEngine;
+
+namespace Crest
+{
+
+
+
+    public class VisualiseCollisionArea : MonoBehaviour
+    {
+        [SerializeField]
+        float _objectWidth = 0f;
+
+        float[] _resultHeights = new float[s_steps * s_steps];
+
+        static readonly float s_radius = 5f;
+        static readonly int s_steps = 10;
+
+        protected GameObject gobj8;
+        protected GameObject a8;
+
+        private float timeLimit = 5f;
+        private float timer  = 0f;
+        private bool instantiate_gobj = false;
+
+
+        Vector3[] _samplePositions = new Vector3[s_steps * s_steps];
+
+        void Update()
+        {
+            timer+=Time.deltaTime;
+
+            if (!instantiate_gobj && timer >= timeLimit)
+            {
+                a8 = Instantiate(gobj8);
+                timer = 0;
+                instantiate_gobj = true;
+            }
+            if (instantiate_gobj && timer >= timeLimit )
+            {
+                var obj8 = a8.AddComponent<VisualiseRayTrace>();
+                obj8.FreeObject();
+                timer = 0;
+                instantiate_gobj = false;
+            }
+
+            if (OceanRenderer.Instance == null || OceanRenderer.Instance.CollisionProvider == null)
+            {
+                return;
+            }
+
+            var collProvider = OceanRenderer.Instance.CollisionProvider;
+
+            for (int i = 0; i < s_steps; i++)
+            {
+                for (int j = 0; j < s_steps; j++)
+                {
+                    // BUG: Using New() allocation in Update() method.
+                    // MESSAGE: Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.
+                    //                     _samplePositions[j * s_steps + i] = new Vector3(((i + 0.5f) - s_steps / 2f) * s_radius, 0f, ((j + 0.5f) - s_steps / 2f) * s_radius);
+
+                    // FIXED CODE:

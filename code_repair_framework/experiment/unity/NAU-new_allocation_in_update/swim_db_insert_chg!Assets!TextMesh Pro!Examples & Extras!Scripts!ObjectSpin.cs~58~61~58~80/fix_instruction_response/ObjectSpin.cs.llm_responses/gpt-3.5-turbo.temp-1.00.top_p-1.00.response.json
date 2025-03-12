@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvTmH3dZNhDXT2YfyW3upsv0kF0I",
+    "object": "chat.completion",
+    "created": 1722401034,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "        private Transform m_transform;\n        private Vector3 m_initial_Position;\n        \n        void Start()\n        {\n            m_transform = GetComponent<Transform>();\n            m_initial_Position = m_transform.position;\n        }\n\n        void Update()\n        {\n            float x = Mathf.Sin(Time.time) * 2;\n            float y = 0;\n            float z = 0;\n\n            m_transform.position = m_initial_Position + new Vector3(x, z, y);\n        }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "public class ObjectSpin : MonoBehaviour\n{\n    private Transform m_transform;\n    private Vector3 m_initial_Position;\n\n    void Start()\n    {\n        m_transform = transform;\n        m_initial_Position = m_transform.position;\n    }\n\n    void Update()\n    {\n        float x = Mathf.Sin(Time.time) * 2.0f;\n        float z = 0.0f;\n        float y = Mathf.Cos(Time.time) * 2.0f;\n\n        m_transform.position = m_initial_Position + new Vector3(x, z, y);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "\n        private Transform m_transform;\n        private Vector3 m_initial_Position;\n\n        void Start()\n        {\n            m_transform = GetComponent<Transform>();\n            m_initial_Position = m_transform.position;\n        }\n\n        void Update()\n        {\n            float x = Mathf.Sin(Time.time);\n            float y = Mathf.Cos(Time.time);\n            float z = 0;\n\n            m_transform.position = m_initial_Position + new Vector3(x, y, z);\n        }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "\n        void Start()\n        {\n            m_initial_Position = transform.position;\n        }\n\n        void Update()\n        {\n            float x = Mathf.Sin(Time.time * m_speed);\n            float y = Mathf.Cos(Time.time * m_speed);\n            float z = Mathf.Tan(Time.time * m_speed);\n\n            m_transform.position = m_initial_Position + new Vector3(x, z, y);\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "transform m_transform;\nVector3 m_initial_Position;\nfloat x, y, z;\n\nvoid Start()\n{\n    m_transform = GetComponent<Transform>();\n}\n\nvoid Update()\n{\n    m_transform.position = m_initial_Position + new Vector3(x, z, y);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 165,
+        "completion_tokens": 431,
+        "total_tokens": 596
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}
