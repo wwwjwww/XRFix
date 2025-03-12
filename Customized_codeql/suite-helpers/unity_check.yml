@@ -5,3 +5,5 @@
    id: cs/new_allocation
 - include:
    id: cs/rigidbody_transform
+- include:
+   id: cs/destroy_update
