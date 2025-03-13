@@ -57,6 +57,6 @@ codeql database analyze <database> ./codeql/csharp/ql/src/codeql-suites/unity-ch
 Please see README.md files in ./code_repair_framework to see more details.
 
 #### Detailed Information of our Collected Open-source XR Projects
-![Uploading 07588810f99e72a8db2a08fd3d20e2c.png…]()
+![INFO of Open-Sourced XR Projects]()
 
 
