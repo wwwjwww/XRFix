@@ -57,6 +57,31 @@ codeql database analyze <database> ./codeql/csharp/ql/src/codeql-suites/unity-ch
 Please see README.md files in ./code_repair_framework to see more details.
 
 #### Detailed Information of our Collected Open-source XR Projects
-![INFO of Open-Sourced XR Projects]()
+| **Project_ID (a-w)** | **Project_Name**                                                | **Source** | **LoC (C#)** |
+|----------------------|-----------------------------------------------------------------|------------|--------------|
+| a                    | VR-AR-Game                                                      | GitHub     | 651k         |
+| b                    | Passthrough-Neuroanatomy                                        | SideQuest  | 188k         |
+| c                    | Unity-XR-NetworkMapper-Project                                  | GitHub     | 182k         |
+| d                    | N.a.N Industry                                                  | SideQuest  | 154k         |
+| e                    | quest-jp                                                        | GitHub     | 145k         |
+| f                    | UAFinder                                                        | GitHub     | 100k         |
+| g                    | MRTK Samples with Passthrough API                               | SideQuest  | 99k          |
+| h                    | Surfaces in Passthrough                                         | SideQuest  | 95k          |
+| i                    | BricksVR Rebuilt                                                | SideQuest  | 84k          |
+| j                    | Extended-Reality-XR---Building-AR-VR-MR-Projects                | GitHub     | 69k          |
+| k                    | Hand Posing Tool: Pirates Demo                                  | SideQuest  | 74k          |
+| l                    | Piha rip simulator                                              | SideQuest  | 46k          |
+| m                    | VR Gallery for Google Photos                                    | SideQuest  | 45k          |
+| n                    | SurgeryQuest                                                    | SideQuest  | 42k          |
+| o                    | SoundStage                                                      | SideQuest  | 26k          |
+| p                    | 6DOF-Mobile-VR-Using-GVR-and-ARCore                             | GitHub     | 23k          |
+| q                    | VRsus-guARdian                                                  | GitHub     | 23k          |
+| r                    | GoogleVR_Unity_Endless-Runner                                   | GitHub     | 17k          |
+| s                    | VR-Archery                                                      | GitHub     | 14k          |
+| t                    | SimulariumXR                                                    | GitHub     | 3k           |
+| u                    | VR_ArcheryChallenge                                             | GitHub     | 2k           |
+| v                    | IntVisWorkshop                                                  | GitHub     | 296          |
+| w                    | unity-playground                                                | GitHub     | 148          |
+
 
 
