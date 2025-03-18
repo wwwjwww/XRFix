@@ -9,7 +9,7 @@ import experiment_run_codeql_test
 
 #os.environ["OPENAI_API_KEY"] = config.OPENAI_API_KEY
 apiKey = config.OPENAI_API_KEY
-basicUrl = "https://chatgpt.hkbu.edu.hk/general/rest"
+basicUrl = config.basicUrl
 modelName_gpt35 = "gpt-35-turbo"
 apiVersion = "2024-02-15-preview"
 modelName_gpt4 = "gpt-4-turbo"
