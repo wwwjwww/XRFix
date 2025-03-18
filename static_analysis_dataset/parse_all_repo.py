@@ -14,7 +14,7 @@ repo = git.Repo.init(path='.')
 Language.build_library(
     'build/c-sharp.so',
     [
-        '/home/comp/csjwwu/static_analysis/tree-sitter-c-sharp'
+        './static_analysis/tree-sitter-c-sharp'
     ]
 )
 
