@@ -13,9 +13,6 @@ import tiktoken
 
 
 #os.environ["OPENAI_API_KEY"] = config.OPENAI_API_KEY
-apiKey = config.OPENAI_API_KEY_HKBU
-
-basicUrl = "https://genai.hkbu.edu.hk/general/rest"
 modelName_gpt35 = "gpt-3.5-turbo"
 apiVersion = "2024-02-15-preview"
 apiVersion_2 = "2024-10-21"
