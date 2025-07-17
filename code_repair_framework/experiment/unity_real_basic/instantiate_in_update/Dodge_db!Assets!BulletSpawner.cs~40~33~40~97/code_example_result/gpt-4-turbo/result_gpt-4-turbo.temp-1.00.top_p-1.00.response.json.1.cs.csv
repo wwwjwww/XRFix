@@ -1,0 +1,1 @@
+"Instantiate in Update() method","Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/BulletSpawner.cs:96:48:96:59""]].","/Assets/BulletSpawner.cs","72","13","72","25"

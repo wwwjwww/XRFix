@@ -1,9 +1,0 @@
-using System.Collections.Generic;
-using UnityEngine;
-using DG.Tweening;
-
-    // BUG: Container contents are never accessed
-    // MESSAGE: A collection or map whose contents are never queried or accessed is useless.
-    //     private List<MeshRenderer> rends;
-
-    // FIXED CODE:

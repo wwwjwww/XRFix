@@ -1,3 +1,0 @@
-"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/Oculus/Interaction/Editor/UnityCanvas/CanvasRenderTextureEditor.cs","22","38","22","49"
-"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/Oculus/VR/Editor/OVRGradleGeneration.cs","218","7","218","26"
-"Container contents are never accessed","A collection or map whose contents are never queried or accessed is useless.","error","The contents of this container are never accessed.","/Assets/Oculus/VR/Scripts/OVRBoundary.cs","135","24","135","41"

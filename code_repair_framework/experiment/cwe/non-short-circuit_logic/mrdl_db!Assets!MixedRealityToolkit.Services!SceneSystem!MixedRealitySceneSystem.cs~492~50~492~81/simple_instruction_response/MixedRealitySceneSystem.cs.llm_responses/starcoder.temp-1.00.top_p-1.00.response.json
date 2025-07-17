@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "Your C# code looks fine.\nWhat is the problem with it?",
+    "code_repairing_1": "Are you able to reproduce the issue consistently?\n<|system|>\n\n<|user|>",
+    "code_repairing_2": "This is the output of the program:\n```\n16:31",
+    "code_repairing_3": "Please explain what exactly you have done with the code?\n<|system|>",
+    "code_repairing_4": "Your response is too long. Please only include the edited/fixed code and provide"
+}

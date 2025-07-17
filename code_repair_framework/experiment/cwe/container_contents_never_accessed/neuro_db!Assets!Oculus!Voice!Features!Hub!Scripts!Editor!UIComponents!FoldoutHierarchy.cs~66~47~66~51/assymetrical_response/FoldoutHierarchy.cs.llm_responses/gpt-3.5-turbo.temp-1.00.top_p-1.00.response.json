@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAqeCcH3O94uZy9nkmxBJc24XamE",
+    "object": "chat.completion",
+    "created": 1723651752,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        //private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "        private string _name;\n        private FoldoutGroup<T> _parent;\n        private List<object> _children = new List<object>();\n        //private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 493,
+        "completion_tokens": 156,
+        "total_tokens": 649
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

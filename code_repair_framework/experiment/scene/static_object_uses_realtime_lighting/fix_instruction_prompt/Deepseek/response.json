@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```\nLight:\nm_Lightmapping: 3\n```",
+    "code_repairing_1": "'''\nLight:\nm_Lightmapping: 2\n'''",
+    "code_repairing_2": "The \"m_Lightmapping\" value of 4 corresponds to Baked Lighting in Unity. Here is the fixed code snippet:\n\n```\nLight:\nm_Lightmapping: 2\n```\n\nPlease note that this change will not affect the real-time lighting of your static objects. The scene will use baked and real-time lighting as per your settings, but the difference may not be noticeable unless your static objects have complex materials or textures.",
+    "code_repairing_3": "```\nLight:\nm_Lightmapping: 3\n```",
+    "code_repairing_4": "'''\nLight:\nm_Lightmapping: 0\n'''"
+}

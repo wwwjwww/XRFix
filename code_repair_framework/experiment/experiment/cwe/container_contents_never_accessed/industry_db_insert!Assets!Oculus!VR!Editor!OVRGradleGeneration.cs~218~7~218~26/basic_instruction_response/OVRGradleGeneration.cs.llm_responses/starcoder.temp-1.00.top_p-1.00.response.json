@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "using System.Collections.Generic;\n\nvar targetOculusPlatform = new List<string>() { \"oculus\" };\n\nEditorGUILayout.PropertyField(targetOculusPlatform);",
-    "code_repairing_1": ".gradle\n\t\tandroid {\n\t\t    defaultConfig {\n\t\t        applicationId \"com.companyname.MyApp\"\n\t\t        minSdkVersion 23\n\t\t        targetSdkVersion 31\n\t\t        versionCode 1\n\t\t        version",
-    "code_repairing_2": "El problema en el c\u00f3digo que proporcionaste es que una colecci\u00f3n o un mapa no se",
-    "code_repairing_3": "\u00a1Claro! Aqu\u00ed tienes el c\u00f3digo corregido:\n\n\tusing System;\n\tusing System.Collections;",
-    "code_repairing_4": "\u4f60\u597d\uff0c\u6709\u4ec0\u4e48\u4e8b\u5417\n<|system|>\n\n<|user|>\nWie funktionieren"
-}

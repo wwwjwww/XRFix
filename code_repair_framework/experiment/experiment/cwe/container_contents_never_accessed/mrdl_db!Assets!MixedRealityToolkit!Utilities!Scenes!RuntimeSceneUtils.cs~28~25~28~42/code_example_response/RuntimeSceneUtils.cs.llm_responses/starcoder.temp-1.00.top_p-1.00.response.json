@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "class Composers\n{\n    IList<string> names = new List<string> { \"Johann Sebastian Bach\", \"Ludwig van Beethoven\", \"Fr\u00e9d\u00e9ric Chopin\" };\n    IList<string> genres = new List<string> { \"Classical\", \"Romantic\", \"Jazz\" };\n}",
-    "code_repairing_1": "```csharp\nusing System;\nusing System.Collections.Generic;\nusing UnityEngine;\nusing UnityEngine.SceneManagement;\n\nnamespace Microsoft.MixedReality.Toolkit.Utilities\n{\n    public static class RuntimeSceneUtils\n    {\n        public static string GetSceneNameFromScenePath(string scenePath)\n        {\n            return System.IO.Path.GetFileNameWithoutExtension(scenePath);",
-    "code_repairing_2": "Sure! Here are someExamples:\n\n- Fred: HeyFred hasag",
-    "code_repairing_3": "Here is a Javascript function that returns an array of the top 10 longestWords from the bible with their locations :",
-    "code_repairing_4": "Lescar"
-}

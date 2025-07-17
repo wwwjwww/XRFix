@@ -1,6 +1,0 @@
-You're an automated program repair tool. The following unity scene file is written in YAML language. It has bugs of Static object uses real-time Lighting. The description of this bug is it's resource consuming for static object to use real-time lighting. Please change the setting of "m_Lightmapping" to baked lighting. Your task is to fix the setting under the 'FIXED:' area. In your response, only include your fixed code snippets. Do not output the original contents.
-'''
-Light:
-m_Lightmapping: 4
-'''
-FIXED:

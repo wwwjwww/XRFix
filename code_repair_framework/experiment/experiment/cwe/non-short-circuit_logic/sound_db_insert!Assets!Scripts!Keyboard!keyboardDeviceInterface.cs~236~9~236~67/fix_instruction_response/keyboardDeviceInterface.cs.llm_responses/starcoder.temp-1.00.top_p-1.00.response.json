@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "<|system|>",
-    "code_repairing_1": "\u00a1Por supuesto! Es posible crear una modalidad de study de flashcards para practicar vocabulario y estructuras de datos en programaci\u00f3n con un componente personalizado. Aqu\u00ed te dejo una breve gu\u00eda para ayudarte a comenzar:\n\n\u00bfQu\u00e9 tipos de flashcards necesitas? Aseg\u00farate de tener claro qu\u00e9 conceptos",
-    "code_repairing_2": "There are several things you can do to optimize your C++ code to improve its speed:\n\n\u2022 Use vectorization: Try to use vector instructions like those available on modern processors. These allow you to perform the same operation on multiple elements of a data structure simultaneously, which can lead to better performance.\n\n\u2022 Use appropriate data structures: Choose data structures that are well-suited to the type of data you are working with and that will allow you to optimize the way you access and modify it.",
-    "code_repairing_3": "Claro, aqu\u00ed tienes:\n\n| Lenguaje de programaci\u00f3n    | A\u00f1o | Porcentaje de adoption |\n|------------------------------|-----|------------------------|\n| C++ (1983)                    | 32,4% |\n| Java (199",
-    "code_repairing_4": "\u00a1Por supuesto! Los tipos de datos primitivos en C# son:\n\n1. ***bool***: Sirve para representar valores l\u00f3gicos como verdadero o falso.\n2. ***char***: Sirve para representar un \u00fanico car\u00e1cter.\n3. ***string***: Sirve para representar una secuencia de caracteres.\n4. ***sbyte"
-}

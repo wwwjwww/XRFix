@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9luPmKWXDTXll4eqHb5FbfD3TS4Ot",
+    "object": "chat.completion",
+    "created": 1721205302,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Dictionary<KeyType, Vector2> activeEventsVectorsCache = new Dictionary<KeyType, Vector2>();\n\nvoid Update() {\n    foreach (var entry in activeEvents)\n    {\n        Vector2 cachedVector;\n        if (!activeEventsVectorsCache.TryGetValue(entry.Key, out cachedVector)) {\n            cachedVector = new Vector2(entry.Value, entry.Value + .01f);\n            activeEventsVectorsCache[entry.Key] = cachedVector;\n        }\n        \n        activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, cachedVector);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector2 eventPosition;\n\nvoid Start() {\n    eventPosition = new Vector2(0, 0.01f);\n}\n\nvoid Update() {\n    // Use pre-allocated Vector2 instead of allocating a new one each frame\n    eventPosition.x = entry.Value;\n    eventPosition.y = entry.Value + .01f;\n    activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, eventPosition);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector2 reusableVector;\n\nvoid Awake() {\n    reusableVector = new Vector2();\n}\n\nvoid Update() {\n    // Now we're not using New() allocation in Update() method.\n    foreach (var entry in activeEvents) {\n        reusableVector.Set(entry.Value, entry.Value + .01f);\n        activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, reusableVector);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector2 tempVector;\nvoid Update() {\n    foreach(var entry in activeEvents) {\n        tempVector.x = entry.Value;\n        tempVector.y = entry.Value + .01f;\n        activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, tempVector);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector2 reusableVector2;\n\nvoid Awake() {\n    reusableVector2 = new Vector2();\n}\n\nvoid Update() {\n    foreach (var entry in activeEvents) {\n        reusableVector2.x = entry.Value;\n        reusableVector2.y = entry.Value + .01f;\n        activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, reusableVector2);\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 192,
+        "completion_tokens": 462,
+        "total_tokens": 654
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

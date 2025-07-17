@@ -1,0 +1,24 @@
+using System;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SceneUtils
+{
+    public static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)
+    {
+        scene = default(Scene);
+        sceneIndex = -1;
+
+        for (int i = 0; i < SceneManager.sceneCount; i++)
+        {
+            Scene currentScene = SceneManager.GetSceneAt(i);
+            if (currentScene.name == sceneName)
+            {
+                scene = currentScene;
+                sceneIndex = i;
+                return true;
+            }
+        }
+        return false;
+    }
+}

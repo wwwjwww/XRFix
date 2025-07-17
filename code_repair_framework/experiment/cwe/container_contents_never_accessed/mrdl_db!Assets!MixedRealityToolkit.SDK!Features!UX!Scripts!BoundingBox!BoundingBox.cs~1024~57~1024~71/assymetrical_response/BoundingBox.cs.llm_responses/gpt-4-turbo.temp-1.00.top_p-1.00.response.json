@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wKxw6MYmZaPfnGfoPxr6nukAHhzO",
+    "object": "chat.completion",
+    "created": 1723690644,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\n\n        // The following collection has been commented out because it is never accessed.\n        // private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        // Removed the unused collection as per the bug message\n        // private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        // Code snippet removed as it is not being accessed or used.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        // Commented out the unused collection as per bug report\n        // private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The collection `touchingSources` was never accessed and is considered useless in the current context.\n// It has been commented out to address the issue.\n\n// private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 4585,
+        "completion_tokens": 190,
+        "total_tokens": 4775
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAqhNE650rdtvoKgnu5XYGbyo7se",
+    "object": "chat.completion",
+    "created": 1723651755,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "        //private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 319,
+        "completion_tokens": 97,
+        "total_tokens": 416
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

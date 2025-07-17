@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "'''\nAnimator:\n...\nLight:\nm_Lightmapping: 4\n'''",
-    "code_repairing_1": "'''\nAnimator:\n...\nLight:\nm_Lightmapping: 4\n'''",
-    "code_repairing_2": "Animator:\n...\nLight:\nm_Lightmapping: baked\n'''\n<|system|>",
-    "code_repairing_3": "'''yaml\nAnimator:\n...\nLight:\nm_Lightmapping: 4\n'''",
-    "code_repairing_4": "Unity scene files are written in a proprietary binary format known as a \"Unity Asset\". Unfortunately,"
-}

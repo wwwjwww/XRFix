@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvT0vjL0ZYVbd7nHRW0IsbFCzy27",
+    "object": "chat.completion",
+    "created": 1722400986,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "List<int> triangles = new List<int>();\n\n            if (Input.GetMouseButton(0))\n            {\n                RaycastHit hit;\n                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n                if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n                {\n                    Debug.Log(\"Mouse hit\");\n                    // Bug Fixed: Allocation moved before the Update() method\n                    triangles.Clear();\n                    triangles.AddRange(mesh.triangles);\n                    int[] newTriangles = triangles.ToArray();\n\n                    // additional functionality\n                    if (newTriangles.Length > 0)\n                    {\n                        int startIndex = hit.triangleIndex * 3;\n\n                        if (startIndex < newTriangles.Length)\n                        {\n                            List<int> updatedTriangles = new List<int>(newTriangles);\n                            updatedTriangles.RemoveRange(startIndex, 3);\n                            mesh.triangles = updatedTriangles.ToArray();\n                            meshCollider.sharedMesh = null;\n                            meshCollider.sharedMesh = mesh;\n                        }\n                    }\n                }\n            }   "
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "List<int> triangles;\n\nvoid Start()\n{\n    triangles = new List<int>();\n    var smr = gameObject.GetComponent<SkinnedMeshRenderer>();\n    mesh = (Mesh)Instantiate(smr.sharedMesh);\n    smr.sharedMesh = mesh; \n    meshCollider = gameObject.GetComponent<MeshCollider>();\n    meshCollider.sharedMesh = mesh;\n\n}\n\nvoid Update()\n{\n    rb2.transform.Rotate(0, 40, 0);\n\n    timer += Time.deltaTime;\n\n    if (!instantiate_gobj && timer >= timeLimit)\n    {\n        a7 = Instantiate(gobj7);\n        timer = 0;\n        instantiate_gobj = true;\n    }\n    if (instantiate_gobj && timer >= timeLimit)\n    {\n        Dispose(a7);\n        timer = 0;\n        instantiate_gobj = false;\n    }\n\n    if (Input.GetMouseButton(0))\n    {\n        RaycastHit hit;\n        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n        if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n        {\n            if (triangles == null)\n            {\n                triangles = new List<int>();\n            }\n            triangles.Clear();\n            triangles.AddRange(mesh.triangles);\n            int startIndex = hit.triangleIndex * 3;\n            triangles.RemoveRange(startIndex, 3);\n            mesh.triangles = triangles.ToArray();\n            meshCollider.sharedMesh = mesh;\n        }\n\n    }\n}\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "List<int> triangles = new List<int>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "List<int> triangles;\n\nvoid Start()\n{\n    triangles = new List<int>();\n    var smr = gameObject.GetComponent<SkinnedMeshRenderer>();\n    mesh = (Mesh)Instantiate(smr.sharedMesh);\n    smr.sharedMesh = mesh;\n    meshCollider = gameObject.GetComponent<MeshCollider>();\n    meshCollider.sharedMesh = mesh;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "List<int> triangles = new List<int>();\n\n    public void Start()\n    {\n        var smr = gameObject.GetComponent<SkinnedMeshRenderer>();\n        mesh = Instantiate(smr.sharedMesh);\n        smr.sharedMesh = mesh;\n        meshCollider = gameObject.GetComponent<MeshCollider>();\n        meshCollider.sharedMesh = mesh;\n   }\n\n    void OnTriggerStay(Collider collider)\n    {\n        if (collider.name == \"Scalpel point\")\n        {\n            Debug.Log(\"cutting\");\n            RaycastHit hit;\n            var point_transform = collider.transform;\n            if (meshCollider.Raycast(new Ray(point_transform.position, point_transform.forward * .02f), out hit, 1)) \n            {\n                Debug.DrawLine(point_transform.position, hit.point, Color.red, 1);\n                List<int> triangles = new List<int>(mesh.triangles);\n                int startIndex = hit.triangleIndex * 3;\n                triangles.RemoveRange(startIndex, 3);\n                mesh.triangles = triangles.ToArray();\n                meshCollider.sharedMesh = mesh;\n            }\n        }\n    }\n\n    public void Dispose(GameObject obj7)\n    {\n        Destroy(obj7);\n    }\n\n    public void DisposeObj()\n    {\n        Destroy(gameObject);\n    }\n\n    void Update()\n    {\n        rb2.transform.Rotate(0, 40, 0);\n\n        timer += Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit)\n        {\n            a7 = Instantiate(gobj7);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        if (instantiate_gobj && timer >= timeLimit)\n        {\n            Dispose(a7);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (Input.GetMouseButton(0))\n        {\n            RaycastHit hit;\n            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n            if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n            {\n                \n                // List<int> triangles = new List<int>(); // Moved above to avoid allocation in Update\n                // rest of the code remains the same\n            }\n        }\n    }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 608,
+        "completion_tokens": 983,
+        "total_tokens": 1591
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

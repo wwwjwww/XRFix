@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyv90oDftmiQRBMKS7yttJc57apV",
+    "object": "chat.completion",
+    "created": 1724320887,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private void OnEnable()\n        {\n            if (boxMaterial == null)\n            {\n                boxMaterial = new Material(Shader.Find(\"Standard\"))\n                {\n                    hideFlags = HideFlags.HideAndDontSave\n                };\n            }\n\n            if (wireframeMaterial == null)\n            {\n                wireframeMaterial = new Material(Shader.Find(\"MixedRealityToolkit/StandardWireframe\"))\n                {\n                    hideFlags = HideFlags.HideAndDontSave\n                };\n            }\n\n            if (handleMaterial == null)\n            {\n                handleMaterial = new Material(Shader.Find(\"Standard\"))\n                {\n                    hideFlags = HideFlags.HideAndDontSave\n                };\n            }\n\n            if (handleGrabbedMaterial == null)\n            {\n                handleGrabbedMaterial = new Material(Shader.Find(\"Standard\"))\n                {\n                    hideFlags = HideFlags.HideAndDontSave\n                };\n            }\n\n            CreateRig();\n        }\n\n        private void OnDisable()\n        {\n            if (boxMaterial != null)\n            {\n                Destroy(boxMaterial);\n            }\n\n            if (wireframeMaterial != null)\n            {\n                Destroy(wireframeMaterial);\n            }\n\n            if (handleMaterial != null)\n            {\n                Destroy(handleMaterial);\n            }\n\n            if (handleGrabbedMaterial != null)\n            {\n                Destroy(handleGrabbedMaterial);\n            }\n\n            DestroyRig();\n        }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    [Header(\"Events\")]\n    \n    public UnityEvent RotateStarted = new UnityEvent();\n    \n    public UnityEvent RotateStopped = new UnityEvent();\n    \n    public UnityEvent ScaleStarted = new UnityEvent();\n    \n    public UnityEvent ScaleStopped = new UnityEvent();\n    #endregion Serialized Fields\n\n    #region Private Fields\n\n    \n    private bool wireframeOnly = false;\n\n    \n    private IMixedRealityPointer currentPointer;\n\n    private Transform rigRoot;\n\n    \n    private GameObject boxDisplay;\n\n    private Vector3[] boundsCorners;\n\n    \n    private Vector3 currentBoundsExtents;\n\n    private IMixedRealityEyeGazeProvider EyeTrackingProvider => eyeTrackingProvider ?? (eyeTrackingProvider = CoreServices.InputSystem?.EyeGazeProvider);\n    private IMixedRealityEyeGazeProvider eyeTrackingProvider = null;\n\n    #endregion Private Fields\n\n    #region Enums\n\n    ```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate GameObject[] corners;\nprivate GameObject[] links;\nprivate ScaleHandles scaleHandler;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n#endregion Private Fields\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "using UnityEngine;\n\nnamespace Microsoft.MixedReality.Toolkit.UI\n{\n    [HelpURL(\"https://\")]\n    public class BoundingBox : MonoBehaviour\n    {\n        // Add your fixed code here\n\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 4539,
+        "completion_tokens": 533,
+        "total_tokens": 5072
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

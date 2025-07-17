@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "<|system|>",
-    "code_repairing_1": "using System.",
-    "code_repairing_2": "```",
-    "code_repairing_3": "using\n<|user|>",
-    "code_repairing_4": "class Calculator:"
-}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzlHcBQ4ad5tX4awugVZKeSDjSfM",
+    "object": "chat.completion",
+    "created": 1724324119,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "        public Compute(RunDelegateWithCompute run_delegate)\n        {\n            Schedule(() =>\n            {\n                T result1 = run_delegate(this);\n                lock (this)\n                {\n                    result = result1;\n                    got_answer = true;\n                }\n            });\n        }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "public Compute(RunDelegateWithCompute run_delegate)\n{\n    Schedule(() =>\n    {\n        T result1 = run_delegate(this);\n        lock (this)\n        {\n            result = result1;\n            got_answer = true;\n        }\n    });\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "public Compute(RunDelegateWithCompute run_delegate)\n{\n    Schedule(() =>\n    {\n        T result1 = run_delegate(this);\n        lock (this)\n        {\n            result = result1;\n            got_answer = true;\n        }\n    });\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "public Compute(RunDelegateWithCompute run_delegate)\n{\n    Schedule(() =>\n    {\n        T result1 = run_delegate(this);\n        lock (result)\n        {\n            this.result = result1;\n            this.got_answer = true;\n        }\n    });\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public Compute(RunDelegateWithCompute run_delegate)\n{\n    Schedule(() =>\n    {\n        T result1 = run_delegate(this);\n        lock (this)\n        {\n            result = result1;\n            got_answer = true;\n        }\n    });\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 670,
+        "completion_tokens": 257,
+        "total_tokens": 927
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

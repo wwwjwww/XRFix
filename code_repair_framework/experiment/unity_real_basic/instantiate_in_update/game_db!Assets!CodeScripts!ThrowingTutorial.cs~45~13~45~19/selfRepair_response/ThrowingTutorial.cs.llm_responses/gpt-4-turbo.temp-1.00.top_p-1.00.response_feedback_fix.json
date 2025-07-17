@@ -1,0 +1,111 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class ThrowingTutorial : MonoBehaviour
+{
+    [Header("References")]
+    public Transform cam;
+    public Transform attackPoint;
+    public GameObject objectToThrow;
+    public GameObject armorObject;
+    public GameObject swordObject;
+    public GameObject player;
+
+    [Header("Settings")]
+    public int totalThrows;
+    public float throwCooldown;
+
+    [Header("Throwing")]
+    public KeyCode throwKey = KeyCode.K;  // Ensure this appears only once
+    public float throwForce;
+
+    bool readyToThrow;
+    private int throwCounter = 0;
+    private bool inCollider = false;
+
+    AudioManager audioManager;
+    private Queue<GameObject> objectPool;
+
+    private void Awake()
+    {
+        // Ensure TMPro is installed in Unity via Package Manager
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        InitializeObjectPool();
+    }
+
+    private void InitializeObjectPool()
+    {
+        objectPool = new Queue<GameObject>();
+
+        for (int i = 0; i < totalThrows; i++)
+        {
+            GameObject obj = Instantiate(objectToThrow);
+            obj.SetActive(false);
+            objectPool.Enqueue(obj);
+        }
+    }
+
+    private void Start()
+    {
+        readyToThrow = true;
+    }
+
+    private void Update()
+    {
+        if (inCollider && Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0)
+        {
+            Throw();
+        }
+    }
+
+    private void Throw()
+    {
+        readyToThrow = false;
+
+        if (objectPool.Count > 0)
+        {
+            audioManager.PlaySFX(audioManager.axeSound);
+
+            GameObject thrownObject = objectPool.Dequeue();
+            thrownObject.transform.position = attackPoint.position;
+            thrownObject.transform.rotation = attackPoint.rotation;
+            thrownObject.SetActive(true);
+
+            ResetRigidbody(thrownObject);
+
+            Rigidbody rb = thrownObject.GetComponent<Rigidbody>();
+            rb.AddForce(cam.forward * throwForce, ForceMode.VelocityChange);
+
+            throwCounter++;
+            totalThrows--;
+
+            if (objectPool.Count == 0)
+            {
+                // Enable sword, disable armor
+                audioManager.PlaySFX(audioManager.disappearSound);
+                armorObject.SetActive(false);
+                audioManager.PlaySFX(audioManager.appearSound);
+                swordObject.SetActive(true);
+            }
+        }
+        
+        Invoke(nameof(ResetThrow), throwCooldown);
+    }
+
+    private void ResetRigidbody(GameObject obj)
+    {
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
+
+    private void ResetThrow()
+    {
+        readyToThrow = true;
+    }
+}

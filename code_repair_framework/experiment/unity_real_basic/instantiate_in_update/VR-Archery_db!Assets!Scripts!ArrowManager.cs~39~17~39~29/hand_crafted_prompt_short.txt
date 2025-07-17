@@ -1,0 +1,35 @@
+//Here're the buggy code lines from /Assets/Scripts/ArrowManager.cs:
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// BUG: Instantiate in Update() method
+// MESSAGE: Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.
+//    void Update()
+//    {
+//        debug.text = controler.transform.rotation.x.ToString() +
+//                     "\n" + controler.transform.rotation.y.ToString() +
+//                     "\n" + controler.transform.rotation.z.ToString();
+//        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0)
+//        {
+//            if (!hasArrow)
+//            {
+//                AttachArrow();
+//            } else if (isAttached) {
+//                Fire();
+//            }
+//        }
+//        else ThrowArrow();
+//    }
+//    public void AttachArrow()
+//    {
+//        if (currentArrow == null)
+//        {
+//            currentArrow = Instantiate(arrowPrefab, controler.transform);
+//            currentArrow.transform.localPosition = new Vector3(0.1f, 0f, 0.3f);
+//            currentArrow.GetComponent<Rigidbody>().isKinematic = true;
+//            hasArrow = true;
+//        }
+//    }
+
+// FIXED CODE:

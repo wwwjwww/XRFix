@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yziaJG9X6iJntkyvv2RUnQ4JdGhW",
+    "object": "chat.completion",
+    "created": 1724323952,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private void UpdateRigVisibilityInInspector()\n{\n    HideFlags desiredFlags = hideElementsInInspector ? HideFlags.HideInHierarchy | HideFlags.HideInInspector : HideFlags.None;\n    if (corners != null)\n    {\n        foreach (var cube in corners)\n        {\n            cube.hideFlags = desiredFlags;\n        }\n    }\n\n    if (boxDisplay != null)\n    {\n        boxDisplay.hideFlags = desiredFlags;\n    }\n\n    if (rigRoot != null)\n    {\n        rigRoot.hideFlags = desiredFlags;\n    }\n\n    if (links != null)\n    {\n        foreach (var link in links)\n        {\n            link.hideFlags = desiredFlags;\n        }\n    }\n}\n\n#endregion Private Fields\n\n#endregion Enums\n\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic GameObject RotationHandlePrefab\n{\n    get { return rotationHandlePrefab; }\n    set\n    {\n        if (rotationHandlePrefab != value)\n        {\n            rotationHandlePrefab = value;\n            CreateRig();\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 4567,
+        "completion_tokens": 273,
+        "total_tokens": 4840
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

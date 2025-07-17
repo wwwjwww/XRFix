@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0uh30BjrloTObPW20HN7ndOQ7q9",
+    "object": "chat.completion",
+    "created": 1724328547,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// BUG FIX: Removed unused SubscriberClearers collection\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n\n    internal static void AddSubscriberClearer(Action clearer)\n    {\n        if (clearer != null)\n        {\n            SubscriberClearers.Add(clearer);\n        }\n    }\n\n    internal static void InvokeSubscriberClearers()\n    {\n        foreach (var clearer in SubscriberClearers)\n        {\n            clearer();\n        }\n    }\n\n    internal static void RemoveSubscriberClearer(Action clearer)\n    {\n        if (clearer != null)\n        {\n            SubscriberClearers.Remove(clearer);\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // The fixed code removes the unused collection\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // FIXED CODE: Removed the unused collection according to the bug message\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private static readonly Dictionary<Guid, Action<Guid>> SubscriberRemovers =\n        new Dictionary<Guid, Action<Guid>>();\n\n    // Contents are now accessed with the following methods\n    internal static void RemoveSubscriber(Guid guid)\n    {\n        if (SubscriberRemovers.TryGetValue(guid, out var remover))\n        {\n            remover.Invoke(guid);\n            SubscriberRemovers.Remove(guid);\n        }\n    }\n\n    internal static void ClearSubscribers()\n    {\n        foreach (var remover in SubscriberRemovers.Values)\n        {\n            remover.Invoke(default); // Use default(Guid) if a specific Guid is not applicable.\n        }\n        SubscriberRemovers.Clear();\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 863,
+        "completion_tokens": 306,
+        "total_tokens": 1169
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

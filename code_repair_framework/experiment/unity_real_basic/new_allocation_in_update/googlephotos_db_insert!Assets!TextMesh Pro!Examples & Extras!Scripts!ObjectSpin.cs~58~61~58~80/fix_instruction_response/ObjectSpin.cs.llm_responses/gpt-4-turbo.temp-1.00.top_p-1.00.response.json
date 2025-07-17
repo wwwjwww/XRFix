@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9r3v29pqvmmA3h6CmXtBYpBt3mXeH",
+    "object": "chat.completion",
+    "created": 1722433476,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 m_tempVector;\n\nvoid Start()\n{\n    m_tempVector = Vector3.zero;\n}\n\nvoid Update()\n{\n    if (Motion == MotionType.Rotation)\n    {\n        m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n    }\n    else if (Motion == MotionType.BackAndForth)\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n        m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n    }\n    else\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n\n        m_tempVector.x = 15 * Mathf.Cos(m_time * .95f);\n        m_tempVector.y = 10; \n        m_tempVector.z = 0f; \n\n        m_transform.position = m_initial_Position + m_tempVector;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\nusing System.Collections;\n\nnamespace TMPro.Examples\n{\n    public class ObjectSpin : MonoBehaviour\n    {\n        public float SpinSpeed = 5;\n        public int RotationRange = 15;\n        private Transform m_transform;\n\n        private float m_time;\n        private Vector3 m_initial_Rotation;\n        private Vector3 m_initial_Position;\n        private Vector3 m_offset_Position;\n\n        public enum MotionType { Rotation, BackAndForth, Translation };\n        public MotionType Motion;\n\n        void Awake()\n        {\n            m_transform = transform;\n            m_initial_Rotation = m_transform.rotation.eulerAngles;\n            m_initial_Position = m_transform.position;\n        }\n\n        void Start()\n        {\n            m_offset_Position = new Vector3();\n        }\n\n        void Update()\n        {\n            if (Motion == MotionType.Rotation)\n            {\n                m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n            }\n            else if (Motion == MotionType.BackAndForth)\n            {\n                m_time += SpinSpeed * Time.deltaTime;\n                m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n            }\n            else\n            {\n                m_time += SpinSpeed * Time.deltaTime;\n\n                m_offset_Position.x = 15 * Mathf.Cos(m_time * .95f);\n                m_offset_Position.y = 10;\n                m_offset_Position.z = 0f;\n\n                m_transform.position = m_initial_Position + m_offset_Position;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Start()\n{\n    m_prevPOS = new Vector3(0, 0, 0);\n}\n\nvoid Update()\n{\n    if (Motion == MotionType.Rotation)\n    {\n        m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n    }\n    else if (Motion == MotionType.BackAndForth)\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n        m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n    }\n    else\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n\n        float x = 15 * Mathf.Cos(m_time * .95f);\n        float y = 10; \n        float z = 0f;\n\n        m_prevPOS.x = x;\n        m_prevPOS.y = y;\n        m_prevPOS.z = z;\n\n        m_transform.position = m_initial_Position + m_prevPOS;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 m_tempPosition;\n\nvoid Awake()\n{\n    m_transform = transform;\n    m_initial_Rotation = m_transform.rotation.eulerAngles;\n    m_initial_Position = m_transform.position;\n    m_tempPosition = new Vector3();\n\n    Light light = GetComponent<Light>();\n    m_lightColor = light != null ? light.color : Color.black;\n}\n\nvoid Update()\n{\n    if (Motion == MotionType.Rotation)\n    {\n        m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n    }\n    else if (Motion == MotionType.BackAndForth)\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n        m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n    }\n    else\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n\n        m_tempPosition.x = 15 * Mathf.Cos(m_time * .95f);\n        m_tempPosition.y = 10;\n        m_tempPosition.z = 0f;\n\n        m_transform.position = m_initial_Position + m_tempPosition;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate Vector3 m_tempVector3;\n\nvoid Awake()\n{\n    m_transform = transform;\n    m_initial_Rotation = m_transform.rotation.eulerAngles;\n    m_initial_Position = m_transform.position;\n    m_tempVector3 = new Vector3();  // Allocate once to avoid allocation each frame\n\n    Light light = GetComponent<Light>();\n    m_lightColor = light != null ? light.color : Color.black;\n}\n\nvoid Update()\n{\n    if (Motion == MotionType.Rotation)\n    {\n        m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n    }\n    else if (Motion == MotionType.BackAndForth)\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n        m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n    }\n    else\n    {\n        m_time += SpinSpeed * Time.deltaTime;\n\n        float x = 15 * Mathf.Cos(m_time * .95f);\n        float y = 10; \n        float z = 0f;\n\n        m_tempVector3.x = x;\n        m_tempVector3.y = y;\n        m_tempVector3.z = z;\n        m_transform.position = m_initial_Position + m_tempVector3;\n    }\n}\n\n// Rest of the class...\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 473,
+        "completion_tokens": 1241,
+        "total_tokens": 1714
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

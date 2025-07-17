@@ -1,1 +1,0 @@
-"Destroy in Update() method","Update() method is called each frame. It's inefficient to use Destroy() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/CodeScripts/RaycastGun.cs:113:17:113:28""]].","/Assets/CodeScripts/RaycastGun.cs","113","17","113","28"

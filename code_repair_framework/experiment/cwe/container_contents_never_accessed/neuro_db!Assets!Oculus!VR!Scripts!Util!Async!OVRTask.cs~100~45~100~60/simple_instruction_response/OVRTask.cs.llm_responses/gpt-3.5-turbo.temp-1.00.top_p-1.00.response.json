@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyw7E4Rp9KM8mNPMMtqzE7ubLJxI",
+    "object": "chat.completion",
+    "created": 1724320947,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();\n\n// FIXED CODE:"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private OVRTask(Guid id)\n{\n    Id = id;\n}\n\npublic void SetResult(TResult result)\n{\n    if (id == default)\n    {\n        throw new InvalidOperationException(\"Cannot set result for task with default id\");\n    }\n\n    Results[id] = result;\n\n    if (Continuations.TryGetValue(id, out var continuation))\n    {\n        Continuations.Remove(id);\n        continuation();\n    }\n\n    if (CallbackInvokers.TryGetValue(id, out var invoker))\n    {\n        invoker(id, result);\n    }\n\n    if (CallbackRemovers.TryGetValue(id, out var remover) && remover(id))\n    {\n        CallbackRemovers.Remove(id);\n    }\n}\n\npublic static implicit operator OVRTask<TResult>(Guid id) => GetExisting<TResult>(id);\n\npublic static implicit operator OVRTask<TResult>(ulong id) => GetExisting<TResult>(id);\n\npublic static bool operator ==(OVRTask<TResult> left, OVRTask<TResult> right) => left.Equals(right);\n\npublic static bool operator !=(OVRTask<TResult> left, OVRTask<TResult> right) => !(left == right);\n\npublic override bool Equals(object obj)\n{\n    if (obj is OVRTask<TResult> other)\n    {\n        return Id == other.Id;\n    }\n    return false;\n}\n\npublic bool Equals(OVRTask<TResult> other) => Id == other.Id;\n\npublic override int GetHashCode() => Id.GetHashCode();\n\npublic void Dispose()\n{\n    if (id == default)\n    {\n        return;\n    }\n\n    Continuations.Remove(id);\n    Results.Remove(id);\n    Pending.Remove(id);\n}\n\n#endregion\n}```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private OVRTask(Guid id)\n{\n    Id = id;\n}\n\npublic Guid Id { get; }\n\npublic void SetResult(TResult result)\n{\n    Results[Id] = result;\n    if (Continuations.TryGetValue(Id, out var continuation))\n    {\n        continuation();\n        Continuations.Remove(Id);\n    }\n}\n\npublic static void AddToPending(Guid id)\n{\n    Pending.Add(id);\n}\n\npublic static bool RemoveFromPending(Guid id)\n{\n    return Pending.Remove(id);\n}\n\npublic static bool IsPending(Guid id)\n{\n    return Pending.Contains(id);\n}\n\npublic bool Equals(OVRTask<TResult> other)\n{\n    return Id.Equals(other.Id);\n}\n\npublic void Dispose()\n{\n    if (Results.ContainsKey(Id))\n    {\n        Results.Remove(Id);\n    }\n    if (Continuations.ContainsKey(Id))\n    {\n        Continuations.Remove(Id);\n    }\n}\n\npublic static void AddCallback(Guid id, CallbackInvoker invoker)\n{\n    CallbackInvokers[id] = invoker;\n}\n\npublic static void RemoveCallback(Guid id)\n{\n    if (CallbackRemovers.TryGetValue(id, out var remover))\n    {\n        if (remover(id))\n        {\n            CallbackRemovers.Remove(id);\n        }\n    }\n}\n\n//     public static void ClearCallbacks()\n//     {\n//         foreach (var clearCallback in CallbackClearers)\n//         {\n//             clearCallback();\n//         }\n//     }\n\n#endregion static\n}\n\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    internal static OVRTask<TResult> GetExisting<TResult>(ulong id) => Get<TResult>(GetId(id));\n\n    internal static void SetResult<TResult>(ulong id, TResult result) =>\n        GetExisting<TResult>(GetId(id)).SetResult(result);\n\n\n    private static unsafe Guid GetId(ulong value)\n    {\n        const ulong hashModifier1 = 0x319642b2d24d8ec3;\n        const ulong hashModifier2 = 0x96de1b173f119089;\n        var guid = default(Guid);\n        *(ulong*)&guid = unchecked(value + hashModifier1);\n        *((ulong*)&guid + 1) = hashModifier2;\n        return guid;\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    public OVRTask(Guid id)\n    {\n        Id = id;\n        Results.Add(id, default(TResult));\n        CallbackInvokers.Add(id, InvokeCallback);\n        CallbackRemovers.Add(id, RemoveCallback);\n    }\n\n    public void SetResult(TResult result)\n    {\n        Results[Id] = result;\n        CallbackInvokers[Id]?.Invoke(Id, result);\n    }\n\n    private void AddToPending()\n    {\n        Pending.Add(Id);\n    }\n\n    private void InvokeCallback(Guid guid, TResult result)\n    {\n        Continuations[guid]?.Invoke();\n    }\n\n    private bool RemoveCallback(Guid guid)\n    {\n        Continuations.Remove(guid);\n        return Continuations.Count == 0;\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 744,
+        "completion_tokens": 927,
+        "total_tokens": 1671
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

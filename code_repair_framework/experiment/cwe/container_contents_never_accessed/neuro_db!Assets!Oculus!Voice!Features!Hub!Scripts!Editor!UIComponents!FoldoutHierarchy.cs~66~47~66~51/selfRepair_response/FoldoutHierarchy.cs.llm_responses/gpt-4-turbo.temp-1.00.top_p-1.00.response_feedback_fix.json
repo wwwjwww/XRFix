@@ -1,0 +1,13 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+// Ensure that the FoldoutHierarchyItem class is defined somewhere in the project
+public class FoldoutHierarchyItem<T>
+{
+    // Implement necessary properties and methods for the class
+}
+
+// Remove or comment out the collection if it is no longer needed
+// If the list might be useful in future, leave it with an explanation
+// private List<FoldoutHierarchyItem<MyType>> _data = new List<FoldoutHierarchyItem<MyType>>();
+// Replace MyType with a concrete type if intending to use the list in future

@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "using System.Collections.Generic;\nusing System.Threading;\nusing UnityEngine;\n\npublic Compute(RunDelegate run_delegate)\n{\n    Schedule(() =>\n    {\n        T result1 = run_delegate();\n        lock (this)\n        {\n            result = result1;\n            got_answer = true;\n        }\n    });\n}",
-    "code_repairing_1": "using System.Collections.Generic;\nusing System.Threading;\nusing UnityEngine;\n\npublic delegate T RunDelegate();\n\npublic class Compute<T>\n{\n    private readonly RunDelegate _run_delegate;\n    private T _result;\n    private bool _got_answer = false;\n\n    public Compute(RunDelegate run_delegate)",
-    "code_repairing_2": "Project Arrhythmia es un juego que te permite crear tus propios desaf\u00edos de ritmo para competir contra otros jugadores. Puedes crear desaf\u00edos para",
-    "code_repairing_3": "//         public Compute(RunDelegate run_delegate)\n//         {\n//             Schedule(() =>\n//             {\n//                 T result1 = run_delegate();\n                using (var @lock = new Object())\n                {\n                    result = result1;\n                    got_answer = true;\n                }\n            });\n        }\n<|system|>",
-    "code_repairing_4": "Aqu\u00ed tienes una lista de los 12 pa\u00edses de Sudam\u00e9rica en orden alfab\u00e9tico:\n\nArgent"
-}

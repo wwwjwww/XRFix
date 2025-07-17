@@ -1,0 +1,19 @@
+
+
+using Oculus.Interaction.Editor;
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEditor;
+
+using props = Oculus.Interaction.UnityCanvas.CanvasRenderTexture.Properties;
+
+namespace Oculus.Interaction.UnityCanvas.Editor
+{
+    [CustomEditor(typeof(CanvasRenderTexture))]
+    public class CanvasRenderTextureEditor : EditorBase
+    {
+        private static List<CanvasRenderer> _tmpRenderers = new List<CanvasRenderer>();
+        

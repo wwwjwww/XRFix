@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class brainPart2 : MonoBehaviour
+{
+    private Vector3 originalPos;
+    public static TextMesh text;
+
+    private bool isThisRed = false;
+    private bool inTransition = false;
+
+    void Start()
+    {
+        // Ensure that the original position is set or any other initial configurations
+        originalPos = transform.position;
+    }
+
+    void Update()
+    {
+        // Placeholder for potential logic, ensuring that the class has context
+        // Add methods or functionality as needed for the class specifications
+    }
+}

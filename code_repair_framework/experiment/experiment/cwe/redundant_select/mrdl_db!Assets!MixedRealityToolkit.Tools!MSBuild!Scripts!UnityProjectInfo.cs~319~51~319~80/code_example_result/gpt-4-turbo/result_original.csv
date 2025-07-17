@@ -1,1 +1,0 @@
-"Redundant Select","Writing 'seq.Select(e => e)' or 'from e in seq select e' is redundant.","warning","This LINQ selection is redundant and can be removed.","/Assets/MixedRealityToolkit.Tools/MSBuild/Scripts/UnityProjectInfo.cs","319","51","319","80"

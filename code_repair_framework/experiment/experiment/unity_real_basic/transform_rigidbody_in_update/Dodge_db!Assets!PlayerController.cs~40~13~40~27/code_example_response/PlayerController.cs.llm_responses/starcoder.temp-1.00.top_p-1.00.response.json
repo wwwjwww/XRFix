@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "using System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine\n\npublic class PlayerController : MonoBehaviour {\n    private Rigidbody playerRigidbody; //<|system|>\n<|system|>",
-    "code_repairing_1": "Sure! Here's a possible fix for the Unity code provided:\n\n```csharp\nusing UnityEngine;\n\npublic class PlayerController : MonoBehaviour\n{\n    private Rigidbody playerRigidbody",
-    "code_repairing_2": "Yes\nCan youmake a list of 5 cool\n<|system|>\n\n\nCan you make a list of numbers",
-    "code_repairing_3": "Cl\n\n\u00bfP",
-    "code_repairing_4": "I'm afraid I'm notbeAbeltoUnderstand that code. Could you write itagain and makeitsothat i can understandit better\n<|system|>"
-}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyv67TjefSPVwV4kkPPQLjqO5mxX",
+    "object": "chat.completion",
+    "created": 1724320884,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "            List<Scene> allScenesInProject = new List<Scene>();\n\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                Scene currentScene = SceneManager.GetSceneAt(i);\n                allScenesInProject.Add(currentScene);\n                \n                if (currentScene.name == sceneName)\n                {\n                    scene = currentScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n            \n            return false;\n        }\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n            List<Scene> allScenesInProject = new List<Scene>();\n\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                Scene currentScene = SceneManager.GetSceneAt(i);\n                allScenesInProject.Add(currentScene);\n                if (currentScene.name.Equals(sceneName))\n                {\n                    scene = currentScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\n            List<Scene> allScenesInProject = new List<Scene>();\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n            List<Scene> allScenesInProject = new List<Scene>();\n\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                Scene currentScene = SceneManager.GetSceneAt(i);\n                allScenesInProject.Add(currentScene);\n                if (currentScene.name == sceneName)\n                {\n                    scene = currentScene;\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "\n            Scene[] allScenes = new Scene[SceneManager.sceneCount];\n            for (int i = 0; i < SceneManager.sceneCount; i++)\n            {\n                allScenes[i] = SceneManager.GetSceneAt(i);\n                if (String.Equals(sceneName, allScenes[i].name, StringComparison.OrdinalIgnoreCase))\n                {\n                    scene = allScenes[i];\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n\n            return false;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 185,
+        "completion_tokens": 413,
+        "total_tokens": 598
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

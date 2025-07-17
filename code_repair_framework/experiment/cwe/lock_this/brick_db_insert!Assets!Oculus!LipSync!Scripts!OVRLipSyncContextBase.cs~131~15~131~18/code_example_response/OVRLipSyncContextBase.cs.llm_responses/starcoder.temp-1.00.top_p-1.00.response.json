@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "public void Inc()\n{\n    lock (mutex)\n    {\n        ++value;\n    }\n}",
+    "code_repairing_1": "// The following C# code has been automatically fixed by a program repair tool.\n// Do not edit or",
+    "code_repairing_2": "using UnityEngine;\n\n[RequireComponent(typeof(AudioSource))]\n\npublic class OVRLip",
+    "code_repairing_3": "// public void Inc()\n// {\n//     lock (mutex)\n//     {\n//",
+    "code_repairing_4": "using UnityEngine;\n\n[RequireComponent(typeof(AudioSource))]\n\npublic class OVRLip"
+}

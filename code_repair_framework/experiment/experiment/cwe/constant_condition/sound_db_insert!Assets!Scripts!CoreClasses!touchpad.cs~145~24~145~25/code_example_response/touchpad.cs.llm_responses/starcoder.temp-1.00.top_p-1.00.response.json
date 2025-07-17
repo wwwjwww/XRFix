@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "if (on) {\n            buttonContainers[0].SetActive(true);\n            if (!masterControl.instance.tooltipsOn)\n            {\n                buttonContainers[0].SetActive(false);\n                return;\n            }\n        }\n        //end of fix",
-    "code_repairing_1": "if (!on || (on && masterControl.instance.tooltipsOn))\n            {\n                Debug.Log(\"Fixed it!\");\n                halfSprites[0].material.SetColor(\"_TintColor\", on? onColor : offColor\n<|system|>\n\n<|user|>",
-    "code_repairing_2": "//Bug code\nif (on || ( on && masterControl.instance.tooltipsOn ) {\n\t\tbuttonContro.SetActive(0).SetActive(0).GetComponent<Text>().\n<|user|>\nCould\n\n\n\u4f60\u662f\u8c01",
-    "code_repairing_3": "Here is code",
-    "code_repairing_4": "PueRZ\n<|system|>\n\nQue dios detalles de\n<|system|>\n\nPlease explain to me what the bestcd"
-}

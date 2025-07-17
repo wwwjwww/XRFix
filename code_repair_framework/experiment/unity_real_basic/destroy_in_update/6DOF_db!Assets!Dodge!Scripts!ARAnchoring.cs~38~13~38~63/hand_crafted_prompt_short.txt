@@ -1,0 +1,80 @@
+//Here're the buggy code lines from /Assets/Dodge/Scripts/ARAnchoring.cs:
+using System.Collections;
+using System.Collections.Generic;
+using GoogleARCore;
+using GoogleARCore.Examples.Common;
+using UnityEngine;
+using UnityEngine.XR;
+
+// BUG: Destroy in Update() method
+// MESSAGE: Update() method is called each frame. It's inefficient to use Destroy() in Update() method.
+//    public void Update()
+//    {
+//        if (isVR)
+//        {
+//            return;
+//        }
+//
+//        Session.GetTrackables<DetectedPlane>(m_AllPlanes);
+//        for (int i = 0; i < m_AllPlanes.Count; i++)
+//        {
+//            GameObject planeObject = Instantiate(DetectedPlanePrefab, Vector3.zero, Quaternion.identity, transform);
+//            planeObject.GetComponent<DetectedPlaneVisualizer>().Initialize(m_AllPlanes[i]);
+//        }
+//
+//        Touch touch;
+//        if (Input.touchCount < 1 || (touch = Input.GetTouch(0)).phase != TouchPhase.Began)
+//        {
+//            return;
+//        }
+//
+//        TrackableHit hit;
+//        TrackableHitFlags raycastFilter = TrackableHitFlags.PlaneWithinPolygon | TrackableHitFlags.FeaturePointWithSurfaceNormal;
+//
+//        if (Frame.Raycast(Screen.width*0.5f, Screen.height*0.5f, raycastFilter, out hit))
+//        {
+//
+//
+//            hit.Trackable.GetType();
+//            if ((hit.Trackable is DetectedPlane) && (Vector3.Dot(FirstPersonCamera.transform.position - hit.Pose.position, hit.Pose.rotation * Vector3.up) < 0 ))
+//            {
+//                Debug.Log("Hit at back of the current DetectedPlane");
+//            }
+//            else
+//            {
+//                var andyObject = Instantiate(Environment, hit.Pose.position, hit.Pose.rotation);
+//                var anchor = hit.Trackable.CreateAnchor(hit.Pose);
+//                andyObject.transform.parent = anchor.transform;
+//                FirstPersonCamera.GetComponent<ARCoreBackgroundRenderer>().enabled = false;
+//                isVR = true;
+//
+//            }
+//        }
+//    }
+//Here's the definition of function call in another component.
+//Related code from /Assets/GoogleARCore/Examples/Common/Scripts/DetectedPlaneVisualizer.cs:
+
+//        public void Update()
+//        {
+//            if (m_DetectedPlane == null)
+//            {
+//                return;
+//            }
+//            else if (m_DetectedPlane.SubsumedBy != null)
+//            {
+//                Destroy(gameObject);
+//                return;
+//            }
+//
+//            else if (m_DetectedPlane.TrackingState != TrackingState.Tracking || ARAnchoring.isVR)
+//            {
+//                 m_MeshRenderer.enabled = false;
+//                 return;
+//            }
+//
+//            m_MeshRenderer.enabled = true;
+//
+//            _UpdateMeshIfNeeded();
+//        }
+
+// FIXED CODE:

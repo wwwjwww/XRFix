@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "```csharp\nscenesLoadedAndActivated &&= scene.IsValid() && scene.isLoaded;\n```",
-    "code_repairing_1": "Fixed code is:\nscenesLoadedAndActivated = scenesLoadedAndActivated && (scene.IsValid() && scene",
-    "code_repairing_2": "<|user|>\n\u00bfEn qu\u00e9 consiste la importancia de los expertos en IA para el",
-    "code_repairing_3": "<|user|>\nCrea un personaje ficticio que tiene dos aliados y un enemigo",
-    "code_repairing_4": "I replaced the & and | operators with their logical equivelants && and || to improve the readability"
-}

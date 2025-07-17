@@ -1,1 +1,0 @@
-"Transform object of Rigidbody in Update() methods","Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.","warning","Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/Scripts/VR/ObjectLauncher.cs:30:45:30:49""]].","/Assets/Scripts/VR/ObjectLauncher.cs","24","13","24","26"

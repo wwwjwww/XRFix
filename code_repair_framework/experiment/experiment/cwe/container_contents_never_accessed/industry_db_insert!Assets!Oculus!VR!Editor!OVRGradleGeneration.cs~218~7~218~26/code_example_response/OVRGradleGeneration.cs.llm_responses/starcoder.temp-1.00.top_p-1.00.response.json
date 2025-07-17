@@ -1,7 +1,0 @@
-{
-    "code_repairing_0": "//<|system|>\n<|user|>\n\u041a\u0430\u043a \u043f\u0440\u0435\u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u0442\u044c \u0441\u0442\u0440\u043e\u043a\u0443 \u0438\u0437 \u0446\u043d\u0434\u0435\u043a\u0441\u0430 \u0432 \u043a\u043e\u043e\u0440\u0434\u0438\u043d\u0430\u0442\u044b?",
-    "code_repairing_1": "using System.Collections.Generic;\nusing UnityEngine;\n\nnamespace Unity.XR.Oculus.Utils\n{\n    internal static class OVRGradle",
-    "code_repairing_2": "```\n<|user|>\nHola,\n\nNecesito un contrase\u00f1a seg\ncontrase\u00f1a: (o algo asi que me permite )",
-    "code_repairing_3": "A este, 21 de de\n<|system|>",
-    "code_repairing_4": "What do you want?<|system|>"
-}

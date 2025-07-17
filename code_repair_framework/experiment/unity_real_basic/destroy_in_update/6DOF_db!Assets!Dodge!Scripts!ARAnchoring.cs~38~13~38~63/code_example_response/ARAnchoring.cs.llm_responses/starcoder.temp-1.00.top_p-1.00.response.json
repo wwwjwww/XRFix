@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "public static bool isVR = false;\n\nvoid Update()\n{\n        if (Input.GetButtonDown(\"Fire1\"))\n        {\n            GameObject gobj = GetPooledObject();\n        }\n        else if(Input.GetButtonUp(\"Release\"))\n        {\n            ReturnToPool(gobj);\n        }\n}\n\n\nFixed code:\n\n\nvoid Update()\n{\n        if (Input.GetButtonDown(\"Fire1\"))\n        {\n            GameObject gobj = GetPooledObject();\n        }\n        else if(Input.GetButtonUp(\"Release\"))\n        {\n            ReturnToPool(gobj);\n        }\n}",
+    "code_repairing_1": "Yo estaba en una fiesta con muchas mujeres, cuando una de ellas me pregunt\u00f3:\n\n\u2014\u00bfEres un astronauta?\n\n\u2014\u00a1No, claro que no! le dije.\n\n\u2014\u00bfNo sabes que es un astronauta?\n\n\u2014Astronauta es algo que viaja en un avi\u00f3n muy grande llamado \"astroliner\", y sale de la atm\u00f3sfera",
+    "code_repairing_2": "\u041f\u0456\u0434\u0441\u043e\u0454 \u0441\u0446",
+    "code_repairing_3": "",
+    "code_repairing_4": ""
+}

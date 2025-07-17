@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "// /Assets/Imported/TextMesh Pro/Examples & Extras/Scripts/SimpleScript.cs\n\nusing UnityEngine;\nusing System.Collections;\n\npublic class ExampleScript : MonoBehaviour\n{\n    void Update()\n    {\n        List<string> mList = new List<string>();\n        mList.Add(\"Hello world!\");\n    }\n\n    //FIXED CODE:\n        mList = new List<string>.Empty;\n    }\n}",
+    "code_repairing_1": "Here is the corrected code:\n\nusing UnityEngine;\nusing System.Collections;\n\npublic class ExampleScript : MonoBehaviour\n{\n    // List<string> mList = new List<String>();\n    List<string> new_mList = new List<String>();\n    \n    void Update()\n    {\n        mList = new_mList;\n    }\n}\n\nThe correction was to create a new local variable new_mList, and replace",
+    "code_repairing_2": "Bem\n<|system|>\n<|user|>\n\u00bf \u0e2d\u0e22\u0e31\u0e14\u0e40\u0e21\u0e37\u0e48\u0e2d \u0e43\u0e2a",
+    "code_repairing_3": "Hoi",
+    "code_repairing_4": "A partir del concept"
+}

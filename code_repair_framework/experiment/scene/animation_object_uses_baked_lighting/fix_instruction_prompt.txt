@@ -1,0 +1,8 @@
+You're an automated program repair tool. The following unity scene file is written in YAML language. It has bugs of animation Object uses baked Lighting. The description of this bug is it's suboptimal for animation object to use baked lighting. Please change the setting of "m_Lightmapping" to real-time lighting. Your task is to fix the setting under the 'FIXED:' area. In your response, only include your fixed code snippets. Do not output the original contents.
+'''
+Animator:
+...
+Light:
+m_Lightmapping: 2
+'''
+FIXED:

@@ -1,0 +1,35 @@
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+
+namespace Oculus.Platform.Samples.VrHoops
+{
+	public class FlyText : MonoBehaviour
+	{
+		private const float LIFESPAN = 3.0f;
+		private Vector3 m_movePerFrame = 0.5f * Vector3.up;  // Removed readonly to allow flexibility if needed
+		private float m_eol;
+
+		void Start()
+		{
+			m_eol = Time.time + LIFESPAN;
+			// Ensure the text component exists
+			Text textComponent = GetComponent<Text>();
+			if (textComponent != null)
+			{
+				textComponent.CrossFadeColor(Color.black, LIFESPAN * 1.7f, false, true);
+			}
+			StartCoroutine(MoveAndDestroy());
+		}
+
+		private IEnumerator MoveAndDestroy()
+		{
+			while (Time.time < m_eol)
+			{
+				transform.localPosition += m_movePerFrame;
+				yield return null;
+			}
+			Destroy(gameObject);
+		}
+	}
+}

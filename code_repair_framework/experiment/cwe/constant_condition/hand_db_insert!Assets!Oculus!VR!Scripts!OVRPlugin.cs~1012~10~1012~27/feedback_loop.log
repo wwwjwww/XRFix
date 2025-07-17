@@ -1,0 +1,11 @@
+2025-06-26 05:57:45,821 - INFO - Starting feedback loop for .\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\response\OVRPlugin.cs.llm_responses
+2025-06-26 05:58:18,316 - INFO - HTTP Request: POST https://api.bltcy.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 05:58:18,321 - INFO - Successfully generated response, proceeding with feedback loop
+2025-06-26 05:58:18,336 - INFO - Running CodeQL analysis
+2025-06-26 13:31:39,286 - INFO - Starting feedback loop for .\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\response\OVRPlugin.cs.llm_responses
+2025-06-26 13:32:38,556 - INFO - Starting feedback loop for .\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\response\OVRPlugin.cs.llm_responses
+2025-06-26 13:42:47,295 - INFO - Starting feedback loop for .\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\response\OVRPlugin.cs.llm_responses
+2025-06-26 13:43:19,040 - INFO - HTTP Request: POST https://api.bltcy.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-26 13:43:34,052 - INFO - Successfully generated response, proceeding with feedback loop
+2025-06-26 13:43:34,075 - INFO - Running CodeQL analysis
+2025-06-26 15:53:24,843 - INFO - Starting feedback loop for .\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\response\OVRPlugin.cs.llm_responses

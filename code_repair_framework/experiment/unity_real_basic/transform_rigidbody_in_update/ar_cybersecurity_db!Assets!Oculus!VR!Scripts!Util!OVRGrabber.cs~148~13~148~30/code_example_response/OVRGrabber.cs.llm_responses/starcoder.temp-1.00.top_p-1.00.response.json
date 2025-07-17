@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "// Transform object of Rigidbody in FixedUpdate() methods to simulate real-world movement.",
+    "code_repairing_1": "public class OVRGrabber : MonoBehaviour\n{\n    public float grabBegin = 0.",
+    "code_repairing_2": "What do you meanby\"\n<|system|>\nYes\n<|user|>",
+    "code_repairing_3": "}\n\n```\nwrite the codes\n<|system|>\n\nI want\nS",
+    "code_repairing_4": "Hola! Como estas?"
+}

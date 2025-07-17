@@ -1,0 +1,47 @@
+[
+    {
+        "filename": "code-llama.temp-1.00.top_p-1.00.response.json.0.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "code-llama",
+        "temperature": "1.00",
+        "top_p": "1.00"
+    },
+    {
+        "filename": "code-llama.temp-1.00.top_p-1.00.response.json.1.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "code-llama",
+        "temperature": "1.00",
+        "top_p": "1.00"
+    },
+    {
+        "filename": "code-llama.temp-1.00.top_p-1.00.response.json.2.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "code-llama",
+        "temperature": "1.00",
+        "top_p": "1.00"
+    },
+    {
+        "filename": "code-llama.temp-1.00.top_p-1.00.response.json.3.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "code-llama",
+        "temperature": "1.00",
+        "top_p": "1.00"
+    },
+    {
+        "filename": "code-llama.temp-1.00.top_p-1.00.response.json.4.cs",
+        "duplicate_of": "code-llama.temp-1.00.top_p-1.00.response.json.1.cs",
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "code-llama",
+        "temperature": "1.00",
+        "top_p": "1.00"
+    }
+]

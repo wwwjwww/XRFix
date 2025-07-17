@@ -1,0 +1,15 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+///     void Update()
+//     {
+// 
+//         enemyLifetime -= Time.deltaTime;
+//         if (enemyLifetime <= 0f) {
+            // BUG: Destroy in Update() method
+            // MESSAGE: Update() method is called each frame. It's inefficient to use Destroy() in Update() method.
+            //             Destroy(this.gameObject);
+            //         } 
+            //     }
+
+            // FIXED CODE:
