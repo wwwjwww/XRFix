@@ -83,5 +83,15 @@ Please see README.md files in ./code_repair_framework to see more details.
 | v                    | IntVisWorkshop                                                  | GitHub     | 296          |
 | w                    | unity-playground                                                | GitHub     | 148          |
 
+#### Reference
+In our paper, we have implemented and compared XRFix with AlphaRepair [[1]](#1), Finetuned CodeT5 [[2]](#2), Self_Repair[[3]](#3):
 
+<a id="1">[1]</a>
+Xia, Chunqiu Steven, and Lingming Zhang. "Less training, more repairing please: revisiting automated program repair via zero-shot learning." Proceedings of the 30th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering. 2022.
+
+<a id="2">[2]</a>
+Huang, Kai, et al. "Comprehensive Fine-Tuning Large Language Models of Code for Automated Program Repair." IEEE Transactions on Software Engineering (2025).
+
+<a id="3">[3]</a>
+Olausson, Theo X., et al. "Demystifying gpt self-repair for code generation." CoRR (2023).
 
