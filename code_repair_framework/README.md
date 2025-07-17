@@ -1,10 +1,10 @@
 # XRFix-Code Repair Framework
 
 The folders are organized as follows.
-* ./experiment contains all generated fixes using different prompt templates
-    - ./experiment/experiment contains results of XRFix prompt engineering and Self-Repair results
-    - ./experiment/experiment_alpharepair contains results of our baselines AlphaRepair
-    - ./experiment/experiment_codet5 contains results of our baselines Fine-tuned CodeT5
+* ./experiment* contains all generated fixes using different prompt templates
+    - ./experiment contains results of XRFix prompt engineering and Self-Repair results
+    - ./experiment_alpharepair contains results of our baselines AlphaRepair
+    - ./experiment_codet5 contains results of our baselines Fine-tuned CodeT5
 * ./result_cwe contains all located CWE-related errors that we obtained from static analysis
 * ./result_unity contains all located Unity-related errors that we obtained from static analysis
 
