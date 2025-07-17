@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " #endif",
+            "confidence_score": -1.5676088519394398
+        },
+        {
+            "fixed_line": "\\n",
+            "confidence_score": -1.756626456975937
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -1.781984806060791
+        },
+        {
+            "fixed_line": " {}",
+            "confidence_score": -3.391512393951416
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Oculus!VR!Scripts!OVRBoundary.cs~127~24~127~41/OVRBoundary.cs",
+    "error_line": "127",
+    "total_fixes": 4
+}

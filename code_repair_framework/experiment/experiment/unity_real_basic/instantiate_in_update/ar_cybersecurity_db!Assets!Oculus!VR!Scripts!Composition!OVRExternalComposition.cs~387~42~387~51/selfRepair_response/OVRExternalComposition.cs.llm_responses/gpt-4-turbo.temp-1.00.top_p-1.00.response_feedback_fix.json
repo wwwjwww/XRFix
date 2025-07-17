@@ -1,0 +1,147 @@
+using System;
+using UnityEngine;
+using System.Collections.Generic;
+using UnityEngine.Rendering;
+using Object = UnityEngine.Object;
+using UnityEngine.Rendering.Universal;
+
+public class OVRExternalComposition : MonoBehaviour
+{
+    private GameObject previousMainCameraObject;
+    private GameObject backgroundCameraGameObject;
+    private Camera backgroundCamera;
+    private GameObject foregroundCameraGameObject;
+    private Camera foregroundCamera;
+    private bool cameraInTrackingSpace;
+    private Transform cameraRigTrackingSpace;
+    private int frameIndex;
+    private bool isFrameSkipped;
+    private int lastMrcEncodeFrameSyncId;
+
+    private List<GameObject> backgroundCameraPool = new List<GameObject>();
+    private List<GameObject> foregroundCameraPool = new List<GameObject>();
+
+    private void Awake()
+    {
+        // Ensure the pool is populated correctly using instantiate from a reference camera
+        Camera referenceCamera = Camera.main; // Assuming Camera.main is the reference
+        InitializeCameraPool(referenceCamera, backgroundCameraPool, "PooledBackgroundCamera");
+        InitializeCameraPool(referenceCamera, foregroundCameraPool, "PooledForegroundCamera");
+    }
+
+    private void InitializeCameraPool(Camera reference, List<GameObject> pool, string namePrefix)
+    {
+        for (int i = 0; i < 2; i++) // Pre-allocate two camera objects for each
+        {
+            var cameraObj = Instantiate(reference.gameObject);
+            cameraObj.name = $"{namePrefix}_{i}";
+            cameraObj.AddComponent<Camera>();
+            cameraObj.SetActive(false);
+            pool.Add(cameraObj);
+        }
+    }
+
+    private GameObject GetPooledCamera(List<GameObject> pool)
+    {
+        foreach (var cameraObj in pool)
+        {
+            if (!cameraObj.activeInHierarchy)
+            {
+                cameraObj.SetActive(true);
+                return cameraObj;
+            }
+        }
+
+        // Fallback: Clone a camera from the pool if all are active
+        var pooledCameraObj = Instantiate(pool[0]);
+        pooledCameraObj.SetActive(true);
+        pool.Add(pooledCameraObj);
+        return pooledCameraObj;
+    }
+
+    private void RefreshCameraObjects(GameObject parentObject, Camera mainCamera,
+        OVRMixedRealityCaptureConfiguration configuration)
+    {
+        if (mainCamera.gameObject != previousMainCameraObject)
+        {
+            Debug.LogFormat("[OVRExternalComposition] Camera refreshed. Rebind camera to {0}",
+                mainCamera.gameObject.name);
+
+            DeactivateOldCameras();
+
+            RefreshCameraRig(parentObject, mainCamera);
+
+            // Use pooled cameras
+            backgroundCameraGameObject = GetPooledCamera(backgroundCameraPool);
+            foregroundCameraGameObject = GetPooledCamera(foregroundCameraPool);
+
+            SetupCamera(backgroundCameraGameObject, "OculusMRC_BackgroundCamera", parentObject, mainCamera, configuration, OVRManager.MrcCameraType.Background);
+            backgroundCamera = backgroundCameraGameObject.GetComponent<Camera>();
+
+            SetupCamera(foregroundCameraGameObject, "OculusMRC_ForegroundCamera", parentObject, mainCamera, configuration, OVRManager.MrcCameraType.Foreground);
+            foregroundCamera = foregroundCameraGameObject.GetComponent<Camera>();
+
+            previousMainCameraObject = mainCamera.gameObject;
+        }
+    }
+
+    private void DeactivateOldCameras()
+    {
+        if (backgroundCameraGameObject != null)
+        {
+            backgroundCameraGameObject.SetActive(false);
+        }
+
+        if (foregroundCameraGameObject != null)
+        {
+            foregroundCameraGameObject.SetActive(false);
+        }
+    }
+
+    private void SetupCamera(GameObject cameraObject, string name, GameObject parentObject, Camera mainCamera, OVRMixedRealityCaptureConfiguration configuration, OVRManager.MrcCameraType cameraType)
+    {
+        cameraObject.name = name;
+        cameraObject.transform.parent = cameraInTrackingSpace ? cameraRigTrackingSpace : parentObject.transform;
+
+        CopyCameraSettings(mainCamera, cameraObject.GetComponent<Camera>(), configuration, cameraType);
+        
+        var audioListener = cameraObject.GetComponent<AudioListener>();
+        if (audioListener != null)
+            Object.Destroy(audioListener);
+
+        var ovrManager = cameraObject.GetComponent<OVRManager>();
+        if (ovrManager != null)
+            Object.Destroy(ovrManager);
+    }
+
+    private void CopyCameraSettings(Camera sourceCamera, Camera targetCamera, OVRMixedRealityCaptureConfiguration configuration, OVRManager.MrcCameraType cameraType)
+    {
+        targetCamera.tag = "Untagged";
+        targetCamera.cullingMask = (sourceCamera.cullingMask & ~configuration.extraHiddenLayers) | configuration.extraVisibleLayers;
+        targetCamera.clearFlags = cameraType == OVRManager.MrcCameraType.Foreground ? CameraClearFlags.Color : sourceCamera.clearFlags;
+        targetCamera.backgroundColor = cameraType == OVRManager.MrcCameraType.Foreground 
+#if OVR_ANDROID_MRC
+            ? configuration.externalCompositionBackdropColorQuest
+#else
+            ? configuration.externalCompositionBackdropColorRift
+#endif
+            : sourceCamera.backgroundColor;
+        targetCamera.nearClipPlane = sourceCamera.nearClipPlane;
+        targetCamera.farClipPlane = sourceCamera.farClipPlane;
+
+#if USING_MRC_COMPATIBLE_URP_VERSION
+        var camData = targetCamera.GetUniversalAdditionalCameraData();
+        if (camData != null)
+        {
+            camData.allowXRRendering = false;
+        }
+#elif USING_URP
+        Debug.LogError("Using URP with MRC is only supported with URP version 10.0.0 or higher. Consider using Unity 2020 or higher.");
+#else
+        targetCamera.stereoTargetEye = StereoTargetEyeMask.None;
+#endif
+
+        targetCamera.depth = (cameraType == OVRManager.MrcCameraType.Background) ? 99990.0f : backgroundCamera.depth + 1.0f;
+        targetCamera.rect = (cameraType == OVRManager.MrcCameraType.Background) ? new Rect(0.0f, 0.0f, 0.5f, 1.0f) : new Rect(0.5f, 0.0f, 0.5f, 1.0f);
+    }
+}

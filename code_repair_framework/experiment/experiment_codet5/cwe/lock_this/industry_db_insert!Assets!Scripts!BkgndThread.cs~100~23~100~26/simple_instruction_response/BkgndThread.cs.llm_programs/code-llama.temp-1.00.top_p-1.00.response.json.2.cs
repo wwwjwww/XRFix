@@ -1,0 +1,323 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Threading;
+using UnityEngine;
+
+
+public static class BkgndThread
+{
+    public class Dispatcher
+    {
+        
+
+        ThreadStart pending;
+
+        public void Schedule(ThreadStart function)
+        {
+            if (requestQueue == null)
+                MakeRequestQueue();
+
+            bool must_release = false;
+            lock (requestQueue)
+            {
+                if (pending == null)
+                {
+                    requestQueue.Enqueue(this);
+                    must_release = true;
+                }
+                pending = function;
+            }
+            if (must_release)
+                semaphore.Release();
+            bkgnd_thread_dispatcher_working = true;
+        }
+
+        ThreadStart Pop()
+        {
+            ThreadStart result = pending;
+            pending = null;
+            return result;
+        }
+
+        static Queue<Dispatcher> requestQueue;
+        static Semaphore semaphore;
+        static bool bkgnd_thread_dispatcher_working = false;
+
+        static void MakeRequestQueue()
+        {
+            requestQueue = new Queue<Dispatcher>();
+            semaphore = new Semaphore(0, int.MaxValue);
+            Start(() =>
+            {
+                while (true)
+                {
+                    semaphore.WaitOne();
+
+                    Dispatcher dispatcher;
+                    ThreadStart function;
+                    lock (requestQueue)
+                    {
+                        dispatcher = requestQueue.Dequeue();
+                        function = dispatcher.Pop();
+                    }
+                    function();
+                }
+            });
+        }
+
+        public static void WaitUntilThreadIdle()
+        {
+            if (bkgnd_thread_dispatcher_working)
+            {
+                var wait_until_done = new Dispatcher();
+                var ev = new AutoResetEvent(false);
+                wait_until_done.Schedule(() => ev.Set());
+                ev.WaitOne();
+                bkgnd_thread_dispatcher_working = false;
+            }
+        }
+    }
+
+
+    public class Compute<T> : Dispatcher
+    {
+        volatile bool got_answer;
+        public volatile bool interrupt;
+        T result;
+
+        public delegate T RunDelegate();
+        public delegate T RunDelegateWithCompute(Compute<T> compute);
+
+
+
+
+
+FIXED CODE:
+
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using UnityEngine;
+
+
+
+public static class BkgndThread
+{
+
+
+    public class Dispatcher
+    {
+        thread_start_ pending;
+
+        public void Schedule(Thed_start function)
+        {
+            if (request_Queue == null)
+                Make_Request_Queue();
+
+            bool must_release = false;
+            lock (request_Queue)
+            {
+                if (pending == null)
+                {
+                    request_Queue.Enqueue(this);
+                    must_release = true;
+                }
+                pending = function;
+            }
+            if (must_release)
+                semaphore.Release();
+            bkgnd_thread_dispatcher_working = true;
+        }
+
+        thread_start_ Pop()
+        {
+            thread_start_ result = pending;
+            pending = null;
+            return result;
+        }
+
+        static queue<Dispatcher> request_Queue;
+        static Semaphore semaphore;
+        static bool bkgnd_thread_dispatcher_working = false;
+
+        static void Make_Request_Queue()
+        {
+            request_Queue = new queue<Dispatcher>();
+            semaphore = new Semaphore(0, int.MaxValue);
+            Start(() =>
+            {
+                while (true)
+                {
+                    semaphore.WaitOne();
+
+                    Dispatcher dispatcher;
+                    thread_start_ function;
+                    lock (request_Queue)
+                    {
+                        dispatcher = request_Queue.Dequeue();
+                        function = dispatcher.Pop();
+                    }
+                    function();
+                }
+            });
+        }
+
+        public static void WaitUntilThreadIdle()
+        {
+            if (bkgnd_thread_dispatcher_working)
+            {
+                var wait_until_done = new Dispatcher();
+                var ev = new AutoResetEvent(false);
+                wait_until_done.Schedule(() => ev.Set());
+                ev.WaitOne();
+                bkgnd_thread_dispatcher_working = false;
+            }
+        }
+    }
+
+
+    public class Compute<T> : Dispatcher
+    {
+        bool got_answer;
+        public bool interrupt;
+        T result;
+
+        public delegate T RunDelegate();
+        public delegate T RunDelegateWithCompute(Compute<T> compute);
+
+
+
+    }
+
+
+
+}
+
+        public Compute(RunDelegateWithCompute run_delegate)
+        {
+            Schedule(() =>
+            {
+                T result1 = run_delegate(this);
+                lock (this)
+                {
+                    result = result1;
+                    got_answer = true;
+                }
+            });
+        }
+
+        public bool TryGetAnswer(out T answer)
+        {
+            if (got_answer)
+            {
+                lock (this)
+                    answer = result;
+                return true;
+            }
+            else
+            {
+                answer = default(T);
+                return false;
+            }
+        }
+    }
+
+
+    /* Start a new background thread. */
+    public static Thread Start(ThreadStart function)
+    {
+        var th = new Thread(function);
+        th.IsBackground = true;
+        th.Start();
+        return th;
+    }
+}
+
+
+public class TwoEndedQueue<T>
+{
+    /* similar to a thread-safe Queue or the non-available ConcurrentQueue, but simplier:
+     * multiple threads can call Enqueue(), but we assume that only one thread calls
+     * BlockDequeue().
+     */
+    List<T> in_list = new List<T>();
+    List<T> out_list = new List<T>();
+    int out_list_index;
+    AutoResetEvent nonempty_event = new AutoResetEvent(false);
+
+    public void Enqueue(T item)
+    {
+        lock (nonempty_event)
+            in_list.Add(item);
+        nonempty_event.Set();
+    }
+
+    public T BlockDequeue()
+    {
+        if (out_list_index >= out_list.Count)
+        {
+            out_list.Clear();
+            out_list_index = 0;
+
+            retry:
+            nonempty_event.WaitOne();    /* wait for in_list to be non-empty, and then reset */
+
+            List<T> tmp;
+            lock (nonempty_event)
+            {
+                tmp = in_list;
+                in_list = out_list;
+            }
+            out_list = tmp;
+            if (out_list.Count == 0)
+                goto retry;              /* rare case */
+        }
+
+        T result = out_list[out_list_index];
+        out_list[out_list_index++] = default(T);
+        return result;
+    }
+
+    bool Flush()
+    {
+        if (out_list_index >= out_list.Count)
+        {
+            out_list.Clear();
+            out_list_index = 0;
+
+            List<T> tmp;
+            lock (nonempty_event)
+            {
+                tmp = in_list;
+                in_list = out_list;
+            }
+            out_list = tmp;
+            if (out_list.Count == 0)
+                return false;
+        }
+        return true;
+    }
+
+    public bool TryDequeue(out T result)
+    {
+        if (!Flush())
+        {
+            result = default(T);
+            return false;
+        }
+        result = out_list[out_list_index];
+        out_list[out_list_index++] = default(T);
+        return true;
+    }
+
+    public bool TryPeek(out T result)
+    {
+        if (!Flush())
+        {
+            result = default(T);
+            return false;
+        }
+        result = out_list[out_list_index];
+        return true;
+    }
+}

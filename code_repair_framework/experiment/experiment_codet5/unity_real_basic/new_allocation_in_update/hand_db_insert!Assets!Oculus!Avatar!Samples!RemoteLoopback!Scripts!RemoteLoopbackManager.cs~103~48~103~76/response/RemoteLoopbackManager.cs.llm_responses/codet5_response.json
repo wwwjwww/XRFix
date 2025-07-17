@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        if (packetQueue.Count > 0)\n        {\n<BUGS>            List<PacketLatencyPair> deadList = new List<PacketLatencyPair>();\n<BUGE>            foreach (var packet in packetQueue)\n            {\n                packet.FakeLatency -= Time.deltaTime;\n\n                if (packet.FakeLatency < 0f)\n                {\n                    ReceivePacketData(packet.PacketData);\n                    deadList.Add(packet);\n                }\n            }\n\n            foreach (var packet in deadList)\n            {\n                packetQueue.Remove(packet);\n            }\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            List<PacketLatencyPair> deadList=new ArrayList<>(); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            List<PacketLatencyPair> deadList=new ArrayList<>();\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> final List<PacketLatencyPair> deadList=new List<PacketLatencyPair>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>            List<PacketLatencyPair> deadList=new ArrayList<>(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> synchronized (deadList) { <FIXE> <FIXS> } <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

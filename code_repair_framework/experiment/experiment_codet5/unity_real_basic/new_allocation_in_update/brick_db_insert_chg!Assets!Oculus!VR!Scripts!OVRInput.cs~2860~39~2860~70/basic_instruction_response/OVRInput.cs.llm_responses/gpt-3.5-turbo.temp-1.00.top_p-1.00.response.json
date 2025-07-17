@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzmyBn10PTgAtNxOJXSsjjmJ8qsr",
+    "object": "chat.completion",
+    "created": 1724324224,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state = default(OVRPlugin.ControllerState4);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state = default(OVRPlugin.ControllerState4);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state;\n\npublic override Controller Update()\n{\n    // BUG: Using New() allocation in Update() method.\n    // MESSAGE: Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.\n    state = new OVRPlugin.ControllerState4();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state = default(OVRPlugin.ControllerState4);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "OVRPlugin.ControllerState4 state;\n\npublic override Controller Update()\n{\n\tstate = new OVRPlugin.ControllerState4();\n\n\t// Rest of the code...\n\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 167,
+        "completion_tokens": 145,
+        "total_tokens": 312
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

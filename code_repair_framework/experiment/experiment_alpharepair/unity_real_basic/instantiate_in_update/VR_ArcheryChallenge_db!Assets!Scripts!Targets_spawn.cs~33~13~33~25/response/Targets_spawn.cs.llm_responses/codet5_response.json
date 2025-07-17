@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        spawnTimer += Time.deltaTime;\n\n\n        if (spawnTimer >= spawnInterval && GameObject.FindGameObjectsWithTag(\"Target\").Length < maxTargets)\n        {\n<BUGS>            SpawnTarget();\n<BUGE>            spawnTimer = 0f; // Reset the timer\n        }\n    }\n\n/*Addition Code for reference:\n    void SpawnTarget()\n    {\n\n        Vector3 spawnPosition = new Vector3(\n            UnityEngine.Random.Range(-spawnRange, spawnRange),  // Random x position\n            UnityEngine.Random.Range(1f, 5f),       // Random y position between 1 and 5\n            0);                                     // z axis is 0 for 2D\n\n        GameObject newTarget = Instantiate(target, spawnPosition, Quaternion.identity);\n\n\n        newTarget.tag = \"Target\";\n\n\n        newTarget.GetComponent<Targets_movements>().level = level;\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            SpawnTarget(true); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>            SpawnTarget() { double spawnDistance=Math.random() < (maxTargets - spawnInterval) ? spawnInterval / 2f : 0.5; } <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> SpawnTarget(new Vector3(0, 0, spawnInterval / 2f)); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> SpawnTarget(true); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

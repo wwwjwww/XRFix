@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        debug.text = controler.transform.rotation.x.ToString() +\n                     \"\\n\" + controler.transform.rotation.y.ToString() +\n                     \"\\n\" + controler.transform.rotation.z.ToString();\n        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0)\n        {\n            if (!hasArrow)\n            {\n                AttachArrow();\n            } else if (isAttached) {\n                Fire();\n            }\n        }\n<BUGS>        else ThrowArrow();\n<BUGE>    }\n\n/*Addition Code for reference:\n    public void ThrowArrow()\n    {\n        if (currentArrow != null)\n        {\n            LastArrow = currentArrow;\n            currentArrow = null;\n            LastArrow.transform.parent = null;\n            LastArrow.GetComponent<Rigidbody>().isKinematic = false;\n            LastArrow.GetComponent<Rigidbody>().angularVelocity = OVRInput.GetLocalControllerAngularVelocity(controller);\n            LastArrow.GetComponent<Rigidbody>().velocity = OVRInput.GetLocalControllerVelocity(controller);\n            hasArrow = false;\n            isAttached = false;\n        }\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> else { ThrowArrow(); } <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> else <FIXE> <FIXS> if (currentArrow != null) {\n            LastArrow=currentArrow;\n            LastArrow.transform.parent=null;\n            LastArrow.GetComponent<Rigidbody>().isKinematic=false;\n            LastArrow.GetComponent<Rigidbody>().velocity=OVRInput.GetLocalControllerAngularVelocity(controller); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE> <FIXS> if (currentArrow != null) {\n            LastArrow=currentArrow;\n            LastArrow.transform.parent=null;\n            LastArrow.GetComponent<Rigidbody>().isKinematic=false;\n            LastArrow.GetComponent<Rigidbody>().velocity=OVRInput.GetLocalControllerAngularVelocity(controller); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> else { ThrowArrow(); } <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

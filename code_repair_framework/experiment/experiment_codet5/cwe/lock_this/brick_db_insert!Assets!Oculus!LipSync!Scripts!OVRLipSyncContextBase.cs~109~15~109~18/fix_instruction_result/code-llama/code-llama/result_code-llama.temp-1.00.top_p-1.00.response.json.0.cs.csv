@@ -1,0 +1,3 @@
+"Locking the 'this' object in a lock statement","It is bad practice to lock the 'this' object because it might be locked elsewhere.","warning","'this' used in lock statement.","/Assets/Oculus/LipSync/Scripts/OVRLipSyncContext.cs","230","15","230","18"
+"Locking the 'this' object in a lock statement","It is bad practice to lock the 'this' object because it might be locked elsewhere.","warning","'this' used in lock statement.","/Assets/Oculus/LipSync/Scripts/OVRLipSyncContext.cs","249","15","249","18"
+"Locking the 'this' object in a lock statement","It is bad practice to lock the 'this' object because it might be locked elsewhere.","warning","'this' used in lock statement.","/Assets/Oculus/LipSync/Scripts/OVRLipSyncContextBase.cs","152","15","152","18"

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzmNPqvDKCRIqflrhOP6or3p4gnc",
+    "object": "chat.completion",
+    "created": 1724324187,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "foreach (CSProjectInfo project in orderedProjects)"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "foreach (CSProjectInfo project in orderedProjects)\n{\n    // code inside the loop\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "                foreach (CSProjectInfo project in orderedProjects) \n                {\n                    // Your code here\n                }\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "foreach (CSProjectInfo project in orderedProjects)\n{\n    // code inside the foreach loop\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "foreach (CSProjectInfo project in orderedProjects)"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 176,
+        "completion_tokens": 81,
+        "total_tokens": 257
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

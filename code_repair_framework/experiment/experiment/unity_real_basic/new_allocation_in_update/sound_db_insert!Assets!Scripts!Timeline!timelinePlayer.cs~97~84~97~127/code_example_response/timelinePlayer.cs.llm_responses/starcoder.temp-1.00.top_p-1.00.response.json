@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value +.01f));\n        }\n        toRecord.Clear();\n      }\n\n      if (Input.GetKeyUp(KeyCode.R)) {\n        setRecord(true);\n      }\n      if (Input.GetKeyUp(KeyCode.S)) {\n        Back();\n      }\n      if (Input.GetKeyUp(KeyCode.Return)) {\n        Loop();\n      }\n    }\n  }\n\n  public void AddEvent(int track, float time, Vector2 pos, float val, bool selected = false) {\n    timelineEvent e = _deviceInterface.SpawnTimelineEvent(track, pos, selected);\n    activeEvents[track, pos.y ] = e;\n    e.",
+    "code_repairing_1": "Hab\u00eda una vez una ni\u00f1a llamada Ana que viv\u00eda en una casa en la que no pod\u00eda sentir la presencia de",
+    "code_repairing_2": "Hi, i am Chat Assistant based",
+    "code_repairing_3": "Hello",
+    "code_repairing_4": "You have asked me to spell"
+}

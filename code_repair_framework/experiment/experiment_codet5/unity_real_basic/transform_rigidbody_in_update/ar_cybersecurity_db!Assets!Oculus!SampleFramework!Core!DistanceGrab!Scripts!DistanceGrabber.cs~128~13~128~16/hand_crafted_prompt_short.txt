@@ -1,0 +1,66 @@
+//Here're the buggy code lines from /Assets/Oculus/SampleFramework/Core/DistanceGrab/Scripts/DistanceGrabber.cs:
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+// BUG: Transform object of Rigidbody in Update() methods
+// MESSAGE: Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.
+//        public override void Update()
+//        {
+//            base.Update();
+//
+//            Debug.DrawRay(transform.position, transform.forward, Color.red, 0.1f);
+//
+//            DistanceGrabbable target;
+//            Collider targetColl;
+//            FindTarget(out target, out targetColl);
+//
+//            if (target != m_target)
+//            {
+//                if (m_target != null)
+//                {
+//                    m_target.Targeted = m_otherHand.m_target == m_target;
+//                }
+//
+//                m_target = target;
+//                m_targetCollider = targetColl;
+//                if (m_target != null)
+//                {
+//                    m_target.Targeted = true;
+//                }
+//            }
+//        }
+//Here's the definition of function call in another component.
+//Related code from /Assets/Oculus/VR/Scripts/Util/OVRGrabber.cs:
+using System.Collections.Generic;
+using UnityEngine;
+
+//    void OnUpdatedAnchors()
+//    {
+//        Vector3 destPos = m_parentTransform.TransformPoint(m_anchorOffsetPosition);
+//        Quaternion destRot = m_parentTransform.rotation * m_anchorOffsetRotation;
+//
+//        if (m_moveHandPosition)
+//        {
+//            GetComponent<Rigidbody>().MovePosition(destPos);
+//            GetComponent<Rigidbody>().MoveRotation(destRot);
+//        }
+//
+//        if (!m_parentHeldObject)
+//        {
+//            MoveGrabbedObject(destPos, destRot);
+//        }
+//
+//        m_lastPos = transform.position;
+//        m_lastRot = transform.rotation;
+//
+//        float prevFlex = m_prevFlex;
+//
+//        m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+//
+//        CheckForGrabOrRelease(prevFlex);
+//    }
+
+// FIXED CODE:
+
+// Move this function in FixedUpdate() methods.

@@ -1,0 +1,3 @@
+{
+  "test_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif ( itemPrefab != null )\n\t\t\t{\n\t\t\t\tif ( hand.controller != null )\n\t\t\t\t{\n\t\t\t\t\tif ( hand.controller.hasTracking )\n\t\t\t\t\t{\n<BUGS>\t\t\t\t\t\tGameObject objectToAttach = GameObject.Instantiate( itemPrefab );\n<BUGE>\t\t\t\t\t\tobjectToAttach.SetActive( true );\n\t\t\t\t\t\thand.AttachObject( objectToAttach );\n\t\t\t\t\t\thand.controller.TriggerHapticPulse( 800 );\n\t\t\t\t\t\tDestroy( gameObject );\n\n\n\n\t\t\t\t\t\tobjectToAttach.transform.localScale = itemPrefab.transform.localScale;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n"
+}

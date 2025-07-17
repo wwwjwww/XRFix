@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyxLBAUbGYFbqj68G24wPX5VqFks",
+    "object": "chat.completion",
+    "created": 1724321023,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "public void ProcessAudioSamplesRaw(float[] data, int channels)\n{\n    lock (this)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "public void ProcessAudioSamplesRaw(float[] data, int channels)\n{\n    lock (this)\n    {\n        if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n        {\n            return;\n        }\n        var frame = this.Frame;\n        OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n    }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        if (consoles.Length > 0)\n        {\n            hasDebugConsole = consoles[0];\n        }\n```\n```csharp\n        OVRLipSyncDebugConsole[] consoles = FindObjectsOfType<OVRLipSyncDebugConsole>();\n        if (consoles.Length > 0)\n        {\n            hasDebugConsole = consoles[0];\n        }\n```\n```csharp\n            OVRTouchpad.AddListener(LocalTouchEventCallback);\n```\n```csharp\n        if (enableTouchInput)\n        {\n            OVRTouchpad.AddListener(LocalTouchEventCallback);\n        }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```c#\nhasDebugConsole = consoles[0].GetComponent<OVRLipSyncDebugConsole>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "public bool enableKeyboardInput = true;\npublic bool enableTouchInput = true;\npublic bool audioLoopback = true;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1185,
+        "completion_tokens": 324,
+        "total_tokens": 1509
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

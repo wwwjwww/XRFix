@@ -1,0 +1,62 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ObjectPool : MonoBehaviour
+{
+    public GameObject objectPrefab;
+    private List<GameObject> pooledObjects;
+    public int poolSize = 20;
+
+    void Start()
+    {
+        pooledObjects = new List<GameObject>();
+
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject obj = Instantiate(objectPrefab);
+            obj.SetActive(false);
+            pooledObjects.Add(obj);
+        }
+    }
+
+    public GameObject GetPooledObject()
+    {
+        foreach (var obj in pooledObjects)
+        {
+            if (!obj.activeInHierarchy)
+            {
+                return obj;
+            }
+        }
+
+        GameObject newObj = Instantiate(objectPrefab);
+        newObj.SetActive(false);
+        pooledObjects.Add(newObj);
+        return newObj;
+    }
+
+    public void ReturnToPool(GameObject obj)
+    {
+        obj.SetActive(false);
+    }
+}
+
+public class ExampleUsage : MonoBehaviour
+{
+    public ObjectPool pool;
+    public float yDistanceThreshold = 5f;
+    private float startingY;
+
+    void Start()
+    {
+        startingY = transform.position.y;
+    }
+
+    void Update()
+    {
+        if (Mathf.Abs(startingY - transform.position.y) > yDistanceThreshold)
+        {
+            pool.ReturnToPool(gameObject);
+        }
+    }
+}

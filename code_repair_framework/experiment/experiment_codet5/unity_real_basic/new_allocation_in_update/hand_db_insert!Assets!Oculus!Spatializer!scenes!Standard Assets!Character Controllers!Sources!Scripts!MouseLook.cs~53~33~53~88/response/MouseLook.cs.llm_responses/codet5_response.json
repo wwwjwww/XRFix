@@ -1,0 +1,33 @@
+{
+  "input_code": "\tvoid Update ()\n\t{\n\t\tif (axes == RotationAxes.MouseXAndY)\n\t\t{\n\t\t\tfloat rotationX = transform.localEulerAngles.y + Input.GetAxis(\"Mouse X\") * sensitivityX;\n\t\t\t\n\t\t\trotationY += Input.GetAxis(\"Mouse Y\") * sensitivityY;\n\t\t\trotationY = Mathf.Clamp (rotationY, minimumY, maximumY);\n\t\t\t\n\t\t\ttransform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);\n\t\t}\n\t\telse if (axes == RotationAxes.MouseX)\n\t\t{\n\t\t\ttransform.Rotate(0, Input.GetAxis(\"Mouse X\") * sensitivityX, 0);\n\t\t}\n\t\telse\n\t\t{\n\t\t\trotationY += Input.GetAxis(\"Mouse Y\") * sensitivityY;\n\t\t\trotationY = Mathf.Clamp (rotationY, minimumY, maximumY);\n\t\t\t\n<BUGS>\t\t\ttransform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);\n<BUGE>\t\t}\n\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>\n\t\t\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE> <FIXS>\n\t\t\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\nMetas\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE> <FIXS>\nMetas\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>\nSTRUCTSTRUCTUREtransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE> <FIXS>\nSTRUCTSTRUCTUREtransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>\nSTRUCTSTRUCTUREtransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0); <FIXE> <FIXS>\nSTRUCTSTRUCTUREtransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.x, 0); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> getIdentifier()) {\n\t\t\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0);\n<FIXE> <FIXS> getIdentifier()) {\nMetas\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0);\n<FIXE> <FIXS> getIdentifier()) {\nMetas\ttransform.localEulerAngles=new Vector3(-rotationY, transform.localEulerAngles.y, 0);\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

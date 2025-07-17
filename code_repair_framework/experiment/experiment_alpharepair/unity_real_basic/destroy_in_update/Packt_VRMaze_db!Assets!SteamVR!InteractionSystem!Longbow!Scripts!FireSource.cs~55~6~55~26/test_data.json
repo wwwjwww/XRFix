@@ -1,0 +1,3 @@
+{
+  "test_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif ( ( burnTime != 0 ) && ( Time.time > ( ignitionTime + burnTime ) ) && isBurning )\n\t\t\t{\n\t\t\t\tisBurning = false;\n\t\t\t\tif ( customParticles != null )\n\t\t\t\t{\n\t\t\t\t\tcustomParticles.Stop();\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n<BUGS>\t\t\t\t\tDestroy( fireObject );\n<BUGE>\t\t\t\t}\n\t\t\t}\n\t\t}\n"
+}

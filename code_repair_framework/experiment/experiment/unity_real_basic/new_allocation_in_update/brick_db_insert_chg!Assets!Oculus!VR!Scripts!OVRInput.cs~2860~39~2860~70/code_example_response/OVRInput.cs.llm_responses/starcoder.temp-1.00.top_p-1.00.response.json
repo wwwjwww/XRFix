@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "List<string> new_mList = new List<String>();",
+    "code_repairing_1": "using System;\nusing System.Collections;\nusingSystem.Collections.",
+    "code_repairing_2": "What did\n<|user|>\n\u042f\u043e\u0457 \u043e \u0434\u0443\u0430\u0454",
+    "code_repairing_3": "Here is an example code for you:\n```c#\nList<",
+    "code_repairing_4": "Please provide step-by-step descriptions of the changes that you made"
+}

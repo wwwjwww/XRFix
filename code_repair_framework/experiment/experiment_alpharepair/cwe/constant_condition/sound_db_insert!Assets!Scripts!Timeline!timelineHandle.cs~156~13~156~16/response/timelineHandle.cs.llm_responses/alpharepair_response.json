@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " else {",
+            "confidence_score": -2.1250942200422287
+        },
+        {
+            "fixed_line": " } else",
+            "confidence_score": -3.8552839159965515
+        },
+        {
+            "fixed_line": " } {",
+            "confidence_score": -5.39498496055603
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -9.065665245056152
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/constant_condition/sound_db_insert!Assets!Scripts!Timeline!timelineHandle.cs~156~13~156~16/timelineHandle.cs",
+    "error_line": "156",
+    "total_fixes": 4
+}

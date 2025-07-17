@@ -1,0 +1,3 @@
+{
+  "test_code": "<BUGS>        private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n<BUGE>"
+}

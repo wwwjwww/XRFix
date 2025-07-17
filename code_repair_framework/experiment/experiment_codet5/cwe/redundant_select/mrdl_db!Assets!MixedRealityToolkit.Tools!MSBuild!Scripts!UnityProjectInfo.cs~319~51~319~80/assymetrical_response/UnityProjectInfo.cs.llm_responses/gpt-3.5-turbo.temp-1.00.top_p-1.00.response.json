@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAu1lGtkke9B5DillDpAypLwsahZ",
+    "object": "chat.completion",
+    "created": 1723651961,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                foreach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "foreach (CSProjectInfo project in orderedProjects)\n{\n    IEnumerable<string> enabledConfigurations = project.AvailableConfigurations.Select(conf => configurationPlatformEnabledTemplateBody\n        .Replace(\"<Configuration>\", conf)\n        .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n    enabledConfigurations = enabledConfigurations.Append(configurationPlatformMappingTemplateBody\n        .Replace(\"<Configuration>\", \"InEditor\")\n        .Replace(\"<Platform>\", project.ActivePlatform.Name.ToString())\n        .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n    enabledConfigurations = enabledConfigurations.Append(configurationPlatformMappingTemplateBody\n        .Replace(\"<Configuration>\", \"Player\")\n        .Replace(\"<Platform>\", project.ActivePlatform.Name.ToString())\n        .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n    configurationMappings.AddRange(enabledConfigurations);\n}\n\nStringBuilder resultBuilder = new StringBuilder();\nresultBuilder.AppendLine(Utilities.ReplaceTokens(solutionTemplateBody, new Dictionary<string, string>()\n{\n    { \"<PROJECTS>\", string.Join(Environment.NewLine, projectEntries) },\n    { \"<CONFIG_PLAT_ENABLED>\", string.Join(Environment.NewLine, configPlatforms) },\n    { \"<CONFIGURATION_MAPPINGS>\", string.Join(Environment.NewLine, configurationMappings) }\n}));\n\nFile.WriteAllText(solutionFilePath, resultBuilder.ToString());\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                foreach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2363,
+        "completion_tokens": 311,
+        "total_tokens": 2674
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

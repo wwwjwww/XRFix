@@ -1,0 +1,3 @@
+{
+  "test_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif ( oldParent == null )\n<BUGS>\t\t\t\tObject.Destroy( gameObject );\n<BUGE>\t\t}\n"
+}

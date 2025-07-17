@@ -1,0 +1,33 @@
+{
+  "input_code": "\tvoid Update () {\n\t\tif (Input.GetButtonDown(button))\n        {\n            GameObject temp = Instantiate(launchObject, transform.position, transform.rotation);\n<BUGS>            temp.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse);\n<BUGE>            temp.GetComponent<Launchable>().Player = player;\n            temp.GetComponent<Launchable>().button = button;\n        }\n\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            temp.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            temp.GetComponent<Rigidbody>().AddForce(transform.forward * force); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> srcPath=temp.GetComponent<Rigidbody>(); srcPath.AddForce(transform.forward * force, ForceMode.Impulse); srcPath.AddForce(transform.forward * force, ForceMode.Impulse); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> liferay.getRigidbody().AddForce(transform.forward * force, ForceMode.Impulse); liferay.getRigidbody().Reset(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> srcPath=temp.GetComponent<Rigidbody>(); srcPath.AddForce(transform.forward * force, ForceMode.Impulse); srcPath.AddForce(transform.back * force, ForceMode.Impulse); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

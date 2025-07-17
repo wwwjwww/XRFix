@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```C#\n\nhighlightMat.SetFloat(\"_EmissionGain\", .9f);\n\n```",
+    "code_repairing_1": "'''\n                if (multiselected) {\n                    highlight.SetActive(true);\n                    highlightMat.SetFloat(\"_EmissionGain\", .9f);\n                }\n'''",
+    "code_repairing_2": "'''\n        if (!_timelineEvent._componentInterface.paused) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n\n'''",
+    "code_repairing_3": "```csharp\nhighlightMat.SetFloat(\"_EmissionGain\", .9f);\n```",
+    "code_repairing_4": "'''\n        if (multiselected) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n'''"
+}

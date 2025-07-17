@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " } } ;",
+            "confidence_score": -4.710423072179158
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -5.130882024765015
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -6.777453422546387
+        },
+        {
+            "fixed_line": " { };",
+            "confidence_score": -7.403455495834351
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!Voice!Lib!Wit.ai!Scripts!Runtime!WitRequestFactory.cs~87~29~87~36/WitRequestFactory.cs",
+    "error_line": "87",
+    "total_fixes": 4
+}

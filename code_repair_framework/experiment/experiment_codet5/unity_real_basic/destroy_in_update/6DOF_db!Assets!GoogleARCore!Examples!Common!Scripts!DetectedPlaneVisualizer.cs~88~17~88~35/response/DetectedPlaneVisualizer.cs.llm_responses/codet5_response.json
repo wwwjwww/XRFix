@@ -1,0 +1,33 @@
+{
+  "input_code": "        public void Update()\n        {\n            if (m_DetectedPlane == null)\n            {\n                return;\n            }\n            else if (m_DetectedPlane.SubsumedBy != null)\n            {\n<BUGS>                Destroy(gameObject);\n<BUGE>                return;\n            }\n\n            else if (m_DetectedPlane.TrackingState != TrackingState.Tracking || ARAnchoring.isVR)\n            {\n                 m_MeshRenderer.enabled = false;\n                 return;\n            }\n\n            m_MeshRenderer.enabled = true;\n\n            _UpdateMeshIfNeeded();\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>                Destroy(gameObject, false); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>                <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> Destroy(gameObject, false); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

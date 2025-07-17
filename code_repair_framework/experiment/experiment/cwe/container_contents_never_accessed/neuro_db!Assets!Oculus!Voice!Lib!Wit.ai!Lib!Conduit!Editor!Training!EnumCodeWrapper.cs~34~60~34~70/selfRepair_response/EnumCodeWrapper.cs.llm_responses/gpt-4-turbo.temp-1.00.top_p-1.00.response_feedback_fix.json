@@ -1,0 +1,28 @@
+using System;
+using System.CodeDom;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using Meta.WitAi;
+using Microsoft.CSharp;
+
+namespace YourNamespace // Replace with your actual namespace
+{
+    internal class YourClassName // Replace with the class name where the original dictionary was declared
+    {
+        public const string DEFAULT_PATH = @"Assets\";
+
+        private readonly string _sourceFilePath;
+        private readonly IFileIo _fileIo;
+        private readonly CodeCompileUnit _compileUnit;
+        private readonly CodeTypeDeclaration _typeDeclaration;
+        private readonly List<string> _enumValues = new List<string>();
+        private readonly CodeDomProvider _provider = new CSharpCodeProvider();
+
+        // Dictionary<string, CodeNamespace> _namespaces was removed as it was unused
+
+        // Add any additional necessary methods or logic for your class here
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " } else {",
+            "confidence_score": -4.13054130723079
+        },
+        {
+            "fixed_line": " } {",
+            "confidence_score": -7.9809112548828125
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -8.247246265411377
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -9.020218849182129
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/non-short-circuit_logic/industry_db_insert!Assets!Intro!ControllersDialog.cs~211~44~211~85/ControllersDialog.cs",
+    "error_line": "211",
+    "total_fixes": 4
+}

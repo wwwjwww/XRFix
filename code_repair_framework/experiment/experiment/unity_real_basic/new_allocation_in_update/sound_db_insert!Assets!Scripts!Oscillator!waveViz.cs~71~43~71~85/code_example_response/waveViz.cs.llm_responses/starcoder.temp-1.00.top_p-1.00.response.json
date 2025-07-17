@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "int waveW = 0;\nColor32[] wavePixels = new Color32[wavepixels.Length];\n    \n    ProcessWaveTexture(bufferDrawList.ToArray(), bufferDrawList.Length, m_WavePixelsHandle.AddrOfPinnedObject(), waveLine.r, wave.g, wave.b, waveBG.r, waveBG.g, waveBG.b, period, waveheight, wavewidth, ref lastWaveH, ref waveW);\n    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n}\n\nvoid OnAudioFilterRead() {\n    if(Microphone.devices!= null & Microphone.GetPosition(null) > 150000) {\n        StartCoroutine(WaitOneFrameYetAgainIsthisfixedandworkingjeez());\n    }\n    else {\n        Microphone.Start(\u201cYour Device Name\u201d, 44100, on96000hzbuffer);\n}\n\nIEnumerator WaitOneFrameYetAgainIsthisfixedandworkingjeez() {\n    yield return new WaitForEndOfFrame();\n    if (bufferDrawList == null) {\n        bufferDraw = new float[512];\n    }\n    else\n    bufferDraw.RemoveAt(0);\n\n    // TODO: Add your Audio Filter Read code here.\n\n}",
+    "code_repairing_1": "",
+    "code_repairing_2": "<|user|>\nI want\n<|system|>\n\n\u041d\u0430\u043c",
+    "code_repairing_3": "Dime\n<|user|>\nIch neigefleisch.",
+    "code_repairing_4": "\u00bfSabes qu_2022\u00bf?\n<|system|>\n\nWhat's the meaning Of"
+}

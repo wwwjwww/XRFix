@@ -1,0 +1,40 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+virtual public void FixedUpdate()
+{
+    if (m_operatingWithoutOVRCameraRig)
+    {
+        OnUpdatedAnchors();
+    }
+}
+
+void OnUpdatedAnchors()
+{
+    if (m_parentTransform == null) return;
+
+    Vector3 destPos = m_parentTransform.TransformPoint(m_anchorOffsetPosition);
+    Quaternion destRot = m_parentTransform.rotation * m_anchorOffsetRotation;
+
+    Rigidbody rb = GetComponent<Rigidbody>();
+    if (rb == null) return;
+
+    if (m_moveHandPosition)
+    {
+        rb.MovePosition(destPos);
+        rb.MoveRotation(destRot);
+    }
+
+    if (!m_parentHeldObject)
+    {
+        MoveGrabbedObject(destPos, destRot);
+    }
+
+    m_lastPos = transform.position;
+    m_lastRot = transform.rotation;
+
+    float prevFlex = m_prevFlex;
+    m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);
+
+    CheckForGrabOrRelease(prevFlex);
+}

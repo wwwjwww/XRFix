@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " } }",
+            "confidence_score": -3.644257068634033
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -5.161982536315918
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -8.342918395996094
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/non-short-circuit_logic/sound_db_insert!Assets!Scripts!Keyboard!keyboardDeviceInterface.cs~240~9~240~69/keyboardDeviceInterface.cs",
+    "error_line": "240",
+    "total_fixes": 3
+}

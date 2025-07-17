@@ -1,0 +1,3 @@
+{
+  "test_code": "        public void Update()\n        {\n            if (m_DetectedPlane == null)\n            {\n                return;\n            }\n            else if (m_DetectedPlane.SubsumedBy != null)\n            {\n<BUGS>                Destroy(gameObject);\n<BUGE>                return;\n            }\n\n            else if (m_DetectedPlane.TrackingState != TrackingState.Tracking || ARAnchoring.isVR)\n            {\n                 m_MeshRenderer.enabled = false;\n                 return;\n            }\n\n            m_MeshRenderer.enabled = true;\n\n            _UpdateMeshIfNeeded();\n        }\n"
+}

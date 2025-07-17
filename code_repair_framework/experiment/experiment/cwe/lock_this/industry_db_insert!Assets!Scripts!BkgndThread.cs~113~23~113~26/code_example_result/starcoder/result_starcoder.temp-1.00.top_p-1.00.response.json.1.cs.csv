@@ -1,0 +1,2 @@
+"Locking the 'this' object in a lock statement","It is bad practice to lock the 'this' object because it might be locked elsewhere.","warning","'this' used in lock statement.","/Assets/Scripts/BkgndThread.cs","171","23","171","26"
+"Locking the 'this' object in a lock statement","It is bad practice to lock the 'this' object because it might be locked elsewhere.","warning","'this' used in lock statement.","/Assets/Scripts/BkgndThread.cs","96","23","96","26"

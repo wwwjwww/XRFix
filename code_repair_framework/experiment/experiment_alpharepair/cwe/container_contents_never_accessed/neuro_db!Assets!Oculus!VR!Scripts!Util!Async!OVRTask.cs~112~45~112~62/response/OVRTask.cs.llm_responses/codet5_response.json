@@ -1,0 +1,33 @@
+{
+  "input_code": "\n<BUGS>    \n<BUGE><BUGS>    \n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>    \n<FIXE> <FIXS>    \n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> retrieves\n<FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); return sb.toString(); } <FIXE> <FIXS> sb.append(rowType); sb.append(columnType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(columnType); sb.append(columnType); sb.append(columnType); return sb.toString(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); return sb.toString(); } <FIXE> <FIXS> sb.append(rowType); sb.append(columnType); sb.append(rowType); sb.append(columnType); sb.append(columnType); sb.append(columnType); sb.append(columnType); sb.append(columnType); return sb.toString(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> tenancy.    \n<FIXE> <FIXS> tenancy.    \n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

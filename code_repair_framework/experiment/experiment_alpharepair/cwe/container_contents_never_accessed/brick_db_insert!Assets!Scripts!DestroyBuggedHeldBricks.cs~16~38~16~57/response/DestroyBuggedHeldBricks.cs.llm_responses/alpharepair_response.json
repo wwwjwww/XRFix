@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " { try {",
+            "confidence_score": -4.8733112414677935
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -5.23478364944458
+        },
+        {
+            "fixed_line": " { try:",
+            "confidence_score": -5.84981902440389
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Scripts!DestroyBuggedHeldBricks.cs~16~38~16~57/DestroyBuggedHeldBricks.cs",
+    "error_line": "16",
+    "total_fixes": 3
+}

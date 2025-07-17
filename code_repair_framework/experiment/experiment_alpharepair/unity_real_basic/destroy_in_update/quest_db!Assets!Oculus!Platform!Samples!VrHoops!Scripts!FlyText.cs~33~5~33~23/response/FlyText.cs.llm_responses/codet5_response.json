@@ -1,0 +1,33 @@
+{
+  "input_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif (Time.time < m_eol)\n\t\t\t{\n\t\t\t\ttransform.localPosition += m_movePerFrame;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n<BUGS>\t\t\t\tDestroy(gameObject);\n<BUGE>\t\t\t}\n\t\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> Callable<Object> destroyObject=gameObject.getObjectDestroy();\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> sawDestroy(gameObject); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> ecs.destroyAll(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> fosomes\tDestroy(gameObject); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

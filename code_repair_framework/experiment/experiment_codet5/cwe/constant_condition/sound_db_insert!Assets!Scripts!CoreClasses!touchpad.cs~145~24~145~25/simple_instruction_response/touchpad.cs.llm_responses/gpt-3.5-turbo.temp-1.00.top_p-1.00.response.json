@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yysvcfqDqODI5cysUIbZ8jcvGeKk",
+    "object": "chat.completion",
+    "created": 1724320749,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```C#\nColor onColor = Color.HSVToRGB(208 / 359f, 234 / 255f, 93 / 255f);\nColor offColor = Color.HSVToRGB(0f, 0f, 40 / 255f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "if (!on || (on && masterControl.instance.tooltipsOn))\n{\n    manip.SetObject(on);\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "padTouchFeedback.GetComponent<Renderer>().material.SetColor(\"_Color\", onColor);\nhalfOutlines[i].GetComponent<Renderer>().material.SetColor(\"_Color\", onColor);\nhalfSprites[0].material.SetColor(\"_Color\", onColor);\nhalfSprites[1].material.SetColor(\"_Color\", offColor);\nhalfSprites[2].material.SetColor(\"_Color\", offColor);\nhalfSprites[3].material.SetColor(\"_Color\", offColor);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "                if (!on || (on && masterControl.instance.tooltipsOn))\n                {\n                    manip.SetGeoPositioning(on, halfSelected[0]);\n                }\n                else\n                {\n                    onSelect(0, false);\n                }\n            if (copyOn || deleteOn || multiselectOn)\n            {\n                if (halfSelected[1])\n                {\n                    if (!on || (on && masterControl.instance.tooltipsOn))\n                    {\n                        manip.SetCopyPositioning(on, halfSelected[1]);\n                    }\n                    else\n                    {\n                        onSelect(1, false);\n                    }\n                }\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "halfOutlines[i].GetComponent<Renderer>().material.SetColor(\"_TintColor\", onColor);\nhalfOutlines[i].GetComponent<Renderer>().material.SetFloat(\"_EmissionGain\", .55f);\nhalfOutlines[i].GetComponent<Renderer>().material.EnableKeyword(\"_EMISSION\");\nhalfOutlines[i].SetActive(false);\n\n\nhalfSprites[0].material.SetColor(\"_Color\", onColor);\nhalfSprites[0].material.SetFloat(\"_EmissionGain\", .5f);\nhalfSprites[0].material.EnableKeyword(\"_EMISSION\");\n\n\nhalfSprites[i].material.SetColor(\"_Color\", offColor);\nhalfSprites[i].material.SetFloat(\"_EmissionGain\", 0);\nhalfSprites[i].material.EnableKeyword(\"_EMISSION\");\nhalfSprites[i].gameObject.SetActive(false);\n\n\nbuttonContainers[1].SetActive(false);\nif (masterControl.instance != null) buttonContainers[0].SetActive(masterControl.instance.tooltipsOn);\n\n};"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1029,
+        "completion_tokens": 475,
+        "total_tokens": 1504
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

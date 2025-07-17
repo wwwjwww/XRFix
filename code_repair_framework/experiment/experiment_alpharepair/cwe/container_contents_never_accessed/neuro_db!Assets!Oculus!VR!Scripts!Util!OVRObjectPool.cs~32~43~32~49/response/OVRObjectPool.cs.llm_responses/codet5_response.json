@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>        public static readonly HashSet<T> HashSet = new HashSet<T>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>        public static readonly HashSet<T> HashSet=new HashSet<T>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>       <T> HashSet<T> HashSet=new HashSet<T>();\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> public static readonly HashSet<T> HashSet=new HashSet<T>();\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> public static readonly HashSet<T> HashSet=new HashSet<T>(); mentions<FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>        public static readonly HashSet<T> HashSet=new HashSet<>();\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

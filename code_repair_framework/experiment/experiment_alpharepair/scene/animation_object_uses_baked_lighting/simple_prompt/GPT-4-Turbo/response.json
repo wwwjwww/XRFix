@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-A1avRvigwsc4EydAAxT4u6Xr4r2vm",
+    "object": "chat.completion",
+    "created": 1724943633,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```yaml\nLight:\nm_Lightmapping: 4\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```yaml\nLight:\nm_Lightmapping: 4\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```yaml\nLight:\nm_Lightmapping: 4\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```yaml\nLight:\nm_Lightmapping: 4\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```yaml\nLight:\nm_Lightmapping: 4\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 75,
+        "completion_tokens": 70,
+        "total_tokens": 145
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

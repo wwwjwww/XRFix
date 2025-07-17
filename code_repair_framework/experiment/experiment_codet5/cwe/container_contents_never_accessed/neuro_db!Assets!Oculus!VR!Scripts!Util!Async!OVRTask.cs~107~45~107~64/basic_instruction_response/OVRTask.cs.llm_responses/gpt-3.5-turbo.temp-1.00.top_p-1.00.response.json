@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzjtF7Rz9MOFniHX8F3fOA2jpA08",
+    "object": "chat.completion",
+    "created": 1724324033,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private static HashSet<Action> InternalDataClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 126,
+        "completion_tokens": 74,
+        "total_tokens": 200
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

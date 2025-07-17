@@ -1,0 +1,1 @@
+"Instantiate in Update() method","Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/EndlessRunner_VR_QM/Scripts/GameManager.cs:91:42:91:65""]].","/Assets/EndlessRunner_VR_QM/Scripts/GameManager.cs","91","42","91","65"

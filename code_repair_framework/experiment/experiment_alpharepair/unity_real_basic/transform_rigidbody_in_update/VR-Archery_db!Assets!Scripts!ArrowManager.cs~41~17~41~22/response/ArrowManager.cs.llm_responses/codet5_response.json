@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        debug.text = controler.transform.rotation.x.ToString() +\n                     \"\\n\" + controler.transform.rotation.y.ToString() +\n                     \"\\n\" + controler.transform.rotation.z.ToString();\n        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0)\n        {\n            if (!hasArrow)\n            {\n                AttachArrow();\n            } else if (isAttached) {\n<BUGS>                Fire();\n<BUGE>            }\n        }\n        else ThrowArrow();\n    }\n\n/*Addition Code for reference:\n    private void Fire()\n    {\n        if (isAttached && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) < 0)\n        {\n            float dist = (arrowStartPoint.transform.position - controler.transform.position).magnitude;\n            currentArrow.transform.parent = null;\n            Rigidbody r = currentArrow.GetComponent<Rigidbody>();\n            r.velocity = currentArrow.transform.forward * 25f * dist;\n            r.useGravity = true;\n            currentArrow.GetComponent<Collider>().isTrigger = false;\n            currentArrow = null;\n            hasArrow = false;\n            isAttached = false;\n        }\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                Fire(true); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>                Fire() + \"; \"; <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>               .Fire(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>               .Fire(true); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> getAtomCount=true;                Fire(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

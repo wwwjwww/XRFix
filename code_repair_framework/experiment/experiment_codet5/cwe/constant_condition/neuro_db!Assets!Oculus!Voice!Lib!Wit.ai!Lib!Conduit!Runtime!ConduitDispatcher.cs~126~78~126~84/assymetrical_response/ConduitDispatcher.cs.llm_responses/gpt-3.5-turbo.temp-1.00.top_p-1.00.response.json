@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAnxcxdQepgOS82Rc2e6fXMrckmV",
+    "object": "chat.completion",
+    "created": 1723651585,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (partial)\n{\n    InvokeError(actionId, new Exception($\"Failed to resolve partial method for {actionId} with supplied context\"));\n}\nelse\n{\n    InvokeError(actionId, new Exception($\"Failed to resolve final method for {actionId} with supplied context\"));\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "InvokeError(actionId, new Exception($\"Failed to resolve {(partial ? \"partial\" : \"final\")} method for {actionId} with supplied context\"));"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 229,
+        "completion_tokens": 185,
+        "total_tokens": 414
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

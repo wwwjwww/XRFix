@@ -1,0 +1,33 @@
+{
+  "input_code": "  void Update() {\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n<BUGS>    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n<BUGE>  }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>    waverend.material.mainTextureOffset=new Vector2((float)curWaveW / wavewidth, 1); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> synchronized (this) {    waverend.material.mainTextureOffset=new Vector2((float)curWaveW / wavewidth, 0);\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> this.updateWaverendTextures(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

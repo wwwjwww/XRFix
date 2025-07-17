@@ -1,0 +1,1 @@
+"Transform object of Rigidbody in Update() methods","Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.","warning","sink of this Instantiate() method is [[""sink""|""relative:///Assets/CodeScripts/ThrowingTutorial.cs:98:31:98:40""]].","/Assets/CodeScripts/ThrowingTutorial.cs","60","9","60","15"

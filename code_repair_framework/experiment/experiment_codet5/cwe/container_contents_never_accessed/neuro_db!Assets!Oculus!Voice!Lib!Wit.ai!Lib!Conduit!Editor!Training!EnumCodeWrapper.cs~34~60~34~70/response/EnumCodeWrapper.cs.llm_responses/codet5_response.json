@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>        private readonly Dictionary<string, CodeNamespace> _namespaces = new Dictionary<string, CodeNamespace>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>       <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> public abstract Dictionary<string, CodeNamespace> namespace(); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> homepage() throws Exception ; <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> private void       () { Dictionary<string, CodeNamespace> _namespaces=new Dictionary<string, CodeNamespace>();\n<FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> homepage() throws IOException ; <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

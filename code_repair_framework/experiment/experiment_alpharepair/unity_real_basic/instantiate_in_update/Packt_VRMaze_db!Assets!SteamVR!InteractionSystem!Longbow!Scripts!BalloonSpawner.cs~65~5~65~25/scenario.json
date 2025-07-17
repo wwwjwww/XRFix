@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\Extended-Reality-XR---Building-AR-VR-MR-Projects_886d18fd\\section5\\Packt_VRMaze",
+    "exp_dir": "Packt_VRMaze_db!Assets!SteamVR!InteractionSystem!Longbow!Scripts!BalloonSpawner.cs~65~5~65~25",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update_new.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/SteamVR/InteractionSystem/Longbow/Scripts/BalloonSpawner.cs",
+        "start_line": "65",
+        "start_column": "5",
+        "end_line": "65",
+        "end_column": "25",
+        "add_file_name": "/Assets/SteamVR/InteractionSystem/Longbow/Scripts/BalloonSpawner.cs",
+        "add_start_line": "78",
+        "add_start_column": "38",
+        "add_end_line": "78",
+        "add_end_column": "50"
+    },
+    "include_addition": true,
+    "prompt_template": [
+        "fix_instruction_add_prompt"
+    ]
+}

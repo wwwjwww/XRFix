@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "You can remove the \"using System.Collections.Generic;\" line as List<T> is a generic collection that comes by default in C#.",
+    "code_repairing_1": "public class ExampleScript : MonoBehaviour\n{\n    //void Update()\n    //{\n        //List<string> mList = new List<String>();",
+    "code_repairing_2": "using UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\n\npublic class ExampleScript : MonoBehaviour\n{\n    List<",
+    "code_repairing_3": "```\npublic class ExampleScript : MonoBehaviour\n{\n    //void Update()\n    //{\n        //List<string> mList = new List<String",
+    "code_repairing_4": "public class ExampleScript : MonoBehaviour\n{\n    //void Update()\n    //{\n        //List<string> mList = new List<String>();"
+}

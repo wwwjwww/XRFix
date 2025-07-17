@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>    private List<XRBaseInteractable> interactablesToCheck;\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>    private List<XRBaseInteractable> interactablesToCheck;\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>    @NotNull private List<XRBaseInteractable> interactablesToCheck;\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>    private abstract List<XRBaseInteractable> interactablesToCheck;\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>    private abstract List<XRBaseInteractable> interactablesToCheck; KnownNodeNode node; <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>    private List<XRBaseInteractable> interactablesToCheck;\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

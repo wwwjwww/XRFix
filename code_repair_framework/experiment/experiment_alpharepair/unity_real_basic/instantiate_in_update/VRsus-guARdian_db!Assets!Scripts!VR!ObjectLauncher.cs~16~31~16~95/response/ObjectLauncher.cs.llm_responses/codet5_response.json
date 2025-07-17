@@ -1,0 +1,33 @@
+{
+  "input_code": "\tvoid Update () {\n\t\tif (Input.GetButtonDown(button))\n        {\n<BUGS>            GameObject temp = Instantiate(launchObject, transform.position, transform.rotation);\n<BUGE>            temp.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse);\n            temp.GetComponent<Launchable>().Player = player;\n            temp.GetComponent<Launchable>().button = button;\n        }\n\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            GameObject temp=Instantiate(launchObject, transform.position, transform.rotation, transform.extraRotation); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            GameObject temp=Instantiate(launchObject, transform.position);\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> knob=Instantiate(launchObject, transform.position, transform.rotation); knob.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse); Diagram temp=knob; <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> knob=Instantiate(launchObject, transform.position, transform.rotation); knob.GetComponent<Rigidbody>().Reset(); knob=new knob; <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> xref=Instantiate(launchObject, transform.position, transform.rotation);            GameObject temp=copyObject(launchObject); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

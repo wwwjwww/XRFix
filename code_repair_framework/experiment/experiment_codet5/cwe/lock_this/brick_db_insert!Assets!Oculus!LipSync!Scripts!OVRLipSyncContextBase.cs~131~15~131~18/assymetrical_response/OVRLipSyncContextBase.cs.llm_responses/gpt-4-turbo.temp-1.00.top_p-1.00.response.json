@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL1pFkPHU6MK1Kb5MzxaeHsrnp21",
+    "object": "chat.completion",
+    "created": 1723690885,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly object contextLock = new object();\n\nvoid OnDestroy()\n{\n    lock (contextLock)\n    {\n        if (context != 0)\n        {\n            if (OVRLipSync.DestroyContext(context) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.OnDestroy ERROR: Could not delete Phoneme context.\");\n            }\n            context = 0;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly object contextLock = new object();\n\nvoid OnDestroy()\n{\n    lock (contextLock)\n    {\n        if (context != 0)\n        {\n            if (OVRLipSync.DestroyContext(context) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.OnDestroy ERROR: Could not delete\" +\n                    \" Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly object contextLock = new object();\n\nvoid OnDestroy()\n{\n    lock (contextLock)\n    {\n        if (context != 0)\n        {\n            if (OVRLipSync.DestroyContext(context) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.OnDestroy ERROR: Could not delete Phoneme context.\");\n            }\n            context = 0;\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private readonly System.Object lockObject = new System.Object();\n\n    void OnDestroy()\n    {\n        lock (lockObject)\n        {\n            if (context != 0)\n            {\n                if (OVRLipSync.DestroyContext(context) != OVRLipSync.Result.Success)\n                {\n                    Debug.LogError(\"OVRLipSyncContextBase.OnDestroy ERROR: Could not delete Phoneme context.\");\n                }\n            }\n        }\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate readonly object contextLock = new object();\n\nvoid OnDestroy()\n{\n    lock (contextLock)\n    {\n        if (context != 0)\n        {\n            if (OVRLipSync.DestroyContext(context) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.OnDestroy ERROR: Could not delete\" +\n                    \" Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 682,
+        "completion_tokens": 451,
+        "total_tokens": 1133
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

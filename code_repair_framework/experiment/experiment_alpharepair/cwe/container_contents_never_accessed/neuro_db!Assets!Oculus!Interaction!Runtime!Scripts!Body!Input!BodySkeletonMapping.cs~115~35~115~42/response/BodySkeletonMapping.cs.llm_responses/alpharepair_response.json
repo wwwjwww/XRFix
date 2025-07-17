@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " this node",
+            "confidence_score": -6.700699090957642
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -10.267354011535645
+        },
+        {
+            "fixed_line": " static",
+            "confidence_score": -10.605263710021973
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -11.026629447937012
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!Interaction!Runtime!Scripts!Body!Input!BodySkeletonMapping.cs~115~35~115~42/BodySkeletonMapping.cs",
+    "error_line": "115",
+    "total_fixes": 4
+}

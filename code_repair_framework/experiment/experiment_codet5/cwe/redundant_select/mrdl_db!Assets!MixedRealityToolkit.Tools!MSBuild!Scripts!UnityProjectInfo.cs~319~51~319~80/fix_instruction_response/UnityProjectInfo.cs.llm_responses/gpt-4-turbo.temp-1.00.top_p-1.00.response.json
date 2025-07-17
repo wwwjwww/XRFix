@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qFCM2kpfgzIZRIXsJs6KTdSzmIOS",
+    "object": "chat.completion",
+    "created": 1722238506,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    string currentMapping = configurationPlatformMappingTemplateBody\n        .Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper())\n        .Replace(\"<InEditorPlatform>\", $\"{AvailablePlatforms.Last()}|AnyCPU\")\n        .Replace(\"<PlayerPlatform>\", $\"{AvailablePlatforms.Last()}|AnyCPU\")\n        .Replace(\"<InEditorConfiguration>\", \"Debug\")\n        .Replace(\"<PlayerConfiguration>\", \"Release\");\n\n    configurationMappings.Add(currentMapping);\n\n    if (!project.InEditorPlatforms.Contains(AvailablePlatforms.Last()))\n    {\n        string disabledEntry = configurationPlatformEnabledTemplateBody\n            .Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper())\n            .Replace(\"<InEditorPlatform>\", $\"{AvailablePlatforms.Last()}|AnyCPU\")\n            .Replace(\"<Configuration>\", \"InEditor\");\n\n        disabled.Add(disabledEntry);\n    }\n\n    if (!project.PlayerPlatforms.Contains(AvailablePlatforms.Last()))\n    {\n        string disabledEntry = configurationPlatformEnabledTemplateBody\n            .Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper())\n            .Replace(\"<PlayerPlatform>\", $\"{AvailablePlatforms.Last()}|AnyCPU\")\n            .Replace(\"<Configuration>\", \"Player\");\n\n        disabled.Add(disabledEntry);\n    }\n}\n\nstring combinedProjectEntries = string.Join(Environment.NewLine, projectEntries);\nstring combinedConfigPlatforms = string.Join(Environment.NewLine, configPlatforms);\nstring combinedConfigMappings = string.Join(Environment.NewLine, configurationMappings);\nstring combinedDisabled = string.Join(Environment.NewLine, disabled);\n\nstring solutionFileText = solutionTemplateText\n    .Replace(projectEntryTemplate, combinedProjectEntries)\n    .Replace(configurationPlatformEntry, combinedConfigPlatforms)\n    .Replace(configurationPlatformMappingTemplate, combinedConfigMappings)\n    .Replace(configurationPlatformEnabledTemplate, combinedDisabled);\n\nFile.WriteAllText(solutionFilePath, solutionFileText);\n\nforeach (KeyValuePair<string, CSProjectInfo> pair in CSProjects)\n{\n    string projPath = Path.Combine(generatedProjectPath, $\"{pair.Value.Name}.csproj\");\n\n    if (File.Exists(projPath))\n    {\n        File.Delete(projPath);\n    }\n\n    StringBuilder projectBuffer = new StringBuilder(projectFileTemplateText);\n    CSProjectInfo csproject = pair.Value;\n    csproject.ExportProject(projPath, ref projectBuffer);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    foreach (string configPlatform in twoConfigs)\n    {\n        string currentMapping = configPlatformMappingTemplateBody.Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper());\n        currentMapping = currentMapping.Replace(\"<Configuration>\", \"InEditor\");\n        currentMapping = currentMapping.Replace(\"<Platform>\", \"AnyCPU\");\n\n        currentMapping = currentMapping.Replace(\"<SolutionConfiguration>\", \"Debug|AnyCPU\");\n        currentMapping = currentMapping.Replace(\"<SolutionConfigurationPlatform>\", \"Debug|AnyCPU\");\n        currentMapping = currentMapping.Replace(\"<ProjectConfigurationPlatform>\", \"Debug|AnyCPU\");\n\n        configurationMappings.Add(currentMapping);\n\n        string currentEnabled = configurationPlatformEnabledTemplateBody.Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper());\n        currentEnabled = currentEnabled.Replace(\"<SolutionConfigurationPlatform>\", \"Release|AnyCPU\");\n        currentEnabled = currentEnabled.Replace(\"<ProjectConfigurationPlatform>\", \"Release|AnyCPU\");\n        disabled.Add(currentEnabled);\n    }\n}\n\nstring solutionText = Utilities.ReplaceTokens(solutionTemplateText, new Dictionary<string, string>() {\n    { \"PROJECT\", string.Join(Environment.NewLine, projectEntries) },\n    { \"CONFIGURATION_PLATFORM\", string.Join(Environment.NewLine, configPlatforms) },\n    { \"CONFIGURATION_PLATFORM_MAPPING\", string.Join(Environment.NewLine, configurationMappings) },\n    { \"CONFIGURATION_PLATFORM_ENABLED\", string.Join(Environment.NewLine, disabled) }\n});\n\nFile.WriteAllText(solutionFilePath, solutionText, Encoding.UTF8);\n\nforeach (CSProjectInfo csProjectInfo in orderedProjects)\n{\n    string projectContents = GetProjectFileContents(csProjectInfo, projectFileTemplateText);\n\n    File.WriteAllText(csProjectInfo.Path.AbsolutePath, projectContents, Encoding.UTF8);\n}\n\nDebug.Log($\"Solution exported to {solutionFilePath}\");\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    foreach (CompilationPlatformInfo platform in AvailablePlatforms)\n    {\n        configurationMappings.Add(configurationPlatformMappingTemplateBody\n            .Replace(\"<SolutionConfiguration>\", \"InEditor\")\n            .Replace(\"<SolutionPlatform>\", platform.Name.ToString())\n            .Replace(\"<ProjectConfiguration>\", \"Debug\")\n            .Replace(\"<ProjectPlatform>\", platform.Name.ToString())\n            .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n        configurationMappings.Add(configurationPlatformMappingTemplateBody\n            .Replace(\"<SolutionConfiguration>\", \"Player\")\n            .Replace(\"<SolutionPlatform>\", platform.Name.ToString())\n            .Replace(\"<ProjectConfiguration>\", \"Release\")\n            .Replace(\"<ProjectPlatform>\", platform.Name.ToString())\n            .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n        if (!project.AssemblyDefinitionInfo.AllowUnsafeCode)\n        {\n            disabled.Add(configurationPlatformEnabledTemplateBody\n                .Replace(\"<SolutionConfiguration>\", \"InEditor\")\n                .Replace(\"<SolutionPlatform>\", platform.Name.ToString())\n                .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n\n            disabled.Add(configurationPlatformEnabledTemplateBody\n                .Replace(\"<SolutionConfiguration>\", \"Player\")\n                .Replace(\"<SolutionPlatform>\", platform.Name.ToString())\n                .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper()));\n        }\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    foreach (KeyValuePair<string, CompilationPlatformInfo> platform in AvailablePlatforms)\n    {\n        string configMapping = configurationPlatformMappingTemplateBody\n            .Replace(\"<SOLUTION_CONFIGURATION>\", \"InEditor\")\n            .Replace(\"<SOLUTION_PLATFORM>\", platform.Value.Name)\n            .Replace(\"<PROJECT_CONFIGURATION>\", \"Debug\")\n            .Replace(\"<PROJECT_PLATFORM>\", platform.Key)\n            .Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper());\n        configurationMappings.Add(configMapping);\n\n        if (!project.InEditorPlatforms.Contains(platform.Key))\n        {\n            string disabledEntry = configurationPlatformEnabledTemplateBody\n                .Replace(\"<SOLUTION_CONFIGURATION>\", \"InEditor\")\n                .Replace(\"<SOLUTION_PLATFORM>\", platform.Value.Name)\n                .Replace(\"<PROJECT_GUID>\", project.Guid.ToString().ToUpper());\n            disabled.Add(disabledEntry);\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    configurationMappings.Add(configurationPlatformMappingTemplateBody\n        .Replace(\"<Configuration>\", \"InEditor\")\n        .Replace(\"<Platform>\", \"AnyCPU\")\n        .Replace(\"<SolutionConfigurationPlatforms>\", \"InEditor|AnyCPU\")\n        .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper())\n        .Replace(\"<ProjectConfigurationPlatforms>\", \"Debug|AnyCPU.ActiveCfg = Debug|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Debug|AnyCPU.Build.0 = Debug|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Release|AnyCPU.ActiveCfg = Release|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Release|AnyCPU.Build.0 = Release|AnyCPU\"));\n\n    configurationMappings.Add(configurationPlatformMappingTemplateBody\n        .Replace(\"<Configuration>\", \"Player\")\n        .Replace(\"<Platform>\", \"AnyCPU\")\n        .Replace(\"<SolutionConfigurationPlatforms>\", \"Player|AnyCPU\")\n        .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper())\n        .Replace(\"<ProjectConfigurationPlatforms>\", \"Debug|AnyCPU.ActiveCfg = Debug|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Debug|AnyCPU.Build.0 = Debug|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Release|AnyCPU.ActiveCfg = Release|AnyCPU\\n\\t\\t\\t\\t<PROJECT_GUID>.Release|AnyCPU.Build.0 = Release|AnyCPU\"));\n\n    foreach (CSProjectDependency<CSProjectInfo> dependency in project.ProjectDependencies)\n    {\n        disabled.Add(configurationPlatformEnabledTemplateBody\n            .Replace(\"<DependencyGuid>\", dependency.Dependency.Guid.ToString().ToUpper())\n            .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper())\n            .Replace(\"<Configuration>\", \"InEditor\")\n            .Replace(\"<Platform>\", \"AnyCPU\"));\n\n        disabled.Add(configurationPlatformEnabledTemplateBody\n            .Replace(\"<DependencyGuid>\", dependency.Dependency.Guid.ToString().ToUpper())\n            .Replace(\"<ProjectGuid>\", project.Guid.ToString().ToUpper())\n            .Replace(\"<Configuration>\", \"Player\")\n            .Replace(\"<Platform>\", \"AnyCPU\"));\n    }\n}\n\n// Writing the solution file\nusing (StreamWriter writer = new StreamWriter(solutionFilePath))\n{\n    writer.Write(solutionTemplateText);\n    writer.WriteLine(projectEntries.Aggregate((a, b) => a + Environment.NewLine + b));\n    writer.WriteLine(configPlatforms.Aggregate((a, b) => a + Environment.NewLine + b));\n    writer.WriteLine(configurationMappings.Aggregate((a, b) => a + Environment.NewLine + b));\n    writer.WriteLine(disabled.Aggregate((a, b) => a + Environment.NewLine + b));\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2360,
+        "completion_tokens": 1791,
+        "total_tokens": 4151
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

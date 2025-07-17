@@ -1,0 +1,27 @@
+using System.Collections;
+using UnityEngine;
+
+public class Ballz : MonoBehaviour
+{
+    public float yDistanceThreshold;
+    private float startingY;
+
+    void Start()
+    {
+        startingY = transform.position.y;
+        StartCoroutine(CheckAndDestroy());
+    }
+
+    IEnumerator CheckAndDestroy()
+    {
+        while (true)
+        {
+            if (Mathf.Abs(startingY - transform.position.y) > yDistanceThreshold)
+            {
+                Destroy(gameObject);
+                yield break;
+            }
+            yield return new WaitForSeconds(0.1f);
+        }
+    }
+}

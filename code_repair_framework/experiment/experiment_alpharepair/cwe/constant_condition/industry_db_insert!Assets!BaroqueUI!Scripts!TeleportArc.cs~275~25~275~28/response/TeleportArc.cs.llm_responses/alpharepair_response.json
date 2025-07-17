@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " #else",
+            "confidence_score": -2.4281736612319946
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -4.877719402313232
+        },
+        {
+            "fixed_line": " then",
+            "confidence_score": -6.126236438751221
+        },
+        {
+            "fixed_line": " #",
+            "confidence_score": -6.276840686798096
+        },
+        {
+            "fixed_line": " break",
+            "confidence_score": -6.62437105178833
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/constant_condition/industry_db_insert!Assets!BaroqueUI!Scripts!TeleportArc.cs~275~25~275~28/TeleportArc.cs",
+    "error_line": "275",
+    "total_fixes": 5
+}

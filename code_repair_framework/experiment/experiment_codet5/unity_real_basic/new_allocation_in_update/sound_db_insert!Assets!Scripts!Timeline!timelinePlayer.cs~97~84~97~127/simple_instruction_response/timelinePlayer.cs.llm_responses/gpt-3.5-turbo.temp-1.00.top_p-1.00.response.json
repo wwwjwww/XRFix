@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yz3101IjXMGan5VceO1TU5o5th4m",
+    "object": "chat.completion",
+    "created": 1724321375,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n        }\n        toRecord.Clear();\n      }\n    }\n  }\n\n  void timelineEventUpdate() {\n    List<int> keys = new List<int>(activeEvents.Keys);\n    foreach (int n in keys) {\n      activeEvents[n].updateRecord(curGridPosition, lastBeatTime);\n    }\n  }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "activeEvents.Add(entry.Key, _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + 0.01f));"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "activeEvents.Add(entry.Key, _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n      }\n      toRecord.Clear();\n    }\n  }\n\n}\n\n\"\"\""
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + 0.01f));\n        }\n      }\n    }\n  }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + 0.01f));\n        }\n        toRecord.Clear();\n      }\n    }\n  }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 677,
+        "completion_tokens": 253,
+        "total_tokens": 930
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

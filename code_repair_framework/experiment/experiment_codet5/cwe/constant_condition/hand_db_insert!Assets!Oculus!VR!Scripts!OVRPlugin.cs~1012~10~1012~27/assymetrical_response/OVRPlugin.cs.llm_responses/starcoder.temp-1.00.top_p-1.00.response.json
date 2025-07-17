@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "Thanks for your reply. Unfortunately, this code is heavily based around Unity features. Specifically, it involves the inclusion of Unity-specific macros.\n\nIs there a way I can fix the code you have given me without the benefit of your knowledge of the Unity codebase?",
+    "code_repairing_1": "```\npublic struct BoundaryTestResult\n{\n    public bool IsTriggering;\n    public float ClosestDistance;\n    public Vector3f ClosestPoint;\n    public Vector3f ClosestPointNormal;\n}\n\npublic struct BoundaryGeometry\n{\n    public Boundary",
+    "code_repairing_2": "\u00a1Por supuesto! Aqu\u00ed te dejo algunas recomendaciones",
+    "code_repairing_3": "Here's your code with the errors fixed!\n\n```\nusing System;\nusing System.Runtime.InteropServices;\nusing UnityEngine;\n\npublic static class OVRPlugin\n{\n    public static bool isSupportedPlatform => true;\n\n    public static Version wrapperVersion => new Version",
+    "code_repairing_4": "Una criptomoneda o moneda virtual es un tipo de dinero descentralizado, controlado y administrado por medio de una"
+}

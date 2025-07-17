@@ -1,0 +1,89 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.XR.CoreUtils;
+using UnityEngine;
+using System;
+
+public class Targets : MonoBehaviour
+{
+    public GameObject targetPrefab; // Renamed for clarity
+    public String level;
+    public float spawnInterval = 3f;
+    public int maxTargets = 10;
+
+    private float spawnTimer = 0f;
+    private float spawnRange = 5f;
+    private Queue<GameObject> targetPool;
+    private int initialPoolSize = 10;
+
+    void Start()
+    {
+        level = PlayerPrefs.GetString("level", "easy"); // Providing a default value for safety
+        InitializeObjectPool();
+    }
+
+    void InitializeObjectPool()
+    {
+        targetPool = new Queue<GameObject>();
+        for (int i = 0; i < initialPoolSize; i++)
+        {
+            GameObject newTarget = Instantiate(targetPrefab); // Ensure targetPrefab is instantiated
+            newTarget.SetActive(false);
+            targetPool.Enqueue(newTarget);
+        }
+    }
+
+    void Update()
+    {
+        spawnTimer += Time.deltaTime;
+        if (spawnTimer >= spawnInterval && GameObject.FindGameObjectsWithTag("Target").Length < maxTargets)
+        {
+            SpawnTarget();
+            spawnTimer = 0f;
+        }
+    }
+
+    void SpawnTarget()
+    {
+        Vector3 spawnPosition = new Vector3(
+            UnityEngine.Random.Range(-spawnRange, spawnRange),
+            UnityEngine.Random.Range(1f, 5f),
+            0f);
+
+        GameObject newTarget = GetTargetFromPool();
+        if (newTarget != null)
+        {
+            newTarget.transform.position = spawnPosition;
+            newTarget.SetActive(true);
+            Targets_movements movements = newTarget.GetComponent<Targets_movements>();
+            if (movements != null)
+            {
+                movements.level = level;
+            }
+            else
+            {
+                Debug.LogError("Target does not have a Targets_movements component.");
+            }
+        }
+    }
+
+    GameObject GetTargetFromPool()
+    {
+        if (targetPool.Count > 0)
+        {
+            return targetPool.Dequeue();
+        }
+        else
+        {
+            // Optionally expand the pool, though this can be expensive
+            GameObject newTarget = Instantiate(targetPrefab);
+            return newTarget;
+        }
+    }
+
+    public void ReturnTargetToPool(GameObject target)
+    {
+        target.SetActive(false);
+        targetPool.Enqueue(target);
+    }
+}

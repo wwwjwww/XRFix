@@ -1,0 +1,4 @@
+"Transform object of Rigidbody in Update() methods","Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.","warning","Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/Scripts/ArrowManager.cs:57:13:57:24""]].","/Assets/Scripts/ArrowManager.cs","75","17","75","29"
+"Transform object of Rigidbody in Update() methods","Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.","warning","Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/Scripts/ArrowManager.cs:121:13:121:21""]].
+Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/Scripts/ArrowManager.cs:122:13:122:21""]].
+Here exists the Rigidbody transform in update [[""here""|""relative:///Assets/Scripts/ArrowManager.cs:123:13:123:21""]].","/Assets/Scripts/ArrowManager.cs","82","14","82","25"

@@ -1,0 +1,12 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEditor;
+using UnityEngine;
+
+    // BUG: Container contents are never accessed
+    // MESSAGE: A collection or map whose contents are never queried or accessed is useless.
+    //     private static readonly List<OVRConfigurationTask> EmptyTasksList = new List<OVRConfigurationTask>(0);
+
+    //Remove or Commented-out the collection if it is no longer needed
+    // FIXED CODE:

@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\unity-playground_113ed4296e25226f4449d4460ea64a03d34f1362\\retrO\\Unity-Programming-Essence\\Dodge",
+    "exp_dir": "Dodge_db!Assets!BulletSpawner.cs~40~33~40~97",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/BulletSpawner.cs",
+        "start_line": "40",
+        "start_column": "33",
+        "end_line": "40",
+        "end_column": "97",
+        "add_file_name": "/Assets/BulletSpawner.cs",
+        "add_start_line": "40",
+        "add_start_column": "33",
+        "add_end_line": "40",
+        "add_end_column": "97"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "code_example_func_no_limit"
+    ]
+}

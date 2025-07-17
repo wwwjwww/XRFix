@@ -1,0 +1,2 @@
+Light:
+m_Lightmapping: 2

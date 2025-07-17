@@ -1,0 +1,3 @@
+{
+  "test_code": "\tprivate static bool IsValidOpenVRDevice(uint deviceId)\n\t{\n<BUGS>\t\treturn (deviceId >= 0 && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n<BUGE>\t}\n"
+}

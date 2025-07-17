@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyuiipAkSkrAWsPGGvCubTEWMmOR",
+    "object": "chat.completion",
+    "created": 1724320860,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "List<string> roomNamesToLoad = new List<string>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```C#\n        List<string> roomNamesToLoad = new List<string>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "public void InitializeSavedRoomsList()\n{\n    List<string> roomNamesToLoad = new List<string>();\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate void InitializeSavedRoomsList()\n{\n    List<string> roomNamesToLoad = new List<string>();\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```C#\n        List<string> roomNamesToLoad = new List<string>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 118,
+        "completion_tokens": 95,
+        "total_tokens": 213
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

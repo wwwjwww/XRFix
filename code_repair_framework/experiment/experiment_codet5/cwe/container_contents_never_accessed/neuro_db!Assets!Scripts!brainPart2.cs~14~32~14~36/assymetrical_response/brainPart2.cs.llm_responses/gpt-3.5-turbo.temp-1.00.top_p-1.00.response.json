@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wArx1PpVwQ9wAXeyMlkyDvhkv81n",
+    "object": "chat.completion",
+    "created": 1723651833,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 181,
+        "completion_tokens": 40,
+        "total_tokens": 221
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

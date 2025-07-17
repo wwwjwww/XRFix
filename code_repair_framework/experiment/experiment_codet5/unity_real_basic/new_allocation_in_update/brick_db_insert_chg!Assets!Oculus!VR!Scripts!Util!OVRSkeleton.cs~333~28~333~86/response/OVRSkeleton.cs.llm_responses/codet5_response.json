@@ -1,0 +1,33 @@
+{
+  "input_code": "\tprivate void Update()\n\t{\n#if UNITY_EDITOR\n\t\tif (OVRInput.IsControllerConnected(OVRInput.Controller.Hands) && !IsInitialized)\n\t\t{\n\t\t\tif (_skeletonType != SkeletonType.None)\n\t\t\t{\n\t\t\t\tInitialize();\n\t\t\t}\n\t\t}\n\n\t\tif (!ShouldUpdateBonePoses)\n\t\t{\n\t\t\treturn;\n\t\t}\n#endif\n\n\t\tif (!IsInitialized || _dataProvider == null)\n\t\t{\n\t\t\tIsDataValid = false;\n\t\t\tIsDataHighConfidence = false;\n\n\t\t\treturn;\n\t\t}\n\n\t\tvar data = _dataProvider.GetSkeletonPoseData();\n\n\t\tIsDataValid = data.IsDataValid;\n\t\tif (data.IsDataValid)\n\t\t{\n\t\t\tIsDataHighConfidence = data.IsDataHighConfidence;\n\n\t\t\tif (_updateRootPose)\n\t\t\t{\n\t\t\t\ttransform.localPosition = data.RootPose.Position.FromFlippedZVector3f();\n\t\t\t\ttransform.localRotation = data.RootPose.Orientation.FromFlippedZQuatf();\n\t\t\t}\n\n\t\t\tif (_updateRootScale)\n\t\t\t{\n<BUGS>\t\t\t\ttransform.localScale = new Vector3(data.RootScale, data.RootScale, data.RootScale);\n<BUGE>\t\t\t}\n\n\t\t\tfor (var i = 0; i < _bones.Count; ++i)\n\t\t\t{\n\t\t\t\tif (_bones[i].Transform != null)\n\t\t\t\t{\n\t\t\t\t\t_bones[i].Transform.localRotation = data.BoneRotations[i].FromFlippedXQuatf();\n\t\t\t\t\tif (_bones[i].Id == BoneId.Hand_WristRoot)\n\t\t\t\t\t{\n\t\t\t\t\t\t_bones[i].Transform.localRotation *= wristFixupRotation;\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>\nalse\ttransform.localScale=new Vector3(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>\nalse\ttransform.localPosition=new Vector3(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>\nalse\ttransform.localRotation=new Vector3(data.RootScale, data.RootScale, data.RootScale); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\nalse\ttransform.localScale=new Vector3f(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>\nalse\ttransform.localPosition=new Vector3f(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>\nalse\ttransform.localRotation=new Vector3f(data.RootScale, data.RootScale, data.RootScale); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>undsundsunds=data.RootScale;unds=new Vector3(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>undsunds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedXQuatf(); <FIXE> <FIXS>undsunds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedXQuatf(); <FIXE> <FIXS>unds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedZQuatf(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>undsundsunds=data.RootScale;unds=new Vector3(data.RootScale, data.RootScale, data.RootScale); <FIXE> <FIXS>undsunds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedXQuatf(); <FIXE> <FIXS>undsunds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedZQuatf(); <FIXE> <FIXS>unds=data.Bones[i].Transform.localRotation * data.BoneRotations[i].FromFlippedXQuatf(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> unmodifiableMatrix(data.RootScale); unmodifiableMatrix(data.RootScale); <FIXE> <FIXS> unmodifiableMatrix(data.RootScale); unmodifiableMatrix(data.RootScale); <FIXE> <FIXS> unmodifiableMatrix(data.RootScale); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

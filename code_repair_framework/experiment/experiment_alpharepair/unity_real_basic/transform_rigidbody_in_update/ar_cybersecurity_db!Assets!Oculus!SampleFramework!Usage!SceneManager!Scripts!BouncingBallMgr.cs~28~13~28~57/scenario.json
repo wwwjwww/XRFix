@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/transform_rigidbody_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\Unity-XR-NetworkMapper-Project_5ab9ebaa4b704837cfebcad96c001d4720ff04f1\\AR_Cybersecuity_Project",
+    "exp_dir": "ar_cybersecurity_db!Assets!Oculus!SampleFramework!Usage!SceneManager!Scripts!BouncingBallMgr.cs~28~13~28~57",
+    "unity_special_name": "Transform object of Rigidbody in Update() methods",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/rigidbody/comp_rigidbody_transform_in_update_new.ql",
+    "err_detailed_info": {
+        "description": "Rigidbody needs to be transformed in FixedUpdate() methods to simulate real-world movement.",
+        "file_name": "/Assets/Oculus/SampleFramework/Usage/SceneManager/Scripts/BouncingBallMgr.cs",
+        "start_line": "28",
+        "start_column": "13",
+        "end_line": "28",
+        "end_column": "57",
+        "add_file_name": "/Assets/Oculus/SampleFramework/Usage/SceneManager/Scripts/BouncingBallLogic.cs",
+        "add_start_line": "81",
+        "add_start_column": "9",
+        "add_end_line": "81",
+        "add_end_column": "33"
+    },
+    "include_addition": true,
+    "prompt_template": [
+        "fix_instruction_add_prompt"
+    ]
+}

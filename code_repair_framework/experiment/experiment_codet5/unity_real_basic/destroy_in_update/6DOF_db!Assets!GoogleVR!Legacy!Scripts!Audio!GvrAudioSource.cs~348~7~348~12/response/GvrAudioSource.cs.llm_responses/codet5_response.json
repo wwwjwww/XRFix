@@ -1,0 +1,33 @@
+{
+  "input_code": "  void Update () {\n\n    if (!occlusionEnabled) {\n      currentOcclusion = 0.0f;\n    } else if (Time.time >= nextOcclusionUpdate) {\n      nextOcclusionUpdate = Time.time + GvrAudio.occlusionDetectionInterval;\n      currentOcclusion = GvrAudio.ComputeOcclusion(transform);\n    }\n\n    if (!isPlaying && !isPaused) {\n<BUGS>      Stop();\n<BUGE>    } else {\n      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.Gain,\n                                      GvrAudio.ConvertAmplitudeFromDb(gainDb));\n      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.MinDistance,\n                                      sourceMinDistance);\n      GvrAudio.UpdateAudioSource(id, this, currentOcclusion);\n    }\n  }\n\n/*Addition Code for reference:\n  private void ShutdownSource () {\n    if (id >= 0) {\n      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.Id, -1.0f);\n\n      audioSource.SetSpatializerFloat((int) GvrAudio.SpatializerData.ZeroOutput, 1.0f);\n      audioSource.spatialize = false;\n      GvrAudio.DestroyAudioSource(id);\n      id = -1;\n    }\n  }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> Stop(true); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> Stop(); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> Stop(true); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> StopAsync(this); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

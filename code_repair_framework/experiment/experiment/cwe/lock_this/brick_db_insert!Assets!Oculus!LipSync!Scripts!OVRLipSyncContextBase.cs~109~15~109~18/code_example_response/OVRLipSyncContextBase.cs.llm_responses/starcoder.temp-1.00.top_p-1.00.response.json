@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "I fixed the line of code with a comment saying \"FIXED CODE:\"",
+    "code_repairing_1": "public void Awake()\n{\n    if (!audioSource)\n    {",
+    "code_repairing_2": "// public static T Create<T>() where T : new()\n//",
+    "code_repairing_3": "using UnityEngine;\n\n[RequireComponent(typeof(AudioSource))]",
+    "code_repairing_4": "public void Start()\n{\n    if (!audioSource)\n    {"
+}

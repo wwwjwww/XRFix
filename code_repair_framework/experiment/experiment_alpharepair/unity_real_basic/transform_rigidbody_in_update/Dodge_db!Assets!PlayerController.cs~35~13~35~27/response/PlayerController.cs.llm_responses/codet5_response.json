@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update() {\n\n        float xInput = Input.GetAxis(\"Horizontal\");\n        float zInput = Input.GetAxis(\"Vertical\");\n\n\n        float xSpeed = xInput * speed;\n        float zSpeed = zInput * speed;\n\n\n        Vector3 newVelocity = new Vector3(xSpeed, 0f, zSpeed);\n\n        playerRigidbody.velocity = newVelocity;  \n        \n        \n\n\n\n        if (Input.GetKey(KeyCode.UpArrow) == true) {\n\n<BUGS>            playerRigidbody.AddForce(0f, 0f, speed);\n<BUGE>        }\n\n        if (Input.GetKey(KeyCode.DownArrow) == true) {\n\n            playerRigidbody.AddForce(0f, 0f, -speed);\n        }\n\n        if (Input.GetKey(KeyCode.RightArrow) == true) {\n\n            playerRigidbody.AddForce(speed, 0f, 0f);\n        }\n\n        if (Input.GetKey(KeyCode.LeftArrow) == true) {\n\n            playerRigidbody.AddForce(-speed, 0f, 0f);\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> playerRigidbody.AddForce(new Vector3(0f, 0f, speed)); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> playerRigidbody.AddForce(new Vector3(0f, 0f, speed)); <FIXE> <FIXS> knocking[0]=Input.GetKey(KeyCode.Space); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> knetherRigidbody.AddForce(0f, 0f, speed); <FIXE> <FIXS> knetherRigidbody.AddForce(0f, 0f, -speed); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> knocking.AddForce(0f, 0f, speed); <FIXE> <FIXS> knocking.AddForce(0f, 0f, -speed); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> knetherRigidbody.AddForce(0f, 0f, speed); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

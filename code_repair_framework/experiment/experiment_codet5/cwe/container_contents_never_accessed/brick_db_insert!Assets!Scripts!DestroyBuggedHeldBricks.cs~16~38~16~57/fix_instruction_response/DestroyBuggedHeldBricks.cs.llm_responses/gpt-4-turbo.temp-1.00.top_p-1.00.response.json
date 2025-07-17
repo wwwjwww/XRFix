@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF4pHIhx2FoN9PUOfDmxIe5nXElS",
+    "object": "chat.completion",
+    "created": 1722238039,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The unused List<XRBaseInteractable> has been removed as per the given task.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed unnecessary collection\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The following collection has been removed as it was not accessed:\n// private List<XRBaseInteractable> interactablesToCheck;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed the unused private List<XRBaseInteractable> interactablesToCheck;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed unused interactablesToCheck list\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 201,
+        "completion_tokens": 102,
+        "total_tokens": 303
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

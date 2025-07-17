@@ -1,0 +1,3 @@
+{
+  "test_code": "<BUGS>    private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();\n<BUGE>"
+}

@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>    private List<MeshRenderer> rends;\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>    <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>    @Deprecated private List<MeshRenderer> rends;\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> Deprecated Deprecated Deprecated Deprecated Deprecated for: \" + \"deprecated. Use MeshRenderer instead.\");    private List<MeshRenderer> rends;\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> Deprecated Deprecated Deprecated Deprecated Deprecated for: \" + \"deprecated. Use MeshRenderer instead.\";    private List<MeshRenderer> rends;\n<FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> @Deprecated private List<MeshRenderer> rends;\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

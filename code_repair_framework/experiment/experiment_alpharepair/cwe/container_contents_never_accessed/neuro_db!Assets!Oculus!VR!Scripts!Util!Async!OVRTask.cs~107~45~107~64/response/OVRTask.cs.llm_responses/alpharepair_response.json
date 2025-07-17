@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " }};",
+            "confidence_score": -5.429319858551025
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -5.56776237487793
+        },
+        {
+            "fixed_line": "{};",
+            "confidence_score": -6.7851722240448
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -8.641619682312012
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -9.360177040100098
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!VR!Scripts!Util!Async!OVRTask.cs~107~45~107~64/OVRTask.cs",
+    "error_line": "107",
+    "total_fixes": 5
+}

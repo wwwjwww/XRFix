@@ -1,0 +1,33 @@
+{
+  "input_code": "  public void setSelectAsynch(bool on) {\n    desireSetSelect = on ? 1 : 2;\n  }\n\n  bool phantomHitUpdate = false;\n<BUGS>  Queue<bool> hits = new Queue<bool>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> Queue<bool> hits=new Queue<>(); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> Queue<Iterator<bool>> hits=new Queue<Iterator<bool>>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> Queue<Cell> hits=new Queue<Cell>(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

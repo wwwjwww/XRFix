@@ -1,0 +1,88 @@
+using UnityEngine;
+using System.Collections.Generic; // Added to use Queue
+
+public class BouncingBallMgr : MonoBehaviour
+{
+    [SerializeField] private Transform trackingspace;
+    [SerializeField] private GameObject rightControllerPivot;
+    [SerializeField] private OVRInput.RawButton actionBtn;
+    [SerializeField] private GameObject ballPrefab; // Renamed for clarity
+
+    private GameObject currentBall;
+    private bool ballGrabbed = false;
+    private Queue<GameObject> ballPool;
+    [SerializeField] private int poolSize = 10;
+
+    private void Awake()
+    {
+        InitializeBallPool();
+    }
+
+    private void InitializeBallPool()
+    {
+        ballPool = new Queue<GameObject>();
+        for (int i = 0; i < poolSize; i++)
+        {
+            GameObject pooledBall = Instantiate(ballPrefab);
+            pooledBall.SetActive(false);
+            ballPool.Enqueue(pooledBall);
+        }
+    }
+
+    private void Update()
+    {
+        HandleBallGrabbing();
+        HandleBallReleasing();
+    }
+
+    private void HandleBallGrabbing()
+    {
+        if (!ballGrabbed && OVRInput.GetDown(actionBtn))
+        {
+            if (ballPool.Count > 0)
+            {
+                currentBall = ballPool.Dequeue();
+                PrepareBallForGrabbing(currentBall);
+            }
+        }
+    }
+
+    private void PrepareBallForGrabbing(GameObject ball)
+    {
+        ball.transform.position = rightControllerPivot.transform.position;
+        ball.transform.rotation = Quaternion.identity;
+        ball.transform.parent = rightControllerPivot.transform;
+        ball.SetActive(true);
+        ballGrabbed = true;
+    }
+
+    private void HandleBallReleasing()
+    {
+        if (ballGrabbed && OVRInput.GetUp(actionBtn))
+        {
+            ReleaseBall();
+        }
+    }
+
+    private void ReleaseBall()
+    {
+        currentBall.transform.parent = null;
+        Vector3 ballPos = currentBall.transform.position;
+        Vector3 vel = trackingspace.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);
+        Vector3 angVel = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);
+        BouncingBallLogic ballLogic = currentBall.GetComponent<BouncingBallLogic>();
+        
+        if (ballLogic != null)
+        {
+            ballLogic.Release(ballPos, vel, angVel);
+        }
+        else
+        {
+            Debug.LogError("Ball prefab missing BouncingBallLogic component");
+        }
+
+        currentBall.SetActive(false);
+        ballPool.Enqueue(currentBall);
+        ballGrabbed = false;
+    }
+}

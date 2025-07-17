@@ -1,0 +1,3 @@
+{
+  "test_code": "\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers =\n        new Dictionary<Guid, InternalDataRemover>();\n\n<BUGS>    \n<BUGE>"
+}

@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": ".",
+            "confidence_score": -0.94199138879776
+        },
+        {
+            "fixed_line": " anymore.",
+            "confidence_score": -1.6698720455169678
+        },
+        {
+            "fixed_line": " anymore",
+            "confidence_score": -2.1799206733703613
+        },
+        {
+            "fixed_line": "!",
+            "confidence_score": -2.6969857215881348
+        },
+        {
+            "fixed_line": " yet",
+            "confidence_score": -3.215226650238037
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/industry_db_insert!Assets!Oculus!VR!Editor!OVRGradleGeneration.cs~218~7~218~26/OVRGradleGeneration.cs",
+    "error_line": "218",
+    "total_fixes": 5
+}

@@ -1,0 +1,25 @@
+void Start()
+{
+    bParticlesSpawned = false; // Ensure bParticlesSpawned is initialized
+}
+
+void Update()
+{
+    if ((destructTime != 0) && (Time.time > destructTime))
+    {
+        if (burstOnLifetimeEnd && !bParticlesSpawned)
+        {
+            SpawnParticles(lifetimeEndParticlePrefab, lifetimeEndSound);
+            bParticlesSpawned = true;
+
+            // Start a coroutine for delayed destruction
+            StartCoroutine(DestroyBalloonCoroutine());
+        }
+    }
+}
+
+IEnumerator DestroyBalloonCoroutine()
+{
+    yield return new WaitForSeconds(1.0f); // Adjust the delay as needed
+    Destroy(gameObject);
+}

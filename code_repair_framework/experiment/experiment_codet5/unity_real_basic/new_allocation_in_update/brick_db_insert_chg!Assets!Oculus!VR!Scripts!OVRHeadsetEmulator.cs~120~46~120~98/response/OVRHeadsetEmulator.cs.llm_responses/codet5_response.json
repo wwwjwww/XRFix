@@ -1,0 +1,33 @@
+{
+  "input_code": "\tvoid Update () {\n\t\tif (!emulatorHasInitialized)\n\t\t{\n\t\t\tif (OVRManager.OVRManagerinitialized)\n\t\t\t{\n\t\t\t\tpreviousCursorLockMode = Cursor.lockState;\n\t\t\t\tmanager = OVRManager.instance;\n\t\t\t\trecordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;\n\t\t\t\trecordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;\n\t\t\t\temulatorHasInitialized = true;\n\t\t\t\tlastFrameEmulationActivated = false;\n\t\t\t}\n\t\t\telse\n\t\t\t\treturn;\n\t\t}\n\t\tbool emulationActivated = IsEmulationActivated();\n\t\tif (emulationActivated)\n\t\t{\n\t\t\tif (!lastFrameEmulationActivated)\n\t\t\t{\n\t\t\t\tpreviousCursorLockMode = Cursor.lockState;\n\t\t\t\tCursor.lockState = CursorLockMode.Locked;\n\t\t\t}\n\n\t\t\tif (!lastFrameEmulationActivated && resetHmdPoseOnRelease)\n\t\t\t{\n\t\t\t\tmanager.headPoseRelativeOffsetTranslation = recordedHeadPoseRelativeOffsetTranslation;\n\t\t\t\tmanager.headPoseRelativeOffsetRotation = recordedHeadPoseRelativeOffsetRotation;\n\t\t\t}\n\n\t\t\tif (resetHmdPoseByMiddleMouseButton && Input.GetMouseButton(2))\n\t\t\t{\n\t\t\t\tmanager.headPoseRelativeOffsetTranslation = Vector3.zero;\n\t\t\t\tmanager.headPoseRelativeOffsetRotation = Vector3.zero;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n\t\t\t\tVector3 emulatedTranslation = manager.headPoseRelativeOffsetTranslation;\n\t\t\t\tfloat deltaMouseScrollWheel = Input.GetAxis(\"Mouse ScrollWheel\");\n\t\t\t\tfloat emulatedHeight = deltaMouseScrollWheel * MOUSE_SCALE_HEIGHT;\n\t\t\t\temulatedTranslation.y += emulatedHeight;\n\t\t\t\tmanager.headPoseRelativeOffsetTranslation = emulatedTranslation;\n\n\t\t\t\tfloat deltaX = Input.GetAxis(\"Mouse X\");\n\t\t\t\tfloat deltaY = Input.GetAxis(\"Mouse Y\");\n\n\t\t\t\tVector3 emulatedAngles = manager.headPoseRelativeOffsetRotation;\n\t\t\t\tfloat emulatedRoll = emulatedAngles.x;\n\t\t\t\tfloat emulatedYaw = emulatedAngles.y;\n\t\t\t\tfloat emulatedPitch = emulatedAngles.z;\n\t\t\t\tif (IsTweakingPitch())\n\t\t\t\t{\n\t\t\t\t\temulatedPitch += deltaX * MOUSE_SCALE_X_PITCH;\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n\t\t\t\t\temulatedRoll += deltaY * MOUSE_SCALE_Y;\n\t\t\t\t\temulatedYaw += deltaX * MOUSE_SCALE_X;\n\t\t\t\t}\n\n<BUGS>\t\t\t\tmanager.headPoseRelativeOffsetRotation = new Vector3(emulatedRoll, emulatedYaw, emulatedPitch);\n<BUGE>\t\t\t}\n\n\t\t\tif (!hasSentEvent)\n\t\t\t{\n\t\t\t\tOVRPlugin.SendEvent(\"headset_emulator\", \"activated\");\n\t\t\t\thasSentEvent = true;\n\t\t\t}\n\t\t}\n\t\telse\n\t\t{\n\t\t\tif (lastFrameEmulationActivated)\n\t\t\t{\n\t\t\t\tCursor.lockState = previousCursorLockMode;\n\n\t\t\t\trecordedHeadPoseRelativeOffsetTranslation = manager.headPoseRelativeOffsetTranslation;\n\t\t\t\trecordedHeadPoseRelativeOffsetRotation = manager.headPoseRelativeOffsetRotation;\n\n\t\t\t\tif (resetHmdPoseOnRelease)\n\t\t\t\t{\n\t\t\t\t\tmanager.headPoseRelativeOffsetTranslation = Vector3.zero;\n\t\t\t\t\tmanager.headPoseRelativeOffsetRotation = Vector3.zero;\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\t\tlastFrameEmulationActivated = emulationActivated;\n\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> resultSet resultSet resultSet resultSet resultSet resultSetrecordedHeadPoseRelativeOffsetTranslation=manager.headPoseRelativeOffsetTranslation; resultSetrecordedHeadPoseRelativeOffsetRotation=manager.headPoseRelativeOffsetRotation; <FIXE> <FIXS> resultSet resultSet resultSet resultSet resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursor.lockState=CursorLockMode.Locked; <FIXE> <FIXS> resultSet resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursorPos=recordedHeadPoseRelativeOffsetTranslation; resultSetPreviousCursorPos=recordedHeadPoseRelativeOffsetRotation; <FIXE> <FIXS> resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursorPos=recordedHeadPoseRelativeOffsetTranslation; <FIXE> <FIXS> resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursorPos=recordedHeadPoseRelativeOffsetRotation; <FIXE> <FIXS> resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursorPos=recordedHeadPoseRelativeOffsetTranslation; <FIXE> <FIXS> resultSet"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> resultSet resultSet resultSet resultSet resultSet resultSetrecordedHeadPoseRelativeOffsetTranslation=manager.headPoseRelativeOffsetTranslation; resultSetrecordedHeadPoseRelativeOffsetRotation=manager.headPoseRelativeOffsetRotation; <FIXE> <FIXS> resultSet resultSet resultSet resultSet resultSetPreviousCursorLockMode=Cursor.lockState; resultSetPreviousCursor.lockState=CursorLockMode.Locked; <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE> <FIXS> resultSet.setDirty(true); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> listOfHmdPoseRelativeOffsetTranslation=recordedHeadPoseRelativeOffsetTranslation; <FIXE> <FIXS> <FIXE> <FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

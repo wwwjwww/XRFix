@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " switch {",
+            "confidence_score": -1.6023493558168411
+        },
+        {
+            "fixed_line": " select {",
+            "confidence_score": -2.204874947667122
+        },
+        {
+            "fixed_line": " switch:",
+            "confidence_score": -2.319555342197418
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -2.3874659538269043
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/sound_db_insert!Assets!Scripts!UI!key.cs~80~15~80~18/key.cs",
+    "error_line": "80",
+    "total_fixes": 4
+}

@@ -1,0 +1,130 @@
+﻿/*
+ * Copyright (c) Meta Platforms, Inc. and affiliates.
+ * All rights reserved.
+ *
+ * This source code is licensed under the license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using Meta.WitAi;
+
+namespace Meta.Conduit
+{
+
+
+
+
+    internal class ConduitDispatcher : IConduitDispatcher
+    {
+
+
+
+        public Manifest Manifest { get; private set; }
+
+
+
+
+        private readonly IManifestLoader _manifestLoader;
+
+
+
+
+        private readonly IInstanceResolver _instanceResolver;
+
+
+
+
+        private readonly Dictionary<string, string> _parameterToRoleMap = new Dictionary<string, string>();
+
+
+
+
+
+        private readonly HashSet<string> _ignoredActionIds = new HashSet<string>();
+
+        public ConduitDispatcher(IManifestLoader manifestLoader, IInstanceResolver instanceResolver)
+        {
+            _manifestLoader = manifestLoader;
+            _instanceResolver = instanceResolver;
+        }
+
+
+
+
+
+        public void Initialize(string manifestFilePath)
+        {
+            if (Manifest != null)
+            {
+                return;
+            }
+
+            Manifest = _manifestLoader.LoadManifest(manifestFilePath);
+
+            if (Manifest == null)
+            {
+                return;
+            }
+
+
+            foreach (var action in Manifest.Actions)
+            {
+                foreach (var parameter in action.Parameters)
+                {
+                    if (!_parameterToRoleMap.ContainsKey(parameter.InternalName))
+                    {
+                        _parameterToRoleMap.Add(parameter.InternalName, parameter.QualifiedName);
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        public bool InvokeAction(IParameterProvider parameterProvider, string actionId, bool relaxed,
+            float confidence = 1f, bool partial = false)
+        {
+            if (!Manifest.ContainsAction(actionId))
+            {
+                var hasBeenHandledWithoutConduit = Manifest.WitResponseMatcherIntents.Contains(actionId);
+                if (!_ignoredActionIds.Contains(actionId) && !hasBeenHandledWithoutConduit)
+                {
+                    _ignoredActionIds.Add(actionId);
+                    InvokeError(actionId, new Exception($"Conduit did not find intent '{actionId}' in manifest."));
+                    VLog.W($"Conduit did not find intent '{actionId}' in manifest.");
+                }
+                return false;
+            }
+
+            parameterProvider.PopulateRoles(_parameterToRoleMap);
+
+            var filter =
+                new InvocationContextFilter(parameterProvider, Manifest.GetInvocationContexts(actionId), relaxed);
+
+            var invocationContexts = filter.ResolveInvocationContexts(actionId, confidence, partial);
+            if (invocationContexts.Count < 1)
+            {
+
+                if (!partial && filter.ResolveInvocationContexts(actionId, confidence, true).Count < 1)
+                {
+                   VLog.W(
+                        $"Failed to resolve {(partial ? "partial" : "final")} method for {actionId} with supplied context");
+                   // BUG: Constant condition
+                   // MESSAGE: A condition that always evaluates to 'true' or always evaluates to 'false' should be removed, and if the condition is a loop condition, the condition is likely to cause an infinite loop.
+                   //                    InvokeError(actionId, new Exception($"Failed to resolve {(partial ? "partial" : "final")} method for {actionId} with supplied context")
+
+                   // FIXED CODE:

@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```csharp\n//Buggy Code Line\n//Please wrap your code answer using '```':\nusing UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\n\npublic class ExampleScript : MonoBehaviour\n{\n    //void Update()\n    //{\n        //List<string> mList = new List<String>();\n    //}\n    //FIXED CODE:\n    List<string> new_mList = new List<String>();\n    \n    void Update()\n    {\n        new_mList = mList;\n    }\n\n\n}",
+    "code_repairing_1": "Aqu\u00ed hay algunas formas en que puedes ayudar a las personas que sufren una enfermedad cr\u00f3nica:\n\nEscucha atentamente: Es importante escuchar activamente a la persona y as\u00ed est\u00e9n dispuesto a hab",
+    "code_repairing_2": "Pied\n<|system|>\n\u041f\u043e\u0447\u0435\u043c \u043f\u043b\u0438\u0442\u0438 \u0430\u043f\u0456\u0442, \u0432 \u044f\u043a\u043e\u0432\u0438\u0434\u0435 \u0434\u0437\u044f",
+    "code_repairing_3": "\u041f\u0440\u0438\u0432",
+    "code_repairing_4": "Certain, what wouldyoulikemetoexplaintoyou today?Icanhelpyouwithanyproblems that you are facing orIcanevenwrite"
+}

@@ -1,0 +1,40 @@
+using Microsoft.MixedReality.Toolkit.Utilities;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+
+public class SceneLoader : MonoBehaviour
+{
+    private async Task LoadScenesInternal(
+        IEnumerable<string> scenesToLoad,
+        SceneType sceneType,
+        SceneActivationToken activationToken = null,
+        float progressOffset = 0,
+        float progressTarget = 1,
+        bool sceneOpInProgressWhenFinished = false)
+    {
+        bool scenesLoadedAndActivated = true;
+
+        foreach (string sceneName in scenesToLoad)
+        {
+            Scene scene = SceneManager.GetSceneByName(sceneName);
+
+            // Ensure that the scene object is valid before attempting to access its properties
+            if (scene != null)
+            {
+                scenesLoadedAndActivated &= (scene.IsValid() && scene.isLoaded);
+            }
+        }
+
+        // Additional logic to handle the scene loading and activation
+        if (scenesLoadedAndActivated)
+        {
+            Debug.Log("All scenes loaded and activated successfully.");
+        }
+    }
+}

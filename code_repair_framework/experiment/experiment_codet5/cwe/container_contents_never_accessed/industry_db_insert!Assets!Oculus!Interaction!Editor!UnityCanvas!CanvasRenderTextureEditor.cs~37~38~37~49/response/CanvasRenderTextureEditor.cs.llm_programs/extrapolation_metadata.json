@@ -1,0 +1,47 @@
+[
+    {
+        "filename": "codet5_response.json.0.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "codet5",
+        "temperature": 1,
+        "top_p": 1
+    },
+    {
+        "filename": "codet5_response.json.1.cs",
+        "duplicate_of": "codet5_response.json.0.cs",
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "codet5",
+        "temperature": 1,
+        "top_p": 1
+    },
+    {
+        "filename": "codet5_response.json.2.cs",
+        "duplicate_of": null,
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "codet5",
+        "temperature": 1,
+        "top_p": 1
+    },
+    {
+        "filename": "codet5_response.json.3.cs",
+        "duplicate_of": "codet5_response.json.0.cs",
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "codet5",
+        "temperature": 1,
+        "top_p": 1
+    },
+    {
+        "filename": "codet5_response.json.4.cs",
+        "duplicate_of": "codet5_response.json.0.cs",
+        "extrapolate_error": false,
+        "experiment_extension": "cs",
+        "engine": "codet5",
+        "temperature": 1,
+        "top_p": 1
+    }
+]

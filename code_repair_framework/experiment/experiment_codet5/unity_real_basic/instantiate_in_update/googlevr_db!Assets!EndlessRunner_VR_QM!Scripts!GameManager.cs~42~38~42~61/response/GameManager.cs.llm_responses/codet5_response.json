@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update() {\n\n\n        if (enemyPointer < player.cameraRig.transform.position.z) {\n            enemyPointer += spawnDistanceFromEnemy;\n\n\n<BUGS>            GameObject enemyObject = Instantiate(enemyPrefab);\n<BUGE>            enemyObject.transform.position = new Vector3(Random.Range(-4f, 4f), Random.Range(2.5f, 6.5f), player.cameraRig.transform.position.z + spawnDistanceFromPlayer);\n\n        }\n\n        gameTimer += Time.deltaTime;   // Increment the game timer \n\n\n        if (isGamerOver == false) {\n            uiText.text = \"Time: \" + Mathf.FloorToInt(gameTimer) + \"   Score: \" + player.score  +  \"   Speed: \" + Mathf.Floor(player.speed) ;\n\n            if (player.reachedFinishLine == true) { // Change Boolean when player hits finish line and save the final time and score\n                isGamerOver = true;\n                finalTime = gameTimer;\n                finalScore = player.score;\n            }\n        } else {  // What to do when the player hits the finish line\n            uiText.text = \"Game Over!\\nTime: \" + Mathf.FloorToInt(finalTime) + \"   Score: \" + finalScore + \"\\nRestarting in: \" + Mathf.Floor(gameOverTimer);\n            player.speed = 0.3f;  player.maxSpeed = 0.75f;\n\n            gameOverTimer -= Time.deltaTime;    // Gamer restart logic\n            if (gameOverTimer <= 0) {\n                SceneManager.LoadScene(SceneManager.GetActiveScene().name); \n            }\n        }\n\n\n\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            GameObject enemyObject=Instantiate(enemyPrefab, player.worldObj); <FIXE> <FIXS>\n\n           ; <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            GameObject enemyObject=CopperFactory.GetEnemy(player.worldObj); <FIXE> <FIXS> PDProfile profile=PlayerSettings.GetProfile(player.playerId); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>            GameObject enemyObject=Types.Instantiate(enemyPrefab);\n<FIXE> <FIXS> PDProfile profile=PlayerSettings.GetProfile(player.playerName); if (profile == null) { enemyObject=Instantiate(enemyPrefab);\n<FIXE> <FIXS> PDProfile profile=PlayerSettings.GetProfile(player.playerName); if (profile == null) { enemyObject=Instantiate(enemyPrefab);\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>            GameObject enemyObject=Types.Instantiate(enemyPrefab);\n<FIXE> <FIXS> PDProfile profile=PlayerSettings.GetProfile(player.playerName); if (profile == null) { enemyObject=Instantiate(enemyPrefab);\n<FIXE> <FIXS> synchronized (genlock) { acquireEnemy(enemyObject); } <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> PDObject enemyObject=Instantiate(enemyPrefab);\n<FIXE> <FIXS> PDObject doneObject=Instantiate(donePrefab);\n<FIXE> <FIXS> PDObject done=Instantiate(donePrefab);\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

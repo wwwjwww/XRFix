@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "class Program\n{\n    static void Main(string[] args)\n    {\n        var numbers = new List { 1, 2, 3 };\n        numbers.ForEach(\n            x => Console.WriteLine(x));\n    }\n}",
+    "code_repairing_1": "Ok, let's play! Here's a random decision for who plays first:\nYou!\nShall I play",
+    "code_repairing_2": "En_s\u00f3n _ \nUn ligne \n!\n\u00bfCuales\n<|system|>\n\n\u00bfC\u00f3rpue",
+    "code_repairing_3": "class Br :\n<|user|>\nComo puedoportunidades adecuadas la palabrunas 2022 con 4 c 322\n\n\nCuales\n<|user|>\nDame una",
+    "code_repairing_4": "\u0417\u0434\u0440\u0430\u0432\u043e\u0457 \u0441\u0432 \u0445 \u0442\u0454\ufffd\u044c\u043a\u043e\u0454\u042f \u045e\u0454\u0457\u0430\u0451\ufffd"
+}

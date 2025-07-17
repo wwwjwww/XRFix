@@ -1,0 +1,33 @@
+{
+  "input_code": "    private void Update()\n    {\n        if (!ballGrabbed && OVRInput.GetDown(actionBtn))\n        {\n            currentBall = Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity);\n            currentBall.transform.parent = rightControllerPivot.transform;\n            ballGrabbed = true;\n        }\n\n        if (ballGrabbed && OVRInput.GetUp(actionBtn))\n        {\n            currentBall.transform.parent = null;\n            var ballPos = currentBall.transform.position;\n            var vel = trackingspace.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);\n            var angVel = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);\n<BUGS>            currentBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel);\n<BUGE>            ballGrabbed = false;\n        }\n    }\n\n/*Addition Code for reference:\n    public void Release(Vector3 pos, Vector3 vel, Vector3 angVel)\n    {\n        isReleased = true;\n        transform.position = pos; // set the orign to match target\n        GetComponent<Rigidbody>().isKinematic = false;\n        GetComponent<Rigidbody>().velocity = vel;\n        GetComponent<Rigidbody>().angularVelocity = angVel;\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            currentBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel, true); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            currentBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel, OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch)); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> final BouncingBallLogic ballLogic=currentBall.GetComponent<BouncingBallLogic>(); if (ballLogic != null) ballLogic.Release(ballPos, vel, angVel); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> knobbroadBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> knobb.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

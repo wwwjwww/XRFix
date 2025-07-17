@@ -1,0 +1,33 @@
+{
+  "input_code": "    public void ProcessAudioSamplesRaw(short[] data, int channels)\n    {\n\n<BUGS>        lock (this)\n<BUGE>        {\n            if (Context == 0 || OVRLipSync.IsInitialized() != OVRLipSync.Result.Success)\n            {\n                return;\n            }\n            var frame = this.Frame;\n            OVRLipSync.ProcessFrame(Context, data, frame, channels == 2);\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> lock (this)\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

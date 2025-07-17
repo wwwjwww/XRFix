@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyxDUy6ctrDNc6l5NXw4Sq98TtNR",
+    "object": "chat.completion",
+    "created": 1724321015,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends = new List<MeshRenderer>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "private List<Renderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends = new List<MeshRenderer>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "private List<Renderer> rends;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "private List<MeshRenderer> rends = new List<MeshRenderer>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 91,
+        "completion_tokens": 53,
+        "total_tokens": 144
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

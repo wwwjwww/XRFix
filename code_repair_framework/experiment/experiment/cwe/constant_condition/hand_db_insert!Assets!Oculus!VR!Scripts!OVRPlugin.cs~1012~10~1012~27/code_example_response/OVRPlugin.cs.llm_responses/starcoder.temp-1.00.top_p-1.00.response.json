@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```\n\npublic enum BoneId\n{\n\tMax = Math.Max(((int)Hand_End), 50),\n}\n```",
+    "code_repairing_1": "// \tCorrected Code: \n\n// \tCorrected Code: \npublic int Max(int a, int b) {\n\treturn a",
+    "code_repairing_2": "\u00bfCu\u00e1l ser rol",
+    "code_repairing_3": "Fixed Code:\n\nusing System;\nusing System.Runtime.InteropServices;\nusing UnityEngine;\n\npublic enum BoneId\n{\n\tHip",
+    "code_repairing_4": "```using System.Threading.Tasks;\n\nclass Program\n{\n\u00a0\u00a0\u00a0 public static void Main(string[]"
+}

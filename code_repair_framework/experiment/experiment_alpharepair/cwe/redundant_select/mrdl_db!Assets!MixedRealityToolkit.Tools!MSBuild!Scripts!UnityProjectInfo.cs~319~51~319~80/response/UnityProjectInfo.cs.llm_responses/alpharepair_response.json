@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {",
+            "confidence_score": -0.020701183006167412
+        },
+        {
+            "fixed_line": " {}",
+            "confidence_score": -7.151608467102051
+        },
+        {
+            "fixed_line": " {{",
+            "confidence_score": -7.270264625549316
+        },
+        {
+            "fixed_line": " {{{",
+            "confidence_score": -7.477385520935059
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/redundant_select/mrdl_db!Assets!MixedRealityToolkit.Tools!MSBuild!Scripts!UnityProjectInfo.cs~319~51~319~80/UnityProjectInfo.cs",
+    "error_line": "319",
+    "total_fixes": 4
+}

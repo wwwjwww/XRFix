@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzRJIlIdULVI3XnKGGjRh3KT9zLc",
+    "object": "chat.completion",
+    "created": 1724322881,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprotected virtual void Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    lock (this)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, enableAcceleration ? (int)OVRLipSync.ContextFlags.ENABLE_DOPPLER : 0) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Awake ERROR: Could not create Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprotected virtual void Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    lock (this)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Awake ERROR: Could not create\" +\n                    \" Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    lock (this)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Start ERROR: Could not create\" +\n                    \" Phoneme context.\");\n                return;\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    lock (this)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, 0, enableAcceleration)\n                != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Awake ERROR: Could not create\" +\n                    \" Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nvoid Awake()\n{\n    if (!audioSource)\n    {\n        audioSource = GetComponent<AudioSource>();\n    }\n\n    lock (this)\n    {\n        if (context == 0)\n        {\n            if (OVRLipSync.CreateContext(ref context, provider, enableAcceleration ? 1u : 0u) != OVRLipSync.Result.Success)\n            {\n                Debug.LogError(\"OVRLipSyncContextBase.Start ERROR: Could not create Phoneme context.\");\n            }\n        }\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 547,
+        "completion_tokens": 543,
+        "total_tokens": 1090
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

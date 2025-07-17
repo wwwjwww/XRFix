@@ -1,0 +1,33 @@
+{
+  "input_code": "\n  [DllImport(\"SoundStageNative\")]\n  public static extern void ProcessWaveTexture(float[] buffer, int length, System.IntPtr pixels, byte Ra, byte Ga, byte Ba, byte Rb, byte Gb, byte Bb,\n    int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n\n<BUGS>  List<float> bufferDrawList;\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> Iterable<float> bufferDrawList; <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> List<float> bufferDrawList=new ArrayList<float>(); bufferDrawList.add(0.0F); bufferDrawList.add(1.0F); bufferDrawList.add(2.0F); bufferDrawList.add(3.0F); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> List<float> bufferDrawList; <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,56 @@
+//======= Copyright (c) Valve Corporation, All rights reserved. ===============
+
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace Valve.VR.InteractionSystem
+{
+	public class Unparent : MonoBehaviour
+	{
+		// A simple object pooler for this specific type of object
+		private static Queue<GameObject> objectPool = new Queue<GameObject>();
+
+		private Transform oldParent;
+
+		void Start()
+		{
+			oldParent = transform.parent;
+			transform.parent = null;
+			gameObject.name = oldParent.gameObject.name + "." + gameObject.name;
+		}
+
+		void Update()
+		{
+			if (oldParent == null)
+			{
+				// Instead of destroying, add the object back to the pool
+				PutObjectBackInPool(gameObject);
+			}
+		}
+
+		private void PutObjectBackInPool(GameObject obj)
+		{
+			// Clear object state for reuse if necessary
+			obj.SetActive(false);
+			objectPool.Enqueue(obj);
+		}
+
+		public static GameObject GetObjectFromPool(Transform parent)
+		{
+			if (objectPool.Count > 0)
+			{
+				GameObject obj = objectPool.Dequeue();
+				obj.transform.parent = parent;
+				obj.SetActive(true);
+				return obj;
+			}
+			else
+			{
+				// Handle the case when the pool is empty
+				Debug.LogWarning("Pool is empty. Consider increasing pool size or creating new object.");
+				return null;
+			}
+		}
+	}
+}

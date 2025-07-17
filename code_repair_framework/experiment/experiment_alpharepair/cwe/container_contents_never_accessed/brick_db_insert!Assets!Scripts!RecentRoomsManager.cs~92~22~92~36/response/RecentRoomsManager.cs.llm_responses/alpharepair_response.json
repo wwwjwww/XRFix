@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": "\\r\\n",
+            "confidence_score": -2.991437866759952
+        },
+        {
+            "fixed_line": "\\n\"\";",
+            "confidence_score": -3.414265338331461
+        },
+        {
+            "fixed_line": " {}; {",
+            "confidence_score": -8.886817455291748
+        },
+        {
+            "fixed_line": " {};",
+            "confidence_score": -9.545783519744873
+        },
+        {
+            "fixed_line": ".",
+            "confidence_score": -12.61776351928711
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Scripts!RecentRoomsManager.cs~92~22~92~36/RecentRoomsManager.cs",
+    "error_line": "92",
+    "total_fixes": 5
+}

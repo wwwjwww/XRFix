@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>\tprivate List<Vector3> cachedGeometryList = new List<Vector3>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>\t private List<Vector3> cachedGeometryList=new List<>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\tprivate List<Vector3> cachedGeometryList=new List<>();\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>\t private static List<Vector3> cachedGeometryList=new List<Vector3>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>\t private synchronized List<Vector3> cachedGeometryList=new List<Vector3>(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> HttpStatus status=Status.SUCCESS; List<Vector3> cachedGeometryList=new List<Vector3>(); rowIndex=0; <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

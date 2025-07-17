@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Text;
+using UnityEditor;
+using UnityEditor.Compilation;
+using UnityEngine;
+
+// Assuming that CSProjectInfo is a defined class elsewhere in the project
+public class SolutionExporter
+{
+    public void ExportSolution(string solutionTemplateText, string projectFileTemplateText, string generatedProjectPath)
+    {
+        // Remove the redundant select method call
+        foreach (CSProjectInfo project in orderedProjects)
+        {
+            // Implementation logic here
+        }
+    }
+
+    // Ensure orderedProjects is properly defined and initialized
+    private IEnumerable<CSProjectInfo> orderedProjects;
+
+    // Example initialization (implement actual logic as needed)
+    public SolutionExporter()
+    {
+        // Initialize with some projects, replace with actual logic if needed
+        orderedProjects = new List<CSProjectInfo>();
+    }
+}

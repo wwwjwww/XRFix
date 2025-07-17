@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzg45UGn3DzBVMMT2lO6NgYQrz9f",
+    "object": "chat.completion",
+    "created": 1724323796,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "                if (false)\n                    // END OF FIXED CODE\n                    //                     if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n                    // FIXED CODE:\n#endif\n                {\n                    break;\n                }\n\n                segmentStartTime = segmentEndTime;\n                segmentStartPos = segmentEndPos;\n            }\n\n            return hitInfo.collider ? segmentStartTime : float.MaxValue;\n        }\n\n\n        \n        private Vector3 GetArcPositionAtTime(float time)\n        {\n            Vector3 gravity = useGravity ? Physics.gravity : Vector3.zero;\n            Vector3 initialPos = startPos;\n            Vector3 initialVelocity = projectileVelocity;\n\n            return ArcPhysics.PositionAtTime(initialPos, initialVelocity, gravity, time);\n        }\n    }\n}\n\"\"\""
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "                if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n                {\n                    return segmentStartTime;\n                }\n#endif\n            }\n\n            segmentStartTime += timeStep;\n            segmentStartPos = segmentEndPos;\n\n            return float.MaxValue;\n        }\n\n\n        \n        private Vector3 GetArcPositionAtTime(float currentTime)\n        {\n            float gravity = useGravity ? Physics.gravity.magnitude : 0.0f;\n            Vector3 pos = startPos + projectileVelocity * currentTime;\n            pos.y += 0.5f * (-gravity) * currentTime * currentTime;\n            return pos;\n        }\n\n\n        \n        private void HideLineSegments(int start, int end)\n        {\n            for (int i = start; i < end; ++i)\n            {\n                lineRenderers[i].enabled = false;\n            }\n        }\n    }\n\n}\n\n\"\"\""
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                    if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "lineRenderers[i].startWidth = thickness;\nlineRenderers[i].endWidth = thickness;\nlineRenderers[i].startColor = color;\nlineRenderers[i].endColor = color;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n                    if (hitInfo.collider.GetComponent<IgnoreTeleportTrace>() == null)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1638,
+        "completion_tokens": 398,
+        "total_tokens": 2036
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

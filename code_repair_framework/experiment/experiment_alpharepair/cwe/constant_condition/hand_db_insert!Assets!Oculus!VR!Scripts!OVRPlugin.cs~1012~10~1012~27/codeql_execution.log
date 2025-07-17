@@ -1,0 +1,32 @@
+
+=== CodeQL Execution Log  ===
+Setting up CodeQL test with feedback for OVRPlugin.cs using gpt-3.5-turbo
+Processing response file: gpt-3.5-turbo.temp-1.00.top_p-1.00.response.json.0.cs
+Running CodeQL test for gpt-3.5-turbo.temp-1.00.top_p-1.00.response.json.0.cs
+Running original analysis: codeql database analyze "D:\Bug_injection_project\HandPosing_Demo-master\hand_db_insert" "D:\codeql\csharp\ql\src/Bad Practices/Control-Flow/ConstantCondition.ql" --format=csv --output=".\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\result\gpt-3.5-turbo\result_original.csv" --rerun
+Replacing file for analysis
+Error during test execution: [WinError 3] The system cannot find the path specified: 'D:/Assets/Oculus/VR/Scripts/OVRPlugin.cs' -> 'D:/Assets/Oculus/VR/Scripts/OVRPlugin_original.cs'
+Gathering CodeQL test results for OVRPlugin.cs with gpt-3.5-turbo
+Completed gathering results with 1 entries
+Completed CodeQL test setup and execution with feedback
+
+=== CodeQL Execution Log  ===
+Setting up CodeQL test with feedback for OVRPlugin.cs using gpt-4-turbo
+Processing response file: gpt-4-turbo.temp-1.00.top_p-1.00.response.json.0.cs
+Running CodeQL test for gpt-4-turbo.temp-1.00.top_p-1.00.response.json.0.cs
+Running original analysis: codeql database analyze "D:\Bug_injection_project\HandPosing_Demo-master\hand_db_insert" "D:\codeql\csharp\ql\src/Bad Practices/Control-Flow/ConstantCondition.ql" --format=csv --output=".\experiment\cwe\constant_condition\hand_db_insert!Assets!Oculus!VR!Scripts!OVRPlugin.cs~1012~10~1012~27\result\gpt-4-turbo\result_original.csv" --rerun
+Replacing file for analysis
+Error during test execution: [WinError 3] The system cannot find the path specified: 'D:/Assets/Oculus/VR/Scripts/OVRPlugin.cs' -> 'D:/Assets/Oculus/VR/Scripts/OVRPlugin_original.cs'
+Processing response file: gpt-4-turbo.temp-1.00.top_p-1.00.response.json.1.cs
+Running CodeQL test for gpt-4-turbo.temp-1.00.top_p-1.00.response.json.1.cs
+Processing response file: gpt-4-turbo.temp-1.00.top_p-1.00.response.json.2.cs
+Running CodeQL test for gpt-4-turbo.temp-1.00.top_p-1.00.response.json.2.cs
+Processing response file: gpt-4-turbo.temp-1.00.top_p-1.00.response.json.3.cs
+Running CodeQL test for gpt-4-turbo.temp-1.00.top_p-1.00.response.json.3.cs
+Processing response file: gpt-4-turbo.temp-1.00.top_p-1.00.response.json.4.cs
+Running CodeQL test for gpt-4-turbo.temp-1.00.top_p-1.00.response.json.4.cs
+Replacing file for analysis
+Error during test execution: [WinError 3] The system cannot find the path specified: 'D:/Assets/Oculus/VR/Scripts/OVRPlugin.cs' -> 'D:/Assets/Oculus/VR/Scripts/OVRPlugin_original.cs'
+Gathering CodeQL test results for OVRPlugin.cs with gpt-4-turbo
+Completed gathering results with 5 entries
+Completed CodeQL test setup and execution with feedback

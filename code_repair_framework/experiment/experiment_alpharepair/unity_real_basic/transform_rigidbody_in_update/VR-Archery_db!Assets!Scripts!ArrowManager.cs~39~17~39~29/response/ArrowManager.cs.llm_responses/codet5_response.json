@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        debug.text = controler.transform.rotation.x.ToString() +\n                     \"\\n\" + controler.transform.rotation.y.ToString() +\n                     \"\\n\" + controler.transform.rotation.z.ToString();\n        if (OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0)\n        {\n            if (!hasArrow)\n            {\n<BUGS>                AttachArrow();\n<BUGE>            } else if (isAttached) {\n                Fire();\n            }\n        }\n        else ThrowArrow();\n    }\n\n/*Addition Code for reference:\n    public void AttachArrow()\n    {\n        if (currentArrow == null)\n        {\n            currentArrow = Instantiate(arrowPrefab, controler.transform);\n            currentArrow.transform.localPosition = new Vector3(0.1f, 0f, 0.3f);\n            currentArrow.GetComponent<Rigidbody>().isKinematic = true;\n            hasArrow = true;\n        }\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> PDContent b=new PDContent(); b.GetComponent<Rigidbody>().isKinematic=true; b.transform.localPosition=new Vector3(0.5f, 0f, 0.3f); b.AttachArrow(); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> PDPage.AttachArrow(); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>                AttachArrow() + \"/\" + controler.transform.rotation.w.ToString(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> PDENDEND: <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

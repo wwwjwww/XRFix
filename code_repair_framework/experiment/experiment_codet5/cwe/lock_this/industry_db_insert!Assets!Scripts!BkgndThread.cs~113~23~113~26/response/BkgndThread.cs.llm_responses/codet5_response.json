@@ -1,0 +1,33 @@
+{
+  "input_code": "        public Compute(RunDelegateWithCompute run_delegate)\n        {\n            Schedule(() =>\n            {\n                T result1 = run_delegate(this);\n<BUGS>                lock (this)\n<BUGE>                {\n                    result = result1;\n                    got_answer = true;\n                }\n            });\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> lru_lock(this)\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> lock(this, 2)\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> locks(this)\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

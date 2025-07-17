@@ -1,0 +1,3 @@
+{
+  "test_code": "        public bool TryGetAnswer(out T answer)\n        {\n            if (got_answer)\n            {\n<BUGS>                lock (this)\n<BUGE>                    answer = result;\n                return true;\n            }\n            else\n            {\n                answer = default(T);\n                return false;\n            }\n        }\n"
+}

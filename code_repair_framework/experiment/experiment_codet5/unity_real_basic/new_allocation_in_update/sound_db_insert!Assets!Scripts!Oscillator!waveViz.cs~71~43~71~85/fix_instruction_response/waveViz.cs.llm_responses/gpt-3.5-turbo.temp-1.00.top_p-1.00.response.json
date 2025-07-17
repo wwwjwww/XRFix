@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qvSxS6Xt4mYKVTR8tx5E3oUw0GEP",
+    "object": "chat.completion",
+    "created": 1722400983,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nVector2 offset = new Vector2((float)curWaveW / wavewidth, 0);\nwaverend.material.mainTextureOffset = offset;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    Vector2 textureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n    waverend.material.mainTextureOffset = textureOffset;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        Vector2 offset = waverend.material.mainTextureOffset;\n        offset.x = (float)curWaveW / wavewidth;\n        waverend.material.mainTextureOffset = offset;\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 621,
+        "completion_tokens": 165,
+        "total_tokens": 786
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

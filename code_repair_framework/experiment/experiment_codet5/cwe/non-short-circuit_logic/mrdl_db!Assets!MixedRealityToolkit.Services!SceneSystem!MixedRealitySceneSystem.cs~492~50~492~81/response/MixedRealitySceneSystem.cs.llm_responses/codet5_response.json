@@ -1,0 +1,33 @@
+{
+  "input_code": "        private async Task LoadScenesInternal(\n            IEnumerable<string> scenesToLoad,\n            SceneType sceneType,\n            SceneActivationToken activationToken = null,\n            float progressOffset = 0,\n            float progressTarget = 1,\n            bool sceneOpInProgressWhenFinished = false)\n        {\n\n            activationToken?.SetReadyToProceed(false);\n\n            SetSceneOpProgress(true, progressOffset, sceneType);\n\n\n            List<string> validNames = new List<string>();\n            List<int> validIndexes = new List<int>();\n\n            foreach (string sceneName in scenesToLoad)\n            {\n\n                Scene scene;\n                int sceneIndex;\n                if (!RuntimeSceneUtils.FindScene(sceneName, out scene, out sceneIndex))\n                {\n                    Debug.LogError(\"Can't load invalid scene \" + sceneName);\n                }\n                else\n                {\n                    validIndexes.Add(sceneIndex);\n                    validNames.Add(sceneName);\n                }\n            }\n\n            int totalSceneOps = validIndexes.Count;\n            if (totalSceneOps < 1)\n            {\n                Debug.LogWarning(\"No valid scenes found to load.\");\n                SetSceneOpProgress(sceneOpInProgressWhenFinished, progressTarget, sceneType);\n                return;\n            }\n\n\n            InvokeWillLoadActions(validNames, sceneType);\n\n\n            if (validIndexes.Count > 0)\n            {\n                List<AsyncOperation> loadSceneOps = new List<AsyncOperation>();\n                foreach (int sceneIndex in validIndexes)\n                {\n                    Scene scene = SceneManager.GetSceneByBuildIndex(sceneIndex);\n                    if (scene.isLoaded)\n                        continue;\n\n                    AsyncOperation sceneOp = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);\n\n                    sceneOp.allowSceneActivation = (activationToken != null) ? activationToken.AllowSceneActivation : true;\n                    loadSceneOps.Add(sceneOp);\n                }\n\n\n                bool completedAllSceneOps = false;\n\n                while (!completedAllSceneOps)\n                {\n                    if (!Application.isPlaying)\n                    {   // Break out of this loop if we've stopped playmode\n                        return;\n                    }\n\n                    completedAllSceneOps = true;\n                    bool readyToProceed = false;\n                    bool allowSceneActivation = (activationToken != null) ? activationToken.AllowSceneActivation : true;\n\n\n                    float sceneOpProgress = 0;\n                    for (int i = 0; i < loadSceneOps.Count; i++)\n                    {\n\n\n                        loadSceneOps[i].allowSceneActivation = allowSceneActivation;\n\n                        if (loadSceneOps[i].isDone)\n                        {   // Sometimes if a scene is small enough, progress will get reset to 0 before you even have a chance to check it\n\n\n                            sceneOpProgress += 1;\n                        }\n                        else\n                        {\n                            readyToProceed |= loadSceneOps[i].progress >= SceneActivationLoadProgress;\n                            sceneOpProgress += loadSceneOps[i].progress;\n                            completedAllSceneOps = false;\n                        }\n                    }\n\n\n                    activationToken?.SetReadyToProceed(readyToProceed);\n\n                    sceneOpProgress = Mathf.Clamp01(SceneOperationProgress / totalSceneOps);\n                    \n                    SetSceneOpProgress(true, Mathf.Lerp(progressOffset, progressTarget, sceneOpProgress), sceneType);\n\n                    await Task.Yield();\n                }\n            }\n\n\n            bool scenesLoadedAndActivated = false;\n            while (!scenesLoadedAndActivated)\n            {\n                if (!Application.isPlaying)\n                {   // Break out of this loop if we've stopped playmode\n                    return;\n                }\n\n                scenesLoadedAndActivated = true;\n                foreach (int sceneIndex in validIndexes)\n                {\n                    Scene scene = SceneManager.GetSceneByBuildIndex(sceneIndex);\n<BUGS>                    scenesLoadedAndActivated &= (scene.IsValid() & scene.isLoaded);\n<BUGE>                }\n                await Task.Yield();\n            }\n\n\n            contentTracker.RefreshLoadedContent();\n\n\n            SetSceneOpProgress(sceneOpInProgressWhenFinished, progressTarget, sceneType);\n            \n            InvokeLoadedActions(validNames, sceneType);\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE> <FIXS> Base.ProgressDialog.SetProgress(progressOffset, sceneType); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> Client client=ClientFactory.GetClient(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzlLfjv4NV8k8A2ulnCJ9FYsHmR4",
+    "object": "chat.completion",
+    "created": 1724324123,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "bool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1428,
+        "completion_tokens": 65,
+        "total_tokens": 1493
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

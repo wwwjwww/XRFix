@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzSqdlY3zZRSHzRMTWYDxgDAGPnP",
+    "object": "chat.completion",
+    "created": 1724322976,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    if (!string.IsNullOrEmpty(data.midiOutConnection)) {\n      midiOutButton.startToggled = true;\n      _midiOut.ConnectByName(data.midiOutConnection);\n    }\n\n    sequenceButton.startToggled = data.sequencerEnabled;\n    _timeline.gameObject.SetActive(data.sequencerEnabled);\n\n    _timeline.LoadTimelineData(data.timelineData);\n    _timeline.heightHandle.transform.localPosition = new Vector3(\n      _timeline.heightHandle.transform.localPosition.x,\n      data.timelineHeight,\n      _timeline.heightHandle.transform.localPosition.z\n    );\n\n    foreach (var eventData in data.timelineEvents) {\n      _timeline.AddEvent(eventData);\n    }\n\n    muteButton.onToggle(data.muted);\n    toggleMute(data.muted);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!string.IsNullOrEmpty(data.midiOutConnection)) {\n  midiOutButton.startToggled = true;\n  _midiOut.ConnectByName(data.midiOutConnection);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!string.IsNullOrEmpty(data.midiOutConnection)) {\n  midiOutButton.startToggled = true;\n  _midiOut.ConnectByName(data.midiOutConnection);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!string.IsNullOrEmpty(data.midiOutConnection)) {\n  midiOutButton.startToggled = true;\n  _midiOut.ConnectByName(data.midiOutConnection);\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (!string.IsNullOrEmpty(data.midiOutConnection)) {\n  midiOutButton.startToggled = true;\n  _midiOut.ConnectByName(data.midiOutConnection);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1860,
+        "completion_tokens": 307,
+        "total_tokens": 2167
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

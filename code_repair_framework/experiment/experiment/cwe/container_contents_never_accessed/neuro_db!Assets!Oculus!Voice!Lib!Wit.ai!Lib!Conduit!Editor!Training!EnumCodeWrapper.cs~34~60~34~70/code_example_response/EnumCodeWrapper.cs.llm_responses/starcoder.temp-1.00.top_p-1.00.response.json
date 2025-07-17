@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "class Composers\n{\n    private static readonly IList<string> _genres = new List<string> { \"Classical\", \"Romantic\", \"Jazz\" };\n\n    public static IList<string> GetGenres()\n    {\n        return _genres;\n    }\n}",
+    "code_repairing_1": "```csharp\nusing System;\nusing System.CodeDom;\nusing System.CodeDom.Compiler;\nusing System.Collections.Generic;\nusing System.IO;\nusing System.Linq;\nusing System.Text;\nusing Meta.WitAi;\nusing Microsoft.CSharp",
+    "code_repairing_2": "Las principales caracter\u00edsticas de la f\u00edsica cu\u00e1",
+    "code_repairing_3": "```csharp\n\nusing System;\nusing System.CodeDom;\nusing System.CodeDom.Compiler;\nusing System.Collections.Generic;\nusing System.IO;\nusing System.Linq;\nusing System.Text;\nusing Meta.WitAi;\nusing Microsoft.",
+    "code_repairing_4": "using System;\nusing System.CodeDom;\nusing System.CodeDom.Compiler;\nusing System.Collections.Generic;\nusing System.IO;\nusing System.Linq;\nusing System.Text;\nusing Meta.WitAi;\nusing Microsoft.CSharp;"
+}

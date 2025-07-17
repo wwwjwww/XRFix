@@ -1,0 +1,3 @@
+{
+  "test_code": "    void Update()\n    {\n\n        timeAfterSpawn += Time.deltaTime;\n\n\n        if (timeAfterSpawn >= spawnRate) {\n\n            timeAfterSpawn = 0f;\n\n\n\n<BUGS>            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);\n<BUGE>\n            bullet.transform.LookAt(target);\n\n            spawnRate = Random.Range(spawnRateMin, spawnRateMax);\n\n        }\n\n        \n    }\n"
+}

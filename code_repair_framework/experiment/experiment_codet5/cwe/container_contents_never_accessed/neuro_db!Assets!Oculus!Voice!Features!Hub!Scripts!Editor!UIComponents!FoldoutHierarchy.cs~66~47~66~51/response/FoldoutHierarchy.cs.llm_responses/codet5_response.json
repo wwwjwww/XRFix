@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>        private List<FoldoutHierarchyItem<T>> _data = new List<FoldoutHierarchyItem<T>>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>        private List<FoldoutHierarchyItem<T>> _data=new List<FoldoutHierarchyItem<T>>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>       <T> private List<FoldoutHierarchyItem<T>> _data=new List<FoldoutHierarchyItem<T>>();\n<E>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> public List<FoldoutHierarchyItem<T>> _data=new List<FoldoutHierarchyItem<T>>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> public List<FoldoutHierarchyItem<T>> _data=new List<FoldoutHierarchyItem<T>>(); public List<FoldoutHierarchyItem<T>> markData(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> private <T>List<FoldoutHierarchyItem<T>> _data=new List<FoldoutHierarchyItem<T>>(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "input_code": "  void Update() {\n    playheadScrubbing = playheadHandle.curState == manipObject.manipState.grabbed;\n\n    if (!playheadScrubbing) updatePlayhead();\n    else {\n      playheadHandle.xBounds.y = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.x);\n      playheadHandle.xBounds.x = _deviceInterface._gridParams.UnittoX(_deviceInterface._gridParams.head_tail.y);\n      curGridPosition = _deviceInterface._gridParams.XtoUnit(playheadHandle.transform.localPosition.x);\n      timelineEventUpdate();\n    }\n\n    lock (_recordLock) {\n\n      if (toRecord.Keys.Count > 0) {\n        foreach (KeyValuePair<int, float> entry in toRecord) {\n<BUGS>          activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n<BUGE>          activeEvents[entry.Key].setRecord(true);\n          activeEvents[entry.Key].setOut(entry.Value + .01f);\n          activeEvents[entry.Key].overlapCheck();\n        }\n\n        toRecord.Clear();\n      }\n    }\n  }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>          activeEvents[entry.Key]=_deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f)).get(); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>          activeEvents[entry.Key]=_deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f)).getTimestamp()); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> knockingRecord[entry.Key]=_deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f)); <FIXE> <FIXS> knockingRecord[entry.Key].set(false); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> knockingRecord[entry.Key]=_deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f)); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>\n          activeEvents[entry.Key]=new SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f)); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

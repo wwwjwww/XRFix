@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yywZ79RoLtfgnRz235n8J7nTYAVD",
+    "object": "chat.completion",
+    "created": 1724320975,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Add missing using directive\nusing System.Collections.Generic;\n\n// Add missing namespace for OVRTask struct\nnamespace OculusSDK\n{\n    public readonly struct OVRTask<TResult> : IEquatable<OVRTask<TResult>>, IDisposable\n    {\n        // Existing code for OVRTask struct\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    internal static OVRTask<TResult> GetExisting<TResult>(Guid id) => Get<TResult>(id);\n    internal static OVRTask<TResult> GetExisting<TResult>(ulong id) => Get<TResult>(GetId(id));\n\n    internal static void SetResult<TResult>(Guid id, TResult result) =>\n        GetExisting<TResult>(id).SetResult(result);\n\n    internal static void SetResult<TResult>(ulong id, TResult result) =>\n        GetExisting<TResult>(id).SetResult(result);\n\n    private static OVRTask<TResult> Get<TResult>(Guid id)\n    {\n        return new OVRTask<TResult>(id);\n    }\n\n    private static OVRTask<TResult> Create<TResult>(Guid id)\n    {\n        var task = Get<TResult>(id);\n        task.AddToPending();\n        return task;\n    }\n\n    internal static unsafe Guid GetId(ulong value)\n    {\n        const ulong hashModifier1 = 0x319642b2d24d8ec3;\n        const ulong hashModifier2 = 0x96de1b173f119089;\n        var guid = default(Guid);\n        *(ulong*)&guid = unchecked(value + hashModifier1);\n        *((ulong*)&guid + 1) = hashModifier2;\n        return guid;\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        internal static OVRTask<TResult> GetExisting(Guid id) => Get(id);\n\n        internal static OVRTask<TResult> GetExisting(ulong id) => Get(GetId(id));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    public void SetResult(TResult result)\n    {\n        Results[id] = result;\n        ExecuteContinuation(id);\n    }\n\n    public void Dispose()\n    {\n        RemovePending(id);\n        Results.Remove(id);\n        Continuations.Remove(id);\n        CallbackInvokers.Remove(id);\n        CallbackRemovers.Remove(id);\n        InternalDataRemovers.Remove(id);\n        SubscriberRemovers.Remove(id);\n    }\n\n    public static bool operator ==(OVRTask<TResult> left, OVRTask<TResult> right)\n    {\n        return left.Equals(right);\n    }\n\n    public static bool operator !=(OVRTask<TResult> left, OVRTask<TResult> right)\n    {\n        return !(left == right);\n    }\n\n    public bool Equals(OVRTask<TResult> other)\n    {\n        return id.Equals(other.id);\n    }\n\n    public override bool Equals(object obj)\n    {\n        if (obj is OVRTask<TResult> ovrTask)\n        {\n            return Equals(ovrTask);\n        }\n        return false;\n    }\n\n    public override int GetHashCode()\n    {\n        return id.GetHashCode();\n    }\n\n    private static void RemovePending(Guid id)\n    {\n        Pending.Remove(id);\n    }\n\n    private static void ExecuteContinuation(Guid id)\n    {\n        if (Continuations.TryGetValue(id, out Action continuation))\n        {\n            Continuations.Remove(id);\n            continuation.Invoke();\n        }\n    }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 835,
+        "completion_tokens": 667,
+        "total_tokens": 1502
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

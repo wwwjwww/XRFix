@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update ()\n    {\n        if (Input.GetKeyDown(KeyCode.Alpha1))\n        {\n            targetSet = 0;\n            SetCurrentTarget();\n        }\n        else if (Input.GetKeyDown(KeyCode.Alpha2))\n        {\n            targetSet = 1;\n            SetCurrentTarget();\n        }\n        else if (Input.GetKeyDown(KeyCode.Alpha3))\n        {\n            targetSet = 2;\n            SetCurrentTarget();\n        }\n        else if (Input.GetKeyDown(KeyCode.Alpha4))\n        {\n            targetSet = 3;\n            SetCurrentTarget();\n        }\n        else if (Input.GetKeyDown(KeyCode.Alpha5))\n        {\n            targetSet = 4;\n            SetCurrentTarget();\n        }\n        else if (Input.GetKeyDown(KeyCode.Alpha6))\n        {\n            targetSet = 5;\n            SetCurrentTarget();\n\n        }\n\n        if (Input.GetKeyDown (KeyCode.Escape))\n        {\n           Application.Quit();\n        }\n\n\n#if UNITY_2019_1_OR_NEWER\n<BUGS>        var inputDevices = new List<InputDevice>();\n<BUGE>#if UNITY_2019_3_OR_NEWER\n        InputDevices.GetDevicesWithCharacteristics(InputDeviceCharacteristics.HeldInHand, inputDevices);\n#else\n        InputDevices.GetDevicesWithRole(InputDeviceRole.RightHanded, inputDevices);\n#endif\n        var primaryButtonPressed = false;\n        var secondaryButtonPressed = false;\n        foreach (var device in inputDevices)\n        {\n            bool boolValue;\n            if (device.TryGetFeatureValue(CommonUsages.primaryButton, out boolValue) && boolValue)\n            {\n                primaryButtonPressed = true;\n            }\n            if (device.TryGetFeatureValue(CommonUsages.secondaryButton, out boolValue) && boolValue)\n            {\n                secondaryButtonPressed = true;\n            }\n        }\n        if (primaryButtonPressed && !XRButtonBeingPressed)\n        {\n            targetSet++;\n            if (targetSet >= maxTarget)\n            {\n              targetSet = 0;\n            }\n            SetCurrentTarget();\n        }\n        if (secondaryButtonPressed && !XRButtonBeingPressed)\n        {\n            targetSet--;\n            if (targetSet < 0)\n            {\n              targetSet = maxTarget - 1;\n            }\n            SetCurrentTarget();\n        }\n        XRButtonBeingPressed = primaryButtonPressed || secondaryButtonPressed;\n#endif\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>        var inputDevices=new ArrayList<>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>        var inputDevices=new ArrayList<>(); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> Enumeration<InputDevice> inputDevices=new Enumeration<InputDevice>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> newlines newlines=1; var inputDevices=new List<InputDevice>();\n<FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> ManifoldSet inputDevices=new ManifoldSet(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

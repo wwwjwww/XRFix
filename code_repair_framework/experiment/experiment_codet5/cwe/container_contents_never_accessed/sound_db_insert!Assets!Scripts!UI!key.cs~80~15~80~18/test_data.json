@@ -1,0 +1,3 @@
+{
+  "test_code": "  public void setSelectAsynch(bool on) {\n    desireSetSelect = on ? 1 : 2;\n  }\n\n  bool phantomHitUpdate = false;\n<BUGS>  Queue<bool> hits = new Queue<bool>();\n<BUGE>"
+}

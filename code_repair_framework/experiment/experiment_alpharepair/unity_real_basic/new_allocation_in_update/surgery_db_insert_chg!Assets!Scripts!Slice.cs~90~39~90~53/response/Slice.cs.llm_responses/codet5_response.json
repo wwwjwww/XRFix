@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        rb2.transform.Rotate(0, 40, 0);\n\n        timer+=Time.deltaTime;\n\n        if (!instantiate_gobj && timer >= timeLimit){\n            a7 = Instantiate(gobj7);\n            timer = 0;\n            instantiate_gobj = true;\n        }\n        if (instantiate_gobj && timer >= timeLimit ){\n            Dispose(a7);\n            timer = 0;\n            instantiate_gobj = false;\n        }\n\n        if (Input.GetMouseButton(0))\n        {\n            RaycastHit hit;\n            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);\n\n            if (meshCollider.Raycast(ray, out hit, Mathf.Infinity))\n            {\n\n<BUGS>                List<int> triangles = new List<int>();\n<BUGE>                triangles.AddRange(mesh.triangles);\n\n\n                int startIndex = hit.triangleIndex * 3;\n\n\n\n\n                triangles.RemoveRange(startIndex, 3);\n\n\n                mesh.triangles = triangles.ToArray();\n                meshCollider.sharedMesh = mesh;\n            }\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                List<Triangle> triangles=new List<Triangle>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>                List<Triplet> triangles=new List<Triplet>();\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>Witness=newWitness();\n<?> triangles=new ArrayList<Triangle>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>Witness=newWitness();\n<?> triangles=new List<Triangle>(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> TextUtils<Triangles> triangles=new TextUtils<Triangles>(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "input_code": "        public static bool FindScene(string sceneName, out Scene scene, out int sceneIndex)\n        {\n            scene = default(Scene);\n            sceneIndex = -1;\n\n\n\n<BUGS>            List<Scene> allScenesInProject = new List<Scene>();\n<BUGE>            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)\n            {\n                string pathToScene = SceneUtility.GetScenePathByBuildIndex(i);\n                string checkSceneName = System.IO.Path.GetFileNameWithoutExtension(pathToScene);\n                if (checkSceneName == sceneName)\n                {\n                    scene = SceneManager.GetSceneByBuildIndex(i);\n                    sceneIndex = i;\n                    return true;\n                }\n            }\n            return false;\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> List<Scene> allScenesInProject=new ArrayList<>();\n<FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> List<Scene> allScenesInProject=new ArrayList<>(); <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> <FIXE> <FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

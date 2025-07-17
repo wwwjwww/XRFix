@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9qF3Zb7UP8Lqism5Pb1NaymEeQxVP",
+    "object": "chat.completion",
+    "created": 1722237961,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nhighlight.SetActive(true);\n// The problematic constant condition has been removed.\nhighlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        if (multiselected) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n      if (multiselected) {\n        highlight.SetActive(true);\n        highlightMat.SetFloat(\"_EmissionGain\", .9f);\n      }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nif (highlightMat != null) highlightMat.SetFloat(\"_EmissionGain\", 0.9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1310,
+        "completion_tokens": 131,
+        "total_tokens": 1441
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

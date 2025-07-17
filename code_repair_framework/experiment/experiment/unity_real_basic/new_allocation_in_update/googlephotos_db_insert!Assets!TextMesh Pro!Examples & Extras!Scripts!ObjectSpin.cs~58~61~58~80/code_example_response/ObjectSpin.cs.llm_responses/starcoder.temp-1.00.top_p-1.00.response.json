@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "Please don't reformat the code, just replace the highlighted code",
+    "code_repairing_1": "```csharp\n        //FIXED CODE:\n        List<string> new_",
+    "code_repairing_2": "import\n```\n<|user|>\n<|user|>\n\u041d\u0430\u043f\u0449\u0435\u0439 \u0444\u043e\u0437",
+    "code_repairing_3": "Please clarify what the program does",
+    "code_repairing_4": "using x = 15, y = 5, z ="
+}

@@ -1,0 +1,33 @@
+{
+  "input_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif ( ( burnTime != 0 ) && ( Time.time > ( ignitionTime + burnTime ) ) && isBurning )\n\t\t\t{\n\t\t\t\tisBurning = false;\n\t\t\t\tif ( customParticles != null )\n\t\t\t\t{\n\t\t\t\t\tcustomParticles.Stop();\n\t\t\t\t}\n\t\t\t\telse\n\t\t\t\t{\n<BUGS>\t\t\t\t\tDestroy( fireObject );\n<BUGE>\t\t\t\t}\n\t\t\t}\n\t\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>\t\t\t\t\tDestroy(fireObjectContext);\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\t\t\t\t\tDestroy(fireObject, true); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> synchronized (this) {\t\t\t\t\tDestroy(fireObject);\n<FIXE> <FIXS> } <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> synchronized (this) {\t\t\t\t\tDestroy(fireObject); } <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> Functions.invokeLater(new Runnable() { public void run() { unwrapObject(); } } ); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

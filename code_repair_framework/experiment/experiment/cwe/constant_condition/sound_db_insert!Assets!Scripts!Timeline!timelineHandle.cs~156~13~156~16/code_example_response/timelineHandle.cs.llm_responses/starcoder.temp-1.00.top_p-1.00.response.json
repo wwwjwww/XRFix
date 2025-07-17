@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "if (true) highlightMat.SetFloat(\"_EmissionGain\",.9f);",
+    "code_repairing_1": "```csharp\nif (multiselected)\n{\n    highlight.SetActive(true);",
+    "code_repairing_2": "This code can youfix\n<|system|>\n\n\u4f60\u80fd\u5426\u6539\u5584\u5417\n<|system|>",
+    "code_repairing_3": "In \"FIXED\n<|system|>\n\n\u00bfC\u00f3mostre como hacer una tenc",
+    "code_repairing_4": "If a condition\n<|user|>\nQue temperatura de cocci\u00f3n es recomendado"
+}

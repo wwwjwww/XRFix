@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzQEc5BrNXU7oB3g2E3XQGHvSfkV",
+    "object": "chat.completion",
+    "created": 1724322814,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    Queue<bool> hits = new Queue<bool>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic void SetSelectAsynch(bool on) {\n    Queue<bool> hits = new Queue<bool>();\n    hits.Enqueue(on);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\nusing System.Collections.Generic;\n\npublic class YourClassName : MonoBehaviour\n{\n    Queue<bool> hits = new Queue<bool>();\n\n    public void SetSelectAsynch(bool on)\n    {\n        hits.Enqueue(on);\n    }\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nusing UnityEngine;\nusing System.Collections;\nusing System.Collections.Generic;\n\npublic class ClassNameHere // Please add the appropriate class name here\n{\n    private Queue<bool> hits = new Queue<bool>();\n\n    public void SetSelectAsynch(bool on)\n    {\n        hits.Enqueue(on); // Assuming you want to add the value 'on' to the queue\n    }\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nQueue<bool> hits = new Queue<bool>();\n\npublic void SetSelectAsynch(bool on) {\n    hits.Enqueue(on);\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 102,
+        "completion_tokens": 205,
+        "total_tokens": 307
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

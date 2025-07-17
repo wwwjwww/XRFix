@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {",
+            "confidence_score": -1.3028833866119385
+        },
+        {
+            "fixed_line": " try {",
+            "confidence_score": -2.6221203953027725
+        },
+        {
+            "fixed_line": " {}",
+            "confidence_score": -6.197419166564941
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Scripts!brainPart2.cs~14~32~14~36/brainPart2.cs",
+    "error_line": "14",
+    "total_fixes": 3
+}

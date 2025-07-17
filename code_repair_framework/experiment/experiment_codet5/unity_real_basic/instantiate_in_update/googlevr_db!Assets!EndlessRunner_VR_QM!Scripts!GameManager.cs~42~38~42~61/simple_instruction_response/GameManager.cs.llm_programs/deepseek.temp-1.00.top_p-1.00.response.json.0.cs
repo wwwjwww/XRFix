@@ -1,0 +1,122 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour {
+
+    public GameObject enemyPrefab;
+    public Player player;
+
+    private float enemyPointer;     // Calculator for distance of player to enemy
+    public float spawnDistanceFromPlayer = 20f;
+    public float spawnDistanceFromEnemy = 5f;
+
+    public TextMesh uiText;
+
+    public float gameTimer;
+    private float finalTime;
+    private int finalScore;
+    private bool isGamerOver = false;
+    private float gameOverTimer = 4.5f;
+
+    public GameObject finishLine;
+    public float finishLinePosition = 200f;
+
+     
+
+
+    void Start() {
+        finishLine = GameObject.Find("FinishLine");   // Import the Finish Line game object 
+        finishLine.transform.position = new Vector3(0,0,finishLinePosition);  // Location to place the finish line object
+    }
+
+
+///     void Update() {
+// 
+// 
+//         if (enemyPointer < player.cameraRig.transform.position.z) {
+//             enemyPointer += spawnDistanceFromEnemy;
+// 
+// 
+            //             GameObject enemyObject = Instantiate(enemyPrefab);
+            //             enemyObject.transform.position = new Vector3(Random.Range(-4f, 4f), Random.Range(2.5f, 6.5f), player.cameraRig.transform.position.z + spawnDistanceFromPlayer);
+            // 
+            //         }
+            // 
+            //         gameTimer += Time.deltaTime;   // Increment the game timer 
+            // 
+            // 
+            //         if (isGamerOver == false) {
+            //             uiText.text = "Time: " + Mathf.FloorToInt(gameTimer) + "   Score: " + player.score  +  "   Speed: " + Mathf.Floor(player.speed) ;
+            // 
+            //             if (player.reachedFinishLine == true) { // Change Boolean when player hits finish line and save the final time and score
+            //                 isGamerOver = true;
+            //                 finalTime = gameTimer;
+            //                 finalScore = player.score;
+            //             }
+            //         } else {  // What to do when the player hits the finish line
+            //             uiText.text = "Game Over!\nTime: " + Mathf.FloorToInt(finalTime) + "   Score: " + finalScore + "\nRestarting in: " + Mathf.Floor(gameOverTimer);
+            //             player.speed = 0.3f;  player.maxSpeed = 0.75f;
+            // 
+            //             gameOverTimer -= Time.deltaTime;    // Gamer restart logic
+            //             if (gameOverTimer <= 0) {
+            //                 SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+            //             }
+            //         }
+            // 
+            // 
+            // 
+            //     }
+
+            // FIXED CODE:
+
+
+cs
+using System.Collections;
+
+    public PlayerController player;
+
+    void Update() {
+
+        if (!isGamerOver)
+        {
+            if (enemyPointer < player.transform.position.z)
+            {
+                enemyPointer += spawnDistanceFromEnemy;
+                GameObject enemyObject = Instantiate(enemyPrefab);
+                enemyObject.transform.position = new Vector3(
+                    Random.Range(-4f, 4f), 
+                    Random.Range(2.5f, 6.5f), 
+                    player.transform.position.z + spawnDistanceFromPlayer
+                );
+
+                gameTimer += Time.deltaTime;   // Increment the game timer 
+                uiText.text = "Time: " + Mathf.FloorToInt(gameTimer) + "   Score: " + player.score + "   Speed: " + player.speed;
+
+                if (player.reachedFinishLine)
+                {
+                    isGamerOver = true;
+                    player.speed = 0;
+                }
+            }
+        }
+        else
+        {
+            if (gameOverTimer > 0)
+            {
+                gameOverTimer -= Time.deltaTime;    // Gamer restart logic
+                uiText.text = "Game Over!\nRestarting in: " + Mathf.FloorToInt(gameOverTimer);
+            }
+            else
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+            }
+        }
+
+    }
+
+
+
+
+}

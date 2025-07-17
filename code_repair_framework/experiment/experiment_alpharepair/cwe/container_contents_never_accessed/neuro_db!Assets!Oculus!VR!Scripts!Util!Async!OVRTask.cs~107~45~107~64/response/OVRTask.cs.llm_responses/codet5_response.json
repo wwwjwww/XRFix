@@ -1,0 +1,33 @@
+{
+  "input_code": "\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers =\n        new Dictionary<Guid, InternalDataRemover>();\n\n<BUGS>    \n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>    \n(InternalDataRemover.class); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>    \n<Guid> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>    \n=new Dictionary<Guid, InternalDataRemover>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> Enumeration<Guid> objects=new Enumeration<Guid>(); objects.add(newGuid); objects.add(newDataRemover()); objects.add(newGuid); return objects; } <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>    \n=new HashMap<Guid, InternalDataRemover>(); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

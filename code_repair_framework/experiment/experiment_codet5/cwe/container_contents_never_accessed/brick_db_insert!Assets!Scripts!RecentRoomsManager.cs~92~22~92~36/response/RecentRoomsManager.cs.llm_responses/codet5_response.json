@@ -1,0 +1,33 @@
+{
+  "input_code": "    private void InitializeSavedRoomsList()\n    {\n        string[] rooms = FindSaves();\n\n        if(rooms.Length <= 0) {\n            RenderNoSavedRooms();\n            return;\n        }\n\n<BUGS>        List<string> roomNamesToLoad = new List<string>();\n<BUGE>\n        for (int i = 0; i < Mathf.Min(rooms.Length, NumberOfRoomsToLoad); i++)\n        {\n            GameObject buttonObject = savedRooms[i];\n            if (i < 4) buttonObject.SetActive(true);\n\n            Button button = buttonObject.GetComponent<Button>();\n\n            TextMeshProUGUI roomNameText = recentRoomsNames[i];\n\n            string[] path = rooms[i].Split('/');\n            roomNameText.text = path[path.Length - 1];\n\n            int i1 = i;\n            button.onClick.AddListener(new UnityAction(() => ButtonClicked(rooms[i1])));\n        }\n\n        pagedScroll.SetFixedElementCount(rooms.Length);\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> List<String> roomNamesToLoad=new ArrayList<>();\n<FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\n List<String> roomNamesToLoad=new ArrayList<>();\n<FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>\n List<String> roomNamesToLoad=new List<>();\n<FIXE> <FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

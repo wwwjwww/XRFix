@@ -1,0 +1,3 @@
+{
+  "test_code": "\tvoid Update () {\n\n\t\tif (Mathf.Abs (startingY - transform.position.y) > yDistanceThreshold) {\n<BUGS>\t\t\tDestroy (gameObject);\n<BUGE>\t\t}\n\t}\n"
+}

@@ -1,0 +1,1 @@
+public bool CollidesWithBricks(Quaternion rot, Vector3 pos)

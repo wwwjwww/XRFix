@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " return;",
+            "confidence_score": -2.0392420291900635
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -2.8770225048065186
+        },
+        {
+            "fixed_line": " break",
+            "confidence_score": -3.8951194286346436
+        },
+        {
+            "fixed_line": " continue",
+            "confidence_score": -4.743642807006836
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/constant_condition/sound_db_insert!Assets!Scripts!CoreClasses!touchpad.cs~145~24~145~25/touchpad.cs",
+    "error_line": "145",
+    "total_fixes": 4
+}

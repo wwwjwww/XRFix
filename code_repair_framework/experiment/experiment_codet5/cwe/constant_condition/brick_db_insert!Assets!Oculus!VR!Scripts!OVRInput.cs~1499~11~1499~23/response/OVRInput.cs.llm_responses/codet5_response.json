@@ -1,0 +1,33 @@
+{
+  "input_code": "\tprivate static bool IsValidOpenVRDevice(uint deviceId)\n\t{\n<BUGS>\t\treturn (deviceId >= 0 && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount);\n<BUGE>\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>\t return (deviceId >= 0 && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\t return (deviceId >= 0 && deviceId < OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount && DeviceManager.isDeviceValid(deviceId)); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>Organizations.TObjectIntList<OVR> openVRDevices=OVR.OpenVR.OpenVR.getOpenVRDevices();\treturn (deviceId >= 0 && deviceId < openVRDevices.k_unMaxTrackedDeviceCount); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>Organizations.TObjectIntList<OVR> openVRDevices=OVR.OpenVR.OpenVR.getOpenVRDevices(); return (deviceId >= 0 && deviceId < openVRDevices.k_unMaxTrackedDeviceCount); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> searchResult=OVR.OpenVR.OpenVR.getTidList();\treturn (deviceId >= 0 && deviceId < searchResult.size()); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

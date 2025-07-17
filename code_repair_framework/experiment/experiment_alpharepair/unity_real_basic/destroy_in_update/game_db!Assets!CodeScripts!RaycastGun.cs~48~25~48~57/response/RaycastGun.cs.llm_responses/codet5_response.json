@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n        if (isPlayerOnObject)\n        {\n            fireTimer += Time.deltaTime;\n            if (Input.GetKeyDown(KeyCode.K) && fireTimer > fireRate)\n            {\n                fireTimer = 0;\n                laserLine.SetPosition(0, laserOrigin.position);\n                Vector3 rayOrigin = playerCamera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));\n                RaycastHit hit;\n                if (Physics.Raycast(rayOrigin, playerCamera.transform.forward, out hit, gunRange))\n                {\n                    if (hit.collider.gameObject == Object)\n                    {\n                        audioManager.PlaySFX(audioManager.swordSound);\n                        laserLine.SetPosition(1, hit.point);\n                        audioManager.PlaySFX(audioManager.disappearSound);\n<BUGS>                        Destroy(hit.transform.gameObject);\n<BUGE>                        Object = null; // Destroyed object\n                    }\n                }\n                else\n                {\n                    laserLine.SetPosition(1, rayOrigin + (playerCamera.transform.forward * gunRange));\n                }\n                StartCoroutine(ShootLaser());\n\n\n                if (Object == null)\n                {\n                    GameOver();\n                }\n            }\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                        Destroy(hit.transform.gameObject.gameObject); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> EObject result=hit.transform.gameObject.getCause(); getErrors(); Destroy(result); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <!-- Destroy(hit.transform.gameObject); <FIXE> <FIXS> <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> <!-- Destroy(hit.transform.gameObject); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z11kg9V2JCDwpZKPZ8CZUnDvMgdk",
+    "object": "chat.completion",
+    "created": 1724328984,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nactiveEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nactiveEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n```\n```csharp\nif (!activeEvents.ContainsKey(entry.Key))\n{\n    activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n}\nelse\n{\n    // Update the existing instance instead of allocating a new one\n    // Possibly update the Vector2 values if necessary, but the example does not provide full context.\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        List<int> toRecordKeys = new List<int>(toRecord.Keys);\n        foreach (int key in toRecordKeys) {\n            if (activeEvents.ContainsKey(key)) {\n                activeEvents[key].setOut(entry.Value + .01f);\n            } else {\n                activeEvents[key] = _deviceInterface.SpawnTimelineEvent(key, new Vector2(entry.Value, entry.Value + .01f));\n            }\n        }\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nactiveEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nactiveEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n```\n\n```csharp\nif (activeEvents.TryGetValue(entry.Key, out var existingEvent)) {\n  existingEvent.UpdateEventTime(new Vector2(entry.Value, entry.Value + .01f));\n} else {\n  activeEvents[entry.Key] = _deviceInterface.SpawnTimelineEvent(entry.Key, new Vector2(entry.Value, entry.Value + .01f));\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 717,
+        "completion_tokens": 390,
+        "total_tokens": 1107
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

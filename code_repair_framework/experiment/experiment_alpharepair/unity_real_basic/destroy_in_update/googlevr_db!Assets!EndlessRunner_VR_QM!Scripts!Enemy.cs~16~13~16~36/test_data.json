@@ -1,0 +1,3 @@
+{
+  "test_code": "    void Update()\n    {\n\n        enemyLifetime -= Time.deltaTime;\n        if (enemyLifetime <= 0f) {\n<BUGS>            Destroy(this.gameObject);\n<BUGE>        } \n    }\n"
+}

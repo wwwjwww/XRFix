@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " }",
+            "confidence_score": -3.9100968837738037
+        },
+        {
+            "fixed_line": ". }",
+            "confidence_score": -5.999904096126556
+        },
+        {
+            "fixed_line": " })",
+            "confidence_score": -7.717283248901367
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -8.190317153930664
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!VR!Scripts!Util!OVRObjectPool.cs~32~43~32~49/OVRObjectPool.cs",
+    "error_line": "32",
+    "total_fixes": 4
+}

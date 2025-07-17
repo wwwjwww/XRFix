@@ -1,0 +1,3 @@
+{
+  "test_code": "\tvoid Update () {\n\t\tif (Input.GetButtonDown(button))\n        {\n<BUGS>            GameObject temp = Instantiate(launchObject, transform.position, transform.rotation);\n<BUGE>            temp.GetComponent<Rigidbody>().AddForce(transform.forward * force, ForceMode.Impulse);\n            temp.GetComponent<Launchable>().Player = player;\n            temp.GetComponent<Launchable>().button = button;\n        }\n\t}\n"
+}

@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yyszwG6Xzd3qUlZkBgDDRHvx92rZ",
+    "object": "chat.completion",
+    "created": 1724320753,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "highlightMat.SetColor(\"_TintColor\", highlightMat.GetColor(\"_TintColor\"));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "highlightMat.SetColor(\"_EmissionColor\", Color.HSVToRGB(h, .95f, 1));\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "highlightMat.SetFloat(\"_EmissionGain\", .9f);\n      } else {\n        highlight.SetActive(false);\n        highlightMat.SetFloat(\"_EmissionGain\", 0f);\n      }\n    }\n  }"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "highlightMat.SetFloat(\"_EmissionGain\", .9f);\n    _timelineEvent.toggleEdges(false);\n    _timelineEvent.applyTransform();\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "highlightMat.SetFloat(\"_Outline\", 0.01f);\n      highlightMat.SetColor(\"_OutlineColor\", Color.HSVToRGB(0.1f, 0.7f, 0.1f));\n    }\n\n    if (curState == manipState.selected) {\n      highlightMat.SetFloat(\"_Outline\", 0.003f);\n      highlightMat.SetColor(\"_OutlineColor\", Color.red);\n    }\n\n    if (curState == manipState.grabbed) {\n      _timelineEvent.grabbed = true;\n      startPos = timelineTransform.InverseTransformPoint(_timelineEvent.transform.position);\n      manipOffset = _timelineEvent._componentInterface.worldPosToGridPos(timelineTransform.InverseTransformPoint(transform.position));\n      startIn = _timelineEvent.in_out.x;\n      unitLength = _timelineEvent.in_out.y - _timelineEvent.in_out.x;\n    }\n  }\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1244,
+        "completion_tokens": 288,
+        "total_tokens": 1532
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

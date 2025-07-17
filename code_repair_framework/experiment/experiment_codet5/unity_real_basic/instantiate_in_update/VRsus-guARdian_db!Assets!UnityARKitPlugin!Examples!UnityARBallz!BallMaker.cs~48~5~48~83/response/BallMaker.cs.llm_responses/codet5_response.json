@@ -1,0 +1,33 @@
+{
+  "input_code": "\tvoid Update () {\n\t\t#if UNITY_EDITOR   //we will only use this script on the editor side, though there is nothing that would prevent it from working on device\n\t\tif (Input.GetMouseButtonDown (0)) \n\t\t{\n\t\t\tRay ray = Camera.main.ScreenPointToRay (Input.mousePosition);\n\t\t\tRaycastHit hit;\n\n\n\n\t\t\tif (Physics.Raycast (ray, out hit, maxRayDistance, collisionLayer)) \n\t\t\t{\n<BUGS>\t\t\t\tCreateBall (new Vector3 (hit.point.x, hit.point.y + createHeight, hit.point.z));\n<BUGE>\n\n\t\t\t\tDebug.Log (string.Format (\"x:{0:0.######} y:{1:0.######} z:{2:0.######}\", hit.point.x, hit.point.y, hit.point.z));\n\t\t\t}\n\t\t}\n\t\t#else\n\t\tif (Input.touchCount > 0 )\n\t\t{\n\t\t\tvar touch = Input.GetTouch(0);\n\t\t\tif (touch.phase == TouchPhase.Began)\n\t\t\t{\n\t\t\t\tvar screenPosition = Camera.main.ScreenToViewportPoint(touch.position);\n\t\t\t\tARPoint point = new ARPoint {\n\t\t\t\t\tx = screenPosition.x,\n\t\t\t\t\ty = screenPosition.y\n\t\t\t\t};\n\t\t\t\t\t\t\n\t\t\t\tList<ARHitTestResult> hitResults = UnityARSessionNativeInterface.GetARSessionNativeInterface ().HitTest (point, \n\t\t\t\t\tARHitTestResultType.ARHitTestResultTypeExistingPlaneUsingExtent);\n\t\t\t\tif (hitResults.Count > 0) {\n\t\t\t\t\tforeach (var hitResult in hitResults) {\n\t\t\t\t\t\tVector3 position = UnityARMatrixOps.GetPosition (hitResult.worldTransform);\n\t\t\t\t\t\tCreateBall (new Vector3 (position.x, position.y + createHeight, position.z));\n\t\t\t\t\t\tbreak;\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t}\n\t\t}\n\t\t#endif\n\n\t}\n\n/*Addition Code for reference:\n\tvoid CreateBall(Vector3 atPosition)\n\t{\n\t\tGameObject ballGO = Instantiate (ballPrefab, atPosition, Quaternion.identity);\n\t\t\t\n\t\t\n\t\tfloat r = Random.Range(0.0f, 1.0f);\n\t\tfloat g = Random.Range(0.0f, 1.0f);\n\t\tfloat b = Random.Range(0.0f, 1.0f);\n\n\t\tprops.SetColor(\"_InstanceColor\", new Color(r, g, b));\n\n\t\tMeshRenderer renderer = ballGO.GetComponent<MeshRenderer>();\n\t\trenderer.SetPropertyBlock(props);\n\n\t}\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>Constructors<DynamicBlockHit> createBall=new DiagramStaticBlockHit(hit.point.x, hit.point.y, hit.point.z, hit.point.w, hit.point.y, hit.point.w);Constructors<DynamicBlockHit> unblockHit=UnityARMatrixOps.GetUnityARMatrix(hit.worldTransform);\nConstructors\tCreateBall(new Vector3(unblockHit.x, unblockHit.y + createHeight, unblockHit.point.z)); <FIXE> <FIXS>Constructors<DynamicBlockHit> createBall=new DiagramStaticBlockHit(hit.worldTransform.x, hit.worldTransform.y, hit.worldTransform.z);Constructors<DynamicBlockHit> unblockHit=UnityARMatrixOps.GetUnityARMatrix(hit.worldTransform);\nConstructors\tCreateBall(new Vector3(unblockHit.x, unblockHit.y + createHeight, unblockHit.point.z)); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\nConstructors\tCreateBall(new Vector3(hit.point.x, hit.point.y + createHeight, hit.point.z)); <FIXE> <FIXS>\nConstructors\tCreateBall(new Vector3(0, 0, 0)); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>Constructors<DynamicBlockHit> createBall=new DiagramStaticBlockHit(hit.point.x, hit.point.y, hit.point.z, hit.point.w, hit.point.y, hit.point.w);Constructors<DynamicBlockHit> unblockHit=UnityARMatrixOps.GetUnityARMatrix(hit.worldTransform);\nConstructors\tCreateBall(new Vector3(unblockHit.x, unblockHit.y + createHeight, unblockHit.point.z)); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> ecsqlql=new ecsqlql2.cpt(hit.point.x, hit.point.y + createHeight, hit.point.z); ecsqlql=new ecsqlql3.cpt(hit.point.x, hit.point.y, hit.point.z);\nReplacements\tCreateBall(new Vector3(hit.point.x, hit.point.y, hit.point.z)); <FIXE> <FIXS> ecsqlql=new ecsqlql2.cpt(screenPosition.x, screenPosition.y, hit.point.z); ecsqlql=new ecsqlql3.cpt(screenPosition.x, screenPosition.y + createHeight, hit.point.z); ecsqlql=new ecsqlql3.cpt(hit.point.x, hit.point.y, hit.point.z); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> ecsqlql=new ecsqlql2.cpt(hit.point.x, hit.point.y + createHeight, hit.point.z); ecsqlql=new ecsqlql3.cpt(hit.point.x, hit.point.y, hit.point.z);\nReplacements\tCreateBall(new Vector3(hit.point.x, hit.point.y, hit.point.z)); <FIXE> <FIXS> ecsqlql=new ecsqlql2.cpt(screenPosition.x, screenPosition.y, hit.point.z); ecsqlql=new ecsqlql3.cpt(screenPosition.x, screenPosition.y + createHeight, hit.point.z); ecsqlql=new ecsqlql2.cpt(screenPosition.x, screenPosition.y, hit.point.z); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

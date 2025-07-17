@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "```csharp\n\tprivate static bool IsValidOpenVRDevice(uint deviceId)\n\t{\n\t\treturn deviceId >= 0 && deviceId < (uint)OVR.OpenVR.OpenVR.k_unMaxTrackedDeviceCount;\n\t}\n```",
+    "code_repairing_1": "// Your code goes here\nreturn true;\n\t}\n\n\tprivate static void UpdateControllerPose(Node node)\n\t{\n\t\tif (node == Node.None)\n\t\t{\n\t\t\treturn;\n\t\t}\n\n\t\t// BUG: Constant",
+    "code_repairing_2": "using System;\nusing System.Collections;\nusing System.Collections.Generic;\nusing System.Runtime.InteropServices;\nusing UnityEngine;\nusing Node = UnityEngine.XR.XRNode;\n\nprivate static bool IsValidOpenVRDevice(uint deviceId)",
+    "code_repairing_3": "using UnityEngine.XR.OpenVR;\n\nreturn deviceId < OpenVR.k_unMaxTrackedDeviceCount && deviceId >= 0;\n\t}\n\t\n\tpublic static List<string> GetXRDeviceNames()\n\t{\n\t\tList<string",
+    "code_repairing_4": "Singapur es un destino tur\u00edstico muy popular debido a su rica cultura,"
+}

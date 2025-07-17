@@ -1,0 +1,69 @@
+
+
+
+
+
+
+﻿using UnityEngine;
+using System.Collections;
+
+namespace Valve.VR.InteractionSystem
+{
+	
+	public class Balloon : MonoBehaviour
+	{
+		public enum BalloonColor { Red, OrangeRed, Orange, YellowOrange, Yellow, GreenYellow, Green, BlueGreen, Blue, VioletBlue, Violet, RedViolet, LightGray, DarkGray, Random };
+
+		private Hand hand;
+
+		public GameObject popPrefab;
+
+		public float maxVelocity = 5f;
+
+		public float lifetime = 15f;
+		public bool burstOnLifetimeEnd = false;
+
+		public GameObject lifetimeEndParticlePrefab;
+		public SoundPlayOneshot lifetimeEndSound;
+
+		private float destructTime = 0f;
+		private float releaseTime = 99999f;
+
+		public SoundPlayOneshot collisionSound;
+		private float lastSoundTime = 0f;
+		private float soundDelay = 0.2f;
+
+		private Rigidbody balloonRigidbody;
+
+		private bool bParticlesSpawned = false;
+
+		private static float s_flLastDeathSound = 0f;
+
+
+		
+		void Start()
+		{
+			destructTime = Time.time + lifetime + Random.value;
+			hand = GetComponentInParent<Hand>();
+			balloonRigidbody = GetComponent<Rigidbody>();
+		}
+
+
+		
+/// 		void Update()
+// 		{
+// 			if ( ( destructTime != 0 ) && ( Time.time > destructTime ) )
+// 			{
+// 				if ( burstOnLifetimeEnd )
+// 				{
+// 					SpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );
+// 				}
+// 
+				// BUG: Destroy in Update() method
+				// MESSAGE: Update() method is called each frame. It's inefficient to use Destroy() in Update() method.
+				// 				Destroy( gameObject );
+				// 			}
+				// 		}
+
+				// you can try to build an object pool before Update() method has been called.
+				// FIXED CODE:

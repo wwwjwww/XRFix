@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0p9lSbAg05Q4nBUdHRpYkB3Se3S",
+    "object": "chat.completion",
+    "created": 1724328203,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        if (multiselected) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        if (highlight.activeSelf) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n        highlight.SetActive(true);\n        highlightMat.SetFloat(\"_EmissionGain\", .9f);\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 1294,
+        "completion_tokens": 108,
+        "total_tokens": 1402
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

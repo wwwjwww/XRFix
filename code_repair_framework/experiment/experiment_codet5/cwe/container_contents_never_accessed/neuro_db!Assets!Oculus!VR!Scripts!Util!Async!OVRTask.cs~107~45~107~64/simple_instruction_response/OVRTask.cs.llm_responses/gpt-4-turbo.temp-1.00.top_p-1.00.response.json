@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzO3byHzAyqjyWQx9kVBNixGPN0F",
+    "object": "chat.completion",
+    "created": 1724322679,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // Removed the commented out HashSet as it's no longer being used.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic readonly struct OVRTask<TResult> : IEquatable<OVRTask<TResult>>, IDisposable\n{\n    #region static\n\n    private static readonly HashSet<Guid> Pending = new HashSet<Guid>();\n    private static readonly Dictionary<Guid, TResult> Results = new Dictionary<Guid, TResult>();\n    private static readonly Dictionary<Guid, Action> Continuations = new Dictionary<Guid, Action>();\n\n    private delegate void CallbackInvoker(Guid guid, TResult result);\n\n    private delegate bool CallbackRemover(Guid guid);\n\n    private static readonly Dictionary<Guid, CallbackInvoker>\n        CallbackInvokers = new Dictionary<Guid, CallbackInvoker>();\n\n    private static readonly Dictionary<Guid, CallbackRemover>\n        CallbackRemovers = new Dictionary<Guid, CallbackRemover>();\n\n    private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();\n\n    private delegate bool InternalDataRemover(Guid guid);\n\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers =\n        new Dictionary<Guid, InternalDataRemover>();\n\n    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n    \n    // Other struct code would follow here, but it is not included in the provided section.\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\nprivate static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n\n#endregion\n\nprivate Guid id;\nprivate TResult result;\nprivate bool resultSet;\n\ninternal OVRTask(Guid id)\n{\n    this.id = id;\n}\n\ninternal void AddToPending()\n{\n    lock (Pending)\n    {\n        Pending.Add(id);\n    }\n}\n\ninternal void SetResult(TResult result)\n{\n    lock (Results)\n    {\n        if (!resultSet)\n        {\n            this.result = result;\n            resultSet = true;\n            Results[id] = result;\n            if (Continuations.TryGetValue(id, out Action continuation))\n            {\n                Continuations.Remove(id);\n                continuation();\n            }\n        }\n    }\n}\n\npublic bool IsCompleted => resultSet;\n\n#region IEquatable\n\npublic bool Equals(OVRTask<TResult> other)\n{\n    return id.Equals(other.id);\n}\n\npublic override bool Equals(object obj)\n{\n    if (obj is OVRTask<TResult> other)\n    {\n        return Equals(other);\n    }\n\n    return false;\n}\n\npublic override int GetHashCode()\n{\n    return id.GetHashCode();\n}\n\n#endregion\n\n#region IDisposable\n\npublic void Dispose()\n{\n    if (Pending.Contains(id))\n    {\n        lock (Pending)\n        {\n            Pending.Remove(id);\n        }\n    }\n\n    if (Results.ContainsKey(id))\n    {\n        lock (Results)\n        {\n            Results.Remove(id);\n        }\n    }\n\n    if (Continuations.ContainsKey(id))\n    {\n        lock (Continuations)\n        {\n            Continuations.Remove(id);\n        }\n    }\n\n    if (InternalDataRemovers.TryGetValue(id, out var remover))\n    {\n        lock (InternalDataRemovers)\n        {\n            remover(id);\n            InternalDataRemovers.Remove(id);\n        }\n    }\n\n    if (CallbackInvokers.TryGetValue(id, out var invoker))\n    {\n        invoker(id, default(TResult));\n        lock (CallbackInvokers)\n        {\n            CallbackInvokers.Remove(id);\n        }\n    }\n\n    if (CallbackRemovers.TryGetValue(id, out var callbackRemover))\n    {\n        lock (CallbackRemovers)\n        {\n            callbackRemover(id);\n            CallbackRemovers.Remove(id);\n        }\n    }\n\n    foreach (var clearer in CallbackClearers)\n    {\n        clearer();\n    }\n\n    foreach (var clearer in InternalDataClearers)\n    {\n        clearer();\n    }\n}\n\n#endregion\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\npublic readonly struct OVRTask<TResult> : IEquatable<OVRTask<TResult>>, IDisposable\n{\n    #region static\n\n    private static readonly HashSet<Guid> Pending = new HashSet<Guid>();\n    private static readonly Dictionary<Guid, TResult> Results = new Dictionary<Guid, TResult>();\n    private static readonly Dictionary<Guid, Action> Continuations = new Dictionary<Guid, Action>();\n\n    private delegate void CallbackInvoker(Guid guid, TResult result);\n\n    private delegate bool CallbackRemover(Guid guid);\n\n    private static readonly Dictionary<Guid, CallbackInvoker>\n        CallbackInvokers = new Dictionary<Guid, CallbackInvoker>();\n\n    private static readonly Dictionary<Guid, CallbackRemover>\n        CallbackRemovers = new Dictionary<Guid, CallbackRemover>();\n\n    private static readonly HashSet<Action> CallbackClearers = new HashSet<Action>();\n\n    private static readonly Dictionary<Guid, InternalDataRemover> InternalDataRemovers =\n        new Dictionary<Guid, InternalDataRemover>();\n\n    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n\n    #endregion\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 798,
+        "completion_tokens": 968,
+        "total_tokens": 1766
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

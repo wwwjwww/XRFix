@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " try {",
+            "confidence_score": -3.408729658462107
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -4.149540901184082
+        },
+        {
+            "fixed_line": " {}",
+            "confidence_score": -8.620706558227539
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!VR!Editor!OVRProjectSetup!Tasks!OVRConfigurationTaskRegistry.cs~29~56~29~69/OVRConfigurationTaskRegistry.cs",
+    "error_line": "29",
+    "total_fixes": 3
+}

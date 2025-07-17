@@ -1,0 +1,33 @@
+{
+  "input_code": "    public void setPress(bool on)\n    {\n        padTouchFeedback.GetComponent<Renderer>().material.SetFloat(\"_EmissionGain\", on ? .7f : .6f);\n        if (halfSelected[0])\n        {\n<BUGS>            if(!on || (on && masterControl.instance.tooltipsOn))\n<BUGE>            manip.toggleTips(on);\n        }\n        else if (halfSelected[1])\n        {\n            if (deleteOn)\n            {\n                manip.DeleteSelection(on);\n                halfSprites[2].material.SetColor(\"_TintColor\", on ? onColor : offColor);\n                halfSprites[2].material.SetFloat(\"_EmissionGain\", on ? .5f : 0);\n            }\n            else if (multiselectOn)\n            {\n                manip.MultiselectSelection(on);\n                halfSprites[3].material.SetColor(\"_TintColor\", on ? onColor : offColor);\n                halfSprites[3].material.SetFloat(\"_EmissionGain\", on ? .5f : 0);\n            }\n            else\n            {\n                manip.SetCopy(on);\n\n                halfSprites[1].material.SetColor(\"_TintColor\", on ? onColor : offColor);\n                halfSprites[1].material.SetFloat(\"_EmissionGain\", on ? .5f : 0);\n            }\n          \n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> if (!on || (on && masterControl.instance.tooltipsOn))\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> if (!on || (on && masterControl.instance.tooltipsOn)\n<FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> if (!on || (on && masterControl.instance.tooltipsOn)CHEST_TOoltips))\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> isTrue=on && masterControl.instance.tooltipsOn; if (!isOn)\n<FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> if (!on || (on && masterControl.instance.tooltipsOn)CHEST_TOGGLE))\n<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

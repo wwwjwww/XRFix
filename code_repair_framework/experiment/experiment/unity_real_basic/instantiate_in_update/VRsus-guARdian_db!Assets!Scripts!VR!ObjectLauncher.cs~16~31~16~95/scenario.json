@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/instantiate_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\VRsus-guARdian_930e44280e41a7a48beba2a28424b7f6ca089143",
+    "exp_dir": "VRsus-guARdian_db!Assets!Scripts!VR!ObjectLauncher.cs~16~31~16~95",
+    "unity_special_name": "Instantiate in Update() method",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/instantiate/comp_instan_in_update.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to use Instantiate() in Update() method.",
+        "file_name": "/Assets/Scripts/VR/ObjectLauncher.cs",
+        "start_line": "16",
+        "start_column": "31",
+        "end_line": "16",
+        "end_column": "95",
+        "add_file_name": "/Assets/Scripts/VR/ObjectLauncher.cs",
+        "add_start_line": "16",
+        "add_start_column": "31",
+        "add_end_line": "16",
+        "add_end_column": "95"
+    },
+    "include_addition": false,
+    "prompt_template": [
+        "code_example_func_no_limit"
+    ]
+}

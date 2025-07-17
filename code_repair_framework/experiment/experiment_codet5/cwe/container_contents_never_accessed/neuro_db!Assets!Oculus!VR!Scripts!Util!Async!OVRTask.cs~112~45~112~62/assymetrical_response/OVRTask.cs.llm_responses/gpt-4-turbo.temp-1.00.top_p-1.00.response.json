@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL08lzVuo2DoT9jE34I2tFzkKjGu",
+    "object": "chat.completion",
+    "created": 1723690780,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The collection 'SubscriberClearers' has been removed as it is never accessed.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed the unused collection SubscriberClearers\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed/Commented-out unused collection SubscriberClearers\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Fixed Code: SubscriberClearers collection has been removed as it is never accessed\n\n// The declaration for SubscriberClearers has been removed entirely\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The SubscriberClearers collection was commented out as it was never accessed.\n// Commented out SubscriberClearers line\n// private static readonly HashSet<Action> SubscriberClearers = new HashSet<Action>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 881,
+        "completion_tokens": 131,
+        "total_tokens": 1012
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

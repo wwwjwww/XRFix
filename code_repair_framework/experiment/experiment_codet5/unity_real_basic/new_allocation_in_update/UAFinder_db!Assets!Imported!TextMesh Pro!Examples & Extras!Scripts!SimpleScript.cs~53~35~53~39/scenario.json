@@ -1,0 +1,31 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "original_dir": "./experiment/unity_real_basic/new_allocation_in_update",
+    "project_root_dir": "D:\\XRFix\\dataset_collection\\overall\\UAFinder\\UAFinder_1",
+    "exp_dir": "UAFinder_db!Assets!Imported!TextMesh Pro!Examples & Extras!Scripts!SimpleScript.cs~53~35~53~39",
+    "unity_special_name": "Using New() allocation in Update() method.",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/allocate/comp_new_allocation.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's efficient to allocate new resource using New() in Update() method.",
+        "file_name": "/Assets/Imported/TextMesh Pro/Examples & Extras/Scripts/SimpleScript.cs",
+        "start_line": "53",
+        "start_column": "35",
+        "end_line": "53",
+        "end_column": "39",
+        "add_file_name": "/Library/PackageCache/com.unity.textmeshpro@2.0.1/Scripts/Runtime/TMP_Text.cs",
+        "add_start_line": "1841",
+        "add_start_column": "22",
+        "add_end_line": "1841",
+        "add_end_column": "60"
+    },
+    "include_addition": true,
+    "prompt_template": [
+        "fix_instruction_add_prompt"
+    ]
+}

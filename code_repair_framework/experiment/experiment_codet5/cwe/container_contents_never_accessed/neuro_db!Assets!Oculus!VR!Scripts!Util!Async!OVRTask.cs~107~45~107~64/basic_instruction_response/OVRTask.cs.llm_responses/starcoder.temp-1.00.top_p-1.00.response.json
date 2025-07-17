@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "using System;\nusing System.Collections.Generic;\n\n    private static readonly HashSet<Action> _internalDataClearers = new HashSet<Action>();",
+    "code_repairing_1": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n        var internalDataClearers =",
+    "code_repairing_2": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main()\n    {\n\n    }\n}\n\nExplanation",
+    "code_repairing_3": "using System;\nusing System.Collections.Generic;\n\nclass Program\n{\n    static void Main(string[] args)\n    {\n        // The",
+    "code_repairing_4": "using System;\nusing System.Collections.Generic;\nusing System.Runtime.CompilerServices;\n\nprivate static readonly HashSet<Action> InternalDataClear"
+}

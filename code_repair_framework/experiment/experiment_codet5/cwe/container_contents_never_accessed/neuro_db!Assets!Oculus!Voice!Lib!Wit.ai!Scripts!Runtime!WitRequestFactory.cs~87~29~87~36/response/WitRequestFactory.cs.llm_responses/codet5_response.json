@@ -1,0 +1,33 @@
+{
+  "input_code": "        private static void MergeEntities(WitResponseClass entities, WitDynamicEntity providerEntity)\n        {\n            if (!entities.HasChild(providerEntity.entity))\n            {\n                entities[providerEntity.entity] = new WitResponseArray();\n            }\n            var mergedArray = entities[providerEntity.entity];\n            Dictionary<string, WitResponseClass> map = new Dictionary<string, WitResponseClass>();\n<BUGS>            HashSet<string> synonyms = new HashSet<string>();\n<BUGE>            var existingKeywords = mergedArray.AsArray;\n            for (int i = 0; i < existingKeywords.Count; i++)\n            {\n                var keyword = existingKeywords[i].AsObject;\n                var key = keyword[\"keyword\"].Value;\n                if(!map.ContainsKey(key))\n                {\n                    map[key] = keyword;\n                }\n            }\n            foreach (var keyword in providerEntity.keywords)\n            {\n                if (map.TryGetValue(keyword.keyword, out var keywordObject))\n                {\n                    foreach (var synonym in keyword.synonyms)\n                    {\n                        keywordObject[\"synonyms\"].Add(synonym);\n                    }\n                }\n                else\n                {\n                    keywordObject = JsonConvert.SerializeToken(keyword).AsObject;\n                    map[keyword.keyword] = keywordObject;\n                    mergedArray.Add(keywordObject);\n                }\n            }\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> ArrayList<String> synonyms=new ArrayList<String>(); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>\n <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> PDSet<string> synonyms=new PDSet<string>(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> PDSet<string> synonyms=new DLSet<string>(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

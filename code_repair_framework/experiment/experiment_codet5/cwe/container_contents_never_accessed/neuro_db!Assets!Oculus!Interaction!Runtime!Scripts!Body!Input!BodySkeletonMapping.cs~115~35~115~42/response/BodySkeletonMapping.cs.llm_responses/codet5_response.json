@@ -1,0 +1,33 @@
+{
+  "input_code": "<BUGS>                public List<Node> Children = new List<Node>();\n<BUGE>",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                public List<Node> Children=new List<>();\n<FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> @Override                public List<Node> Children() { return new List<Node>(); } <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> public List<Node> Children=new List<>();\n<FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> @LeaksFileHandles public List<Node> Children=new List<Node>(); leviskFileHandles.add(rootNode); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> public List<Node> Children=new List<>(); UINT8<FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

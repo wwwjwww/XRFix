@@ -1,0 +1,33 @@
+{
+  "input_code": "    private void Update()\n    {\n        if (!ballGrabbed && OVRInput.GetDown(actionBtn))\n        {\n<BUGS>            currentBall = Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity);\n<BUGE>            currentBall.transform.parent = rightControllerPivot.transform;\n            ballGrabbed = true;\n        }\n\n        if (ballGrabbed && OVRInput.GetUp(actionBtn))\n        {\n            currentBall.transform.parent = null;\n            var ballPos = currentBall.transform.position;\n            var vel = trackingspace.rotation * OVRInput.GetLocalControllerVelocity(OVRInput.Controller.RTouch);\n            var angVel = OVRInput.GetLocalControllerAngularVelocity(OVRInput.Controller.RTouch);\n            currentBall.GetComponent<BouncingBallLogic>().Release(ballPos, vel, angVel);\n            ballGrabbed = false;\n        }\n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, false); <FIXE> <FIXS>\n            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, false); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            currentBall=Instantiator.Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity); <FIXE> <FIXS>\n            currentBall=Instantiator.Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> fosia=new BouncingBallLogic();            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, fosia); <FIXE> <FIXS>            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, fosia); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> fosia=new BouncingBallLogic();            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, fosia); <FIXE> <FIXS> fosia=new BouncingBallLogic(); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> xref=new BouncingBallLogic();            currentBall=Instantiate(ball, rightControllerPivot.transform.position, Quaternion.identity, xref); <FIXE> <FIXS>utures.add(currentBall); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

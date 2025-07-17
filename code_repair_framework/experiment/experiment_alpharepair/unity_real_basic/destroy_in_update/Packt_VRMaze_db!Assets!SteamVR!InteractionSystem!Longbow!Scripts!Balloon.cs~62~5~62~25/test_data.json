@@ -1,0 +1,3 @@
+{
+  "test_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif ( ( destructTime != 0 ) && ( Time.time > destructTime ) )\n\t\t\t{\n\t\t\t\tif ( burstOnLifetimeEnd )\n\t\t\t\t{\n\t\t\t\t\tSpawnParticles( lifetimeEndParticlePrefab, lifetimeEndSound );\n\t\t\t\t}\n\n<BUGS>\t\t\t\tDestroy( gameObject );\n<BUGE>\t\t\t}\n\t\t}\n"
+}

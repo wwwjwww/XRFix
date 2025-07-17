@@ -1,0 +1,3 @@
+{
+  "test_code": "  void Update() {\n    tex.SetPixels32(wavepixels);\n    tex.Apply(false);\n<BUGS>    waverend.material.mainTextureOffset = new Vector2((float)curWaveW / wavewidth, 0);\n<BUGE>  }\n"
+}

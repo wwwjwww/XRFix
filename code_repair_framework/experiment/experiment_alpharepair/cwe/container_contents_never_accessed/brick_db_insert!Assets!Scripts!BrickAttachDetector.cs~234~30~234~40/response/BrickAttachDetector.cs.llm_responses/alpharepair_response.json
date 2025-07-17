@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {}; {",
+            "confidence_score": -5.391666253407796
+        },
+        {
+            "fixed_line": " {};",
+            "confidence_score": -5.862473845481873
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -6.745933532714844
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Scripts!BrickAttachDetector.cs~234~30~234~40/BrickAttachDetector.cs",
+    "error_line": "234",
+    "total_fixes": 3
+}

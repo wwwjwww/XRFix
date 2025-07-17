@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9yzk2bvka1kzIY8rYA0N4Vfa3v3lw",
+    "object": "chat.completion",
+    "created": 1724324042,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n  Queue<bool> hits = new Queue<bool>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "Queue<bool> hits = new Queue<bool>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "// FIXED CODE:\n\nQueue<bool> hits = new Queue<bool>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "Queue<bool> hits = new Queue<bool>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "Queue<bool> hits = new Queue<bool>();"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 443,
+        "completion_tokens": 55,
+        "total_tokens": 498
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

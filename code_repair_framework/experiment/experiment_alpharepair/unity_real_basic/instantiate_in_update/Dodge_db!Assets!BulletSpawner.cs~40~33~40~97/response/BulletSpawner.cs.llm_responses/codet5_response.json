@@ -1,0 +1,33 @@
+{
+  "input_code": "    void Update()\n    {\n\n        timeAfterSpawn += Time.deltaTime;\n\n\n        if (timeAfterSpawn >= spawnRate) {\n\n            timeAfterSpawn = 0f;\n\n\n\n<BUGS>            GameObject bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);\n<BUGE>\n            bullet.transform.LookAt(target);\n\n            spawnRate = Random.Range(spawnRateMin, spawnRateMax);\n\n        }\n\n        \n    }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>            GameObject bullet=Instantiate(bulletPrefab, transform.position, transform.rotation); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>            GameObject bullet=Instantiate(bulletPrefab, transform.position, transform.rotation, transform.alpha); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> knob=Instantiate(bulletPrefab, transform.position, transform.rotation); knob.transform.SetPosition(transform.position); knob.transform.SetRotation(transform.rotation); Diagram bullet=knob; <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> knob=Instantiate(bulletPrefab, transform.position, transform.rotation); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> guide.Init(transform.position, transform.rotation);            GameObject bullet=Instantiate(bulletPrefab, guide.getPosition(), transform.rotation); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

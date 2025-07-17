@@ -1,0 +1,3 @@
+{
+  "test_code": "\n  [DllImport(\"SoundStageNative\")]\n  public static extern void ProcessWaveTexture(float[] buffer, int length, System.IntPtr pixels, byte Ra, byte Ga, byte Ba, byte Rb, byte Gb, byte Bb,\n    int period, int waveheight, int wavewidth, ref int lastWaveH, ref int curWaveW);\n\n<BUGS>  List<float> bufferDrawList;\n<BUGE>"
+}

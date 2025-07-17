@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " try",
+            "confidence_score": -0.3433186709880829
+        },
+        {
+            "fixed_line": " try {",
+            "confidence_score": -1.136482685804367
+        },
+        {
+            "fixed_line": " try)",
+            "confidence_score": -2.2324804961681366
+        },
+        {
+            "fixed_line": " finally",
+            "confidence_score": -9.142012596130371
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/mrdl_db!Assets!MixedRealityToolkit!Utilities!Scenes!RuntimeSceneUtils.cs~28~25~28~42/RuntimeSceneUtils.cs",
+    "error_line": "28",
+    "total_fixes": 4
+}

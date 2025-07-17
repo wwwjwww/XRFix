@@ -1,0 +1,3 @@
+{
+  "test_code": "<BUGS>        private static List<Graphic> _tmpGraphics = new List<Graphic>();\n<BUGE>"
+}

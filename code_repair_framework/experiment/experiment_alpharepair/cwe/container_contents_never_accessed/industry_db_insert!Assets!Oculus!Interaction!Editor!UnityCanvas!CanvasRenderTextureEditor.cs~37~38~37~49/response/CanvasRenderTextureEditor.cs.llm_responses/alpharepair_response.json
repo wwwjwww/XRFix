@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": "\\n",
+            "confidence_score": -3.0420266836881638
+        },
+        {
+            "fixed_line": ";",
+            "confidence_score": -5.66029167175293
+        },
+        {
+            "fixed_line": "();",
+            "confidence_score": -6.22835636138916
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -6.32462215423584
+        },
+        {
+            "fixed_line": ");",
+            "confidence_score": -7.481989860534668
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/industry_db_insert!Assets!Oculus!Interaction!Editor!UnityCanvas!CanvasRenderTextureEditor.cs~37~38~37~49/CanvasRenderTextureEditor.cs",
+    "error_line": "37",
+    "total_fixes": 5
+}

@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " } }",
+            "confidence_score": -5.874114751815796
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -6.848139762878418
+        },
+        {
+            "fixed_line": " }; {",
+            "confidence_score": -7.736681938171387
+        },
+        {
+            "fixed_line": " }; }",
+            "confidence_score": -7.767141342163086
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -8.560622215270996
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/non-short-circuit_logic/mrdl_db!Assets!MixedRealityToolkit.Services!SceneSystem!MixedRealitySceneSystem.cs~492~50~492~81/MixedRealitySceneSystem.cs",
+    "error_line": "492",
+    "total_fixes": 5
+}

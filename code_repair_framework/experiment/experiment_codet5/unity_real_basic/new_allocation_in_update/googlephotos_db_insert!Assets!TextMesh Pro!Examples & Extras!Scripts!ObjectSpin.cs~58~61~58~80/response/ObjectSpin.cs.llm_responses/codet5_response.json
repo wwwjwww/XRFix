@@ -1,0 +1,33 @@
+{
+  "input_code": "        void Update()\n        {\n            if (Motion == MotionType.Rotation)\n            {\n                m_transform.Rotate(0, SpinSpeed * Time.deltaTime, 0);\n            }\n            else if (Motion == MotionType.BackAndForth)\n            {\n                m_time += SpinSpeed * Time.deltaTime;\n                m_transform.rotation = Quaternion.Euler(m_initial_Rotation.x, Mathf.Sin(m_time) * RotationRange + m_initial_Rotation.y, m_initial_Rotation.z);\n            }\n            else\n            {\n                m_time += SpinSpeed * Time.deltaTime;\n\n                float x = 15 * Mathf.Cos(m_time * .95f);\n                float y = 10; // *Mathf.Sin(m_time * 1f) * Mathf.Cos(m_time * 1f);\n                float z = 0f; // *Mathf.Sin(m_time * .9f);    \n\n<BUGS>                m_transform.position = m_initial_Position + new Vector3(x, z, y);\n<BUGE>\n\n\n\n\n                m_prevPOS = m_transform.position;\n                frames += 1;\n            }\n        }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                m_transform.position=m_initial_Position + new Vector3(x, z, y); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>                m_transform.position=m_initial_Position + new Vector3(x, z, y - m_prevPOS.y); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS>WitnessAll();                m_transform.position=m_initial_Position + new Vector3(x, z, y); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS>WitnessAll();                m_transform.position=new Vector3(x, z, y); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> migrator.setPosition(m_initial_Position + new Vector3(x, z, y)); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

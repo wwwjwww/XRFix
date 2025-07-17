@@ -1,0 +1,33 @@
+{
+  "input_code": "\tpublic enum BoneId\n\t{\n\t\tInvalid                 = -1,\n\n\n\t\tHand_Start              = 0,\n\t\tHand_WristRoot          = Hand_Start + 0, // root frame of the hand, where the wrist is located\n\t\tHand_ForearmStub        = Hand_Start + 1, // frame for user's forearm\n\t\tHand_Thumb0             = Hand_Start + 2, // thumb trapezium bone\n\t\tHand_Thumb1             = Hand_Start + 3, // thumb metacarpal bone\n\t\tHand_Thumb2             = Hand_Start + 4, // thumb proximal phalange bone\n\t\tHand_Thumb3             = Hand_Start + 5, // thumb distal phalange bone\n\t\tHand_Index1             = Hand_Start + 6, // index proximal phalange bone\n\t\tHand_Index2             = Hand_Start + 7, // index intermediate phalange bone\n\t\tHand_Index3             = Hand_Start + 8, // index distal phalange bone\n\t\tHand_Middle1            = Hand_Start + 9, // middle proximal phalange bone\n\t\tHand_Middle2            = Hand_Start + 10, // middle intermediate phalange bone\n\t\tHand_Middle3            = Hand_Start + 11, // middle distal phalange bone\n\t\tHand_Ring1              = Hand_Start + 12, // ring proximal phalange bone\n\t\tHand_Ring2              = Hand_Start + 13, // ring intermediate phalange bone\n\t\tHand_Ring3              = Hand_Start + 14, // ring distal phalange bone\n\t\tHand_Pinky0             = Hand_Start + 15, // pinky metacarpal bone\n\t\tHand_Pinky1             = Hand_Start + 16, // pinky proximal phalange bone\n\t\tHand_Pinky2             = Hand_Start + 17, // pinky intermediate phalange bone\n\t\tHand_Pinky3             = Hand_Start + 18, // pinky distal phalange bone\n\t\tHand_MaxSkinnable       = Hand_Start + 19,\n\n\n\t\tHand_ThumbTip           = Hand_MaxSkinnable + 0, // tip of the thumb\n\t\tHand_IndexTip           = Hand_MaxSkinnable + 1, // tip of the index finger\n\t\tHand_MiddleTip          = Hand_MaxSkinnable + 2, // tip of the middle finger\n\t\tHand_RingTip            = Hand_MaxSkinnable + 3, // tip of the ring finger\n\t\tHand_PinkyTip           = Hand_MaxSkinnable + 4, // tip of the pinky\n\t\tHand_End                = Hand_MaxSkinnable + 5,\n\n\n\n\n<BUGS>\t\tMax = ((int)Hand_End > 50) ? (int)Hand_End : 50,\n<BUGE>\t}\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> Callable<Void> wristCallable=null; <FIXE> <FIXS> wristCallable=rdistCallable.execute(); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> Callable<Void> wristCallable=null; <FIXE> <FIXS> wristCallable=rdistCallable.bindToCallable(Context.class, null); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> Callable<FieldType> userCallback=null; <FIXE> <FIXS> if (userCallback.getField() != null) { System.out.println(\"userCallback: \" + userCallback.getField()); } else { System.out.println(\"userCallback: \" + userCallback.getField()); } <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> Callable<FieldType> userCallback=null; <FIXE> <FIXS> if (userCallback.getField() != null) { System.out.println(\"userCallback: \" + userCallback.getField() + \"\\n\"); } else { System.out.println(\"userCallback: \" + userCallback.getField() + \"\\n\"); } <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> Types dataType=TypeUtils.getEnumConstants(Types.TYPE_OF_CONTENT_TYPE); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

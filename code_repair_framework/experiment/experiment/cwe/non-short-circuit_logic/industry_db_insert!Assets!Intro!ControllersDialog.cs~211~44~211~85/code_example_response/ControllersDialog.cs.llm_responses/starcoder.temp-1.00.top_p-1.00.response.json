@@ -1,0 +1,7 @@
+{
+    "code_repairing_0": "It's an easy fix:\nbool trigger_pressed = ctrl.triggerPressed || ctrl.touchpadPressed;",
+    "code_repairing_1": "Closest_Distance = Math.Min(Closest_Distance, FindDistance(Camera cam, true));\n                    mat = line",
+    "code_repairing_2": "You're an automated program repair tool. The following C# code is based on Unity Development. Your task is to fix",
+    "code_repairing_3": "if (ctrl.triggerPressed || ctrl.touchpadPressed)\n {\ntrigger_pressed = true;\n}",
+    "code_repairing_4": "Correct! That was a bug. You're using the '|' (bitwise OR) operator, which checks if either"
+}

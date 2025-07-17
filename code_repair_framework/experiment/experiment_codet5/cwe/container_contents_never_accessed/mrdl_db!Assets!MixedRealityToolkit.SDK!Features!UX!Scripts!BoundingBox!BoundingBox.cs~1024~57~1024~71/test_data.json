@@ -1,0 +1,3 @@
+{
+  "test_code": "<BUGS>        private readonly List<IMixedRealityInputSource> touchingSources = new List<IMixedRealityInputSource>();\n<BUGE>"
+}

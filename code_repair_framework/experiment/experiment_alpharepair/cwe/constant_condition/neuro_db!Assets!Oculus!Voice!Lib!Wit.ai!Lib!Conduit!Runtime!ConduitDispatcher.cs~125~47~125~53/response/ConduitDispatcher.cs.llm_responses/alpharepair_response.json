@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": ") ;",
+            "confidence_score": -3.129498600959778
+        },
+        {
+            "fixed_line": " });",
+            "confidence_score": -4.915380477905273
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -5.49089241027832
+        },
+        {
+            "fixed_line": ")",
+            "confidence_score": -5.822717666625977
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/constant_condition/neuro_db!Assets!Oculus!Voice!Lib!Wit.ai!Lib!Conduit!Runtime!ConduitDispatcher.cs~125~47~125~53/ConduitDispatcher.cs",
+    "error_line": "125",
+    "total_fixes": 4
+}

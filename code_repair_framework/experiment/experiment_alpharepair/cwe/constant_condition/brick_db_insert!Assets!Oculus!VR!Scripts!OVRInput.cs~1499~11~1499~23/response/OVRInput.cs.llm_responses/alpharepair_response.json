@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " true;",
+            "confidence_score": -2.8189730178564787
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -3.4406447410583496
+        },
+        {
+            "fixed_line": " };",
+            "confidence_score": -4.33278751373291
+        },
+        {
+            "fixed_line": " static",
+            "confidence_score": -6.7566704750061035
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/constant_condition/brick_db_insert!Assets!Oculus!VR!Scripts!OVRInput.cs~1499~11~1499~23/OVRInput.cs",
+    "error_line": "1499",
+    "total_fixes": 4
+}

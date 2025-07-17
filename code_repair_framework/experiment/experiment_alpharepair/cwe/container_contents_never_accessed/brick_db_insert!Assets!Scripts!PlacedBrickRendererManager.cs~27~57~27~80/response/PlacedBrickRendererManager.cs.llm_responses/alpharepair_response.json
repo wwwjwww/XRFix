@@ -1,0 +1,15 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {",
+            "confidence_score": -2.621603488922119
+        },
+        {
+            "fixed_line": " {};",
+            "confidence_score": -3.867551803588867
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Scripts!PlacedBrickRendererManager.cs~27~57~27~80/PlacedBrickRendererManager.cs",
+    "error_line": "27",
+    "total_fixes": 2
+}

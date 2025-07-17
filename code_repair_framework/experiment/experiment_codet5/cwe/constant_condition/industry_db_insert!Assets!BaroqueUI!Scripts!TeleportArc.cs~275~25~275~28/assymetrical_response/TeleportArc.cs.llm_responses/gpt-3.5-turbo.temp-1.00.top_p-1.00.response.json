@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wAnEyNlccyQGkCFWzZFfTUFnoGBo",
+    "object": "chat.completion",
+    "created": 1723651540,
+    "model": "gpt-35-turbo",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "if (Physics.Raycast(transform.position, transform.forward, out hitInfo)) \n{\n    return hitInfo.distance;\n}\nelse\n{\n    hitInfo = new RaycastHit();\n    return -1f; // No collision found\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "if (true) // FIXED: Removed constant condition causing warning\n\n{\n    Vector3 rayDirection = transform.forward;\n    RaycastHit hit;\n    \n    if (Physics.Raycast(transform.position, rayDirection, out hit, Mathf.Infinity))\n    {\n        hitInfo = hit;\n        return hit.distance;\n    }\n    \n    hitInfo = new RaycastHit();\n    return -1;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "\n```csharp\n            if (Physics.Raycast(transform.position, transform.forward, out hitInfo))\n            {\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "if (Physics.Raycast(transform.position, transform.forward, out hitInfo)) \n{\n    return hitInfo.distance; \n} \nelse \n{\n    return -1f; \n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "if (Physics.Raycast(transform.position, transform.forward, out hitInfo))\n{\n    return hitInfo.distance;\n}\nelse\n{\n    hitInfo = new RaycastHit();\n    return -1f;\n}"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 159,
+        "completion_tokens": 218,
+        "total_tokens": 377
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

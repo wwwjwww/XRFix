@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL3oTmmoEpQW6M8UFmZwHqMUC2Fs",
+    "object": "chat.completion",
+    "created": 1723691008,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n{\n    // ... (rest of the code that follows this foreach statement)\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nforeach (CSProjectInfo project in orderedProjects)\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 2363,
+        "completion_tokens": 92,
+        "total_tokens": 2455
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

@@ -1,0 +1,119 @@
+﻿
+
+using System;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading;
+using Meta.Voice;
+using Meta.WitAi.Configuration;
+using Meta.WitAi.Data;
+using Meta.WitAi.Data.Configuration;
+using Meta.WitAi.Json;
+using Meta.WitAi.Requests;
+using Meta.WitAi.Utilities;
+using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
+namespace Meta.WitAi
+{
+    
+    
+    
+    
+    
+    
+    public class WitRequest : VoiceServiceRequest
+    {
+        #region PARAMETERS
+        
+        
+        
+        public WitConfiguration Configuration { get; private set; }
+        
+        
+        
+        public int TimeoutMs { get; private set; } = 1000;
+        
+        
+        
+        public AudioEncoding AudioEncoding { get; set; }
+        [Obsolete("Deprecated for AudioEncoding")]
+        public AudioEncoding audioEncoding
+        {
+            get => AudioEncoding;
+            set => AudioEncoding = value;
+        }
+
+        
+        
+        
+        public string Path { get; private set; }
+        
+        
+        
+        public string Command { get; private set; }
+        
+        
+        
+        public bool IsPost { get; private set; }
+        
+        
+        
+        [Obsolete("Deprecated for Options.QueryParams")]
+        public VoiceServiceRequestOptions.QueryParam[] queryParams
+        {
+            get
+            {
+                List<VoiceServiceRequestOptions.QueryParam> results = new List<VoiceServiceRequestOptions.QueryParam>();
+                foreach (var key in Options?.QueryParams?.Keys)
+                {
+                    VoiceServiceRequestOptions.QueryParam p = new VoiceServiceRequestOptions.QueryParam()
+                    {
+                        key = key,
+                        value = Options?.QueryParams[key]
+                    };
+                    results.Add(p);
+                }
+                return results.ToArray();
+            }
+        }
+
+        public byte[] postData;
+        public string postContentType;
+        public string forcedHttpMethodType = null;
+        #endregion PARAMETERS
+
+        #region REQUEST
+        
+        
+        
+        public bool IsRequestStreamActive => IsActive || IsInputStreamReady;
+        
+        
+        
+        public bool HasResponseStarted { get; private set; }
+        
+        
+        
+        public bool IsInputStreamReady { get; private set; }
+
+        public AudioDurationTracker audioDurationTracker;
+        private HttpWebRequest _request;
+        private Stream _writeStream;
+        private object _streamLock = new object();
+        private int _bytesWritten;
+        private string _stackTrace;
+        private DateTime _requestStartTime;
+        // BUG: Container contents are never accessed
+        // MESSAGE: A collection or map whose contents are never queried or accessed is useless.
+        //         private ConcurrentQueue<byte[]> _writeBuffer = new ConcurrentQueue<byte[]>();
+
+        //Remove or Commented-out the collection if it is no longer needed
+        // FIXED CODE:

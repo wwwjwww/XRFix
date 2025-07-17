@@ -1,0 +1,23 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {};",
+            "confidence_score": -7.264720678329468
+        },
+        {
+            "fixed_line": "{}",
+            "confidence_score": -7.388692855834961
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -7.964727401733398
+        },
+        {
+            "fixed_line": ";",
+            "confidence_score": -9.347607612609863
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!Voice!Features!Hub!Scripts!Editor!UIComponents!FoldoutHierarchy.cs~66~47~66~51/FoldoutHierarchy.cs",
+    "error_line": "66",
+    "total_fixes": 4
+}

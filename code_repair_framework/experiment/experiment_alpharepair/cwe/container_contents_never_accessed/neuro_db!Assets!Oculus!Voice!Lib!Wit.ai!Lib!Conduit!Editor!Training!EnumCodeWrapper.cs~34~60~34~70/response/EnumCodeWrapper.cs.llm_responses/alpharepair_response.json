@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " } finally {",
+            "confidence_score": -3.3813668160388866
+        },
+        {
+            "fixed_line": " {};",
+            "confidence_score": -5.8456339836120605
+        },
+        {
+            "fixed_line": " {",
+            "confidence_score": -6.434791564941406
+        },
+        {
+            "fixed_line": " {}",
+            "confidence_score": -6.4779157638549805
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -7.158037185668945
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/neuro_db!Assets!Oculus!Voice!Lib!Wit.ai!Lib!Conduit!Editor!Training!EnumCodeWrapper.cs~34~60~34~70/EnumCodeWrapper.cs",
+    "error_line": "34",
+    "total_fixes": 5
+}

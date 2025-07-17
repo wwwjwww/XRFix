@@ -1,0 +1,27 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " };",
+            "confidence_score": -3.668410301208496
+        },
+        {
+            "fixed_line": " { }",
+            "confidence_score": -3.8222864866256714
+        },
+        {
+            "fixed_line": " }};",
+            "confidence_score": -4.587759494781494
+        },
+        {
+            "fixed_line": ";",
+            "confidence_score": -5.850943088531494
+        },
+        {
+            "fixed_line": " }",
+            "confidence_score": -5.909555912017822
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/mrdl_db!Assets!MixedRealityToolkit.SDK!Features!UX!Scripts!BoundingBox!BoundingBox.cs~1024~57~1024~71/BoundingBox.cs",
+    "error_line": "1024",
+    "total_fixes": 5
+}

@@ -1,0 +1,35 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
+public class DestroyBuggedHeldBricks : MonoBehaviour
+{
+    public XRInteractionManager _interactionManager;
+
+    public XRDirectInteractor leftHand;
+    public XRDirectInteractor rightHand;
+
+    private Transform _leftHandTransform;
+    private Transform _rightHandTransform;
+
+    // Restored the interactablesToCheck list as it is being used in the script
+    private List<XRBaseInteractable> interactablesToCheck = new List<XRBaseInteractable>();
+
+    // Assume additional code here utilizing the interactablesToCheck list.
+    
+    void Update()
+    {
+        // Example usage of interactablesToCheck
+        // Iterate over the list to check some condition or perform actions
+        foreach (var interactable in interactablesToCheck)
+        {
+            // Example logic: Check if the interactable object is in some state or condition
+            if (interactable.isSelected)
+            {
+                // Perform some action
+            }
+        }
+    }
+    
+    // More methods interacting with interactablesToCheck would be here
+}

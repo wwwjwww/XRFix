@@ -1,0 +1,33 @@
+{
+  "input_code": "        public override void Update()\n        {\n<BUGS>            base.Update();\n<BUGE>\n            Debug.DrawRay(transform.position, transform.forward, Color.red, 0.1f);\n\n            DistanceGrabbable target;\n            Collider targetColl;\n            FindTarget(out target, out targetColl);\n\n            if (target != m_target)\n            {\n                if (m_target != null)\n                {\n                    m_target.Targeted = m_otherHand.m_target == m_target;\n                }\n\n                m_target = target;\n                m_targetCollider = targetColl;\n                if (m_target != null)\n                {\n                    m_target.Targeted = true;\n                }\n            }\n        }\n\n/*Addition Code for reference:\n    void OnUpdatedAnchors()\n    {\n        Vector3 destPos = m_parentTransform.TransformPoint(m_anchorOffsetPosition);\n        Quaternion destRot = m_parentTransform.rotation * m_anchorOffsetRotation;\n\n        if (m_moveHandPosition)\n        {\n            GetComponent<Rigidbody>().MovePosition(destPos);\n            GetComponent<Rigidbody>().MoveRotation(destRot);\n        }\n\n        if (!m_parentHeldObject)\n        {\n            MoveGrabbedObject(destPos, destRot);\n        }\n\n        m_lastPos = transform.position;\n        m_lastRot = transform.rotation;\n\n        float prevFlex = m_prevFlex;\n\n        m_prevFlex = OVRInput.Get(OVRInput.Axis1D.PrimaryHandTrigger, m_controller);\n\n        CheckForGrabOrRelease(prevFlex);\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> if (m_base != null) {            base.Update();\n=base.Update(); } <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> <FIXE> >"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> synchronized (m_lock) { base.Update(); } <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+    "temperature": 1,
+    "top_p": 1,
+    "LLM_engine": [
+        "gpt-4-turbo"
+    ],
+    "iteration": 5,
+    "prompt_template": [
+        "fix_instruction_func_no_limit"
+    ],
+    "original_dir": "./experiment/unity_real_basic/new_allocation_in_update",
+    "project_root_dir": "D:\\Bug_injection_project\\soundstagevr-master",
+    "exp_dir": "sound_db_insert!Assets!Scripts!Timeline!timelinePlayer.cs~97~84~97~127",
+    "unity_special_name": "Using New() allocation in Update() method.",
+    "cwe_name": null,
+    "check_ql": "D:\\codeql\\csharp\\ql\\src/unityCheck/allocate/comp_new_allocation.ql",
+    "err_detailed_info": {
+        "description": "Update() method is called each frame. It's inefficient to allocate new resource using New() in Update() method.",
+        "file_name": "/Assets/Scripts/Timeline/timelinePlayer.cs",
+        "start_line": "97",
+        "start_column": "84",
+        "end_line": "97",
+        "end_column": "127"
+    },
+    "include_addition": false
+}

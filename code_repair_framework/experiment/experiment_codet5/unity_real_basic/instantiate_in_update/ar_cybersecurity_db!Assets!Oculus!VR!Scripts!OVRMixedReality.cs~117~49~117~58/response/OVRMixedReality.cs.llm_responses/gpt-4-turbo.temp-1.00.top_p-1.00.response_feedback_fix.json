@@ -1,0 +1,87 @@
+internal static class OVRMixedReality
+{
+    private static OVRExternalComposition cachedComposition = null;
+    private static bool isInitialized = false;
+
+    public static bool useFakeExternalCamera = false;
+    public static Vector3 fakeCameraFloorLevelPosition = new Vector3(0.0f, 2.0f, -0.5f);
+    public static Vector3 fakeCameraEyeLevelPosition = fakeCameraFloorLevelPosition - new Vector3(0.0f, 1.8f, 0.0f);
+    public static Quaternion fakeCameraRotation = Quaternion.LookRotation(
+        (new Vector3(0.0f, fakeCameraFloorLevelPosition.y, 0.0f) - fakeCameraFloorLevelPosition).normalized,
+        Vector3.up);
+    public static float fakeCameraFov = 60.0f;
+    public static float fakeCameraAspect = 16.0f / 9.0f;
+
+    public static OVRComposition currentComposition = null;
+
+    public static void InitializeMixedReality(GameObject parentObject, Camera mainCamera, OVRMixedRealityCaptureConfiguration configuration)
+    {
+        if (isInitialized) return;
+
+        if (!OVRPlugin.initialized)
+        {
+            Debug.LogError("OVRPlugin not initialized");
+            return;
+        }
+
+        if (!OVRPlugin.IsMixedRealityInitialized())
+        {
+            OVRPlugin.InitializeMixedReality();
+            if (OVRPlugin.IsMixedRealityInitialized())
+            {
+                Debug.Log("OVRPlugin_MixedReality initialized");
+            }
+            else
+            {
+                Debug.LogError("Unable to initialize OVRPlugin_MixedReality");
+                return;
+            }
+        }
+
+        if (configuration.compositionMethod == OVRManager.CompositionMethod.External)
+        {
+            if (cachedComposition == null)
+            {
+                cachedComposition = new OVRExternalComposition(parentObject, mainCamera, configuration);
+                currentComposition = cachedComposition;
+            }
+        }
+        else
+        {
+            Debug.LogError("Unknown/Unsupported CompositionMethod : " + configuration.compositionMethod);
+            return;
+        }
+
+        isInitialized = true;
+    }
+
+    public static void UpdateMixedReality(GameObject parentObject, Camera mainCamera, OVRMixedRealityCaptureConfiguration configuration, OVRManager.TrackingOrigin trackingOrigin)
+    {
+        if (!isInitialized) return;
+
+        OVRPlugin.UpdateExternalCamera();
+#if !OVR_ANDROID_MRC
+        OVRPlugin.UpdateCameraDevices();
+#endif
+
+#if OVR_ANDROID_MRC
+        useFakeExternalCamera = OVRPlugin.Media.UseMrcDebugCamera();
+#endif
+
+        if (currentComposition != null && (currentComposition.CompositionMethod() != configuration.compositionMethod))
+        {
+            currentComposition.Cleanup();
+            currentComposition = null;
+        }
+
+        if (currentComposition == null)
+        {
+            currentComposition = cachedComposition;
+        }
+
+        if (currentComposition != null)
+        {
+            currentComposition.Update(parentObject, mainCamera, configuration, trackingOrigin);
+        }
+    }
+}

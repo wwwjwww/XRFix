@@ -1,0 +1,33 @@
+{
+  "input_code": "    void LateUpdate()\n    {\n\n        transform.rotation = Quaternion.LookRotation(transform.position - Camera.main.transform.position);\n\n        if (!(controllerHand == OVRInput.Controller.LTouch || controllerHand == OVRInput.Controller.RTouch))\n        {\n            return;\n        }\n\n        Vector3 tipPosition = transform.position;\n        switch (brushStatus)\n        {\n            case BrushState.Idle:\n                if (OVRInput.GetUp(OVRInput.Button.One, controllerHand))\n                {\n                    UndoInkLine();\n                }\n\n                if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger, controllerHand))\n                {\n<BUGS>                    StartLine(tipPosition);\n<BUGE>                    brushStatus = BrushState.Inking;\n                }\n\n                break;\n            case BrushState.Inking:\n\n                UpdateLine(tipPosition);\n                if (OVRInput.GetUp(OVRInput.Button.PrimaryIndexTrigger, controllerHand))\n                {\n                    brushStatus = BrushState.Idle;\n                }\n\n                break;\n        }\n    }\n\n/*Addition Code for reference:\n    void StartLine(Vector3 inkPos)\n    {\n        GameObject newLine = Instantiate(lineSegmentPrefab, inkPos, Quaternion.identity);\n        currentLineSegment = newLine.GetComponent<LineRenderer>();\n        currentLineSegment.positionCount = 1;\n        currentLineSegment.SetPosition(0, inkPos);\n        strokeWidth = currentLineSegment.startWidth;\n        strokeLength = 0.0f;\n        inkPositions.Clear();\n        inkPositions.Add(inkPos);\n        newLine.transform.parent = lineContainer.transform;\n    }\n*/",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS>                    StartLine(tipPosition, 1); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS>                    StartLine(tipPosition, true); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> PDPage p=new PDPage(); p.setPosition(tipPosition); PDPage p2=new PDPage(); p.setAutoSized(false); p.start(); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> PDPage p=new PDPage(); p.setPosition(tipPosition); PDPage p2=new PDPage(); p.setAutoSized(false); p.setForceSized(true); Blocks.InsertBlock(p, 1); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS>\n                    StartLine(tipPosition, 1); <FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

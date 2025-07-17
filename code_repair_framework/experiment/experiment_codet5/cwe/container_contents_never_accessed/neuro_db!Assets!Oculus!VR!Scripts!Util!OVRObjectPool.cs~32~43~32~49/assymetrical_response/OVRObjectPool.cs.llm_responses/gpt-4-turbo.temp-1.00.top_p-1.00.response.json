@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9wL0BLlmV6Qjt8wFh0lVNuhLJIBX5",
+    "object": "chat.completion",
+    "created": 1723690783,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// The HashSet<T> has been removed as it is no longer needed.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// public static readonly HashSet<T> HashSet = new HashSet<T>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// public static readonly HashSet<T> HashSet = new HashSet<T>();\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// Removed HashSet as it is unused.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n\n\n        // The HashSet has been removed as its contents are never accessed.\n\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 322,
+        "completion_tokens": 88,
+        "total_tokens": 410
+    },
+    "system_fingerprint": "fp_811936bd4f"
+}

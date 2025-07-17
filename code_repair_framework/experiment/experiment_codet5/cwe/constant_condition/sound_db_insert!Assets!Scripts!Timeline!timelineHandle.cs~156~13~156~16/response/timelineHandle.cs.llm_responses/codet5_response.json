@@ -1,0 +1,33 @@
+{
+  "input_code": "  public override void setState(manipState state) {\n    if (curState == state) return;\n\n    if (curState == manipState.grabbed && state != manipState.grabbed) {\n      _timelineEvent.grabbed = false;\n      if (stretchMode) stretchMode = false;\n\n      _timelineEvent.transform.position = highlight.transform.position;\n      _timelineEvent.transform.rotation = highlight.transform.rotation;\n\n      highlight.transform.localPosition = Vector3.zero;\n      highlight.transform.localRotation = Quaternion.identity;\n\n      _timelineEvent.transform.parent = timelineTransform;\n      _timelineEvent.recalcTrackPosition();\n\n      _timelineEvent.toggleEdges(true);\n\n      _timelineEvent.overlapCheck();/// = false;\n    }\n\n    curState = state;\n\n    if (curState == manipState.none) {\n\n      if (multiselected) {\n        highlight.SetActive(true);\n<BUGS>        if (true) highlightMat.SetFloat(\"_EmissionGain\", .9f);\n<BUGE>      } else highlight.SetActive(false);\n\n    }\n    if (curState == manipState.selected) {\n      highlight.SetActive(true);\n      highlightMat.SetFloat(\"_EmissionGain\", .55f);\n    }\n    if (curState == manipState.grabbed) {\n      _timelineEvent._componentInterface.killMultiselect();\n      _timelineEvent.grabbed = true;\n      _timelineEvent.toggleEdges(false);\n      highlight.SetActive(true);\n\n      if (stretchMode) manipOffset = _timelineEvent._componentInterface.worldPosToGridPos(manipulatorObj.position, true);\n      else {\n        manipOffset = _timelineEvent._componentInterface.worldPosToGridPos(manipulatorObj.position);\n        startPos = _timelineEvent.transform.localPosition;\n        startIn = _timelineEvent._componentInterface._gridParams.UnittoX(_timelineEvent.in_out.x);\n        unitLength = _timelineEvent.in_out.y - _timelineEvent.in_out.x;\n      }\n      highlightMat.SetFloat(\"_EmissionGain\", .75f);\n    }\n  }\n",
+  "model_outputs": [
+    {
+      "response_id": 1,
+      "output": "<FIXS> highlightMat.SetFloat(\"_EmissionGain\", .9f); <FIXE>"
+    },
+    {
+      "response_id": 2,
+      "output": "<FIXS> highlightMat.SetFloat(\"_EmissionGain\", .8f); <FIXE>"
+    },
+    {
+      "response_id": 3,
+      "output": "<FIXS> theme=theme.getDefaultColor(); if (theme != null) highlightMat.SetFloat(\"_EmissionGain\", theme.getFloat(0f)); <FIXE>"
+    },
+    {
+      "response_id": 4,
+      "output": "<FIXS> if (true) highlightMat.SetFloat(\"_EmissionGain\", .8f); <FIXE>"
+    },
+    {
+      "response_id": 5,
+      "output": "<FIXS> if (true) highlightMat.SetFloat(\"_EmissionGain\", .8f); <=FIXE>"
+    }
+  ],
+  "model_path": "Salesforce/codet5-base",
+  "parameters": {
+    "max_source_length": 512,
+    "max_target_length": 256,
+    "beam_size": 10,
+    "num_responses": 5,
+    "diversity_penalty": 1.0
+  }
+}

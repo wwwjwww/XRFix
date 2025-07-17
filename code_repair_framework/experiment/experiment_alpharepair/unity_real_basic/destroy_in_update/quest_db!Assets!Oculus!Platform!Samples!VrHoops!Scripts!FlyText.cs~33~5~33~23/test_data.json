@@ -1,0 +1,3 @@
+{
+  "test_code": "\t\tvoid Update()\n\t\t{\n\t\t\tif (Time.time < m_eol)\n\t\t\t{\n\t\t\t\ttransform.localPosition += m_movePerFrame;\n\t\t\t}\n\t\t\telse\n\t\t\t{\n<BUGS>\t\t\t\tDestroy(gameObject);\n<BUGE>\t\t\t}\n\t\t}\n"
+}

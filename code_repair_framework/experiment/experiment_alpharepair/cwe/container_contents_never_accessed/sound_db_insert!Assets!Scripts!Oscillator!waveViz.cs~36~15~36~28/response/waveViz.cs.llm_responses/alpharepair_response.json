@@ -1,0 +1,19 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {",
+            "confidence_score": -0.965345561504364
+        },
+        {
+            "fixed_line": " try {",
+            "confidence_score": -2.3512882036156952
+        },
+        {
+            "fixed_line": " { {",
+            "confidence_score": -5.620404005050659
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/sound_db_insert!Assets!Scripts!Oscillator!waveViz.cs~36~15~36~28/waveViz.cs",
+    "error_line": "36",
+    "total_fixes": 3
+}

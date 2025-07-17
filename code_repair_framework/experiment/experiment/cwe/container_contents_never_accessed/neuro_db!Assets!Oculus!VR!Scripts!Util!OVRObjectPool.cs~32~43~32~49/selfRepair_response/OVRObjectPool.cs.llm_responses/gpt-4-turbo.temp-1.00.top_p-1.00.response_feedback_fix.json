@@ -1,0 +1,28 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+internal static class OVRObjectPool
+{
+    private static class Storage<T> where T : class, new()
+    {
+        public static readonly HashSet<T> HashSet = new HashSet<T>();
+
+        // Ensure that the 'HashSet' is used appropriately within the context it is needed.
+        // For example, this might include adding items, checking existence, or iterating over the collection as per the application's requirements.
+        // If the 'HashSet' is still indeed unnecessary, you could implement a different approach to refactor the dependent code accordingly.
+    }
+
+    // Additional methods or logic using Storage<T>.HashSet should be placed here,
+    // ensuring that references to it in other parts of the codebase are updated accordingly.
+    // Example usage:
+    public static void AddToPool<T>(T item) where T : class, new()
+    {
+        Storage<T>.HashSet.Add(item);
+    }
+
+    public static bool IsInPool<T>(T item) where T : class, new()
+    {
+        return Storage<T>.HashSet.Contains(item);
+    }
+}

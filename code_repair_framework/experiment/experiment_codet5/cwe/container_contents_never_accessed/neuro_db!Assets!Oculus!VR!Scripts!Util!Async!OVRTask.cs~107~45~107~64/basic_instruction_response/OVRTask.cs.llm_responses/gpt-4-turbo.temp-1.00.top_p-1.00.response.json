@@ -1,0 +1,59 @@
+{
+    "id": "chatcmpl-9z0uaf0lfQ4wTOPsaIW9a2VoYVkqZ",
+    "object": "chat.completion",
+    "created": 1724328540,
+    "model": "gpt-4",
+    "choices": [
+        {
+            "index": 0,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // Previous \"InternalDataClearers\" unused collection removed from the code\n\n    // rest of the code remains unchanged.\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 1,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\ninternal static void RemoveTask(Guid id)\n{\n    Pending.Remove(id);\n    Results.Remove(id);\n    Continuations.Remove(id);\n    CallbackInvokers.Remove(id);\n    CallbackRemovers.Remove(id);\n    InternalDataRemovers.Remove(id);\n}\n\ninternal static void ClearTasks()\n{\n    Pending.Clear();\n    Results.Clear();\n    Continuations.Clear();\n    CallbackInvokers.Clear();\n    CallbackRemovers.Clear();\n    InternalDataRemovers.Clear();\n}\n```\n"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 2,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n// FIXED CODE:\n\n// The bug was about a collection that was declared but never used.\n// This can be fixed by either removing the unused collection or\n// by implementing functionality that uses the collection.\n// Since there is no context on intended use, the following line will be commented out.\n\n// private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();\n\n// Alternatively, you might need to implement a method that uses this HashSet, like so:\n/*\nprivate static void ClearInternalData()\n{\n    foreach (var clear in InternalDataClearers)\n    {\n        clear.Invoke();\n    }\n    InternalDataClearers.Clear();\n}\n*/\n\n// If the unused HashSet should be kept for future use or for potential extension by other developers,\n// it can be uncommented in the code and properly documented.\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 3,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\n    // The InternalDataClearers were never accessed, so we need a method to trigger this action. \n    // Let's add a method ClearInternalData to call clear on InternalDataClearers.\n    \n    internal static void ClearInternalData()\n    {\n        foreach (var remover in InternalDataRemovers.Values)\n        {\n            remover.Invoke(Guid.Empty);\n        }\n        InternalDataRemovers.Clear();\n        Results.Clear();\n        Continuations.Clear();\n        Pending.Clear();\n        CallbackInvokers.Clear();\n        CallbackRemovers.Clear();\n        CallbackClearers.Clear();\n    }\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        },
+        {
+            "index": 4,
+            "message": {
+                "role": "assistant",
+                "content": "```csharp\nprivate static readonly List<Action> InternalDataClearers = new List<Action>();\n\ninternal static void ClearInternalData()\n{\n    foreach (var clearAction in InternalDataClearers)\n    {\n        clearAction(); // Execute all clear actions to clean up internal data structures\n    }\n    InternalDataClearers.Clear(); // Clear the list after all actions have been called\n}\n\ninternal static void AddInternalDataClearer(Action clearAction)\n{\n    if (clearAction != null) InternalDataClearers.Add(clearAction);\n}\n\ninternal OVRTask()\n{\n    // When creating a new OVRTask, also add a clear action for this specific task\n    Guid taskGuid = this.id;\n    AddInternalDataClearer(() =>\n    {\n        Pending.Remove(taskGuid);\n        Results.Remove(taskGuid);\n        Continuations.Remove(taskGuid);\n        CallbackInvokers.Remove(taskGuid);\n        CallbackRemovers.Remove(taskGuid);\n        InternalDataRemovers.Remove(taskGuid);\n    });\n}\n```"
+            },
+            "logprobs": null,
+            "finish_reason": "stop"
+        }
+    ],
+    "usage": {
+        "prompt_tokens": 826,
+        "completion_tokens": 615,
+        "total_tokens": 1441
+    },
+    "system_fingerprint": "fp_e49e4201a9"
+}

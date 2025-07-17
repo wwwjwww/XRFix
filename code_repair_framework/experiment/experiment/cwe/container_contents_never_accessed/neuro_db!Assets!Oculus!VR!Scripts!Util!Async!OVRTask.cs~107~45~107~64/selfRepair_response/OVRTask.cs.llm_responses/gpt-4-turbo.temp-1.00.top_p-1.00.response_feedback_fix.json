@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+
+    private static readonly HashSet<Action> InternalDataClearers = new HashSet<Action>();
+
+    // Ensure that InternalDataClearers is used meaningfully. For example,
+    // add methods to manage actions or invoke them when needed.
+
+    public static void AddDataClearer(Action action)
+    {
+        if (action != null)
+        {
+            InternalDataClearers.Add(action);
+        }
+    }
+
+    public static void ClearAllData()
+    {
+        foreach (var action in InternalDataClearers)
+        {
+            action.Invoke();
+        }
+        InternalDataClearers.Clear();
+    }

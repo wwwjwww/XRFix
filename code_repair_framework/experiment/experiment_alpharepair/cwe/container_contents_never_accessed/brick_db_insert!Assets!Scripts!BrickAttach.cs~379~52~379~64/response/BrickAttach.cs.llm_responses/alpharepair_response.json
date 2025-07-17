@@ -1,0 +1,15 @@
+{
+    "fixes": [
+        {
+            "fixed_line": " {",
+            "confidence_score": -4.72066068649292
+        },
+        {
+            "fixed_line": " { {",
+            "confidence_score": -5.266767382621765
+        }
+    ],
+    "original_file": "./experiment_alpharepair/cwe/container_contents_never_accessed/brick_db_insert!Assets!Scripts!BrickAttach.cs~379~52~379~64/BrickAttach.cs",
+    "error_line": "379",
+    "total_fixes": 2
+}
