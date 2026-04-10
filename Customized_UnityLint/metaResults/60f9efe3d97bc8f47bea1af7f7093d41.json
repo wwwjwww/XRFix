@@ -1,0 +1,75 @@
+{
+  "guid": "60f9efe3d97bc8f47bea1af7f7093d41",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Leohpaz\\RPG_Essentials_Free\\12_Player_Movement_SFX\\14_Step_water_02.wav.meta",
+  "name": "14_Step_water_02.wav",
+  "type": "meta",
+  "file_size": 480,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AudioImporter",
+      "AudioImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "defaultSettings": [
+            {
+              "loadType": "0"
+            },
+            {
+              "sampleRateSetting": "0"
+            },
+            {
+              "sampleRateOverride": "44100"
+            },
+            {
+              "compressionFormat": "1"
+            },
+            {
+              "quality": "1"
+            },
+            {
+              "conversionMode": "0"
+            }
+          ]
+        },
+        {
+          "platformSettingOverrides": ""
+        },
+        {
+          "forceToMono": "0"
+        },
+        {
+          "normalize": "1"
+        },
+        {
+          "preloadAudioData": "1"
+        },
+        {
+          "loadInBackground": "0"
+        },
+        {
+          "ambisonic": "0"
+        },
+        {
+          "D": "1"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

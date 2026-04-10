@@ -1,0 +1,29 @@
+{
+  "guid": "5b49a81341f495c4a9c0a4a54cb12c85",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\SunnyLand Artwork\\Sprites\\Enemies\\Slimer.meta",
+  "name": "Slimer",
+  "type": "meta",
+  "file_size": 180,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

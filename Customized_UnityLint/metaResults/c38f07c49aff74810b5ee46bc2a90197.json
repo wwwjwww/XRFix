@@ -1,0 +1,26 @@
+{
+  "guid": "c38f07c49aff74810b5ee46bc2a90197",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\SunnyLand Artwork\\Sprites\\player.meta",
+  "name": "player",
+  "type": "meta",
+  "file_size": 202,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

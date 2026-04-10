@@ -1,0 +1,29 @@
+{
+  "guid": "243e06394e614e5d99fab26083b707fa",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\TextMesh Pro\\Resources.meta",
+  "name": "Resources",
+  "type": "meta",
+  "file_size": 180,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

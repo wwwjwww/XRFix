@@ -1,0 +1,29 @@
+{
+  "guid": "381dcb09d5029d14897e55f98031fca5",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\TextMesh Pro\\Sprites\\EmojiOne Attribution.txt.meta",
+  "name": "EmojiOne Attribution.txt",
+  "type": "meta",
+  "file_size": 165,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

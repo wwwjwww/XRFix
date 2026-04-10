@@ -1,0 +1,32 @@
+{
+  "guid": "fdc4f514b7b1e9c4eb39713ad9dd4eba",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Samples\\XR Interaction Toolkit\\2.5.4\\Starter Assets\\Presets\\XRI Default Right Grab Move.preset.meta",
+  "name": "XRI Default Right Grab Move.preset",
+  "type": "meta",
+  "file_size": 208,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "2655988077585873504"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

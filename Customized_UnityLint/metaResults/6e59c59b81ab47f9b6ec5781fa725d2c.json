@@ -1,0 +1,26 @@
+{
+  "guid": "6e59c59b81ab47f9b6ec5781fa725d2c",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\TextMesh Pro\\Fonts\\LiberationSans - OFL.txt.meta",
+  "name": "LiberationSans - OFL.txt",
+  "type": "meta",
+  "file_size": 185,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "TextScriptImporter",
+      "TextScriptImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

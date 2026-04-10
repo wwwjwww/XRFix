@@ -1,0 +1,29 @@
+{
+  "guid": "58c7ecf48f21341a9be371b832eb1ccb",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Low-Poly Medieval Market\\Readme\\Low-Poly Medieval Market Technical specifications.pdf.meta",
+  "name": "Low-Poly Medieval Market Technical specifications.pdf",
+  "type": "meta",
+  "file_size": 162,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "DefaultImporter",
+      "DefaultImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

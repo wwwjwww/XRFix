@@ -1,0 +1,29 @@
+{
+  "guid": "8f07e33567e0ee542b40769c456c6b53",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Samples\\XR Interaction Toolkit\\2.5.4\\Starter Assets\\Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef.meta",
+  "name": "Unity.XR.Interaction.Toolkit.Samples.StarterAssets.asmdef",
+  "type": "meta",
+  "file_size": 173,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AssemblyDefinitionImporter",
+      "AssemblyDefinitionImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

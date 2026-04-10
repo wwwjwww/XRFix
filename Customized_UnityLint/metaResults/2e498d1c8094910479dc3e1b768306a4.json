@@ -1,0 +1,26 @@
+{
+  "guid": "2e498d1c8094910479dc3e1b768306a4",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\TextMesh Pro\\Resources\\Fonts & Materials\\LiberationSans SDF - Fallback.asset.meta",
+  "name": "LiberationSans SDF - Fallback.asset",
+  "type": "meta",
+  "file_size": 187,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

@@ -1,0 +1,32 @@
+{
+  "guid": "1421ad86ff3787b4dae70fe9e699a25f",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Samples\\XR Interaction Toolkit\\2.5.4\\Starter Assets\\Presets\\XRI Default Right Controller.preset.meta",
+  "name": "XRI Default Right Controller.preset",
+  "type": "meta",
+  "file_size": 190,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "0"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

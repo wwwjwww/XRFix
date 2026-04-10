@@ -1,0 +1,32 @@
+{
+  "guid": "027dc98253d80d849acc2271be9bffaf",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\StarterAssets\\FirstPersonController\\Scenes\\PlaygroundSettings.lighting.meta",
+  "name": "PlaygroundSettings.lighting",
+  "type": "meta",
+  "file_size": 208,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "NativeFormatImporter",
+      "NativeFormatImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "mainObjectFileID": "4890085278179872738"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

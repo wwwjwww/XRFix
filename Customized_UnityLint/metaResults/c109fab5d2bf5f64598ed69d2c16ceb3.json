@@ -1,0 +1,48 @@
+{
+  "guid": "c109fab5d2bf5f64598ed69d2c16ceb3",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Samples\\XR Interaction Toolkit\\2.5.4\\Starter Assets\\Tunneling Vignette\\TunnelingVignetteSG.shadergraph.meta",
+  "name": "TunnelingVignetteSG.shadergraph",
+  "type": "meta",
+  "file_size": 295,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "ScriptedImporter",
+      "ScriptedImporter": [
+        {
+          "internalIDToNameTable": "[]"
+        },
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "2"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        },
+        {
+          "script": [
+            {
+              "fileID": "11500000"
+            },
+            {
+              "guid": "625f186215c104763be7675aa2d941aa"
+            },
+            {
+              "type": "3"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}

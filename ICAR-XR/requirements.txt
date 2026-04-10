@@ -1,0 +1,39 @@
+# ICAR-XR Framework Requirements
+
+# Core dependencies (inherited from XRFix)
+torch>=1.9.0
+transformers>=4.21.0
+
+# LLM interfaces
+openai>=0.27.0
+tiktoken>=0.3.0
+
+# Data processing
+pandas>=1.3.0
+numpy>=1.21.0
+
+# Utilities
+requests>=2.28.0
+pyyaml>=6.0
+python-dotenv>=0.19.0
+
+# Code analysis and validation
+tree-sitter>=0.20.0
+tree-sitter-c-sharp>=0.20.0
+
+# Testing (optional)
+pytest>=7.0.0
+pytest-cov>=3.0.0
+pytest-asyncio>=0.18.0
+
+# Logging and monitoring
+colorlog>=6.7.0
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+
+# Development tools (optional)
+black>=22.0.0
+flake8>=4.0.0
+mypy>=0.950

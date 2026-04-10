@@ -1,0 +1,75 @@
+{
+  "guid": "023ea3ddeaa8dd146b7633a0800e5a0e",
+  "file_path": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\Leohpaz\\RPG_Essentials_Free\\12_Player_Movement_SFX\\08_Step_rock_02.wav.meta",
+  "name": "08_Step_rock_02.wav",
+  "type": "meta",
+  "file_size": 480,
+  "num_components": 0,
+  "COMPONENTS": [
+    {
+      "id": "AudioImporter",
+      "AudioImporter": [
+        {
+          "externalObjects": ""
+        },
+        {
+          "serializedVersion": "6"
+        },
+        {
+          "defaultSettings": [
+            {
+              "loadType": "0"
+            },
+            {
+              "sampleRateSetting": "0"
+            },
+            {
+              "sampleRateOverride": "44100"
+            },
+            {
+              "compressionFormat": "1"
+            },
+            {
+              "quality": "1"
+            },
+            {
+              "conversionMode": "0"
+            }
+          ]
+        },
+        {
+          "platformSettingOverrides": ""
+        },
+        {
+          "forceToMono": "0"
+        },
+        {
+          "normalize": "1"
+        },
+        {
+          "preloadAudioData": "1"
+        },
+        {
+          "loadInBackground": "0"
+        },
+        {
+          "ambisonic": "0"
+        },
+        {
+          "D": "1"
+        },
+        {
+          "userData": ""
+        },
+        {
+          "assetBundleName": ""
+        },
+        {
+          "assetBundleVariant": ""
+        }
+      ]
+    }
+  ],
+  "ProjectName": "UnityProject",
+  "ProjectPath": "D:\\XRFix\\dataset_collection\\overall\\VR-AR-Game\\Game\\Assets\\"
+}
