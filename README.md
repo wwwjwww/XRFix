@@ -1,5 +1,5 @@
 # XRFix
-This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript.
+This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript. Please see the presentation videos in the following link: https://youtu.be/Tmc6TwkwOrs
 
 The folders are organized as follows.
 * ./Customized_codeql contains our specially designed queries for XR-related errors.
