@@ -1,6 +1,5 @@
 # XRFix
 This repository contains the generated code and script framework used to generate the results in the 'XRFix: Exploring Bug Repair of Extended Reality Applications with Large Language Models' manuscript. 
-This works has been accepted by ICSE'26. Please see the presentation videos in the following link: https://youtu.be/uB0pxnSvpzQ.
 
 The folders are organized as follows.
 * ./Customized_codeql contains our specially designed queries for XR-related errors.
@@ -97,4 +96,4 @@ Huang, Kai, et al. "Comprehensive Fine-Tuning Large Language Models of Code for 
 Olausson, Theo X., et al. "Demystifying gpt self-repair for code generation." CoRR (2023).
 
 #### Publication
-This Repository was proposed in the paper accepted by [ICSE'26](https://conf.researchr.org/home/icse-2026). And we really appreciate your citation if this Repo helps you!
+This Repository was proposed in the paper accepted by [ICSE'26](https://conf.researchr.org/home/icse-2026). Please see the presentation videos in the following link: https://youtu.be/uB0pxnSvpzQ. And we really appreciate your citation if this Repo helps you!
