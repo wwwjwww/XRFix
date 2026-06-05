@@ -385,31 +385,10 @@ View the quick start guide:
 python main.py --mode guide
 ```
 
-## Future Enhancements
-
-- [ ] Support for additional XR platforms (Unreal Engine, custom engines)
-- [ ] Automated context template generation
-- [ ] Machine learning-based context weighting
-- [ ] Real-time validation feedback during generation
-- [ ] Integration with VCS for change tracking
-- [ ] Collaborative repair suggestions
-- [ ] Custom domain knowledge injection
-
 ## License
 
 Part of the XRFix research framework.
 
-## Citation
-
-If you use ICAR-XR in your research, please cite:
-
-```
-@framework{icar-xr,
-  title={ICAR-XR: Iterative Context-Augmented Repair Framework for XR Applications},
-  author={XRFix Team},
-  year={2024}
-}
-```
 
 ## Contact & Support
 
