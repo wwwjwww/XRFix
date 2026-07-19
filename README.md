@@ -96,4 +96,4 @@ Huang, Kai, et al. "Comprehensive Fine-Tuning Large Language Models of Code for 
 Olausson, Theo X., et al. "Demystifying gpt self-repair for code generation." CoRR (2023).
 
 #### Publication
-This Repository was proposed in the paper accepted by [ICSE'26](https://conf.researchr.org/home/icse-2026). Please see the presentation videos in the following link: https://youtu.be/uB0pxnSvpzQ. And we really appreciate your citation if this Repo helps you!
+This Repository was proposed in the paper accepted by [ICSE'26](https://conf.researchr.org/home/icse-2026). Please see the presentation videos in the following link: https://youtu.be/uB0pxnSvpzQ. And we really appreciate your citation if this Repo helps you! doi= {10.1145/3744916.3773120}
